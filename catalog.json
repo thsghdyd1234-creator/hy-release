@@ -28,7 +28,8 @@
       "user_data": [
         "uxp:localStorage"
       ],
-      "requires": []
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-autoselect/icon.png"
     }
   ]
 }
