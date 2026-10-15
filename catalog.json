@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "tools": [
     {
       "id": "hy-autoselect",
@@ -30,6 +30,35 @@
       ],
       "requires": [],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-autoselect/icon.png"
+    },
+    {
+      "id": "hy-grid",
+      "stable": null,
+      "test": {
+        "version": "1.1.0",
+        "date": "2026-10-16",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-grid/hy-grid-1.1.0.zxp",
+        "sha256": "b2047405c7fa54717dd5d765635a9fdbc1b22afc6573edf936e7cebbc8b46582",
+        "size": 28170,
+        "notes": "- 첫 등록 (서명된 ZXP, Illustrator 2019 이상)"
+      },
+      "history": [],
+      "name": "hy Grid",
+      "type": "cep",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2019 이상"
+      },
+      "summary": "선택한 사각형·원 안에 행·열 그리드와 도트·십자 마커를 만드는 일러스트 패널",
+      "description": "선택한 사각형이나 원 안을 행·열 개수 또는 간격으로 나눠 그리드를 만든다. 실선·점선·도트·십자 마커, 모눈+도트 방식, 선 두께·색·불투명도, 칸마다 분리 옵션. 설정은 불러오기로 다시 쓸 수 있다.",
+      "install": {
+        "bundle_id": "com.hy.grid"
+      },
+      "user_data": [
+        "cep:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-grid/icon.png"
     }
   ]
 }
