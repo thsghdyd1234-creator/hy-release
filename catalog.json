@@ -66,12 +66,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.6.2",
+        "version": "0.6.3",
         "date": "2026-10-16",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.6.2.exe",
-        "sha256": "b5ff0556eda7759293ebedd78506ac0bf2e091e8270ee565b1ec960b3df25822",
-        "size": 22620482,
-        "notes": "- 글꼴을 Pretendard로 (허브에 같이 묶어 PC에 설치하지 않고 허브 안에서만 씀, SIL OFL 1.1). 못 읽으면 맑은 고딕"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.6.3.exe",
+        "sha256": "6ea26d2c8fd218c53b1f0a871ec160c2e0f880abe58b0d793c622d81066ba087",
+        "size": 22622693,
+        "notes": "- 업데이트가 반복돼도 데이터 폴더(%LOCALAPPDATA%\\hy-hub)에 파일이 쌓이지 않게 정리: 허브가 켜질 때마다\n  - 허브 업데이트 임시 파일(hy_hub_updater.exe 등)과 받은 허브 설치 파일(hy-hub-<버전>.exe)을 지움\n  - 허브 백업은 바로 전 버전 1개만 남김\n  - 툴 설치 파일은 지금 설치된 버전 하나만 남기고, 지운 툴의 설치 파일은 폴더째 지움 (이전 버전으로 되돌리기는 다시 받음)\n  - 툴 백업(설정 보관)은 지금처럼 툴마다 3개"
       },
       "history": [],
       "name": "hy 허브",
