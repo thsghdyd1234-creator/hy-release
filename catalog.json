@@ -117,7 +117,8 @@
       "user_data": [
         "cep:localStorage"
       ],
-      "requires": []
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/icon.png"
     }
   ],
   "categories": [
