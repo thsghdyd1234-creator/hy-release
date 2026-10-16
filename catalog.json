@@ -152,6 +152,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/icon.png"
     },
     {
+      "id": "hy-layer",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-layer/hy-layer-0.1.0.aip",
+        "sha256": "3277b23367239060a5723b6efbe62f6c76ce28a19c04e8ca9222fe09b4968cc0",
+        "size": 1116160,
+        "notes": "- 첫 등록 (빌드 2026-09-26, Illustrator 2024 SDK, x64)\n- 명령: LAYON, LAYOFF, LAYISO, LAYISO 다른 방식, LAYERP, LAYLCK, LAYULK, hy Layer 설정"
+      },
+      "history": [],
+      "name": "hy Layer",
+      "type": "aip",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2024 이상"
+      },
+      "summary": "캐드처럼 단축키로 레이어 켜기·끄기·고립·이전 상태·잠금을 하는 일러스트 플러그인",
+      "description": "LAYON(모두 켜기), LAYOFF(선택 레이어 숨기기), LAYISO(고립 토글)와 LAYISO 다른 방식, LAYERP(이전 레이어 상태), LAYLCK(선택 레이어 잠그기), LAYULK(모두 풀기). 메뉴 hy Layer, 설정 대화상자 포함.",
+      "category": "organize",
+      "install": {
+        "file": "hyLayer.aip"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-layer/icon.png"
+    },
+    {
       "id": "hy-shadow",
       "stable": null,
       "test": {
