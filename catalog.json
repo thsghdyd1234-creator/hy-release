@@ -34,6 +34,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow/icon.png"
     },
     {
+      "id": "hy-arrow-aip",
+      "stable": null,
+      "test": {
+        "version": "2.0.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow-aip/hy-arrow-aip-2.0.0.aip",
+        "sha256": "cd8c9fe277d8846fd4aa7f710c712a1ecd5b588464948ddae4472d78e3353ed2",
+        "size": 969728,
+        "notes": "- 첫 등록 (Illustrator 2024 SDK, x64, 빌드 전)\n- 라이브 효과(post effect) hy Arrow, 스크립트 메시지 ping·apply·info·remove·flip·selectSame\n- 원본 위치: C:\\DEV\\AI_2024_SDK_Win\\Adobe Illustrator 2024 SDK\\samplecode\\hyArrow (src 와 같음)"
+      },
+      "history": [],
+      "name": "hy Arrow 플러그인",
+      "type": "aip",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2024 이상"
+      },
+      "summary": "화살표를 선에 붙은 라이브 효과로 그려 앵커를 고치면 바로 따라오게 하는 일러스트 플러그인",
+      "description": "hy Arrow 패널의 짝. 효과 > hy > hy Arrow로 선 하나에 화살표 효과를 붙여 레이어에는 선만 남고 화살촉은 모양으로 그려진다. 선의 획 두께·색·점선을 그대로 따르고, 획 및 효과 크기 조정 때 고정 화살촉 크기도 같이 바뀐다. 조작은 hy Arrow 패널이 스크립트 메시지로 한다.",
+      "category": "draw",
+      "install": {
+        "file": "hyArrow.aip"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow-aip/icon.png"
+    },
+    {
       "id": "hy-autoselect",
       "stable": null,
       "test": {
