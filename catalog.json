@@ -1,7 +1,38 @@
 {
   "schema": 1,
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "tools": [
+    {
+      "id": "hy-arrow",
+      "stable": null,
+      "test": {
+        "version": "2.0.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow/hy-arrow-2.0.0.zip",
+        "sha256": "ef1c350dc33850ac93e5c79fc1f8577bb4b775dead413b5865bfc6849694422a",
+        "size": 28902,
+        "notes": "- 첫 등록\n- 파라메트릭 편집기(화살촉 길이·폭·오목, 폭 모양 칩·슬라이더, 점선·간격, 화살촉 고정), 프리셋 31종, 그룹 접기·검색, 내 스타일 저장\n- 확정(패스 하나로) + 원본 보관·다시 편집\n- hy Arrow 플러그인(AIP) 감지 시 라이브 효과 방식으로 동작, 예전 그룹 화살표는 적용할 때 자동 변환"
+      },
+      "history": [],
+      "name": "hy Arrow",
+      "type": "cep",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2021 이상"
+      },
+      "summary": "선에 다양한 스타일의 화살표를 붙이고 화살촉·폭·점선을 값으로 조절하는 일러스트 패널",
+      "description": "프리셋 31종과 화살촉 12종(길이·폭·오목 조절), 몸통 폭 모양(칩·3점 슬라이더), 점선·점 간격, 몸통 두께와 화살촉 크기 분리(화살촉 고정), 그래픽 스타일 얹기, 내 스타일 저장. hy Arrow AIP 플러그인이 있으면 화살표가 선에 붙은 라이브 효과가 되어 선을 고치면 바로 따라오고, 없으면 패널만으로 그룹 방식으로 만든다. 확정(패스 하나로 합치기)과 원본 보관·다시 편집 지원.",
+      "category": "draw",
+      "install": {
+        "bundle_id": "com.hy.arrow"
+      },
+      "user_data": [
+        "cep:localStorage",
+        "%APPDATA%\\hyArrow"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow/icon.png"
+    },
     {
       "id": "hy-autoselect",
       "stable": null,
