@@ -152,6 +152,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/icon.png"
     },
     {
+      "id": "hy-shadow",
+      "stable": null,
+      "test": {
+        "version": "0.4.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-shadow/hy-shadow-0.4.0.ccx",
+        "sha256": "c47db5555d44d42585600cf5620677e2ff6eea7413c4dc9405ff09509a8485a9",
+        "size": 70375,
+        "notes": "- 첫 등록\n- 형상 그림자: 사람·나무 형상 그림자(발끝·줄기 기준), 범위 \"선택 영역만\", 그림자 없애기\n- 드롭 섀도: 레이어 스타일(프리셋 9가지, 옅어짐 = 여러 겹) / 픽셀 그림자(평면 그림자 레이어, 색 농도 반영, 선택 영역만)\n- 통짜 JPG(배경 레이어)는 픽셀 그림자 + 선택 영역으로 처리, 그림자 레이어를 위에 곱하기로 얹고 원본 자리는 비움\n- 8·16·32비트 RGB 문서 지원"
+      },
+      "history": [],
+      "name": "hy Shadow",
+      "type": "uxp",
+      "host": {
+        "app": "Photoshop",
+        "versions": "2023 이상 (24.2+)"
+      },
+      "summary": "사람·나무 형상 그림자와 드롭 섀도·평면 그림자를 각도·길이 슬라이더로 넣는 패널",
+      "description": "형상 그림자·드롭 섀도 두 탭. 형상 그림자는 브러쉬로 찍은 사람·나무를 하나씩 나눠 발끝(줄기) 기준으로 실루엣을 눕힌 그림자 레이어를 만든다(입면·투시용, 겹친 나무는 줄기별로 분리). 드롭 섀도는 포토샵 레이어 스타일을 프리셋 9가지·방향 버튼·슬라이더로 쉽게 넣고, 멀어질수록 옅어지게 하면 여러 겹으로 쌓는다. 픽셀 그림자 방식은 벽·매스를 쓸어내듯 늘인 평면 그림자 레이어를 만들고, 색 농도(회색 유리는 옅게)와 선택 영역만 옵션이 있어 통짜 JPG 배치도에도 쓸 수 있다. 같은 대상을 조정하는 동안 히스토리는 한 칸만 쓴다.",
+      "category": "composite",
+      "install": {
+        "plugin_id": "com.hoyong.hyshadow"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-shadow/icon.png"
+    },
+    {
       "id": "hy-tone",
       "stable": null,
       "test": {
