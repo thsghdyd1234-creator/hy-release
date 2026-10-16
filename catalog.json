@@ -94,12 +94,12 @@
       "id": "hy-iso",
       "stable": null,
       "test": {
-        "version": "0.1.0",
+        "version": "0.1.1",
         "date": "2026-10-16",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/hy-iso-0.1.0.zxp",
-        "sha256": "976032a98b849fd48e88dc4c3dfe3071d5581edd56dba991b6492deec30d0638",
-        "size": 27048,
-        "notes": "- 첫 등록 (서명된 ZXP, Illustrator 2021 이상)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/hy-iso-0.1.1.zxp",
+        "sha256": "08210aaad367319c64d0b643804c110836a31d5c38aba7eed1cf58dcc3cb8abe",
+        "size": 27334,
+        "notes": "- 층별 분해 섹션을 기본으로 접어 둠 (제목 눌러 펼치기, 펼침 상태 기억)"
       },
       "history": [],
       "name": "hy Iso",
@@ -109,7 +109,7 @@
         "versions": "2021 이상"
       },
       "summary": "텍스트·아이콘·평면도 같은 평면 요소를 아이소·액소 면에 눕히는 일러스트 패널",
-      "description": "등각 30°·사투상 45°·30/60 투영으로 윗면·좌면·우면에 눕히고 다시 펼친다. 3D 없이 면마다 선형 변형만 적용하고 객체에 상태를 남겨 되돌릴 수 있다. 한 묶음·각자 눕히기, 층별 분해(간격 조절)를 지원.",
+      "description": "등각 30°·사투상 45°·30/60 투영으로 윗면·좌면·우면에 눕히고 다시 펼친다. 3D 없이 면마다 선형 변형만 적용하고 객체에 상태를 남겨 되돌릴 수 있다. 한 묶음·각자 눕히기, 층별 분해(간격 조절, 기본 접힘)를 지원.",
       "category": "draw",
       "install": {
         "bundle_id": "com.hy.iso"
