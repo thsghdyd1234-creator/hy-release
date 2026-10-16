@@ -61,6 +61,34 @@
       "requires": [],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-grid/icon.png",
       "category": "draw"
+    },
+    {
+      "id": "hy-hub",
+      "stable": null,
+      "test": {
+        "version": "0.6.1",
+        "date": "2026-10-16",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.6.1.exe",
+        "sha256": "70dac6b30371c20e6106cf78f66b6d691550d379b46339e94ec829c1696a521d",
+        "size": 20263487,
+        "notes": "- exe 하나(hy_hub.exe)로 빌드해 배포. 파이썬 설치 없이 실행됨 (GitHub Actions의 Windows에서 빌드)\n- exe 허브의 자체 업데이트: 새 exe를 받아 자기 복사본으로 바꿔 끼우고 다시 켬. 닫힌 직후 exe가 잠겨 있으면 잠깐 기다렸다 다시 시도"
+      },
+      "history": [],
+      "name": "hy 허브",
+      "type": "exe",
+      "host": {
+        "app": "Windows",
+        "versions": "Windows 10 이상"
+      },
+      "summary": "연구실 hy 툴을 한곳에서 설치·업데이트·되돌리기 하는 프로그램",
+      "description": "hy-release의 catalog.json을 읽어 툴 목록을 보여 주고, 새 버전을 알린 뒤 버튼을 눌러야 업데이트한다. 업데이트 전 백업, 실패 시 복원, 버전 건너뛰기, 이전 버전으로 되돌리기, 테스트/정식 단계 선택을 지원한다.",
+      "install": {
+        "entry": "hy_hub.exe"
+      },
+      "user_data": [
+        "%LOCALAPPDATA%\\hy-hub"
+      ],
+      "requires": []
     }
   ],
   "categories": [
