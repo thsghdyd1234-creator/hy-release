@@ -150,6 +150,36 @@
       ],
       "requires": [],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/icon.png"
+    },
+    {
+      "id": "hy-tone",
+      "stable": null,
+      "test": {
+        "version": "0.2.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-tone/hy-tone-0.2.0.zip",
+        "sha256": "1edf5edf061cf062edff6995fb3d8a1f6d95a370766eb0693c56037d651a8a24",
+        "size": 30316,
+        "notes": "- 첫 등록 (서명된 ZXP, Illustrator 2021 이상)\n- 팔레트 열기: 기준 색을 색 사각형·색상 막대에서 골라 나머지 색을 같이 움직임 (색·채도·명도 / 색조만)"
+      },
+      "history": [],
+      "name": "hy Tone",
+      "type": "cep",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2021 이상"
+      },
+      "summary": "선택한 객체의 색을 색조·채도·명도·대비·색온도 슬라이더와 팔레트로 한꺼번에 바꾸는 일러스트 패널",
+      "description": "다시칠하기 대신 쓰는 톤 일괄조정 패널. 선택한 객체(그룹·복합 패스·텍스트 포함)의 칠·선 색을 원본 기준으로 다시 계산해 여러 번 만져도 탁해지지 않는다. 슬라이더 5개와 프리셋 10개, 팔레트에서 기준 색을 눈으로 골라 나머지 색을 같이 움직이는 기능, 칠/선 대상 선택, 검정·흰색·회색 유지, 전역 견본째 바꾸기 옵션. 조정 중에는 hy Color의 최근 색 기록을 잠시 멈춘다. 그라디언트·패턴·이미지·심볼은 건너뛴다.",
+      "category": "color",
+      "install": {
+        "bundle_id": "com.hy.tone.ai"
+      },
+      "user_data": [
+        "cep:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-tone/icon.png"
     }
   ],
   "categories": [
