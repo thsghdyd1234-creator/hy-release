@@ -294,6 +294,70 @@
       ],
       "requires": [],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-tone-ps/icon.png"
+    },
+    {
+      "id": "image-styles",
+      "stable": null,
+      "test": {
+        "version": "0.2.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-styles/image-styles-0.2.0.ccx",
+        "sha256": "d66b19600a1f364717d2fb11a5fef24e3eb9ffb3ee2fd0bd09e1931083239486",
+        "size": 57346,
+        "notes": "- 첫 등록 (포토샵 UXP 묶음 패널). 0.1.0은 IMAGE STYLES 6개용으로 따로 배포했던 버전\n- 허브 4개(STYLES·ADJUST·SCENE·EFFECTS)가 같은 엔진·묶음 정의(shared/hy-bundles)를 쓰도록 새로 만듦\n- hy Clay·hy AI 추가, 툴을 id → 이름 → id 끝부분 순서로 찾고 패널 ID는 설치된 플러그인 매니페스트에서 읽음\n- 설치·업데이트·켜기/끄기를 몇 초 안에 반영, 다른 묶음으로 가는 칩, 버전 글자 Alt+클릭 점검 화면"
+      },
+      "history": [],
+      "name": "IMAGE STYLES",
+      "type": "uxp",
+      "host": {
+        "app": "Photoshop",
+        "versions": "2023 이상 (24.4+)"
+      },
+      "summary": "사진을 다른 그림체로 — 툴 8개의 패널을 한곳에서 여는 묶음 패널",
+      "description": "툴 코드는 합치지 않고, 설치된 각 툴의 패널을 카드로 모아 열어 준다. 설치 상태·버전은 플러그인에서 바로 읽고, 다른 묶음으로 넘어가는 칩이 있다. 묶음 정의는 %APPDATA%\\hy\\hubs.json(rev가 높을 때)으로 재설치 없이 바꿀 수 있다.",
+      "category": "style",
+      "install": {
+        "plugin_id": "com.hy.imagestyles"
+      },
+      "user_data": [
+        "%APPDATA%\\hy\\hubs.json"
+      ],
+      "requires": [],
+      "bundle": [
+        {
+          "id": "hy-flat",
+          "name": "hy Flat"
+        },
+        {
+          "id": "hy-posterize",
+          "name": "hy Posterize"
+        },
+        {
+          "id": "hy-duotone",
+          "name": "hy Duotone"
+        },
+        {
+          "id": "hy-screenprint",
+          "name": "hy Screenprint"
+        },
+        {
+          "id": "hy-halftone-ps",
+          "name": "hy Halftone"
+        },
+        {
+          "id": "hy-lineart",
+          "name": "hy LineArt"
+        },
+        {
+          "id": "hy-clay",
+          "name": "hy Clay"
+        },
+        {
+          "id": "hy-ai",
+          "name": "hy AI"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-styles/icon.png"
     }
   ],
   "categories": [
