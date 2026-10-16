@@ -125,12 +125,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.7.0",
+        "version": "0.8.0",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.7.0.exe",
-        "sha256": "878c89d6e46ed35715e6783635602f2b8125e997831ca6b0de790836c5f00b5e",
-        "size": 22627835,
-        "notes": "- 묶음(번들) 표시: tool.json에 bundle 목록이 있는 툴(IMAGE STYLES·ADJUST·SCENE·EFFECTS 등)은 안에 든 툴과 한 덩어리로 보여 줌\n  - 묶음 줄에 '툴 n개 중 m개 설치됨'과 [전체 설치] — 묶음 패널 자신과 아직 없는 툴·새 버전만 한 번에 받음\n  - 안에 든 툴은 한 줄씩 상태·버전과 [설치]/[업데이트] 버튼으로 하나씩 받을 수 있음, 이름을 누르면 상세로\n  - 아직 허브에 올라오지 않은 툴은 '준비 중'으로 흐리게\n  - 묶음 상세 화면에도 '묶인 툴' 칸\n  - 검색·업데이트 목록에서는 지금처럼 낱개로, 분류를 고르면 그 분류의 묶음과 나머지 툴만\n- 테스트: tests/ui_bundle_snapshots.py (가짜 목록으로 묶음 화면 스크린샷)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.8.0.exe",
+        "sha256": "3cdb85bf77c6f554b5a60371e6f63c518d4cb86e69098fc40d4408fc23acba9a",
+        "size": 22644000,
+        "notes": "- 묶음 패널(IMAGE STYLES·ADJUST·SCENE·EFFECTS 등)을 툴 목록 맨 위에 (검색·업데이트 목록에서도 묶음이 먼저)\n- 일괄 설치 화면 (왼쪽 메뉴): 툴을 앱별로 묶어 체크 상자로 골라 한 번에 설치\n  - 묶음 줄을 고르면 묶음 패널과 안에 든 툴을 같이 고름, 앱 이름 줄은 그 앱 전체\n  - [설치 안 된 것 모두]·[새 버전 모두]·[모두 해제], 줄 아무 데나 눌러도 고르기\n  - 이미 깔린 최신 툴·준비 중인 툴은 고를 수 없게, 관리자 확인 창이 몇 번 뜨는지 미리 알림\n  - 설치할 앱이 켜져 있으면 먼저 닫으라고 물어봄\n- 뒤로가기·홈: 홈이 아닌 화면 위에 [← 이전 화면] [홈] 막대와 지금 위치\n  - 뒤로 가면 그 화면의 스크롤 위치 그대로, 홈은 앱·분류·검색을 처음으로\n  - Esc·Alt+← 뒤로, Alt+Home 홈, 마우스 옆 '뒤로' 버튼, 왼쪽 위 로고를 눌러도 홈\n- 처음 쓰는 사람(설치한 툴이 없음)에게 툴 목록에서 일괄 설치 안내\n- 테스트: tests/ui_nav_snapshots.py"
       },
       "history": [],
       "name": "hy 허브",
