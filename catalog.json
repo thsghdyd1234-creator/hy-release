@@ -66,12 +66,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.6.1",
+        "version": "0.6.2",
         "date": "2026-10-16",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.6.1.exe",
-        "sha256": "70dac6b30371c20e6106cf78f66b6d691550d379b46339e94ec829c1696a521d",
-        "size": 20263487,
-        "notes": "- exe 하나(hy_hub.exe)로 빌드해 배포. 파이썬 설치 없이 실행됨 (GitHub Actions의 Windows에서 빌드)\n- exe 허브의 자체 업데이트: 새 exe를 받아 자기 복사본으로 바꿔 끼우고 다시 켬. 닫힌 직후 exe가 잠겨 있으면 잠깐 기다렸다 다시 시도"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.6.2.exe",
+        "sha256": "b5ff0556eda7759293ebedd78506ac0bf2e091e8270ee565b1ec960b3df25822",
+        "size": 22620482,
+        "notes": "- 글꼴을 Pretendard로 (허브에 같이 묶어 PC에 설치하지 않고 허브 안에서만 씀, SIL OFL 1.1). 못 읽으면 맑은 고딕"
       },
       "history": [],
       "name": "hy 허브",
