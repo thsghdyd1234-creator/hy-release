@@ -125,12 +125,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.6.3",
-        "date": "2026-10-16",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.6.3.exe",
-        "sha256": "6ea26d2c8fd218c53b1f0a871ec160c2e0f880abe58b0d793c622d81066ba087",
-        "size": 22622693,
-        "notes": "- 업데이트가 반복돼도 데이터 폴더(%LOCALAPPDATA%\\hy-hub)에 파일이 쌓이지 않게 정리: 허브가 켜질 때마다\n  - 허브 업데이트 임시 파일(hy_hub_updater.exe 등)과 받은 허브 설치 파일(hy-hub-<버전>.exe)을 지움\n  - 허브 백업은 바로 전 버전 1개만 남김\n  - 툴 설치 파일은 지금 설치된 버전 하나만 남기고, 지운 툴의 설치 파일은 폴더째 지움 (이전 버전으로 되돌리기는 다시 받음)\n  - 툴 백업(설정 보관)은 지금처럼 툴마다 3개"
+        "version": "0.7.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.7.0.exe",
+        "sha256": "878c89d6e46ed35715e6783635602f2b8125e997831ca6b0de790836c5f00b5e",
+        "size": 22627835,
+        "notes": "- 묶음(번들) 표시: tool.json에 bundle 목록이 있는 툴(IMAGE STYLES·ADJUST·SCENE·EFFECTS 등)은 안에 든 툴과 한 덩어리로 보여 줌\n  - 묶음 줄에 '툴 n개 중 m개 설치됨'과 [전체 설치] — 묶음 패널 자신과 아직 없는 툴·새 버전만 한 번에 받음\n  - 안에 든 툴은 한 줄씩 상태·버전과 [설치]/[업데이트] 버튼으로 하나씩 받을 수 있음, 이름을 누르면 상세로\n  - 아직 허브에 올라오지 않은 툴은 '준비 중'으로 흐리게\n  - 묶음 상세 화면에도 '묶인 툴' 칸\n  - 검색·업데이트 목록에서는 지금처럼 낱개로, 분류를 고르면 그 분류의 묶음과 나머지 툴만\n- 테스트: tests/ui_bundle_snapshots.py (가짜 목록으로 묶음 화면 스크린샷)"
       },
       "history": [],
       "name": "hy 허브",
