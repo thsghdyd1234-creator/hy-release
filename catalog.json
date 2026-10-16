@@ -340,6 +340,54 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-adjust/icon.png"
     },
     {
+      "id": "image-effects",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-effects/image-effects-0.1.0.ccx",
+        "sha256": "3d82438b78cc765a27a2665bc0fc387020974f9c3fa413c68402fdb9da5bb886",
+        "size": 58083,
+        "notes": "- 첫 등록 (포토샵 UXP 묶음 패널, IMAGE STYLES와 같은 엔진)"
+      },
+      "history": [],
+      "name": "IMAGE EFFECTS",
+      "type": "uxp",
+      "host": {
+        "app": "Photoshop",
+        "versions": "2023 이상 (24.4+)"
+      },
+      "summary": "다이어그램·포스터 그래픽 효과 — 툴 4개의 패널을 한곳에서 여는 묶음 패널",
+      "description": "툴 코드는 합치지 않고, 설치된 각 툴의 패널을 카드로 모아 열어 준다. 설치 상태·버전은 플러그인에서 바로 읽고, 다른 묶음으로 넘어가는 칩이 있다. 묶음 정의는 %APPDATA%\\hy\\hubs.json(rev가 높을 때)으로 재설치 없이 바꿀 수 있다.",
+      "category": "style",
+      "install": {
+        "plugin_id": "com.hy.imageeffects"
+      },
+      "user_data": [
+        "%APPDATA%\\hy\\hubs.json"
+      ],
+      "requires": [],
+      "bundle": [
+        {
+          "id": "hy-glass",
+          "name": "hy Glass"
+        },
+        {
+          "id": "hy-scatter",
+          "name": "hy Scatter"
+        },
+        {
+          "id": "hy-fade",
+          "name": "hy Fade"
+        },
+        {
+          "id": "hy-inside",
+          "name": "hy Inside"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-effects/icon.png"
+    },
+    {
       "id": "image-scene",
       "stable": null,
       "test": {
