@@ -155,6 +155,34 @@
       "category": "select-edit"
     },
     {
+      "id": "hy-curve",
+      "stable": null,
+      "test": {
+        "version": "0.4.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/hy-curve-0.4.0.rbz",
+        "sha256": "db536433f332658c3b60e302a248597c5d62704acf70549f8d1e72e01229dfcf",
+        "size": 24191,
+        "notes": "첫 등록\n- rbz 구조로 정리 (로더 hy_curve.rb + hy_curve/main.rb), 툴바 'HY Curve'와 아이콘 4개 추가\n- 펜(베지어)·통과 스플라인·편집·엣지 변환 모드, 인스펙터 패널\n- 스냅: 곡선 닫기·자기 앵커·끝점·엣지·접선 연장·X/Y/Z 축 (방향키 잠금)\n- 편집: 곡선 위 클릭=앵커 삽입(모양 그대로), Del=삭제, 우클릭 'HY Curve 편집'\n- 최소 곡률반경 경고에 원인 표시, 0.5mm 미만도 소수점으로"
+      },
+      "history": [],
+      "name": "hy Curve",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "다시 고칠 수 있는 곡선 — 펜(베지어)·통과 스플라인·엣지 변환·앵커 편집, 스냅",
+      "description": "스케치업에 없는 파라메트릭 곡선. 앵커·핸들을 그룹 속성에 저장해 언제든 다시 열어 고친다. 결과는 add_curve 하나의 곡선이라 면 생성 도구에 그대로 쓸 수 있다. 편차 기준/균등 분할, 끝점·축·접선 스냅, 인스펙터 패널(좌표·핸들·연속성·최소 곡률반경 경고).",
+      "category": "draw",
+      "install": {
+        "loader": "hy_curve.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/icon.png"
+    },
+    {
       "id": "hy-glass",
       "stable": null,
       "test": {
