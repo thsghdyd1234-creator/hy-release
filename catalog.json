@@ -871,12 +871,12 @@
       "id": "image-scene",
       "stable": null,
       "test": {
-        "version": "0.1.0",
-        "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-scene/image-scene-0.1.0.ccx",
-        "sha256": "76cf083a1b6fd2512eda23f2b93c6aff48d2edd4f3de5f94cb149084b0eaf468",
-        "size": 58884,
-        "notes": "- 첫 등록 (포토샵 UXP 묶음 패널, IMAGE STYLES와 같은 엔진)"
+        "version": "0.1.1",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-scene/image-scene-0.1.1.ccx",
+        "sha256": "ea95e527b5117c597d683f7bc6bc6b8edfe703c2d406be8fafbfd33e2ef35763",
+        "size": 58907,
+        "notes": "- hy Seamless 등록에 맞춰 플러그인 ID·패널 연결 (묶음에서 바로 열림)"
       },
       "history": [],
       "name": "IMAGE SCENE",
