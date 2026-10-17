@@ -158,12 +158,12 @@
       "id": "hy-curve",
       "stable": null,
       "test": {
-        "version": "0.7.0",
-        "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/hy-curve-0.7.0.rbz",
-        "sha256": "ca66bc073a0f343923e8474d28a79761376ad8222d9ab9328c6fbe235f443fee",
-        "size": 38121,
-        "notes": "- 곡선 편집·당기기를 일반 선에도 — HY Curve 로 만들지 않은 선·선이 든 그룹을 골라도 바로 편집\n  - 낱개 선분은 꺾인 점 그대로(코너), 스케치업 곡선(호·원·자유곡선)은 매끈하게 읽음\n  - 끝내면 원래 선은 지우고 HY Curve 로 바뀜. 선만 든 그룹은 그 그룹이 그대로 HY Curve 가 됨(위치·이름 유지)\n  - 면의 테두리인 선은 면이 깨지지 않게 남김 · 갈라지는 선은 안내만\n  - 우클릭 메뉴: 선을 고르면 '곡선으로 편집' · '곡선 당기기'"
+        "version": "0.7.1",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/hy-curve-0.7.1.rbz",
+        "sha256": "1466e1c454106c1aeb76757dbb479b41ec983b362af3733bb123a7f74c71d4bc",
+        "size": 38526,
+        "notes": "- 작업면 두 점 지정할 때 스냅 보강\n  - 둘째 점이 첫 점을 기준으로 추론 — 첫 점에서 적색·녹색 축, 평행 추론이 걸림 (전에는 기준 없이 픽해서 안 걸렸음)\n  - → 적색 / ← 녹색 축 잠금 (↑ 은 수직이라 무시), Esc 로 첫 점을 취소하면 잠금도 해제\n  - 툴팁에 스케치업 추론 이름(끝점·중간점 등)이 같이 보임"
       },
       "history": [],
       "name": "hy Curve",
