@@ -271,6 +271,36 @@
       "category": "draw"
     },
     {
+      "id": "hy-guide",
+      "stable": null,
+      "test": {
+        "version": "0.2.1",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-guide/hy-guide-0.2.1.ccx",
+        "sha256": "25353317d2eaa9d00336d08333461a67e2c364b683df03a9c51688c6fe971372",
+        "size": 29298,
+        "notes": "- 첫 등록\n- 이름을 hy Guide로 바꿈 (이전 Column Guide Manager 0.2.0, 플러그인 ID는 그대로라 기존 설치 위에 덮어 설치됨)\n- 기능은 0.2.0과 같음: 안내선 여백·열·행·간격 짝 이동·대상 범위·초기화·프리셋"
+      },
+      "history": [],
+      "name": "hy Guide",
+      "type": "uxp",
+      "host": {
+        "app": "InDesign",
+        "versions": "2023 이상 (18.5+)"
+      },
+      "summary": "단 안내선 전용 패널 — 여백·열·행·간격 짝을 숫자로 잡고 프리셋으로 저장",
+      "description": "인디자인 단·여백 탭 대신 안내선만 다루는 도킹 패널. 안내선 여백(직접·페이지 여백·페이지 전체), 세로 열·가로 행 개수·간격·비율, 선택한 간격의 짝 함께 이동(↑↓ 키로 즉시 반영), 대상 범위(페이지·스프레드·범위·마스터), 초기화, 프리셋 저장·JSON 입출력. 이미 열려 있는 문서에서도 값을 읽어 온다. (이전 이름 Column Guide Manager)",
+      "category": "draw",
+      "install": {
+        "plugin_id": "com.hoyong.columnguidemanager"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-guide/icon.png"
+    },
+    {
       "id": "hy-hub",
       "stable": null,
       "test": {
