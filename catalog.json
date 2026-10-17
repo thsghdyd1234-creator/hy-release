@@ -218,12 +218,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.8.0",
+        "version": "0.9.0",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.8.0.exe",
-        "sha256": "3cdb85bf77c6f554b5a60371e6f63c518d4cb86e69098fc40d4408fc23acba9a",
-        "size": 22644000,
-        "notes": "- 묶음 패널(IMAGE STYLES·ADJUST·SCENE·EFFECTS 등)을 툴 목록 맨 위에 (검색·업데이트 목록에서도 묶음이 먼저)\n- 일괄 설치 화면 (왼쪽 메뉴): 툴을 앱별로 묶어 체크 상자로 골라 한 번에 설치\n  - 묶음 줄을 고르면 묶음 패널과 안에 든 툴을 같이 고름, 앱 이름 줄은 그 앱 전체\n  - [설치 안 된 것 모두]·[새 버전 모두]·[모두 해제], 줄 아무 데나 눌러도 고르기\n  - 이미 깔린 최신 툴·준비 중인 툴은 고를 수 없게, 관리자 확인 창이 몇 번 뜨는지 미리 알림\n  - 설치할 앱이 켜져 있으면 먼저 닫으라고 물어봄\n- 뒤로가기·홈: 홈이 아닌 화면 위에 [← 이전 화면] [홈] 막대와 지금 위치\n  - 뒤로 가면 그 화면의 스크롤 위치 그대로, 홈은 앱·분류·검색을 처음으로\n  - Esc·Alt+← 뒤로, Alt+Home 홈, 마우스 옆 '뒤로' 버튼, 왼쪽 위 로고를 눌러도 홈\n- 처음 쓰는 사람(설치한 툴이 없음)에게 툴 목록에서 일괄 설치 안내\n- 테스트: tests/ui_nav_snapshots.py"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.9.0.exe",
+        "sha256": "60617ac05863348c776e8b3bc1a5c99d114dbc6898b7be9eaff9486434d78518",
+        "size": 22688674,
+        "notes": "- 왼쪽 메뉴에 **라이브러리** 화면: 따로 켜서 쓰는 자료 프로그램(hy Asset Library 등)과 '자료·라이브러리' 분류 패널(hy Icon 등)\n  - 프로그램은 큰 카드로, 설치돼 있으면 [열기]로 바로 켬. 새 버전이 있으면 [업데이트], 설치 안 됐으면 [설치]\n  - 테스트 중인 프로그램이 숨겨져 있으면 알림\n- 프로그램(.exe) 설치 지원: `%LOCALAPPDATA%\\Programs\\hy\\<툴 id>`에 넣기 (관리자 권한 필요 없음)\n  - 시작 메뉴 'hy' 폴더에 바로가기, 처음 설치할 때는 바탕화면에도 (같은 이름이 이미 있으면 그대로 둠)\n  - 프로그램이 켜져 있으면 닫아 달라고 하고 진행하지 않음 (일괄 설치에서도 미리 물어봄)\n  - 업데이트 전 백업, 실패 시 되돌리기, 이전 버전으로 되돌리기, 지우기(프로그램 폴더·만든 바로가기만, 설정은 그대로)\n  - 툴 상세에도 [열기]\n- 테스트: tests/test_core.py에 EXE 시나리오, tests/ui_library_snapshots.py"
       },
       "history": [],
       "name": "hy 허브",
