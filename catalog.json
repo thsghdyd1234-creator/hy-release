@@ -334,12 +334,12 @@
       "id": "hy-model-library",
       "stable": null,
       "test": {
-        "version": "0.7.0",
+        "version": "0.8.0",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-model-library/hy-model-library-0.7.0.exe",
-        "sha256": "ab0b562d845baf87c91d8b58dba7e64f36604a703af19719e930cd4a725f7e18",
-        "size": 40331533,
-        "notes": "- 첫 등록. **exe 하나로 배포** (PyInstaller 단일 exe, 앱 브라우저 포함, 파이썬 설치 필요 없음)\n- exe판은 설정·기본모델·생성 서버 스크립트를 `%USERPROFILE%\\.hy_model_library`에 둠 (exe를 바꿔도 남음)\n- 스케치업 확장(hy_model_library.rbz 0.3.3)을 exe 안에 묶음 — 설정 → 스케치업 확장 → [확장 파일 보기]\n- 디자인은 0.6.0(hy Asset Library 0.12와 같은 색 프리셋·글꼴·아이콘) 그대로\n- exe판의 사진으로 모델 만들기(생성 서버 설치)는 PC에 파이썬 3.11이 있어야 함 (없으면 폴더판 zip)\n- 이전 기록(0.1~0.6.0)은 src/README.md의 '변경 기록'"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-model-library/hy-model-library-0.8.0.exe",
+        "sha256": "5950aa9dc165171a18cea16cf14e46c42904aa21bee892f02210a14774a2cb16",
+        "size": 40339663,
+        "notes": "- **스케치업 확장 자동 설치**: 앱을 켜면 이 PC의 스케치업(사용자 폴더가 있는 버전)마다 `%APPDATA%\\SketchUp\\SketchUp 20XX\\SketchUp\\Plugins`에 확장을 넣고, 옛 버전이면 업데이트 (관리자 권한 필요 없음). 넣은 뒤 스케치업을 다시 켜면 연결됨\n- 설정 → 스케치업 확장: [설치·업데이트] · [확장 파일 보기] · '켤 때 자동으로'\n- 연결 카드가 '확장 업데이트 필요'면 눌러서 바로 업데이트, 넣은 뒤에는 '스케치업을 다시 켜 주세요'로 바뀜"
       },
       "history": [],
       "name": "hy Model Library",
@@ -349,7 +349,7 @@
         "versions": "Windows 10 이상 (스케치업 확장 포함)"
       },
       "summary": "3D 모델을 찾아 저장 없이 스케치업에 바로 배치하고 태그를 자동으로 붙이는 모델 라이브러리",
-      "description": "연구실 폴더·기본모델, Poly Haven 등 무료 모델 검색, 3D Warehouse 보관함, 웹 소스(내장 브라우저에서 받으면 바로 배치), 사진으로 모델 만들기(로컬 TripoSR). 끌어다 놓기로 라이브러리에 넣기, 카테고리 정리, 스케치업이 찍는 전체 모델 썸네일, 태그 규칙(model_tags.json), 색 프리셋 9종. 스케치업 확장(rbz)이 exe 안에 들어 있어 설정 → 스케치업 확장 → [확장 파일 보기]로 설치한다.",
+      "description": "연구실 폴더·기본모델, Poly Haven 등 무료 모델 검색, 3D Warehouse 보관함, 웹 소스(내장 브라우저에서 받으면 바로 배치), 사진으로 모델 만들기(로컬 TripoSR). 끌어다 놓기로 라이브러리에 넣기, 카테고리 정리, 스케치업이 찍는 전체 모델 썸네일, 태그 규칙(model_tags.json), 색 프리셋 9종. 스케치업 확장(rbz)이 exe 안에 들어 있고, 앱을 켜면 이 PC의 스케치업마다 자동으로 설치·업데이트한다.",
       "category": "library",
       "install": {
         "entry": "hy_model_library.exe"
