@@ -684,6 +684,50 @@
         }
       ],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-styles/icon.png"
+    },
+    {
+      "id": "sd2sku",
+      "stable": null,
+      "test": {
+        "version": "0.29.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.29.0.exe",
+        "sha256": "2945e86c607e1b31a70c9526f4ee6b3f50dc858e3d9c76e944a43edcb3192503",
+        "size": 67337961,
+        "notes": "첫 등록 (내부 작업 번호 v29 기준)\n\n- 화면 개편: 머리줄(파일·진행·다시 계산·내보내기) / 왼쪽 레이어 / 가운데 지도 / 오른쪽 설정 탭 + 예상 엔티티 카드\n- 지형 방식을 바꿀 때 다시 계산 시간 단축(전체 범위 계단식 27→8초, 삼각망 57→18초), 이미 본 방식·설정은 즉시\n- 스케치업 임포터(sd_import.rb 0.45-face) 자동 설치: 켤 때 이 PC의 스케치업마다 Plugins 폴더에 넣음, 출력 탭 [스케치업 임포터 다시 설치]\n- 단축키 Ctrl+O 열기 · Ctrl+E 내보내기 · F5 다시 계산",
+        "parts": [
+          {
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.29.0.exe.part1",
+            "sha256": "edf2f1fd6012c5239c5fb81566634fd3c288753b7e1a07649c17a08d0eac3b3f",
+            "size": 47185920
+          },
+          {
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.29.0.exe.part2",
+            "sha256": "81bd03e840b912d1bba31a19f0eb5391854f358290eafbb3e68651e3d946407b",
+            "size": 20152041
+          }
+        ],
+        "min_hub": "0.11.0"
+      },
+      "history": [],
+      "name": "sd2sku",
+      "type": "exe",
+      "host": {
+        "app": "Windows",
+        "versions": "Windows 10 이상 (스케치업 2022 이상 임포터 포함)"
+      },
+      "summary": "수치지형도 SHP ZIP을 읽어 지형·건물·도로를 골라 스케치업 모델로 넘기는 변환기",
+      "description": "국토지리정보원 수치지형도(연속수치지도) SHP ZIP을 열어 레이어를 고르고, 범위를 드래그해 지형(계단식·삼각망·혼합)·건물 매스·도로면·차선·보도·필지를 만든 뒤 JSON으로 내보낸다. 스케치업 임포터(sd_import.rb)가 exe 안에 들어 있고, 앱을 켜면 이 PC의 스케치업마다 Plugins 폴더에 자동으로 설치·업데이트한다. 스케치업에서 확장 프로그램 > sd2sku > JSON 가져오기.",
+      "category": "site-model",
+      "install": {
+        "entry": "sd2sku.exe"
+      },
+      "user_data": [
+        "%USERPROFILE%\\.sd2sku.json",
+        "%USERPROFILE%\\.sd2sku_cache"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/icon.png"
     }
   ],
   "categories": [
