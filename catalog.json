@@ -183,6 +183,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/icon.png"
     },
     {
+      "id": "hy-ffd",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-ffd/hy-ffd-0.1.0.rbz",
+        "sha256": "ef6a1495759fc56578bfbf37b3b9ebecc15f472af5ec0e2a47b33d66ab664679",
+        "size": 28724,
+        "notes": "첫 등록 (테스트 빌드)\n- 공간 FFD: 격자 상자(축당 2~12점), 기저 4종 — 부드럽게(B-스플라인, C2)·통과(Catmull-Rom, 격자점 통과)·베지어·각지게\n- 재편집 구조: 컨테이너 = 원본(숨김) + 결과. 격자는 컨테이너 속성 JSON, 결과는 매번 원본에서 다시 만듦\n- 크랙 없는 적응 세분: 이웃 면이 같은 경계 점열을 공유, 들로네 뒤집기 + LEPP 이분할, 정밀도 4단계\n- 조작: 클릭·박스 선택(Shift 토글·Ctrl 추가), 드래그(미리보기), 방향키 축 고정, 숫자=거리 / a,b,c=U·V·W 이동, 변형 전 a,b,c=분할\n- 패널: 층 선택, 이동·크기·회전, 경계 잠금, 격자 다시 맞춤, 프리셋 10종(presets.json), 격자 JSON 저장·불러오기\n- 하위 객체: 컴포넌트 강체 추종(기본), 그룹 강체 추종 선택. 거울 복사 그룹 면 방향 유지\n- 원본 편집 → 원본 그룹을 닫으면 자동 반영, 굽기(확정)·해제(원본으로)\n- MOSAIC 등록 hy.ffd, 툴바 'HY FFD'"
+      },
+      "history": [],
+      "name": "hy FFD",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "자유형 변형(FFD) — 격자 상자로 감싸 휘고, 원본을 보존해 언제든 다시 편집",
+      "description": "선택한 그룹·컴포넌트·면을 격자 상자로 감싸 격자점을 옮기면 안쪽 형상이 따라 휜다. 원본은 숨겨 보존하고 결과는 매번 원본에서 다시 만들어 언제든 격자를 고칠 수 있다. 기저 4종(부드럽게·통과·베지어·각지게), 크랙 없는 적응 세분, 층 선택·축 고정·수치 입력, 컴포넌트 강체 추종(슬래브가 기울지 않음), 프리셋(presets.json — 말아올림·물결·비틀기 등), 격자 JSON 저장·불러오기, 원본 편집 후 자동 반영, 굽기·해제. MOSAIC 등록(hy.ffd).",
+      "category": "site-model",
+      "install": {
+        "loader": "hy_ffd.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-ffd/icon.png"
+    },
+    {
       "id": "hy-glass",
       "stable": null,
       "test": {
