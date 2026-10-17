@@ -361,6 +361,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-guide/icon.png"
     },
     {
+      "id": "hy-halftone",
+      "stable": null,
+      "test": {
+        "version": "1.0.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-halftone/hy-halftone-1.0.0.zip",
+        "sha256": "c158c0354bf8a7548b6caefff8ef2565ce0f16e1ecce96208bb59de6caff684b",
+        "size": 26783,
+        "notes": "- 첫 등록 (서명 없는 CEP, Illustrator 2019 이상)\n- 영역 안 벡터 하프톤 점(원·사각·마름모·선, 육각 배치), 균일·선형·방사형 톤\n- 강조 패스(찢김 선·원 등) 주변 점 키우기·비우기, 닫힌 면 안쪽 채우기, 찢김 선 자동 생성\n- 색: 단색 / 영역 채우기 색(그라데이션 샘플링·밝기) / 두 색 그라데이션(강조·크기·위치, 시작·끝·중간점)\n- 자르기: 클리핑 마스크 / 실제로 자르기 / 자르지 않음\n- 실시간 미리보기, 그룹에 설정 저장·불러오기, 프리셋 12개"
+      },
+      "history": [],
+      "name": "hy Halftone",
+      "type": "cep",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2019 이상"
+      },
+      "summary": "선택한 도형 안에 벡터 하프톤 점을 깔고, 찢김 선·원 같은 강조 패스 주변만 점을 키우는 일러스트 패널",
+      "description": "닫힌 도형(영역) 안에 원·사각·마름모·선 모양의 벡터 점을 만든다. 점 크기는 균일·선형·방사형 톤과 곡선으로 정하고, 강조 패스(열린 선·원·복합 패스) 주변 점을 강도·반경·감쇠로 키우거나(음수면 비움) 닫힌 면 안쪽을 채운다. [찢김 선 만들기]로 지그재그 강조 선을 자동 생성. 색은 단색, 영역 채우기 색(단색·그라데이션 샘플링, 밝기 보정), 두 색 그라데이션(강조·점 크기·위치 기준, 각도·중심·시작·끝·중간점). 결과는 클리핑 마스크·실제로 자르기·자르지 않음 중 선택. 슬라이더 실시간 미리보기, 'hyHalftone' 그룹에 설정이 저장돼 그룹만 선택해도 다시 생성·불러오기, 프리셋 12개. CMYK 문서는 CMYK 값 그대로 그린다.",
+      "category": "style",
+      "install": {
+        "bundle_id": "com.hy.halftone"
+      },
+      "user_data": [
+        "cep:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-halftone/icon.png"
+    },
+    {
       "id": "hy-halftone-ps",
       "stable": null,
       "test": {
