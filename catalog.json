@@ -6,12 +6,12 @@
       "id": "hy-arrow",
       "stable": null,
       "test": {
-        "version": "2.0.0",
+        "version": "2.0.1",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow/hy-arrow-2.0.0.zip",
-        "sha256": "ef1c350dc33850ac93e5c79fc1f8577bb4b775dead413b5865bfc6849694422a",
-        "size": 28902,
-        "notes": "- 첫 등록\n- 파라메트릭 편집기(화살촉 길이·폭·오목, 폭 모양 칩·슬라이더, 점선·간격, 화살촉 고정), 프리셋 31종, 그룹 접기·검색, 내 스타일 저장\n- 확정(패스 하나로) + 원본 보관·다시 편집\n- hy Arrow 플러그인(AIP) 감지 시 라이브 효과 방식으로 동작, 예전 그룹 화살표는 적용할 때 자동 변환"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow/hy-arrow-2.0.1.zip",
+        "sha256": "6f6fe7d2e863d51c0acb94eb3622ddba419b5ee5cb00a57523a9dc915d29927c",
+        "size": 29110,
+        "notes": "- 확정(패스 하나로 합치기) 때 화살촉 끝끼리 이어진 덩어리가 생기던 문제 고침\n  - 선에 칠이 켜져 있으면 일러스트가 열린 선의 시작점과 끝점을 이어 면을 칠하는데, 그 면까지 합쳐지던 것이 원인\n  - 확정 전에 열린 선의 칠을 끄고, 화살표를 붙일 때도 선의 칠을 끔\n- 허브: hy Arrow 플러그인(AIP)을 짝 툴로 지정 — 패널을 설치하면 플러그인도 같이 설치"
       },
       "history": [],
       "name": "hy Arrow",
@@ -30,7 +30,9 @@
         "cep:localStorage",
         "%APPDATA%\\hyArrow"
       ],
-      "requires": [],
+      "requires": [
+        "hy-arrow-aip"
+      ],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow/icon.png"
     },
     {
