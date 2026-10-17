@@ -186,12 +186,12 @@
       "id": "hy-ffd",
       "stable": null,
       "test": {
-        "version": "0.1.1",
+        "version": "0.1.2",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-ffd/hy-ffd-0.1.1.rbz",
-        "sha256": "2e32423fe9fe6bdbaccbe5f612d59821ee8e5846beb052a00efd0b824c99e9d1",
-        "size": 30059,
-        "notes": "버그 수정 — '원본 편집' 경고창 폭주와 스케치업 튕김\n- FFD를 처음 걸 때 원본이 컨테이너 밖에 생기던 문제: 열려 있지 않은 그룹 안으로 형상을 옮기던 호출을 없애고, 만든 뒤 원본·결과가 컨테이너 안에 있는지 확인\n- 타이머가 경고창이 떠 있는 동안 다시 발사돼 같은 경고가 수십 개 뜨고 튕기던 문제: 모든 지연 실행을 한 번만 도는 방식으로 바꿈\n- 0.1.0에서 원본을 잃은 FFD: 선택하고 FFD를 실행하면 복구(숨은 원본을 되살리고 깨진 FFD 정리)를 묻는다\n- FFD 실행이 겹쳐 들어오지 않게 막음"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-ffd/hy-ffd-0.1.2.rbz",
+        "sha256": "29650205f53abfea95e3e435046b8ad0afdd01798e27d56f312682058e8be288",
+        "size": 30294,
+        "notes": "굽기·해제가 원래 자리로 돌려놓도록 수정\n- 해제: 원본 묶음과 FFD 컨테이너 두 겹을 모두 풀어, 처음 고른 그룹이 감싼 그룹 없이 원래 자리로 돌아온다 (전에는 이름 없는 그룹 안에 갇혀 남음)\n- 굽기: 그룹·컴포넌트 하나에 걸었으면 휜 결과 그룹이 컨테이너 없이 제자리에 남는다. 면·선 여러 개였으면 'HY FFD 결과' 그룹으로 남김\n- 굽기·해제 뒤 남은 객체를 선택해 둔다\n- 시험 리그 0.2.0: HY::FFDRig.auto — 스케치업 안에서 걸기·프리셋·원본 편집·실행취소·굽기·해제·복구를 한 번에 돌리고 단계별 로그(hy_ffd_auto.log)를 남김"
       },
       "history": [],
       "name": "hy FFD",
