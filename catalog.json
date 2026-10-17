@@ -566,6 +566,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-tone-ps/icon.png"
     },
     {
+      "id": "hy-typeset",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-typeset/hy-typeset-0.1.0.ccx",
+        "sha256": "6c44c88d3bff5bf6c1ceb04adf641271790ff2ef32c8a6be50fb164e7a5a3f52",
+        "size": 15316,
+        "notes": "- 첫 등록 — '인디자인 단락스타일.jsx'(ScriptUI 대화상자)를 UXP 패널로 옮김\n- 위쪽 서체 하나로 전체 적용, '행마다 서체 따로' 선택 가능 (원본의 서체 일괄 변경)\n- 크기별 굵기 자동, 자간·자동 행간·메트릭 커닝·왼쪽 정렬, 샘플 텍스트(끌 수 있음)\n- 마지막 서체·행 구성을 기억, '기본값으로' 버튼, 서체 목록 새로 고침"
+      },
+      "history": [],
+      "name": "hy TypeSet",
+      "type": "uxp",
+      "host": {
+        "app": "InDesign",
+        "versions": "2023 이상 (18.5+)"
+      },
+      "summary": "제목·부제·본문 단락 스타일 세트를 한 번에 — 크기별 굵기·자간·행간 자동",
+      "description": "서체 하나를 고르면 제목 60·부제 48·소제 32·본문 20·기타 12pt 단락 스타일을 만든다. 크기에 따라 Bold/Regular/Light 자동(서체별 굵기 이름 후보 검색), 자간(14pt 미만 -25, 그 외 -50)·자동 행간(130~160%)·메트릭 커닝·왼쪽 정렬, 첫 페이지에 샘플 텍스트. 행 추가·삭제, 행마다 서체 따로, 시스템·외국어 서체 제외 목록, 마지막 설정 기억. (원본: 인디자인 단락스타일.jsx)",
+      "category": "organize",
+      "install": {
+        "plugin_id": "com.hy.typeset"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-typeset/icon.png"
+    },
+    {
       "id": "image-adjust",
       "stable": null,
       "test": {
