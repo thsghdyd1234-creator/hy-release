@@ -246,12 +246,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.10.0",
+        "version": "0.12.0",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.10.0.exe",
-        "sha256": "ee25ef3f383c9b475f39648c48265e08d484e5b31514d442ff4022f8d40c9daa",
-        "size": 22690972,
-        "notes": "- 새 툴 표시: 허브에 새로 올라온 툴을 청록색 '새 툴'로 (업데이트 호박색과 다른 색)\n  - 왼쪽 메뉴 '툴 목록'(라이브러리 툴이면 '라이브러리'도) 옆에 새 툴 수, 툴 화면 머리 요약에 '새 툴 n'\n  - 툴 목록 위에 '새 툴 n개가 올라왔어요' 띠와 [모두 확인]\n  - 툴 카드·묶음 안 툴·상세 화면에 '새 툴' 표시. 상세를 열어 보거나 설치하면 사라짐\n  - 허브를 처음 켰을 때 있던 툴은 새 툴로 치지 않음 (그 뒤에 올라온 툴만)\n- 테스트: tests/ui_new_snapshots.py"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.0.exe",
+        "sha256": "03af59ff3397ca9296c437677e3fff8e1591c2a479e9ead6708b09bc2d5d2776",
+        "size": 22706305,
+        "notes": "- **스케치업 루비 확장(.rbz) 설치**: 이 PC의 스케치업을 버전마다 찾아(`%APPDATA%\\SketchUp\\SketchUp 20XX`, Program Files·레지스트리)\n  툴이 지원하는 버전(예: '2022+')의 `SketchUp\\Plugins`에 로더(.rb)와 같은 이름 폴더를 넣음. 관리자 권한 필요 없음\n  - 설치만 하고 아직 한 번도 켜지 않은 스케치업은 Plugins 폴더를 미리 만들어 넣음\n  - 업데이트·되돌리기 때 옛 항목을 통째로 지우고 새로 넣어, 새 버전에서 빠진 파일이 남지 않음. 지우기 전에 백업, 실패하면 되돌림\n  - 확장 프로그램 관리자로 손수 설치해 둔 같은 확장은 백업한 뒤 바꿔 끼움. 다른 확장은 건드리지 않음\n  - 스케치업이 켜져 있으면 닫아 달라고 하고 진행하지 않음 (일괄 설치에서도 미리 물어봄)\n  - 상세 화면에 '넣은 스케치업'·'넣을 스케치업', 새로 깐 스케치업에 아직 없으면 [지금 넣기]\n  - 지우기는 넣은 항목만 (백업 폴더에 남김)\n- 테스트: tests/test_core.py에 루비 시나리오, tests/ui_ruby_snapshots.py"
       },
       "history": [],
       "name": "hy 허브",
