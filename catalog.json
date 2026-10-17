@@ -334,12 +334,12 @@
       "id": "hy-model-library",
       "stable": null,
       "test": {
-        "version": "0.8.0",
+        "version": "0.8.1",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-model-library/hy-model-library-0.8.0.exe",
-        "sha256": "5950aa9dc165171a18cea16cf14e46c42904aa21bee892f02210a14774a2cb16",
-        "size": 40339663,
-        "notes": "- **스케치업 확장 자동 설치**: 앱을 켜면 이 PC의 스케치업(사용자 폴더가 있는 버전)마다 `%APPDATA%\\SketchUp\\SketchUp 20XX\\SketchUp\\Plugins`에 확장을 넣고, 옛 버전이면 업데이트 (관리자 권한 필요 없음). 넣은 뒤 스케치업을 다시 켜면 연결됨\n- 설정 → 스케치업 확장: [설치·업데이트] · [확장 파일 보기] · '켤 때 자동으로'\n- 연결 카드가 '확장 업데이트 필요'면 눌러서 바로 업데이트, 넣은 뒤에는 '스케치업을 다시 켜 주세요'로 바뀜"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-model-library/hy-model-library-0.8.1.exe",
+        "sha256": "b270f2181212ba0e6a0624c68369e8062e27863e9034a552ef9a9a64dee31453",
+        "size": 40340356,
+        "notes": "- 스케치업이 옛 확장으로 켜져 있을 때 앱이 켜지지 않던 문제 고침 (0.8.0)"
       },
       "history": [],
       "name": "hy Model Library",
