@@ -361,6 +361,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-guide/icon.png"
     },
     {
+      "id": "hy-halftone-ps",
+      "stable": null,
+      "test": {
+        "version": "0.3.3",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-halftone-ps/hy-halftone-ps-0.3.3.ccx",
+        "sha256": "5f2926d56111d53aa18c2382cd32070e40fe0861d3ed5101ca64a9ee0d85c66c",
+        "size": 48286,
+        "notes": "- 첫 등록 (테스트 버전)\n- 영역: 자동(선택 영역 → 레이어 → 문서)·선택 영역·레이어 범위(사각형)·레이어 모양대로(투명도 마스크)·문서 전체\n- 톤: 이미지(보이는 전체·현재 레이어, 반전·감마)·균일·선형·방사형\n- 스크린: 간격·각도·모양(원·사각·마름모·선)·최소/최대 크기·부드러움·선 길이·위치/크기 흔들림·시드. 연속 선의 이음새 틈 없음\n- 강조: 작업 패스·선택 패스·hyH_ 패스 주변 점 키우기/지우기(강도 -100~100%), 반경·감쇠, 닫힌 패스 안쪽 채움, 찢김 선 자동 생성(hyH_tear)\n- 색: 검정·흰색·전경색·단색(HSL 피커)·그라데이션(방향·점 크기)·원본 색(채도·밝기 보정), 배경 투명·흰색·배경색·단색, 색 슬롯 [가져오기](전경색, Alt: 배경색)\n- 미리보기 레이어 → 적용·취소, 내장 프리셋 11개 + 사용자 프리셋(★)\n- 패널: 상단 프리셋·하단 상태/실행 고정, 가운데 스크롤, 휠이 슬라이더 값을 바꾸지 않음, 버튼 테두리 없음"
+      },
+      "history": [],
+      "name": "hy Halftone PS",
+      "type": "uxp",
+      "host": {
+        "app": "Photoshop",
+        "versions": "2023 이상 (24.2+)"
+      },
+      "summary": "사진·영역에 하프톤 망점을 새 레이어로 깔고, 펜 패스나 찢김 선 주변만 점을 키워 강조하는 패널",
+      "description": "원본은 그대로 두고 'hyHalftone' 레이어 하나에 망점을 그린다. 영역은 선택 영역·레이어 범위·레이어 모양대로(투명 부분 제외)·문서 전체 중에서 고르고, 점 크기는 이미지 밝기(반전·감마)나 균일·선형·방사형 톤으로 정한다. 스크린은 간격·각도·모양(원·사각·마름모·선)·최소/최대 크기·부드러움·선 길이·흔들림을 조절한다. 펜 패스, hyH_ 이름의 패스, 자동 찢김 선 주변의 점을 강도·반경·감쇠로 키우거나 지우고, 닫힌 패스는 안쪽을 채운다. 점 색은 검정·흰색·전경색·단색(HSL 피커)·그라데이션·원본 색(밑 이미지 색을 따옴), 배경은 투명·흰색·배경색·단색. 색 슬롯 옆 [가져오기]로 hy Color에서 고른 전경색을 바로 넣는다. 실시간 미리보기 후 적용·취소, 내장 프리셋 11개와 사용자 프리셋.",
+      "category": "style",
+      "install": {
+        "plugin_id": "com.hoyong.hyhalftone"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-halftone-ps/icon.png"
+    },
+    {
       "id": "hy-hub",
       "stable": null,
       "test": {
