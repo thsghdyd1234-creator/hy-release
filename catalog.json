@@ -334,12 +334,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.12.1",
+        "version": "0.12.2",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.1.exe",
-        "sha256": "0464add11f9f55f292a4cd14ca30e2b369e08c3403ac41aaf283938ae10f078b",
-        "size": 22708545,
-        "notes": "- 루비 확장을 넣은 직후 컴퓨터가 갑자기 꺼지면 파일이 크기만 남고 내용이 0으로 채워져, 스케치업이 오류 없이 확장을 건너뛰던 문제\n  - 파일마다 바로 디스크에 쓰고(fsync) 다시 읽어 압축 파일 안 내용과 같은지 확인. 다르면 실패로 보고 되돌림\n  - 내용이 0으로 채워진 파일이 있으면 상세 화면에 '설치된 파일이 없거나 깨졌어요'와 [지금 넣기]\n- 테스트: 깨진 파일 알림·다시 설치로 고치기"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.2.exe",
+        "sha256": "3ca301f3b70fb6661faf7f9b5fc53461d07ab6dbc4c85bcc32f598d8003f7ac9",
+        "size": 22709631,
+        "notes": "- 누를 때마다 버벅이던 문제: 화면을 옮길 때마다 카드 전체를 지우고 새로 그리느라 1초 넘게 걸리던 것을\n  - 한 번 그린 화면(툴 목록·분류별 목록·상세·일괄 설치·라이브러리·설정)은 지우지 않고 보관했다가 다시 보여 줌 → 뒤로·홈·분류 이동이 0.1초 안팎\n  - 설치·업데이트·새로 고침 등으로 상태가 바뀌면 그때만 새로 그림\n  - 왼쪽 메뉴는 바뀐 게 없으면 다시 그리지 않음\n  - 배치용 투명 틀을 가벼운 틀로 바꿔 처음 그릴 때도 20~30% 빨라짐"
       },
       "history": [],
       "name": "hy 허브",
