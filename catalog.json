@@ -598,6 +598,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-model-library/icon.png"
     },
     {
+      "id": "hy-seamless",
+      "stable": null,
+      "test": {
+        "version": "1.2.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-seamless/hy-seamless-1.2.0.ccx",
+        "sha256": "311e9d3981e980357d32190453e3e8ec926cd36f15772584b1fed2407f3bd6c2",
+        "size": 24963,
+        "notes": "- 첫 등록 (포토샵 UXP 패널)\n- 소스: 이미지 드롭·파일 선택(여러 장 보관함, 목록 유지) 또는 현재 레이어(선택 범위)\n- 타일 생성: FFT / Seamcut(벽돌 주기 자동 검출) / Offset, 조명 평탄화, 3×3 미리보기·QA 배지\n- 적용: 선택 영역에 패턴 필 레이어, 배율 반영, 타일을 새 문서로, 보관함 전체 패턴 일괄 등록\n- 반복 없애기: 타일을 무작위로 섞은 레이어를 클리핑으로 얹음 (다시 섞기), 필 레이어와 한 그룹으로 묶음"
+      },
+      "history": [],
+      "name": "hy Seamless",
+      "type": "uxp",
+      "host": {
+        "app": "Photoshop",
+        "versions": "2024 이상 (25.0+)"
+      },
+      "summary": "재질 사진을 이음매 없는 반복 타일로 만들어 패턴으로 채우고, 반복 무늬까지 무작위로 섞어 지우는 패널",
+      "description": "LispManager의 SEAMLESS 생성기(TextureLab)를 포토샵 패널로 옮긴 것. 재질 이미지를 드롭(여러 장 보관함)하거나 현재 레이어(선택 범위)를 소스로 잡고, FFT(콘크리트·스투코·석재)·Seamcut(벽돌·타일, 주기 자동 검출)·Offset 세 방식으로 타일을 만든다. 3×3 미리보기와 이음매 검사(QA) 배지로 확인한 뒤 선택 영역에 패턴 필 레이어(비파괴, 마스크 자동)로 채우고, 보관함 전체를 패턴으로 일괄 등록할 수도 있다. '반복 없애기'는 타일을 무작위로 섞은 레이어를 필 레이어 위에 클리핑으로 얹어 스투코·대리석류의 반복 무늬를 지운다. 필 레이어와 랜덤 레이어는 한 그룹으로 묶여 같이 움직인다. 보관함 목록(경로·썸네일)은 이 PC의 플러그인 저장소에 남는다.",
+      "category": "style",
+      "install": {
+        "plugin_id": "com.hoyong.hyseamless"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-seamless/icon.png"
+    },
+    {
       "id": "hy-shadow",
       "stable": null,
       "test": {
