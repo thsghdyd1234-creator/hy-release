@@ -211,6 +211,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-ffd/icon.png"
     },
     {
+      "id": "hy-frame2ai",
+      "stable": null,
+      "test": {
+        "version": "1.5.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-frame2ai/hy-frame2ai-1.5.0.ccx",
+        "sha256": "6339580edf3723e67a01c237d29a0257c812bd457336a8366f82bab9c84c0722",
+        "size": 25969,
+        "notes": "- 첫 등록 — '일러스트 열기.jsx'(hy_frame2ai v1.5)를 UXP 패널로 감쌈\n- 스크립트 안 CFG를 고치던 설정을 패널에서 클릭으로: 저장 위치·배치·열기·색상·안내선·레이블·덮어쓰기·linkmap\n- 일러스트 통신(BridgeTalk)은 ExtendScript에만 있어 원본 스크립트를 doScript로 실행 (동작은 v1.5와 같음)\n- 결과(생성·배치 개수, 저장 폴더)를 패널에 표시"
+      },
+      "history": [],
+      "name": "hy Frame2AI",
+      "type": "uxp",
+      "host": {
+        "app": "InDesign",
+        "versions": "2023 이상 (18.5+)"
+      },
+      "summary": "선택한 프레임과 같은 크기의 AI 파일을 만들어 배치하고 일러스트에서 열기",
+      "description": "프레임 여러 개를 골라도 프레임마다 .ai 하나. 저장 위치(INDD 옆·하위 폴더·지정 폴더), 원래 프레임에 배치, 마지막/전부 열기, CMYK·RGB, 아트보드 안내선, 레이블을 파일 이름으로, 덮어쓰기/번호 붙이기, <문서명>.linkmap.json 기록. 일러스트와는 BridgeTalk(ExtendScript)로 통신해 원본 스크립트를 패널에서 실행한다. (원본: 일러스트 열기.jsx = hy_frame2ai v1.5)",
+      "category": "export",
+      "install": {
+        "plugin_id": "com.hy.frame2ai"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-frame2ai/icon.png"
+    },
+    {
       "id": "hy-glass",
       "stable": null,
       "test": {
