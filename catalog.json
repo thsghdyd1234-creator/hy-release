@@ -218,12 +218,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.9.0",
+        "version": "0.10.0",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.9.0.exe",
-        "sha256": "60617ac05863348c776e8b3bc1a5c99d114dbc6898b7be9eaff9486434d78518",
-        "size": 22688674,
-        "notes": "- 왼쪽 메뉴에 **라이브러리** 화면: 따로 켜서 쓰는 자료 프로그램(hy Asset Library 등)과 '자료·라이브러리' 분류 패널(hy Icon 등)\n  - 프로그램은 큰 카드로, 설치돼 있으면 [열기]로 바로 켬. 새 버전이 있으면 [업데이트], 설치 안 됐으면 [설치]\n  - 테스트 중인 프로그램이 숨겨져 있으면 알림\n- 프로그램(.exe) 설치 지원: `%LOCALAPPDATA%\\Programs\\hy\\<툴 id>`에 넣기 (관리자 권한 필요 없음)\n  - 시작 메뉴 'hy' 폴더에 바로가기, 처음 설치할 때는 바탕화면에도 (같은 이름이 이미 있으면 그대로 둠)\n  - 프로그램이 켜져 있으면 닫아 달라고 하고 진행하지 않음 (일괄 설치에서도 미리 물어봄)\n  - 업데이트 전 백업, 실패 시 되돌리기, 이전 버전으로 되돌리기, 지우기(프로그램 폴더·만든 바로가기만, 설정은 그대로)\n  - 툴 상세에도 [열기]\n- 테스트: tests/test_core.py에 EXE 시나리오, tests/ui_library_snapshots.py"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.10.0.exe",
+        "sha256": "ee25ef3f383c9b475f39648c48265e08d484e5b31514d442ff4022f8d40c9daa",
+        "size": 22690972,
+        "notes": "- 새 툴 표시: 허브에 새로 올라온 툴을 청록색 '새 툴'로 (업데이트 호박색과 다른 색)\n  - 왼쪽 메뉴 '툴 목록'(라이브러리 툴이면 '라이브러리'도) 옆에 새 툴 수, 툴 화면 머리 요약에 '새 툴 n'\n  - 툴 목록 위에 '새 툴 n개가 올라왔어요' 띠와 [모두 확인]\n  - 툴 카드·묶음 안 툴·상세 화면에 '새 툴' 표시. 상세를 열어 보거나 설치하면 사라짐\n  - 허브를 처음 켰을 때 있던 툴은 새 툴로 치지 않음 (그 뒤에 올라온 툴만)\n- 테스트: tests/ui_new_snapshots.py"
       },
       "history": [],
       "name": "hy 허브",
