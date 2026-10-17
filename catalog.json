@@ -334,12 +334,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.12.2",
-        "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.2.exe",
-        "sha256": "3ca301f3b70fb6661faf7f9b5fc53461d07ab6dbc4c85bcc32f598d8003f7ac9",
-        "size": 22709631,
-        "notes": "- 누를 때마다 버벅이던 문제: 화면을 옮길 때마다 카드 전체를 지우고 새로 그리느라 1초 넘게 걸리던 것을\n  - 한 번 그린 화면(툴 목록·분류별 목록·상세·일괄 설치·라이브러리·설정)은 지우지 않고 보관했다가 다시 보여 줌 → 뒤로·홈·분류 이동이 0.1초 안팎\n  - 설치·업데이트·새로 고침 등으로 상태가 바뀌면 그때만 새로 그림\n  - 왼쪽 메뉴는 바뀐 게 없으면 다시 그리지 않음\n  - 배치용 투명 틀을 가벼운 틀로 바꿔 처음 그릴 때도 20~30% 빨라짐"
+        "version": "0.12.3",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.3.exe",
+        "sha256": "90e208f5a284ff8b41de0e031c87ac3a59772b63512072d01fccdc0c69735986",
+        "size": 22711179,
+        "notes": "- 화면이 바뀔 때 뚝뚝 끊겨 보이던 문제\n  - 새 화면은 뒤에서 다 그린 다음 한 번에 앞으로 (카드가 하나씩 붙는 모습이 보이지 않음). 상태가 바뀌어 다시 그릴 때도 옛 화면을 그대로 두었다가 바꿔 끼움\n  - 위 막대(뒤로·홈)를 늘 같은 높이로 두어, 홈과 다른 화면을 오갈 때 아래 화면 높이가 바뀌며 덜컥거리지 않게\n  - 위 막대·왼쪽 메뉴는 지우고 다시 만들지 않고 글자·강조만 바꿈 (깜빡임 없음)\n  - 보관한 화면으로 옮기기 0.03~0.07초"
       },
       "history": [],
       "name": "hy 허브",
