@@ -536,6 +536,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-shadow/icon.png"
     },
     {
+      "id": "hy-swap",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-17",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-swap/hy-swap-0.1.0.ccx",
+        "sha256": "ad387588961e3d8bbc4cc59e34d8c82b435ce0b49474e070023a116e0139300d",
+        "size": 19555,
+        "notes": "- 첫 등록\n- 2개 선택 → 자리 맞바꾸기, 3개 이상 → 읽는 순서(위→아래, 왼→오)대로 다음/이전 칸 순환\n- 방식: 칸째로(크기까지, 내용 맞춤 4가지) / 위치만(크기 유지, 3×3 기준점)\n- 이미지 직접 선택·텍스트 커서도 프레임으로 인식, 잠긴 프레임 다시 잠금, 그룹·회전 프레임은 가운데 기준 이동\n- 같은 스프레드 안에서만, 인라인 고정 개체·잠긴 레이어는 안내 후 중단\n- 선택 개수 실시간 표시, 메뉴 명령 3개(단축키 지정용), 설정 기억"
+      },
+      "history": [],
+      "name": "hy Swap",
+      "type": "uxp",
+      "host": {
+        "app": "InDesign",
+        "versions": "2023 이상 (18.5+)"
+      },
+      "summary": "선택한 프레임끼리 자리 바꾸기 — 2개는 맞바꿈, 3개 이상은 한 칸씩 순환",
+      "description": "프레임 2개를 선택하고 버튼 한 번으로 자리를 맞바꾼다(옮기고-옮기고-다시 옮기는 3단계를 1번으로). 칸째로(크기까지 맞바꾸고 이미지는 비율 채우기·비율 맞추기·프레임 맞춤 옵션·그대로) 또는 위치만(크기 유지, 3×3 기준점). 3개 이상은 읽는 순서대로 다음/이전 칸으로 순환. 이미지만 직접 선택해도 프레임으로 잡고, 잠긴 프레임은 바꾼 뒤 다시 잠금, 그룹·회전 프레임은 가운데 기준 이동. 실행 취소 한 번. 플러그인 메뉴 명령(자리 바꾸기·다음/이전 칸)으로 단축키 지정 가능.",
+      "category": "select-edit",
+      "install": {
+        "plugin_id": "com.hy.swap"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-swap/icon.png"
+    },
+    {
       "id": "hy-tone",
       "stable": null,
       "test": {
