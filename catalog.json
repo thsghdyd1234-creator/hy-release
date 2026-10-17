@@ -539,12 +539,12 @@
       "id": "hy-swap",
       "stable": null,
       "test": {
-        "version": "0.2.0",
+        "version": "0.2.1",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-swap/hy-swap-0.2.0.ccx",
-        "sha256": "1e9a4d29b5f28935c4dd363b46a72a00b59c032d59be2884667395fa41f9a9b0",
-        "size": 21496,
-        "notes": "묶음끼리 자리 바꾸기\n- [A로 지정]: 여러 프레임을 드래그로 잡아 A로 지정 → 상대(프레임 하나 또는 여러 개)를 선택 → 자리 바꾸기로 묶음째 맞바꿈\n- 그룹은 지정 없이도 한 덩어리로 바뀜 (0.1.0은 그룹을 크기 그대로 가운데만 옮겼음)\n- 칸째로: 묶음·그룹 안의 배치를 비율대로 새 칸에 맞춤 (간격도 비율대로 바뀜). 위치만: 묶음 전체를 기준점으로 옮김\n- 3개 이상 순환에서도 그룹은 안쪽 프레임까지 칸 비율대로 맞춤\n- 메뉴 명령 'A로 지정' 추가 (단축키 지정용)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-swap/hy-swap-0.2.1.ccx",
+        "sha256": "b8ff5aba86797bdc20a34e148accbf615c1a5efbf054d02823040218cbb6366f",
+        "size": 22442,
+        "notes": "버그 수정 — '칸째로'에서 자리가 안 바뀌고 '바꿨습니다'만 뜨던 문제\n- 원인: 인디자인 UXP가 돌려주는 프레임 경계가 진짜 배열이 아니라 복사(.slice)에서 오류가 났고, 실행 취소 묶음(doScript) 안의 오류가 밖으로 안 나와 성공으로 표시됨\n- 경계를 숫자 4개로 직접 복사, 묶음 안 오류를 잡아 패널에 표시\n- 바꾼 뒤 실제로 바뀌었는지 확인하고, 안 바뀐 프레임은 ExtendScript로 한 번 더 적용. 그래도 안 되면 개수와 함께 알림"
       },
       "history": [],
       "name": "hy Swap",
