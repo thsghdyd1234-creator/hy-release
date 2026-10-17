@@ -183,6 +183,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/icon.png"
     },
     {
+      "id": "hy-duotone",
+      "stable": null,
+      "test": {
+        "version": "0.4.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-duotone/hy-duotone-0.4.0.ccx",
+        "sha256": "b63fb0843e5dbd0d164aeb890ebe40c3253c60aaca9774261a4a56d745ac17f2",
+        "size": 52200,
+        "notes": "첫 등록\n- 그라데이션 맵 조정 레이어 연결·실시간 갱신, 듀오톤/트라이톤, 강도·대비\n- 연결 레이어 검증(문서·그라데이션 맵 여부 확인 후 재연결/해제) — '설정 명령을 사용할 수 없음' 오류 대응\n- 중간톤 자동, 색 슬롯별 전경색 가져오기(공유 팔레트)\n- 프리셋 32개(카테고리·섹션 접기), 내 프리셋 저장, 레이어 읽기, 유지·병합·클리핑"
+      },
+      "history": [],
+      "name": "hy Duotone",
+      "type": "uxp",
+      "host": {
+        "app": "Photoshop",
+        "versions": "2023 이상 (24.0+)"
+      },
+      "summary": "두·세 색 그라데이션 맵을 패널에서 바로 만지는 듀오톤·트라이톤 — 프리셋 32개",
+      "description": "그라데이션 맵 조정 레이어 하나를 패널과 연결해 그림자·중간톤·하이라이트 색과 중간톤 위치, 강도(불투명도)·대비를 바꾸면 캔버스에 바로 반영한다. 듀오톤/트라이톤 전환, 정지점 드래그, 색 피커·hex 입력, hy Color에서 고른 전경색을 슬롯에 바로 가져오는 버튼(Alt: 배경색), 그림자·하이라이트에 맞춰 중간톤을 알아서 잡는 '중간톤 자동'. 다이어그램·자연·선명·차분·반전 프리셋 32개(카테고리 접기)와 내 프리셋 저장. 기존 그라데이션 맵 레이어를 읽어 이어서 고칠 수 있고, 조정 레이어 유지·병합·아래 레이어 클리핑을 고른다.",
+      "category": "color",
+      "install": {
+        "plugin_id": "com.hy.duotone"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-duotone/icon.png"
+    },
+    {
       "id": "hy-ffd",
       "stable": null,
       "test": {
