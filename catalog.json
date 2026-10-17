@@ -186,12 +186,12 @@
       "id": "hy-ffd",
       "stable": null,
       "test": {
-        "version": "0.1.0",
+        "version": "0.1.1",
         "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-ffd/hy-ffd-0.1.0.rbz",
-        "sha256": "ef6a1495759fc56578bfbf37b3b9ebecc15f472af5ec0e2a47b33d66ab664679",
-        "size": 28724,
-        "notes": "첫 등록 (테스트 빌드)\n- 공간 FFD: 격자 상자(축당 2~12점), 기저 4종 — 부드럽게(B-스플라인, C2)·통과(Catmull-Rom, 격자점 통과)·베지어·각지게\n- 재편집 구조: 컨테이너 = 원본(숨김) + 결과. 격자는 컨테이너 속성 JSON, 결과는 매번 원본에서 다시 만듦\n- 크랙 없는 적응 세분: 이웃 면이 같은 경계 점열을 공유, 들로네 뒤집기 + LEPP 이분할, 정밀도 4단계\n- 조작: 클릭·박스 선택(Shift 토글·Ctrl 추가), 드래그(미리보기), 방향키 축 고정, 숫자=거리 / a,b,c=U·V·W 이동, 변형 전 a,b,c=분할\n- 패널: 층 선택, 이동·크기·회전, 경계 잠금, 격자 다시 맞춤, 프리셋 10종(presets.json), 격자 JSON 저장·불러오기\n- 하위 객체: 컴포넌트 강체 추종(기본), 그룹 강체 추종 선택. 거울 복사 그룹 면 방향 유지\n- 원본 편집 → 원본 그룹을 닫으면 자동 반영, 굽기(확정)·해제(원본으로)\n- MOSAIC 등록 hy.ffd, 툴바 'HY FFD'"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-ffd/hy-ffd-0.1.1.rbz",
+        "sha256": "2e32423fe9fe6bdbaccbe5f612d59821ee8e5846beb052a00efd0b824c99e9d1",
+        "size": 30059,
+        "notes": "버그 수정 — '원본 편집' 경고창 폭주와 스케치업 튕김\n- FFD를 처음 걸 때 원본이 컨테이너 밖에 생기던 문제: 열려 있지 않은 그룹 안으로 형상을 옮기던 호출을 없애고, 만든 뒤 원본·결과가 컨테이너 안에 있는지 확인\n- 타이머가 경고창이 떠 있는 동안 다시 발사돼 같은 경고가 수십 개 뜨고 튕기던 문제: 모든 지연 실행을 한 번만 도는 방식으로 바꿈\n- 0.1.0에서 원본을 잃은 FFD: 선택하고 FFD를 실행하면 복구(숨은 원본을 되살리고 깨진 FFD 정리)를 묻는다\n- FFD 실행이 겹쳐 들어오지 않게 막음"
       },
       "history": [],
       "name": "hy FFD",
