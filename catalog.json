@@ -1217,6 +1217,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-clean/icon.png"
     },
     {
+      "id": "yl-ed-facetrim",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-facetrim/yl-ed-facetrim-0.1.0.rbz",
+        "sha256": "0b9ad08b37423e7908cf6e774633790fe77529e1ca8dcd9267f0382a6e4ba62d",
+        "size": 3030,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/ed_facetrim.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ED·02 면 트리밍",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "면을 모델 안 부재로 잘라 조각낸 뒤, 클릭으로 남길 조각만 고릅니다.",
+      "description": "면을 모델 안 부재로 잘라 조각낸 뒤, 클릭으로 남길 조각만 고릅니다. 선택: 면 1개 이상. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "select-edit",
+      "install": {
+        "loader": "ed_facetrim.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-facetrim/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
