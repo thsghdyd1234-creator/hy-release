@@ -454,12 +454,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.12.3",
+        "version": "0.12.4",
         "date": "2026-10-18",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.3.exe",
-        "sha256": "90e208f5a284ff8b41de0e031c87ac3a59772b63512072d01fccdc0c69735986",
-        "size": 22711179,
-        "notes": "- 화면이 바뀔 때 뚝뚝 끊겨 보이던 문제\n  - 새 화면은 뒤에서 다 그린 다음 한 번에 앞으로 (카드가 하나씩 붙는 모습이 보이지 않음). 상태가 바뀌어 다시 그릴 때도 옛 화면을 그대로 두었다가 바꿔 끼움\n  - 위 막대(뒤로·홈)를 늘 같은 높이로 두어, 홈과 다른 화면을 오갈 때 아래 화면 높이가 바뀌며 덜컥거리지 않게\n  - 위 막대·왼쪽 메뉴는 지우고 다시 만들지 않고 글자·강조만 바꿈 (깜빡임 없음)\n  - 보관한 화면으로 옮기기 0.03~0.07초"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.4.exe",
+        "sha256": "600691917f8cda8a14ffe279da0262334cbb123337c165f8d823df2e1a8c94a2",
+        "size": 22712799,
+        "notes": "- 스크롤할 때 카드 잔상이 남던 문제\n  - 한 번 본 화면을 같은 자리에 겹쳐 둔 채 숨기던 것을, 지금 화면 말고는 완전히 내려 두게 (Windows에서 뒤 화면이 비치던 것)\n  - 휠로 스크롤한 직후 바로 다시 그리기"
       },
       "history": [],
       "name": "hy 허브",
