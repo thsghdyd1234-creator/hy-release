@@ -1481,6 +1481,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-in-hanger/icon.png"
     },
     {
+      "id": "yl-rd-camdeck",
+      "stable": null,
+      "test": {
+        "version": "0.3.3",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-camdeck/yl-rd-camdeck-0.3.3.rbz",
+        "sha256": "c42128687dc9afd4840e6af0a5e165a060ad8d6e09d759f2274b5683c406c4e2",
+        "size": 16529,
+        "notes": "- 첫 등록 (rd_camdeck.rb, 유가네 툴박스 패널의 RD·04)\n- 그림자 시각을 ShadowTime·ShadowTime_time_t 두 키에 모두 기록, 읽기는 ShadowTime 우선 — 버전마다 한쪽 쓰기가 무시되던 문제(SU2026) 대응, 어긋나면 진단 한 줄 표시\n- 그림자 드래그 미리보기 방식 선택: 애니메이션(프레임 루프) · 단계(0.25초) · 놓을 때",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "RD·04 카메라 덱",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "표준뷰·ISO·턴테이블·화각을 한 패널에서. 이름 지정 카메라 슬롯.",
+      "description": "표준뷰·ISO·턴테이블·화각을 한 패널에서. 이름 지정 카메라 슬롯. 선택: 선택 없이 실행. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "rd_camdeck.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-camdeck/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
