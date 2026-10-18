@@ -540,12 +540,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.16.1",
+        "version": "0.16.2",
         "date": "2026-10-19",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.16.1.exe",
-        "sha256": "da8177f34e8e31c374ddb9c25ee6b8e5f5ff6591ee13b2e127a0a8aaac46ee58",
-        "size": 22737250,
-        "notes": "- 전체 화면 앱 칩을 짧게: '업데이트 1 · 새 4' 글자 대신 숫자만 색으로 (업데이트 = 호박색, 새 툴 = 청록 — 왼쪽 메뉴 배지와 같은 색)\n- 앱 칩이 창 폭을 넘으면 잘리지 않고 다음 줄로 넘어감"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.16.2.exe",
+        "sha256": "1efa43be4da12274832f0eafc982c9b2c4cee694767773ac3292f1de33cb934f",
+        "size": 22741098,
+        "notes": "- 크롬 확장: 브라우저가 실제로 무엇을 쓰고 있는지 보여 줌 (업데이트가 안 보이던 문제)\n  - 브라우저가 지금 돌리는 버전을 읽어서, 폴더는 새 버전인데 브라우저는 옛 버전이면 '다시 불러오기 필요'와 방법을 알려 줌\n  - 같은 확장(같은 ID)인데 브라우저가 다른 폴더(예: 직접 압축 풀어 불러온 폴더)를 쓰고 있으면 '다른 폴더'로 알려 줌 — 그 폴더는 허브가 업데이트하지 않음\n  - 업데이트를 마친 뒤의 안내도 같은 기준으로 (다른 폴더를 쓰면 바로 알려 줌)"
       },
       "history": [],
       "name": "hy 허브",
