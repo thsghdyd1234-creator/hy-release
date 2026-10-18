@@ -1778,6 +1778,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-stair/icon.png"
     },
     {
+      "id": "yl-st-beam",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-beam/yl-st-beam-0.1.0.rbz",
+        "sha256": "f44aa35193c6a482b59891b2af2805a7639c62ce75f4e9a18c1fcfe4e4134a80",
+        "size": 5248,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/st_beam.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ST·01 보 자동 배열",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "기둥을 인식해 주보와 작은보를 겁니다. 비직교 배치도 따라갑니다.",
+      "description": "기둥을 인식해 주보와 작은보를 겁니다. 비직교 배치도 따라갑니다. 선택: 기둥 그룹/컴포넌트. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "st_beam.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-beam/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
