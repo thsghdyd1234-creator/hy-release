@@ -1116,6 +1116,144 @@
       ],
       "requires": [],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/stay-tion/icon.png"
+    },
+    {
+      "id": "yoolab",
+      "stable": null,
+      "test": {
+        "version": "4.0.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yoolab/yoolab-4.0.0.rbz",
+        "sha256": "f97c65b7d5e4af1384013fe543d0c72354e237f6384865dfaf474904030ef5dd",
+        "size": 50178,
+        "notes": "- 툴을 껍데기 밖으로 분리: 툴은 Plugins\\yoolab_tools에 하나씩 깔리고 hy 허브가 툴마다 설치·업데이트 (껍데기를 업데이트해도 툴이 지워지지 않음)\n- 툴을 읽는 순서: 개발 폴더 tools → yoolab_tools(허브) → 껍데기 안 tools(예전 방식). 같은 파일 이름은 읽기 전에 앞쪽 하나만 골라 두 버전이 섞이지 않음\n  - 개발 폴더에는 지금 손보는 툴만 넣어 두면 그 툴만 개발본, 나머지는 허브 버전\n- 허브 정보 파일(<툴>.json)에서 버전·변경 내역·아이콘·필요한 껍데기 버전을 읽음\n  - 카드에 버전 표시(개발 폴더에서 읽은 툴은 '개발')\n  - 허브로 업데이트된 툴에 '업데이트됨'(처음 들어온 툴은 '새 툴') 표시, 누르면 본 버전 뒤의 바뀐 내용. [확인]·실행·[모두 확인]으로 지움\n  - 껍데기가 낮아 못 쓰는 툴은 읽지 않고 '툴박스 X 이상 필요'로 표시\n  - 패널에 그림이 없는 새 툴은 정보 파일의 아이콘을 씀 (툴을 추가해도 껍데기를 업데이트할 필요 없음)\n- 툴이 하나도 없으면 hy 허브의 [전체 설치]를 안내\n- 개발 탭: 파일마다 출처(개발·허브)와 버전, 개발 폴더에 가려진 허브 파일 표시"
+      },
+      "history": [],
+      "name": "유가네 툴박스",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "건축 모델링 툴 패널 — 구조·입면·창·문·계단·실내·렌더·편집. 안의 툴은 하나씩 설치·업데이트",
+      "description": "스케치업 툴바·확장 메뉴의 '유가네 툴박스' 패널. 껍데기(boot·lib·ui)만 들어 있고, 툴 27개는 아래 목록에서 하나씩 받거나 [전체 설치]로 한 번에 받는다. 툴은 Plugins\\yoolab_tools에 따로 깔려서 껍데기를 업데이트해도 지워지지 않는다. 패널은 툴마다 버전을 보여 주고, 허브로 업데이트된 툴에 '업데이트됨' 표시와 바뀐 내용을 띄운다. 확장 관리자로 3.x를 깔았던 PC는 이 껍데기를 설치하면 예전 툴 폴더가 백업으로 빠지므로 [전체 설치]로 툴을 다시 받는다.",
+      "category": "site-model",
+      "install": {
+        "loader": "yoolab_core.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "bundle": [
+        {
+          "id": "yl-st-beam",
+          "name": "ST·01 보 자동 배열"
+        },
+        {
+          "id": "yl-st-truss",
+          "name": "ST·02 트러스"
+        },
+        {
+          "id": "yl-st-trusscolumn",
+          "name": "ST·03 트러스 (기둥 인식)"
+        },
+        {
+          "id": "yl-st-spaceframe",
+          "name": "ST·04 스페이스 프레임"
+        },
+        {
+          "id": "yl-st-hbeam",
+          "name": "ST·05 H빔 변환"
+        },
+        {
+          "id": "yl-el-curtainwall",
+          "name": "EL·01 커튼월"
+        },
+        {
+          "id": "yl-el-perfpanel",
+          "name": "EL·02 타공판"
+        },
+        {
+          "id": "yl-el-ringfacade",
+          "name": "EL·03 링 파사드"
+        },
+        {
+          "id": "yl-wn-windowcut",
+          "name": "WN·01 통창 타공"
+        },
+        {
+          "id": "yl-wn-doublewindow",
+          "name": "WN·02 이중창"
+        },
+        {
+          "id": "yl-dr-door",
+          "name": "DR·01 도어"
+        },
+        {
+          "id": "yl-dr-foldingdoor",
+          "name": "DR·02 폴딩도어"
+        },
+        {
+          "id": "yl-sr-stair",
+          "name": "SR·01 계단"
+        },
+        {
+          "id": "yl-sr-slope",
+          "name": "SR·02 슬로프·컨베이어"
+        },
+        {
+          "id": "yl-sr-railing",
+          "name": "SR·03 난간"
+        },
+        {
+          "id": "yl-sr-helix",
+          "name": "SR·04 헬릭스 경로"
+        },
+        {
+          "id": "yl-in-hanger",
+          "name": "IN·01 천장 행거"
+        },
+        {
+          "id": "yl-rd-lumen",
+          "name": "RD·01 조명 배열"
+        },
+        {
+          "id": "yl-rd-d5material",
+          "name": "RD·02 D5 재질 맵핑"
+        },
+        {
+          "id": "yl-rd-shadow",
+          "name": "RD·03 배치도 그림자"
+        },
+        {
+          "id": "yl-rd-camdeck",
+          "name": "RD·04 카메라 덱"
+        },
+        {
+          "id": "yl-rd-sectionbox",
+          "name": "RD·05 영역 단면"
+        },
+        {
+          "id": "yl-ed-stretch",
+          "name": "ED·01 그룹횡단 스트레치"
+        },
+        {
+          "id": "yl-ed-facetrim",
+          "name": "ED·02 면 트리밍"
+        },
+        {
+          "id": "yl-ed-split",
+          "name": "ED·03 선 분할"
+        },
+        {
+          "id": "yl-ed-scale",
+          "name": "ED·04 모형 스케일"
+        },
+        {
+          "id": "yl-ed-clean",
+          "name": "ED·05 잔선·잔면 청소"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yoolab/icon.png"
     }
   ],
   "categories": [
