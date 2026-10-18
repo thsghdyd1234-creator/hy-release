@@ -1349,6 +1349,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-stretch/icon.png"
     },
     {
+      "id": "yl-el-curtainwall",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-curtainwall/yl-el-curtainwall-0.1.0.rbz",
+        "sha256": "76031ecab8fb9d834b7eb95169faed6c8ff2131c5bb5a10f0f07ea9e42716215",
+        "size": 17470,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/el_curtainwall.rb, 함께: el_curtainwall_preview.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "EL·01 커튼월",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "평면·곡면을 자동으로 갈라 멀리언 격자와 유리를 넣습니다. Stick/DPG/SSG/단파론. V70.",
+      "description": "평면·곡면을 자동으로 갈라 멀리언 격자와 유리를 넣습니다. Stick/DPG/SSG/단파론. V70. 선택: 면 1개 이상. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "el_curtainwall.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-curtainwall/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
