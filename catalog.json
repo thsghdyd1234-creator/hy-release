@@ -567,6 +567,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/icon.png"
     },
     {
+      "id": "hy-jpush",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-jpush/hy-jpush-0.1.0.rbz",
+        "sha256": "c06cce57de0c2439600021a894ae853f51b2a5d0fd5cc5b591b7dbbec291b912",
+        "size": 8256,
+        "notes": "첫 등록 (테스트 빌드). 10월 6일에 만든 `hy_jpush_test.rb`를 로더(`hy_jpush.rb`) + `hy_jpush/main.rb` 구조로 옮김. 계산 코드는 그대로\n- 꼭짓점 단위 조인트 푸시풀: 붙은 면 법선으로 n·d = 1 코너각 가중 최소제곱, 뾰족한 꼭짓점은 마이터 3배로 클램프, 서로 반대인 면은 폴백\n- 면 방향 통일 (공유 엣지를 따라 맞추고 면적 다수결로 바깥 결정)\n- 결과는 두께 셸: 원본 유지 + 오프셋 면 + 열린 가장자리 측벽. 원본 면은 바깥을 향하게 뒤집고 재질 앞뒤를 맞바꿔 보이는 모습 유지\n- 평면이 아니게 된 오프셋 면은 원본 메시 삼각분할로, 원본 엣지의 부드럽게·숨김 이어받기\n- 조작: 면 위 클릭 → 드래그 → 클릭, 거리 입력, 접힘 경고 (빨간 미리보기 + 상태 표시줄)\n- MOSAIC 등록 hy.jpush, 메뉴 확장 › HY 조인트 푸쉬풀\n- 알려진 한계: 오목한 쪽 접힘은 경고만 하고 정리하지 않음, 라운드·노말 모드 없음, 그룹 안 면 선택 안 됨 → 0.2.0에서 코어 교체 예정"
+      },
+      "history": [],
+      "name": "hy JPush",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "조인트 푸시풀 — 선택한 곡면을 이음새 없이 일정 두께로 밀어 두께 셸 만들기",
+      "description": "면을 고르고 실행한 뒤 면 위를 클릭 → 드래그 → 클릭(또는 거리 입력)으로 민다. 꼭짓점마다 붙은 면들의 법선으로 이동 방향을 최소제곱으로 구해, 곡면도 기본 푸시풀처럼 면마다 갈라지지 않고 이음새 없이 일정 두께로 밀린다. 결과는 원본 유지 + 오프셋 면 + 열린 가장자리 측벽의 두께 셸(원본 면은 바깥을 향하게 뒤집고 보이는 재질은 그대로). 면 방향이 섞인 임포트 곡면도 방향을 통일해서 민다. 원본 엣지의 부드럽게·숨김 설정을 이어받고, 평면이 아니게 된 오프셋 면은 삼각형으로 나눈다. 오목한 쪽으로 너무 두껍게 밀면 미리보기가 빨개지며 접힌 면 수를 알려 준다. MOSAIC 등록(hy.jpush).",
+      "category": "site-model",
+      "install": {
+        "loader": "hy_jpush.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-jpush/icon.png"
+    },
+    {
       "id": "hy-layer",
       "stable": null,
       "test": {
