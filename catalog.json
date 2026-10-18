@@ -185,6 +185,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cmd/icon.png"
     },
     {
+      "id": "hy-command",
+      "stable": null,
+      "test": {
+        "version": "0.2.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-command/hy-command-0.2.0.aip",
+        "sha256": "217b00c89d5283aff587f9523278d4575c28245f5e6b482dd2a56992431e434e",
+        "size": 1293824,
+        "notes": "- 첫 등록\n- 캐드식 명령줄: 단축키로 켜고 끄는 명령바, 별칭 66개(그리기·편집·패스파인더·레이어·스냅), 후보 칩 클릭 실행, 빈 Enter로 반복\n- 입력칸·문자 도구·대화상자·메뉴에서는 자동으로 멈춤, 한글 입력 상태에서도 영문 자판으로 읽음\n- 별칭 파일 %APPDATA%\\hy\\hyCommand\\aliases.json — 메모장에서 저장하면 1초 안에 적용\n- hy Layer 합침: 창 > hy Layer 레이어 명령과 설정 그대로(단축키 이름·격리 저장 키·설정 같음), 명령줄에서도 LAYON·LAYISO·LAYISO2·LAYERP·LAYSET 등\n- 예전 hyLayer.aip가 같이 있으면 켤 때 지우라는 알림"
+      },
+      "history": [],
+      "name": "hy Command",
+      "type": "aip",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2024 이상"
+      },
+      "summary": "캐드처럼 TR·J·LAYISO를 치고 Space로 실행하는 일러스트 명령줄 + 캐드식 레이어 명령(hy Layer 포함)",
+      "description": "창 > hy Command > 명령줄 켜기/끄기(단축키 지정)로 켜면 창 아래 명령바가 뜨고, 별칭을 쳐서 메뉴 명령·도구·플러그인 메뉴를 부른다. 별칭은 %APPDATA%\\hy\\hyCommand\\aliases.json(메모장으로 고치면 바로 적용). hy Layer의 레이어 명령(LAYON·LAYOFF·LAYISO·LAYERP·LAYLCK·LAYULK)이 들어 있어 창 > hy Layer 단축키 1~4는 명령줄 없이도 동작한다. 예전 hyLayer.aip는 지울 것.",
+      "category": "organize",
+      "install": {
+        "file": "hyCommand.aip"
+      },
+      "user_data": [
+        "%APPDATA%\\hy\\hyCommand"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-command/icon.png"
+    },
+    {
       "id": "hy-curve",
       "stable": null,
       "test": {
