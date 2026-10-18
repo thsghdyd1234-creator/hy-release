@@ -1514,6 +1514,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-camdeck/icon.png"
     },
     {
+      "id": "yl-rd-d5material",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-d5material/yl-rd-d5material-0.1.0.rbz",
+        "sha256": "9f490874639a6c88aeb82dff92d100357a74a94dddd557ab5785834656d79a35",
+        "size": 6354,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/rd_d5material.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "RD·02 D5 재질 맵핑",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "재질 목록을 자동 동기화하고, 그룹 속까지 뚫는 페인트와 재질별 격리를 씁니다.",
+      "description": "재질 목록을 자동 동기화하고, 그룹 속까지 뚫는 페인트와 재질별 격리를 씁니다. 선택: 선택 없이 실행. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "rd_d5material.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-d5material/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
