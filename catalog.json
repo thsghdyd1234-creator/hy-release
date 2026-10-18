@@ -1745,6 +1745,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-slope/icon.png"
     },
     {
+      "id": "yl-sr-stair",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-stair/yl-sr-stair-0.1.0.rbz",
+        "sha256": "0c79640495a30f4ff8dcb23e311b7121921542a85736cc198b3e3e8be59a433e",
+        "size": 34756,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/sr_stair.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "SR·01 계단",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "시작 면을 찍으면 이어진 계단을 자동 인식. 참은 순서대로 클릭. 난간 10종.",
+      "description": "시작 면을 찍으면 이어진 계단을 자동 인식. 참은 순서대로 클릭. 난간 10종. 선택: 계단 첫 면 클릭 → 참 클릭 → Enter. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "sr_stair.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-stair/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
