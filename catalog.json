@@ -1184,6 +1184,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-dr-foldingdoor/icon.png"
     },
     {
+      "id": "yl-ed-clean",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-clean/yl-ed-clean-0.1.0.rbz",
+        "sha256": "873dac2bf2f91c973da692f79654fb4b5c0086600d7a35de81a92e3b80c9549b",
+        "size": 3225,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/ed_clean.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ED·05 잔선·잔면 청소",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "면 없는 잔선과 고립 면을 일괄 삭제",
+      "description": "면 없는 잔선과 고립 면을 일괄 삭제 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "select-edit",
+      "install": {
+        "loader": "ed_clean.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-clean/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
