@@ -454,12 +454,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.12.4",
+        "version": "0.12.5",
         "date": "2026-10-18",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.4.exe",
-        "sha256": "600691917f8cda8a14ffe279da0262334cbb123337c165f8d823df2e1a8c94a2",
-        "size": 22712799,
-        "notes": "- 스크롤할 때 카드 잔상이 남던 문제\n  - 한 번 본 화면을 같은 자리에 겹쳐 둔 채 숨기던 것을, 지금 화면 말고는 완전히 내려 두게 (Windows에서 뒤 화면이 비치던 것)\n  - 휠로 스크롤한 직후 바로 다시 그리기"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.12.5.exe",
+        "sha256": "a412a02cb4747af301f41b563da00cce8ebcba1c76073ca34381de8e6c3375e1",
+        "size": 22716808,
+        "notes": "- 처음 여는 화면도 빨리 뜨게 (툴 32개 기준: 툴 목록 0.9→0.45초, 일괄 설치 0.6→0.2초, 설정 0.5→0.25초, 분류 칩 0.2→0.12초)\n  - 글자·툴 아이콘을 가벼운 위젯으로 (CTkLabel은 글자 하나에도 캔버스를 하나씩 그림)\n  - 툴 목록·일괄 설치는 보이는 앞쪽만 바로 그리고 나머지는 이어서 나눠 그림 → 누르자마자 화면이 바뀜\n  - 툴 카드의 [자세히] 버튼을 가벼운 '자세히 ›' 글자로 (카드 어디를 눌러도 상세로 가는 건 그대로)\n  - 분류 칩·설정의 화면 색 견본을 가볍게\n  - '새 툴' 표시는 그 배지만 지우고 화면 전체를 다시 그리지 않음\n  - 설치된 일러스트·스케치업 찾은 결과를 2분 동안 기억 (새로 고침하면 바로 다시 찾음)"
       },
       "history": [],
       "name": "hy 허브",
