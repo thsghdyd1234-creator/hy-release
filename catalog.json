@@ -1976,6 +1976,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-wn-doublewindow/icon.png"
     },
     {
+      "id": "yl-wn-windowcut",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-wn-windowcut/yl-wn-windowcut-0.1.0.rbz",
+        "sha256": "f91f3cb1b6b67a7e69a83996f1b4a738004694b8a1f4571627b10e811c5256e3",
+        "size": 3429,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/wn_windowcut.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "WN·01 통창 타공",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "커터 볼륨과 벽을 함께 고르면 여러 개구부를 한 번에 뚫습니다.",
+      "description": "커터 볼륨과 벽을 함께 고르면 여러 개구부를 한 번에 뚫습니다. 선택: 벽 + 커터 2개 이상. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "wn_windowcut.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-wn-windowcut/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
