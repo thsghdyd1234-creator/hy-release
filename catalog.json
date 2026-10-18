@@ -1151,6 +1151,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-dr-door/icon.png"
     },
     {
+      "id": "yl-dr-foldingdoor",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-dr-foldingdoor/yl-dr-foldingdoor-0.1.0.rbz",
+        "sha256": "9b78f3613d94ad0df3ef3b6a23d7169dae125917b9b6967b3227139a572df94b",
+        "size": 5960,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/dr_foldingdoor.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "DR·02 폴딩도어",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "접힘 각도와 짝 수를 조절하며 슬라이딩 폴딩도어를 세웁니다.",
+      "description": "접힘 각도와 짝 수를 조절하며 슬라이딩 폴딩도어를 세웁니다. 선택: 화면에서 클릭. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "dr_foldingdoor.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-dr-foldingdoor/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
