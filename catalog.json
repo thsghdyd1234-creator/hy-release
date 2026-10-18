@@ -1382,6 +1382,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-curtainwall/icon.png"
     },
     {
+      "id": "yl-el-perfpanel",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-perfpanel/yl-el-perfpanel-0.1.0.rbz",
+        "sha256": "62d2f9b9cac76949abe4eb9c19bb2539cc7f208f4891f7610e90b6f02fdd8f30",
+        "size": 5670,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/el_perfpanel.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "EL·02 타공판",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "어트랙터와의 거리에 따라 구멍 크기가 변하는 패널을 뚫습니다.",
+      "description": "어트랙터와의 거리에 따라 구멍 크기가 변하는 패널을 뚫습니다. 선택: 면 1개. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "el_perfpanel.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-perfpanel/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
