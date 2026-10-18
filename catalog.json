@@ -1679,6 +1679,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-helix/icon.png"
     },
     {
+      "id": "yl-sr-railing",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-railing/yl-sr-railing-0.1.0.rbz",
+        "sha256": "af034dc66753a84b27062c60eadf60dc6efd7b62f1651d7535136854c219f85f",
+        "size": 8021,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/sr_railing.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "SR·03 난간",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "유리·봉·평철 3계열. 코너에서 프로파일이 끊기지 않고 이어집니다. 떨어진 경로 다중 선택 가능.",
+      "description": "유리·봉·평철 3계열. 코너에서 프로파일이 끊기지 않고 이어집니다. 떨어진 경로 다중 선택 가능. 선택: 이어진 선 (다중 선택 가능). 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "sr_railing.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-railing/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
