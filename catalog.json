@@ -36,12 +36,12 @@
       "id": "clean-map",
       "stable": null,
       "test": {
-        "version": "4.62.1",
+        "version": "4.63.0",
         "date": "2026-10-19",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/clean-map/clean-map-4.62.1.zip",
-        "sha256": "6265cc40723750b873e96abd0c9729d0987df4460557762237d03bab331d0542",
-        "size": 1121733,
-        "notes": "- 첫 등록 (허브 0.15.0의 '크롬 확장' 종류로 배포)\n- manifest에 고정 ID용 key 추가 — 설치 폴더가 바뀌어도 같은 확장으로 보여 설정이 이어짐\n- 지도 스타일러(프리셋·라벨·레이어 색) + 대지분석 모드, SVG·DXF·PNG·GeoJSON 내보내기\n- 행정경계로 잘라 내보내기: 시도·시군구·읍면동 고르기, 구역 나누기(마산·창원·진해 등), 도로 전부 받기(z14)\n- 4.62.1: 경계 자르기 상태에서 위성지도 내보내기, 등고선 끄기·라벨·지우기",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/clean-map/clean-map-4.63.0.zip",
+        "sha256": "32a88d3d91f90c54c50d2268f434ea85fbbd9b69f060891fe4cc2f0799db9d79",
+        "size": 1126268,
+        "notes": "- 바탕 사진 '지형 음영'을 표고(약 30m 격자)로 직접 그리게 바꿈 — 도로·논두렁·매립지 경계 자국이 없음\n  - Esri 음영기복은 국내에서 고해상도 표고로 만들어져 도로의 흙쌓기·깎기가 선처럼 박혀 있었음\n  - 표고를 살짝 흐려 레이더 잡티·도시 건물 요철을 누르고, 경사가 아주 낮은 평지는 음영을 빼서 깨끗하게\n  - 그림자 색은 지금 스타일의 글자색 계열(어두운 바탕은 검정 + 옅은 빛)을 따라감, SVG·PNG 내보내기·행정경계 자르기에 그대로 담김\n- 예전 Esri 음영은 '정밀 음영'으로 남겨 둠 (골짜기가 더 또렷하지만 도로 자국 있음)",
         "min_hub": "0.15.0"
       },
       "history": [],
