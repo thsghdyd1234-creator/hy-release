@@ -1844,6 +1844,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-hbeam/icon.png"
     },
     {
+      "id": "yl-st-spaceframe",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-spaceframe/yl-st-spaceframe-0.1.0.rbz",
+        "sha256": "3d19c444609e72e8e97f900f3e42a664c7e220ce974008bf96bd6055ebe9625e",
+        "size": 5466,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/st_spaceframe.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ST·04 스페이스 프레임",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "면을 X-가새 또는 입체 트러스로 채웁니다. 여러 면 한 번에 처리합니다.",
+      "description": "면을 X-가새 또는 입체 트러스로 채웁니다. 여러 면 한 번에 처리합니다. 선택: 면 1개 이상. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "st_spaceframe.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-spaceframe/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
