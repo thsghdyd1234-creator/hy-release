@@ -1250,6 +1250,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-facetrim/icon.png"
     },
     {
+      "id": "yl-ed-scale",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-scale/yl-ed-scale-0.1.0.rbz",
+        "sha256": "35600700dfa0366b696cf1c4995c6c40d486846533618c904a28779cc5ad97cb",
+        "size": 2145,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/ed_scale.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ED·04 모형 스케일",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "1:N 을 입력하면 축소하고 원점으로 옮긴 뒤 화면을 맞춥니다.",
+      "description": "1:N 을 입력하면 축소하고 원점으로 옮긴 뒤 화면을 맞춥니다. 선택: 객체 1개 이상. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "select-edit",
+      "install": {
+        "loader": "ed_scale.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-scale/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
