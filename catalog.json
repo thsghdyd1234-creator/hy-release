@@ -1283,6 +1283,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-scale/icon.png"
     },
     {
+      "id": "yl-ed-split",
+      "stable": null,
+      "test": {
+        "version": "6.5.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-split/yl-ed-split-6.5.0.rbz",
+        "sha256": "2d0a92657de2cf74ffc87d2c887ee16599d364383d9723417aa5b12a82782af2",
+        "size": 14619,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/ed_split.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ED·03 선 분할",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "선만 선택하면 커터로 등록, 선+그룹을 선택하면 그 면으로 잘라 단면까지 막습니다.",
+      "description": "선만 선택하면 커터로 등록, 선+그룹을 선택하면 그 면으로 잘라 단면까지 막습니다. 선택: 그룹/컴포넌트 + 자르기 궤적 선. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "select-edit",
+      "install": {
+        "loader": "ed_split.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-split/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
