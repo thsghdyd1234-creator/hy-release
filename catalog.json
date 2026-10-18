@@ -1316,6 +1316,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-split/icon.png"
     },
     {
+      "id": "yl-ed-stretch",
+      "stable": null,
+      "test": {
+        "version": "0.8.1",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-stretch/yl-ed-stretch-0.8.1.rbz",
+        "sha256": "84fb5e826493a2ea63fb1c97dc6a1198c6d18298d3cf479cd54f207eb7344fef",
+        "size": 21372,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/ed_stretch.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ED·01 그룹횡단 스트레치",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "그룹 경계를 넘어 정점을 함께 이동. explode 없이 벽+창 동시 조정.",
+      "description": "그룹 경계를 넘어 정점을 함께 이동. explode 없이 벽+창 동시 조정. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "select-edit",
+      "install": {
+        "loader": "ed_stretch.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-ed-stretch/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
