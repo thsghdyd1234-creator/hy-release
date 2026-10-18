@@ -1415,6 +1415,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-perfpanel/icon.png"
     },
     {
+      "id": "yl-el-ringfacade",
+      "stable": null,
+      "test": {
+        "version": "2.6.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-ringfacade/yl-el-ringfacade-2.6.0.rbz",
+        "sha256": "107c6600954651c81e76e415fbbe7add89dade7f3438283941f407e464708957",
+        "size": 4520,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/el_ringfacade.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "EL·03 링 파사드",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "층마다 반경과 기울기가 달라지는 루버 링을 쌓습니다.",
+      "description": "층마다 반경과 기울기가 달라지는 루버 링을 쌓습니다. 선택: 선택 없이 실행. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "el_ringfacade.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-ringfacade/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
