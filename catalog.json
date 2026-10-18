@@ -540,12 +540,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.16.0",
+        "version": "0.16.1",
         "date": "2026-10-19",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.16.0.exe",
-        "sha256": "1b6477642d2f1223cb2ad6a8a236f93d5ffdf12c59be09019eae9f18623145ea",
-        "size": 22736233,
-        "notes": "- 전체 화면은 분류 대신 앱을 띄움 (앱마다 분류가 달라서 전체에 분류를 다 띄우면 섞이기만 함)\n  - 위에 앱 칩: 앱 색 점 · 이름 · 툴 수 · 업데이트/새 툴 수. 누르면 그 앱으로 들어감\n  - 목록도 앱별로 묶고 앱마다 제목 줄과 [이 앱만 보기 ›] (묶음 패널은 그 앱 맨 위)\n- 앱 안에 들어가면 그 앱에 있는 분류만 칩으로 (전과 같음)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.16.1.exe",
+        "sha256": "da8177f34e8e31c374ddb9c25ee6b8e5f5ff6591ee13b2e127a0a8aaac46ee58",
+        "size": 22737250,
+        "notes": "- 전체 화면 앱 칩을 짧게: '업데이트 1 · 새 4' 글자 대신 숫자만 색으로 (업데이트 = 호박색, 새 툴 = 청록 — 왼쪽 메뉴 배지와 같은 색)\n- 앱 칩이 창 폭을 넘으면 잘리지 않고 다음 줄로 넘어감"
       },
       "history": [],
       "name": "hy 허브",
