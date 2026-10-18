@@ -1877,6 +1877,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-spaceframe/icon.png"
     },
     {
+      "id": "yl-st-truss",
+      "stable": null,
+      "test": {
+        "version": "3.2.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-truss/yl-st-truss-3.2.0.rbz",
+        "sha256": "5a3c178b6078cc521182541a512f02a4529e08e06529cef490898d2c0042027a",
+        "size": 5101,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/st_truss.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ST·02 트러스",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "H형강·파이프 단면을 골라 상현·하현·사재를 세웁니다. V3.2 계열.",
+      "description": "H형강·파이프 단면을 골라 상현·하현·사재를 세웁니다. V3.2 계열. 선택: 사각형 면 1개. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "st_truss.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-truss/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
