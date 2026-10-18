@@ -276,12 +276,12 @@
       "id": "hy-face-heal",
       "stable": null,
       "test": {
-        "version": "0.1.0",
-        "date": "2026-10-18",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-face-heal/hy-face-heal-0.1.0.rbz",
-        "sha256": "87dacd93c4fbbaa9025555a8e701617dfa77bed788220bc6b2b054017fa94e30",
-        "size": 23858,
-        "notes": "- 첫 등록\n- 끝점 묶기·꼭짓점 없는 교차 쪼개기·선 위 끝점 붙이기·중복·미세 선 정리, 열린 끝 잇기(모서리 복원·연장·곡선 끝 당겨 붙임), 가는 면 흡수\n- 면을 직접 계산해 EntitiesBuilder 로 생성(구멍 포함) → 실제 면과 대조, 빠지면 find_faces 로 보충\n- 미리보기 패널(이음·후보·못 이음 목록, 개별 체크, 그 자리로 이동) + 화면 표식\n- 시험: 시료 DWG 선 1,560개 → 면 9/9 (기존 방식은 큰 영역 2곳 빠짐), 가짜 도면 100장 안 만들어진 면 40.9% → 0.45%, 문 잘못 닫음 0\n- 확인 필요(실기): 스케치업 2024에서 시료 DWG·HY::FaceHeal.rig 기대값"
+        "version": "0.2.0",
+        "date": "2026-10-19",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-face-heal/hy-face-heal-0.2.0.rbz",
+        "sha256": "6c74df66fa74e21df371a8f9531421a7fb26a49925278ce165f1954272b1a4db",
+        "size": 24996,
+        "notes": "- 툴바 'hy 면 치유' 추가 — 아이콘 버튼 하나로 실행 (보기 › 도구 모음에서 켜고 끄기)\n- 메뉴 항목(면 치유·시험 리그)에도 아이콘"
       },
       "history": [],
       "name": "hy 면 치유",
