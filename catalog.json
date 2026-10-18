@@ -1712,6 +1712,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-railing/icon.png"
     },
     {
+      "id": "yl-sr-slope",
+      "stable": null,
+      "test": {
+        "version": "5.0.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-slope/yl-sr-slope-5.0.0.rbz",
+        "sha256": "17b42440270dd8d8c46d3482e666199c717f33da4799d2bfca330d2a4d2ff1e7",
+        "size": 31536,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/sr_slope.rb)\n- 패널 이름에서 '(분기 테스트)'를 뗌 — v5 분기 테스트 통과(2026-10-04)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "SR·02 슬로프·컨베이어",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "선/평면을 따라 경사로를 뽑습니다. 본선 그룹과 선/면을 함께 고르면 지선을 분기합니다.",
+      "description": "선/평면을 따라 경사로를 뽑습니다. 본선 그룹과 선/면을 함께 고르면 지선을 분기합니다. 선택: 이어진 선 또는 띠 평면 / 분기: 본선 그룹 + 지선 선·면. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "sr_slope.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-slope/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
