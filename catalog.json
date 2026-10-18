@@ -33,6 +33,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/ai2ps/icon.png"
     },
     {
+      "id": "clean-map",
+      "stable": null,
+      "test": {
+        "version": "4.62.1",
+        "date": "2026-10-19",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/clean-map/clean-map-4.62.1.zip",
+        "sha256": "6265cc40723750b873e96abd0c9729d0987df4460557762237d03bab331d0542",
+        "size": 1121733,
+        "notes": "- 첫 등록 (허브 0.15.0의 '크롬 확장' 종류로 배포)\n- manifest에 고정 ID용 key 추가 — 설치 폴더가 바뀌어도 같은 확장으로 보여 설정이 이어짐\n- 지도 스타일러(프리셋·라벨·레이어 색) + 대지분석 모드, SVG·DXF·PNG·GeoJSON 내보내기\n- 행정경계로 잘라 내보내기: 시도·시군구·읍면동 고르기, 구역 나누기(마산·창원·진해 등), 도로 전부 받기(z14)\n- 4.62.1: 경계 자르기 상태에서 위성지도 내보내기, 등고선 끄기·라벨·지우기",
+        "min_hub": "0.15.0"
+      },
+      "history": [],
+      "name": "클린 맵",
+      "type": "chrome",
+      "host": {
+        "app": "Chrome",
+        "versions": "크롬·엣지·웨일"
+      },
+      "summary": "전세계 벡터 지도를 깔끔한 스타일로 보고 SVG·DXF로 내보내는 크롬 확장 (대지분석 포함)",
+      "description": "프리셋 스타일·라벨 끄기·레이어별 색으로 지도를 정리해 SVG(일러스트)·DXF(캐드)·PNG·GeoJSON으로 내보낸다. 국내 필지·건물·용도지역(브이월드), 행정경계로 잘라 내보내기(구역 나누기), 등고선·3D 액소·단면, 대지분석 다이어그램(일조·바람·교통·상권 등) 포함. 구글맵에서 같은 위치로 바로 넘길 수 있다. 설치 폴더의 클린맵_레이어정리.jsx는 내보낸 SVG의 레이어를 정리하는 일러스트 스크립트.",
+      "category": "export",
+      "user_data": [
+        "chrome:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/clean-map/icon.png"
+    },
+    {
       "id": "hy-arrow",
       "stable": null,
       "test": {
