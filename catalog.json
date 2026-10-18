@@ -1613,6 +1613,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-sectionbox/icon.png"
     },
     {
+      "id": "yl-rd-shadow",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-shadow/yl-rd-shadow-0.1.0.rbz",
+        "sha256": "84b78323e2b1465df6ac5c3a9e288ce14f81e168d46d9128fdfd972441603237",
+        "size": 2954,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/rd_shadow.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "RD·03 배치도 그림자",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "시간·계절·농도를 밀면서 탑뷰를 잡고, 투명 배경 PNG 로 뽑습니다.",
+      "description": "시간·계절·농도를 밀면서 탑뷰를 잡고, 투명 배경 PNG 로 뽑습니다. 선택: 선택 없이 실행. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "rd_shadow.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-shadow/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
