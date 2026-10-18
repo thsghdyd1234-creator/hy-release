@@ -1547,6 +1547,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-d5material/icon.png"
     },
     {
+      "id": "yl-rd-lumen",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-lumen/yl-rd-lumen-0.1.0.rbz",
+        "sha256": "038b89c5871de405dcc24480f09265081a2d1de28c39b9ea070f8c0ac6df140d",
+        "size": 5730,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/rd_lumen.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "RD·01 조명 배열",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "면을 고르면 격자로, 선을 고르면 경로를 따라 광원을 놓습니다.",
+      "description": "면을 고르면 격자로, 선을 고르면 경로를 따라 광원을 놓습니다. 선택: 면 1개 또는 선 1개. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "rd_lumen.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-lumen/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
