@@ -1646,6 +1646,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-shadow/icon.png"
     },
     {
+      "id": "yl-sr-helix",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-helix/yl-sr-helix-0.1.0.rbz",
+        "sha256": "645df7fb8137d88350a7a7fd557fb760a13456dc14c3562f835eac5962844ebe",
+        "size": 5373,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/sr_helix.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "SR·04 헬릭스 경로",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "슬라이더 또는 직접 입력으로 나선을 실시간 미리보며 배치합니다. 생성 후 난간을 이어 실행하세요.",
+      "description": "슬라이더 또는 직접 입력으로 나선을 실시간 미리보며 배치합니다. 생성 후 난간을 이어 실행하세요. 선택: 값 조정 → 화면 클릭. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "sr_helix.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-helix/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
