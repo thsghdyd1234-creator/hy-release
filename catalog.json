@@ -1580,6 +1580,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-lumen/icon.png"
     },
     {
+      "id": "yl-rd-sectionbox",
+      "stable": null,
+      "test": {
+        "version": "3.12.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-sectionbox/yl-rd-sectionbox-3.12.0.rbz",
+        "sha256": "c4516fde8d2288092f66c5be7c76819f09cd9453002cffc9504a15c052d50301",
+        "size": 29278,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/rd_sectionbox.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "RD·05 영역 단면",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "영역 박스로 지정한 부분만 잘라 봅니다. 원본은 건드리지 않습니다.",
+      "description": "영역 박스로 지정한 부분만 잘라 봅니다. 원본은 건드리지 않습니다. 선택: 자를 대상 선택 (없으면 전체). 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "rd_sectionbox.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-rd-sectionbox/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
