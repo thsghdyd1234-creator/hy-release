@@ -1811,6 +1811,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-beam/icon.png"
     },
     {
+      "id": "yl-st-hbeam",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-hbeam/yl-st-hbeam-0.1.0.rbz",
+        "sha256": "f9295d1450cd0bab9e854bfabc20adee07fd0b26bfaba3a087044854645b98f4",
+        "size": 4780,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/st_hbeam.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ST·05 H빔 변환",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "사각기둥을 찾아 H형강으로 한 번에 바꿉니다. 그룹 안쪽까지 훑습니다.",
+      "description": "사각기둥을 찾아 H형강으로 한 번에 바꿉니다. 그룹 안쪽까지 훑습니다. 선택: 기둥 또는 선택 없이 전체. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "st_hbeam.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-hbeam/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
