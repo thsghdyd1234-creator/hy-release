@@ -1448,6 +1448,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-ringfacade/icon.png"
     },
     {
+      "id": "yl-in-hanger",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-in-hanger/yl-in-hanger-0.1.0.rbz",
+        "sha256": "4a522725346456f4d33a7a2942877cb02c62057546f7fb918b5c79798280e77a",
+        "size": 7460,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/in_hanger.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "IN·01 천장 행거",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "바닥과 천장을 찍으면 그 사이에 행거와 상하부 조인트를 배열합니다.",
+      "description": "바닥과 천장을 찍으면 그 사이에 행거와 상하부 조인트를 배열합니다. 선택: 화면에서 클릭. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "in_hanger.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-in-hanger/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
