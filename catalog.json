@@ -1091,12 +1091,12 @@
       "id": "skin",
       "stable": null,
       "test": {
-        "version": "0.6.1",
+        "version": "0.7.0",
         "date": "2026-10-18",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/skin/skin-0.6.1.rbz",
-        "sha256": "b4fc5830b36eb03cc7329a3d8653ba47d5658105e1796dbab0c3574ddcd29115",
-        "size": 98798,
-        "notes": "- 고침: 글꼴 '설치 실패: uninitialized constant HY::Skin::Win32::Registry' — Skin 안의 Win32 모듈 이름과 겹쳐 Windows 레지스트리를 못 찾던 문제. 이미 설치된 글꼴도 '없음'으로 보이던 것이 같이 고쳐짐\n- 이미 깐 Pretendard 를 알아봄 (일반 OTF · 가변 글꼴 'Pretendard Variable' 둘 다). 가변 글꼴만 있어도 hy 패널이 그 글꼴로 보임\n- 바뀜: 2024 실행 파일 — 스케치업이 -style·-platform·-stylesheet 실행 인자를 막아서('Unknown options', 실기 확인) Qt 가 직접 읽는 환경 변수로 켬\n  - skin_dark.bat = QT_QPA_PLATFORM=windows:darkmode=2 (제목줄·메뉴·대화상자 다크)\n  - skin_fusion.bat = QT_STYLE_OVERRIDE=Fusion (납작한 통일 틀)\n  - skin_all.bat = 둘 다. 예전 skin_qss.bat 는 지움\n  - Skin 색으로 메뉴·툴바를 칠하는 것과 스케치업 화면 글꼴은 이 방법으로는 안 됨 (패널 안내 고침)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/skin/skin-0.7.0.rbz",
+        "sha256": "bfb5ffedb9ce4ab3e6439f16cd09cbbfa097ef47599098c3678668604e0971aa",
+        "size": 107865,
+        "notes": "- Skin 바: 기본 툴바 대신 쓰는, Skin 이 직접 그리는 도구 막대 (확장 › Skin › Skin 바, Skin 툴바 버튼, MOSAIC 'skin.bar')\n  - 버튼은 설정 › Skin 툴바 구성 그대로 (묶음 사이 구분선). 다른 확장 버튼도 들어감\n  - 색 표(어둡게/밝게·강조색)·글꼴을 따름 — Windows 설정 필요 없음. Skin 선 아이콘은 바탕에 맞는 색, 켜진 도구는 강조색, 못 누르는 버튼은 흐리게\n  - 누르면 실행하고 키보드를 스케치업으로 돌려줌 → 바로 치수 입력·단축키\n  - 가로/세로, 크기 3단계, 버튼 이름 보이기 (바 끝 ⋯ 또는 설정 › 작업 화면). 창 크기는 내용에 맞춤\n  - 떠 있는 창이라 스케치업 툴바 자리에는 안 끼워짐. 2024 는 작은 제목줄이 남음\n- Skin 작업 화면: 버튼 하나로 기본·확장 도구 막대(Skin 툴바 포함)를 숨기고 Skin 바 + 정보 패널로. 끄면 켜기 전 도구 막대 그대로. 스케치업을 다시 켜도 이어서 적용 (다른 확장이 다시 띄운 막대도 숨김). 설정 › 작업 화면, 메뉴, MOSAIC 'skin.workspace'\n- 설정 맨 위에 '작업 화면' 칸 (작업 화면 켜기·끄기, Skin 바 열기·방향·크기·이름·켤 때 열기)\n- 확인 필요(실기): Skin 바 창이 내용 크기에 맞는지, 버튼 누른 뒤 치수 입력이 바로 되는지, 작업 화면 끄기 후 툴바가 원래 자리로 오는지"
       },
       "history": [],
       "name": "Skin",
@@ -1105,8 +1105,8 @@
         "app": "SketchUp",
         "versions": "2022+"
       },
-      "summary": "스케치업 작업 화면 손질 — 도구 막대 정리·Skin 툴바·정보 패널·색 표·글꼴, 2024 다크·Fusion 실행 파일",
-      "description": "스케치업 화면을 깔끔하게 정리하는 확장 (뷰포트·모델은 안 바꿈). 도구 막대 세트(켜고 끈 상태 저장·전환·순정 복원), Skin 툴바(기본 도구와 다른 확장 버튼을 같은 선 굵기 아이콘으로 다시 모으기 — 넣기·빼기·순서·구분선·새 툴바·아이콘 바꾸기), 사용 기록, 공통 색 표(어둡게/밝게·강조색 4개)와 글꼴(Pretendard·Noto Sans KR·시스템·직접 입력 — 없으면 받아서 이 계정에만 설치, hy 패널·커서 옆 표시가 같이 따름), 정보 패널(기본 트레이 대신 선택·태그·장면을 한 창에서). 창 실험: 제목줄 다크·색(Windows 11), 2022는 메뉴줄 바탕색도, hy 패널 창틀 없애기(2022). 2024(Qt): 다크·Fusion 으로 켜는 실행 파일(.bat, Qt 환경 변수)과 Qt 진단. 문제가 생기면 다음 실행 때 실험 기능이 저절로 꺼진다. MOSAIC 등록(skin.info).",
+      "summary": "스케치업 작업 화면 손질 — Skin 바·정보 패널로 바꾸는 작업 화면, 도구 막대 정리·색 표·글꼴",
+      "description": "스케치업 화면을 깔끔하게 정리하는 확장 (뷰포트·모델은 안 바꿈). 도구 막대 세트(켜고 끈 상태 저장·전환·순정 복원), Skin 툴바(기본 도구와 다른 확장 버튼을 같은 선 굵기 아이콘으로 다시 모으기 — 넣기·빼기·순서·구분선·새 툴바·아이콘 바꾸기), 사용 기록, 공통 색 표(어둡게/밝게·강조색 4개)와 글꼴(Pretendard·Noto Sans KR·시스템·직접 입력 — 없으면 받아서 이 계정에만 설치, hy 패널·커서 옆 표시가 같이 따름), 정보 패널(기본 트레이 대신 선택·태그·장면을 한 창에서), Skin 바(Skin 색·글꼴·아이콘으로 직접 그린 도구 막대), Skin 작업 화면(버튼 하나로 기본·확장 도구 막대를 숨기고 Skin 바 + 정보 패널로, 끄면 원래대로). 창 실험: 제목줄 다크·색(Windows 11), 2022는 메뉴줄 바탕색도, hy 패널 창틀 없애기(2022). 2024(Qt): 다크·Fusion 으로 켜는 실행 파일(.bat, Qt 환경 변수)과 Qt 진단. 문제가 생기면 다음 실행 때 실험 기능이 저절로 꺼진다. MOSAIC 등록(skin.info).",
       "category": "manage",
       "install": {
         "loader": "skin_ui.rb"
