@@ -512,12 +512,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.13.0",
-        "date": "2026-10-18",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.13.0.exe",
-        "sha256": "41599206acaf21fd89ddb7721c2ed7f3d3bf4a8fc9231dd8589186dcf2938420",
-        "size": 22719035,
-        "notes": "- 다른 확장 안에 들어가는 루비 툴 설치 (`install.into`) — YooLab 내부 툴을 하나씩 받고 업데이트\n  - 예: `yoolab_tools/rd_camdeck.rb`. 설치 파일의 모든 파일이 그 폴더 안에 있어야 하고, 업데이트·지우기 때 같은 폴더의 다른 툴은 건드리지 않음\n  - 폴더 밖 파일이 든 설치 파일·이상한 폴더 이름은 설치하지 않음\n- 툴이 많은 묶음(8개 초과)은 목록에서 접어 둠: 업데이트·새 툴만 보이고 [툴 N개 모두 보기]로 펼침 (그 카드만 다시 그림). 묶음 상세 화면은 전부 그대로"
+        "version": "0.14.0",
+        "date": "2026-10-19",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.14.0.exe",
+        "sha256": "396668f6682811b57857bf8e8124697ec36f8c644ee4feeb86a2f112eda01f50",
+        "size": 22721468,
+        "notes": "- 앱 고르기를 왼쪽 메뉴로: [툴 목록]을 누르면 메뉴가 앱 목록(전체·Photoshop·Illustrator·InDesign·SketchUp·프로그램)으로 바뀜\n  - 앱마다 업데이트 수(호박색)와 새 툴 수(청록)를 따로 보여 줘서, 어느 앱에 무엇이 올라왔는지 바로 보임\n  - 맨 위 ‹ 툴 목록을 누르면 원래 메뉴(라이브러리·일괄 설치·업데이트·설치 기록·설정)로 돌아옴. 다른 화면으로 가면 저절로 돌아옴\n  - 툴 목록 위의 앱 탭은 없앰 (분류 칩은 그대로). 앱을 고르면 제목이 앱 이름으로 바뀜\n- 앱을 고른 화면의 '새 툴'·'새 버전' 띠는 그 앱 것만 세고, [모두 확인]·[모두 업데이트]도 그 앱 것만\n- 업데이트 화면은 고른 앱과 상관없이 모든 업데이트를 보여 줌 (전에는 고른 앱 것만 보이던 문제)"
       },
       "history": [],
       "name": "hy 허브",
