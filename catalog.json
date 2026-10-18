@@ -1910,6 +1910,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-truss/icon.png"
     },
     {
+      "id": "yl-st-trusscolumn",
+      "stable": null,
+      "test": {
+        "version": "2.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-trusscolumn/yl-st-trusscolumn-2.1.0.rbz",
+        "sha256": "748ed6c1f7d8ba5a52205c3b0fd1b122c980d80e9f7a9b00b6fea5dde0947fe1",
+        "size": 6382,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/st_trusscolumn.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ST·03 트러스 (기둥 인식)",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "면과 기둥을 함께 고르면 기둥 간격에 맞춰 분할합니다. v2.1 계열.",
+      "description": "면과 기둥을 함께 고르면 기둥 간격에 맞춰 분할합니다. v2.1 계열. 선택: 사각형 면 + 기둥. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "st_trusscolumn.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-trusscolumn/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
