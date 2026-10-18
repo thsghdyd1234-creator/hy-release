@@ -1943,6 +1943,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-trusscolumn/icon.png"
     },
     {
+      "id": "yl-wn-doublewindow",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-wn-doublewindow/yl-wn-doublewindow-0.1.0.rbz",
+        "sha256": "b951ca341fa27ee3d45920e6dad65ea3e707afc50b4a551103056c676ebee662",
+        "size": 7796,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/wn_doublewindow.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "WN·02 이중창",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "개구부 면마다 외창·내창 미서기 4짝을 세웁니다. 여러 면을 한 번에 처리하고, 같은 크기는 컴포넌트를 공유합니다.",
+      "description": "개구부 면마다 외창·내창 미서기 4짝을 세웁니다. 여러 면을 한 번에 처리하고, 같은 크기는 컴포넌트를 공유합니다. 선택: 개구부 면 1개 이상. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "wn_doublewindow.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-wn-doublewindow/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
