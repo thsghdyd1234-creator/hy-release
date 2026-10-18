@@ -1118,6 +1118,39 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/stay-tion/icon.png"
     },
     {
+      "id": "yl-dr-door",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-18",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-dr-door/yl-dr-door-0.1.0.rbz",
+        "sha256": "1e353803d4f861605b5fcafc7220a1b4319782cd0f45dc4687ad0950749e150c",
+        "size": 9735,
+        "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/dr_door.rb)",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "DR·01 도어",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "유리문·방화문·병원 슬라이딩 등 6종. 패닉바, 도어클로저, 레버까지 실시간 미리보기.",
+      "description": "유리문·방화문·병원 슬라이딩 등 6종. 패닉바, 도어클로저, 레버까지 실시간 미리보기. 선택: 사각형 면 1개. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "dr_door.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-dr-door/icon.png"
+    },
+    {
       "id": "yoolab",
       "stable": null,
       "test": {
