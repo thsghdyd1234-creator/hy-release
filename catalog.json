@@ -478,12 +478,12 @@
       "id": "hy-graph",
       "stable": null,
       "test": {
-        "version": "0.5.0",
+        "version": "0.6.0",
         "date": "2026-10-20",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-graph/hy-graph-0.5.0.zxp",
-        "sha256": "b3fa68f19c1f63231afba95189754c5f8eef357a2ea62597bf1de41f6b90a162",
-        "size": 70820,
-        "notes": "- 채움에 '색 없음' 추가: 면을 비우고 선을 글자색 하나로 그림 (막대·원형·게이지·3D 모두)\n  - 3D 분리 파이는 색 대신 선으로 입체: 보이는 모서리만 긋고, 매끈한 곡면이 이어지는 곳에는 세로선을 긋지 않음(꺾이는 곳·면이 돌아 사라지는 곳에만)\n  - '선' 채움의 3D도 같은 방식(조각 색 선)으로 바뀜 — 예전처럼 옅은 색 면으로 칠하지 않음\n  - 빛·그림자·광택 같은 색 효과와 범례(견본이 모두 같아짐)는 자동으로 뺌, 팔레트는 옅게 표시\n- 3D 윗모서리: 밝은 테두리가 선처럼 튀던 두 단 띠를 가는 띠 4개로 — 옆면 색에서 윗면 색으로 조금씩 넘어가 경계가 보이지 않게\n  - 좁은 조각은 윗모서리를 줄여 띠가 조각 밖으로 넘지 않게\n- 미리보기 그라디언트 id가 엔진마다 달라지게 (한 화면에 엔진 사본이 둘이어도 색이 섞이지 않음)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-graph/hy-graph-0.6.0.zxp",
+        "sha256": "5d347d7a69eac079583e9fc46eb9198f11d366e72ab2cdf7215604fc5fe973bb",
+        "size": 71102,
+        "notes": "- '모노' 팔레트를 '흑백'으로 — 빛·그림자·광택·3D 명암은 그대로 두고 회색으로만\n  - 어두운 배경에서는 순서를 뒤집어 가장 밝은 회색이 첫 색, 빛은 흰 빛\n  - 밝은 배경에서는 빛이 옅은 회색 번짐, 가장 어두운 색을 먹색 대신 짙은 회색으로 (3D 옆면 명암이 묻히지 않게)\n- 빛 색을 팔레트에 맞춰 고르는 규칙 추가 (흑백 외에는 예전처럼 첫 색)"
       },
       "history": [],
       "name": "GRAPH",
