@@ -891,12 +891,12 @@
       "id": "hy-offset-ai",
       "stable": null,
       "test": {
-        "version": "0.2.0",
+        "version": "0.2.1",
         "date": "2026-10-20",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-offset-ai/hy-offset-ai-0.2.0.zip",
-        "sha256": "595c59570420851a510c8c52ae2cded70d034f35488c02d3526c33bb2ff34634",
-        "size": 25224,
-        "notes": "- hy Gradient 색 유지: hy Gradient로 링을 칠한 그룹은 값을 바꿔 다시 만들어도 같은 방식(그라디언트·나눠 칠하기·단색)으로 다시 칠함\n- 패널 아래 'hy Gradient 색 유지 중 · [색 풀기]' — 풀면 이 패널의 단계 스타일로 다시 만듦\n- 적용 결과에 'hy Gradient 색 유지' 표시"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-offset-ai/hy-offset-ai-0.2.1.zip",
+        "sha256": "ad7ea6eb7cab021f8f40f666a198f0bd5e10096f10b91da6b2b5af9b9a4abcfe",
+        "size": 25359,
+        "notes": "- 프리셋이 중심선·라벨 켜짐도 정함: 영향권 뒤에 기본 선을 눌러도 십자·라벨이 남던 문제 수정 (영향권은 중심선만 켬)\n- 라벨은 기본으로 꺼짐 — 패널을 열 때마다 꺼진 채로 시작, 어느 프리셋도 켜지 않음"
       },
       "history": [],
       "name": "hy Offset AI",
