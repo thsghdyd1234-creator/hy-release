@@ -739,6 +739,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-layer/icon.png"
     },
     {
+      "id": "hy-layer-out",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-20",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-layer-out/hy-layer-out-0.1.0.zip",
+        "sha256": "d465e62d526e914798db3f252a1f1ff025f85d1a857cc6c3bee5cd18d00f03ac",
+        "size": 28990,
+        "notes": "- 첫 등록 (예전 hy_clip_to_layers.jsx v5를 패널로 다듬음)\n- 창 > 확장 > hy Layer Out — 레이어·클립 그룹 안의 항목을 이름 그대로 하나씩 최상위 레이어로, 이름이 없으면 <그룹 1> …\n- 꺼낼 곳: 일러스트에서 선택한 오브젝트를 따라 저절로 잡힘(가까운 곳부터), 선택이 없으면 클립 그룹 안·항목 많은 곳을 먼저. 목록에서 눌러 바꿀 수 있음\n- 감싸기(클립 그룹 하나·이름 없는 그룹 하나)는 파고듦: 레이어 1 › <클립 그룹> › <그룹> › 건물 … → 건물 …\n- 레이어가 될 항목을 칩으로 켜고 끔 — 그룹 선택 도구로 몇 개만 골라 두면 그것만 켜 둠, 전체·선택만·없음\n- 클리핑: 유지(레이어마다 마스크 복제) / 영역 밖 삭제(안 겹치는 개체만 지우고 걸친 것은 가림) / 해제(마스크 모양은 '클립 영역' 레이어에). 클립이 두 겹이면 두 겹 다 다시 씌움\n- 클리핑은 스크립트로 바로 씌우고, 안 될 때만 Ctrl+7 방식으로 다시 시도 (결과에 클리핑 n/n)\n- 비워진 원래 레이어·그룹만 지우고 하위 레이어·남은 항목이 있으면 그대로, 잠기거나 숨긴 레이어도 꺼낸 뒤 원래대로\n- 결과 카드(꺼낸 수·클리핑·영역 밖 삭제·확인할 것), 클리핑·지우기 설정 기억\n- hy Command 별칭 LAYEX로 패널 열기"
+      },
+      "history": [],
+      "name": "hy Layer Out",
+      "type": "cep",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2021 이상"
+      },
+      "summary": "레이어·클립 그룹 안의 그룹들을 이름 그대로 하나씩 최상위 레이어로 꺼내는 일러스트 패널",
+      "description": "창 > 확장 > hy Layer Out (hy Command에서는 LAYEX). 수치지도처럼 레이어 1 › 클립 그룹 › 그룹 안에 건물·도로가 든 파일을 건물·도로 레이어로 나눈다. 선택한 오브젝트를 따라 꺼낼 곳이 저절로 잡히고, 감싸기 그룹은 파고든다. 꺼낼 항목은 칩으로 켜고 끄며(선택한 것만 켜 둠), 클리핑은 유지(레이어마다 마스크 복제)·영역 밖 삭제·해제 중에서 고른다. 비워진 원래 레이어만 지우고, 잠기거나 숨긴 레이어도 꺼낸 뒤 원래대로 둔다. 예전 hy_clip_to_layers.jsx를 다듬은 것.",
+      "category": "organize",
+      "install": {
+        "bundle_id": "com.hy.layerout"
+      },
+      "user_data": [
+        "cep:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-layer-out/icon.png"
+    },
+    {
       "id": "hy-lineart",
       "stable": null,
       "test": {
