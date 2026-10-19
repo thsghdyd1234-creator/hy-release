@@ -1067,12 +1067,12 @@
       "id": "hy-typeset",
       "stable": null,
       "test": {
-        "version": "0.1.0",
-        "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-typeset/hy-typeset-0.1.0.ccx",
-        "sha256": "6c44c88d3bff5bf6c1ceb04adf641271790ff2ef32c8a6be50fb164e7a5a3f52",
-        "size": 15316,
-        "notes": "- 첫 등록 — '인디자인 단락스타일.jsx'(ScriptUI 대화상자)를 UXP 패널로 옮김\n- 위쪽 서체 하나로 전체 적용, '행마다 서체 따로' 선택 가능 (원본의 서체 일괄 변경)\n- 크기별 굵기 자동, 자간·자동 행간·메트릭 커닝·왼쪽 정렬, 샘플 텍스트(끌 수 있음)\n- 마지막 서체·행 구성을 기억, '기본값으로' 버튼, 서체 목록 새로 고침"
+        "version": "0.1.1",
+        "date": "2026-10-20",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-typeset/hy-typeset-0.1.1.ccx",
+        "sha256": "fc52b4a2add90ddc0bd4ab0e6b79294fae74318fdb5ba056c03aa1614ab8de8b",
+        "size": 16449,
+        "notes": "버그 수정 — 패널을 열면 기본 스타일 5줄(제목·부제·소제·본문·기타)과 서체 목록이 비어 있던 문제\n- 원인: 인디자인 UXP가 돌려주는 서체 목록이 진짜 배열이 아니라서 목록 전체를 서체 이름 하나로 잘못 읽고, 그 자리에서 오류가 나 패널 시작이 멈춤\n- 서체 목록을 ExtendScript로 읽고(안 되면 UXP로 하나씩), 서체를 못 읽어도 5줄은 그리고 이유를 표시\n- 만들기 중 오류가 실행 취소 묶음 안에 묻혀 '만들었습니다'로 뜨던 것 → 오류를 패널에 표시\n- 서체를 넣지 못한 스타일이 있으면 이름을 알려 줌"
       },
       "history": [],
       "name": "hy TypeSet",
