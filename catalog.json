@@ -388,12 +388,12 @@
       "id": "hy-frame2ai",
       "stable": null,
       "test": {
-        "version": "1.5.0",
-        "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-frame2ai/hy-frame2ai-1.5.0.ccx",
-        "sha256": "6339580edf3723e67a01c237d29a0257c812bd457336a8366f82bab9c84c0722",
-        "size": 25969,
-        "notes": "- 첫 등록 — '일러스트 열기.jsx'(hy_frame2ai v1.5)를 UXP 패널로 감쌈\n- 스크립트 안 CFG를 고치던 설정을 패널에서 클릭으로: 저장 위치·배치·열기·색상·안내선·레이블·덮어쓰기·linkmap\n- 일러스트 통신(BridgeTalk)은 ExtendScript에만 있어 원본 스크립트를 doScript로 실행 (동작은 v1.5와 같음)\n- 결과(생성·배치 개수, 저장 폴더)를 패널에 표시"
+        "version": "2.0.0",
+        "date": "2026-10-20",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-frame2ai/hy-frame2ai-2.0.0.ccx",
+        "sha256": "06d2fa0536e4ef3ee047d2b3bbd652f92f945955f58c4c97be0d59120652e11d",
+        "size": 31229,
+        "notes": "- 포토샵(.psd)도 만들기 — ① 만들 프로그램(일러스트·포토샵) → ② 저장 위치 → 만들기 순서의 패널로 개편\n- 저장 위치에 '만들 때마다 폴더 고르기'를 넣고 기본으로 (1.5에서 넘어와도 이걸로 바뀜, 다른 설정은 유지)\n- PSD 설정: 해상도 72·150·200·300 ppi, RGB·CMYK, 투명·흰색 배경 — 픽셀 크기 = 프레임 × 해상도라 100%로 프레임에 딱 맞게 배치\n- 패널 위에 선택한 프레임 크기(mm, PSD면 px까지) 표시 — 패널에 마우스를 올리면 새로 읽음\n- 회전·기울인 프레임은 회전 전 실제 크기로 (전에는 회전된 바깥 상자 크기로 만들어졌음)\n- 크기를 잴 때 문서 눈금자 단위를 바꾸지 않음 (스크립트 단위만 잠깐 포인트로)\n- 포토샵 문서가 한 변 30만 px을 넘으면 보내기 전에 막음, 응답이 없을 때 안내 보강"
       },
       "history": [],
       "name": "hy Frame2AI",
@@ -402,8 +402,8 @@
         "app": "InDesign",
         "versions": "2023 이상 (18.5+)"
       },
-      "summary": "선택한 프레임과 같은 크기의 AI 파일을 만들어 배치하고 일러스트에서 열기",
-      "description": "프레임 여러 개를 골라도 프레임마다 .ai 하나. 저장 위치(INDD 옆·하위 폴더·지정 폴더), 원래 프레임에 배치, 마지막/전부 열기, CMYK·RGB, 아트보드 안내선, 레이블을 파일 이름으로, 덮어쓰기/번호 붙이기, <문서명>.linkmap.json 기록. 일러스트와는 BridgeTalk(ExtendScript)로 통신해 원본 스크립트를 패널에서 실행한다. (원본: 일러스트 열기.jsx = hy_frame2ai v1.5)",
+      "summary": "선택한 프레임과 같은 크기의 AI·PSD 파일을 만들어 배치하고 바로 열기",
+      "description": "① 만들 프로그램(일러스트 .ai / 포토샵 .psd)을 고르고 ② 저장 위치(만들 때마다 폴더 고르기·INDD 옆·하위 폴더·지정 폴더)를 정하면 선택한 프레임마다 같은 크기의 파일을 만들어 원래 프레임에 배치하고 그 앱에서 연다. PSD는 해상도(72·150·200·300)·RGB/CMYK·투명/흰색 배경, 픽셀 크기 = 프레임 × 해상도라 100%로 딱 맞게 배치. AI는 CMYK·RGB, 아트보드 안내선. 패널 위에 선택 프레임 크기(mm·px)가 보이고, 회전된 프레임은 회전 전 크기로 잰다. 레이블을 파일 이름으로, 덮어쓰기/번호 붙이기, <문서명>.linkmap.json 기록. 앱과는 BridgeTalk(ExtendScript)로 통신한다. (원본: 일러스트 열기.jsx = hy_frame2ai v1.5)",
       "category": "export",
       "install": {
         "plugin_id": "com.hy.frame2ai"
