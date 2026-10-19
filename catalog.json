@@ -1270,6 +1270,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-styles/icon.png"
     },
     {
+      "id": "mosaic",
+      "stable": null,
+      "test": {
+        "version": "0.8.0",
+        "date": "2026-10-19",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/mosaic/mosaic-0.8.0.rbz",
+        "sha256": "e6760ede6b3d6083aa85b147cd0d026e3f5ce65d100d46c5ed4d3d9e76fc45ca",
+        "size": 25919,
+        "notes": "- 첫 등록 (hy 허브)\n- 툴바 'YooLab Mosaic' — 버튼 하나, 누르면 설정 창. 원은 단축키로 띄운다 (메뉴 › YooLab Mosaic › 원 띄우기에 단축키 지정)\n- hy CMD 등록: MO·MOSAIC = 원, MOS = 설정\n- 수집 훅을 alias_method 에서 prepend 로 바꿈 — hy CMD 0.6.0 의 받아 적기(!hy_cmd_catch.rb, 먼저 로드되어 prepend)와 같이 깔리면 UI::Command.new 가 자기를 끝없이 부르던 문제\n- 메뉴의 'UI·01' 표시 뺌 (코드 번호는 유가네 툴박스 안의 툴에만)\n- 확인 필요(실기, 2024): 원 반투명·글자 가운데 맞춤, hy CMD 와 같이 깔렸을 때 다른 확장 로드"
+      },
+      "history": [],
+      "name": "YooLab Mosaic",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "커서 주위에 원이 뜨는 빠른 실행 메뉴 — 방향으로 옮겨 클릭, 8칸·그룹 2단계",
+      "description": "단축키(예: W)를 누르면 커서 주위에 8칸짜리 원이 뜨고, 방향으로 옮겨 클릭하면 그 명령이 실행된다 (Curic Pie Menu 같은 방식). 칸에는 스케치업 기본 명령 51개, 설치된 다른 확장의 메뉴·툴바 명령(스케치업을 켤 때 저절로 모음), hy 루비들이 등록한 명령(트림·벤더·FFD·면 치유 등)을 넣는다. 설정 창(툴바 버튼 하나)에서 목록을 칸으로 끌어다 놓거나 칸을 누르고 고르며, 확장 하나를 통째로 끌면 2단계 원(그룹)이 된다. 빈 칸의 +로 여러 확장을 섞은 그룹도 만든다. 실행 방식은 호버 후 클릭·눌러서 긋기·키 떼면 실행 중에서. 가운데 클릭은 마지막 명령 반복. 선택한 것(면·선·그룹)에 맞지 않는 칸은 흐리게. Skin 이 있으면 Skin 색·글꼴을 따른다. hy CMD 별칭 MO·MOSAIC(원), MOS(설정). 다른 루비는 YooLab::Mosaic.register 로 칸 후보를 등록한다.",
+      "category": "manage",
+      "install": {
+        "loader": "!yl_mosaic.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/mosaic/icon.png"
+    },
+    {
       "id": "sd2sku",
       "stable": null,
       "test": {
