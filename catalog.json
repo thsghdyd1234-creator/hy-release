@@ -445,6 +445,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-glass/icon.png"
     },
     {
+      "id": "hy-graph",
+      "stable": null,
+      "test": {
+        "version": "0.2.2",
+        "date": "2026-10-19",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-graph/hy-graph-0.2.2.zxp",
+        "sha256": "5aa2975c6331f2f8326f2286eb2735edf37d4d433a7011979e6ab5b1a4d94f7d",
+        "size": 64497,
+        "notes": "- 첫 등록 (서명된 ZXP, Illustrator 2021 이상)\n- 형태 프리셋: 막대(막대·범위 막대·롤리팝·도트 막대), 원형(파이·도넛·반원 도넛·폴라 영역·눈금 게이지·3D 분리 파이), 선(꺾은선·영역)\n  - 눈금 게이지: 한 항목 비율 또는 전체 항목 구성을 원·270°·반원 눈금으로, 값 부분은 다음 색으로 흐르고 나머지는 페이드, 가운데 큰 값\n  - 3D 분리 파이: 기울기·두께·조각 분리·구멍·띄우기, 가장 큰 조각 올리기, 바닥판·투영선\n  - 파이·도넛·반원 도넛에 광택(은은하게·유리)·빛·그림자 옵션\n- 색: 팔레트 10종(네온 포함)·직접 고르기, 배분(자동·계열·항목·강조·명암), 배경 7종(미드나잇 포함)\n- 데이터 표: 엑셀 붙여넣기, 정렬·행열 바꾸기, 행 켜고 끄기, 상위 N + 기타 묶기\n- JSON 불러오기: 차트 하나 또는 묶음(클린맵 대지분석 내보내기) — 골라서 편집하거나 여러 개를 격자로 한 번에 그리기. 형식은 docs/BUNDLE_SPEC.md\n- 그려진 그래프에 설정이 남아 선택 → 불러오기 → 업데이트"
+      },
+      "history": [],
+      "name": "GRAPH",
+      "type": "cep",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2021 이상"
+      },
+      "summary": "막대·원형·선 그래프를 형태 프리셋과 꾸밈 옵션으로 그리는 일러스트 패널 (클린맵 대지분석 JSON 연동)",
+      "description": "형태 프리셋(막대·범위 막대·롤리팝·도트 막대 / 파이·도넛·반원 도넛·폴라 영역·눈금 게이지·3D 분리 파이 / 꺾은선·영역)을 고르고 그 안에서 굵기·모서리·광택·빛·그림자 같은 옵션을 클릭으로 바꾼다. 미리보기와 똑같은 벡터로 그려지고, 그래프마다 설정이 남아 불러오기 → 업데이트로 고칠 수 있다. 엑셀 표 붙여넣기, 상위 N + 기타 묶기, 클린맵 대지분석에서 내보낸 JSON 묶음을 열어 여러 차트를 한 번에 격자로 그리기.",
+      "category": "draw",
+      "install": {
+        "bundle_id": "com.hy.graph"
+      },
+      "user_data": [
+        "cep:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-graph/icon.png"
+    },
+    {
       "id": "hy-grid",
       "stable": null,
       "test": {
