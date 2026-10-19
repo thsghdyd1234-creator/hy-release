@@ -183,6 +183,34 @@
       "category": "select-edit"
     },
     {
+      "id": "hy-bender",
+      "stable": null,
+      "test": {
+        "version": "0.3.1",
+        "date": "2026-10-19",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-bender/hy-bender-0.3.1.rbz",
+        "sha256": "3b3e1dc6f6c022e5a34f1a3cadd806b20abaa2da619850a1ddd961568e9fb1aa",
+        "size": 22965,
+        "notes": "첫 등록. Chris Fullmer 의 Shape Bender 0.6.1 을 다시 짠 것\n- 척추선 자동: 형상의 긴 축에서 잡음(빨간 축 기준선 필요 없음). Tab 축 바꾸기, PgUp·PgDn 단면 위치 9칸, 긴 축이 애매하면 상태 표시줄에 알림\n- 척추선 지정: 형상 안 엣지 클릭(만들어질 척추선을 점선으로 미리 보여 줌, 길이는 형상 전체로 연장) 또는 따로 그은 직선 클릭. 미리보기 중에도 언제든\n- 커브: 어느 방향이든, 수직 평면·3D·원·3D 닫힌 커브(회전최소화 프레임, 닫힌 커브 비틀림 결손 보정). 면이 붙은 원도 커브만 잡음\n- 조인트 마이터: 커브 꺾임마다 단면을 이등분 평면에 맞춤 (큰 단면이 굽힘 평면 안에 있어도 어긋남 0)\n- 미리보기는 모델을 건드리지 않음. 척추선 밖으로 나가 휘지 않는 부분은 빨간색으로 표시\n- 속도: 절단면을 한 번에 자르고(intersect 1회), 꺾임이 쌓인 곳에만 절단(500분할 호 → 22개), 정점 찾기는 이진 탐색\n- 원본은 그대로 두고 사본을 휨, 그룹 편집 안에서도 그 자리에서 처리\n- 메뉴 › HY Bender › 시험 장면: 커튼월 스트립 + 커브 8가지, 만들면 바로 실행할 수 있게 선택됨\n- MOSAIC 등록(hy.bender)\n- 검증: 스케치업 없이 수학 50건(항등·원호·수직 호·나선·원·매듭 이음매·마이터·절단 수), 패키지 검사"
+      },
+      "history": [],
+      "name": "hy Bender",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "그룹·컴포넌트를 커브를 따라 휘기 — 척추선 자동, 임의 방향·3D·닫힌 커브 (Shape Bender 대체)",
+      "description": "휘게 할 그룹·컴포넌트를 고르고 [벤더 실행] → 커브를 클릭 → Enter. 그룹과 커브를 같이 골라 두고 실행하면 바로 미리보기가 뜬다. Shape Bender 처럼 빨간 축 위에 기준선을 그을 필요가 없다 — 형상의 긴 축에서 척추선을 자동으로 잡고(초록 선), Tab 으로 축을 바꾸고 PgUp·PgDn 으로 단면이 커브에 얹힐 위치(9칸)를 고른다. 특수한 경우에는 형상 안의 엣지를 클릭하거나(마우스를 올리면 만들어질 척추선이 점선으로 보임) 따로 그은 직선을 클릭해 척추선을 지정한다. 커브는 어느 방향이든 되고 수직 평면·3D 나선·원·3D 닫힌 커브도 휜다(회전최소화 프레임, 닫힌 커브는 비틀림 보정). 커브 꺾임마다 단면을 이등분 평면에 맞춰 큰 단면도 어긋나지 않는다. 미리보기는 모델을 건드리지 않고, 척추선 밖으로 나가 휘지 않는 부분은 빨갛게 보인다. ↑ 커브 반전, ↓ 척추선 반전, ←→ 롤 90°. 원본은 그대로 두고 사본을 휜다. 절단은 꺾임이 쌓인 곳에만 넣어 촘촘한 커브도 빠르다. 메뉴 › HY Bender › 시험 장면에서 커튼월 스트립과 커브 8가지(기본·45도·척추선 없이·수직 호·나선·고밀도·원·매듭)를 만들어 바로 시험해 볼 수 있다. MOSAIC 등록(hy.bender).",
+      "category": "site-model",
+      "install": {
+        "loader": "hy_bender.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-bender/icon.png"
+    },
+    {
       "id": "hy-cmd",
       "stable": null,
       "test": {
