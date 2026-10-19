@@ -445,6 +445,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-glass/icon.png"
     },
     {
+      "id": "hy-gradient",
+      "stable": null,
+      "test": {
+        "version": "0.1.1",
+        "date": "2026-10-20",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-gradient/hy-gradient-0.1.1.zip",
+        "sha256": "bd8beb94b123b6f2a178b8f27a69c65bed7315dff3f13a1cda47dd45c3a85ad6",
+        "size": 17760,
+        "notes": "- 첫 등록 (서명 없는 CEP, Illustrator 2021 이상)\n- 실시간 미리보기 수정: 임시 그라디언트 스와치를 지우지 않고 재사용 — 지우면 객체 칠도 같이 사라지던 문제\n- 스와치로 등록은 쓰던 임시 스와치 이름을 'hy Gradient N'으로 바꿔 정식 스와치로\n- [임시 스와치 정리] 버튼: 어떤 객체도 쓰지 않는 'hy 임시' 스와치만 지움"
+      },
+      "history": [],
+      "name": "hy Gradient",
+      "type": "cep",
+      "host": {
+        "app": "Illustrator",
+        "versions": "2021 이상"
+      },
+      "summary": "모달 없이 패널 하나에서 정지점·색·곡선을 바로 고치는 일러스트 그라디언트 편집기",
+      "description": "큰 그라디언트 바를 클릭해 정지점을 넣고 드래그로 옮기며, 아래로 끌어내리면 삭제(Alt 복제, Shift 5% 스냅, 방향키 이동). 색은 HEX·HSB 슬라이더와 현재 칠 색 가져오기, 반전·균등 분배. OKLab 보간과 이징 곡선(직선·가속·감속·S자·역S, 핸들 편집)을 일러스트 정지점으로 풀어 넣어 플러그인 없이도 열린다(정밀도 8~48). 칠·획, 선형·원형, 각도 다이얼, 실시간 적용, 스와치 등록, 선택 객체에서 불러오기(이 패널로 만든 것은 곡선 상태까지 복원), 쓰지 않는 임시 스와치 정리. 다이어그램용 프리셋 12종(열 분포·고도·수심·일조·그림자 페이드 등)과 내 프리셋 저장.",
+      "category": "color",
+      "install": {
+        "bundle_id": "com.hy.gradient"
+      },
+      "user_data": [
+        "cep:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-gradient/icon.png"
+    },
+    {
       "id": "hy-graph",
       "stable": null,
       "test": {
