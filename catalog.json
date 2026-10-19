@@ -1403,6 +1403,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/stay-tion/icon.png"
     },
     {
+      "id": "stay-tion-sketchup",
+      "stable": null,
+      "test": {
+        "version": "5.0.4",
+        "date": "2026-10-19",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/stay-tion-sketchup/stay-tion-sketchup-5.0.4.rbz",
+        "sha256": "0fe79f3fb38341145493b193c9004c82ea4b5a6b57c91eeac6caf9bdccab9815",
+        "size": 473377,
+        "notes": "첫 등록 (STAY_tion exe 의 짝 툴로 분리 — 그 전에는 exe 안에 들어 있다가 켤 때 설치됐음)\n\n- 현재 뷰를 숨은선 지운 DXF 한 장으로: 태그별 선 레이어, 단면·단면 채움, 면_본체·면_유리·태그 면 지도, 벡터 그림자, 외곽_그룹/외곽_전체/외곽_<태그>\n- 면 음영 흰색 기준점 [보통 16 | 세밀 32 | 아주 세밀 64 | 끄기], 단면 채움 '화면대로'\n- 외곽선 그룹: [고르기] 도구 · [선택 추가] · 우클릭 추가/빼기, 외곽선 끄기\n- hy CMD: ST(패널) · STO(외곽선 그룹 고르기), MOSAIC 등록 (hy.staytion)\n- 엔진 DLL 은 stay-tion/src/native 에서 빌드 (stay-tion/pack/build_native.py --to-extension)"
+      },
+      "history": [],
+      "name": "STAY_tion 스케치업 확장",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2021 이상"
+      },
+      "summary": "스케치업 뷰를 숨은선 지운 DXF 한 장(선·단면·면 음영·그림자·외곽선)으로 내보내는 STAY_tion 확장",
+      "description": "툴바 ST 버튼 → 패널에서 [내보내기]. 현재 뷰를 태그별 선, 단면·단면 채움(스케치업 스타일 따름), 면 음영(해 받는 면은 흰색), 유리 면, 벡터 그림자, 그룹별·전체 외곽선이 든 DXF 한 장으로 내보낸다. 평행·투시 모두 한 좌표계. C 숨은선·C++ 면 지도 엔진(staytion_native.dll) 포함. 일러로 여는 것은 짝 툴 STAY_tion(exe).",
+      "category": "export",
+      "install": {
+        "loader": "stay_tion.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/stay-tion-sketchup/icon.png"
+    },
+    {
       "id": "yl-dr-door",
       "stable": null,
       "test": {
