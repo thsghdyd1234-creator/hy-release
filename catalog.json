@@ -656,12 +656,12 @@
       "id": "hy-iso",
       "stable": null,
       "test": {
-        "version": "0.3.0",
+        "version": "0.4.0",
         "date": "2026-10-20",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/hy-iso-0.3.0.zip",
-        "sha256": "7d8f2a774624f3c9f770290090ca280776a2d45802cc655a78db4dee17417dbb",
-        "size": 27638,
-        "notes": "- hy Arrow 화살표 호환: 플러그인 화살표(라이브 효과)를 눕히면 선만 기울고 화살촉은 똑바로 남던 것을,\n  눕히기 전에 모양 확장 + 획 윤곽선으로 도형으로 바꿔 화살촉·몸통까지 같이 눕게 함 (hy Arrow 플러그인이 있을 때만, 그룹 안 화살표도 찾음)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/hy-iso-0.4.0.zip",
+        "sha256": "35343c1f13757f84d886cc66db15d6809a81e2d23960b126ca989c97142aea42",
+        "size": 28225,
+        "notes": "- '획도 면처럼 눕히기 (점선·굵은 선)' 옵션: 획을 윤곽선(면)으로 바꾼 뒤 눕혀, 굵은 선·점선 조각도 면을 따라 기울어지게 함\n  - 이미 눕힌 것도 이 옵션을 켜고 면 버튼을 다시 누르면 펼친 뒤 윤곽선으로 바꿔 다시 눕힘 (눕힘 상태는 그대로 옮겨짐)\n  - 바꾼 뒤에는 획으로 돌아가지 않으므로 기본은 꺼 둠"
       },
       "history": [],
       "name": "hy Iso",
