@@ -656,12 +656,12 @@
       "id": "hy-iso",
       "stable": null,
       "test": {
-        "version": "0.2.0",
+        "version": "0.3.0",
         "date": "2026-10-20",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/hy-iso-0.2.0.zxp",
-        "sha256": "0b479d5a4f24fb320efafa84d9c1ecf37f3633699a1e663772bb2dec16eeb979",
-        "size": 31189,
-        "notes": "- 투영 세부 조정: 프리셋을 출발점으로 X·Y·Z 각도와 X·Y·Z 길이 비율 슬라이더(−/+ 미세 조정, 값 더블클릭으로 등각 값 복귀)\n- '좌우 같이'로 X·Y 대칭 유지, 패널 안 육면체 미리보기\n- 선택에 실시간 반영(미리보기): 슬라이더를 놓을 때마다 눕힌 객체를 새 각도로 다시 눕힘, 확정·취소(미리보기 전 각도로)\n- 내 프리셋 저장(+ 저장, 우클릭으로 지우기)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-iso/hy-iso-0.3.0.zip",
+        "sha256": "7d8f2a774624f3c9f770290090ca280776a2d45802cc655a78db4dee17417dbb",
+        "size": 27638,
+        "notes": "- hy Arrow 화살표 호환: 플러그인 화살표(라이브 효과)를 눕히면 선만 기울고 화살촉은 똑바로 남던 것을,\n  눕히기 전에 모양 확장 + 획 윤곽선으로 도형으로 바꿔 화살촉·몸통까지 같이 눕게 함 (hy Arrow 플러그인이 있을 때만, 그룹 안 화살표도 찾음)"
       },
       "history": [],
       "name": "hy Iso",
