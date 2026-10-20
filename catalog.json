@@ -64,12 +64,12 @@
       "id": "hy-arrow",
       "stable": null,
       "test": {
-        "version": "2.0.2",
+        "version": "2.1.0",
         "date": "2026-10-20",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow/hy-arrow-2.0.2.zip",
-        "sha256": "3829c9c88fced900e74815cfd7512dc06b9b3735450083bb9cd38012c148ab79",
-        "size": 29279,
-        "notes": "- 플러그인 방식에서 두께 등 다른 값을 바꾸면 점선 길이·간격이 기본값으로 튕기던 문제 고침\n  - 선을 다시 읽을 때 실제 점선 값을 두께 배수로 되살려, 두께를 바꾸면 점선도 같은 비율로 따라감"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-arrow/hy-arrow-2.1.0.zip",
+        "sha256": "937f4f83c3c1d817965f75f57474fcbfa83c6a744bf74e82ee96715cc351a79a",
+        "size": 29820,
+        "notes": "- 두께·화살촉 크기·점선 길이·간격을 슬라이더로 조절 (옆 숫자 칸과 같이 움직임, 놓으면 적용)\n  - 칸이 비어 있으면 슬라이더는 지금 실제 값(안내 값)에 놓이고, 큰 값을 넣으면 슬라이더 끝이 늘어남\n  - 화살촉 크기 슬라이더를 움직이면 '촉 고정'이 저절로 켜짐"
       },
       "history": [],
       "name": "hy Arrow",
