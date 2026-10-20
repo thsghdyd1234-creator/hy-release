@@ -799,6 +799,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-lineart/icon.png"
     },
     {
+      "id": "hy-link",
+      "stable": null,
+      "test": {
+        "version": "0.1.2",
+        "date": "2026-10-20",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-link/hy-link-0.1.2.ccx",
+        "sha256": "8322fccf101342470131cbf72b773e6b3de35c0ff6087eb313ef210ddd951f59",
+        "size": 50884,
+        "notes": "- 첫 등록 (허브). 0.1.0~0.1.1은 등록 전에 호용에게 직접 전달한 판\n- '포토샵에서 열기'를 '원본 앱에서 열기'로: 이미지는 포토샵, AI·EPS·PDF·SVG는 일러스트레이터로 바로 보냄 (기본 연결 프로그램이 아크로뱃이어도 PDF는 일러로)\n- PDF는 인디자인에 놓인 쪽을 열고, 일러의 PDF 열기 대화상자는 띄우지 않음\n- 앱을 못 찾으면 기본 연결 프로그램으로. 인디 페이지 등 그 밖의 파일도 기본 프로그램으로\n- 메뉴 항목·아래 버튼·탭 이름을 바꿈 ('원본 앱에서 열기 (hy Link)', [원본 열기], 원본 탭). 0.1.1의 '포토샵에서 열기' 메뉴 항목은 지움"
+      },
+      "history": [],
+      "name": "hy Link",
+      "type": "uxp",
+      "host": {
+        "app": "InDesign",
+        "versions": "2023 이상 (18.5+)"
+      },
+      "summary": "인디자인 링크 관리 — 포토샵에서 저장하면 바로 갱신, 누락 찾기, 해상도 점검, 링크 모으기",
+      "description": "패널을 켜 두면 포토샵 등에서 저장해 '수정됨'(노란 삼각형)이 된 링크를 바로 새로 읽는다. 저장이 끝날 때까지 잠깐 기다려 덜 쓰인 파일을 읽지 않고, 같은 파일을 두 번 읽지 않아 실행 취소·다시 실행을 방해하지 않는다(텍스트 링크는 고친 글이 지워질 수 있어 건드리지 않음). 누락: 폴더(하위 포함)에서 같은 이름 파일을 찾아 한꺼번에 다시 연결, 확실한 후보만 자동 체크. 점검: 유효 ppi 기준(100·150·200·300)과 RGB 표시, 누르면 그 이미지로 이동. 모으기: 흩어진 링크 파일을 문서 옆 Links(또는 고른 폴더)로 복사하고 다시 연결 — 이름이 겹치면 _2, 내용까지 같은 파일은 다시 씀. 이동을 고르면 문서를 저장한 뒤에만 원래 파일을 지우고, 열린 문서가 쓰거나 그 사이 바뀐 파일은 남긴다. 원본 앱에서 열기(이미지 → 포토샵, AI·EPS·PDF·SVG → 일러스트레이터, PDF는 놓인 쪽으로)는 탭을 거치지 않게 이미지 오른쪽 클릭 메뉴·개체 메뉴(단축키 지정 가능)·패널 아래 버튼으로(BridgeTalk). 원본 탭: 선택한 이미지 정보, 폴더에서 보기, PSD 레이어 표시.",
+      "category": "organize",
+      "install": {
+        "plugin_id": "com.hy.link"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-link/icon.png"
+    },
+    {
       "id": "hy-lock",
       "stable": null,
       "test": {
