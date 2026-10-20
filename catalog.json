@@ -948,6 +948,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-offset-ai/icon.png"
     },
     {
+      "id": "hy-oop-test",
+      "stable": null,
+      "test": {
+        "version": "0.0.1",
+        "date": "2026-10-21",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-oop-test/hy-oop-test-0.0.1.ccx",
+        "sha256": "4337c1303e2b27e8af378996632c147374675db3a7421c023f917add002999ab",
+        "size": 17310,
+        "notes": "첫 등록\n- hy Objects on Path v0.2 착수 전 확인용 시험 패널 (휠 이벤트 · 실행 취소 합치기 · 글자 끝 측정)\n- 결과를 JSON으로 복사해 전달"
+      },
+      "history": [],
+      "name": "hy OOP 시험",
+      "type": "uxp",
+      "host": {
+        "app": "InDesign",
+        "versions": "2023 이상 (18.5+)"
+      },
+      "summary": "hy Objects on Path v0.2 착수 전 확인용 시험 패널 — 휠·실행 취소 합치기·글자 끝 측정",
+      "description": "호용 전용 개발 시험 패널. ① 패널 칸 위에서 마우스 휠 이벤트(Shift·Alt 포함)가 들어오는지, ② UndoModes.AUTO_UNDO로 여러 번 이동이 실행 취소 한 번에 묶이는지(자동 시험·직접 확인), ③ 텍스트 프레임 글줄의 실제 시작·끝(horizontalOffset·endHorizontalOffset·baseline)을 두 방법으로 읽어 속도와 정확도를 잰다. 결과는 JSON으로 복사. v0.2가 나오면 지운다.",
+      "category": "draw",
+      "install": {
+        "plugin_id": "com.hy.oop-test"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-oop-test/icon.png"
+    },
+    {
       "id": "hy-seamless",
       "stable": null,
       "test": {
