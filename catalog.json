@@ -628,12 +628,12 @@
       "id": "hy-hub",
       "stable": null,
       "test": {
-        "version": "0.16.2",
-        "date": "2026-10-19",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.16.2.exe",
-        "sha256": "1efa43be4da12274832f0eafc982c9b2c4cee694767773ac3292f1de33cb934f",
-        "size": 22741098,
-        "notes": "- 크롬 확장: 브라우저가 실제로 무엇을 쓰고 있는지 보여 줌 (업데이트가 안 보이던 문제)\n  - 브라우저가 지금 돌리는 버전을 읽어서, 폴더는 새 버전인데 브라우저는 옛 버전이면 '다시 불러오기 필요'와 방법을 알려 줌\n  - 같은 확장(같은 ID)인데 브라우저가 다른 폴더(예: 직접 압축 풀어 불러온 폴더)를 쓰고 있으면 '다른 폴더'로 알려 줌 — 그 폴더는 허브가 업데이트하지 않음\n  - 업데이트를 마친 뒤의 안내도 같은 기준으로 (다른 폴더를 쓰면 바로 알려 줌)"
+        "version": "0.16.3",
+        "date": "2026-10-20",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-hub/hy-hub-0.16.3.exe",
+        "sha256": "d0f9518a28e8b0f9bd6a535d29ff4b779efae23464fbf750c29ced1fbf5b9ce3",
+        "size": 22742021,
+        "notes": "- 뒤로가기가 엉뚱한 곳으로 가던 문제\n  - 고른 앱·분류를 화면 주소에 넣음: 뒤로가기 기록마다 그때 보던 앱·분류가 남아서, 위 막대의 '‹ InDesign'을 누르면 정말 InDesign 목록으로 돌아감\n    (전에는 앱 고름이 하나만 저장돼 있어서, 글자는 InDesign인데 다른 앱·전체 목록으로 가거나 앞 화면이던 라이브러리로 건너뛰기도 했음)\n  - 앱·분류를 바꾼 것도 기록에 남음: 뒤로 → 앞에 보던 앱·분류\n  - 툴 상세를 어디서 열었는지는 누른 순간의 화면으로 정함 (목록을 나눠 그리는 중에 다른 화면으로 가면 '라이브러리에서 연 것'으로 잘못 묶이던 문제)\n  - 라이브러리 화면의 패널을 열면 왼쪽 메뉴는 '라이브러리', 앱 목록에서 열면 그 앱이 강조됨\n- 위 막대 제목에 고른 분류도 표시 (예: Photoshop · 색·톤)"
       },
       "history": [],
       "name": "hy 허브",
