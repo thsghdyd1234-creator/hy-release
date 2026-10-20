@@ -1069,12 +1069,12 @@
       "id": "hy-tone",
       "stable": null,
       "test": {
-        "version": "0.2.0",
-        "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-tone/hy-tone-0.2.0.zip",
-        "sha256": "1edf5edf061cf062edff6995fb3d8a1f6d95a370766eb0693c56037d651a8a24",
-        "size": 30316,
-        "notes": "- 첫 등록 (서명된 ZXP, Illustrator 2021 이상)\n- 팔레트 열기: 기준 색을 색 사각형·색상 막대에서 골라 나머지 색을 같이 움직임 (색·채도·명도 / 색조만)"
+        "version": "0.2.1",
+        "date": "2026-10-20",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-tone/hy-tone-0.2.1.zxp",
+        "sha256": "4f6b229c4f5f1d6652a399f491dffb95017512db2e6ef80e2675a063ad98c131",
+        "size": 36080,
+        "notes": "- 팔레트가 막히던 문제 수정: 선택한 색이 전부 흰색·회색·검정이어도 팔레트가 열리고, 고른 색을 회색 계열에 입힌다 (색 입히기)\n- 회색 계열을 기준 색으로 고르면 '검정·흰색·회색' 옵션을 자동으로 '같이 바꾸기'로 전환\n- 미리보기 칩에서 회색 계열도 기준 색으로 고를 수 있음"
       },
       "history": [],
       "name": "hy Tone",
