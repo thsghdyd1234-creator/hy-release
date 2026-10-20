@@ -274,12 +274,12 @@
       "id": "hy-curve",
       "stable": null,
       "test": {
-        "version": "0.11.0",
-        "date": "2026-10-19",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/hy-curve-0.11.0.rbz",
-        "sha256": "eb5b2bf999cb734d96f4214fa83742b277faa6cdb494689dbd6f14f485e27f79",
-        "size": 51229,
-        "notes": "- 편집 중 되돌리기·다시 하기 — 전에는 편집 모드에서 바꾼 걸 되돌릴 수 없었음\n  - 되돌리기: Ctrl+Z · Esc · 패널 [되돌리기] / 다시 하기: Ctrl+Y · Ctrl+Shift+Z · 패널 [다시]\n  - 한 단계 = 앵커·핸들 끌기 한 번, 앵커 삽입, 삭제, 연속성 바꾸기, 패널 좌표·핸들 입력, 닫기 (최근 100단계)\n  - 안 바뀐 동작(빈 곳 클릭, 눌렀다 그냥 떼기)은 단계로 치지 않음\n  - Esc 로 더 되돌릴 게 없으면 도구를 닫음 (아무것도 안 바꿨으면 곡선은 그대로)\n- 다른 탭에서도 Ctrl+Z 는 그 탭의 되돌리기 (펜 = 마지막 점 빼기, 당기기 = 직전 당기기, 잇기 = 고른 곡선 해제)\n  — 도구가 켜져 있는 동안 Ctrl+Z 가 스케치업의 모델 되돌리기로 넘어가지 않게 함"
+        "version": "0.12.0",
+        "date": "2026-10-21",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/hy-curve-0.12.0.rbz",
+        "sha256": "c28d1c539e1a7e622ef5bacbe53dfa1860add5f77dada93cff0e216daacd67a6",
+        "size": 52688,
+        "notes": "- 끄는 중 방향 고정을 스케치업처럼 — 전에는 당기기·앵커·핸들을 끄는 중에 축 추론이 없었고, 화살표 고정도 마우스를 움직여야 먹었음\n  - 당기기: 잡은 점에서 적·녹·청 축과 '곡선에 수직' 방향이 추론선으로 보이고 붙음 (작업면에서는 가로·높이·곡선에 수직)\n  - 앵커 끌기는 처음 자리에서, 핸들 끌기는 그 앵커에서 축 추론 — 핸들을 수평·수직으로 딱 맞추기 쉬움\n  - 끄는 중 → ← ↑ 를 누르면 마우스를 안 움직여도 바로 고정, 같은 키 다시 누르면 풀림\n  - Shift 는 누르고 있는 동안만 지금 걸린 방향을 고정, 떼면 풀림 (전에는 누를 때마다 켜고 끄기)\n  - 끌기가 끝나면 화살표 고정은 풀림, Shift 를 누르고 있으면 유지 (펜으로 같은 방향 점을 이어 찍을 때)\n  - 당기기 대기 중(아직 안 잡았을 때)에는 마지막 앵커에서 나오던 축 표시를 없앰"
       },
       "history": [],
       "name": "hy Curve",
