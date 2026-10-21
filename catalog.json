@@ -862,12 +862,12 @@
       "id": "hy-map-poster",
       "stable": null,
       "test": {
-        "version": "0.1.0",
+        "version": "0.1.1",
         "date": "2026-10-21",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster/hy-map-poster-0.1.0.exe",
-        "sha256": "2ddd1df150e307840a94cc29c8f08a8eb8db6161fd73ac3f6aad055d76586741",
-        "size": 32815398,
-        "notes": "- 첫 등록 (허브 배포용 단일 exe)\n- 3D 뷰를 못 열 때 윈도우에서 엉뚱한 \"egl\" 오류 대신 실제 원인을 보여 줌\n- Blender 자동 받기: Blender가 없으면 켜자마자 묻지 않고 blender.org 공식 포터블(5.2.2, 약 390MB)을 받아 `%LOCALAPPDATA%\\hy\\blender`에 풀어 둠\n  - 공식 sha256으로 확인, 끊기면 이어 받기, 받는 동안에도 SHP 열기·3D 뷰는 그대로 사용\n  - 앱 설치 폴더 밖이라 앱을 업데이트해도 다시 받지 않음\n- 스케치업 계획안 불러오기(태그·재질 분류, 유리·금속), 화이트 클레이 (선명) 프리셋, 사이드바 정리(섹션 접기, 프리셋에서 바꾼 값 표시)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster/hy-map-poster-0.1.1.exe",
+        "sha256": "123bd826309b675b5f0876cc304360313e734112ab3ee1658ac97f1285f7b431",
+        "size": 32815224,
+        "notes": "- 스케치업 내보내기 확장을 짝 툴(hy Map Poster 스케치업 확장 0.3.0)로 등록 — 허브에서 맵 포스터를 설치하면 스케치업에도 같이 들어감\n  - 툴바 버튼 · 확장 프로그램 메뉴 · hy CMD 별칭 MP · MOSAIC\n  - 대상지 탭의 [확장 파일 폴더]는 허브 없이 손으로 넣을 때만 필요"
       },
       "history": [],
       "name": "hy Map Poster",
@@ -877,7 +877,7 @@
         "versions": "Windows 10 이상 (Blender는 처음 켤 때 자동으로 받음)"
       },
       "summary": "수치지형도 SHP로 3D 도시 맵 포스터를 슬라이더로 만들고 Blender로 렌더하는 프로그램",
-      "description": "수치지형도 SHP ZIP을 열어 범위를 고르고, 3D 뷰에서 구도·재질·안개·대상지 표시를 슬라이더와 프리셋(19종)으로 맞춘 뒤 Blender로 포스터를 렌더한다. PNG와 포토샵 레이어 PSD로 저장. 스케치업 계획안(.hymodel.json, 태그·재질별 유리·금속 구분)을 대상지에 올려 함께 렌더할 수 있고, 스케치업 내보내기 확장(.rbz)이 exe 안에 들어 있다(대상지 탭 → 확장 파일 폴더). Blender는 처음 켤 때 blender.org 공식 포터블(약 390MB)을 묻지 않고 바로 받아 %LOCALAPPDATA%\\hy\\blender에 둔다 — 앱을 업데이트해도 다시 받지 않는다.",
+      "description": "수치지형도 SHP ZIP을 열어 범위를 고르고, 3D 뷰에서 구도·재질·안개·대상지 표시를 슬라이더와 프리셋(19종)으로 맞춘 뒤 Blender로 포스터를 렌더한다. PNG와 포토샵 레이어 PSD로 저장. 스케치업 계획안(.hymodel.json, 태그·재질별 유리·금속 구분)을 대상지에 올려 함께 렌더할 수 있고, 스케치업 내보내기 확장은 짝 툴(hy-map-poster-sketchup)로 같이 설치된다 — 스케치업이 없거나 켜져 있으면 그것만 건너뛰고 나중에 따로 설치. Blender는 처음 켤 때 blender.org 공식 포터블(약 390MB)을 묻지 않고 바로 받아 %LOCALAPPDATA%\\hy\\blender에 둔다 — 앱을 업데이트해도 다시 받지 않는다.",
       "category": "site-model",
       "install": {
         "entry": "hy_map_poster.exe"
@@ -886,7 +886,9 @@
         "%APPDATA%\\hy_mapposter",
         "%LOCALAPPDATA%\\hy\\blender"
       ],
-      "requires": [],
+      "requires": [
+        "hy-map-poster-sketchup"
+      ],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster/icon.png"
     },
     {
