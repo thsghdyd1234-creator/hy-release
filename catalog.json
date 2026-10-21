@@ -1007,6 +1007,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-oop-test/icon.png"
     },
     {
+      "id": "hy-road",
+      "stable": null,
+      "test": {
+        "version": "0.3.0",
+        "date": "2026-10-21",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-road/hy-road-0.3.0.rbz",
+        "sha256": "71f1c0484d644521d554d04807e5cd90f2070948e76254f796aeca11adec0918",
+        "size": 49913,
+        "notes": "첫 등록\n- 도로면 → 중심선 자동 인식(교차점·끝점·폭 변화로 구간 나눔) → 구간별 차선 수(폭으로 추천, 왕복 기준·홀수 일방) → 노면표시 생성\n- 노면표시: 중앙선(4차선 이상 복선)·차선(점선, 교차로 앞 실선)·정지선·횡단보도·회전 화살표·좌회전 유도선·도로 양끝선(황색 실선/복선/백색)\n- 차로 폭: 면 폭 N등분 / 표준 차로폭 고정(남는 폭 길가장자리선)\n- 땅끝에서 들어오는 짧은 가지는 빈 끝단을 찾아 자동으로 이음 · 비스듬히 잘린 끝단은 끝단 중점으로 맞춤\n- 인식이 틀리면 'YL 도로망 › 중심선' 그룹의 선을 고치고 다시 읽기 — 차선 수 이어받음, 노면표시도 다시 생성\n- 경사·곡면 도로면: 노면표시를 면 삼각형 단위로 잘라 면 위에 붙임(드레이프), 중심선·라벨도 지면을 따라감\n- 패널(지도 + 구간표): 차선 수 직접 입력, 선택 구간 한꺼번에 바꾸기, 바꿔도 스크롤 유지\n- 메뉴·툴바(hy Road)·hy CMD(ROAD·RDM, 다시 읽기 RDR)·MOSAIC(hy.road·hy.road_reread)·오른쪽 클릭 · 진단 데이터 저장(JSON)\n- 개발 중 테스트 빌드(hy_road_test.rb 0.1.x, 확장 메뉴 'YooLab 도로')를 쓰던 PC는 Plugins 폴더의 hy_road_test.rb·hy_road.rb(단일 파일)를 지우고 허브로 설치"
+      },
+      "history": [],
+      "name": "hy Road",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "도로면에서 중심선을 자동 인식하고 구간별 차선 수를 정해 차선·교차로 노면표시를 그린다 — 곡면 도로면에는 드레이프",
+      "description": "도로면(여러 조각·그룹 안도 됨)을 고르고 실행하면 테두리에서 중심선을 자동으로 찾아 교차점·끝점으로 구간을 나누고, 구간마다 폭을 재서 차선 수를 추천한다. 패널(지도 + 구간표)에서 구간을 골라 차선 수를 직접 입력하거나 뷰포트에서 클릭+숫자로 바꾼다 — 왕복 기준, 홀수는 일방통행. [노면표시 생성]으로 중앙선(황색, 4차선 이상 복선)·차선(백색 점선, 교차로 앞 실선)·정지선·횡단보도·회전 화살표(교차로 모양을 보고 자동)·좌회전 유도선·도로 양끝선(없음/황색 실선/복선/백색)을 얇은 면으로 만든다. 차로 폭은 면 폭 N등분 또는 표준 차로폭 고정. 땅끝에서 들어오는 짧은 가지는 빈 끝단을 찾아 자동으로 잇고, 인식이 틀리면 'YL 도로망 › 중심선' 그룹의 선을 고치고 다시 읽으면 된다(차선 수 이어받음, 노면표시도 다시 생성). 경사·곡면 도로면이면 노면표시를 면 삼각형 단위로 잘라 면 위에 붙인다. 설정·차선 수는 모델의 YL 도로망 그룹에 저장. 메뉴·툴바(hy Road)·hy CMD(ROAD·RDM, 다시 읽기 RDR)·MOSAIC(hy.road)·오른쪽 클릭.",
+      "category": "site-model",
+      "install": {
+        "loader": "hy_road.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-road/icon.png"
+    },
+    {
       "id": "hy-seamless",
       "stable": null,
       "test": {
