@@ -862,12 +862,12 @@
       "id": "hy-map-poster",
       "stable": null,
       "test": {
-        "version": "0.1.2",
+        "version": "0.1.3",
         "date": "2026-10-21",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster/hy-map-poster-0.1.2.exe",
-        "sha256": "a239a915dc117b70a999886fce47e494e2a652b1ef75622238458e13b1f147a4",
-        "size": 32819107,
-        "notes": "- 계획안을 충분히 내릴 수 없던 문제 고침: 높이 조정이 ±30m로 막혀 있었음 → 불러온 모형 높이만큼 (지형·섬째 만든 모형은 땅 면이 수십 m 위)\n- [모형 바닥면을 땅에 맞추기] 버튼: 모형에서 가장 넓은 수평면(대지·섬의 땅 면)을 계획안 자리의 가장 낮은 땅에 닿게 한 번에 내림 (되돌리기 가능)"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster/hy-map-poster-0.1.3.exe",
+        "sha256": "5dec6fe4f5d37691fad35fd85e2fc0a35872c9a1c57a28ecc1588dd6ba382d6f",
+        "size": 32823751,
+        "notes": "- 최종 렌더가 멈춘 건지 오래 걸리는 건지 알 수 없던 문제: Blender 5는 백그라운드에서 샘플 진행을 찍지 않아 진행률이 65%에 서 있었음\n  - 상태 줄에 샘플 진행 · 남은 시간(Blender 계산) · GPU/CPU 표시, 장면 준비(BVH 등) 단계도 보임\n  - 렌더 중 [최종 렌더] 버튼이 [렌더 취소]로 바뀜 (예전엔 멈추면 프로그램을 꺼야 했음)\n  - Blender가 10분 넘게 아무 출력이 없으면 멈춘 것으로 보고 알림\n  - Blender 출력을 `%APPDATA%\\hy_mapposter\\logs\\render_final.log`에 시간과 함께 남김 — 멈춘 자리 확인용"
       },
       "history": [],
       "name": "hy Map Poster",
