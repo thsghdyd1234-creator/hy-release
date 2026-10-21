@@ -448,12 +448,12 @@
       "id": "hy-gradient",
       "stable": null,
       "test": {
-        "version": "0.3.0",
-        "date": "2026-10-20",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-gradient/hy-gradient-0.3.0.zip",
-        "sha256": "f827599fdb8c9f542a2f3c2c00a54f9aa31df974f4f6d587ea28819a4e535ca3",
-        "size": 26362,
-        "notes": "- hy Offset 연동: hy Offset 그룹을 통째로 골라도 링만 칠함 — 라벨 글자·중심선·숨긴 원본은 그대로\n- 하나로 걸치기 범위를 실제로 칠하는 객체 기준으로 (라벨 때문에 중심이 밀리던 문제)\n- 나눠 칠하기: hy Offset 그룹 하나를 고르면 링끼리 나눔, 숨긴 객체 제외\n- 칠한 방식(그라디언트·나눠 칠하기·단색)을 hy Offset 그룹에 남김 → hy Offset이 링을 다시 만들어도 같은 색으로 다시 칠함 (hy Offset 0.2.0 이상)\n- 크기 순 '위치대로' 간격을 면적 대신 길이(√면적) 기준으로 — 동심원이면 반경에 비례\n- 중심부터: 중심이 모두 같으면(동심원) 크기 순으로 대신\n- 연동 시험 추가: node tools/hy-gradient/test/test_offset_link.js (가짜 일러스트에 두 툴 jsx를 함께 올림)"
+        "version": "0.3.1",
+        "date": "2026-10-21",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-gradient/hy-gradient-0.3.1.zip",
+        "sha256": "2aabe0b025121c41600f7fd4563d21471563cc2cfd3c0ae41a3eeaea7210dff5",
+        "size": 27219,
+        "notes": "- 선 하나만 골라 고쳐도 같은 레이어의 다른 선까지 같이 바뀌던 문제: 예전에 같이 적용했거나 복제해서 같은 임시 스와치를 쓰는 객체가 있으면, 그 스와치는 건드리지 않고 고른 것만 새 임시 스와치로 떼어 냄 (떼어 내면 상태줄에 알림)\n- 같이 쓰는 객체를 전부 골랐을 때는 예전처럼 그 스와치를 고침 (정지점만 고치는 빠른 경로 유지)\n- 시험 추가: node tools/hy-gradient/test/test_shared_swatch.js"
       },
       "history": [],
       "name": "hy Gradient",
