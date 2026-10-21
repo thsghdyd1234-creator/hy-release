@@ -1128,12 +1128,12 @@
       "id": "hy-shadow",
       "stable": null,
       "test": {
-        "version": "0.4.0",
-        "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-shadow/hy-shadow-0.4.0.ccx",
-        "sha256": "c47db5555d44d42585600cf5620677e2ff6eea7413c4dc9405ff09509a8485a9",
-        "size": 70375,
-        "notes": "- 첫 등록\n- 형상 그림자: 사람·나무 형상 그림자(발끝·줄기 기준), 범위 \"선택 영역만\", 그림자 없애기\n- 드롭 섀도: 레이어 스타일(프리셋 9가지, 옅어짐 = 여러 겹) / 픽셀 그림자(평면 그림자 레이어, 색 농도 반영, 선택 영역만)\n- 통짜 JPG(배경 레이어)는 픽셀 그림자 + 선택 영역으로 처리, 그림자 레이어를 위에 곱하기로 얹고 원본 자리는 비움\n- 8·16·32비트 RGB 문서 지원"
+        "version": "0.4.1",
+        "date": "2026-10-22",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-shadow/hy-shadow-0.4.1.ccx",
+        "sha256": "c402284278eff00a919569b0d9885372a59b9d08e643bf05dd29bccd7bd70c21",
+        "size": 70931,
+        "notes": "- 'Unknown color profile'(-26120)로 그림자가 안 만들어지던 문제: 문서에 박힌 프로필(렌더·캡처 이미지의 모니터·카메라 프로필 등)을 이미지 API가 모르면 읽을 때 받은 프로필 → 문서 프로필 → 지정 없음 → sRGB 순으로 다시 시도하고, 문서마다 된 방법을 기억"
       },
       "history": [],
       "name": "hy Shadow",
