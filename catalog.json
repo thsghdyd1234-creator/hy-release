@@ -1040,12 +1040,12 @@
       "id": "hy-plant",
       "stable": null,
       "test": {
-        "version": "0.1.0",
+        "version": "0.1.1",
         "date": "2026-10-22",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-plant/hy-plant-0.1.0.ccx",
-        "sha256": "9c1238d63003ee8b2eaa6d812ebae81fa570adc7eff38e29793a2dc7dd59745c",
-        "size": 25670,
-        "notes": "- 첫 등록 (포토샵 스크립트 hy_plant.jsx 0.1.0을 UXP 패널로 옮김)\n- 나무: 폴더의 배경 없는 이미지(PNG·PSD·TIF·WEBP) 또는 고른 레이어\n- 투시도·입면(밑동 기준, 가까운 나무가 앞, 먼 쪽일수록 작게) / 평면(중심 기준, 방향 돌리기)\n- 개수·크기·간격·좌우 뒤집기·가장자리에 걸치지 않게, 크기를 비우면 문서 크기로 정함\n- 결과는 'hy 나무 N그루' 그룹 안 스마트 오브젝트, 히스토리 한 칸, 원래 선택 영역 유지\n- 다시 섞기: 방금 심은 것을 지우고 새로 섞어 심기"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-plant/hy-plant-0.1.1.ccx",
+        "sha256": "c44d6ea78b13c639f9e4e324a3a8c4301ff7b80e2956fc0d97f612f6334afcee",
+        "size": 25798,
+        "notes": "- 패널이 중간까지만 그려지던 문제 (UXP에서 class 없는 요소의 className이 null) — 슬라이더 값·폴더 이름·섞기 칸이 안 보이고 심은 뒤 \"reading 'replace'\" 오류가 뜨던 것\n- 크기 줄의 \"px 지름\" 글자가 잘리던 것 — 칸 이름을 나무 높이/지름으로"
       },
       "history": [],
       "name": "hy Plant",
