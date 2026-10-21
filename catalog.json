@@ -1484,12 +1484,12 @@
       "id": "image-scene",
       "stable": null,
       "test": {
-        "version": "0.1.1",
-        "date": "2026-10-18",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-scene/image-scene-0.1.1.ccx",
-        "sha256": "ea95e527b5117c597d683f7bc6bc6b8edfe703c2d406be8fafbfd33e2ef35763",
-        "size": 58907,
-        "notes": "- hy Seamless 등록에 맞춰 플러그인 ID·패널 연결 (묶음에서 바로 열림)"
+        "version": "0.1.2",
+        "date": "2026-10-22",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-scene/image-scene-0.1.2.ccx",
+        "sha256": "7340cd4fe9d865d4ad6f590a359a9396fd3052c73e29dc9f96da51d7388c1d96",
+        "size": 61634,
+        "notes": "- hy Plant 추가 (배치 칸, 선택 영역에 나무 랜덤 심기)"
       },
       "history": [],
       "name": "IMAGE SCENE",
@@ -1498,7 +1498,7 @@
         "app": "Photoshop",
         "versions": "2023 이상 (24.4+)"
       },
-      "summary": "투시도에 소스를 넣고 장면 완성 — 툴 5개의 패널을 한곳에서 여는 묶음 패널",
+      "summary": "투시도에 소스를 넣고 장면 완성 — 툴 6개의 패널을 한곳에서 여는 묶음 패널",
       "description": "툴 코드는 합치지 않고, 설치된 각 툴의 패널을 카드로 모아 열어 준다. 설치 상태·버전은 플러그인에서 바로 읽고, 다른 묶음으로 넘어가는 칩이 있다. 묶음 정의는 %APPDATA%\\hy\\hubs.json(rev가 높을 때)으로 재설치 없이 바꿀 수 있다.",
       "category": "composite",
       "install": {
@@ -1520,6 +1520,10 @@
         {
           "id": "hy-perspective",
           "name": "hy Perspective"
+        },
+        {
+          "id": "hy-plant",
+          "name": "hy Plant"
         },
         {
           "id": "hy-shadow",
