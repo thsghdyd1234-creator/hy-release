@@ -862,12 +862,12 @@
       "id": "hy-map-poster",
       "stable": null,
       "test": {
-        "version": "0.1.1",
+        "version": "0.1.2",
         "date": "2026-10-21",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster/hy-map-poster-0.1.1.exe",
-        "sha256": "123bd826309b675b5f0876cc304360313e734112ab3ee1658ac97f1285f7b431",
-        "size": 32815224,
-        "notes": "- 스케치업 내보내기 확장을 짝 툴(hy Map Poster 스케치업 확장 0.3.0)로 등록 — 허브에서 맵 포스터를 설치하면 스케치업에도 같이 들어감\n  - 툴바 버튼 · 확장 프로그램 메뉴 · hy CMD 별칭 MP · MOSAIC\n  - 대상지 탭의 [확장 파일 폴더]는 허브 없이 손으로 넣을 때만 필요"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster/hy-map-poster-0.1.2.exe",
+        "sha256": "a239a915dc117b70a999886fce47e494e2a652b1ef75622238458e13b1f147a4",
+        "size": 32819107,
+        "notes": "- 계획안을 충분히 내릴 수 없던 문제 고침: 높이 조정이 ±30m로 막혀 있었음 → 불러온 모형 높이만큼 (지형·섬째 만든 모형은 땅 면이 수십 m 위)\n- [모형 바닥면을 땅에 맞추기] 버튼: 모형에서 가장 넓은 수평면(대지·섬의 땅 면)을 계획안 자리의 가장 낮은 땅에 닿게 한 번에 내림 (되돌리기 가능)"
       },
       "history": [],
       "name": "hy Map Poster",
