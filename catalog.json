@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "tools": [
     {
       "id": "ai2ps",
@@ -1035,6 +1035,36 @@
       "user_data": [],
       "requires": [],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-oop-test/icon.png"
+    },
+    {
+      "id": "hy-plant",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-22",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-plant/hy-plant-0.1.0.ccx",
+        "sha256": "9c1238d63003ee8b2eaa6d812ebae81fa570adc7eff38e29793a2dc7dd59745c",
+        "size": 25670,
+        "notes": "- 첫 등록 (포토샵 스크립트 hy_plant.jsx 0.1.0을 UXP 패널로 옮김)\n- 나무: 폴더의 배경 없는 이미지(PNG·PSD·TIF·WEBP) 또는 고른 레이어\n- 투시도·입면(밑동 기준, 가까운 나무가 앞, 먼 쪽일수록 작게) / 평면(중심 기준, 방향 돌리기)\n- 개수·크기·간격·좌우 뒤집기·가장자리에 걸치지 않게, 크기를 비우면 문서 크기로 정함\n- 결과는 'hy 나무 N그루' 그룹 안 스마트 오브젝트, 히스토리 한 칸, 원래 선택 영역 유지\n- 다시 섞기: 방금 심은 것을 지우고 새로 섞어 심기"
+      },
+      "history": [],
+      "name": "hy Plant",
+      "type": "uxp",
+      "host": {
+        "app": "Photoshop",
+        "versions": "2023 이상 (24.2+)"
+      },
+      "summary": "선택 영역 안에 나무를 랜덤하게 심는 패널 — 투시도·입면은 원근 크기, 평면은 방향 섞기",
+      "description": "폴더의 배경 없는 나무 이미지(PNG·PSD·TIF·WEBP)나 레이어 패널에서 고른 나무 레이어를 선택 영역 안에 흩어 심는다. 투시도·입면은 밑동이 선택 영역 안에 오고 가까운(아래쪽) 나무가 앞에 쌓이며, 위쪽(먼 쪽)일수록 작아진다. 평면은 중심이 선택 영역 안에 오고 방향을 돌려 섞는다. 개수·크기·간격·좌우 뒤집기·가장자리에 걸치지 않게를 고르고, 결과는 'hy 나무 N그루' 그룹 안 스마트 오브젝트(같은 나무끼리 내용 공유)로 히스토리 한 칸에 들어간다. '다시 섞기'는 방금 심은 것을 지우고 새로 섞어 심는다.",
+      "category": "composite",
+      "install": {
+        "plugin_id": "com.hoyong.hyplant"
+      },
+      "user_data": [
+        "uxp:localStorage"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-plant/icon.png"
     },
     {
       "id": "hy-road",
