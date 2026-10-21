@@ -1361,6 +1361,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-typeset/icon.png"
     },
     {
+      "id": "hy-uvpin",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-22",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-uvpin/hy-uvpin-0.1.0.rbz",
+        "sha256": "3e29028806ecc7a389e38b588fe8ce8b3a5c90b6080443aed927ff79c6e7b73a",
+        "size": 12146,
+        "notes": "첫 등록 — 박스 매핑 (설계·시뮬: 프로젝트 claude/hy-uvpin-설계.md)\n곡면이 삼각 메쉬가 되면 D5 에서 텍스처가 삼각형마다 깨지는 문제: 스케치업은 UV 를 면마다 따로 갖고, 그냥 칠한 텍스처는\n면마다 자기 평면 기준 기본 매핑이라 이웃 삼각형과 무늬가 안 맞음. 그룹에 통째로 칠한 경우도 같음.\n- 핀 고정: 꼭짓점마다 UV 를 하나로 정하고 면마다 꼭짓점 3개의 (모델점, UV) 쌍으로 position_material\n  → 면 평면 위 아핀 매핑이 하나로 정해져 이웃과 공유 꼭짓점 UV 가 같음 (원근 왜곡 4쌍은 안 씀)\n- 박스 매핑: 보이는 쪽 법선에 가까운 축(±X·±Y·±Z)으로 투영. 방향 경계 근처는 이웃 다수결로 다듬어 자잘한 섬을 줄임\n  (점수 + 0.25 × 같은 차트 이웃 비율, 0.45 밑 차트는 후보 아님 → 늘어남 최대 2.2배)\n  - 그 방향에서 볼 때 무늬가 뒤집히지 않게 축을 정함, 앞·뒷면 각각\n  - 면 방향이 섞인 메쉬도 보이는 쪽끼리 이어짐 (공유 엣지 방향으로 앞-앞/앞-뒤 판단)\n  - 월드 좌표·텍스처 실치수 기준 → 회전·배율·거울 그룹, 따로 돌린 물체끼리도 무늬가 맞음\n- 재질 처리\n  - 자기 재질이 없으면 그룹·컴포넌트에 칠한 재질(그룹 편집 중이면 열린 그룹 재질)을 그 면에 칠하고 고정\n  - 복사본 있는 그룹은 make_unique 후, 복사본 여럿인 컴포넌트의 상속 재질은 건드리지 않음(다른 복사본 색이 바뀌므로)\n  - 텍스처 없는 색 재질: 실행 전에 묻고, 같은 색 단색 텍스처(1m)를 붙여 고정 (화면 색 그대로)\n  - 재질 없는 면·잠긴 그룹은 보고만. 한 operation(Ctrl+Z 한 번), 결과 창 + 콘솔 `[hy UVPin] log {...}`\n- 툴바 'hy UVPin' 한 칸, 메뉴 확장 › hy UVPin 박스 매핑, hy CMD 별칭 UV, MOSAIC 등록(hy.uvpin), 진단 HY::UVPin.selfcheck\n- 시험(test/run_all.sh): 패키지 구조 · 메뉴/툴바/CMD/MOSAIC 연결 · 스텁 모델 흐름 8가지(회전·비균일 배율·거울·복사본·중첩·\n  그룹 편집 중·색 재질·잠김) · 파이썬 레퍼런스 대조(메쉬 7개 라벨·핀·UV 차이 0). 시뮬에서 기본 매핑은 곡면 공유 엣지\n  35~100% 가 어긋나고, 핀 고정은 방향 경계 말고 0\n- 실물(D5) 확인 전 — 볼 것: 삼각형 이음새가 사라지는지, 글자 텍스처로 위아래 뒤집힘(position_material v 축 방향 문서 불명확)"
+      },
+      "history": [],
+      "name": "hy UVPin",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "곡면 삼각 메쉬 텍스처를 꼭짓점에 핀 고정 — D5에서 삼각형마다 깨지는 UV를 이어 붙임 (박스 매핑)",
+      "description": "면·그룹·컴포넌트를 선택하고 실행하면 곡면 삼각형마다 따로 계산되던 텍스처 UV를 이어 붙인다. 꼭짓점마다 UV를 하나로 정하고 면마다 꼭짓점 3개의 (모델점, UV) 쌍으로 핀 고정(아핀, 원근 왜곡 없음)해서 이웃 삼각형과 공유 꼭짓점 UV가 같다 → D5 등 렌더러에서 삼각형 이음새가 사라짐. 박스 매핑: 보이는 쪽 법선에 가까운 축(±X·±Y·±Z)으로 투영, 방향 경계 근처는 이웃 다수결로 다듬어 자잘한 섬을 줄임(늘어남 최대 2.2배), 무늬가 뒤집히지 않게 축을 정하고 면 방향이 섞인 메쉬도 보이는 쪽끼리 이어짐. 월드 좌표·실치수 기준이라 따로 돌린 물체끼리도 무늬가 맞음. 앞·뒷면 각각 처리. 그룹에 칠한 재질(상속)은 면에 칠해 고정(복사본 그룹은 고유하게 만든 뒤), 복사본이 여럿인 컴포넌트의 상속 재질은 건드리지 않음. 텍스처 없는 색 재질은 물어보고 같은 색 단색 텍스처(1m)를 붙여 고정, 재질 없는 면은 보고만. 되돌리기 한 번. 진단 HY::UVPin.selfcheck. 툴바 'hy UVPin', hy CMD 별칭 UV, MOSAIC 등록(hy.uvpin).",
+      "category": "site-model",
+      "install": {
+        "loader": "hy_uvpin.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-uvpin/icon.png"
+    },
+    {
       "id": "hy-wrap",
       "stable": null,
       "test": {
