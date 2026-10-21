@@ -890,6 +890,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster/icon.png"
     },
     {
+      "id": "hy-map-poster-sketchup",
+      "stable": null,
+      "test": {
+        "version": "0.3.0",
+        "date": "2026-10-21",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster-sketchup/hy-map-poster-sketchup-0.3.0.rbz",
+        "sha256": "8d72c22745dde3c604f1b03e16b555a7465bbbcbc140000d628b5064ccfdb6c0",
+        "size": 6070,
+        "notes": "- 첫 등록 (hy Map Poster 짝 툴 — 허브에서 맵 포스터를 설치하면 같이 들어감)\n- 로더 + 폴더 구조로 바꿈, 툴바 버튼(hy Map Poster) 추가\n- hy CMD 별칭 MP, MOSAIC 등록\n- 이전 버전: 0.2.0 태그(폴더 포함)를 같이 내보내기, 0.1.0 재질·삼각형 내보내기"
+      },
+      "history": [],
+      "name": "hy Map Poster 스케치업 확장",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2021 이상"
+      },
+      "summary": "스케치업 계획안을 hy Map Poster 계획안 파일(.hymodel.json)로 보내는 확장",
+      "description": "선택한 그룹·컴포넌트(안 고르면 모델 전체)를 재질 색·불투명도와 태그(폴더 포함)째 .hymodel.json으로 저장한다. 맵 포스터 대상지 탭에서 불러오면 태그나 재질로 유리·금속·숨김을 나눠 대상지 위에 올려 렌더한다. 툴바 hy Map Poster 버튼 · 확장 프로그램 메뉴 · hy CMD MP · MOSAIC. 짝 툴 hy Map Poster(exe)를 설치하면 같이 들어간다.",
+      "category": "site-model",
+      "install": {
+        "loader": "hy_mapposter_export.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-map-poster-sketchup/icon.png"
+    },
+    {
       "id": "hy-model-library",
       "stable": null,
       "test": {
