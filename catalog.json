@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "tools": [
     {
       "id": "ai2ps",
@@ -2055,6 +2055,39 @@
         "hy-wrap"
       ],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-curtainwall/icon.png"
+    },
+    {
+      "id": "yl-el-louver",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-23",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-louver/yl-el-louver-0.1.0.rbz",
+        "sha256": "bc920c59eed44fd7aaf4361a25fe926869fc8d7ed4cc17ae70c6b9e0df4f7661",
+        "size": 42483,
+        "notes": "첫 등록 — 파라메트릭 루버 (설계: 프로젝트 claude/el-louver-설계.md)\n- 바탕 4가지: 평면 면(여러 면이면 모퉁이 연귀로 한 줄) · 곡면 그룹(FFD 셸·부드러운 메시, 펴지 않고 바로) · 선 + 높이(가림막·담장, 가운데 걸침) · 창 개구부 안(갤러리창 — 틀 + 날개, 벽 두께를 재서 가운데)\n- 뼈대: 수평(실제 높이에 정확히 수평) · 수직 핀(둘레를 따라 고르게, 변마다·모퉁이 핀) · 사선 · 선 방향(지붕 그늘막). 창 구멍은 건너가기/끊기, 거의 수평인 곳은 건너뜀\n- 단면: 판 · 각파이프 · 원형 파이프 · 날개꼴(NACA 대칭). 각도·회전 중심·띄우기·가운데 걸침·면에 직각\n- 변화: 각도·깊이·두께·띄우기·간격마다 고정 또는 그라데이션(높이·가로·순번·길이) · 어트랙터(모델에서 클릭한 점·선) · 물결 · 무작위(씨앗) + 흔들림. '루버 안에서도'로 길이 따라(비틀린 핀·테이퍼)\n- 프리셋 7: 수평 차양 · 수직 핀 · 비틀린 핀 · 물결 루버 · 어트랙터 개구 · 갤러리창 · 가림막\n- 같은 모양 루버는 컴포넌트 하나를 같이 씀 (모양 지문 — 원통 타워의 링·방사형 핀도 1종). 값 계단(0.5°·1mm)으로 더 묶임\n- 결과 그룹에 설정·바탕·어트랙터 기록 → 고르고 다시 열면(우클릭 '고치기'·LV) 그 값으로 열려 같은 그룹 안을 바꿈. 바탕이 지워졌으면 저장된 모양으로\n- 미리보기 = 생성 계획 (뼈대선 + 루버 윤곽), 한 번 만들기 = Ctrl+Z 한 번. 마지막에 쓴 값은 스케치업 설정에 남아 다음 새 루버의 시작값\n- hy CMD 별칭 LV · MOSAIC yl.louver",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "EL·04 루버",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "면·곡면 그룹·선·창 개구부에 파라메트릭 루버를 붙입니다. 규칙으로 각도·깊이·간격이 바뀌고, 만든 뒤 다시 열어 고칩니다.",
+      "description": "바탕을 자르는 평면으로 잘라 뼈대선을 얻고 단면을 따라 놓는 루버. 수평 루버는 실제 높이에 정확히 수평이고 여러 면이면 모퉁이에서 연귀로 한 줄로 돈다. 수직 핀은 둘레를 따라 고르게(변마다·모퉁이 핀 가능), 사선·선 방향(지붕 그늘막)도 된다. 곡면(FFD 셸·부드러운 메시)도 펴지 않고 바로 — HY Wrap 이 필요 없다. 창 구멍은 건너가거나 끊고, 선 + 높이(가림막·담장)와 창 개구부 안 갤러리창(틀 + 날개)도 만든다. 단면 판·각파이프·원형 파이프·날개꼴. 각도·깊이·두께·띄우기·간격마다 고정 또는 규칙(그라데이션·어트랙터 점·선·물결·무작위) + 흔들림, '루버 안에서도'를 켜면 길이 따라 바뀐다(비틀린 핀·테이퍼). 같은 모양 루버는 컴포넌트 하나를 같이 써서 가볍다. 결과 그룹에 설정·바탕·어트랙터가 기록돼 루버를 고르고 다시 열면(우클릭 '고치기'도) 그 값으로 그 자리에서 고친다. hy CMD 별칭 LV. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "el_louver.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-el-louver/icon.png"
     },
     {
       "id": "yl-el-perfpanel",
