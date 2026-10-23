@@ -1037,6 +1037,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-oop-test/icon.png"
     },
     {
+      "id": "hy-outline-pdf",
+      "stable": null,
+      "test": {
+        "version": "0.2.1",
+        "date": "2026-10-23",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-outline-pdf/hy-outline-pdf-0.2.1.ccx",
+        "sha256": "b5306b1170231eeb8fb1680ce792ab2267612e42426c4abe4527a29735f318b9",
+        "size": 7855,
+        "notes": "- 첫 등록 (허브). 0.1.0~0.2.1은 등록 전에 호용에게 직접 전달한 판\n- 설치된 글꼴(Noto Sans KR 등)이 '없는 글꼴'로 잘못 뜨던 것 고침: 글꼴 상태가 '없음·대체됨'으로 확실할 때만 표시\n- 글꼴 이름에 마우스를 올리면 인디자인이 주는 원래 상태값을 보여 줌"
+      },
+      "history": [],
+      "name": "hy Outline PDF",
+      "type": "uxp",
+      "host": {
+        "app": "InDesign",
+        "versions": "2023 이상 (18.5+)"
+      },
+      "summary": "PDF 내보내기 때 '글꼴이 포함되지 않음' 오류가 나면 글자를 윤곽선으로 바꿔 내보낸다",
+      "description": "글꼴 점검: 문서 글꼴마다 포함 불가·윤곽선 불가·없는 글꼴을 표시. 윤곽선 사본(권장): 원본은 그대로 두고 임시 사본에서 포함이 막힌 글꼴이 쓰인 글상자만(또는 모든 글자) 윤곽선으로 바꿔, 고른 PDF 사전 설정(고품질 인쇄·PDF/X-4 등)으로 내보낸 뒤 사본을 버림 — 투명도·레이어 유지. 연결된 글상자는 한 번에 처리. 투명도 병합(대체): 표·패스 위 텍스트까지 바꿔야 할 때, 병합 사전 설정 'hy 아웃라인'(모든 텍스트 윤곽선) + 페이지마다 보이지 않는 투명 개체 + Acrobat 4(PDF 1.3)로 내보내고, 끝나면 PDF 내보내기 설정을 되돌림. 내보낸 PDF에 문제 글꼴이 남았는지 직접 검사.",
+      "category": "export",
+      "install": {
+        "plugin_id": "com.hy.outlinepdf"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-outline-pdf/icon.png"
+    },
+    {
       "id": "hy-plant",
       "stable": null,
       "test": {
