@@ -1153,6 +1153,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-shadow/icon.png"
     },
     {
+      "id": "hy-solid",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-23",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-solid/hy-solid-0.1.0.rbz",
+        "sha256": "d69646b164fabdb747896a1b4dd338ea3ee9d698f12cc4f38a1bb9be35118436",
+        "size": 47458,
+        "notes": "- 첫 등록\n- 빼기·자르기·교차·합치기·겉껍질·나누기 (Tab), 칼이 열린 판이면 가르기\n- 면 단위 계산: 안 닿은 면은 그대로, 바뀐 면은 재질·텍스처 맞춤·부드러운 변 이어받음\n- 닫힌 몸이 아니어도: 뒤집힌 면 · 안쪽 면 · 속 빈 몸 · 작은 구멍(계산할 때만 막음) · 판(지형 판 다듬기)\n- 안쪽 그룹은 부분마다 (계층 유지, 칼과 닿은 것만 고유화)\n- hy CMD SO·SU·UNI·IN·SL, MOSAIC hy.solid, 툴바 한 칸"
+      },
+      "history": [],
+      "name": "hy Solid",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "고체 도구 대신 — 빼기·자르기·교차·합치기·겉껍질·나누기·판으로 가르기, 닫힌 몸이 아니어도",
+      "description": "대상 그룹을 고르고(또는 클릭) 칼 그룹을 클릭하면 바로 계산해 굽는다. Shift+클릭으로 칼 여러 개 → Enter, Tab으로 연산(빼기·자르기·교차·합치기·겉껍질·나누기), Esc 처음부터. 면 단위 계산이라 스케치업 면(구멍 포함)을 삼각형으로 쪼개지 않고, 칼과 안 닿은 면은 그대로 둔다(재질·UV·태그 유지, 이웃이 잘려 생긴 점에서 변만 나눔). 바뀐 면은 원래 재질·텍스처 맞춤·부드러운 변을 이어받고, 칼 쪽 새 면은 대상 대표 재질(우클릭에서 칼 재질·재질 없음). 고체 도구가 받지 않는 입력도 계산: 뒤집힌 면 정리, 칸막이 같은 안쪽 면 빼기, 속 빈 몸(빈 곳), 작은 구멍은 계산할 때만 막고 결과는 원래처럼 열어 둠, 막을 수 없는 열린 부분(지형 판 등)은 판으로 다듬기만. 칼이 열린 판이면 가르기(빼기 = 판 앞쪽 남김, 교차 = 뒤쪽, 나누기 = 앞·뒤 두 덩어리). 안쪽 그룹(콘타 '지형' 안 기둥 수백 개 등)은 부분마다 따로 잘라 계층을 그대로 두고, 칼과 닿은 것만 고유화(복사본·컴포넌트). 합치기·겉껍질은 하나로(안쪽 그룹 없어짐, 겉껍질은 갇힌 빈 곳 지움). 한 번에 되돌리기. 진단 HY::Solid.selfcheck. 툴바 'hy Solid' 한 칸, 메뉴 확장 › hy Solid, 우클릭 hy Solid, hy CMD 별칭 SO(도구)·SU(빼기)·UNI(합치기)·IN(교차)·SL(나누기·가르기), MOSAIC 등록(hy.solid).",
+      "category": "site-model",
+      "install": {
+        "loader": "hy_solid.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-solid/icon.png"
+    },
+    {
       "id": "hy-stroke",
       "stable": null,
       "test": {
