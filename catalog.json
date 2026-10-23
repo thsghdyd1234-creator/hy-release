@@ -214,12 +214,12 @@
       "id": "hy-cmd",
       "stable": null,
       "test": {
-        "version": "0.6.2",
-        "date": "2026-10-19",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cmd/hy-cmd-0.6.2.rbz",
-        "sha256": "cff3cdc20e1736da026e4a6e61d928afd854bd9cd6ba0cb88e08d43d84d0b5b8",
-        "size": 39910,
-        "notes": "- 여는 키를 사람마다 고른다 — 별칭 패널(ALIAS) 맨 위 '여는 키' 또는 hy CMD 메뉴\n  - Space: 한 번(기본, 선택 도구에서 한 번) · 두 번(0.4초 안에 두 번 — 첫 번째는 스케치업 그대로, 다른 도구 중이면 선택 도구로) · 끔\n  - Enter: 켬(기본) · 끔\n  - 0.6.1 의 'Space로 열기' 설정은 그대로 이어 읽음 (끔 → Space 끔)\n- 비정상 종료 뒤 자동으로 끌 때 Space 방식도 끔"
+        "version": "0.6.3",
+        "date": "2026-10-23",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cmd/hy-cmd-0.6.3.rbz",
+        "sha256": "6932edf1cb61432a5aab951189c4c6cd689048657c5782e348f96e58b8cdab60",
+        "size": 40944,
+        "notes": "- 고침: 쓰다 보면 Space·Enter 로 안 열리게 되던 문제\n  - 명령창이 닫히지 않고 남으면(숨은 창의 blur 신호가 안 오는 PC) 그 뒤 키를 '이미 열림'으로 보고 스케치업에 넘겨서 계속 안 열렸다.\n    이제 창이 포커스를 잃으면 루비가 직접 닫고(0.3초마다 확인, 두 번 연속이면), 남은 창이 있어도 키를 누르면 그 창을 비우고 다시 쓴다\n  - 고침: 어떤 PC 에서 명령창(작은 창)이 계속 떠 있던 것 — 위와 같은 원인, 다른 곳을 누르면 닫힘\n  - 스케치업이 정상 종료 신호 없이 꺼진 것(Windows 종료·작업 관리자 등) 한 번으로 여는 키를 끄지 않는다. 연속 두 번일 때만 끄고, 키로 실제로 열리면 횟수 초기화\n  - 마우스가 뷰를 떠난 것으로 기록된 뒤 커서가 그대로면 '뷰 밖'으로 막지 않는다\n- selfcheck 에 dialog(열림/닫힘)·watch(감시 기록)·suspect_starts"
       },
       "history": [],
       "name": "hy CMD",
