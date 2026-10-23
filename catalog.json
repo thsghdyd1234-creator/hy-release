@@ -1769,6 +1769,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/mosaic/icon.png"
     },
     {
+      "id": "move37",
+      "stable": null,
+      "test": {
+        "version": "1.1.0",
+        "date": "2026-10-23",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/move37/move37-1.1.0.rbz",
+        "sha256": "1a14e0eb892c5056a9249f31e3bd83091a4d0d31e8e7c8307b4580b20da4bc42",
+        "size": 19079,
+        "notes": "첫 등록 (hy-tools·허브 배포 시작). 이전에 따로 나눠 주던 판 대비:\n- 지우는 선 판정을 새로: 같은 평면 두 면(같은 방향은 재질·태그 같을 때, 뒤집힌 쌍은 앞=뒤 재질) 사이이면서\n  나머지 붙은 면이 모두 벽 속 칸막이일 때만 지움 → 벽 밑선·진짜 모서리가 사라지거나 T자 이음새가 남던 문제 해결.\n- 그룹에 칠한 재질·태그를 펼칠 때 조각마다 이어 줌 (기본 재질 면 → 그룹 재질, 태그 없는 조각 → 그룹 태그).\n- 교차를 이음새 주변 면으로 한정, 지우기를 한 번에 모아 최대 3번 반복, 남은 외톨이 선 정리.\n- 원본 직접 정리 때 원본들이 같은 부모 안에 있으면 결과도 그 안에 (그룹 편집 중에도 위치가 맞음).\n- 숨김 모드: 같은 정의를 쓰는 복사본은 필요한 것만 분리, 'MOVE37이 숨긴 선 되살리기' 추가.\n- 면 클릭 정리가 스케치업을 멈추게 하던 문제 (클릭 처리 밖으로 작업을 미룸).\n- 패널 새 디자인: 탭 3개(합쳐서·그룹별·면 클릭), 실시간 선택 개수, 결과 표시, 설정 기억.\n- 툴바 한 칸, hy CMD 별칭 M37(패널)·M37P(면 클릭), MOSAIC 등록."
+      },
+      "history": [],
+      "name": "MOVE37",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "맞닿은 그룹의 이음새와 그룹 안쪽 잔선을 지워 렌더·선화용으로 정리 — 드러난 면·재질·태그는 그대로",
+      "description": "Outer Shell 이 거부하는 비-솔리드 모델도 정리한다. ① 합쳐서 정리: 선택(하위 그룹까지)이나 태그로 고른 그룹들을 한 그룹(SEAM_CLEANED)으로 합치며 이음새와 안쪽 잔선을 지운다 — 결과는 복사본·원본 바꾸기·선만 숨기기 중 고름. ② 그룹별 정리: 그룹은 그대로 두고 각 그룹 안쪽 잔선만. ③ 면 클릭: 클릭한 면의 평면 잔선만 (그룹 밖에서 클릭 가능). 지우는 선은 같은 평면 두 면 사이이면서 나머지 붙은 면이 모두 벽 속 칸막이일 때만이라 벽 밑선·진짜 모서리·재질·태그가 바뀌는 선은 남는다. 그룹에 칠한 재질과 태그는 펼칠 때 조각마다 이어 준다. 숨김은 'MOVE37이 숨긴 선 되살리기'로 복원. 툴바 MOVE37, hy CMD 별칭 M37(패널)·M37P(면 클릭), MOSAIC 등록(hy.move37).",
+      "category": "site-model",
+      "install": {
+        "loader": "move37.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/move37/icon.png"
+    },
+    {
       "id": "sd2sku",
       "stable": null,
       "test": {
