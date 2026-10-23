@@ -1713,6 +1713,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/image-styles/icon.png"
     },
     {
+      "id": "layover",
+      "stable": null,
+      "test": {
+        "version": "1.5.0",
+        "date": "2026-10-23",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/layover/layover-1.5.0.rbz",
+        "sha256": "4dc4688e8e0f0f4bcaf1ada5826d079072b2540c87631ed0e4456bb837fd5bcd",
+        "size": 46495,
+        "notes": "첫 등록\n- 위계 패널: 그룹·컴포넌트 트리, 이름 바꾸기(F2), 숨기기·격리, 키보드 탐색(↑↓←→ Enter), 화면 선택 ↔ 트리 동기화\n- 드래그로 옮기기: 행 가운데 = 그 그룹 안, 위·아래 가장자리 = 옆, 빈 곳 = 최상위. 위치는 그대로, 실행 취소 한 번\n  - 복사본이 여러 개인 컴포넌트 안쪽·자기 안으로는 옮기지 않고 이유를 알려 준다. 복사된 그룹은 고유하게 만든 뒤 옮긴다\n- 흩어진 것 묶기: 여러 개 골라 Ctrl+G (또는 우클릭 › 새 그룹으로 묶기) → 공통 부모 안에 새 그룹, 바로 이름 입력\n- 태그 패널: 폴더 · 색 · 보이기, 태그별 그룹 수, 지정·해제·합치기·이름 바꾸기, Color By Tag 토글\n- 도구 ▾ 정리: 안 쓰는 태그 · 재질(색상) · 배치 안 된 컴포넌트 — 지울 목록을 미리 보여 주고 확인 후 한 번에\n- 태그 → 재질 굽기 (D5 등 렌더용): 가장 가까운 태그가 이긴다, 직접 칠한 재질은 그대로, 되돌리기는 Layover 가 칠한 것만\n- 파일 전환·새 파일을 따라가고, 태그 칸을 닫아 두면 큰 모델에서 태그 수를 세지 않는다\n- 워프: 면 클릭 → 그 그룹을 트리에서 연다 (Shift+S)\n- hy CMD 별칭 LO(패널) · WP(워프), 툴바 'Layover' 1칸, MOSAIC 등록\n- 시험: test/run_all.sh (패키지 · UI 연결 · 정리 · 굽기 · 파일 전환 · 옮기기)"
+      },
+      "history": [],
+      "name": "Layover",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "그룹 위계는 폴더처럼, 태그는 CAD 레이어처럼 — 드래그 이동 · 안 쓰는 태그·재질 정리 · D5용 태그→재질. hy CMD 'LO'",
+      "description": "스케치업의 그룹·컴포넌트 위계를 폴더 탐색기처럼 펼쳐 보고, 태그를 CAD 레이어처럼 다루는 패널. [위계] 이름 바꾸기(F2), 숨기기·격리, 키보드 탐색(↑↓←→ Enter), 화면에서 고른 것이 트리에 바로 표시, 이름 없는 그룹은 안에 든 태그로 힌트. 행을 끌어 다른 그룹 안(가운데) 또는 옆(위·아래 가장자리)으로 옮기고, 빈 곳에 놓으면 최상위로 — 위치는 그대로, 실행 취소 한 번. 여러 개를 골라 Ctrl+G 로 공통 부모 안에 새 그룹으로 묶기. 복사본이 여러 개인 컴포넌트 안쪽으로는 옮기지 않는다(다른 복사본이 같이 바뀌므로). [태그] 폴더 · 색 · 보이기, 태그별 그룹 수, 태그 지정·해제·합치기·이름 바꾸기, Color By Tag 토글. 도구 ▾: 안 쓰는 태그 · 재질(색상) · 배치 안 된 컴포넌트 정리 — 지울 목록을 먼저 보여 주고 확인 후 한 번에, 태그 색 재배정, 전체 언태그. [렌더용 재질] 태그 → 재질 굽기: Color By Tag 는 화면 표시일 뿐 D5 등 렌더러에는 안 넘어가므로, 태그 색을 'TAG_<태그>' 진짜 재질로 입힌다. 규칙은 CAD 레이어와 같다 — 가장 가까운 태그가 이긴다(계단 그룹 안의 난간 태그는 난간 재질), 직접 칠한 재질은 그대로 둔다. 굽기 되돌리기로 Layover 가 칠한 것만 깨끗이 지우고, TAG_ 재질은 남겨 D5 에서 잡은 재질 설정이 다시 구워도 유지된다. 파일을 바꾸거나 새로 열면 패널이 그 모델로 바로 따라가고, 태그 칸을 닫아 두면 큰 모델에서도 가볍다. [워프] 화면에서 면을 클릭하면 그 면이 든 그룹을 트리에서 찾아 연다 (Shift+S). 툴바 'Layover' 1칸(패널), hy CMD 별칭 LO(패널) · WP(워프), MOSAIC 등록.",
+      "category": "organize",
+      "install": {
+        "loader": "layover.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/layover/icon.png"
+    },
+    {
       "id": "mosaic",
       "stable": null,
       "test": {
