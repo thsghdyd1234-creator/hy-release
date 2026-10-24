@@ -125,12 +125,12 @@
       "id": "hy-asset-library",
       "stable": null,
       "test": {
-        "version": "0.13.0",
-        "date": "2026-10-17",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-asset-library/hy-asset-library-0.13.0.exe",
-        "sha256": "c1c63294b3e67020477f5efe0996e11cfdc66c8af96d3f8976c557601f4ef5ea",
-        "size": 29967466,
-        "notes": "- 첫 등록. **exe 하나로 배포** (PyInstaller 단일 exe, 앱 브라우저 포함, 파이썬 설치 필요 없음)\n- exe판은 설정을 `%USERPROFILE%\\.hy_asset_library\\config`에 저장 (exe를 바꿔도 남음)\n- 누끼 따기 준비물(onnxruntime·numpy)은 처음 누를 때 받아 사용자 폴더에 둠\n- 바탕화면 바로가기는 exe를 가리킴. exe 옆 `lab_keys.json`(연구실 공용 키)도 읽음\n- 이전 기록(0.1~0.12.1)은 src/README.md의 '변경 기록'"
+        "version": "0.14.0",
+        "date": "2026-10-24",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-asset-library/hy-asset-library-0.14.0.exe",
+        "sha256": "de1df0b72cc4e92deca745e2e2ea2b53ef17d2ed513e88225f12e4ebea6a0d31",
+        "size": 29996880,
+        "notes": "- **포토샵 패턴 탭** (사이드바 '패턴' 아래): 포토샵 패턴으로 쓸 이음새 없는 그림과 .pat 팩을 찾아 받고, 받으면 포토샵 패턴에 추가\n  - Poly Haven·ambientCG (CC0, 재질의 색 맵만), Pixabay ('seamless'), Pinterest (Brave), DeviantArt (.pat, 브러쉬 탭과 같은 키·로그인), 패턴 사이트 (Brusheezy·MyPhotoshopBrushes)\n  - 웹 칩: Pinterest (진짜 Pinterest 검색 + seamless texture), Subtle Patterns, Transparent Textures, Architextures, Brusheezy 패턴, DeviantArt 웹, Google 이미지\n  - 정보 패널 타일 2×2 미리보기로 이음새 확인 (한 장으로 바꾸기)\n  - 팩은 그림마다 패턴으로 (@2x 우선, 노멀·거칠기 맵·미리보기 제외), .pat은 패턴 패널에 불러오기\n- 창이 낮으면 사이드바 줄 간격을 줄여 모든 탭과 '설정'이 보이게"
       },
       "history": [],
       "name": "hy Asset Library",
@@ -140,7 +140,7 @@
         "versions": "Windows 10 이상"
       },
       "summary": "무료 레퍼런스·아이콘·재질·브러쉬·폰트·패턴을 찾아 받고 포토샵·일러스트에 바로 넣는 자료 라이브러리",
-      "description": "Pinterest·Commons·Pixabay 등 레퍼런스 검색, Iconify 아이콘과 PNG 내보내기, Poly Haven·ambientCG 재질·HDRI, 브러쉬 사이트 앱 브라우저(받으면 '내 브러쉬'로), 무료 폰트 설치, 건축 리터칭 패턴 66종(일러스트 패턴 칠), 누끼 따기, 보드·내 라이브러리, 색 프리셋 8종. 작업 중인 포토샵·일러스트·인디자인 문서에 바로 넣는다.",
+      "description": "Pinterest·Commons·Pixabay 등 레퍼런스 검색, Iconify 아이콘과 PNG 내보내기, Poly Haven·ambientCG 재질·HDRI, 브러쉬 사이트 앱 브라우저(받으면 '내 브러쉬'로), 무료 폰트 설치, 건축 리터칭 패턴 66종(일러스트 패턴 칠), 포토샵 패턴 탭(이음새 없는 CC0 재질 색 맵·Pixabay·Pinterest·.pat 팩 → 포토샵 패턴에 추가), 누끼 따기, 보드·내 라이브러리, 색 프리셋 8종. 작업 중인 포토샵·일러스트·인디자인 문서에 바로 넣는다.",
       "category": "library",
       "install": {
         "entry": "hy_asset_library.exe"
