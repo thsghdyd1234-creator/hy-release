@@ -239,6 +239,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-blend/icon.png"
     },
     {
+      "id": "hy-cadpaste",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-24",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cadpaste/hy-cadpaste-0.1.0.rbz",
+        "sha256": "ee5daecd3247b24d5c0e8380e3755c4b72a0985de1dde0029b6609c4464ce5b8",
+        "size": 12896,
+        "notes": "- 첫 등록\n- 캐드 Ctrl+C → 스케치업 Ctrl+V, 다른 프로그램 없이: 캐드가 만드는 임시 DWG(A$C)를 찾아 정의로 가져와 커서에 붙임\n- 캐드 내용이 아니면 스케치업 기본 붙여넣기로 넘김\n- 클립보드에 적힌 경로·이름 읽기 (ASCII·한글 코드페이지·UTF-16), 없으면 가장 최근 임시 파일\n- 한글 임시 폴더에서 가져오기가 실패하면 영문 폴더로 복사해 다시\n- 크기 보정 7가지, Ctrl+V 연결 방법 안내, 진단\n- hy CMD PC, MOSAIC hy.cadpaste, 툴바 없음"
+      },
+      "history": [],
+      "name": "hy CADPaste",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "캐드 Ctrl+C → 스케치업 Ctrl+V — LispManager 같은 다른 프로그램을 켜 두지 않아도 (스케치업 Pro)",
+      "description": "쓰는 법 — ① 설치하고 스케치업을 켠 뒤 창 › 환경 설정 › 단축키에서 '캐드 붙여넣기'를 찾아 Ctrl+V 를 연결한다(편집/붙여넣기에 쓰인다고 물으면 바꾸기 · 확장 › hy CADPaste › Ctrl+V 연결 방법에도 같은 안내). ② 캐드에서 선을 골라 Ctrl+C. ③ 스케치업에서 Ctrl+V → 커서에 붙어 따라오면 클릭해서 놓기 (Esc 취소). 캐드 쪽에는 아무것도 설치하지 않고 LispManager 를 켜 둘 필요도 없다. 스케치업끼리 복사한 것은 원래 붙여넣기로 넘긴다. 크기가 틀리게 들어오면 확장 › hy CADPaste › 크기 보정에서 맞는 배율(÷25.4·×25.4·÷10·×10·÷1000·×1000)을 한 번 고르면 계속 적용. 안 될 때는 캐드에서 복사한 상태로 확장 › hy CADPaste › 진단을 누르고 루비 콘솔 내용을 보내 주세요. 원리: 캐드는 Ctrl+C 때 고른 객체를 임시 DWG(%TEMP%\\A$C********.DWG)로 저장한다 — 그 파일을 찾아(클립보드에 적힌 경로 → 이름 → 가장 최근 임시 파일) 정의로 가져오고 묶음의 왼쪽 아래를 잡는 점으로 붙인다. 안 놓은 것은 다음 붙여넣기 때 정리. 스케치업 Pro 에서만 됨(DWG 가져오기), 글자·치수는 가져오기가 버림. 툴바 없음, hy CMD 별칭 PC, MOSAIC 등록(hy.cadpaste).",
+      "category": "export",
+      "install": {
+        "loader": "hy_cadpaste.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cadpaste/icon.png"
+    },
+    {
       "id": "hy-cmd",
       "stable": null,
       "test": {
