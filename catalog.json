@@ -242,12 +242,12 @@
       "id": "hy-cadpaste",
       "stable": null,
       "test": {
-        "version": "0.1.0",
+        "version": "0.1.1",
         "date": "2026-10-24",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cadpaste/hy-cadpaste-0.1.0.rbz",
-        "sha256": "ee5daecd3247b24d5c0e8380e3755c4b72a0985de1dde0029b6609c4464ce5b8",
-        "size": 12896,
-        "notes": "- 첫 등록\n- 캐드 Ctrl+C → 스케치업 Ctrl+V, 다른 프로그램 없이: 캐드가 만드는 임시 DWG(A$C)를 찾아 정의로 가져와 커서에 붙임\n- 캐드 내용이 아니면 스케치업 기본 붙여넣기로 넘김\n- 클립보드에 적힌 경로·이름 읽기 (ASCII·한글 코드페이지·UTF-16), 없으면 가장 최근 임시 파일\n- 한글 임시 폴더에서 가져오기가 실패하면 영문 폴더로 복사해 다시\n- 크기 보정 7가지, Ctrl+V 연결 방법 안내, 진단\n- hy CMD PC, MOSAIC hy.cadpaste, 툴바 없음"
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cadpaste/hy-cadpaste-0.1.1.rbz",
+        "sha256": "9f8ffa07cf4c8b4d6e4ca2c95ac3ee4eae48b4bb9ebfc7d317e722425da6cf56",
+        "size": 16484,
+        "notes": "- 붙여 넣은 직후 스케치업이 꺼지던 문제(BugSplat) 고침: Ctrl+V 콜백 안에서 가져오기와 place_component 를 바로 하던 것을 타이머로 미루고, 놓기는 스케치업 배치 도구 대신 자체 놓기 도구로\n- 놓기 도구: 미리보기 선이 커서를 따라오고(점·끝점 맞춤), 클릭하면 놓기, Esc 취소. 선이 많으면 미리보기만 고르게 솎음\n- Ctrl+Z 한 번에 가져오기·놓기를 같이 되돌림\n- 단계 기록을 파일(%TEMP%\\hy_cadpaste\\stage.txt)로 — 스케치업이 꺼지면 다음 실행 때 어디서 멈췄는지 루비 콘솔에 알림"
       },
       "history": [],
       "name": "hy CADPaste",
