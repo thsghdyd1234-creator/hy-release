@@ -443,6 +443,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-face-heal/icon.png"
     },
     {
+      "id": "hy-face-split",
+      "stable": null,
+      "test": {
+        "version": "0.6.0",
+        "date": "2026-10-24",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-face-split/hy-face-split-0.6.0.rbz",
+        "sha256": "f3dad3e9f7bf4d8868e253200301f87e3fa0ed28babe6345d523be14185ed2cd",
+        "size": 27503,
+        "notes": "- 첫 등록 (그동안 hy_face_split_test.rb 로 쓰던 것을 로더 + hy_face_split/main.rb 로 정리)\n- 조각 하이라이트 → 클릭·드래그로 고르고 Space/Enter 로 분할하고 종료, 만든 그룹이 선택된 채로 끝남\n- 단위(Tab): 덩어리 · 면 · 같은 재질\n- 덩어리: 면 방향과 무관한 '위/아래' 규칙 — 윗면 아래로 내려가는 옆면은 그 덩어리, 칸막이는 양쪽 공유, 경사 지붕 용마루는 한 덩어리\n- 떼어낸 덩어리를 솔리드로 닫음: 열린 테두리에서 맨 아래 높이까지 수직 면 + 바닥 면(구멍 포함), 내부 면 제거, 면 방향 바깥으로 통일\n  - 여러 덩어리 밑에 깔린 바닥은 '공용 바닥' — 전체 분할·전체 선택에서 빠지고, 조각을 다 떼면 원본과 같이 지움\n  - 윗면 없는 조각·윗면이 맨 아래인 조각(두께 없는 땅)은 닫지 않음\n- 결과 보고: 생성 그룹 수 · 원본 삭제 면 수 · 솔리드 N/M (상태바·콘솔)\n- 세그먼트 많은 곡선: 빠른 생성기(Entities#build)·내장 픽·그리기 캐시\n- 진단: HY::FaceSplit.dump (선택한 그룹 → JSON), HY::FaceSplit.selfcheck\n- hy CMD 별칭 FS · MOSAIC 등록(hy.facesplit) · 툴바 1칸 · 확장 메뉴 'hy 조각 분할'"
+      },
+      "history": [],
+      "name": "hy 조각 분할",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "통짜 그룹 안의 면 조각·덩어리를 하이라이트해서 골라 각각 그룹으로 떼어내기 — 덩어리는 솔리드로 닫음",
+      "description": "통짜 그룹(대지판·매스 등)을 선택하고 실행하면 선으로 나뉜 조각을 하이라이트한다. 클릭·드래그로 고르고 Space(또는 Enter)를 누르면 고른 조각마다 그룹으로 떼어내고 끝난다 (만든 그룹이 선택된 채로). 단위는 Tab 으로 덩어리 → 면 → 같은 재질. 덩어리는 면 방향과 상관없이 '위/아래' 규칙으로 잡는다: 윗면 아래로 내려가는 옆면은 그 덩어리, 두 덩어리가 같이 쓰는 칸막이는 양쪽에 복사, 경사 지붕 용마루는 한 덩어리. 떼어낸 덩어리는 열린 아래쪽을 맨 아래 높이까지 수직 면·바닥 면으로 막아 솔리드로 만든다 (여러 덩어리 밑에 깔린 공용 바닥은 따로, 다 떼면 자동 삭제). 세그먼트 많은 곡선도 빠르게(빠른 생성기·내장 픽). 우클릭: 선택을 한 그룹으로·전체 분할·색 채우기 보기. 결과는 상태바·콘솔에 생성 그룹 수·삭제 면 수·솔리드 N/M. 진단: HY::FaceSplit.dump(JSON). MOSAIC 등록(hy.facesplit), hy CMD 별칭 FS.",
+      "category": "select-edit",
+      "install": {
+        "loader": "hy_face_split.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-face-split/icon.png"
+    },
+    {
       "id": "hy-ffd",
       "stable": null,
       "test": {
