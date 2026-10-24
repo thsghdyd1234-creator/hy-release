@@ -355,6 +355,36 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-curve/icon.png"
     },
     {
+      "id": "hy-desk",
+      "stable": null,
+      "test": {
+        "version": "0.1.1",
+        "date": "2026-10-24",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-desk/hy-desk-0.1.1.exe",
+        "sha256": "60b65f15bacc27513188a281029b8625a33ce145693a70693e2a05c8ef492156",
+        "size": 22855753,
+        "notes": "- 고침: 윈도우 저장 창에서 ‘폴더로 이동’을 누르면 이동하지 않고 원래 이름으로 원래 폴더에 저장돼 버리던 문제 (0.1.0).\n  파일 이름 칸 글자만 바꾸면 저장 창이 속으로 원래 이름을 들고 있어서였다 — 이제 글자를 바꿀 때 저장 창이 새 글자를 읽도록\n  알림을 같이 보낸다 (이동 · 이름 되돌리기 · 이름 제안 적용 모두). 0.1.0 의 이름 제안 ‘적용’도 같은 이유로 저장 때 안 먹던 것을 같이 고침\n- 이동이 안 될 때 저장 버튼을 대신 눌러 다시 시도하던 동작을 뺌 (같은 이유로 위험)\n- 안전장치: 이동 대신 저장 창이 닫히면 바로 알리고, 그 앱은 다음부터 자동 이동 대신 폴더 주소를 복사해 줌\n  (주소 표시줄 Alt+D 에 붙여 넣기 · 설정 파일 `state.jump_unsafe` 에서 지우면 다시 자동 이동)\n- 느린 PC·네트워크 폴더에서 이동이 늦어도 조금 더 기다렸다가 판단\n- 빌드 확인에 실제 윈도우 저장·열기 창 시험을 글자 넣는 방식별로 비교하도록 늘림"
+      },
+      "history": [],
+      "name": "hy Desk",
+      "type": "exe",
+      "host": {
+        "app": "Windows",
+        "versions": "Windows 10 이상"
+      },
+      "summary": "저장 창이 뜨면 옆에 작업 중 프로젝트 폴더를 붙여, 파일을 처음부터 맞는 폴더에 저장하게 돕는 프로그램",
+      "description": "캐드·스케치업·어도비·한글 등 어느 앱이든 저장·열기 창이 뜨면 옆에 도우미가 붙는다. 앱에 맞는 프로젝트 폴더(캐드 01_CAD, 스케치업 02_SketchUp …)로 저장 창을 한 번에 옮기고, 태그와 다음 번호로 파일 이름을 제안한다(설3_매스스터디_04.skp). 바탕화면 위젯에서 작업 중 프로젝트를 보고 바꾸며, 새 프로젝트는 템플릿(설계 스튜디오·공모전·연구실 과제)대로 폴더를 한 번에 만든다. 작업 중 프로젝트를 탐색기 빠른 실행에 고정해 저장 창 왼쪽 목록에도 보인다. 인식 못 한 창은 진단 로그를 남긴다. 일정·할 일·메모는 다음 버전.",
+      "category": "organize",
+      "install": {
+        "entry": "hy_desk.exe"
+      },
+      "user_data": [
+        "%APPDATA%\\hy\\hy_desk"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-desk/icon.png"
+    },
+    {
       "id": "hy-duotone",
       "stable": null,
       "test": {
