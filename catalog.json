@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "tools": [
     {
       "id": "ai2ps",
@@ -1746,12 +1746,12 @@
       "id": "layover",
       "stable": null,
       "test": {
-        "version": "1.5.0",
-        "date": "2026-10-23",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/layover/layover-1.5.0.rbz",
-        "sha256": "4dc4688e8e0f0f4bcaf1ada5826d079072b2540c87631ed0e4456bb837fd5bcd",
-        "size": 46495,
-        "notes": "첫 등록\n- 위계 패널: 그룹·컴포넌트 트리, 이름 바꾸기(F2), 숨기기·격리, 키보드 탐색(↑↓←→ Enter), 화면 선택 ↔ 트리 동기화\n- 드래그로 옮기기: 행 가운데 = 그 그룹 안, 위·아래 가장자리 = 옆, 빈 곳 = 최상위. 위치는 그대로, 실행 취소 한 번\n  - 복사본이 여러 개인 컴포넌트 안쪽·자기 안으로는 옮기지 않고 이유를 알려 준다. 복사된 그룹은 고유하게 만든 뒤 옮긴다\n- 흩어진 것 묶기: 여러 개 골라 Ctrl+G (또는 우클릭 › 새 그룹으로 묶기) → 공통 부모 안에 새 그룹, 바로 이름 입력\n- 태그 패널: 폴더 · 색 · 보이기, 태그별 그룹 수, 지정·해제·합치기·이름 바꾸기, Color By Tag 토글\n- 도구 ▾ 정리: 안 쓰는 태그 · 재질(색상) · 배치 안 된 컴포넌트 — 지울 목록을 미리 보여 주고 확인 후 한 번에\n- 태그 → 재질 굽기 (D5 등 렌더용): 가장 가까운 태그가 이긴다, 직접 칠한 재질은 그대로, 되돌리기는 Layover 가 칠한 것만\n- 파일 전환·새 파일을 따라가고, 태그 칸을 닫아 두면 큰 모델에서 태그 수를 세지 않는다\n- 워프: 면 클릭 → 그 그룹을 트리에서 연다 (Shift+S)\n- hy CMD 별칭 LO(패널) · WP(워프), 툴바 'Layover' 1칸, MOSAIC 등록\n- 시험: test/run_all.sh (패키지 · UI 연결 · 정리 · 굽기 · 파일 전환 · 옮기기)"
+        "version": "1.5.1",
+        "date": "2026-10-24",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/layover/layover-1.5.1.rbz",
+        "sha256": "3b012cac4f96a67c68b834a99075498395226b3f050367cba8d494186ff7ea99",
+        "size": 50575,
+        "notes": "툴바 아이콘을 예전 Layover 것 그대로 되돌림 (호용: 등록하면서 임의로 바뀜)\n- icons/layover_16·24·48.png 를 예전 rbz 파일 그대로 (작게 24 · 크게 48), 등록 때 다시 그린 svg 는 뺌\n- 워프는 예전처럼 아이콘 없음 (메뉴 · Shift+S · hy CMD WP 는 그대로)"
       },
       "history": [],
       "name": "Layover",
