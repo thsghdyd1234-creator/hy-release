@@ -1065,6 +1065,37 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-model-library/icon.png"
     },
     {
+      "id": "hy-nav",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-10-24",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-nav/hy-nav-0.1.0.exe",
+        "sha256": "53c473908d85db49bcd70791b580b1e0def8d9a8cb8d7589584ec9d8eec18f54",
+        "size": 148992,
+        "notes": "첫 등록.\n\n- 포토샵·일러스트레이터·인디자인이 앞에 있고 커서가 캔버스 위일 때만 휠·가운데 버튼을 캐드처럼 바꿈\n  - 휠 = 커서 기준 확대·축소 (포토샵·일러는 앱 환경 설정, 인디자인은 Alt+휠로 바꿔 보냄 — 고해상도 휠도 한 칸에 한 단계)\n  - 휠 누르고 끌기 = 화면 이동 (포토샵 스페이스+끌기, 인디자인 Alt+스페이스+끌기, 일러는 원래 기능)\n  - 휠 두 번 누르기 = 화면 맞춤 (포토샵 Ctrl+0, 일러·인디 Ctrl+Alt+0)\n- 패널·눈금자·대화상자·메뉴 위, 글자 입력 중(포토샵), 키보드 포커스가 CEP 패널·대화상자에 있을 때, 왼쪽 버튼으로 그리는 중에는 건너뜀\n- 진단 모드: 커서 아래 판정과 창 사슬을 보여 주고 Ctrl+Alt+Shift+C(캔버스)·B(막기)·I(복사)\n- 설정 `%APPDATA%\\hy\\hy_nav\\settings.ini` — 저장하면 2초 안에 반영, 잘못 적은 키는 그 기능만 끄고 알림\n- 처음 실행할 때 윈도우 시작 시 자동 실행을 물음. exe를 옮기면 등록 경로를 스스로 고침\n- 훅이 빠지면 다시 걸고, 잠금·절전 때 눌린 키 정리, 관리자 권한 앱은 건너뛰고 알림\n- 실행 옵션: `--startup-on` · `--startup-off` · `--quit` · `--diag`"
+      },
+      "history": [],
+      "name": "hy Nav",
+      "type": "exe",
+      "host": {
+        "app": "Windows",
+        "versions": "Windows 10 이상 (포토샵·일러스트레이터·인디자인)"
+      },
+      "summary": "포토샵·일러스트·인디자인에서 휠 줌·휠 끌기 이동·두 번 눌러 화면 맞춤을 캐드처럼 쓰게 하는 트레이 프로그램",
+      "description": "트레이에 상주하다가 포토샵·일러스트레이터·인디자인이 앞에 있고 커서가 캔버스 위일 때만 마우스 휠·가운데 버튼을 캐드처럼 바꾼다. 휠 = 커서 기준 확대·축소(포토샵·일러는 앱 환경 설정의 휠 줌을 켜서 쓰고, 인디자인은 hy Nav가 Alt+휠로 바꿔 보냄), 휠 누르고 끌기 = 화면 이동(포토샵 스페이스+끌기, 인디자인 Alt+스페이스+끌기 — 글 편집 중에도 띄어쓰기가 들어가지 않음, 일러는 원래 기능), 휠 두 번 누르기 = 화면 맞춤(포토샵 Ctrl+0, 일러·인디 Ctrl+Alt+0). 패널·대화상자·글자 입력 중·CEP 패널 포커스일 때는 건너뛰고, 진단 모드로 커서 아래 판정을 보고 Ctrl+Alt+Shift+C/B로 캔버스·막기 창을 등록한다. 처음 실행할 때 윈도우 시작 시 자동 실행을 묻는다. 늘 켜져 있는 프로그램이라 허브로 업데이트하기 전에 트레이에서 '종료'를 눌러 둔다.",
+      "category": "manage",
+      "install": {
+        "entry": "hy_nav.exe"
+      },
+      "user_data": [
+        "%APPDATA%\\hy\\hy_nav",
+        "registry:HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\hy Nav"
+      ],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-nav/icon.png"
+    },
+    {
       "id": "hy-offset",
       "stable": null,
       "test": {
