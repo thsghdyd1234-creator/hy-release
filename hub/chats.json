@@ -2308,6 +2308,18 @@
         "vers": [
           "1.31.0"
         ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe8UX94C7ykr3WXZZ7i",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · 창호 일람표 편집기 — 개구부 기록 · 벽 되살리기 · 옮기기 · 폭 · HYOPN",
+        "first": "2026-10-31",
+        "last": "2026-10-31",
+        "n": 1,
+        "vers": [
+          "1.32.0"
+        ]
       }
     ],
     "hy-color2mat": [
