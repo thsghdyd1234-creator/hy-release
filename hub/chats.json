@@ -1,0 +1,2660 @@
+{
+  "schema": 1,
+  "updated": "2026-10-31",
+  "tools": {
+    "hy-autoselect": [
+      {
+        "url": "https://claude.ai/code/session_01CnavdWS6923YoCCRkG6x53",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-15",
+        "last": "2026-10-16",
+        "n": 2,
+        "vers": [
+          "0.3.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01Fy52sQCFkGUM94RS2tTNFc",
+        "kind": "code",
+        "by": "git",
+        "title": "나누기 탭 — 시트를 조각 레이어로 (빈 틈·붙은 덩어리 가르기·칸·직접 떼기)",
+        "first": "2026-10-24",
+        "last": "2026-10-30",
+        "n": 2,
+        "vers": [
+          "0.4.0",
+          "1.0.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6tH5YjSD76mzgQTMi",
+        "kind": "code",
+        "by": "git",
+        "title": "내보내기 › 포토샵 브러쉬 — 고른 레이어를 흑백·잔선 정리해 브러쉬로 등록",
+        "first": "2026-10-29",
+        "last": "2026-10-29",
+        "n": 1,
+        "vers": [
+          "0.5.0"
+        ]
+      }
+    ],
+    "hy-hub": [
+      {
+        "url": "https://claude.ai/code/session_01CnavdWS6923YoCCRkG6x53",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-15",
+        "last": "2026-10-30",
+        "n": 42,
+        "vers": [
+          "0.1.0",
+          "0.1.1",
+          "0.2.0",
+          "0.3.0",
+          "0.4.0",
+          "0.5.0",
+          "0.6.0",
+          "0.6.1",
+          "0.6.2",
+          "0.8.0",
+          "0.10.0",
+          "0.12.0",
+          "0.12.1",
+          "0.12.2",
+          "0.12.3",
+          "0.12.4",
+          "0.12.5",
+          "0.14.0",
+          "0.16.0",
+          "0.16.1",
+          "0.16.3",
+          "0.17.0",
+          "0.18.0",
+          "0.19.0",
+          "0.20.0",
+          "0.21.0",
+          "0.22.0",
+          "0.23.0",
+          "0.23.1",
+          "0.24.0",
+          "0.24.1",
+          "0.25.0",
+          "0.26.0",
+          "0.27.0",
+          "0.27.1",
+          "0.28.0",
+          "0.29.0",
+          "0.30.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_019695gW4ePCcB9UNeW24a3U",
+        "kind": "code",
+        "by": "git",
+        "title": "업데이트가 반복돼도 데이터 폴더에 파일이 쌓이지 않게 정리",
+        "first": "2026-10-16",
+        "last": "2026-10-16",
+        "n": 1,
+        "vers": [
+          "0.6.3"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_0187u3KBipkvTE7w571TQWzj",
+        "kind": "code",
+        "by": "git",
+        "title": "묶음 표시·전체 설치·묶인 툴 하나씩 받기",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.7.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_012ieg9ETPTzFNySuEhMdSXP",
+        "kind": "code",
+        "by": "git",
+        "title": "짝 툴(requires) 같이 설치·카드 아래 표시",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.7.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01TsoPrxzpNjLoN371E9Hhqd",
+        "kind": "code",
+        "by": "git",
+        "title": "라이브러리 화면, 프로그램(exe) 설치기",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.9.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_016T8v4ctyBHGPjgrWxHAv2s",
+        "kind": "code",
+        "by": "git",
+        "title": "50MB 넘는 설치 파일을 조각으로 받기",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.11.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "다른 확장 안에 들어가는 루비 툴 설치(install.into), 툴 많은 묶음 접기",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.13.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01T3rCUx3GrbL972fGx9n36M",
+        "kind": "code",
+        "by": "git",
+        "title": "크롬 확장 설치 — 폴더에 풀기, 브라우저 불러오기 안내·확인",
+        "first": "2026-10-19",
+        "last": "2026-10-19",
+        "n": 2,
+        "vers": [
+          "0.15.0",
+          "0.16.2"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01THqEFc6dfN4NUyt6mdmKZp",
+        "kind": "code",
+        "by": "git",
+        "title": "관리자 모드 툴 상세에 Claude 채팅 링크 (hub/chats.json · scripts/chat_links.py)",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 2,
+        "vers": [
+          "0.31.0",
+          "0.32.0"
+        ]
+      }
+    ],
+    "hy-grid": [
+      {
+        "url": "https://claude.ai/code/session_01CnavdWS6923YoCCRkG6x53",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-16",
+        "last": "2026-10-16",
+        "n": 2,
+        "vers": [
+          "1.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01VjDUCMdCRTYUWLR5iPMPZ8",
+        "kind": "code",
+        "by": "git",
+        "title": "사각형을 그릴 때마다 그리드가 붙던 문제, 옮긴 그리드 고치기, 설정 자동 불러오기",
+        "first": "2026-10-20",
+        "last": "2026-10-29",
+        "n": 2,
+        "vers": [
+          "1.1.1"
+        ]
+      }
+    ],
+    "hy-iso": [
+      {
+        "url": "https://claude.ai/code/session_01CnavdWS6923YoCCRkG6x53",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-16",
+        "last": "2026-10-16",
+        "n": 2,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01DHfFCgk64geZw34qDjDU4w",
+        "kind": "code",
+        "by": "git",
+        "title": "층별 분해 기본 접힘",
+        "first": "2026-10-16",
+        "last": "2026-10-20",
+        "n": 2,
+        "vers": [
+          "0.1.1",
+          "0.2.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_012ieg9ETPTzFNySuEhMdSXP",
+        "kind": "code",
+        "by": "git",
+        "title": "hy Arrow 화살표를 도형으로 바꿔 같이 눕힘",
+        "first": "2026-10-20",
+        "last": "2026-10-20",
+        "n": 2,
+        "vers": [
+          "0.3.0",
+          "0.4.0"
+        ]
+      }
+    ],
+    "hy-arrow": [
+      {
+        "url": "https://claude.ai/code/session_012ieg9ETPTzFNySuEhMdSXP",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-20",
+        "n": 4,
+        "vers": [
+          "2.0.0",
+          "2.0.1",
+          "2.0.2",
+          "2.1.0"
+        ]
+      }
+    ],
+    "hy-arrow-aip": [
+      {
+        "url": "https://claude.ai/code/session_012ieg9ETPTzFNySuEhMdSXP",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-21",
+        "n": 2,
+        "vers": [
+          "2.0.0",
+          "2.0.1"
+        ]
+      }
+    ],
+    "hy-tone": [
+      {
+        "url": "https://claude.ai/code/session_01H9S2DcY3oPBCjGmnrDo7bL",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-20",
+        "n": 2,
+        "vers": [
+          "0.2.0",
+          "0.2.1"
+        ]
+      }
+    ],
+    "hy-shadow": [
+      {
+        "url": "https://claude.ai/code/session_01KF3j2Kx38ssuM2jWqpcTZe",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-26",
+        "n": 2,
+        "vers": [
+          "0.4.0",
+          "0.4.2"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_011FFTV34xPDxJRKt9scon1E",
+        "kind": "code",
+        "by": "git",
+        "title": "Unknown color profile(-26120) — 색 프로필을 바꿔 가며 다시 시도",
+        "first": "2026-10-22",
+        "last": "2026-10-22",
+        "n": 1,
+        "vers": [
+          "0.4.1"
+        ]
+      }
+    ],
+    "hy-tone-ps": [
+      {
+        "url": "https://claude.ai/code/session_01QKY2L7bVE6Rv4uYgf2gBg8",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "1.1.1"
+        ]
+      }
+    ],
+    "image-styles": [
+      {
+        "url": "https://claude.ai/code/session_0187u3KBipkvTE7w571TQWzj",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.2.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_019V3pBC6ehWBvTC5kjv6gwq",
+        "kind": "code",
+        "by": "git",
+        "title": "image-scene 0.1.1: hy Seamless 플러그인 ID·패널 연결",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_01JxD1QtmrFiq8xneRoEZbCT",
+        "kind": "code",
+        "by": "git",
+        "title": "image-scene 0.1.2: hy Plant 추가 (배치 칸), 묶음 정의 rev 3",
+        "first": "2026-10-22",
+        "last": "2026-10-22",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "hy AI 플러그인 ID·패널 연결, hubs.json rev 4 (새로 등록한 묶음 툴 ID 채움)",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.2.1"
+        ]
+      }
+    ],
+    "image-adjust": [
+      {
+        "url": "https://claude.ai/code/session_0187u3KBipkvTE7w571TQWzj",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_019V3pBC6ehWBvTC5kjv6gwq",
+        "kind": "code",
+        "by": "git",
+        "title": "image-scene 0.1.1: hy Seamless 플러그인 ID·패널 연결",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_01JxD1QtmrFiq8xneRoEZbCT",
+        "kind": "code",
+        "by": "git",
+        "title": "image-scene 0.1.2: hy Plant 추가 (배치 칸), 묶음 정의 rev 3",
+        "first": "2026-10-22",
+        "last": "2026-10-22",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "hy WB 플러그인 ID·패널 연결",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.1"
+        ]
+      }
+    ],
+    "image-scene": [
+      {
+        "url": "https://claude.ai/code/session_0187u3KBipkvTE7w571TQWzj",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_019V3pBC6ehWBvTC5kjv6gwq",
+        "kind": "code",
+        "by": "git",
+        "title": "hy Seamless 플러그인 ID·패널 연결",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.1"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01JxD1QtmrFiq8xneRoEZbCT",
+        "kind": "code",
+        "by": "git",
+        "title": "hy Plant 추가 (배치 칸), 묶음 정의 rev 3",
+        "first": "2026-10-22",
+        "last": "2026-10-22",
+        "n": 1,
+        "vers": [
+          "0.1.2"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "hy Perspective·hy Light 플러그인 ID·패널 연결",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.3"
+        ]
+      }
+    ],
+    "image-effects": [
+      {
+        "url": "https://claude.ai/code/session_0187u3KBipkvTE7w571TQWzj",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_019V3pBC6ehWBvTC5kjv6gwq",
+        "kind": "code",
+        "by": "git",
+        "title": "image-scene 0.1.1: hy Seamless 플러그인 ID·패널 연결",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_01JxD1QtmrFiq8xneRoEZbCT",
+        "kind": "code",
+        "by": "git",
+        "title": "image-scene 0.1.2: hy Plant 추가 (배치 칸), 묶음 정의 rev 3",
+        "first": "2026-10-22",
+        "last": "2026-10-22",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "hy Scatter·hy Fade 플러그인 ID·패널 연결",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.1"
+        ]
+      }
+    ],
+    "hy-glass": [
+      {
+        "url": "https://claude.ai/code/session_01Lh8uwf2nKpq1swtXZgCBfn",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.3.1"
+        ]
+      }
+    ],
+    "hy-asset-library": [
+      {
+        "url": "https://claude.ai/code/session_01TsoPrxzpNjLoN371E9Hhqd",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록, Windows exe 빌드",
+        "first": "2026-10-17",
+        "last": "2026-10-29",
+        "n": 4,
+        "vers": [
+          "0.13.0",
+          "0.14.0",
+          "0.14.1",
+          "0.15.0"
+        ]
+      }
+    ],
+    "ai2ps": [
+      {
+        "url": "https://claude.ai/code/session_01TwhxXo5Un4LSSpnbJQqbmr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "3.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/chat/549b6240-58cd-4355-929d-17e7afe071e0",
+        "kind": "chat",
+        "by": "hand",
+        "title": "일러스트레이터 레이어를 포토샵으로 내보내기",
+        "first": "2026-07-27",
+        "last": "2026-07-27",
+        "note": "일러스트 레이어 구조를 유지해 PSD로 넘기는 AI2PSD 설계·구현 — AI to PS의 앞선 판(PNG 렌더 방식)"
+      }
+    ],
+    "hy-model-library": [
+      {
+        "url": "https://claude.ai/code/session_01PUaJLjny8vVaJU852kwUKJ",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 (exe 하나로 배포, 빌드 워크플로)",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 3,
+        "vers": [
+          "0.7.0",
+          "0.8.0",
+          "0.8.1"
+        ]
+      }
+    ],
+    "hy-lineart": [
+      {
+        "url": "https://claude.ai/code/session_012LATh6d6MxeJW3J1AViDAS",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.3.0"
+        ]
+      }
+    ],
+    "hy-curve": [
+      {
+        "url": "https://claude.ai/code/session_01HY53AqbRQcsQXRQXoDUJ9Y",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-21",
+        "n": 13,
+        "vers": [
+          "0.4.0",
+          "0.5.0",
+          "0.6.0",
+          "0.7.0",
+          "0.7.1",
+          "0.8.0",
+          "0.9.0",
+          "0.9.1",
+          "0.10.0",
+          "0.10.1",
+          "0.11.0",
+          "0.12.0",
+          "0.13.0"
+        ]
+      }
+    ],
+    "sd2sku": [
+      {
+        "url": "https://claude.ai/code/session_016T8v4ctyBHGPjgrWxHAv2s",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 2,
+        "vers": [
+          "0.29.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/chat/d7f4a01b-6428-440d-af2a-9b6da4bff3fa",
+        "kind": "chat",
+        "by": "hand",
+        "title": "등고선 연결 및 단계 구분 방법",
+        "first": "2026-07-12",
+        "last": "2026-07-12",
+        "note": "등고선 DXF 접합·조밀화·스케치업 지형 메시 — 지형 생성 파이프라인 초기 작업"
+      }
+    ],
+    "hy-ffd": [
+      {
+        "url": "https://claude.ai/code/session_01WXUpbDRMieC9xGph7Lb8b5",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 재편집형 공간 FFD (테스트 빌드)",
+        "first": "2026-10-17",
+        "last": "2026-10-25",
+        "n": 31,
+        "vers": [
+          "0.1.0",
+          "0.1.1",
+          "0.1.2",
+          "0.2.0",
+          "0.2.1",
+          "0.3.0",
+          "0.4.0",
+          "0.5.0",
+          "0.5.1",
+          "0.6.0",
+          "0.7.0",
+          "0.8.0",
+          "0.9.0",
+          "0.10.0",
+          "0.11.0",
+          "0.12.0",
+          "0.13.0",
+          "0.13.1",
+          "0.14.0",
+          "0.15.0",
+          "0.16.0",
+          "0.17.0",
+          "0.17.1",
+          "0.18.0",
+          "0.18.1",
+          "0.19.0",
+          "0.20.0",
+          "0.21.0",
+          "0.22.0",
+          "0.23.0"
+        ]
+      }
+    ],
+    "hy-guide": [
+      {
+        "url": "https://claude.ai/code/session_01NrZ4iWniDzeWo52PsLm89k",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.2.1"
+        ]
+      }
+    ],
+    "hy-lock": [
+      {
+        "url": "https://claude.ai/code/session_01NrZ4iWniDzeWo52PsLm89k",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "hy-typeset": [
+      {
+        "url": "https://claude.ai/code/session_01NrZ4iWniDzeWo52PsLm89k",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01GQ36aKGajmGC9g2UK51Suu",
+        "kind": "code",
+        "by": "git",
+        "title": "패널을 열면 기본 5줄·서체 목록이 비던 문제 수정",
+        "first": "2026-10-20",
+        "last": "2026-10-20",
+        "n": 2,
+        "vers": [
+          "0.1.1",
+          "0.2.0"
+        ]
+      }
+    ],
+    "hy-frame2ai": [
+      {
+        "url": "https://claude.ai/code/session_01NrZ4iWniDzeWo52PsLm89k",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-17",
+        "n": 1,
+        "vers": [
+          "1.5.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_0192Rwk92YBPNALpmKuixJCM",
+        "kind": "code",
+        "by": "git",
+        "title": "포토샵(.psd) 추가 — 프로그램 고르기 → 저장 위치 → 만들기",
+        "first": "2026-10-20",
+        "last": "2026-10-24",
+        "n": 4,
+        "vers": [
+          "2.0.0",
+          "2.0.1",
+          "2.0.2",
+          "2.0.3"
+        ]
+      },
+      {
+        "url": "https://claude.ai/chat/910f0095-66f8-47cb-b597-b7a35eb1e2df",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_INDD CREATE FILE",
+        "first": "2026-07-16",
+        "last": "2026-07-16",
+        "note": "인디자인 프레임 크기 빈 PSD·AI 만들기(InddGen) — hy Frame2AI의 파이썬판 원형"
+      }
+    ],
+    "hy-swap": [
+      {
+        "url": "https://claude.ai/code/session_01NrZ4iWniDzeWo52PsLm89k",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-17",
+        "last": "2026-10-20",
+        "n": 5,
+        "vers": [
+          "0.1.0",
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.3.0"
+        ]
+      }
+    ],
+    "hy-duotone": [
+      {
+        "url": "https://claude.ai/code/session_01Re9Df4j22taCC5xrR7Y5zY",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.4.0"
+        ]
+      }
+    ],
+    "hy-halftone-ps": [
+      {
+        "url": "https://claude.ai/code/session_01XybHfgnKGs16Gcsk8wqwsW",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.3.3"
+        ]
+      }
+    ],
+    "hy-halftone": [
+      {
+        "url": "https://claude.ai/code/session_015Z3aWcD2WfR4TWXQNb4UJs",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "1.0.0"
+        ]
+      }
+    ],
+    "hy-seamless": [
+      {
+        "url": "https://claude.ai/code/session_019V3pBC6ehWBvTC5kjv6gwq",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "1.2.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/chat/741d599a-16d6-404d-9d22-46ea3b9b78d3",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_SEAMLESS",
+        "first": "2026-07-15",
+        "last": "2026-07-15",
+        "note": "TextureLab 심리스 엔진(FFT·seamcut)·반복 지우기 제작 — hy Seamless가 옮긴 원본"
+      }
+    ],
+    "hy-tone-id": [
+      {
+        "url": "https://claude.ai/code/session_01XduEZz2Bv1VRqqvTXcHSQT",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 인디자인 링크 이미지를 포토샵 없이 톤 보정",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 4,
+        "vers": [
+          "0.1.0",
+          "0.1.1",
+          "0.1.2",
+          "0.1.3"
+        ]
+      }
+    ],
+    "hy-cmd": [
+      {
+        "url": "https://claude.ai/code/session_01Y6wMaUz4KAzn7HBnQtNeAZ",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 스케치업 캐드식 임시 명령창",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 3,
+        "vers": [
+          "0.1.0",
+          "0.2.0",
+          "0.3.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01Qy3S7H2ji2ttrMwK3btnKn",
+        "kind": "code",
+        "by": "git",
+        "title": "Enter 로 커서 옆에 열기, 2023+ 는 명령창 숨기고 커서 옆 표시만",
+        "first": "2026-10-19",
+        "last": "2026-10-23",
+        "n": 6,
+        "vers": [
+          "0.5.0",
+          "0.6.0",
+          "0.6.1",
+          "0.6.2",
+          "0.6.3"
+        ]
+      }
+    ],
+    "stay-tion": [
+      {
+        "url": "https://claude.ai/code/session_01HdhBoW8MH7EE5crWu9KLnv",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-18",
+        "last": "2026-10-19",
+        "n": 2,
+        "vers": [
+          "5.0.3",
+          "5.0.4"
+        ]
+      }
+    ],
+    "yoolab": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · 원본 껍데기 (rbz에서 tools 폴더를 뺀 것, 릴리스 안 함)",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 2,
+        "vers": [
+          "3.1.0",
+          "4.0.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01CAKExDCqyVN6cc6o4sgQ3W",
+        "kind": "code",
+        "by": "git",
+        "title": "yoolab: 묶음에 EL·04 루버 추가 (툴 28개)",
+        "first": "2026-10-23",
+        "last": "2026-10-23",
+        "n": 1
+      }
+    ],
+    "yl-dr-door": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-dr-foldingdoor": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-ed-clean": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-ed-facetrim": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-ed-scale": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01N2GpdwHoKErua9FewT1dNU",
+        "kind": "code",
+        "by": "git",
+        "title": "선·면은 그대로 두고 그룹 배치로 축소 — 1:2000 깨짐·2000:1 읽기 고침",
+        "first": "2026-10-25",
+        "last": "2026-10-25",
+        "n": 1,
+        "vers": [
+          "0.2.0"
+        ]
+      }
+    ],
+    "yl-ed-split": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "6.5.0"
+        ]
+      }
+    ],
+    "yl-ed-stretch": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.8.1"
+        ]
+      }
+    ],
+    "yl-el-curtainwall": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_018YUs6JnPkNmPrVwfBX3Uwn",
+        "kind": "code",
+        "by": "git",
+        "title": "단파론 실물 디테일, 최외곽 브라켓·모퉁이 창 수정, 보/슬래브 기본 No",
+        "first": "2026-10-19",
+        "last": "2026-10-21",
+        "n": 3,
+        "vers": [
+          "0.2.0",
+          "0.3.0",
+          "0.4.0"
+        ]
+      }
+    ],
+    "yl-el-perfpanel": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01SJpMqvsj52Avg2pWTAM7kM",
+        "kind": "code",
+        "by": "git",
+        "title": "타공판 처음부터 다시 — 면 평면 좌표·살 두께·여백·다시 고치기",
+        "first": "2026-10-25",
+        "last": "2026-10-26",
+        "n": 5,
+        "vers": [
+          "1.0.0",
+          "1.1.0",
+          "1.2.0",
+          "1.3.0",
+          "1.3.1"
+        ]
+      }
+    ],
+    "yl-el-ringfacade": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "2.6.0"
+        ]
+      }
+    ],
+    "yl-in-hanger": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-rd-camdeck": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.3.3"
+        ]
+      }
+    ],
+    "yl-rd-d5material": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-rd-lumen": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-rd-sectionbox": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "3.12.0"
+        ]
+      }
+    ],
+    "yl-rd-shadow": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-sr-helix": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-sr-railing": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-sr-slope": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "5.0.0"
+        ]
+      }
+    ],
+    "yl-sr-stair": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-st-beam": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-st-hbeam": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-st-spaceframe": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-st-truss": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "3.2.0"
+        ]
+      }
+    ],
+    "yl-st-trusscolumn": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "2.1.0"
+        ]
+      }
+    ],
+    "yl-wn-doublewindow": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "yl-wn-windowcut": [
+      {
+        "url": "https://claude.ai/code/session_01P19ef7hLEuuXzT7N2NnJZA",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 툴박스 내부 툴",
+        "first": "2026-10-18",
+        "last": "2026-10-18",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "skin": [
+      {
+        "url": "https://claude.ai/code/session_01Y6wMaUz4KAzn7HBnQtNeAZ",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-18",
+        "last": "2026-10-19",
+        "n": 9,
+        "vers": [
+          "0.5.0",
+          "0.6.0",
+          "0.6.1",
+          "0.7.0",
+          "0.8.0",
+          "0.9.0",
+          "0.10.0",
+          "0.11.0",
+          "0.12.0"
+        ]
+      }
+    ],
+    "hy-command": [
+      {
+        "url": "https://claude.ai/code/session_01ChjA8ABEVAj65XbuwpYdbK",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 (캐드식 명령줄 + hy Layer 합침)",
+        "first": "2026-10-18",
+        "last": "2026-10-20",
+        "n": 6,
+        "vers": [
+          "0.2.0",
+          "0.2.1",
+          "0.3.0"
+        ]
+      }
+    ],
+    "hy-face-heal": [
+      {
+        "url": "https://claude.ai/code/session_01JXrB5u5YmW4aTRjgLi7JYN",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-18",
+        "last": "2026-10-25",
+        "n": 9,
+        "vers": [
+          "0.1.0",
+          "0.2.0",
+          "0.3.0",
+          "0.4.0",
+          "0.5.0",
+          "0.6.0",
+          "0.7.0",
+          "0.8.0",
+          "0.9.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7zRge7QPjz5yU3hk6",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · 유사 BIM — 2D 선 + 레이어 역할 + 높이로 벽 · 창대 · 인방 · 기둥 · 바닥 3D (Bim.build)",
+        "first": "2026-10-31",
+        "last": "2026-10-31",
+        "n": 1,
+        "vers": [
+          "0.10.0"
+        ]
+      }
+    ],
+    "hy-jpush": [
+      {
+        "url": "https://claude.ai/code/session_01Bv5V9dbRWYyu5aQTpsvQ1x",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-18",
+        "last": "2026-10-19",
+        "n": 4,
+        "vers": [
+          "0.1.0",
+          "0.2.0",
+          "0.3.0",
+          "0.4.0"
+        ]
+      }
+    ],
+    "clean-map": [
+      {
+        "url": "https://claude.ai/code/session_01T3rCUx3GrbL972fGx9n36M",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 (크롬 확장, manifest key로 ID 고정)",
+        "first": "2026-10-19",
+        "last": "2026-10-20",
+        "n": 12,
+        "vers": [
+          "4.62.1",
+          "4.63.0",
+          "4.64.0",
+          "4.65.0",
+          "4.66.0",
+          "4.66.1",
+          "4.67.0",
+          "4.68.0",
+          "4.69.0",
+          "4.70.0",
+          "4.71.0",
+          "4.71.1"
+        ]
+      }
+    ],
+    "hy-offset": [
+      {
+        "url": "https://claude.ai/code/session_01Qy3S7H2ji2ttrMwK3btnKn",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 곡선 선택(CS)·곡선 오프셋(OC)",
+        "first": "2026-10-19",
+        "last": "2026-10-19",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01FKMg3Ycnw5WYcvyDxjzXz4",
+        "kind": "code",
+        "by": "git",
+        "title": "곡선 클릭 후 바로 오프셋, 모양 바꾸기·원본 남김 추가",
+        "first": "2026-10-19",
+        "last": "2026-10-25",
+        "n": 3,
+        "vers": [
+          "0.2.0",
+          "0.3.0",
+          "0.4.0"
+        ]
+      }
+    ],
+    "hy-trim": [
+      {
+        "url": "https://claude.ai/code/session_01SRvwsnz1tqRjxuN3PoKfTs",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · 모따기(CHA)·끌어서 여러 개 트림/연장·호 연장·곡선 모깎기",
+        "first": "2026-10-19",
+        "last": "2026-10-19",
+        "n": 2,
+        "vers": [
+          "0.2.0",
+          "0.3.0"
+        ]
+      }
+    ],
+    "hy-wrap": [
+      {
+        "url": "https://claude.ai/code/session_01BkzP61MMaGBjQzWaqmptq7",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-19",
+        "last": "2026-10-21",
+        "n": 7,
+        "vers": [
+          "0.14.0",
+          "0.14.1",
+          "0.15.0",
+          "0.16.0",
+          "0.17.0",
+          "0.18.0",
+          "0.18.1"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01SJpMqvsj52Avg2pWTAM7kM",
+        "kind": "code",
+        "by": "git",
+        "title": "다른 툴이 곡면 펴기를 쓰는 창구(API) — EL·02 곡면 타공용",
+        "first": "2026-10-25",
+        "last": "2026-10-25",
+        "n": 1,
+        "vers": [
+          "0.19.0"
+        ]
+      }
+    ],
+    "hy-bender": [
+      {
+        "url": "https://claude.ai/code/session_01KxJ5AbjwBxrMXwR65765vB",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-19",
+        "last": "2026-10-19",
+        "n": 2,
+        "vers": [
+          "0.3.1",
+          "0.4.0"
+        ]
+      }
+    ],
+    "mosaic": [
+      {
+        "url": "https://claude.ai/code/session_012k9BjDZwKXbNaq3T1ZMxSr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 툴바 설정 버튼·hy CMD(MO·MOS)·prepend 훅",
+        "first": "2026-10-19",
+        "last": "2026-10-19",
+        "n": 2,
+        "vers": [
+          "0.8.0",
+          "0.9.0"
+        ]
+      }
+    ],
+    "stay-tion-sketchup": [
+      {
+        "url": "https://claude.ai/code/session_01HdhBoW8MH7EE5crWu9KLnv",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — STAY_tion 확장을 짝 툴로 분리, hy CMD ST·STO · MOSAIC",
+        "first": "2026-10-19",
+        "last": "2026-10-19",
+        "n": 1,
+        "vers": [
+          "5.0.4"
+        ]
+      }
+    ],
+    "hy-graph": [
+      {
+        "url": "https://claude.ai/code/session_01CV8rNbKB6QYmYnJP8yXA5N",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-19",
+        "last": "2026-10-20",
+        "n": 5,
+        "vers": [
+          "0.2.2",
+          "0.3.0",
+          "0.4.0",
+          "0.5.0",
+          "0.6.0"
+        ]
+      }
+    ],
+    "hy-stroke": [
+      {
+        "url": "https://claude.ai/code/session_01KgJ3Hai3QVgVJhrgqgnHxT",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-20",
+        "last": "2026-10-20",
+        "n": 2,
+        "vers": [
+          "0.1.1",
+          "0.2.0"
+        ]
+      }
+    ],
+    "hy-layer-out": [
+      {
+        "url": "https://claude.ai/code/session_01ChjA8ABEVAj65XbuwpYdbK",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 레이어·클립 그룹 안의 그룹을 하나씩 최상위 레이어로 꺼내기",
+        "first": "2026-10-20",
+        "last": "2026-10-20",
+        "n": 3,
+        "vers": [
+          "0.1.0",
+          "0.2.0"
+        ]
+      }
+    ],
+    "hy-gradient": [
+      {
+        "url": "https://claude.ai/code/session_011FFTV34xPDxJRKt9scon1E",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-20",
+        "last": "2026-10-21",
+        "n": 4,
+        "vers": [
+          "0.1.1",
+          "0.2.0",
+          "0.3.0",
+          "0.3.1"
+        ]
+      }
+    ],
+    "hy-offset-ai": [
+      {
+        "url": "https://claude.ai/code/session_01GBNP1fzdrrdehwdWDh89rk",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-20",
+        "last": "2026-10-20",
+        "n": 2,
+        "vers": [
+          "0.1.0",
+          "0.2.1"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_011FFTV34xPDxJRKt9scon1E",
+        "kind": "code",
+        "by": "git",
+        "title": "hy Gradient 색 유지 — 다시 만들 때 같은 방식으로 다시 칠함, 색 풀기",
+        "first": "2026-10-20",
+        "last": "2026-10-20",
+        "n": 1,
+        "vers": [
+          "0.2.0"
+        ]
+      }
+    ],
+    "hy-link": [
+      {
+        "url": "https://claude.ai/code/session_01LukxSQAF6GDM5bq6NNJLg1",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 인디자인 링크 관리 패널",
+        "first": "2026-10-20",
+        "last": "2026-10-20",
+        "n": 1,
+        "vers": [
+          "0.1.2"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01X3nwaarG1eghzacKSgPL2E",
+        "kind": "code",
+        "by": "git",
+        "title": "글자 탭 — 배치한 PSD·AI 안의 글자를 인디자인 글상자로 꺼내기",
+        "first": "2026-10-24",
+        "last": "2026-10-25",
+        "n": 5,
+        "vers": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.3.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe8kZ3KCTByC4ztrccF",
+        "kind": "code",
+        "by": "git",
+        "title": "글꼴 탭 — 누락 글꼴 원인과 같은 글꼴로 한 번에 바꾸기",
+        "first": "2026-10-28",
+        "last": "2026-10-28",
+        "n": 1,
+        "vers": [
+          "0.4.0"
+        ]
+      }
+    ],
+    "hy-oop-test": [
+      {
+        "url": "https://claude.ai/code/session_01DETTd62zrVfS5QugePTcdo",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-21",
+        "last": "2026-10-21",
+        "n": 1,
+        "vers": [
+          "0.0.1"
+        ]
+      }
+    ],
+    "hy-map-poster": [
+      {
+        "url": "https://claude.ai/code/session_0134EWvscEEt2Ufn66ptbA43",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 허브용 단일 exe, Blender 자동 받기",
+        "first": "2026-10-21",
+        "last": "2026-10-21",
+        "n": 6,
+        "vers": [
+          "0.1.0",
+          "0.1.1",
+          "0.1.2",
+          "0.1.3",
+          "0.1.4"
+        ]
+      }
+    ],
+    "hy-road": [
+      {
+        "url": "https://claude.ai/code/session_015JJmQLCt64CMpdt8sdesNb",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-21",
+        "last": "2026-10-21",
+        "n": 1,
+        "vers": [
+          "0.3.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01GE9PHtCc4Tzr9zJdiFSAnj",
+        "kind": "code",
+        "by": "git",
+        "title": "중심선 그룹을 지워도 이어서 편집 · 지운 중심선은 노면표시 다시 만들 때 되살리지 않음",
+        "first": "2026-10-25",
+        "last": "2026-10-25",
+        "n": 1,
+        "vers": [
+          "0.3.1"
+        ]
+      }
+    ],
+    "hy-map-poster-sketchup": [
+      {
+        "url": "https://claude.ai/code/session_0134EWvscEEt2Ufn66ptbA43",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 맵 포스터 짝 툴, 툴바·hy CMD MP·MOSAIC",
+        "first": "2026-10-21",
+        "last": "2026-10-21",
+        "n": 1,
+        "vers": [
+          "0.3.0"
+        ]
+      }
+    ],
+    "hy-plant": [
+      {
+        "url": "https://claude.ai/code/session_01JxD1QtmrFiq8xneRoEZbCT",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 선택 영역에 나무 랜덤 심기 (포토샵 UXP 패널)",
+        "first": "2026-10-22",
+        "last": "2026-10-30",
+        "n": 4,
+        "vers": [
+          "0.1.0",
+          "0.1.1",
+          "0.2.0",
+          "0.3.0"
+        ]
+      }
+    ],
+    "hy-uvpin": [
+      {
+        "url": "https://claude.ai/code/session_014yQebQAB3mNhMbuGWGn2Rd",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-22",
+        "last": "2026-10-23",
+        "n": 2,
+        "vers": [
+          "0.1.0",
+          "0.2.0"
+        ]
+      }
+    ],
+    "yl-el-louver": [
+      {
+        "url": "https://claude.ai/code/session_01CAKExDCqyVN6cc6o4sgQ3W",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-23",
+        "last": "2026-10-24",
+        "n": 3,
+        "vers": [
+          "0.1.0",
+          "0.2.0",
+          "0.3.0"
+        ]
+      }
+    ],
+    "hy-solid": [
+      {
+        "url": "https://claude.ai/code/session_01RkeDULfhyccMmF8KaFpU6J",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-23",
+        "last": "2026-10-23",
+        "n": 3,
+        "vers": [
+          "0.1.0",
+          "0.2.0",
+          "0.2.1"
+        ]
+      }
+    ],
+    "hy-outline-pdf": [
+      {
+        "url": "https://claude.ai/code/session_012G1LBhyrxL3mDVqWmUeaWx",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-23",
+        "last": "2026-10-23",
+        "n": 1,
+        "vers": [
+          "0.2.1"
+        ]
+      }
+    ],
+    "hy-blend": [
+      {
+        "url": "https://claude.ai/code/session_01KfpXrXDFkHVDTnXjPK2Rh6",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-23",
+        "last": "2026-10-23",
+        "n": 1,
+        "vers": [
+          "0.1.1"
+        ]
+      }
+    ],
+    "hy-face-split": [
+      {
+        "url": "https://claude.ai/code/session_01TafgCBdWsGxqcpjxEhGMcg",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-23",
+        "last": "2026-10-23",
+        "n": 1,
+        "vers": [
+          "0.6.0"
+        ]
+      }
+    ],
+    "layover": [
+      {
+        "url": "https://claude.ai/code/session_01GVp2zUkupWHEhnMi2PexV6",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-23",
+        "last": "2026-10-26",
+        "n": 3,
+        "vers": [
+          "1.5.0",
+          "1.5.1",
+          "1.6.0"
+        ]
+      }
+    ],
+    "move37": [
+      {
+        "url": "https://claude.ai/code/session_01H7mQExEYWVrBTbHrcyBt3H",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-23",
+        "last": "2026-10-23",
+        "n": 1,
+        "vers": [
+          "1.1.0"
+        ]
+      }
+    ],
+    "hy-elevation": [
+      {
+        "url": "https://claude.ai/code/session_01VfpVz5kwogJ4BG6fuwDqLc",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-23",
+        "last": "2026-10-23",
+        "n": 1,
+        "vers": [
+          "2.4.0"
+        ]
+      }
+    ],
+    "hy-cadpaste": [
+      {
+        "url": "https://claude.ai/code/session_01VbC1Tdh7LF847Rv69wv4Xa",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-24",
+        "last": "2026-10-30",
+        "n": 6,
+        "vers": [
+          "0.1.0",
+          "0.1.1",
+          "0.2.0",
+          "0.2.1",
+          "0.2.2"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7zRge7QPjz5yU3hk6",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · YGN CAD 도곽 받기 — 레이어 = 태그 · 3D(면 치유) · 커서 놓기 · 같은 자리 갱신",
+        "first": "2026-10-31",
+        "last": "2026-10-31",
+        "n": 1,
+        "vers": [
+          "0.3.0"
+        ]
+      }
+    ],
+    "hy-nav": [
+      {
+        "url": "https://claude.ai/code/session_01AHF8qZaaqQcQdnoivV7CfS",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-24",
+        "last": "2026-10-25",
+        "n": 2,
+        "vers": [
+          "0.1.0",
+          "0.2.0"
+        ]
+      }
+    ],
+    "hy-desk": [
+      {
+        "url": "https://claude.ai/code/session_01TeFnqongdAVM367XHXEf9s",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-24",
+        "last": "2026-10-25",
+        "n": 14,
+        "vers": [
+          "0.1.0",
+          "0.1.1",
+          "0.2.0",
+          "0.3.0",
+          "0.4.0",
+          "0.5.0",
+          "0.6.0",
+          "0.7.0",
+          "0.8.0"
+        ]
+      }
+    ],
+    "hy-site": [
+      {
+        "url": "https://claude.ai/code/session_01GE9PHtCc4Tzr9zJdiFSAnj",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-24",
+        "last": "2026-10-29",
+        "n": 11,
+        "vers": [
+          "0.5.0",
+          "0.5.1",
+          "0.6.0",
+          "0.7.0",
+          "0.8.0",
+          "0.8.1",
+          "0.9.0",
+          "0.9.1",
+          "0.10.0",
+          "0.10.1",
+          "0.11.0"
+        ]
+      }
+    ],
+    "hy-fit": [
+      {
+        "url": "https://claude.ai/code/session_01DYSK86YjNewHV1KSydm5Zq",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-24",
+        "last": "2026-10-24",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "lispmanager": [
+      {
+        "url": "https://claude.ai/code/session_01THqEFc6dfN4NUyt6mdmKZp",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · 허브 화면으로 다시 짬 · 정크 리습 정리(_정리됨) · GHDYD V6 순서·요약 · 가구 라이브러리 폴더 · 호용툴과 겹치는 기능 뺌",
+        "first": "2026-10-25",
+        "last": "2026-10-27",
+        "n": 9,
+        "vers": [
+          "1.0.0",
+          "1.1.0",
+          "1.1.1",
+          "1.2.0",
+          "1.3.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_012XGumxivGrzWwxKvsTWgWT",
+        "kind": "code",
+        "by": "git",
+        "title": "리습 hle 0.1.0: 첫 등록",
+        "first": "2026-10-27",
+        "last": "2026-10-27",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_018ZkJaYs9odC67DjCwjvtvR",
+        "kind": "code",
+        "by": "git",
+        "title": "hy CAD — 캐드 안 패널(레이어 · 개구부 · 계단 · 도곽)",
+        "first": "2026-10-27",
+        "last": "2026-10-31",
+        "n": 184,
+        "vers": [
+          "1.4.0",
+          "1.5.0",
+          "1.6.0",
+          "1.7.0",
+          "1.8.0",
+          "1.9.0",
+          "1.10.0",
+          "1.11.0",
+          "1.12.0",
+          "1.13.0",
+          "1.15.0",
+          "1.15.1",
+          "1.16.0",
+          "1.17.0",
+          "1.18.0",
+          "1.19.0",
+          "1.19.1",
+          "1.19.2",
+          "1.20.0",
+          "1.20.1",
+          "1.21.0",
+          "1.21.1",
+          "1.23.0",
+          "1.24.0",
+          "1.25.0",
+          "1.26.0",
+          "1.27.0",
+          "1.28.0",
+          "1.29.0",
+          "1.30.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6Tu7nTKZPo1EZLqWk",
+        "kind": "code",
+        "by": "git",
+        "title": "PostFX 스튜디오를 hy PostFX 로 옮김",
+        "first": "2026-10-27",
+        "last": "2026-10-27",
+        "n": 2,
+        "vers": [
+          "1.14.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01CnavdWS6923YoCCRkG6x53",
+        "kind": "code",
+        "by": "git",
+        "title": "lispmanager · hy-postfx: 화면 키트 widgets.py 를 허브 0.29.0 과 맞춤 (auto_wrap 무한 반복 고침)",
+        "first": "2026-10-29",
+        "last": "2026-10-29",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6VRQ6JZ9gRkHrX39Z",
+        "kind": "code",
+        "by": "git",
+        "title": "리본 '곡선' 묶음 — 곡선 도구 CRV · CRVE · CRB · CRT",
+        "first": "2026-10-29",
+        "last": "2026-10-29",
+        "n": 4,
+        "vers": [
+          "1.22.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/chat/19b6b845-c952-4f7d-b0d4-11d04b0a70c2",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_FUR",
+        "first": "2026-07-14",
+        "last": "2026-07-14",
+        "note": "캐드 가구 라이브러리(썸네일·카테고리·한 번 클릭 삽입)를 만들어 리습매니저에 병합"
+      },
+      {
+        "url": "https://claude.ai/chat/aeb56212-a11e-46a2-b930-e2563c8f3027",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_DWG2PSD",
+        "first": "2026-07-17",
+        "last": "2026-07-17",
+        "note": "DWG → PSD 내보내기(DWG2PSD) 플러그인 현장 시험·디버깅, 새 main.py에 다시 연결"
+      },
+      {
+        "url": "https://claude.ai/chat/d9203d04-7205-494a-b2dd-740bf557c3e5",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_DWG2AI",
+        "first": "2026-07-17",
+        "last": "2026-07-17",
+        "note": "DWG → 일러스트 내보내기(DWG2AI: CTB 선두께·축척) 플러그인 제작"
+      },
+      {
+        "url": "https://claude.ai/chat/25e9585a-920a-4d97-9bae-ff106fad3f6e",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_NUKKI",
+        "first": "2026-07-15",
+        "last": "2026-07-15",
+        "note": "포토샵 자동 누끼(NukkiLab, 포토샵/rembg) 제작·플러그인 구조로 병합 (1.0에서 뺌)"
+      },
+      {
+        "url": "https://claude.ai/chat/741d599a-16d6-404d-9d22-46ea3b9b78d3",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_SEAMLESS",
+        "first": "2026-07-15",
+        "last": "2026-07-15",
+        "note": "TextureLab(심리스 텍스처·반복 지우기) 제작·포토샵 탭 병합 (1.0에서 뺌)"
+      },
+      {
+        "url": "https://claude.ai/chat/7d459ae0-dd0a-40ee-9b87-3d197126a96f",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_PSD LIBRARY",
+        "first": "2026-07-16",
+        "last": "2026-07-16",
+        "note": "포토샵 소스 라이브러리(PSLib) 제작·main.py 병합 (1.0에서 뺌)"
+      },
+      {
+        "url": "https://claude.ai/chat/ca039aad-67be-444b-801a-c5bdad38606d",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_AI LIBRARY",
+        "first": "2026-07-16",
+        "last": "2026-07-16",
+        "note": "일러스트 소스 라이브러리(AILib) 제작 (1.0에서 뺌)"
+      },
+      {
+        "url": "https://claude.ai/chat/910f0095-66f8-47cb-b597-b7a35eb1e2df",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_INDD CREATE FILE",
+        "first": "2026-07-16",
+        "last": "2026-07-16",
+        "note": "인디자인 프레임 크기 빈 PSD·AI 만들기(InddGen) 플러그인 제작 (1.0에서 뺌)"
+      },
+      {
+        "url": "https://claude.ai/chat/a124954a-9786-4b13-9a5e-74f20d00ecd9",
+        "kind": "chat",
+        "by": "hand",
+        "title": "일러스트레이터 패턴 스케일 관리 자동화",
+        "first": "2026-07-14",
+        "last": "2026-07-14",
+        "note": "일러스트 패턴 스튜디오(라이브러리·추출·생성, 패턴 스와치 등록) 제작 (1.0에서 뺌)"
+      },
+      {
+        "url": "https://claude.ai/chat/549b6240-58cd-4355-929d-17e7afe071e0",
+        "kind": "chat",
+        "by": "hand",
+        "title": "일러스트레이터 레이어를 포토샵으로 내보내기",
+        "first": "2026-07-27",
+        "last": "2026-07-27",
+        "note": "일러스트 → 레이어 PSD 내보내기(AI2PSD) 플러그인 설계·구현"
+      },
+      {
+        "url": "https://claude.ai/chat/d7f4a01b-6428-440d-af2a-9b6da4bff3fa",
+        "kind": "chat",
+        "by": "hand",
+        "title": "등고선 연결 및 단계 구분 방법",
+        "first": "2026-07-12",
+        "last": "2026-07-12",
+        "note": "DXF 등고선 접합·조밀화 도구(ContourTool) 제작, 리습매니저 패널로 병합 준비"
+      },
+      {
+        "url": "https://claude.ai/chat/6b7aa2f4-bb7d-44f0-b947-f4c8d0037640",
+        "kind": "chat",
+        "by": "hand",
+        "title": "리습 벽체 선택 기능 오류",
+        "first": "2026-08-05",
+        "last": "2026-08-05",
+        "note": "문 넣기 리습 IDD 먹통(벽 선택·스냅·ESC) 진단 후 다시 작성"
+      },
+      {
+        "url": "https://claude.ai/chat/3f3a4316-3fbe-4bc2-bd6e-f129fd9d3150",
+        "kind": "chat",
+        "by": "hand",
+        "title": "UI 디자인과 글꼴 수정의 크레딧 비용",
+        "first": "2026-07-15",
+        "last": "2026-07-15",
+        "note": "UI 전면 개선 — theme.json 테마 구조·글꼴 렌더링 정리 계획"
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7zRge7QPjz5yU3hk6",
+        "kind": "code",
+        "by": "git",
+        "title": "내보내기 창 스케치업 — 도곽 안 선만 레이어 그대로 열린 스케치업으로 · 3D(유사 BIM) 높이 · 레이어 역할",
+        "first": "2026-10-31",
+        "last": "2026-10-31",
+        "n": 1,
+        "vers": [
+          "1.31.0"
+        ]
+      }
+    ],
+    "hy-color2mat": [
+      {
+        "url": "https://claude.ai/code/session_017XVWgvxJtFts5TBbUtVDb6",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-25",
+        "last": "2026-10-28",
+        "n": 9,
+        "vers": [
+          "0.1.0",
+          "0.2.0",
+          "0.3.0",
+          "0.4.0",
+          "0.5.0",
+          "0.6.0",
+          "0.7.0",
+          "0.8.0",
+          "0.9.0"
+        ]
+      }
+    ],
+    "hy-layer-export": [
+      {
+        "url": "https://claude.ai/code/session_012XGumxivGrzWwxKvsTWgWT",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-27",
+        "last": "2026-10-27",
+        "n": 2,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_018ZkJaYs9odC67DjCwjvtvR",
+        "kind": "code",
+        "by": "git",
+        "title": "리습 HLE 가 도곽을 골라 오면 그 축척이 설정 창 기본값",
+        "first": "2026-10-27",
+        "last": "2026-10-31",
+        "n": 5,
+        "vers": [
+          "0.2.0",
+          "0.2.1",
+          "0.3.0",
+          "0.4.0",
+          "0.5.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/chat/d9203d04-7205-494a-b2dd-740bf557c3e5",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_DWG2AI",
+        "first": "2026-07-17",
+        "last": "2026-07-17",
+        "note": "캐드 영역 → 일러스트 내보내기(DWG2AI, CTB 선두께) — hy Layer Export의 전신"
+      },
+      {
+        "url": "https://claude.ai/chat/aeb56212-a11e-46a2-b930-e2563c8f3027",
+        "kind": "chat",
+        "by": "hand",
+        "title": "LM_DWG2PSD",
+        "first": "2026-07-17",
+        "last": "2026-07-17",
+        "note": "캐드 → 레이어 PSD 내보내기(DWG2PSD) — hy Layer Export의 전신"
+      }
+    ],
+    "hy-postfx": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6Tu7nTKZPo1EZLqWk",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — PostFX 스튜디오를 독립 프로그램으로 (앱 안 미리보기 · 룩 14가지 + 강도 · 포토샵 없이 PSD)",
+        "first": "2026-10-27",
+        "last": "2026-10-30",
+        "n": 8,
+        "vers": [
+          "1.0.0",
+          "1.1.0",
+          "1.1.1",
+          "1.2.0",
+          "1.2.1"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01CnavdWS6923YoCCRkG6x53",
+        "kind": "code",
+        "by": "git",
+        "title": "lispmanager · hy-postfx: 화면 키트 widgets.py 를 허브 0.29.0 과 맞춤 (auto_wrap 무한 반복 고침)",
+        "first": "2026-10-29",
+        "last": "2026-10-29",
+        "n": 1
+      },
+      {
+        "url": "https://claude.ai/chat/4ec95083-6da3-44cb-835a-0ba4ba6b3a35",
+        "kind": "chat",
+        "by": "hand",
+        "title": "postfx",
+        "first": "2026-08-17",
+        "last": "2026-08-17",
+        "note": "D5 렌더 패스 분석으로 PostFX Studio(후보정) 제작 — hy PostFX의 원본",
+        "made": true
+      }
+    ],
+    "hy-seed": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6aAfD6MfxSBqNC7Hj",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 스케치업 나무 자리(씨앗) · 고른 것/캐드 원 → 씨앗 · D5 수목 견본 키트 · 나무 목록 JSON",
+        "first": "2026-10-28",
+        "last": "2026-10-28",
+        "n": 2,
+        "vers": [
+          "0.1.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7eze65hShK6KdU5ah",
+        "kind": "code",
+        "by": "git",
+        "title": "D5 로 보내기 — 씨앗마다 상자를 만들어 .d5a 로, D5 에서 수종째 에셋 교체",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 4,
+        "vers": [
+          "0.2.0",
+          "0.3.0",
+          "0.3.1",
+          "0.3.2"
+        ]
+      }
+    ],
+    "hy-flat": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.2.3"
+        ]
+      }
+    ],
+    "hy-posterize": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.2.4"
+        ]
+      }
+    ],
+    "hy-screenprint": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.9"
+        ]
+      }
+    ],
+    "hy-ai": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.4.5"
+        ]
+      }
+    ],
+    "hy-wb": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.2.0"
+        ]
+      }
+    ],
+    "hy-perspective": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "hy-light": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "hy-scatter": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "hy-fade": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.1"
+        ]
+      }
+    ],
+    "hy-pen": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.3"
+        ]
+      }
+    ],
+    "hy-blob": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "hy-icon": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.2.0"
+        ]
+      }
+    ],
+    "hy-color": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.3.2"
+        ]
+      }
+    ],
+    "hy-window-select": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe6jm7f4SxkiJ5g25wr",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ],
+    "hy-isosplit": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXeATE45kBhgQNUBCRrX",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 아이소 분리 (층 띄우기 · 겹친 곳 모서리 연결선 · 평면 점 고치기)",
+        "first": "2026-10-30",
+        "last": "2026-10-30",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
+    ]
+  }
+}
