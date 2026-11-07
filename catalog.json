@@ -3933,16 +3933,24 @@
         "notes": "- 첫 등록 (YooLab 3.1.0 rbz의 tools/st_hbeam.rb)",
         "min_hub": "0.13.0"
       },
-      "test": null,
+      "test": {
+        "version": "1.0.0",
+        "date": "2026-11-08",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-hbeam/yl-st-hbeam-1.0.0.rbz",
+        "sha256": "9844dc3db3318d2c0fd9f0ca4ce85e3436aeeda337dd50e5f131e4009dbed3c6",
+        "size": 17528,
+        "notes": "- 'H빔 변환'을 하이엔드 기둥 툴로 다시 짬 — 이름 'ST·05 기둥' (호용 2026-11-07 '기둥 및 트러스가 하이엔드가 되어야'). 옛 판 기능은 모두 그대로: 고른 그룹 · 컴포넌트 · 면 덩어리 안(안쪽 그룹까지)의 사각 기둥 찾기, 자동 / 수동(±15mm · 돌려도 같음), 두께 비례 자동(웹 3.5% · 플랜지 5.5%, 최소 6 · 8) / 직접, H형 / I형, 원래 태그 · 재질 이어받기, 늘인 그룹도 실제 크기.\n- 바꾸기에 KS 규격에 맞추기 · 다른 단면(각관 · 원관 · RC)으로도.\n- 세우기(아무것도 안 고르고 실행 — 클릭마다 하나, 높이는 값 입력칸) · 고치기(만든 기둥을 고르고 다시 실행 — 바꾼 값만 고른 기둥마다).\n- 단면 KS H(필릿) · 각형강관 · 원형강관 · RC 사각(모따기) · RC 원형 / 디테일 베이스 플레이트 · 앵커볼트(이중 너트) · 그라우트 · 리브 · 캡 플레이트 · RC 기둥머리 / 도장 5가지.\n- 미리보기 패널 (바꿀 기둥마다 바뀔 모양을 파랑 선으로). hy CMD COL · CLM · MOSAIC · 우클릭 고치기.\n- 계산은 새 'ST 공용 엔진'(yl-st-core — 같이 설치됨). 캐드 연동용 API (hy CADPaste 가 쓸 예정).",
+        "min_hub": "0.13.0"
+      },
       "history": [],
-      "name": "ST·05 H빔 변환",
+      "name": "ST·05 기둥",
       "type": "ruby",
       "host": {
         "app": "SketchUp",
         "versions": "2022+"
       },
-      "summary": "사각기둥을 찾아 H형강으로 한 번에 바꿉니다. 그룹 안쪽까지 훑습니다.",
-      "description": "사각기둥을 찾아 H형강으로 한 번에 바꿉니다. 그룹 안쪽까지 훑습니다. 선택: 기둥 또는 선택 없이 전체. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
+      "summary": "KS H · 각관 · 원관 · RC 기둥 세우기 · 사각 기둥 한 번에 바꾸기(예전 H빔 변환) — 베이스 플레이트 · 앵커 · 캡",
+      "description": "예전 'H빔 변환'을 하이엔드로 다시 짬 (옛 판 기능은 모두 그대로). 바꾸기: 고른 그룹 · 컴포넌트 · 면 덩어리 안(안쪽 그룹까지)의 세로로 선 사각 기둥을 찾아 바꿈 — 자동(크기 읽기) / 수동(가로 · 세로 ±15mm), 두께 비례 자동(웹 3.5% · 플랜지 5.5%) / 직접, H형 / I형, 원래 태그 · 재질 이어받기, 늘인 그룹도 실제 크기 + KS 규격에 맞추기 · 다른 단면으로도. 세우기: 아무것도 안 고르고 실행하면 기둥이 커서에 붙고 클릭마다 하나(높이는 값 입력칸). 고치기: 만든 기둥을 고르고 다시 실행하면 바꾼 값만 고른 기둥마다 다시 만듦. 단면 KS H형강(필릿) · 각형강관 · 원형강관 · RC 사각(모따기) · RC 원형, 디테일 베이스 플레이트 · 앵커볼트(이중 너트 · 와셔) · 그라우트 · 베이스 리브 · 캡 플레이트 · RC 기둥머리. 재질 ST_*(도장 5가지). 계산은 'ST 공용 엔진'(같이 설치됨). hy CMD COL · CLM. 유가네 툴박스(YooLab) 패널 안에서 실행한다 — 껍데기 'yoolab'이 같이 설치된다.",
       "category": "site-model",
       "install": {
         "loader": "st_hbeam.rb",
@@ -3951,7 +3959,8 @@
       },
       "user_data": [],
       "requires": [
-        "yoolab"
+        "yoolab",
+        "yl-st-core"
       ],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-hbeam/icon.png"
     },
