@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "tools": {
     "hy-autoselect": [
       {
@@ -977,6 +977,15 @@
         "first": "2026-10-23",
         "last": "2026-10-23",
         "n": 1
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7ebqAMJM8g8fNJry7",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · yoolab: 묶음에 ST 공용 엔진 · ST·05 이름 '기둥' (정보만) · CLAUDE.md ST 하이엔드",
+        "first": "2026-11-08",
+        "last": "2026-11-08",
+        "n": 1
       }
     ],
     "yl-dr-door": [
@@ -1376,6 +1385,18 @@
         "vers": [
           "0.1.0"
         ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7ebqAMJM8g8fNJry7",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · H빔 변환을 하이엔드 기둥 툴로 — 바꾸기(옛 판 그대로 + KS · 다른 단면) · 세우기 · 고치기, 베이스 플레이트 · 앵커 · 리브 · 캡 · RC 기둥머리",
+        "first": "2026-11-08",
+        "last": "2026-11-08",
+        "n": 1,
+        "vers": [
+          "1.0.0"
+        ]
       }
     ],
     "yl-st-spaceframe": [
@@ -1403,6 +1424,18 @@
         "n": 1,
         "vers": [
           "3.2.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7ebqAMJM8g8fNJry7",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · 하이엔드로 다시 짜고 ST·03 기둥 인식 합침 — 패턴 6 · 단면 따로 · 새들 컷 · 스티프너 · 거싯 · 고치기",
+        "first": "2026-11-08",
+        "last": "2026-11-08",
+        "n": 1,
+        "vers": [
+          "4.0.0"
         ]
       }
     ],
@@ -2986,6 +3019,20 @@
           "0.16.0",
           "0.17.0",
           "0.18.0"
+        ]
+      }
+    ],
+    "yl-st-core": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7ebqAMJM8g8fNJry7",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 유가네 ST 기둥 · 트러스가 같이 쓰는 강재 · RC 부재 엔진 (KS 단면 · 새들 컷 · 베이스 플레이트 · 앵커 · 트러스 패턴 · 스티프너 · 거싯)",
+        "first": "2026-11-08",
+        "last": "2026-11-08",
+        "n": 1,
+        "vers": [
+          "1.0.0"
         ]
       }
     ]

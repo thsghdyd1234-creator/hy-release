@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "tools": [
     {
       "id": "ai2ps",
@@ -3888,6 +3888,39 @@
         "yoolab"
       ],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-beam/icon.png"
+    },
+    {
+      "id": "yl-st-core",
+      "stable": null,
+      "test": {
+        "version": "1.0.0",
+        "date": "2026-11-08",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-core/yl-st-core-1.0.0.rbz",
+        "sha256": "ad7c45b9ab4fcaee896c97e7bd09ebf0cda59871d449a967f0c98d4d010c0ca1",
+        "size": 19309,
+        "notes": "- 첫 등록 — 유가네 ST 기둥 · 트러스가 같이 쓰는 강재 · RC 부재 엔진 (호용 2026-11-07 '기둥 및 트러스가 하이엔드가 되어야' · '툴마다 따로').\n- 단면: KS H형강 37가지(광폭 · 중폭 · 세폭, 필릿 r) · 각형강관 29가지(모서리 r = 2.5t) · 원형강관 22가지 · RC 사각(모따기) · RC 원형 · 직접 입력.\n- 부재: 단면을 축으로 쓸고 끝을 평면 또는 원통으로 자름 — 파이프 사재 끝이 현재 겉면에 딱(새들 컷), 기운 기둥도 판에 수평으로.\n- 기둥: 베이스 플레이트 · 앵커볼트(이중 너트 · 와셔, 4 · 6 · 8) · 무수축 그라우트 · 베이스 리브(앵커는 리브 옆으로 비킴) · 캡 플레이트 / RC 모따기 · 기둥머리.\n- 트러스: 워렌 · 프랫 · 하우 · 단방향 · V 교대 · 비렌딜, 칸 수 · 칸 길이 · 기둥 자리, 끝 막음판 · 용접형 현재 스티프너 · 거싯형 판.\n- 모든 부재가 닫힌 몸(시험 9천여 곳), 재질 ST_* (도장 5 · 볼트 · 콘크리트 · 그라우트).",
+        "min_hub": "0.13.0"
+      },
+      "history": [],
+      "name": "ST 공용 엔진",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "유가네 ST 기둥 · 트러스(· 보)가 같이 쓰는 강재 · RC 부재 엔진 — 패널에 안 보이고 ST 툴을 받으면 같이 깔림",
+      "description": "ST·05 기둥 · ST·02 트러스가 실행할 때 쓰는 계산 엔진(스케치업 없이 도는 순수 루비). KS H형강(필릿 r) · 각형강관(모서리 r) · 원형강관 · RC 사각(모따기) · RC 원형 단면, 단면을 축으로 쓸고 끝을 평면 · 원통(파이프 현재 겉면 = 새들 컷)으로 자르는 부재, 베이스 플레이트 · 앵커볼트(이중 너트 · 와셔) · 그라우트 · 리브 · 캡 플레이트 · 기둥머리, 트러스 패턴(워렌 · 프랫 · 하우 · 단방향 · V 교대 · 비렌딜) · 끝 막음판 · 현재 스티프너 · 거싯 판. 재질 ST_*. 유가네 툴박스(YooLab) 패널에는 보이지 않는다 — ST 툴을 허브에서 받으면 같이 설치된다.",
+      "category": "site-model",
+      "install": {
+        "loader": "st_core.rb",
+        "into": "yoolab_tools",
+        "core_min": "4.0.0"
+      },
+      "user_data": [],
+      "requires": [
+        "yoolab"
+      ],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-st-core/icon.png"
     },
     {
       "id": "yl-st-hbeam",
