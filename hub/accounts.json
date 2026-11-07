@@ -1,0 +1,80 @@
+{
+  "schema": 3,
+  "updated": "2026-10-30 21:53",
+  "login_required": true,
+  "legacy_cut": false,
+  "notice": "",
+  "slots": "",
+  "disabled": [],
+  "test_ok": [
+    "chaennie",
+    "hozzang",
+    "jinwoo",
+    "jiwon",
+    "jiwoo",
+    "yougane"
+  ],
+  "revoked_slots": [
+    3383
+  ],
+  "revoked": [],
+  "custom_pw": {
+    "8323": {
+      "c": "e38253d65940d4e1ac79",
+      "i": 20000
+    },
+    "7727": {
+      "c": "9924d4273dfb6ddd2ca8",
+      "i": 20000
+    },
+    "15525": {
+      "c": "50bf03ed09e10fcaa19e",
+      "i": 20000
+    },
+    "1072": {
+      "c": "9b316d8f8d5dec181bb6",
+      "i": 20000
+    },
+    "8769": {
+      "c": "68d6ffc394f931d5132f",
+      "i": 20000
+    },
+    "3554": {
+      "c": "1a4836396062cce56c2f",
+      "i": 20000
+    }
+  },
+  "members_only": [
+    "clean-map",
+    "hy-asset-library",
+    "hy-desk",
+    "hy-map-poster",
+    "hy-model-library",
+    "hy-nav",
+    "hy-postfx",
+    "lispmanager",
+    "sd2sku"
+  ],
+  "premium": [
+    "chaennie",
+    "hozzang",
+    "jinwoo",
+    "jiwon",
+    "jiwoo",
+    "yougane"
+  ],
+  "premium_only": [
+    "clean-map",
+    "hy-asset-library",
+    "hy-desk",
+    "hy-map-poster",
+    "hy-model-library",
+    "hy-nav",
+    "hy-postfx",
+    "lispmanager",
+    "sd2sku"
+  ],
+  "keep_ok": [
+    "hozzang"
+  ]
+}
