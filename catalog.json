@@ -2861,22 +2861,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.62.0",
+        "version": "1.63.0",
         "date": "2026-11-10",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.62.0.exe",
-        "sha256": "39c215261bfdadf20e663a92835877559a90f242f01856cf6dfbe72e12214cc6",
-        "size": 61214558,
-        "notes": "YGN CAD — 빈 탭 자리에 치수 · 주석 탭 (호용 2026-11-10 '우선은 모으기부터 진행하자' — 특성 · 레이어를 합쳐 남은 자리)\n- 새 탭 '주석'(탭 안 제목 치수 · 주석, 층 · 면적과 도곽 사이): 여러 탭 · 리본에 흩어져 있던 것을 한곳에 — 새 설정은 없고 값은 늘 원래 탭 것을 그대로 써요.\n  - 치수: [바깥 치수](HYDIM) · [축선에 기호 · 치수](ADQ 2) — 그리드 탭의 축척 · 기호 모양 · 레이어를 위에 보여 주고 [그리드 탭에서]로 건너가 바꿔요.\n  - 글자 · 치수 크기: [주석 크기 맞춤](리습 DTS — 리본에서는 ▾ 안에 숨어 있었음).\n  - 방위표 · 축척 막대: 이 도면 YGN 도곽 모두에 [켜기] · [끄기] (예전엔 도곽 탭에서 한 장씩만) — 한 장씩 · 방위 각도는 [도곽 탭에서].\n  - 표 · 일람표: 도면 목록표 · 블록 개수표 · 난간 일람표는 바로 [넣기](놓인 표가 있으면 그 자리에서 고침, 블록 개수표는 블록 탭 지난 설정),\n    면적표 · 건축 개요 · 창호 일람표 · 도면층 색상표는 [… 탭 ›]으로 그 탭의 그 칸까지 (색상표는 접힌 칸을 펼침).\n- 다른 탭에서 건너오면 그 칸이 패널 맨 위에 오게 (예전엔 겨우 보일 만큼만 내려서 맨 아래에 걸렸음).\n- 리본 '패널 ▾'에 치수 · 주석.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.63.0.exe",
+        "sha256": "1eb742b14f509f5aa09792763ea9d0881cd1df7f172fd5173698f05a34bec399",
+        "size": 61224649,
+        "notes": "YGN CAD — 주석 탭에 치수 스타일 · 단면 기호 (호용 2026-11-10 '단면 기호나 치수스타일 먼저 잡고 가야할것 같은데')\n- 치수 스타일: 지금 치수 스타일의 글자가 이 도면 도곽 축척에서 종이 몇 mm 인지 보여 줘요 (캐드 처음 스타일 ISO-25 는 1:100 에서 0.025mm — '안 보임').\n  축척 칩 = 이 도면 도곽 축척(많은 순) + 그리드 탭 축척. [YGN 1-100 으로 맞추기] = 그 축척 스타일을 만들거나 고쳐 지금 스타일로(그리드 탭 · 바깥 치수와 같은 규칙),\n  [고른 치수에 입히기] = 이미 그린 치수를 그 스타일로. 접는 칸 '이 도면의 치수 스타일' — 스타일마다 쓴 치수 수 · 종이 글자 크기 · [지금으로].\n  그리드 탭 축척이 도곽 축척과 다르면 알림 + [그리드 탭 축척을 1:N 으로] (바깥 치수 · 축선 치수가 다른 크기로 들어가던 것).\n- 단면 기호(HYSEC · 주석 탭 · 리본 벽 · 개구부 ▾): 두 점으로 절단선 → 보는 쪽 클릭 → 끝 굵은 막대 · 일점쇄선 · 화살표 · A / A'.\n  크기는 놓는 곳 도곽 축척의 종이 mm(막대 8 · 글자 4), 이름은 이 도면에서 안 쓴 다음 것(A · B … 숫자로 쓰는 도면은 1 · 2 …), 글자는 늘 바로 섬.\n  모양: 화살표 / 원 · 삼각 · A · A' / A · A · 일점쇄선 / 끝만, 레이어 A-ANNO-SYMB. 놓인 기호를 고르고 HYSEC = 보는 쪽 뒤집기,\n  주석 탭 목록 '이 도면의 단면 기호' — 이름 · 축척 · 길이 · 보는 방위 · [보기] · [뒤집기]. 절단선은 기호에 기록해 둠(나중 단면 · 입면이 읽음).",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.62.0.exe.part1",
-            "sha256": "4f86552b381a27d226392e0b864b641b142f2dae8eaca25e254e881c24f071da",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.63.0.exe.part1",
+            "sha256": "76340bafa81f1eac32a8b77eb52b98d1cd3c1f54f2718e84cc1a9a76b8a2772d",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.62.0.exe.part2",
-            "sha256": "df75f7ca29881de759c3c199dacef78d19bad32d93ca15cf3d2a246bc6616b72",
-            "size": 14028638
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.63.0.exe.part2",
+            "sha256": "9b0bd4ae0eaea1eb8dab23226ac99a9bcacb9c722d950d1fa6b27e36db51c91b",
+            "size": 14038729
           }
         ],
         "min_hub": "0.11.0"
