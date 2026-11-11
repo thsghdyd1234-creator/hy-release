@@ -2861,22 +2861,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.64.0",
+        "version": "1.64.1",
         "date": "2026-11-11",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.64.0.exe",
-        "sha256": "cc3124a9c984490c3ee13a4760d25cf52555b1f8589ecffdcc52e5e18ab84e1b",
-        "size": 61257678,
-        "notes": "캐드 단축키 화면 (호용 2026-11-11 '캐드에서 단축키 설정을 하려면 메모장 파일 들어가서 직접 수정해야 하잖아')\n- 왼쪽 메뉴 '단축키': 캐드 단축 명령(acad.pgp)을 메모장 없이 고쳐요.\n  - 파일: 켜진 캐드에 지원 파일 경로를 물어 캐드가 실제로 읽는 acad.pgp 를 골라요 (메모장으로 다른 파일을 고쳐 안 먹던 일이 없게).\n    캐드가 꺼져 있으면 %APPDATA% 의 AutoCAD 판마다 찾고, 여럿이면 고르기 · [파일 고르기…].\n  - 더하기 · 바꾸기: 단축키 → 명령(리습 명령 목록에서 고르거나 캐드 명령을 직접). 캐드 기본 단축키 찾기에서 [바꾸기]로 바로.\n  - 알림: 리습 명령 이름과 같아 안 먹는 단축키(리습이 단축키보다 먼저 실행됨), 덮는 캐드 기본 단축키(C → CIRCLE 대신),\n    리습이 가로챈 캐드 기본 단축키(MO · AA · SL · DL …)를 맨 위에.\n  - [저장하고 캐드에 반영]: 파일 맨 끝 '리습매니저 구역'에만 쓰고(같은 단축키는 마지막 정의가 이김 — 기본 정의는 그대로),\n    켜진 캐드에 (setvar \"RE-INIT\" 16) 을 보내 껐다 켜지 않아도 바로 써요. 그사이 메모장으로 고친 줄도 살려요.\n    파일의 글자 형식 · 줄바꿈은 그대로, 쓰기 전에 데이터 폴더 pgp_backup 에 백업(처음 원본은 늘 남김).\n  - ⋯: 프리셋 JSON 내보내기 · 가져오기(연구실 공유), 리습매니저 단축키 모두 빼기(빼고 저장하면 원래 파일 그대로), 백업 폴더 열기.\n- Ctrl+1 같은 조합키 · F키는 acad.pgp 가 아니라 메뉴 파일(CUIx)이라 이 화면에서 다루지 않아요.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.64.1.exe",
+        "sha256": "60e6747f84a6051cf7a628c008e48cf5ed3dbe33761babdc343aaefcdd4b0374",
+        "size": 61265137,
+        "notes": "면적 지정 고침 (호용 2026-11-11 '바닥층 지정한번하고 나면 그 뒤에 지정은 옵션 키워드 유효하지 않음 … 분동일 때는 처리가 안되는거잖아')\n- 층 바닥 · 보이드 · 무주 공간 · 코어 · 대지 · 실 지정에서 캐드가 둘레를 바로 못 찾을 때(둘레에 틈 · 동이 화면 밖) '옵션 키워드가 유효하지 않음' 뒤 지정이 멈추던 것을 고쳤어요.\n  - 까닭: 그때 한 번 더 찾으려고 캐드 -BOUNDARY 명령에 옵션 키워드를 넣어 보냈는데, 캐드 판에 따라 그 키워드를 거절했어요 (리습 XX 1.2.0 과 같은 일).\n  - 이제 캐드 명령을 쓰지 않고 YGN CAD 가 클릭한 곳 둘레의 선을 직접 읽어 둘레를 찾아요 — 틈 허용(G) 안의 틈은 이어 메우고, 화면 밖 동도 찾아요 (꺼진 · 얼린 레이어 선은 안 읽음).\n    둘레를 못 찾으면 까닭을 알리고 다음 클릭을 기다려요 (지정이 끊기지 않음).\n  - 분동: 첫 동을 지정한 뒤 다른 동을 이어 클릭해도 돼요 (층 바닥은 이어 찍은 것끼리 더함).\n- 캐드 확인 대기: 아주 큰 도면에서 둘레 찾기 시간 · 블록 안 선으로 된 둘레.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.64.0.exe.part1",
-            "sha256": "a805a0c88f357391a883dee35929c743cb5df7df79cb85d2fa158fe3c13eef36",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.64.1.exe.part1",
+            "sha256": "fb54f9c663af1c589b91bf60adbe97cc89b01d731ef2e5ed741323ee1f8b630d",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.64.0.exe.part2",
-            "sha256": "b26c9dfc0efc20c49ee6f141aca10b56e8924c2fc8ef12bf9456f3cf031a9107",
-            "size": 14071758
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.64.1.exe.part2",
+            "sha256": "42a25e8ac4f417fad2fa34452c62720685d148aab7772e1aef67f2fca54a758b",
+            "size": 14079217
           }
         ],
         "min_hub": "0.11.0"
