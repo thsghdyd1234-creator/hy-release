@@ -1430,28 +1430,6 @@
         "extra_files": []
       },
       "history": []
-    },
-    {
-      "id": "cpl",
-      "name": "CPL (폴리선 결합 변환)",
-      "category": "선 다듬기·외곽선",
-      "command": "CPL",
-      "description": "선·호·폴리선을 폴리선으로 결합 (틈 허용치 기억, 결과를 골라 둠).",
-      "usage": "폴리선화",
-      "warning": "",
-      "stable": null,
-      "test": {
-        "version": "1.1.0",
-        "date": "2026-10-27",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lisps/cpl/cpl-1.1.0.zip",
-        "sha256": "b360e3d1aad5241eeff62c9dcf764a21bcf64e6f35f901d8eeca7ea91eeb4900",
-        "size": 47836,
-        "notes": "- 선택·틈 입력 중에 ESC 하면 PEDITACCEPT 가 1 로 남던 것 고침 — 잇는 동안만 바꿈\n- 3D 폴리선·메시는 빠지고 잠긴 레이어도 빠짐, 결과 폴리선 수를 알리고 골라 둠 (예전: 고른 수를 그대로 '결합했다'고 함)\n- 틈 허용치 기억",
-        "file": "폴리선 결합 CPL.lsp",
-        "image": "CPL.gif",
-        "extra_files": []
-      },
-      "history": []
     }
   ],
   "updated": "2026-11-12",
