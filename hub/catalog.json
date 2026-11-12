@@ -190,6 +190,34 @@
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-asset-library/icon.png"
     },
     {
+      "id": "hy-autocomp",
+      "stable": null,
+      "test": {
+        "version": "0.1.0",
+        "date": "2026-11-12",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-autocomp/hy-autocomp-0.1.0.rbz",
+        "sha256": "923cde1f2ef28ec862543f4cb959d9d04fbfb908da9b9f2517775144841fbb70",
+        "size": 27062,
+        "notes": "첫 등록. AutoComponentBuilder(그룹만, 면 · 변 개수 + 체적 + 상자 크기 비교)를 다시 짠 것:\n- 읽기: 그룹 · 컴포넌트 · 흩어진 면/선 덩어리(서로 붙은 것끼리), 안 고르면 편집 중인 곳 전체\n- 비교: 꼭짓점 · 변 · 면(재질)을 실제로 겹쳐 봄 — 회전은 항상 같은 것, 거울 반전 · 재질 · 허용 오차는 옵션\n- 바꾸기: 같은 것 2개 이상 → 한 컴포넌트의 인스턴스 (이름 · 재질 · 태그 옮김, 빈 정의 지움), 짝 없는 덩어리 → 각각 그룹\n- 패널: 종류별 썸네일 · 개수 · 이름 · 켜고 끄기, 화면 색 미리보기 (Enter 변환 · Esc 닫기)\n- 열린 그룹 안에서도 (좌표를 임시 점으로 확인), 작업 하나 = Ctrl+Z 한 번"
+      },
+      "history": [],
+      "name": "hy AutoComp",
+      "type": "ruby",
+      "host": {
+        "app": "SketchUp",
+        "versions": "2022+"
+      },
+      "summary": "같은 형상의 그룹·컴포넌트·흩어진 덩어리를 한 컴포넌트로, 짝 없는 덩어리는 각각 그룹 — 썸네일·화면 미리보기",
+      "description": "고른 것(안 고르면 지금 편집 중인 곳 전체)에서 그룹 · 컴포넌트와, 서로 붙은 흩어진 면 · 선을 덩어리 하나로 읽는다(고른 게 일부여도 붙은 데까지). 형상 비교는 꼭짓점 · 변 가운데 · 면 가운데(재질 포함)를 실제로 겹쳐 봄 — 무게중심과 가장 먼 꼭짓점 두 개로 기준틀을 세워 회전해 놓인 것도 같은 것으로, 거울 반전은 옵션(뒤집힌 인스턴스로), 허용 오차 mm. 안에 그룹이 든 그룹은 펼쳐서 비교, 크기를 바꾼 사본은 다른 것. 같은 것이 2개 이상이면 컴포넌트 하나의 인스턴스로: 기준은 컴포넌트가 있으면 그 정의, 그룹이면 to_component, 덩어리면 그룹 → 컴포넌트(축은 상자 최소 모서리). 나머지는 같은 자리에 인스턴스를 놓고 원래 것을 지움 — 그룹 · 컴포넌트였던 것의 이름 · 재질 · 태그를 옮기고, 비게 된 컴포넌트 정의는 지움. 짝 없는 흩어진 덩어리는 각각 그룹(옵션). 패널: 종류마다 등각 썸네일 · 개수 · 구성(컴포넌트 · 그룹 · 덩어리 · 반전) · 이름(바꿀 수 있음) · 켜고 끄기, 줄을 누르면 화면에서 그 종류만 진하게. 화면 미리보기는 종류별 색 반투명 칠 + 굵은 선, 그룹이 될 것은 회색 점선 — Enter 변환 · Esc 닫기. 변환은 작업 하나(Ctrl+Z 한 번), 끝나면 만든 것들을 골라 다시 읽음. 열린 그룹 안에서도 됨(스케치업이 좌표를 월드로 주는지 임시 점으로 확인). 모델이 바뀌면 목록을 낡음으로 표시하고 다시 읽기. 잠긴 것 · 빈 그룹은 뺌, 선만 있는 덩어리는 옵션. 메뉴 확장 › hy AutoComp, 툴바 한 칸, 우클릭 '같은 객체 → 컴포넌트', hy CMD 별칭 ACP, MOSAIC 등록(hy.autocomp), 진단 HY::AutoComp.selfcheck.",
+      "category": "organize",
+      "install": {
+        "loader": "hy_autocomp.rb"
+      },
+      "user_data": [],
+      "requires": [],
+      "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-autocomp/icon.png"
+    },
+    {
       "id": "hy-autoselect",
       "stable": {
         "version": "1.0.0",

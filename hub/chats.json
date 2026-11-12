@@ -3120,6 +3120,20 @@
           "1.2.1"
         ]
       }
+    ],
+    "hy-autocomp": [
+      {
+        "url": "https://claude.ai/code/session_01XFvXe8cU84WmygupC7hk4L",
+        "kind": "code",
+        "by": "git",
+        "title": "첫 등록 — 같은 객체 → 컴포넌트 (그룹·컴포넌트·흩어진 덩어리, 회전·반전, 패널 미리보기)",
+        "first": "2026-11-12",
+        "last": "2026-11-12",
+        "n": 1,
+        "vers": [
+          "0.1.0"
+        ]
+      }
     ]
   }
 }
