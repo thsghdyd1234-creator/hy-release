@@ -2861,22 +2861,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.67.0",
+        "version": "1.67.1",
         "date": "2026-11-12",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.67.0.exe",
-        "sha256": "9018c8092d28c585d26cc5c269faa6ece342d32d0a17377d7091033353784bb6",
-        "size": 61320634,
-        "notes": "YGN CAD 벽 그리기 — 리습 GH · Y/GN · CW 를 패널 '벽' 보기로 (호용 2026-11-12 '벽그리기 진행하자')\n- 벽 그리기 (HYWALL · 그리기 › 벽 › 아래 띠 [벽 그리기] · 리본 '벽'): 점을 찍는 대로 벽이 미리 보이고 Enter 로 끝내면 닫힌 폴리선 벽이 돼요. 이어서 다음 벽 (Enter · Esc 로 끝, 벽 하나 = U 한 번).\n  - 점은 캐드 그대로 찍어요 (객체 스냅 · 직교 · 극좌표 추적). 닫기 C · 되돌리기 U · 두께 T(두 점 클릭도) · 기준선 J.\n  - 기준선: 중심선 / 왼쪽 면 / 오른쪽 면 — 벽면을 따라 찍어도 돼요 (리습에는 없던 것).\n  - 두께는 칩(100 ~ 300) · 직접. 벽마다 두께가 달라도 맞물려요 — 외벽 200 에 내벽 100 이 T자로, 두께가 다른 ㄱ자는 두 면 선이 만나는 점 (리습은 한 번에 한 두께).\n  - 벽은 이름표의 벽 레이어(A-WALL)에 — '벽을 지금 레이어에'를 켜면 리습 GH 처럼 지금 레이어.\n- 중심선 고르기 (HYWALL 의 S · 띠 [중심선 고르기]): 그려 둔 선 · 호 · 폴리선 · 스플라인 · 원을 골라 벽으로 (리습 GH · GHL — 원은 새로).\n  - ㄱ자는 마이터, T자 · 십자 · 끝은 평평하게 — 리습 GH 와 같은 규칙이고, 같은 중심선에서 같은 벽이 나오는지 리습 결과와 견줘 봤어요 (19사례).\n  - 끝이 조금 떨어진 ㄱ자도 요철 없이 맞물리고, 겹쳐 그린 같은 선은 하나로 봐요.\n- 중심선과 연결 (스위치 · 처음엔 켬 — 리습 GHL · Y): 중심선을 남겨 두고(벽 중심선 레이어 A-WALL-CEN · 1점 쇄선), 옮기거나 그립 · STRETCH 로 고치면 그 명령이 끝날 때 벽이 따라가요.\n  - 새 벽이 연결된 중심선에 닿으면 같은 묶음이 돼 T자 · ㄱ자가 저절로 맞물려요 (Y 처럼 한 장으로 이어짐).\n  - 옮긴 중심선에 끝이 닿아 있던 이웃 중심선도 따라와요 (리습 Y — 끌 수 있음).\n  - '벽 중심선 레이어에 그린 선 · 호도 벽으로' 를 켜면 캐드의 LINE · PLINE 으로 그 레이어에 그린 것도 벽이 돼요 (리습 Y 의 실시간 — 처음엔 꺼짐).\n  - 벽을 직접 고치면(자르기 · 옮기기 · 문 넣기) 그 묶음의 연결을 풀고 손대지 않아요. 통째로 복사하면 복사본은 따로 연결. U · REDO 는 캐드가 같이 되돌려요.\n  - [연결 풀기 (확정)] · HYWALL 의 X: 고른 것만, Enter 면 도면 전체 — 벽 · 중심선은 그대로 (리습 GHN · GN).\n- 교차부 정리 (HYWX · 벽 보기 · 리본): 받은 도면의 벽선(LINE)을 고르면 만나는 곳에서 끊고 교차부 안쪽 짧은 선을 지워요 (리습 BXI + CW 를 한 번에).\n  - 아무 일 없던 곳은 끊긴 채 남지 않아요. 안쪽 선인지 벽면인지 알 수 없는 선은 남기고 골라 둬요 (CW 와 같음). 중심선 · 그리드 · 잠긴 레이어는 저절로 빠져요.\n- 리본 '벽 · 개구부': [벽](HYWALL) · [교차부 정리](HYWX)가 들어가고 리습 단추 GH · CW · Y · GN 은 뺐어요 (명령어로는 그대로 돌아요). 설정 › 레이어 이름표에 '벽 중심선' 칸.\n- 리습에서 못 옮긴 것: 캐드 그리기 중 호(A) — 지금은 직선만 찍고, 호 · 곡선 벽은 호 · 폴리선 · 스플라인을 그린 뒤 [중심선 고르기]. 리습(GHL · Y)으로 연결해 둔 중심선은 리습이 맡아요 (패널은 건너뜀).\n- 캐드 확인 대기: 찍는 동안 미리보기가 보이는지 · 중심선을 옮긴 명령의 U 한 번에 벽도 같이 돌아오는지 · 그립으로 고친 뒤 따라가는 때 · 큰 도면에서 연결 표 읽는 시간 · 문 넣기 뒤 연결이 풀렸다는 알림.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.67.1.exe",
+        "sha256": "1a474d0368ac3f5dccbf94d2bff1864528501f54d43876596bbad998fef5c01c",
+        "size": 61319199,
+        "notes": "폴리선 결합 하나로 — CPL 리습을 PJ 에 합침 (호용 2026-11-12 '우선 5번 진행하자' · 'PJ 하나로 합치기')\n- 리습 PJ·CPL (폴리선 결합) 1.3.0: 따로 있던 CPL 리습(PEDIT 결합만)을 PJ 리습에 합쳤어요. 명령 CPL 은 그대로 — 정리 없이 그대로 결합.\n  - PJ = 정리하며 결합 (끊긴 선 · 닫힌 폴리선 · 높이 다른 선 · 스플라인 · 겹친 선 정리 → 결합 → 조각 줄이기). 퍼지 거리 질문에서 K = 이번만 그대로 결합.\n  - CPL = 내가 그린 깨끗한 선을 그냥 폴리선으로 (객체를 다시 만들지 않음 · 겹친 선 · 정점 안 건드림 · 틈 허용치 기억).\n  - 둘 다 끝나면 닫힌 폴리선 · 열린 폴리선 수와, 열린 끝 사이에 남은 가장 가까운 틈을 알려 줘요 ('이으려면 2.35 보다 큰 값을 넣어 다시 실행하세요') — 퍼지 거리를 어림해서 여러 번 넣지 않게.\n  - 리습 목록에서 CPL 카드는 빠지고(깔린 공식 사본은 _정리됨으로) PJ·CPL 카드 하나가 돼요. PJ·CPL 을 1.3.0 으로 업데이트하면 CPL 명령이 그 안에 있어요.\n- YGN CAD 리본 '선 다듬기 › 폴리선 결합' 단추가 PJ 를 불러요 (예전 CPL). 정리 탭 리습 도구에 '끊긴 선 결합 (PJ)'.\n- JJ (같은 직선 위의 선을 선 하나로)는 성격이 달라 그대로.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.67.0.exe.part1",
-            "sha256": "dfa2979832ea1901415d54eb0df41e5200cf032520dd9e343e2c1758c963a461",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.67.1.exe.part1",
+            "sha256": "57681aecac0c88ebf8b3c6a4440cb1f8cd57a73bd3ff1b2e6dc02b7acffd7ab4",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.67.0.exe.part2",
-            "sha256": "7977f5b8e6f539ee199d237671326c8ee73f5592ebeb4602af4a21c51d530688",
-            "size": 14134714
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.67.1.exe.part2",
+            "sha256": "183b0df449211eab741b69f01864f5551855f2d2babb7fefaecac17a4636712c",
+            "size": 14133279
           }
         ],
         "min_hub": "0.11.0"
