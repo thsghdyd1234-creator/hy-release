@@ -3015,22 +3015,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.84.0",
+        "version": "1.85.0",
         "date": "2026-11-21",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.84.0.exe",
-        "sha256": "9a4f75c5f889f4c04fbc2cb856f2cbce6c061aa1843f92e45953c147aff2f40a",
-        "size": 61760724,
-        "notes": "곡면(호) 벽도 특성 [벽] 카드에서 높이 · 단면을 정하면 스케치업 · 단면도가 그 모양으로, 단면도가 기운 벽 위로 이은 윗층 바닥에 맞춤 (호용 2026-11-20 '기운 벽 위의 윗층 바닥이 벽을 따라가지 않는 것, 호(곡면) 벽 단면')\n- 곡면 벽: 호 · 원 · 폴리선 호 마디로 그린 벽(같은 중심의 두 호)의 벽선이나 그 호 중심선을 고르면 [특성] 맨 위에 '곡면 벽' 카드 — 두께 · 반지름 · 길이 · 윗면 · 밑 높이 · 단면.\n  - 조각은 곧은 벽과 같이: T자 · 십자 교차 벽 가운데에서 끊고, 문 · 창 틈은 넘어요 (원형 벽은 반쪽씩).\n  - 단면 칩(수직 · 기울기 · 경사 · 꺾임 · 직접) 그대로 — 면 이름은 바깥 면 · 안쪽 면. MIRROR 해도 바깥 면은 바깥 면이에요.\n  - 중심선 = 같은 중심의 호 (출력 안 함). [가운데로]는 반지름만 맞춰요.\n  - 두 면 중 하나라도 원 중심 쪽으로 반지름의 반 넘게 가는 단면은 안 적어요 (스케치업이 못 만드는 모양 — 면 치유와 같은 규칙).\n  - 아직 곧은 벽만: [끌어 옮기기] · 중심선을 옮기면 벽이 따라오기 · 벽만 고친 뒤 중심선 맞추기. 스플라인 · 타원 벽도 아직이에요.\n- 스케치업: 내보내기 '스케치업' · 실시간 · 3D 미리보기가 곡면 벽도 그 높이 · 모양으로 (hy CADPaste 0.21 · hy 면 치유 0.16 — 옛 판이면 알림 '이번엔 곡면 벽은 층 높이 · 수직 그대로').\n  곡면 벽 안 창 · 문은 아직 수직이에요.\n- 단면도(HYSECD): 잘린 곡면 벽을 높이마다 그 원과 절단선이 만나는 자리로 (비스듬히 잘라도 곧게 어림하지 않음). 곡면 벽도 기울면 그 모양으로.\n  - 절단선이 비스듬할 때 기운 벽 옆에 가는 세로 선이 하나 더 그려지던 것 고침 (1.82 부터).\n  - 기운 벽 위로 이은 윗층 바닥 · 좁은 셋백(윗층 바닥에 붙은 1.2 m 안 지붕 조각)엔 파라펫을 안 세워요 — 넓은 셋백은 예전대로. (스케치업 쪽 윗층 바닥 이음은 hy CADPaste 0.20 · 면 치유 0.15)",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.85.0.exe",
+        "sha256": "1954fb01e1a7e8ca0ffd88a2084c50974b51f35f717d094d48a2fc989cb897f1",
+        "size": 61765103,
+        "notes": "같은 벽 단면을 여러 벽에 한 번에 (호용 2026-11-20 '같은 단면을 여러 벽에 한 번에 넣기')\n- 특성 [벽] 카드 단면 칸에 [다른 벽에도] (단면을 적은 벽에서) → 캐드에서 벽선 · 중심선을 고르고 Enter — 고른 벽에 같은 단면을 한 번에 적어요 (U 한 번에 되돌림).\n  - 고른 벽선은 그 선 전체를 따라 덮는 벽 조각마다 (폴리선이면 마디마다 — T자 · 십자에서 끊긴 조각도 모두). 바깥 외곽선 하나를 고르면 바깥 벽 모두에.\n  - 기준 면 = 카드를 열 때 누른 벽선: 고른 벽선이 그 자리 — 바깥 면을 눌러 '반대 면 쪽으로 기울기'를 정했으면 고른 바깥 면마다 안쪽으로 기울어요 (방 외곽선을 고르면 그 방에서 멀어지게).\n  - 벽선 양쪽을 다 고른 벽(창으로 고름 · 벽 고리 폴리선) · 벽 정보 중심선으로 고른 벽은 카드 그림 그대로 (가로 벽은 위쪽 면이 그림 왼쪽).\n  - 중심선이 없는 벽은 놓고, 벽 가운데가 아니면 맞춰요. 조각마다 그 높이로 검사 (두께 · 각 · 곡면 벽 반지름) — 못 쓰는 벽은 건너뛰고 까닭을 알려요.\n  - 곡면(호) 벽도 같이 (바깥 면 · 안쪽 면). 한 번에 500조각 · 20초까지.\n  - 끝나면 원본 벽을 다시 골라 카드가 그대로 남아요.\n- 카드 단면 칸의 [다른 벽에도] 말풍선에 기준 면 이름 (누른 벽선).",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.84.0.exe.part1",
-            "sha256": "c2bd22814e59eddd3d6619b85c2fe8986d5e0ea755e26af5a12e99850b1fe152",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.85.0.exe.part1",
+            "sha256": "11cf2efdae32cfdd18145f878baf2574da9d298af8f8f49b8142127d256dad74",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.84.0.exe.part2",
-            "sha256": "9b3c3026b5afb51c67e349ea347fff58b8aec60538d2971fd8013d6e594223e7",
-            "size": 14574804
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.85.0.exe.part2",
+            "sha256": "4cbac6daf8d9e5262e3f38dca613fcdb028fe682dcb803d02f3601f096dcfc34",
+            "size": 14579183
           }
         ],
         "min_hub": "0.11.0"
