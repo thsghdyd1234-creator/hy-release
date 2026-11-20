@@ -1850,22 +1850,22 @@
       "id": "hy-pdf-slim",
       "stable": null,
       "test": {
-        "version": "0.2.0",
+        "version": "0.2.1",
         "date": "2026-11-20",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-pdf-slim/hy-pdf-slim-0.2.0.exe",
-        "sha256": "64abc3e6615d6438ed94b1d8e0a733f72d416f003d1960b91f3a2c5a6f1faac7",
-        "size": 68318873,
-        "notes": "- 화면용 · 목표 용량에 '그림마다 화질 맞춤' (기본 켬, 호용이 고른 85점): 인디자인은 이미지를 무손실(ZIP)로 내보내고, 2단계가 사진 · 렌더마다 원본과 견줘 SSIMULACRA2 85점 — 2배로 키워 번갈아 봐도 구분 안 되는 수준 — 이상인 가장 작은 JPEG 으로 맞춤 (jpegli, 그림마다 점수를 서너 번 재서)\n- 인디자인 'JPEG 최고 품질'은 모든 그림을 같은 품질로 눌러서 단순한 그림에는 넘침(89~91점) — 실제 사진 · 렌더로 만든 문서에서 −35% 남짓 (같은 그림을 예전처럼 내보낸 것과 견줘)\n- 평면 그림 · 도면은 무손실 그대로 (JPEG 이 15% 넘게 작지 않으면), 잡음 · 낟알이 많아 85점을 맞추면 오히려 커지는 그림은 예전과 같은 크기로 — 어느 그림도 예전보다 커지지 않게\n- CMYK 그림도 (libjpeg, Adobe 식 + Decode — MuPDF · poppler · PDFium · pdf.js 로 색 확인), 회색 그림도\n- 맞춤이 안 되면(도구 오류 · 견주기에서 크게 다름 · 임시 폴더 공간 모자람) 무손실 PDF 를 내지 않고 예전처럼 인디자인 'JPEG 최고 품질'로 다시 내보냄\n- 목표 용량은 품질을 낮출 때 다시 내보내지 않고 2단계만 다시 (85 → 80점), 결과 화면에 그림마다 맞춘 점수 · 무손실로 둔 것 · 걸린 시간\n- 옵션 '그림마다 화질 맞춤 (85점)' — 끄면 0.1 과 같음. PDF 만 줄이기에서는 무손실 그림만 맞춤 (이미 JPEG 인 그림은 손실이 겹쳐서 그대로)\n- 인디자인 설정을 되돌릴 때 넣은 반대 차례로 (ZIP 의 8비트 품질처럼 서로 걸린 값이 안 되돌려지던 것)\n- jpegli · ssimulacra2 (libjxl v0.11.1, BSD-3) 를 exe 에 같이 묶음 — 라이선스 파일도\n- 인디자인 연결 고침 (0.1.1 호용 PC: COM 이름 3개가 다 등록됐는데 '켜진 인디자인을 찾지 못했어요'): 인디자인은 실행 중 개체 표(ROT)에 자기를 올리지 않아서 GetActiveObject 로는 안 붙음 → 켜진 인디자인의 클래스 개체로 붙음 (CreateObject 와 같은 길). 다른 판이나 새 인디자인이 켜지지 않게 등록된 실행 파일이 켜진 인디자인과 같을 때만 · 권한이 같을 때만 · 다 켜진 뒤에만 (15초 넘게 답이 없으면 그만)\n- 연결 안내 셋 더: 인디자인이 관리자 권한으로 켜져 있음(평소처럼 다시 켜기) · 아직 켜지는 중 · 켜진 판만 등록이 없음(그 판을 관리자 권한으로 한 번), 진단 글에 켜진 인디자인 경로 · 권한 · 켠 지 몇 초",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-pdf-slim/hy-pdf-slim-0.2.1.exe",
+        "sha256": "6fd31bc1d8ca38cc7d259fe889b787b5bba478f5372c152683dfd1c7c4d04b36",
+        "size": 68321704,
+        "notes": "- 백신(V3 등)이 실행할 때마다 'ssimulacra2.exe 실행 알림'을 다시 띄우던 것: exe 가 켤 때마다 임시 폴더(%TEMP%\\_MEI<번호>)에 도구를 풀어서 경로가 매번 바뀌었음 — 이제 같은 판이면 늘 같은 자리(%LOCALAPPDATA%\\hy\\pdf_slim\\tools)에 한 번 옮겨 두고 거기서 돌림. '실행'을 한 번 고르면(또는 그 폴더를 예외로) 다시 묻지 않음. 예전 판 도구 폴더는 지움",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-pdf-slim/hy-pdf-slim-0.2.0.exe.part1",
-            "sha256": "410bc689418631e2eb607f779d5af46f9a5c953698b79a0b72b46181a102a5b6",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-pdf-slim/hy-pdf-slim-0.2.1.exe.part1",
+            "sha256": "02c3f888a6daeb0ad84455494f66de86bf7e5408c52803b250e5397d5dc233bc",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-pdf-slim/hy-pdf-slim-0.2.0.exe.part2",
-            "sha256": "1a51ef52516910ed0a317c692c3a19eacd95bd43b251f235e4bff81e32686b11",
-            "size": 21132953
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-pdf-slim/hy-pdf-slim-0.2.1.exe.part2",
+            "sha256": "d72e65ac339d6314888f06766d7b18ef8973620d4286dae470841d18951c0378",
+            "size": 21135784
           }
         ],
         "min_hub": "0.11.0"
@@ -1884,7 +1884,8 @@
         "entry": "hy_pdf_slim.exe"
       },
       "user_data": [
-        "%APPDATA%\\hy\\pdf_slim"
+        "%APPDATA%\\hy\\pdf_slim",
+        "%LOCALAPPDATA%\\hy\\pdf_slim"
       ],
       "requires": [],
       "icon": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-pdf-slim/icon.png"
