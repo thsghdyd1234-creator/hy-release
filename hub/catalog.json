@@ -3186,22 +3186,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "0.30.0",
-        "date": "2026-11-16",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.0.exe",
-        "sha256": "adda49896ca4b6b2c871a0f8b304c4a38fdf81d19d66dbbb666fe6b9b6e94224",
-        "size": 67553519,
-        "notes": "- 지형 엔진 새로: 등고선·표고점으로 정합 삼각망(연속면)을 만들어 등고 단계로 자른다. 도로에서 끊긴 등고선 때문에 생기던 30m 절벽·5m 넘는 단차가 없어지고 맞닿은 띠는 늘 한 단계 차이(예전 방식은 설정에 남김)\n- 계단 간격(지형 탭): 자료대로 · 1m · 2m · 2.5m · 10m — 등고선(5m) 사이도 1m 계단으로 쌓을 수 있다(사이 높이는 삼각망에서 고르게 나눈 값)\n- 필지가 차도로 메워지던 곳 바로잡음: 도로면 합치기(GEOS)가 가구 구멍을 잃던 곳을 다시 합쳐 맞춤 — 도로면 위에 놓이던 건물 16동 → 0\n- 가구 면 채우기를 켰을 때 건물 없는 가구를 뺀 자리가 지형 없이 뚫리던 것 고침(가구 한 덩어리로 판단)\n- 도로 위 사선 없앰: 같은 높이 도로 조각을 띠마다 합치고, 너무 크면 가장 짧은 자리에서 나눠 그 선을 숨김(임포터 0.46-seam)\n- 계단 위 차선: 띠 경계에서 끊어 조각마다 그 띠 높이에 둔다(계단을 비스듬히 타던 차선 0)\n- 내보내기에서 빠지던 조각 고침: 삼각형 조각·건물, 한 점에서 닿는 면의 작은 쪽(촘촘한 계단에서 지형 구멍)\n- 자료 범위 밖으로 삐져나가던 도로 조각을 자료 범위에서 자름, 혼합 삼각망 면 방향 고침",
+        "version": "0.30.1",
+        "date": "2026-11-21",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.1.exe",
+        "sha256": "9963f505ee912831e8d6a9a047363b097d241d51637615f90a78c6618eaf286b",
+        "size": 67560564,
+        "notes": "- 0.30.0 에서도 같은 필지가 차도로 덮여 나오던 것 고침: 저장된 레이어 결과(디스크 캐시)가 exe 판이 바뀌어도 무효가 안 돼, 0.29 가 만든 도로를 그대로 불러오고 있었다. 이제 exe 가 바뀌면 다시 계산한다(처음 한 번은 도로 계산 시간이 다시 듦)\n- 도로면 합치기 확인 강화: 입력끼리 겹치는 합집합도 고정 정밀도 합집합과 견줘 구멍을 잃었는지 본다\n- 저장된 도로 결과의 설정 서명에 빠져 있던 설정 7개를 넣음(틈 메우기 · 차선 최소 차로 수 · 교차로 차선 자르기 셋 · 실측 보도 기본 폭 · 보도 나누기) — 설정 파일로 바꿔도 예전 도로가 나오던 것",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.0.exe.part1",
-            "sha256": "9b73638b50000c5046a5d959f74b5b7f34b8cb781972dd79656c4700dc3c1d45",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.1.exe.part1",
+            "sha256": "b4601cf007be0ace2b359c2596c3bddf441726512525c08d366a39d37f32ade3",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.0.exe.part2",
-            "sha256": "e2ff79dd20d6cdb0c94ca8dafb7ee3db93f9c37e837cdc4422e37f898c98ac40",
-            "size": 20367599
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.1.exe.part2",
+            "sha256": "d7b88b802738554c0bb36d1d368f778a0db589835cb94cbc16b518da7e808d49",
+            "size": 20374644
           }
         ],
         "min_hub": "0.11.0"
