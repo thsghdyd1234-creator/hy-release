@@ -3186,22 +3186,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "0.30.1",
+        "version": "0.31.0",
         "date": "2026-11-21",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.1.exe",
-        "sha256": "9963f505ee912831e8d6a9a047363b097d241d51637615f90a78c6618eaf286b",
-        "size": 67560564,
-        "notes": "- 0.30.0 에서도 같은 필지가 차도로 덮여 나오던 것 고침: 저장된 레이어 결과(디스크 캐시)가 exe 판이 바뀌어도 무효가 안 돼, 0.29 가 만든 도로를 그대로 불러오고 있었다. 이제 exe 가 바뀌면 다시 계산한다(처음 한 번은 도로 계산 시간이 다시 듦)\n- 도로면 합치기 확인 강화: 입력끼리 겹치는 합집합도 고정 정밀도 합집합과 견줘 구멍을 잃었는지 본다\n- 저장된 도로 결과의 설정 서명에 빠져 있던 설정 7개를 넣음(틈 메우기 · 차선 최소 차로 수 · 교차로 차선 자르기 셋 · 실측 보도 기본 폭 · 보도 나누기) — 설정 파일로 바꿔도 예전 도로가 나오던 것",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.31.0.exe",
+        "sha256": "868457bca51cf1214104305e14b057a9a957d236b9122a8fa06ce71982148299",
+        "size": 67589503,
+        "notes": "- 삼각망 모드에서 도로 위로 지형이 번지던 것(블리딩) 고침: 도로면을 지형과 따로 삼각분할해 얹어, 지형 삼각망과 꺾이는 자리가 달라 도로 넓이의 22% 에서 지형이 뚫고 나왔다(최대 2.4m). 이제 지형 삼각형마다 면을 잘라 그 평면에 정확히 얹고 그 자리를 지형에서 도려낸다 — 겹치는 면이 없다(혼합의 삼각망 구역도 같음)\n- 지형과 그 위 면을 한 덩어리로 닫음: 바깥 테두리에만 옆면, 바닥은 하나 — 삼각형 9.5만 → 6.8만(같은 범위)\n- 차선: 지형 삼각형 경계마다 점을 넣고 옆 기울기만큼 더 띄움 — 도로면 밑으로 들어가던 차선(표본 5%) 없앰\n- 산·도로면을 부드럽게 칠하기(출력 탭 스위치, 기본 켬): 각진 조각으로 보이던 산이 매끈해짐. 임포터 0.47-smooth 필요(앱을 켜면 자동 설치, 스케치업은 다시 켜기)\n- 삼각망 면이 뒤집혀(뒷면색) 나오던 것, 바닥이 구멍 자리를 덮거나 비던 것, 범위 끝 차선이 사각형 밖으로 4m 나가던 것 고침",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.1.exe.part1",
-            "sha256": "b4601cf007be0ace2b359c2596c3bddf441726512525c08d366a39d37f32ade3",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.31.0.exe.part1",
+            "sha256": "6a44cc359a0e11fbf4277f3be01f898880a0678de5f16e0ffe72470770428ec9",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.30.1.exe.part2",
-            "sha256": "d7b88b802738554c0bb36d1d368f778a0db589835cb94cbc16b518da7e808d49",
-            "size": 20374644
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/sd2sku/sd2sku-0.31.0.exe.part2",
+            "sha256": "4b25e4fd779af0d05b8ccd251efa64bdc85ac9ccbe462781a1e5c8b8c52edca0",
+            "size": 20403583
           }
         ],
         "min_hub": "0.11.0"
@@ -3214,7 +3214,7 @@
         "versions": "Windows 10 이상 (스케치업 2022 이상 임포터 포함)"
       },
       "summary": "수치지형도 SHP ZIP을 읽어 지형·건물·도로를 골라 스케치업 모델로 넘기는 변환기",
-      "description": "국토지리정보원 수치지형도(연속수치지도) SHP ZIP을 열어 레이어를 고르고, 범위를 드래그해 지형(계단식·삼각망·혼합, 계단 간격 자료대로·1·2·2.5·10m)·건물 매스·도로면·차선·보도·필지를 만든 뒤 JSON으로 내보낸다. 스케치업 임포터(sd_import.rb)가 exe 안에 들어 있고, 앱을 켜면 이 PC의 스케치업마다 Plugins 폴더에 자동으로 설치·업데이트한다. 스케치업에서 확장 프로그램 > sd2sku > JSON 가져오기.",
+      "description": "국토지리정보원 수치지형도(연속수치지도) SHP ZIP을 열어 레이어를 고르고, 범위를 드래그해 지형(계단식·삼각망·혼합, 계단 간격 자료대로·1·2·2.5·10m — 삼각망 위 도로는 지형 삼각형 평면에 맞춰 잘라 얹고 그 자리를 도려냄, 부드럽게 칠하기)·건물 매스·도로면·차선·보도·필지를 만든 뒤 JSON으로 내보낸다. 스케치업 임포터(sd_import.rb)가 exe 안에 들어 있고, 앱을 켜면 이 PC의 스케치업마다 Plugins 폴더에 자동으로 설치·업데이트한다. 스케치업에서 확장 프로그램 > sd2sku > JSON 가져오기.",
       "category": "site-model",
       "install": {
         "entry": "sd2sku.exe"
