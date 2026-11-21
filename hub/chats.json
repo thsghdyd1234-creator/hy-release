@@ -2739,7 +2739,8 @@
           "1.85.0",
           "1.86.0",
           "1.87.0",
-          "1.88.0"
+          "1.88.0",
+          "1.89.0"
         ]
       },
       {
@@ -2763,6 +2764,18 @@
         "first": "2026-11-15",
         "last": "2026-11-15",
         "n": 2
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe7ZCdgDXHqzjFhpUWL",
+        "kind": "code",
+        "by": "git",
+        "title": "AutoCAD 2027 에서도 YGN CAD(HYP) 가 불리게 — 플러그인 두 벌(.NET 8 · .NET 10) · 번들 2027 칸",
+        "first": "2026-11-21",
+        "last": "2026-11-21",
+        "n": 2,
+        "vers": [
+          "1.90.0"
+        ]
       }
     ],
     "hy-color2mat": [
