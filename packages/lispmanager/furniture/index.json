@@ -1,9 +1,9 @@
 {
  "schema": 1,
- "version": "2026.11.20",
- "updated": "2026-11-20 16:18",
- "count": 2688,
- "size": 165415004,
+ "version": "2026.11.21",
+ "updated": "2026-11-21 17:05",
+ "count": 2697,
+ "size": 167723007,
  "files": {
   "blocks/1.dwg": {
    "sha256": "2148435bca8c2397451db4def384ad3f156feb74e6937286549249d665acb659",
@@ -4093,6 +4093,14 @@
    "sha256": "efba9ab6262582ed5903b94286e11bf34721a1170745aba9cfa4e9f068d85886",
    "size": 11805
   },
+  "blocks/BB_Italia_Metropolitan_High-Back_Armchair.dwg": {
+   "sha256": "3da64cba8ece605f9cd0e66b923c3dfedd9996a3494e30ff34770c0908db95c5",
+   "size": 79992
+  },
+  "thumbnails/BB_Italia_Metropolitan_High-Back_Armchair.png": {
+   "sha256": "da2d3ccb555e202d859d431fb6e3826759a6733c6f3cede0d11ebaf58d0ce156",
+   "size": 16643
+  },
   "blocks/C1a.dwg": {
    "sha256": "f195db229a23a22f9f2ef8adfa9eb6879004f87108a666c8ae30736280c2ab31",
    "size": 35824
@@ -4332,6 +4340,38 @@
   "thumbnails/COMED-02.png": {
    "sha256": "02e72ccd8c4012c7d1f6670b3e6ddaa7467470bb67464c13cf0e0e2f0f616183",
    "size": 10485
+  },
+  "blocks/Curved-Mid-Century-Sofa-Front.dwg": {
+   "sha256": "168d35639e9e4b266dd8564f812b087ed092a719065f9fa08544c686a862dc28",
+   "size": 98905
+  },
+  "thumbnails/Curved-Mid-Century-Sofa-Front.png": {
+   "sha256": "10aa8c1780418c8cf78b25187767d6026bd361f5712ce97e4302f2188d6c6c95",
+   "size": 2654
+  },
+  "blocks/Curved-Mid-Century-Sofa-Side.dwg": {
+   "sha256": "8ed6049c726777bce2fd1f811099d62ec9a30ce2d3a5d1627d9d5994eb42164c",
+   "size": 99065
+  },
+  "thumbnails/Curved-Mid-Century-Sofa-Side.png": {
+   "sha256": "e77a75da17b19c0747907dba6dd8f16f3e517deb2d2251da30761256de2a1f30",
+   "size": 5341
+  },
+  "blocks/Curved-Mid-Century-Sofa.dwg": {
+   "sha256": "1a09bddf819eda9591bd3b9f21c92a23a8665bd761f05f72b7270bfa8258f9d4",
+   "size": 140872
+  },
+  "thumbnails/Curved-Mid-Century-Sofa.png": {
+   "sha256": "0e6431102a37edb6f4412a8c062e8c3f1a0bafd952eec4946cb3c1a6436b7be4",
+   "size": 11804
+  },
+  "blocks/Curved_Sofa_Set_Layout_with_People_and_Pet.dwg": {
+   "sha256": "d40d792b612e33c0b16561eef9214ce3accec71204f4d68d43a302f98b141748",
+   "size": 732013
+  },
+  "thumbnails/Curved_Sofa_Set_Layout_with_People_and_Pet.png": {
+   "sha256": "20c4b516fd88b8a8aa78e624731feca0fabe8b9cbabf055fc457cd2f8d3f10f0",
+   "size": 35593
   },
   "blocks/D-001.dwg": {
    "sha256": "6b68f392fa4cfaae39cad57ed889875833ca3dd87a4497f4395aecb527ef826a",
@@ -12445,6 +12485,14 @@
    "sha256": "90c54e2db51921774fb86045f06abe13e5461c6ddaf0045f0acae5e92f9789af",
    "size": 22554
   },
+  "blocks/Flycam_drone.dwg": {
+   "sha256": "d3f3109c2d18b9f4bbe1b82b50cfe7bd27632f32d396ac7da483bad3f1060517",
+   "size": 117857
+  },
+  "thumbnails/Flycam_drone.png": {
+   "sha256": "464cd3cceb670ef108df9288b6785b668703b2edee3013b0b713c008cefc894b",
+   "size": 24747
+  },
   "blocks/gimnasio_02.dwg": {
    "sha256": "771589814a816e86cf062eeefbd7ab23cb47ca54d9b6da07d53ed2c04c940c5f",
    "size": 55477
@@ -13237,6 +13285,14 @@
    "sha256": "7f21d29ecfb3cea054fb811c315527f592a1349d3213ecb864521852ab958d24",
    "size": 2336
   },
+  "blocks/Luxury_Style_Large_Modular_Sectional_Sofa.dwg": {
+   "sha256": "8c19464ca1a86af94b9e67d879eb2c403a0ea42d81505c165c2f4d0eb9770c13",
+   "size": 121145
+  },
+  "thumbnails/Luxury_Style_Large_Modular_Sectional_Sofa.png": {
+   "sha256": "d02d907b820b4f62463748e23debc21bb915c9c4d32725e1e77e876ca1830e1f",
+   "size": 10561
+  },
   "blocks/MATRI-01.dwg": {
    "sha256": "7355b676d83b67ce9b179d3aa004eab92e4de1c8507a7df73351f00a7e85e7ed",
    "size": 35473
@@ -13268,6 +13324,22 @@
   "thumbnails/MES8-CIR.png": {
    "sha256": "b6a9a3a91086f5fa85dbd31fc6c730de6893dda6da39a171af6dac98a6bc4640",
    "size": 15775
+  },
+  "blocks/Modern_Double_Curved_Crescent_Sofa_Organic_Pebble_Tables_Set.dwg": {
+   "sha256": "44822493827e5b3be53b2a907f896df491e61c90e0eabce39dcf67bea020439f",
+   "size": 593471
+  },
+  "thumbnails/Modern_Double_Curved_Crescent_Sofa_Organic_Pebble_Tables_Set.png": {
+   "sha256": "5efea56ee871cf28e1a426753671488ef5bc1737e86dc9b93a9524722401b7c4",
+   "size": 30055
+  },
+  "blocks/Modern_L-Shaped_Layout_on_Rectangular_Rug.dwg": {
+   "sha256": "858ef9cf3643f1b8cbe3c22a9262320de4213895bae2da680487211185bfbd8c",
+   "size": 169944
+  },
+  "thumbnails/Modern_L-Shaped_Layout_on_Rectangular_Rug.png": {
+   "sha256": "f3f45709281169503981b373f4679ebeaa433d6f591bd75875568dd32d1255d5",
+   "size": 17341
   },
   "blocks/OLIMPICO.dwg": {
    "sha256": "47b5eeaaba6d5d334af00347504ef554125deca99d3a352fa5d8e0a705a15fd9",
@@ -32386,9 +32458,55 @@
    "기타-차량-065": {
     "prefix": "CAR",
     "hundreds": 10
+   },
+   "BB_Italia_Metropolitan_High-Back_Armchair": {
+    "prefix": "SF",
+    "hundreds": 10
+   },
+   "Curved-Mid-Century-Sofa": {
+    "prefix": "SF",
+    "hundreds": 30
+   },
+   "Curved-Mid-Century-Sofa-Front": {
+    "prefix": "SF",
+    "hundreds": 90
+   },
+   "Curved-Mid-Century-Sofa-Side": {
+    "prefix": "SF",
+    "hundreds": 90
+   },
+   "Curved_Sofa_Set_Layout_with_People_and_Pet": {
+    "prefix": "SF",
+    "hundreds": 50
+   },
+   "Flycam_drone": {
+    "prefix": "ETC",
+    "hundreds": 90
+   },
+   "Luxury_Style_Large_Modular_Sectional_Sofa": {
+    "prefix": "SF",
+    "hundreds": 30
+   },
+   "Modern_Double_Curved_Crescent_Sofa_Organic_Pebble_Tables_Set": {
+    "prefix": "SF",
+    "hundreds": 50
+   },
+   "Modern_L-Shaped_Layout_on_Rectangular_Rug": {
+    "prefix": "SF",
+    "hundreds": 50
    }
   },
-  "display": {},
+  "display": {
+   "BB_Italia_Metropolitan_High-Back_Armchair": "하이백 암체어 (메트로폴리탄)",
+   "Curved-Mid-Century-Sofa": "곡선 소파 (미드센추리)",
+   "Curved-Mid-Century-Sofa-Front": "곡선 소파 (미드센추리) — 정면",
+   "Curved-Mid-Century-Sofa-Side": "곡선 소파 (미드센추리) — 측면",
+   "Curved_Sofa_Set_Layout_with_People_and_Pet": "곡선 소파 세트 (사람 · 반려동물)",
+   "Flycam_drone": "드론 (플라이캠)",
+   "Luxury_Style_Large_Modular_Sectional_Sofa": "대형 모듈 소파",
+   "Modern_Double_Curved_Crescent_Sofa_Organic_Pebble_Tables_Set": "초승달 곡선 소파 세트 (조약돌 테이블)",
+   "Modern_L-Shaped_Layout_on_Rectangular_Rug": "ㄱ자 소파 세트 (사각 러그)"
+  },
   "sizes": {
    "B-001": [
     650,
@@ -43129,6 +43247,42 @@
    "기타-차량-065": [
     3869,
     1501
+   ],
+   "BB_Italia_Metropolitan_High-Back_Armchair": [
+    813,
+    713
+   ],
+   "Curved-Mid-Century-Sofa": [
+    3857,
+    1436
+   ],
+   "Curved-Mid-Century-Sofa-Front": [
+    3857,
+    762
+   ],
+   "Curved-Mid-Century-Sofa-Side": [
+    1436,
+    762
+   ],
+   "Curved_Sofa_Set_Layout_with_People_and_Pet": [
+    4986,
+    4740
+   ],
+   "Flycam_drone": [
+    724,
+    568
+   ],
+   "Luxury_Style_Large_Modular_Sectional_Sofa": [
+    3642,
+    1125
+   ],
+   "Modern_Double_Curved_Crescent_Sofa_Organic_Pebble_Tables_Set": [
+    5665,
+    5148
+   ],
+   "Modern_L-Shaped_Layout_on_Rectangular_Rug": [
+    6372,
+    4742
    ]
   },
   "units": {
