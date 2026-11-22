@@ -927,7 +927,7 @@ const EXAMS={
  comp:{id:'comp',name:'컴활',full:'컴퓨터활용능력 필기',org:'대한상공회의소',choices:4,ls:'과목',lt:'단원',
   tracks:[
    {id:'1',name:'1급',desc:'3과목 · 60문항 · 60분',minutes:60,per:20,subjects:['컴퓨터 일반','스프레드시트 일반','데이터베이스 일반'],pass:{type:'avg',min:40,avg:60}},
-   {id:'2',name:'2급',desc:'2과목 · 40문항 · 40분',minutes:40,per:20,subjects:['컴퓨터 일반','스프레드시트 일반'],pass:{type:'avg',min:40,avg:60}}]},
+   {id:'2',name:'2급',desc:'2과목 · 40문항 · 40분',minutes:40,per:20,subjects:['컴퓨터 일반','스프레드시트 일반'],tiers:[1],pass:{type:'avg',min:40,avg:60}}]},
  toeic:{id:'toeic',name:'토익 단어',full:'토익 빈출 단어',org:'ETS',choices:4,ls:'주제',lt:'품사',vocab:true,
   tracks:[
    {id:'600',name:'600점 목표',desc:'기본 단어',tiers:[1],minutes:10,total:40,subjects:VCATS,pass:{type:'vocab',goal:80}},
@@ -1304,6 +1304,7 @@ function normQ(r,defExam,bank){
  if(Array.isArray(r.tags)) q.tags=r.tags.filter(t=>typeof t==='string').slice(0,8);
  ['year','round','no'].forEach(f=>{if(r[f]!=null&&Number.isFinite(+r[f])) q[f]=+r[f]});
  q.points=Number.isFinite(+r.points)&&+r.points>0?+r.points:1;
+ if(+r.tier===2||+r.tier===3) q.tier=+r.tier; // 급수·단계 표시(컴활: 2 = 1급 전용 → 2급 시험에서는 뺌)
  if(typeof r.passage==='string'&&r.passage.trim()) q.passage=r.passage.trim();
  if(typeof r.explanation==='string'&&r.explanation.trim()) q.explanation=r.explanation.trim();
  if(typeof r.image==='string'&&(/^data:image\//.test(r.image)||!/^[a-z]+:/i.test(r.image))) q.image=r.image;
@@ -1904,7 +1905,7 @@ function qDetail(q,st,opts={}){
   ${q.passage?`<div class="passage">${nl(q.passage)}</div>`:''}
   ${figsHtml(q)}
   ${q.image?`<img class="qimg" src="${esc(q.image)}" alt="문제 자료">`:''}
-  <ol class="qd-ch">${q.choices.map((c,i)=>`<li class="${i+1===q.answer?'ans':''}${mine===i+1&&i+1!==q.answer?' mine':''}"><span class="cn">${CL(q.exam,i+1)}</span><span${q.rc?' lang="en"':''}>${isPic(q)?'':nl(c)}</span>${i+1===q.answer?'<span class="tag red">정답</span>':mine===i+1?'<span class="tag">내 답</span>':''}</li>`).join('')}</ol>
+  <ol class="qd-ch">${q.choices.map((c,i)=>`<li class="${i+1===q.answer?'ans':''}${mine===i+1&&i+1!==q.answer?' mine':''}"><span class="cn">${CL(q.exam,i+1)}</span><span${q.rc?' lang="en"':''}>${isPic(q)?'':chHtml(c)}</span>${i+1===q.answer?'<span class="tag red">정답</span>':mine===i+1?'<span class="tag">내 답</span>':''}</li>`).join('')}</ol>
   <div class="exp">${q.explanation?nl(q.explanation):'<span class="small">해설이 없는 문제예요.</span>'}${q.rc&&q.rc.tr?`<p class="rctr"><b>해석</b>${esc(q.rc.tr)}</p>`:''}</div>
   ${aiBlock(q)}
   ${opts.memo===false?'':memoBlock(q,st)}
@@ -2224,7 +2225,7 @@ function vQuiz(){
  const choices=q.choices.map((c,i)=>{
   const n=i+1; let cl='ch'; if(a.ch===n) cl+=' sel'; if(graded&&n===q.answer) cl+=' right';
   const mark=graded&&n===q.answer?'<svg class="mk" viewBox="0 0 52 56" aria-hidden="true"><circle pathLength="1" cx="26" cy="28" r="19"/></svg>':graded&&a.ch===n&&n!==q.answer?'<svg class="mk" viewBox="0 0 52 56" aria-hidden="true"><path pathLength="1" d="M13 46 39 8"/></svg>':'';
-  return `<button class="${cl}" id="ch-${n}" data-act="choose" data-n="${n}" role="radio" aria-checked="${a.ch===n}" ${graded?'disabled':''}><span class="cn">${CL(s.exam,n)}</span>${pic?`<span class="sr">${n}번</span>`:`<span${(q.v&&q.vt!=='m')||q.rc?' lang="en"':''}>${nl(c)}</span>`}${mark}${graded&&n===q.answer?'<span class="sr">정답</span>':graded&&a.ch===n?'<span class="sr">내가 고른 오답</span>':''}</button>`;
+  return `<button class="${cl}" id="ch-${n}" data-act="choose" data-n="${n}" role="radio" aria-checked="${a.ch===n}" ${graded?'disabled':''}><span class="cn">${CL(s.exam,n)}</span>${pic?`<span class="sr">${n}번</span>`:`<span${(q.v&&q.vt!=='m')||q.rc?' lang="en"':''}>${chHtml(c)}</span>`}${mark}${graded&&n===q.answer?'<span class="sr">정답</span>':graded&&a.ch===n?'<span class="sr">내가 고른 오답</span>':''}</button>`;
  }).join('');
  let acts='';
  if(study){
@@ -2679,6 +2680,7 @@ function figGrid(b){
 const codeHtml=x=>String(x).split('\n').map(l=>{const sp=l.match(/^[ \t]*/)[0]; return `<span class="cl" style="--i:${sp.replace(/\t/g,'    ').length}">${esc(l.slice(sp.length)).replace(/([.,(])(?=[^\s<&])/g,'$1<wbr>')||'&nbsp;'}</span>`}).join('');
 const figCode=b=>`<figure class="qfig">${b.title||b.lang?`<figcaption>${esc(b.title||'')}${b.lang?`<span class="tag">${esc(b.lang)}</span>`:''}</figcaption>`:''}<pre class="code" tabindex="0"><code>${codeHtml(b.x)}</code></pre></figure>`;
 const fxBreak=h=>h.replace(/,(?=[^\s&])/g,',<wbr>'); // 수식 보기는 쉼표 뒤에서 꺾이게
+const chHtml=c=>/^[={]/.test(c)?fxBreak(nl(c)):nl(c);
 const figHtml=b=>b.t==='sheet'?figSheet(b):b.t==='grid'?figGrid(b):b.t==='code'?figCode(b):'';
 const figsHtml=q=>(q.fig||[]).map(figHtml).join('');
 const figText=q=>(q.fig||[]).map(b=>b.t==='code'?`[${b.title||b.lang||'코드'}]\n${b.x}`:b.t==='sheet'?`[${b.title||'워크시트'}] (첫 줄은 ${b.r0||1}행, 첫 칸은 ${b.c0||'A'}열)\n${(b.rows||[]).map(r=>r.join('\t')).join('\n')}`:`[${b.title||'표'}]\n${(b.head?[b.head]:[]).concat(b.rows||[]).map(r=>r.join('\t')).join('\n')}`).join('\n');
@@ -3250,7 +3252,7 @@ if(window.claude&&window.claude.hot&&window.claude.hot.ready) window.claude.hot.
 </script>
 <script>
 (()=>{'use strict';
- const BUILD='20261123-0511';
+ const BUILD='20261123-0535';
  if(window.top!==window.self||!('serviceWorker' in navigator)) return;
  window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
  let hiddenAt=0;
