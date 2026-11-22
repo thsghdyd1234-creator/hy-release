@@ -465,6 +465,18 @@ button.kw-main{cursor:pointer}
 .st-t thead th{border-top:0;background:var(--tint);color:var(--redt);font-weight:700;white-space:nowrap}
 .st-t tbody th{font-weight:600;white-space:nowrap}
 .st-t td{min-width:8.5em}
+@media (max-width:640px){
+ .st-t,.st-t tbody,.st-t tr,.st-t tbody th,.st-t td{display:block}
+ .st-t thead{display:none}
+ .st-t tr{padding:11px 14px 12px}
+ .st-t tr+tr{border-top:1px solid var(--pinkl)}
+ .st-t tbody th,.st-t td{padding:0;border:0;min-width:0;white-space:normal}
+ .st-t tbody th{font-size:15.5px;font-weight:700;line-height:1.45}
+ .st-t td{margin-top:4px;font-size:14.5px;line-height:1.6}
+ .st-t td::before{content:attr(data-h);margin-right:8px;color:var(--redt);font-size:12.5px;font-weight:700}
+ .st-t.one td::before{content:none}
+ .st-t td.e{display:none}
+}
 .notes{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
 .notes li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;font-size:15.5px;line-height:1.65}
 .notes li::before{content:'!';display:grid;place-items:center;width:18px;height:25px;margin-top:1px;border:1.5px solid var(--red);border-radius:50%;color:var(--red);font-weight:700;font-size:13px;line-height:1}
@@ -537,6 +549,61 @@ button.kw-main{cursor:pointer}
 .zoombox{overflow:auto;max-height:72vh;border:1px solid var(--line);background:#fff}
 .zoombox img{display:block;max-width:none}
 .modal-box:has(.zoombox){width:min(1000px,100%)}
+/* 공부 노트 블록과 문제 그림: 시험지에 실린 자료처럼 */
+.kc{padding:1px 5px;border-radius:5px;background:var(--soft);font-size:.88em;word-break:break-all}
+.st-h{margin-top:34px}
+.st-p{margin-top:12px;max-width:44em;font-size:16px;line-height:1.8}
+.st-ul{margin:12px 0 0;padding-left:20px;max-width:44em;font-size:15.5px;line-height:1.75}
+.st-ul li+li{margin-top:4px}
+.qfig{margin:22px 0 0;max-width:100%}
+.qfig figcaption{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;font-weight:700;font-size:15px}
+.qfig-w{overflow-x:auto;max-width:100%}
+.ws{border-collapse:collapse;background:var(--paper);font:400 14px/1.4 var(--sans)}
+.ws th,.ws td{height:30px;padding:4px 10px;border:1px solid var(--line);white-space:nowrap}
+.ws thead th,.ws tbody th{min-width:34px;background:var(--soft);color:var(--mute);font-weight:500;font-size:12.5px;text-align:center}
+.ws td{min-width:62px}
+.ws td.num{text-align:right;font-variant-numeric:tabular-nums}
+.ws td.fx{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px}
+.ws td.hi{background:var(--tint);box-shadow:inset 0 0 0 2px var(--red)}
+.gridfig{border-collapse:collapse;background:var(--paper);font-size:14px;line-height:1.45}
+.gridfig th,.gridfig td{padding:6px 10px;border:1px solid var(--ink);text-align:left;vertical-align:top}
+.gridfig th{background:var(--soft);font-weight:700;white-space:nowrap}
+.code{margin:0;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--ink);border-radius:0 8px 8px 0;background:var(--soft);overflow-x:auto;font-size:13.5px;line-height:1.65;tab-size:4}
+.code code{font-size:inherit;white-space:pre}
+.qfx{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px;font-size:14.5px;line-height:1.6}
+.qfx code{padding:1px 6px;border-radius:5px;background:var(--soft);word-break:break-all}
+.fx-r{font-weight:700;color:var(--redt);white-space:nowrap}
+.fx-e{display:block;color:var(--ink2);font-size:14px}
+.st-steps{margin:0;padding:12px 16px 12px 38px;border:1.5px solid var(--pink);border-radius:12px;background:var(--paper);font-size:15.5px;line-height:1.7;max-width:46em}
+.st-steps li+li{margin-top:6px}
+.src{margin:22px 0 0;max-width:44em}
+.src figcaption{margin-bottom:8px;font-size:13px;font-weight:700;color:var(--redt)}
+.src blockquote{margin:0 0 10px;padding:14px 18px;border:1px solid var(--ink);font:400 16.5px/1.85 var(--serif)}
+.src-a{padding:10px 14px;border-radius:10px;background:var(--tint);font-size:15px;line-height:1.65}
+.src-a p+p{margin-top:4px}
+.src-a b{margin-right:8px;color:var(--redt)}
+.deep{margin:22px 0 0;border:1px solid var(--line);border-radius:12px;background:var(--paper);max-width:52em}
+.deep-h{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:52px;padding:10px 16px;border:0;background:none;color:inherit;font-weight:700;font-size:15.5px;text-align:left;cursor:pointer}
+.deep-h small{display:block;font-size:12px;font-weight:700;color:var(--redt)}
+.deep-b{padding:0 16px 18px}
+.deep-b>:first-child{margin-top:4px}
+.st-note{margin-top:16px;padding:10px 14px;border-left:3px solid var(--red);border-radius:0 8px 8px 0;background:var(--tint);font-size:15px;line-height:1.65;max-width:44em}
+.st-note b{margin-right:8px;color:var(--redt)}
+.tl{list-style:none;margin:0;padding:4px 0;max-width:44em;border:1.5px solid var(--pink);border-radius:12px;background:var(--paper)}
+.tl li{position:relative;display:grid;grid-template-columns:84px 1fr;gap:0 30px;padding:9px 16px 9px 14px}
+.tl li::before{content:'';position:absolute;left:112px;top:0;bottom:0;width:2px;background:var(--pinkl)}
+.tl li:first-child::before{top:18px}
+.tl li:last-child::before{bottom:calc(100% - 18px)}
+.tl li::after{content:'';position:absolute;left:108px;top:15px;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px var(--paper)}
+.tl time{text-align:right;font-size:14.5px;font-weight:700;line-height:1.55;color:var(--redt);font-variant-numeric:tabular-nums}
+.tl b{font-weight:600;font-size:15.5px;line-height:1.55}
+.tl span{display:block;margin-top:1px;font-size:13.5px;line-height:1.5;color:var(--mute)}
+.st-toph{margin:18px 0 0;font-size:15px}
+.st-toph a{color:inherit;text-decoration:none}
+.st-toph a:hover{text-decoration:underline}
+@media (max-width:520px){.tl li{grid-template-columns:62px 1fr;gap:0 26px;padding-left:10px}.tl li::before{left:84px}.tl li::after{left:80px}.tl time{font-size:13.5px}}
+.sq .code{margin-top:12px}
+.paper .qfig,.qd .qfig{margin-top:14px}
 /* 이 기기용 아이디와 로그인 화면: 답안지의 성명 칸처럼 분홍 테두리 한 장 */
 body[data-route=gate] .top,body[data-route=gate] .tabbar,body[data-route=gate] .mtabs{display:none!important}
 .gate{max-width:420px;margin:5vh auto 0;padding:26px 22px;border:1.5px solid var(--pink);border-radius:14px;background:var(--paper)}
@@ -623,7 +690,7 @@ clock:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
 star:'<path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/>',
 spark:'<path d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7z"/>',
 copy:'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
-down:'<path d="M12 4v11M7 10l5 5 5-5M4 20h16"/>',
+down:'<path d="M12 4v11M7 10l5 5 5-5M4 20h16"/>',cd:'<path d="M6 9l6 6 6-6"/>',cu:'<path d="M6 15l6-6 6 6"/>',
 up:'<path d="M12 16V5M7 10l5-5 5 5M4 20h16"/>',
 sheet:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/>',
 play:'<path d="M8 5.5v13l10-6.5z"/>',
@@ -971,6 +1038,14 @@ function syncUI(){
 const BANK={all:new Map(),ex:{arch:[],history:[],comp:[],toeic:[],rc:[]},base:[],ready:false,err:''};
 const isPic=q=>!!q.image&&q.choices.length===5&&q.choices.every((c,i)=>c===CIRC[i]); // 문제 전체가 그림 한 장인 문항(기출 팩)
 const SRC={official:'기출',restored:'복원',sample:'샘플',custom:'직접 추가',vocab:'토익 단어',made:'자체 제작'};
+function normFig(f){ // 문제에 붙는 그림: 워크시트·표·코드 (글자만 받아서 그려요)
+ if(!f||typeof f!=='object') return null;
+ const str=v=>v==null?'':String(v).slice(0,120), rows=a=>Array.isArray(a)?a.slice(0,40).map(r=>Array.isArray(r)?r.slice(0,14).map(str):[]):[], title=typeof f.title==='string'?f.title.slice(0,80):'';
+ if(f.t==='sheet'){const o={t:'sheet',title,rows:rows(f.rows)}; if(/^[A-Z]$/.test(f.c0||'')) o.c0=f.c0; if(Number.isInteger(f.r0)&&f.r0>0&&f.r0<1000) o.r0=f.r0; if(Array.isArray(f.hi)) o.hi=f.hi.filter(x=>/^[A-Z]\d{1,3}$/.test(x)).slice(0,20); return o.rows.length?o:null}
+ if(f.t==='grid'){const o={t:'grid',title,rows:rows(f.rows)}; if(Array.isArray(f.head)) o.head=f.head.slice(0,14).map(str); if(f.rh) o.rh=true; return o.rows.length?o:null}
+ if(f.t==='code'&&typeof f.x==='string'&&f.x.trim()) return {t:'code',title,lang:typeof f.lang==='string'?f.lang.slice(0,12):'',x:f.x.slice(0,3000)};
+ return null;
+}
 function normQ(r,defExam,bank){
  if(!r||typeof r!=='object'||Array.isArray(r)) return {err:'항목이 객체가 아니에요'};
  const exam=r.exam||defExam;
@@ -990,6 +1065,7 @@ function normQ(r,defExam,bank){
  if(typeof r.passage==='string'&&r.passage.trim()) q.passage=r.passage.trim();
  if(typeof r.explanation==='string'&&r.explanation.trim()) q.explanation=r.explanation.trim();
  if(typeof r.image==='string'&&(/^data:image\//.test(r.image)||!/^[a-z]+:/i.test(r.image))) q.image=r.image;
+ if(Array.isArray(r.fig)){const fs=r.fig.map(normFig).filter(Boolean).slice(0,4); if(fs.length) q.fig=fs}
  if(typeof r.text==='string'&&r.text.trim()) q.text=r.text.trim().slice(0,4000);
  return {q};
 }
@@ -1013,8 +1089,10 @@ async function loadBase(){
  catch(e){VOC.err='토익 단어 파일을 불러오지 못했어요.'}
  try{const j=await (await fetch('data/rc.json',{cache:'no-cache'})).json(); rcInit(j); BANK.base=BANK.base.concat(RC.qs)}
  catch(e){RC.err='토익 RC 문제 파일을 불러오지 못했어요.'}
- try{studyInit(await (await fetch('data/khist.json',{cache:'no-cache'})).json())}
- catch(e){STUDY.err='한국사 공부 자료 파일을 불러오지 못했어요.'}
+ for(const ex in COURSE_FILES){
+  try{const r=await fetch(COURSE_FILES[ex],{cache:'no-cache'}); if(r.status===404) continue; studyInit(ex,await r.json())} // 파일이 아직 없는 과정은 조용히 건너뛰어요
+  catch(e){STUDYERR[ex]=EXAMS[ex].name+' 공부 자료 파일을 불러오지 못했어요.'}
+ }
  BANK.ready=true; rebuild();
 }
 const POOL=(ex=U.settings.exam,tr=TR(ex))=>BANK.ex[ex].filter(q=>inTr(q,tr));
@@ -1516,7 +1594,7 @@ function focusSet(k,ex=U.settings.exam){
 }
 
 /* ---------- sessions ---------- */
-const UI={route:'home',arg:'',gate:null,gf:{pid:null,err:'',name:'',keep:true},st:{hide:'',open:{},q:'',days:{}},sq:{},words:{cat:'',st:'all',tier:0,q:'',open:{},limit:50},cards:null,vh:{},custom:{subs:[],tops:[],scope:'all',count:20},notes:{f:'due',subj:'',reason:'',sort:'due',q:'',open:{},limit:30},stats:{p:0},imp:{text:'',rep:null,name:''},result:null,coach:null,aiLive:{},resOpen:{}};
+const UI={route:'home',arg:'',gate:null,gf:{pid:null,err:'',name:'',keep:true},st:{hide:'',open:{},ob:{},q:'',days:{}},sq:{},words:{cat:'',st:'all',tier:0,q:'',open:{},limit:50},cards:null,vh:{},custom:{subs:[],tops:[],scope:'all',count:20},notes:{f:'due',subj:'',reason:'',sort:'due',q:'',open:{},limit:30},stats:{p:0},imp:{text:'',rep:null,name:''},result:null,coach:null,aiLive:{},resOpen:{}};
 const UI0=JSON.stringify(UI);
 function uiReset(){Object.assign(UI,JSON.parse(UI0),{route:UI.route,arg:UI.arg})} // 아이디가 바뀔 때: 앞사람의 화면 상태를 남기지 않아요
 let SAMPLE=null, DL=null, OBS=[], AFTER=[], MODAL=false;
@@ -1582,6 +1660,7 @@ function qDetail(q,st,opts={}){
  return `<div class="qd">
   ${q.rc?rcPassage(q,null,true)+rcStem(q,null,true).replace('class="stem','class="stem sm'):`<p class="stem sm">${stemHTML(q.stem)}</p>`}
   ${q.passage?`<div class="passage">${nl(q.passage)}</div>`:''}
+  ${figsHtml(q)}
   ${q.image?`<img class="qimg" src="${esc(q.image)}" alt="문제 자료">`:''}
   <ol class="qd-ch">${q.choices.map((c,i)=>`<li class="${i+1===q.answer?'ans':''}${mine===i+1&&i+1!==q.answer?' mine':''}"><span class="cn">${CL(q.exam,i+1)}</span><span${q.rc?' lang="en"':''}>${isPic(q)?'':nl(c)}</span>${i+1===q.answer?'<span class="tag red">정답</span>':mine===i+1?'<span class="tag">내 답</span>':''}</li>`).join('')}</ol>
   <div class="exp">${q.explanation?nl(q.explanation):'<span class="small">해설이 없는 문제예요.</span>'}${q.rc&&q.rc.tr?`<p class="rctr"><b>해석</b>${esc(q.rc.tr)}</p>`:''}</div>
@@ -1763,7 +1842,7 @@ function vHome(){
    <div><dt>${tr.pass.type==='avg'?'예상 평균':tr.pass.type==='rc'?'예상 정답률':'예상 점수'}</dt><dd class="${pr.ok===false&&!pr.none?'red':''}">${predShort(pr)}</dd></div>
   </dl>
  </section>
- ${ex==='history'&&STUDY.ready?`<div class="strip"><p>개념부터 잡고 싶다면 7일 완성 공부 노트로 시작하세요. 끝낸 단원 ${STUDY.order.filter(suDone).length} / ${STUDY.order.length}</p><a class="btn line sm" href="#study">공부하러 가기</a></div>`:''}
+ ${STUDY.ready&&STUDY.ex===ex?`<div class="strip"><p>${ex==='history'?'개념부터 잡고 싶다면 7일 완성 공부 노트로 시작하세요.':'개념과 실기 순서는 공부 노트에 정리해 뒀어요.'} 끝낸 단원 ${STUDY.order.filter(suDone).length} / ${STUDY.order.length}</p><a class="btn line sm" href="#study">공부하러 가기</a></div>`:''}
  <div class="home-grid">
   <section class="plan card" aria-labelledby="plan-h">
    <div class="plan-a"><h2 class="h2" id="plan-h">오늘의 학습</h2>
@@ -1921,6 +2000,7 @@ function vQuiz(){
    ${fb}
    <div class="qact">${acts}</div></div></div>`:`${q.v?vStem(q):`<p class="stem${pic?' sr':''}" id="qstem">${stemHTML(q.stem)}</p>`}
    ${q.passage?`<div class="passage">${nl(q.passage)}</div>`:''}
+   ${figsHtml(q)}
    ${q.image?(pic?`<button class="qzoom" data-act="zoom" data-q="${esc(id)}" aria-label="문제 그림 크게 보기"><img class="qimg" src="${esc(q.image)}" alt="${esc(q.stem)} 문제지 그림"></button>`:`<img class="qimg" src="${esc(q.image)}" alt="문제 자료">`):''}
    <div class="choices${pic?' pic':''}" role="radiogroup" aria-labelledby="qstem">${choices}</div>
    ${fb}
@@ -2183,6 +2263,7 @@ function vBank(){
    <div><dt><code>explanation</code><span class="tag">선택</span></dt><dd>해설. 없으면 문제 화면에서 AI 해설을 만들 수 있어요.</dd></div>
    <div><dt><code>source</code> · <code>year</code> · <code>round</code> · <code>no</code><span class="tag">선택</span></dt><dd>official(기출) · restored(복원) · custom. 연도·회차·번호를 넣으면 회차별 풀기와 출제 빈도 분석이 열려요.</dd></div>
    <div><dt><code>points</code> · <code>passage</code> · <code>image</code><span class="tag">선택</span></dt><dd>배점(한국사), 자료 상자 글(토익 RC 지문도 여기에), 이미지(data: 주소)</dd></div>
+   <div><dt><code>fig</code><span class="tag">선택</span></dt><dd>그림 대신 쓰는 표·코드. <code>[{"t":"sheet","rows":[["부서","실적"],["영업","100"]]}]</code>처럼 워크시트(sheet), 표(grid), 코드(code)를 글자로 적어요.</dd></div>
    <div><dt><code>bank</code><span class="tag">선택</span></dt><dd>{ "questions": [ ... ] } 바깥에 { "id", "name" }을 적으면 같은 묶음을 다시 가져올 때 겹치지 않고 바뀌어요. 그림이 많은 묶음은 이 기기에만 저장돼요.</dd></div>
   </dl>
   <details style="margin-top:10px"><summary>과목·시대 이름 보기</summary><ul class="small" style="margin:6px 0 0;padding-left:18px"><li>건축기사: 건축계획 · 건축시공 · 건축구조 · 건축설비 · 건축관계법규 (2027년 기준에서는 건축계획과 건축관계법규가 '건축계획 및 설계'로 합쳐져 분석돼요)</li><li>한국사: ${ERAS.join(' · ')}</li><li>컴활: 컴퓨터 일반 · 스프레드시트 일반 · 데이터베이스 일반</li><li>토익 단어: ${esc(VCATS.join(' · '))}</li><li>토익 RC: ${RCPARTS.join(' · ')}</li></ul></details>
@@ -2252,7 +2333,7 @@ function restoreBackup(txt,pasted){
 async function aiExplain(id){
  const q=BANK.all.get(id); if(!q||!SAMPLE||UI.aiLive[id]) return;
  const E=EXAMS[q.exam], w=q.v;
- const prompt=w?['너는 토익 강사야. 아래 단어를 한국 수험생에게 한국어로 짧고 정확하게 설명해.','마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심 뜻: 한 줄','토익에서 자주 쓰는 표현: 2~3개 (영어 표현 - 뜻)','헷갈리는 단어: 1~2개와 차이 한 줄씩','예문: 영어 예문 2개와 각각의 해석','확실하지 않은 내용은 지어내지 마.','',`단어: ${w.w} (${POSL[w.pos]}) / 뜻: ${w.ko}`,`예문: ${vPlain(w.ex)} (${w.exko})`,w.fam?'파생어: '+w.fam.map(f=>f[0]+' '+POSL[f[1]]).join(', '):''].filter(Boolean).join('\n'):q.rc?[`너는 토익 RC 강사야. 아래 ${q.subject} 문제의 해설을 한국어로 짧고 정확하게 써.`,`정답은 ${ANS(q)}로 확정돼 있어. 정답을 바꾸지 마.`,'마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','정답 근거: 근거가 되는 문장이나 구조를 짚어 두세 문장','오답 체크: 오답 보기마다 "(A): 틀린 이유" 한 줄씩','비슷한 문제 푸는 요령: 한 줄','확실하지 않은 내용은 지어내지 마.','',`[${q.subject} / ${q.topic}]`,rcPlain(q)?'지문:\n'+rcPlain(q):'',q.stem?'문제: '+q.stem:'',...q.choices.map((c,i)=>'('+CL(q.exam,i+1)+') '+c),q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n'):[`너는 ${E.full} 수험생을 돕는 해설 강사야. 아래 객관식 문제의 해설을 한국어로 짧고 정확하게 써.`,`정답은 ${q.answer}번으로 확정돼 있어. 정답 번호를 바꾸지 마.`,'마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','정답 근거: 두세 문장','오답 체크: 오답 보기마다 "②: 틀린 이유" 한 줄씩','암기 포인트: 한 줄','확실하지 않은 사실은 지어내지 말고 "확인 필요"라고 적어.','',`[${q.subject} / ${q.topic}]`,...(q.text?['문제와 보기(문제지에서 옮겨 적은 글. 그림·지도 자료는 빠져 있음):',q.text]:['문제: '+q.stem,q.passage?'자료: '+q.passage:'',...q.choices.map((c,i)=>CIRC[i]+' '+c)]),q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n');
+ const prompt=w?['너는 토익 강사야. 아래 단어를 한국 수험생에게 한국어로 짧고 정확하게 설명해.','마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심 뜻: 한 줄','토익에서 자주 쓰는 표현: 2~3개 (영어 표현 - 뜻)','헷갈리는 단어: 1~2개와 차이 한 줄씩','예문: 영어 예문 2개와 각각의 해석','확실하지 않은 내용은 지어내지 마.','',`단어: ${w.w} (${POSL[w.pos]}) / 뜻: ${w.ko}`,`예문: ${vPlain(w.ex)} (${w.exko})`,w.fam?'파생어: '+w.fam.map(f=>f[0]+' '+POSL[f[1]]).join(', '):''].filter(Boolean).join('\n'):q.rc?[`너는 토익 RC 강사야. 아래 ${q.subject} 문제의 해설을 한국어로 짧고 정확하게 써.`,`정답은 ${ANS(q)}로 확정돼 있어. 정답을 바꾸지 마.`,'마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','정답 근거: 근거가 되는 문장이나 구조를 짚어 두세 문장','오답 체크: 오답 보기마다 "(A): 틀린 이유" 한 줄씩','비슷한 문제 푸는 요령: 한 줄','확실하지 않은 내용은 지어내지 마.','',`[${q.subject} / ${q.topic}]`,rcPlain(q)?'지문:\n'+rcPlain(q):'',q.stem?'문제: '+q.stem:'',...q.choices.map((c,i)=>'('+CL(q.exam,i+1)+') '+c),q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n'):[`너는 ${E.full} 수험생을 돕는 해설 강사야. 아래 객관식 문제의 해설을 한국어로 짧고 정확하게 써.`,`정답은 ${q.answer}번으로 확정돼 있어. 정답 번호를 바꾸지 마.`,'마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','정답 근거: 두세 문장','오답 체크: 오답 보기마다 "②: 틀린 이유" 한 줄씩','암기 포인트: 한 줄','확실하지 않은 사실은 지어내지 말고 "확인 필요"라고 적어.','',`[${q.subject} / ${q.topic}]`,...(q.text?['문제와 보기(문제지에서 옮겨 적은 글. 그림·지도 자료는 빠져 있음):',q.text]:['문제: '+q.stem,q.passage?'자료: '+q.passage:'',figText(q),...q.choices.map((c,i)=>CIRC[i]+' '+c)]),q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n');
  UI.aiLive[id]={text:''}; render(true);
  try{
   const r=await SAMPLE(prompt,{modelTier:'default',onText:({text})=>{UI.aiLive[id].text=text; const el=document.querySelector('[data-ai="'+CSS.escape(id)+'"]'); if(el) el.textContent=text}});
@@ -2297,38 +2378,89 @@ function closeModal(){const m=$('#modal'); if(!MODAL) return; m.hidden=true; m.i
 let TT=0;
 function toast(msg){const t=$('#toast'); t.textContent=msg; t.classList.add('on'); clearTimeout(TT); TT=setTimeout(()=>t.classList.remove('on'),2800)}
 
-/* ---------- study: 한국사 7일 완성 (data/khist.json) ---------- */
-const STUDY={ready:false,err:'',d:null,units:new Map(),order:[]};
-function studyInit(j){
- if(!j||j.format!=='hapnote-study/v1'||!Array.isArray(j.days)) throw new Error('study format');
- STUDY.units=new Map(); STUDY.order=[];
- j.days.forEach(d=>d.units.forEach((u,i)=>{u.day=d.n; u.idx=i; STUDY.units.set(u.id,u); STUDY.order.push(u.id)}));
- STUDY.d=j; STUDY.ready=true;
+/* ---------- study: 공부 노트 (한국사 data/khist.json · 컴활 data/cstudy.json) ---------- */
+const COURSE_FILES={history:'data/khist.json'}; // 컴활 공부 노트(data/cstudy.json)가 준비되면 comp 를 더해요
+const COURSES={};
+const NOSTUDY={ready:false,err:'',d:null,units:new Map(),order:[],core:[],ex:''};
+let STUDY=NOSTUDY; // 지금 고른 시험의 공부 노트
+function studyInit(ex,j){
+ if(!j||!/^hapnote-study\/v[12]$/.test(j.format)||!Array.isArray(j.days)) throw new Error('study format');
+ const C={ready:true,err:'',d:j,units:new Map(),order:[],core:[],ex};
+ const walk=(list,u,st)=>list.forEach(b=>{b._i=u.id+':'+(st.n++); if(b.t==='deep') walk(b.items,u,st)});
+ j.days.forEach(d=>d.units.forEach((u,i)=>{
+  u.day=d.n; u.idx=i; if(d.opt) u.opt=true;
+  if(!u.pre){u.pre=(u.story||[]).map(x=>({t:'p',x})).concat((u.flow||[]).map(items=>({t:'flow',items}))); u.post=(u.tables||[]).map(t=>Object.assign({t:'table'},t))} // 예전 형식
+  u.post=u.post||[]; u.traps=u.traps||[]; u.tips=u.tips||[]; u.keys=u.keys||[]; u.quiz=u.quiz||[];
+  const st={n:0}; walk(u.pre,u,st); walk(u.post,u,st);
+  C.units.set(u.id,u); C.order.push(u.id); if(!u.opt) C.core.push(u.id)}));
+ COURSES[ex]=C;
 }
+const studyUse=()=>(STUDY=COURSES[U.settings.exam]||(STUDYERR[U.settings.exam]?Object.assign({},NOSTUDY,{err:STUDYERR[U.settings.exam]}):NOSTUDY));
+const STUDYERR={};
 const suOf=id=>U.study.u[id]||{};
 const suDone=id=>!!suOf(id).d;
-const rich=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b class="pen">$1</b>'); // 원고의 굵은 글씨 = 빨간 펜 밑줄
-const FQL=['최근 기출에는 드물어요','가끔 나와요','자주 나와요','기출 단골이에요'];
+// 원고의 굵은 글씨 = 빨간 펜 밑줄, `글자` = 수식·코드, \n = 줄 바꿈
+const rich=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b class="pen">$1</b>').replace(/`([^`]+)`/g,'<code class="kc">$1</code>').replace(/\\n/g,'<br>');
+const FQL=['최근 기출에는 드물어요','가끔 나와요','자주 나와요','기출 단골이에요'], FQS=['','알아 두면 좋아요','자주 물어요','꼭 외워야 해요'];
 const fqDots=s=>[1,2,3].map(n=>`<i class="bb${n<=s?' on':''}"></i>`).join('');
-const fq=k=>k.s==null?'<span class="fq"></span>':`<span class="fq" role="img" aria-label="${FQL[k.s]} (${STUDY.d.corpus.n}회 중 ${k.f}회)" title="${FQL[k.s]} · ${STUDY.d.corpus.n}회 중 ${k.f}회">${fqDots(k.s)}</span>`;
+const fq=k=>{const D=STUDY.d; if(k.s==null) return '<span class="fq"></span>'; const t=D.corpus?`${FQL[k.s]} (${D.corpus.n}회 중 ${k.f}회)`:FQS[k.s]; return `<span class="fq" role="img" aria-label="${t}" title="${t}">${fqDots(k.s)}</span>`};
 const eraShort=n=>n==='선사·고조선·여러 나라'?'선사·고조선':n==='근대(개항기)'?'근대':n;
+const dayLab=n=>{const d=STUDY.d.days[n-1]; return (d&&d.tag)||n+'일차'};
 function studyPace(){
- const ids=STUDY.order, left=ids.filter(id=>!suDone(id)), t0=sod(Date.now());
- const doneToday=ids.filter(id=>suOf(id).d>=t0).length, dd=dday('history');
+ const ids=STUDY.core.some(id=>!suDone(id))?STUDY.core:STUDY.order, left=ids.filter(id=>!suDone(id)), t0=sod(Date.now());
+ const doneToday=ids.filter(id=>suOf(id).d>=t0).length, dd=dday(STUDY.ex);
  let today, per=0;
  if(dd!=null&&dd>0){per=Math.ceil((left.length+doneToday)/dd); today=left.slice(0,Math.max(0,per-doneToday))}
- else{const dn=left.length?STUDY.units.get(left[0]).day:0; today=left.filter(id=>STUDY.units.get(id).day===dn)}
+ else{const dn=left.length?STUDY.units.get(left[0]).day:0; today=left.filter(id=>STUDY.units.get(id).day===dn).slice(0,STUDY.d.days.length&&STUDY.d.days[0].tag?4:99)}
  return {left,doneToday,dd,today,per};
 }
 const hideChips=()=>`<div class="chips" role="group" aria-label="빨간 책받침으로 가리기">${[['','다 보기'],['n','이름 가리기'],['d','설명 가리기']].map(([v,l])=>`<button class="chip" data-act="shide" data-v="${v}" aria-pressed="${UI.st.hide===v}">${l}</button>`).join('')}</div>`;
 function kwRow(u,k,i,link){
  const id=u.id+':'+i, hide=UI.st.hide, open=!!UI.st.open[id], mk=!!U.study.k[id];
- const inner=`<span class="kw-n">${esc(k.k)}</span><span class="kw-d">${esc(k.d)}</span>`;
- return `<li class="kw${open?' open':''}">${fq(k)}<div>${hide?`<button class="kw-main" data-act="skopen" data-id="${id}" ${open?'':'aria-label="가린 부분 보기"'}>${inner}</button>`:`<div class="kw-main">${inner}</div>`}${link?`<span class="kw-u"><a href="#study/${u.id}">${u.day}일차 · ${esc(u.title)}</a></span>`:''}</div><button class="kw-flag" data-act="skmark" data-id="${id}" aria-pressed="${mk}" aria-label="${esc(k.k)}: 헷갈리는 키워드로 표시">${ico('flag')}</button></li>`;
+ const inner=`<span class="kw-n">${rich(k.k)}</span><span class="kw-d">${rich(k.d)}</span>`;
+ return `<li class="kw${open?' open':''}">${fq(k)}<div>${hide?`<button class="kw-main" data-act="skopen" data-id="${id}" ${open?'':'aria-label="가린 부분 보기"'}>${inner}</button>`:`<div class="kw-main">${inner}</div>`}${link?`<span class="kw-u"><a href="#study/${u.id}">${esc(dayLab(u.day))} · ${esc(u.title)}</a></span>`:''}</div><button class="kw-flag" data-act="skmark" data-id="${id}" aria-pressed="${mk}" aria-label="${esc(k.k)}: 헷갈리는 키워드로 표시">${ico('flag')}</button></li>`;
 }
-/* 퀴즈: 단서→주인(c) · O/X(o) · 순서(s) */
+/* 그림: 워크시트(sheet) · 표(grid) · 코드(code). 문제(q.fig)와 공부 노트가 함께 써요 */
+const isNum=s=>/^[-+]?(\d{1,3}(,\d{3})+|\d+)(\.\d+)?%?$/.test(s);
+function figSheet(b){
+ const rows=b.rows||[], n=Math.max(1,...rows.map(r=>r.length)), c0=(b.c0||'A').charCodeAt(0), r0=b.r0||1, hi=new Set(b.hi||[]), col=i=>String.fromCharCode(c0+i), cap=b.title||'워크시트';
+ return `<figure class="qfig"><figcaption>${esc(cap)}</figcaption><div class="qfig-w" tabindex="0" role="group" aria-label="${esc(cap)} 표"><table class="ws"><thead><tr><th></th>${Array.from({length:n},(_,i)=>`<th scope="col">${col(i)}</th>`).join('')}</tr></thead><tbody>${rows.map((r,ri)=>`<tr><th scope="row">${r0+ri}</th>${Array.from({length:n},(_,i)=>{const v=r[i]==null?'':String(r[i]), cls=(isNum(v)?'num':'')+(v[0]==='='||v[0]==='{'?' fx':'')+(hi.has(col(i)+(r0+ri))?' hi':''); return `<td${cls?` class="${cls.trim()}"`:''}>${esc(v)}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>${(b.fx||[]).length?`<ul class="qfx">${b.fx.map(f=>`<li><b>[${esc(f[0])}]</b> <code>${esc(f[1])}</code>${f[2]!=null&&f[2]!==''?` <span class="fx-r">→ ${esc(f[2])}</span>`:''}${f[3]?`<span class="fx-e">${rich(f[3])}</span>`:''}</li>`).join('')}</ul>`:''}</figure>`;
+}
+function figGrid(b){
+ const rows=b.rows||[], cap=b.title||'표';
+ return `<figure class="qfig"><figcaption>${esc(cap)}</figcaption><div class="qfig-w" tabindex="0" role="group" aria-label="${esc(cap)}"><table class="gridfig">${b.head?`<thead><tr>${b.head.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead>`:''}<tbody>${rows.map(r=>`<tr>${r.map((c,i)=>i===0&&b.rh?`<th scope="row">${esc(c)}</th>`:`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></figure>`;
+}
+const figCode=b=>`<figure class="qfig">${b.title||b.lang?`<figcaption>${esc(b.title||'')}${b.lang?`<span class="tag">${esc(b.lang)}</span>`:''}</figcaption>`:''}<pre class="code" tabindex="0"><code>${esc(b.x)}</code></pre></figure>`;
+const figHtml=b=>b.t==='sheet'?figSheet(b):b.t==='grid'?figGrid(b):b.t==='code'?figCode(b):'';
+const figsHtml=q=>(q.fig||[]).map(figHtml).join('');
+const figText=q=>(q.fig||[]).map(b=>b.t==='code'?`[${b.title||b.lang||'코드'}]\n${b.x}`:b.t==='sheet'?`[${b.title||'워크시트'}] (첫 줄은 ${b.r0||1}행, 첫 칸은 ${b.c0||'A'}열)\n${(b.rows||[]).map(r=>r.join('\t')).join('\n')}`:`[${b.title||'표'}]\n${(b.head?[b.head]:[]).concat(b.rows||[]).map(r=>r.join('\t')).join('\n')}`).join('\n');
+const tableHtml=t=>`<figure class="st-fig"><figcaption>${esc(t.title)}</figcaption><div class="st-tw" tabindex="0" role="group" aria-label="${esc(t.title)} 표"><table class="st-t${t.head.length<2?' one':''}"><thead><tr><th></th>${t.head.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr><th scope="row">${rich(r[0])}</th>${r.slice(1).map((c,i)=>`<td data-h="${esc(t.head[i]||'')}"${c===''||c==='—'?' class="e"':''}>${rich(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></figure>`;
+const NOTEL={exam:'시험 포인트',warn:'주의',tip:'요령',y27:'2027년부터',y26:'2026년까지'};
+function blockHtml(b){
+ const open=!!UI.st.ob[b._i];
+ switch(b.t){
+  case 'p': return `<p class="st-p">${rich(b.x)}</p>`;
+  case 'h': return `<h2 class="h2 st-h">${esc(b.x)}</h2>`;
+  case 'flow': return `<ol class="flow" aria-label="한 줄 흐름">${b.items.map(s=>`<li>${rich(s)}</li>`).join('')}</ol>`;
+  case 'table': return tableHtml(b);
+  case 'ul': return `<ul class="st-ul">${b.items.map(x=>`<li>${rich(x)}</li>`).join('')}</ul>`;
+  case 'steps': return `<figure class="qfig"><figcaption>${esc(b.title)}</figcaption><ol class="st-steps">${b.items.map(x=>`<li>${rich(x)}</li>`).join('')}</ol></figure>`;
+  case 'src': return `<figure class="src"><figcaption>${esc(b.title||'사료 읽기')}</figcaption><blockquote>${rich(b.x)}</blockquote>${open?`<div class="src-a" role="status"><p><b>단서</b> ${rich(b.hint)}</p><p><b>정답</b> ${rich(b.a)}</p>${b.e?`<p>${rich(b.e)}</p>`:''}</div>`:`<button class="btn line sm" data-act="sob" data-id="${b._i}">단서와 정답 보기</button>`}</figure>`;
+  case 'deep': return `<section class="deep${open?' open':''}"><button class="deep-h" data-act="sob" data-id="${b._i}" aria-expanded="${open}"><span><small>더 깊이</small>${esc(b.title)}</span>${ico(open?'cu':'cd')}</button>${open?`<div class="deep-b">${blocksHtml(b.items,true)}</div>`:''}</section>`;
+  case 'tl': return `<figure class="st-fig"><figcaption>${esc(b.title)}</figcaption><ol class="tl">${b.rows.map(r=>`<li><time>${esc(r[0])}</time><div><b>${rich(r[1])}</b>${r[2]?`<span>${rich(r[2])}</span>`:''}</div></li>`).join('')}</ol></figure>`;
+  case 'note': return `<p class="st-note ${esc(b.kind)}"><b>${NOTEL[b.kind]||'알아 두기'}</b>${rich(b.x)}</p>`;
+  default: return figHtml(b);
+ }
+}
+function blocksHtml(list,plain){ // 맨 앞에 이어지는 문단은 '이야기'(명조체)로 묶어요
+ let out='', i=0;
+ if(!plain){let j=0; while(j<list.length&&list[j].t==='p') j++; if(j){out+=`<section class="st-story" aria-label="이야기">${list.slice(0,j).map(b=>`<p>${rich(b.x)}</p>`).join('')}</section>`; i=j}}
+ for(;i<list.length;i++) out+=blockHtml(list[i]);
+ return out;
+}
+/* 퀴즈: 단서→주인(c) · 알맞은 것(q) · O/X(o) · 순서(s) */
 function sqItem(q){
- if(q.t==='c') return {t:'c',q:q.q,a:q.a,opts:shuffle([q.a].concat(q.x))};
+ if(q.t==='c'||q.t==='q') return {t:q.t,q:q.q,a:q.a,opts:shuffle([q.a].concat(q.x)),e:q.e,pre:q.pre};
  if(q.t==='o') return {t:'o',q:q.q,a:q.a,e:q.e};
  let o=shuffle(q.items), n=0; while(o.every((x,i)=>x===q.items[i])&&n++<8) o=shuffle(q.items);
  return {t:'s',q:q.q,items:q.items,opts:o,e:q.e};
@@ -2346,6 +2478,7 @@ function sqFinish(S){
 function sqHtml(S){
  const n=S.items.length, k=esc(S.key);
  const dots=`<div class="sq-dots" aria-hidden="true">${S.items.map((_,j)=>`<i class="bb${S.res[j]===true?' on':S.res[j]===false?' no':''}${j===S.i&&!S.done?' cur':''}"></i>`).join('')}</div>`;
+ if(!n) return '<p class="small">이 단원에는 퀴즈가 없어요.</p>';
  if(S.done){
   const ok=S.res.filter(Boolean).length, bad=n-ok;
   const msg=ok===n?'만점이에요. 빨간 빗금이 하나도 없네요.':ok/n>=.7?'잘했어요. 틀린 것만 한 번 더 보면 충분해요.':'괜찮아요. 키워드를 한 번 더 읽고 다시 풀면 금방 올라요.';
@@ -2353,44 +2486,53 @@ function sqHtml(S){
  }
  const q=S.items[S.i], done=S.res[S.i]!==undefined, ok=S.res[S.i], good='<b>맞았어요.</b>', miss='<b class="bad">아쉬워요.</b>';
  let body='', fb='';
- if(q.t==='c'){
-  body=`<p class="sq-kind">단서를 보고 주인 찾기</p><p class="sq-q">${esc(q.q)}</p><div class="sq-opts">${q.opts.map((o,j)=>`<button class="sq-o${done&&o===q.a?' right':done&&j===S.pick?' wrong':''}" data-act="sqpick" data-k="${k}" data-v="${j}" data-n="${j+1}" ${done?'disabled':''}><span class="cn">${j+1}</span><span>${esc(o)}</span></button>`).join('')}</div>`;
-  if(done) fb=ok?good:`${miss} 정답은 <b>${esc(q.a)}</b>${josa(q.a,'이에요/예요').slice(q.a.length)}.`;
+ if(q.t==='c'||q.t==='q'){
+  body=`<p class="sq-kind">${q.t==='c'?'단서를 보고 주인 찾기':'알맞은 것 고르기'}</p><p class="sq-q">${rich(q.q)}</p>${q.pre?`<pre class="code" tabindex="0"><code>${esc(q.pre)}</code></pre>`:''}<div class="sq-opts">${q.opts.map((o,j)=>`<button class="sq-o${done&&o===q.a?' right':done&&j===S.pick?' wrong':''}" data-act="sqpick" data-k="${k}" data-v="${j}" data-n="${j+1}" ${done?'disabled':''}><span class="cn">${j+1}</span><span>${rich(o)}</span></button>`).join('')}</div>`;
+  if(done) fb=(ok?good:`${miss} 정답은 <b>${rich(q.a)}</b>${/[가-힣]$/.test(q.a)?josa(q.a,'이에요/예요').slice(q.a.length):'예요'}.`)+(q.e?` ${rich(q.e)}`:'');
  } else if(q.t==='o'){
-  body=`<p class="sq-kind">맞으면 O, 틀리면 X</p><p class="sq-q">${esc(q.q)}</p><div class="sq-ox">${[[1,'O'],[0,'X']].map(([v,l])=>`<button class="sq-o${done&&(v===1)===q.a?' right':done&&S.pick===v?' wrong':''}" data-act="sqpick" data-k="${k}" data-v="${v}" ${done?'disabled':''} aria-label="${l}">${l}</button>`).join('')}</div>`;
-  if(done) fb=`${ok?good:miss} ${esc(q.e)}`;
+  body=`<p class="sq-kind">맞으면 O, 틀리면 X</p><p class="sq-q">${rich(q.q)}</p><div class="sq-ox">${[[1,'O'],[0,'X']].map(([v,l])=>`<button class="sq-o${done&&(v===1)===q.a?' right':done&&S.pick===v?' wrong':''}" data-act="sqpick" data-k="${k}" data-v="${v}" ${done?'disabled':''} aria-label="${l}">${l}</button>`).join('')}</div>`;
+  if(done) fb=`${ok?good:miss} ${rich(q.e)}`;
  } else {
-  body=`<p class="sq-kind">순서 맞추기</p><p class="sq-q">${esc(q.q)}</p><div class="sq-opts">${q.opts.map((o,j)=>{const p=S.seq.indexOf(j); return `<button class="sq-o${p>=0?' sel':''}" data-act="sqseq" data-k="${k}" data-v="${j}" data-n="${j+1}" ${done?'disabled':''} aria-pressed="${p>=0}"><span class="cn">${p>=0?p+1:''}</span><span>${esc(o)}</span></button>`}).join('')}</div>${done?'':'<p class="small" style="margin-top:8px">먼저인 것부터 차례로 누르세요. 다시 누르면 취소돼요.</p>'}`;
-  if(done) fb=`${ok?good:miss} ${q.items.map(esc).join(' → ')}<br><span class="small">${esc(q.e)}</span>`;
+  body=`<p class="sq-kind">순서 맞추기</p><p class="sq-q">${rich(q.q)}</p><div class="sq-opts">${q.opts.map((o,j)=>{const p=S.seq.indexOf(j); return `<button class="sq-o${p>=0?' sel':''}" data-act="sqseq" data-k="${k}" data-v="${j}" data-n="${j+1}" ${done?'disabled':''} aria-pressed="${p>=0}"><span class="cn">${p>=0?p+1:''}</span><span>${rich(o)}</span></button>`}).join('')}</div>${done?'':'<p class="small" style="margin-top:8px">먼저인 것부터 차례로 누르세요. 다시 누르면 취소돼요.</p>'}`;
+  if(done) fb=`${ok?good:miss} ${q.items.map(rich).join(' → ')}<br><span class="small">${rich(q.e)}</span>`;
  }
  return `<div class="sq-top">${dots}<span class="small">${S.i+1} / ${n}${S.streak>=3?` · 연속 정답 ${S.streak}`:''}</span></div>${body}${done?`<div class="sq-fb" role="status"><p>${fb}</p><div class="row" style="margin-top:12px"><button class="btn" id="sq-next" data-act="sqnext" data-k="${k}">${S.i+1<n?'다음 문제':'결과 보기'}</button></div></div>`:''}`;
 }
 function vStudy(){
- if(U.settings.exam!=='history') return `<section class="card stack"><h1 class="h2">공부 노트는 지금 한국사만 있어요</h1><p class="sub">한국사능력검정시험 심화를 7일에 끝내는 이야기·키워드·퀴즈 묶음이에요.</p><div class="row"><button class="btn" data-act="exam" data-v="history">한국사로 바꾸기</button></div></section>`;
+ const ex=U.settings.exam;
+ if(!hasCourse(ex)){const have=Object.keys(COURSES); return `<section class="card stack"><h1 class="h2">공부 노트는 ${have.map(x=>esc(EXAMS[x].name)).join('와 ')||'아직 준비 중'}${have.length?'에 있어요':'이에요'}</h1><p class="sub">이야기·키워드·퀴즈로 개념을 잡는 묶음이에요.</p><div class="row">${have.map((x,i)=>`<button class="btn${i?' line':''}" data-act="exam" data-v="${x}">${esc(EXAMS[x].name)}로 바꾸기</button>`).join('')}</div></section>`}
  if(!STUDY.ready) return STUDY.err?emptyBox('공부 자료를 열지 못했어요',STUDY.err):'<p class="small">공부 자료를 불러오는 중이에요…</p>';
  const a=UI.arg||'';
  if(a==='quiz'&&UI.sq.x) return vStudyQuiz();
  if(a==='marked') return vStudyMarked();
+ if(a==='top') return vStudyTop();
  if(STUDY.units.has(a)) return vStudyUnit(STUDY.units.get(a));
  return vStudyHome();
 }
 function vStudyHome(){
- const D=STUDY.d, P=studyPace(), tot=STUDY.order.length, dn=tot-P.left.length, dd=P.dd;
- const mins=sum(P.today.map(id=>STUDY.units.get(id).min)), nextId=P.today[0]||P.left[0], marked=Object.keys(U.study.k).length;
- const maxP=Math.max(...D.eras.map(e=>e.p)), late=sum(D.eras.slice(6).map(e=>e.p));
- const eraDay={}; D.days.forEach(d=>d.eras.forEach(e=>eraDay[e]=d.n));
+ const D=STUDY.d, ex=STUDY.ex, P=studyPace(), tot=STUDY.core.length, dn=STUDY.core.filter(suDone).length, dd=P.dd, tagged=!!D.days[0].tag, extra=STUDY.order.length-tot, topN=STUDY.order.reduce((n,id)=>n+STUDY.units.get(id).keys.filter(k=>k.s===3).length,0);
+ const mins=sum(P.today.map(id=>STUDY.units.get(id).min)), nextId=P.today[0]||P.left[0], marked=STUDY.order.reduce((n,id)=>n+STUDY.units.get(id).keys.filter((k,i)=>U.study.k[id+':'+i]).length,0);
  const tips=[]; D.days.forEach(d=>d.units.forEach(u=>u.tips.forEach(t=>tips.push(t))));
- const tip=tips[Math.floor(sod(Date.now())/DAY)%tips.length];
+ const tip=tips.length?tips[Math.floor(sod(Date.now())/DAY)%tips.length]:'';
  const narrow=matchMedia('(max-width:859px)').matches, curDay=P.left.length?STUDY.units.get(P.left[0]).day:0;
- const nq=UI.st.q.replace(/\s+/g,''); let found=[];
- if(nq.length>=2) STUDY.order.forEach(id=>{const u=STUDY.units.get(id); u.keys.forEach((k,i)=>{if(found.length<24&&(k.k+k.d).replace(/\s+/g,'').includes(nq)) found.push([u,k,i])})});
+ const nq=UI.st.q.replace(/\s+/g,'').toLowerCase(); let found=[];
+ if(nq.length>=2) STUDY.order.forEach(id=>{const u=STUDY.units.get(id); u.keys.forEach((k,i)=>{if(found.length<24&&(k.k+k.d).replace(/\s+/g,'').toLowerCase().includes(nq)) found.push([u,k,i])})});
  let note;
  if(dd===0) note='오늘이 시험 날이에요. 새로 외우지 말고 표시해 둔 키워드와 헷갈림 주의만 훑어보세요.';
  else if(dd!=null&&dd>0) note=P.left.length?`시험까지 ${dd}일, 남은 단원 ${P.left.length}개예요. 하루 ${P.per}단원씩이면 시험 전날까지 한 바퀴를 돌아요.`:`시험까지 ${dd}일 남았어요. 한 바퀴를 다 돌았으니 이제 문제 풀이와 표시한 키워드 복습만 하면 돼요.`;
- else note='시험 날짜를 정하면 남은 날에 맞춰 하루 분량을 나눠 드려요. 안 정하면 하루에 한 일차씩 나가요.';
- const line=id=>{const u=STUDY.units.get(id); return `<li><span class="pn">${u.day}</span><div><b>${esc(u.title)}</b><span>${u.day}일차 · 읽기 약 ${u.min}분</span></div></li>`};
+ else note=tagged?'시험 날짜를 정하면 남은 날에 맞춰 하루 분량을 나눠 드려요. 안 정하면 차례대로 네 단원씩 보여 드려요.':'시험 날짜를 정하면 남은 날에 맞춰 하루 분량을 나눠 드려요. 안 정하면 하루에 한 일차씩 나가요.';
+ const line=id=>{const u=STUDY.units.get(id); return `<li><span class="pn">${u.day}</span><div><b>${esc(u.title)}</b><span>${esc(dayLab(u.day))} · 읽기 약 ${u.min}분</span></div></li>`};
+ let eraCard='';
+ if(D.eras){
+  const maxP=Math.max(...D.eras.map(e=>e.p)), late=sum(D.eras.slice(6).map(e=>e.p)), eraDay={}; D.days.forEach(d=>(d.eras||[]).forEach(e=>{if(eraDay[e]==null) eraDay[e]=d.n}));
+  eraCard=`<section class="card" aria-labelledby="eb-h"><h2 class="h2" id="eb-h">어디서 점수가 나오나</h2><p class="small">시대별 평균 배점 · ${esc(D.eraNote)}</p>
+   <ul class="ebar">${D.eras.map(e=>`<li title="${esc(e.name)}: 평균 ${e.q.toFixed(1)}문항 · ${e.p.toFixed(1)}점"><span class="eb-n">${esc(eraShort(e.name))}<small>${eraDay[e.name]||''}일차</small></span><span class="eb-t"><i style="width:${(e.p/maxP*100).toFixed(1)}%"></i></span><span class="eb-v">${e.p.toFixed(1)}점<small> · ${e.q.toFixed(1)}문항</small></span></li>`).join('')}</ul>
+   <p class="small" style="margin-top:14px">근대부터 현대까지(5~7일차)가 100점 가운데 약 ${Math.round(late)}점이에요. 시간이 모자라면 뒤쪽부터 잡으세요.</p></section>`;
+ } else if(D.bars){
+  eraCard=`<section class="card" aria-labelledby="eb-h"><h2 class="h2" id="eb-h">${esc(D.barsTitle||'어디서 점수가 나오나')}</h2>${D.bars.map(g=>{const mx=Math.max(...g.items.map(x=>x[1])); return `<p class="small" style="margin-top:12px"><b>${esc(g.title)}</b>${g.note?' · '+esc(g.note):''}</p><ul class="ebar">${g.items.map(x=>`<li><span class="eb-n">${esc(x[0])}${x[2]?`<small>${esc(x[2])}</small>`:''}</span><span class="eb-t"><i style="width:${(x[1]/mx*100).toFixed(1)}%"></i></span><span class="eb-v">${x[1]}${esc(g.unit||'점')}</span></li>`).join('')}</ul>`}).join('')}${D.barsNote?`<p class="small" style="margin-top:14px">${esc(D.barsNote)}</p>`:''}</section>`;
+ }
  return `<section class="hero">
-  <div><h1 class="title">${esc(D.title)}</h1><p class="sub">이야기로 이해하고, 키워드로 굳히고, 퀴즈로 확인해요. 심화 50문항 · 80분 · 60점부터 합격</p></div>
+  <div><h1 class="title">${esc(D.title)}</h1><p class="sub">${esc(D.sub||'')}</p></div>
   <dl class="figs">
    <div><dt>시험까지</dt><dd>${dd==null?'<small>날짜 미정</small>':dd>0?'D-'+dd:dd===0?'D-day':'<small>지났어요</small>'}</dd></div>
    <div><dt>끝낸 단원</dt><dd>${dn}<small> / ${tot}</small></dd></div>
@@ -2400,73 +2542,79 @@ function vStudyHome(){
  <div class="home-grid">
   <section class="plan card" aria-labelledby="sp-h">
    <div class="plan-a"><h2 class="h2" id="sp-h">오늘 할 공부</h2>
-   ${P.today.length?`<p class="plan-sum"><b>${P.today.length}단원</b> · 읽기 약 ${mins}분</p><ul class="plan-list">${P.today.slice(0,4).map(line).join('')}</ul>${P.today.length>4?`<p class="small" style="margin:-6px 0 14px">외 ${P.today.length-4}단원</p>`:''}`:`<p class="sub" style="margin-bottom:14px">${P.left.length?'오늘 몫은 끝났어요. 여유가 있으면 다음 단원을 미리 봐도 좋아요.':'42단원을 모두 끝냈어요. 이제 문제로 굳힐 차례예요.'}</p>`}
+   ${P.today.length?`<p class="plan-sum"><b>${P.today.length}단원</b> · 읽기 약 ${mins}분</p><ul class="plan-list">${P.today.slice(0,4).map(line).join('')}</ul>${P.today.length>4?`<p class="small" style="margin:-6px 0 14px">외 ${P.today.length-4}단원</p>`:''}`:`<p class="sub" style="margin-bottom:14px">${P.left.length?'오늘 몫은 끝났어요. 여유가 있으면 다음 단원을 미리 봐도 좋아요.':`${tot+extra}단원을 모두 끝냈어요. 이제 문제로 굳힐 차례예요.`}</p>`}
    </div><div class="plan-b">
-   ${nextId?`<a class="btn big" href="#study/${nextId}">${ico('play','fill')}${dn?'이어서 공부하기':'1일차 시작하기'}</a>`:`<a class="btn big" href="#practice">${ico('pen')}문제 풀러 가기</a>`}
+   ${nextId?`<a class="btn big" href="#study/${nextId}">${ico('play','fill')}${dn?'이어서 공부하기':'첫 단원 시작하기'}</a>`:`<a class="btn big" href="#practice">${ico('pen')}문제 풀러 가기</a>`}
    <button class="btn line big" data-act="sqmix">섞어 퀴즈 20문제</button>
+   ${topN?`<a class="btn line big" href="#study/top">${D.corpus?'기출 단골':'꼭 외울'} 키워드 ${topN}개</a>`:''}
    ${marked?`<a class="btn line big" href="#study/marked">${ico('flag')}표시한 키워드 ${marked}개</a>`:''}
-   <label class="lab" for="st-date" style="margin-top:16px">시험 날짜</label><input type="date" id="st-date" data-set="date" data-ex="history" value="${esc(U.settings.examDate.history||'')}">
+   <label class="lab" for="st-date" style="margin-top:16px">시험 날짜</label><input type="date" id="st-date" data-set="date" data-ex="${ex}" value="${esc(U.settings.examDate[ex]||'')}">
    <p class="small plan-note">${note}</p></div>
   </section>
   <section aria-labelledby="sb-h">
-   <div class="sec-h"><h2 class="h2" id="sb-h">7일 시간표</h2><p class="legend"><span><i class="bb on"></i> 끝낸 단원</span><span>오른쪽 숫자는 읽는 시간, 퀴즈를 풀면 최고 점수</span></p></div>
-   <div class="omr">${D.days.map(d=>{const done=d.units.filter(u=>suDone(u.id)).length, open=UI.st.days[d.n]!=null?UI.st.days[d.n]:(!narrow||d.n===curDay); return `<section class="ocol" aria-label="${d.n}일차 ${esc(d.title)}"><button class="ocol-h st-dh" data-act="sday" data-d="${d.n}" aria-expanded="${open}"><span class="ocol-no">${d.n}일차</span><b>${esc(d.title)}<small class="ocol-w">${esc(d.weight)}</small></b><span class="ocol-sc">${done}<small> / ${d.units.length}</small></span>${ico(open?'up':'down')}</button>${open?`${d.units.map(u=>{const st=suOf(u.id); return `<button class="mrow" data-act="go" data-r="study/${u.id}" aria-label="${esc(u.title)}${st.d?', 끝냄':''}"><span class="mt">${esc(u.title)}</span><span class="bubs" aria-hidden="true"><i class="bb${st.d?' on':''}"></i></span><span class="mv">${st.n?st.b+'/'+st.n:u.min+'분'}</span></button>`}).join('')}<button class="mrow st-dq" data-act="sqday" data-d="${d.n}"><span class="mt">${d.n}일차 마무리 퀴즈</span><span class="mv">12문제</span></button>`:''}</section>`}).join('')}</div>
-   <p class="small" style="margin-top:10px">오늘의 암기 주문 · ${rich(tip)}</p>
+   <div class="sec-h"><h2 class="h2" id="sb-h">${esc(D.plan||'공부 차례')}</h2><p class="legend"><span><i class="bb on"></i> 끝낸 단원</span><span>오른쪽 숫자는 읽는 시간, 퀴즈를 풀면 최고 점수</span></p></div>
+   <div class="omr">${D.days.map(d=>{const done=d.units.filter(u=>suDone(u.id)).length, open=UI.st.days[ex+d.n]!=null?UI.st.days[ex+d.n]:(!narrow||d.n===curDay), lab=d.tag||d.n+'일차'; return `<section class="ocol" aria-label="${esc(lab)} ${esc(d.title)}"><button class="ocol-h st-dh" data-act="sday" data-d="${ex+d.n}" aria-expanded="${open}"><span class="ocol-no">${esc(lab)}</span><b>${esc(d.title)}<small class="ocol-w">${esc(d.weight)}</small></b><span class="ocol-sc">${done}<small> / ${d.units.length}</small></span>${ico(open?'cu':'cd')}</button>${open?`${d.units.map(u=>{const st=suOf(u.id); return `<button class="mrow" data-act="go" data-r="study/${u.id}" aria-label="${esc(u.title)}${st.d?', 끝냄':''}"><span class="mt">${esc(u.title)}</span><span class="bubs" aria-hidden="true"><i class="bb${st.d?' on':''}"></i></span><span class="mv">${st.n?st.b+'/'+st.n:u.min+'분'}</span></button>`}).join('')}<button class="mrow st-dq" data-act="sqday" data-d="${d.n}"><span class="mt">${esc(lab)} 마무리 퀴즈</span><span class="mv">12문제</span></button>`:''}</section>`}).join('')}</div>
+   ${tip?`<p class="small" style="margin-top:10px">오늘의 암기 주문 · ${rich(tip)}</p>`:''}
   </section>
  </div>
  <div class="grid2 sec">
-  <section class="card" aria-labelledby="eb-h"><h2 class="h2" id="eb-h">어디서 점수가 나오나</h2><p class="small">시대별 평균 배점 · ${esc(D.eraNote)}</p>
-   <ul class="ebar">${D.eras.map(e=>`<li title="${esc(e.name)}: 평균 ${e.q.toFixed(1)}문항 · ${e.p.toFixed(1)}점"><span class="eb-n">${esc(eraShort(e.name))}<small>${eraDay[e.name]||''}일차</small></span><span class="eb-t"><i style="width:${(e.p/maxP*100).toFixed(1)}%"></i></span><span class="eb-v">${e.p.toFixed(1)}점<small> · ${e.q.toFixed(1)}문항</small></span></li>`).join('')}</ul>
-   <p class="small" style="margin-top:14px">근대부터 현대까지(5~7일차)가 100점 가운데 약 ${Math.round(late)}점이에요. 시간이 모자라면 뒤쪽부터 잡으세요.</p>
-  </section>
+  ${eraCard}
   <section class="card" aria-labelledby="ex-h"><h2 class="h2" id="ex-h">시험 한눈에</h2>
    <dl class="st-kv">${D.intro.exam.map(([a,b])=>`<dt>${esc(a)}</dt><dd>${esc(b)}</dd>`).join('')}</dl>
-   <h3 class="h3">문제 푸는 3단계</h3><ol class="steps">${D.intro.how.map(([a,b])=>`<li><div><b>${esc(a)}</b><span>${esc(b)}</span></div></li>`).join('')}</ol>
+   <h3 class="h3">${esc(D.intro.howTitle||'문제 푸는 3단계')}</h3><ol class="steps">${D.intro.how.map(([a,b])=>`<li><div><b>${esc(a)}</b><span>${esc(b)}</span></div></li>`).join('')}</ol>
   </section>
  </div>
- <section class="sec" aria-labelledby="rt-h"><h2 class="h2" id="rt-h">하루 공부 순서</h2><p class="sub">한 단원에 20~30분이면 돼요. 이 순서대로 하면 읽은 것이 문제 푸는 힘으로 바뀌어요.</p>
+ <section class="sec" aria-labelledby="rt-h"><h2 class="h2" id="rt-h">하루 공부 순서</h2><p class="sub">${esc(D.intro.routineSub||'한 단원에 20~30분이면 돼요. 이 순서대로 하면 읽은 것이 문제 푸는 힘으로 바뀌어요.')}</p>
   <ul class="principles st-rt">${D.intro.routine.map(([a,b],i)=>`<li><b>${i+1}. ${esc(a)}</b><span>${esc(b)}</span></li>`).join('')}</ul>
   <ul class="st-tips">${D.intro.tips.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
  </section>
  <section class="sec card" aria-labelledby="sf-h"><h2 class="h2" id="sf-h">키워드 찾기</h2><p class="sub">문제를 풀다 모르는 낱말이 나오면 여기서 찾아보세요. 키워드 ${sum(STUDY.order.map(id=>STUDY.units.get(id).keys.length))}개가 들어 있어요.</p>
-  <div class="st-find"><input type="search" id="sk-q" placeholder="예: 대동법, 신간회, 장수왕" value="${esc(UI.st.q)}" aria-label="키워드 검색"></div>
+  <div class="st-find"><input type="search" id="sk-q" placeholder="${esc(D.findEx||'예: 대동법, 신간회, 장수왕')}" value="${esc(UI.st.q)}" aria-label="키워드 검색"></div>
   ${nq.length>=2?(found.length?`<ul class="kws">${found.map(([u,k,i])=>kwRow(u,k,i,true)).join('')}</ul>${found.length>=24?'<p class="small" style="margin-top:8px">많이 나와서 24개까지만 보여 드려요. 낱말을 더 길게 써 보세요.</p>':''}`:`<p class="small" style="margin-top:12px">'${esc(UI.st.q.trim())}'에 맞는 키워드가 없어요.</p>`):''}
  </section>
- ${dn||marked?`<p class="small sec"><button class="linkbtn" data-act="sreset">공부 진도 지우기</button></p>`:''}`;
+ ${dn||marked?`<p class="small sec"><button class="linkbtn" data-act="sreset">${esc(EXAMS[ex].name)} 공부 진도 지우기</button></p>`:''}`;
 }
 function vStudyUnit(u){
- const D=STUDY.d.days[u.day-1], st=suOf(u.id), ord=STUDY.order, pos=ord.indexOf(u.id), hide=UI.st.hide;
+ const SD=STUDY.d, D=SD.days[u.day-1], ex=STUDY.ex, st=suOf(u.id), ord=STUDY.order, pos=ord.indexOf(u.id), hide=UI.st.hide, lab=dayLab(u.day);
  const pu=pos>0&&STUDY.units.get(ord[pos-1]), nu=pos<ord.length-1&&STUDY.units.get(ord[pos+1]);
  const S=UI.sq[u.id]||sqNew(u.id,u.title,u.quiz,u.id);
- const eraN=ERAS.includes(u.era)&&BANK.ready?POOL('history').filter(q=>q.subject===u.era).length:0;
- return `<nav class="crumb" aria-label="위치"><a href="#study">7일 완성</a><span aria-hidden="true">›</span><span>${u.day}일차 ${esc(D.title)}</span><span aria-hidden="true">›</span><span>${u.idx+1} / ${D.units.length}</span></nav>
- <header class="st-head"><div class="st-meta"><span class="tag">${esc(u.era)}</span>${st.d?'<span class="tag red">끝낸 단원</span>':''}<span class="small">읽기 약 ${u.min}분 · 키워드 ${u.keys.length}개 · 퀴즈 ${u.quiz.length}문제</span></div><h1 class="title">${esc(u.title)}</h1>${u.idx===0?`<p class="st-hook">${esc(D.hook)}</p>`:''}</header>
- <section class="st-story" aria-label="이야기">${u.story.map(p=>`<p>${rich(p)}</p>`).join('')}</section>
- ${u.flow.map(f=>`<ol class="flow" aria-label="한 줄 흐름">${f.map(s=>`<li>${esc(s)}</li>`).join('')}</ol>`).join('')}
- <section class="sec" aria-labelledby="kw-h"><div class="sec-h"><h2 class="h2" id="kw-h">키워드 ${u.keys.length}개</h2>${hideChips()}</div>
-  <p class="legend st-leg"><span><span class="fq">${fqDots(3)}</span> 기출 단골</span><span><span class="fq">${fqDots(2)}</span> 자주</span><span><span class="fq">${fqDots(1)}</span> 가끔</span><span><span class="fq">${fqDots(0)}</span> 최근엔 드묾</span><span>${esc(STUDY.d.corpus.label)}에서 센 결과</span></p>
+ const eraN=BANK.ready?POOL(ex).filter(q=>q.subject===u.era).length:0;
+ const legend=SD.corpus?`<p class="legend st-leg"><span><span class="fq">${fqDots(3)}</span> 기출 단골</span><span><span class="fq">${fqDots(2)}</span> 자주</span><span><span class="fq">${fqDots(1)}</span> 가끔</span><span><span class="fq">${fqDots(0)}</span> 최근엔 드묾</span><span>${esc(SD.corpus.label)}에서 센 결과</span></p>`:SD.star?`<p class="legend st-leg"><span><span class="fq">${fqDots(3)}</span> 꼭 외우기</span><span><span class="fq">${fqDots(2)}</span> 자주 물음</span><span><span class="fq">${fqDots(1)}</span> 알아 두기</span><span>${esc(SD.star)}</span></p>`:'';
+ return `<nav class="crumb" aria-label="위치"><a href="#study">${esc(SD.crumb||SD.title)}</a><span aria-hidden="true">›</span><span>${esc(lab)} ${esc(D.title)}</span><span aria-hidden="true">›</span><span>${u.idx+1} / ${D.units.length}</span></nav>
+ <header class="st-head"><div class="st-meta"><span class="tag">${esc(u.era)}</span>${u.lv?`<span class="tag">${esc(u.lv)}</span>`:''}${st.d?'<span class="tag red">끝낸 단원</span>':''}<span class="small">읽기 약 ${u.min}분${u.keys.length?` · 키워드 ${u.keys.length}개`:''}${u.quiz.length?` · 퀴즈 ${u.quiz.length}문제`:''}</span></div><h1 class="title">${esc(u.title)}</h1>${u.idx===0&&D.hook?`<p class="st-hook">${esc(D.hook)}</p>`:''}</header>
+ ${blocksHtml(u.pre)}
+ ${u.keys.length?`<section class="sec" aria-labelledby="kw-h"><div class="sec-h"><h2 class="h2" id="kw-h">키워드 ${u.keys.length}개</h2>${hideChips()}</div>
+  ${legend}
   ${hide?`<p class="small" style="margin-top:8px">빨간 책받침을 덮었어요. ${hide==='n'?'설명을 보고 이름을':'이름을 보고 설명을'} 떠올린 다음, 눌러서 확인하세요.</p>`:''}
   <ul class="kws${hide?' hide-'+hide:''}">${u.keys.map((k,i)=>kwRow(u,k,i)).join('')}</ul>
- </section>
- ${u.tables.map(t=>`<figure class="st-fig"><figcaption>${esc(t.title)}</figcaption><div class="st-tw" tabindex="0" role="group" aria-label="${esc(t.title)} 표"><table class="st-t"><thead><tr><th></th>${t.head.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr><th scope="row">${esc(r[0])}</th>${r.slice(1).map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></figure>`).join('')}
+ </section>`:''}
+ ${blocksHtml(u.post,true)}
  <div class="grid2 sec">
   ${u.traps.length?`<section class="card"><h2 class="h2">헷갈림 주의</h2><ul class="notes">${u.traps.map(t=>`<li><span>${rich(t)}</span></li>`).join('')}</ul></section>`:''}
   ${u.tips.length?`<section class="card"><h2 class="h2">외우는 요령</h2><ul class="notes memo">${u.tips.map(t=>`<li><span>${rich(t)}</span></li>`).join('')}</ul></section>`:''}
  </div>
  <section class="sec card sq" id="sq" aria-labelledby="sq-h"><div class="sec-h"><h2 class="h2" id="sq-h">단원 퀴즈</h2><span class="small">${st.n?`최고 ${st.b} / ${st.n}`:'다 풀면 이 단원이 끝나요'}</span></div>${sqHtml(S)}</section>
  <div class="st-foot"><button class="btn line" data-act="sdone" data-id="${u.id}">${st.d?'끝냄 취소':'읽기만 하고 끝냄'}</button>${eraN?`<button class="btn line" data-act="sera" data-era="${esc(u.era)}">${ico('pen')}${esc(eraShort(u.era))} 문제 풀기 · ${Math.min(10,eraN)}문제</button>`:''}</div>
- <nav class="st-pn" aria-label="단원 이동">${pu?`<a href="#study/${pu.id}"><small>이전 단원</small><b>${esc(pu.title)}</b></a>`:'<span></span>'}${nu?`<a href="#study/${nu.id}" class="nx"><small>다음 단원${nu.day!==u.day?` · ${nu.day}일차`:''}</small><b>${esc(nu.title)}</b></a>`:`<a href="#study" class="nx"><small>마지막 단원이에요</small><b>7일 완성 목록으로</b></a>`}</nav>`;
+ <nav class="st-pn" aria-label="단원 이동">${pu?`<a href="#study/${pu.id}"><small>이전 단원</small><b>${esc(pu.title)}</b></a>`:'<span></span>'}${nu?`<a href="#study/${nu.id}" class="nx"><small>다음 단원${nu.day!==u.day?` · ${esc(dayLab(nu.day))}`:''}</small><b>${esc(nu.title)}</b></a>`:`<a href="#study" class="nx"><small>마지막 단원이에요</small><b>${esc(SD.crumb||SD.title)} 목록으로</b></a>`}</nav>`;
+}
+function vStudyTop(){ // 시험 직전: 가장 자주 나온 키워드만
+ const hide=UI.st.hide, SD=STUDY.d, name=SD.corpus?'기출 단골 키워드':'꼭 외울 키워드'; let n=0;
+ const days=SD.days.map(d=>{const us=d.units.map(u=>[u,u.keys.map((k,i)=>[k,i]).filter(([k])=>k.s===3)]).filter(x=>x[1].length); n+=sum(us.map(x=>x[1].length)); return [d,us]}).filter(x=>x[1].length);
+ return `<nav class="crumb" aria-label="위치"><a href="#study">${esc(SD.crumb||SD.title)}</a><span aria-hidden="true">›</span><span>${name}</span></nav>
+ <header class="st-head"><h1 class="title">${name} ${n}개</h1><p class="sub">${SD.corpus?`${esc(SD.corpus.label)} 가운데 절반 가까운 회차에 나온 키워드만 모았어요.`:'시험에 가장 자주 나오는 키워드만 모았어요.'} 이름을 가리고 설명만 보고 맞혀 보세요. 막히는 것은 깃발로 표시해 두면 "표시한 키워드"에 모여요.</p></header>
+ <div class="row sec">${hideChips()}</div>
+ ${days.map(([d,us])=>`<section class="sec"><div class="sec-h"><h2 class="h2">${esc(dayLab(d.n))} · ${esc(d.title)}</h2></div>${us.map(([u,ks])=>`<h3 class="h3 st-toph"><a href="#study/${u.id}">${esc(u.title)}</a></h3><ul class="kws${hide?' hide-'+hide:''}">${ks.map(([k,i])=>kwRow(u,k,i)).join('')}</ul>`).join('')}</section>`).join('')}`;
 }
 function vStudyMarked(){
- const hide=UI.st.hide, groups=[];
+ const hide=UI.st.hide, groups=[], SD=STUDY.d;
  STUDY.order.forEach(id=>{const u=STUDY.units.get(id), ks=u.keys.map((k,i)=>[k,i]).filter(([k,i])=>U.study.k[id+':'+i]); if(ks.length) groups.push([u,ks])});
- return `<nav class="crumb" aria-label="위치"><a href="#study">7일 완성</a><span aria-hidden="true">›</span><span>표시한 키워드</span></nav>
+ return `<nav class="crumb" aria-label="위치"><a href="#study">${esc(SD.crumb||SD.title)}</a><span aria-hidden="true">›</span><span>표시한 키워드</span></nav>
  <header class="st-head"><h1 class="title">표시한 키워드</h1><p class="sub">깃발을 눌러 둔 키워드만 모았어요. 시험 전날에는 이것만 훑어봐도 돼요.</p></header>
- ${groups.length?`<div class="row sec">${hideChips()}</div>${groups.map(([u,ks])=>`<section class="sec"><div class="sec-h"><h2 class="h2">${esc(u.title)}</h2><a class="linkbtn" href="#study/${u.id}">${u.day}일차 단원 보기</a></div><ul class="kws${hide?' hide-'+hide:''}">${ks.map(([k,i])=>kwRow(u,k,i)).join('')}</ul></section>`).join('')}<div class="st-foot"><button class="btn line" data-act="skclear">표시 모두 지우기</button></div>`:`<div class="sec">${emptyBox('표시한 키워드가 없어요','단원에서 헷갈리는 키워드 옆의 깃발을 누르면 여기에 모여요.','<a class="btn line sm" href="#study">공부하러 가기</a>')}</div>`}`;
+ ${groups.length?`<div class="row sec">${hideChips()}</div>${groups.map(([u,ks])=>`<section class="sec"><div class="sec-h"><h2 class="h2">${esc(u.title)}</h2><a class="linkbtn" href="#study/${u.id}">${esc(dayLab(u.day))} 단원 보기</a></div><ul class="kws${hide?' hide-'+hide:''}">${ks.map(([k,i])=>kwRow(u,k,i)).join('')}</ul></section>`).join('')}<div class="st-foot"><button class="btn line" data-act="skclear">표시 모두 지우기</button></div>`:`<div class="sec">${emptyBox('표시한 키워드가 없어요','단원에서 헷갈리는 키워드 옆의 깃발을 누르면 여기에 모여요.','<a class="btn line sm" href="#study">공부하러 가기</a>')}</div>`}`;
 }
 function vStudyQuiz(){
  const S=UI.sq.x;
- return `<nav class="crumb" aria-label="위치"><a href="#study">7일 완성</a><span aria-hidden="true">›</span><span>${esc(S.title)}</span></nav>
+ return `<nav class="crumb" aria-label="위치"><a href="#study">${esc(STUDY.d.crumb||STUDY.d.title)}</a><span aria-hidden="true">›</span><span>${esc(S.title)}</span></nav>
  <section class="card sq" id="sq" aria-labelledby="sq-h"><div class="sec-h"><h1 class="h2" id="sq-h">${esc(S.title)}</h1><span class="small">${S.items.length}문제</span></div>${sqHtml(S)}</section>
  ${S.done?`<div class="st-foot"><a class="btn line" href="#study">목록으로</a><button class="btn line" data-act="sqmix">새로 섞어 20문제</button></div>`:''}`;
 }
@@ -2498,19 +2646,20 @@ const SACT={
  ppwsave:async()=>{const p=profOf(ME), el=$('#p-pw'); if(!p||!el) return; const pw=el.value||''; if(pw&&pw.length<4){toast('비밀번호는 4자 이상으로 정해 주세요');return} p.salt=uid()+uid(); p.hash=pw?await pwHash(p.salt,pw):''; profSave(); closeModal(); toast(pw?'비밀번호를 정했어요':'비밀번호를 없앴어요'); render(true)},
  pdel:()=>{const p=profOf(ME); if(!p) return; openModal(`<h2 class="h2">'${esc(p.name)}' 아이디를 지울까요?</h2><p class="sub">이 아이디의 풀이 기록, 오답노트, 공부 진도가 이 기기에서 모두 지워져요. 되돌릴 수 없어요.</p><div class="modal-act"><button class="btn line" data-act="close">취소</button><button class="btn red" data-act="confirm" data-autofocus>아이디 지우기</button></div>`); PENDING=()=>{closeModal(); U.banks.filter(b=>b.local).forEach(b=>IDB.del(bkey(b.id))); lsDel(p.key); IDB.del(p.key,'state'); delete MIRROR[p.key]; PROF.list=PROF.list.filter(x=>x.id!==p.id); profLeave(PROF.list.length?'login':'new'); toast('아이디를 지웠어요')}},
  zoom:b=>{const q=BANK.all.get(b.dataset.q); if(!q||!q.image) return; openModal(`<div class="zoombox" tabindex="0"><img src="${esc(q.image)}" alt="${esc(q.stem)} 문제지 그림"></div><div class="modal-act"><button class="btn" data-act="close" data-autofocus>닫기</button></div>`)},
- sday:b=>{UI.st.days[+b.dataset.d]=b.getAttribute('aria-expanded')!=='true'; render(true)},
+ sday:b=>{UI.st.days[b.dataset.d]=b.getAttribute('aria-expanded')!=='true'; render(true)},
+ sob:b=>{const id=b.dataset.id; UI.st.ob[id]=!UI.st.ob[id]; render(true)},
  shide:b=>{UI.st.hide=b.dataset.v; UI.st.open={}; render(true)},
  skopen:b=>{const id=b.dataset.id; UI.st.open[id]=!UI.st.open[id]; render(true)},
  skmark:b=>{const id=b.dataset.id; if(U.study.k[id]) delete U.study.k[id]; else U.study.k[id]=1; U.study.kt=Date.now(); persist(['study']); render(true)},
- skclear:()=>{openModal(`<h2 class="h2">표시를 모두 지울까요?</h2><p class="sub">깃발로 표시한 키워드 ${Object.keys(U.study.k).length}개의 표시만 지워요. 공부 진도는 그대로예요.</p><div class="modal-act"><button class="btn line" data-act="close">취소</button><button class="btn red" data-act="confirm" data-autofocus>모두 지우기</button></div>`); PENDING=()=>{U.study.k={}; U.study.kt=Date.now(); persist(['study']); closeModal(); render()}},
- sreset:()=>{openModal(`<h2 class="h2">공부 진도를 지울까요?</h2><p class="sub">끝낸 단원 표시, 단원 퀴즈 최고 점수, 깃발 표시가 지워져요. 문제 풀이 기록과 오답노트는 그대로예요.</p><div class="modal-act"><button class="btn line" data-act="close">취소</button><button class="btn red" data-act="confirm" data-autofocus>진도 지우기</button></div>`); PENDING=()=>{const t=Date.now(); for(const id in U.study.u) U.study.u[id]={d:0,m:t}; U.study.k={}; U.study.kt=t; UI.sq={}; persist(['study']); closeModal(); toast('공부 진도를 지웠어요'); render()}},
+ skclear:()=>{openModal(`<h2 class="h2">표시를 모두 지울까요?</h2><p class="sub">이 시험에서 깃발로 표시한 키워드의 표시만 지워요. 공부 진도는 그대로예요.</p><div class="modal-act"><button class="btn line" data-act="close">취소</button><button class="btn red" data-act="confirm" data-autofocus>모두 지우기</button></div>`); PENDING=()=>{STUDY.order.forEach(id=>STUDY.units.get(id).keys.forEach((k,i)=>{delete U.study.k[id+':'+i]})); U.study.kt=Date.now(); persist(['study']); closeModal(); render()}},
+ sreset:()=>{openModal(`<h2 class="h2">공부 진도를 지울까요?</h2><p class="sub">끝낸 단원 표시, 단원 퀴즈 최고 점수, 깃발 표시가 지워져요. 문제 풀이 기록과 오답노트는 그대로예요.</p><div class="modal-act"><button class="btn line" data-act="close">취소</button><button class="btn red" data-act="confirm" data-autofocus>진도 지우기</button></div>`); PENDING=()=>{const t=Date.now(); STUDY.order.forEach(id=>{if(U.study.u[id]) U.study.u[id]={d:0,m:t}; STUDY.units.get(id).keys.forEach((k,i)=>{delete U.study.k[id+':'+i]})}); U.study.kt=t; UI.sq={}; persist(['study']); closeModal(); toast('공부 진도를 지웠어요'); render()}},
  sdone:b=>{const id=b.dataset.id, o=U.study.u[id]||(U.study.u[id]={}); o.d=o.d?0:Date.now(); o.m=Date.now(); persist(['study']); toast(o.d?'단원을 끝냈어요':'끝냄을 취소했어요'); render(true)},
  sera:b=>{UI.custom={subs:[b.dataset.era],tops:[],scope:'all',count:10}; ACT.custom()},
- sqpick:b=>{const S=UI.sq[b.dataset.k]; if(!S||S.done||S.res[S.i]!==undefined) return; const q=S.items[S.i], v=+b.dataset.v; S.pick=v; sqGrade(S,q.t==='c'?q.opts[v]===q.a:(v===1)===q.a)},
+ sqpick:b=>{const S=UI.sq[b.dataset.k]; if(!S||S.done||S.res[S.i]!==undefined) return; const q=S.items[S.i], v=+b.dataset.v; S.pick=v; sqGrade(S,q.t==='c'||q.t==='q'?q.opts[v]===q.a:(v===1)===q.a)},
  sqseq:b=>{const S=UI.sq[b.dataset.k]; if(!S||S.done||S.res[S.i]!==undefined) return; const q=S.items[S.i], v=+b.dataset.v, p=S.seq.indexOf(v); if(p>=0) S.seq.splice(p,1); else S.seq.push(v); if(S.seq.length===q.opts.length) sqGrade(S,S.seq.every((j,i)=>q.opts[j]===q.items[i])); else render(true)},
  sqnext:b=>{const S=UI.sq[b.dataset.k]; if(!S||S.done||S.res[S.i]===undefined) return; S.i++; S.pick=null; S.seq=[]; if(S.i>=S.items.length){S.done=true; sqFinish(S)} render(true); sqFocus()},
  sqretry:b=>{const S=UI.sq[b.dataset.k]; if(!S) return; const w=!!b.dataset.w, src=w?S.src.filter((_,j)=>S.res[j]===false):S.all, N=sqNew(S.key,S.title,src,S.unit); N.all=S.all; N.full=!w; render(true); sqFocus()},
- sqday:b=>{const d=STUDY.d.days[+b.dataset.d-1]; if(!d) return; sqNew('x',d.n+'일차 마무리 퀴즈',shuffle([].concat(...d.units.map(u=>u.quiz))).slice(0,12)); go('study/quiz')},
+ sqday:b=>{const d=STUDY.d.days[+b.dataset.d-1]; if(!d) return; sqNew('x',dayLab(d.n)+' 마무리 퀴즈',shuffle([].concat(...d.units.map(u=>u.quiz))).slice(0,12)); go('study/quiz')},
  sqmix:()=>{const done=STUDY.order.filter(suDone), use=done.length>=3?done:STUDY.order; sqNew('x',done.length>=3?'끝낸 단원 섞어 퀴즈':'전체 섞어 퀴즈',shuffle([].concat(...use.map(id=>STUDY.units.get(id).quiz))).slice(0,20)); if(UI.route==='study'&&UI.arg==='quiz'){render();window.scrollTo(0,0)} else go('study/quiz')}
 };
 
@@ -2519,7 +2668,8 @@ const VIEWS={home:vHome,practice:vPractice,quiz:vQuiz,result:vResult,notes:vNote
 const TABS=[['home','홈','home'],['practice','문제 풀기','pen'],['notes','오답노트','note'],['stats','분석','chart'],['bank','문제은행','bank']];
 const TABSV=[['home','홈','home'],['practice','단어 학습','pen'],['words','단어장','book'],['notes','오답노트','note'],['stats','분석','chart']];
 const TABSH=[['home','홈','home'],['study','공부','book'],['practice','문제 풀기','pen'],['notes','오답노트','note'],['stats','분석','chart']]; // 한국사: 문제은행은 문제 풀기 화면의 링크로
-const tabsNow=()=>EXAMS[U.settings.exam]&&EXAMS[U.settings.exam].vocab?TABSV:U.settings.exam==='history'?TABSH:TABS;
+const hasCourse=ex=>!!(COURSES[ex]||STUDYERR[ex]);
+const tabsNow=()=>EXAMS[U.settings.exam]&&EXAMS[U.settings.exam].vocab?TABSV:hasCourse(U.settings.exam)?TABSH:TABS; // 공부 노트가 있는 시험은 '공부' 탭
 function setRoute(h){h=h||'home'; const i=h.indexOf('/'); UI.route=i<0?h:h.slice(0,i); try{UI.arg=i<0?'':decodeURIComponent(h.slice(i+1))}catch(e){UI.arg=''}}
 function go(r){if(location.hash!=='#'+r){location.hash=r}else{setRoute(r);render();window.scrollTo(0,0)}}
 function renderTop(){
@@ -2540,6 +2690,7 @@ function render(keep){
   return;
  }
  delete $('#view').dataset.sig;
+ studyUse();
  const y=window.scrollY, ae=document.activeElement, fid=ae&&ae.id, sel=ae&&ae.selectionStart;
  OBS.forEach(o=>o.disconnect()); OBS=[]; AFTER=[];
  let r=VIEWS[UI.route]?UI.route:'home';
@@ -2559,7 +2710,7 @@ setInterval(tick,1000);
 /* ---------- actions ---------- */
 const ACT={
  go:b=>go(b.dataset.r),
- exam:b=>{setSetting(s=>s.exam=b.dataset.v); UI.custom={subs:[],tops:[],scope:'all',count:20}; UI.notes.subj=''; UI.notes.open={}; if(!EXAMS[b.dataset.v].vocab&&(UI.route==='words'||UI.route==='cards')){go('home');return} if(UI.route==='study'&&b.dataset.v!=='history'){go('home');return} render()},
+ exam:b=>{setSetting(s=>s.exam=b.dataset.v); UI.custom={subs:[],tops:[],scope:'all',count:20}; UI.notes.subj=''; UI.notes.open={}; if(!EXAMS[b.dataset.v].vocab&&(UI.route==='words'||UI.route==='cards')){go('home');return} if(UI.route==='study'){if(!hasCourse(b.dataset.v)){go('home');return} if(UI.arg){go('study');return}} render()},
  mode:b=>{setSetting(s=>s.mode=b.dataset.v); render(true)},
  plan:()=>{const p=buildPlan(); start('plan',EXAMS[U.settings.exam].vocab?'오늘의 단어':'오늘의 학습',p.ids)},
  resume:()=>{if(U.active){U.settings.exam=U.active.exam; closeModal(); go('quiz')}},
@@ -2767,14 +2918,14 @@ async function boot(data){
  SAMPLE=typeof s==='function'?s:null; DL=d&&typeof d.save==='function'?d:null;
  if(SAMPLE||DL) render(true);
 }
-if(/[?&]debug\b/.test(location.search)) window.__hn={STUDY,UI,studyPace,Cloud,IDB,getProf:()=>({PROF,ME,key:curKey()}),RC,rcOrder,rcWords,rcMock,rcPlan,rounds,estSec,VOC,vmat,vprep,vClash,vtypeFor,wstate,vTypeStats,getU:()=>U,setU:x=>{U=fixU(x);DEMO={}},applyNote,predict,subjStats,topicStats,buildPlan,buildMock,summarize,BANK,TR,trOf,EXAMS,confMatrix,rolling,strategy,focusSet,render};
+if(/[?&]debug\b/.test(location.search)) window.__hn={get STUDY(){return STUDY},COURSES,UI,studyPace,Cloud,IDB,getProf:()=>({PROF,ME,key:curKey()}),RC,rcOrder,rcWords,rcMock,rcPlan,rounds,estSec,VOC,vmat,vprep,vClash,vtypeFor,wstate,vTypeStats,getU:()=>U,setU:x=>{U=fixU(x);DEMO={}},applyNote,predict,subjStats,topicStats,buildPlan,buildMock,summarize,BANK,TR,trOf,EXAMS,confMatrix,rolling,strategy,focusSet,render};
 try{if(window.claude&&window.claude.hot&&window.claude.hot.snapshot) window.claude.hot.snapshot(()=>({route:UI.route+(UI.arg?'/'+UI.arg:'')}))}catch(e){}
 if(window.claude&&window.claude.hot&&window.claude.hot.ready) window.claude.hot.ready(boot); else boot(window.claude&&window.claude.hot&&window.claude.hot.data||{});
 }
 </script>
 <script>
 (()=>{'use strict';
- const BUILD='20261122-1330';
+ const BUILD='20261123-0420';
  if(window.top!==window.self||!('serviceWorker' in navigator)) return;
  window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
  let hiddenAt=0;
