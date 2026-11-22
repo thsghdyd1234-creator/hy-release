@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
-<script>try{var k=localStorage.getItem("hapnote.skin"),t=localStorage.getItem("hapnote.theme"),R=document.documentElement;if(k&&k!=="omr")R.setAttribute("data-skin",k);if(t==="light"||t==="dark")R.setAttribute("data-theme",t)}catch(e){}</script>
+<script>try{var R=document.documentElement,L=null,t=localStorage.getItem("hapnote.theme"),a;try{L=JSON.parse(localStorage.getItem("hapnote.look")||"null")}catch(e){}if(!L)L={marker:{c:"marker",f:"gothic",h:"marker",r:"soft"},wongoji:{c:"wongoji",f:"batang",g:"kan",h:"dots",r:"sharp"},blueprint:{c:"blueprint",f:"draft",g:"grid",h:"dash",r:"sharp"},board:{f:"hand",h:"wave"}}[localStorage.getItem("hapnote.skin")]||{};for(a in L)if(/^[cfghr]$/.test(a)&&/^[a-z]+$/.test(L[a]))R.setAttribute("data-"+a,L[a]);if(t==="light"||t==="dark")R.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710.4%27 fill=%27none%27 stroke=%27%23d9363e%27 stroke-width=%272%27/%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%276.2%27 fill=%27%23141417%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,21 +31,42 @@
 :root[data-theme=dark]{--bg:#121214;--ink:#eeeae5;--ink2:#c4bfb9;--mute:#9a958f;--line:#2c2c31;--soft:#1c1c20;--paper:#18181b;--red:#ff6b72;--redt:#ff9096;--tint:#2b1719;--pink:#7a3a3f;--pinkl:#3d2427;--fill:#eeeae5;--onfill:#121214;color-scheme:dark}
 :root[data-theme=light]{color-scheme:light}
 /*SKIN-TOKENS:START*/
-:root{--rk:1;--pill:999px;--head:var(--sans);--hw:700;--hs:1;--onred:#fff;--headc:var(--ink)}
+:root{--rk:1;--pill:999px;--head:var(--sans);--hw:700;--hs:1;--onred:#fff}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--onred:#1b0b0c}}
 :root[data-theme=dark]{--onred:#1b0b0c}
-:root[data-skin=marker]{--bg:#ffffff;--ink:#14213d;--ink2:#3a4868;--mute:#5c6984;--line:#d9e0ec;--soft:#f2f5fa;--paper:#ffffff;--red:#d93539;--redt:#b8242a;--tint:#fff4ad;--pink:#f2cf3d;--pinkl:#f9e58a;--fill:#14213d;--onfill:#ffffff;--onred:#ffffff;--headc:#14213d;--sans:"Gothic A1","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;--serif:"Noto Serif KR","AppleMyungjo","Batang","Nanum Myeongjo",serif;--head:var(--sans);--rk:0.5;--pill:999px;--hw:800;--hs:1;}
-@media (prefers-color-scheme:dark){:root[data-skin=marker]:not([data-theme=light]){--bg:#0e1422;--ink:#e9edf6;--ink2:#bcc5d9;--mute:#8d98b0;--line:#2b3550;--soft:#1a2236;--paper:#141b2c;--red:#ff6f6f;--redt:#ff9d9d;--tint:#3b3511;--pink:#8f7d1e;--pinkl:#4f4616;--fill:#ffe169;--onfill:#14213d;--onred:#2a0c0c;--headc:#e9edf6;}}
-:root[data-skin=marker][data-theme=dark]{--bg:#0e1422;--ink:#e9edf6;--ink2:#bcc5d9;--mute:#8d98b0;--line:#2b3550;--soft:#1a2236;--paper:#141b2c;--red:#ff6f6f;--redt:#ff9d9d;--tint:#3b3511;--pink:#8f7d1e;--pinkl:#4f4616;--fill:#ffe169;--onfill:#14213d;--onred:#2a0c0c;--headc:#e9edf6;}
-:root[data-skin=wongoji]{--bg:#f6f5ec;--ink:#1c1f1a;--ink2:#454b41;--mute:#636b5f;--line:#c5d6c2;--soft:#ecefe2;--paper:#fdfcf6;--red:#1f7a4d;--redt:#17603c;--tint:#e1f0e3;--pink:#9fcbaa;--pinkl:#cfe5d2;--fill:#1c1f1a;--onfill:#fdfcf6;--onred:#ffffff;--headc:#1c1f1a;--sans:"Gowun Batang","Noto Serif KR","AppleMyungjo","Batang","Nanum Myeongjo",serif;--serif:"Gowun Batang","Noto Serif KR","AppleMyungjo","Batang","Nanum Myeongjo",serif;--head:var(--sans);--rk:0;--pill:0px;--hw:700;--hs:1.04;}
-@media (prefers-color-scheme:dark){:root[data-skin=wongoji]:not([data-theme=light]){--bg:#141712;--ink:#ece9dc;--ink2:#c3c2b2;--mute:#969a8a;--line:#33402f;--soft:#20251d;--paper:#1a1e18;--red:#6fcf97;--redt:#93dfb1;--tint:#1b2e21;--pink:#3f7353;--pinkl:#274232;--fill:#ece9dc;--onfill:#141712;--onred:#0d1f15;--headc:#ece9dc;}}
-:root[data-skin=wongoji][data-theme=dark]{--bg:#141712;--ink:#ece9dc;--ink2:#c3c2b2;--mute:#969a8a;--line:#33402f;--soft:#20251d;--paper:#1a1e18;--red:#6fcf97;--redt:#93dfb1;--tint:#1b2e21;--pink:#3f7353;--pinkl:#274232;--fill:#ece9dc;--onfill:#141712;--onred:#0d1f15;--headc:#ece9dc;}
-:root[data-skin=blueprint]{--bg:#f2f6fc;--ink:#0e2a55;--ink2:#2f4d7e;--mute:#4d668f;--line:#bfd0ea;--soft:#e6edf8;--paper:#fbfdff;--red:#1463d6;--redt:#0f4fb0;--tint:#dbe8fb;--pink:#8fb4ee;--pinkl:#c3d7f5;--fill:#0e2a55;--onfill:#ffffff;--onred:#ffffff;--headc:#0e2a55;--sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;--serif:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;--head:"Orbit",var(--sans);--rk:0.2;--pill:3px;--hw:400;--hs:0.92;}
-@media (prefers-color-scheme:dark){:root[data-skin=blueprint]:not([data-theme=light]){--bg:#0d2f63;--ink:#f1f6ff;--ink2:#c9dbf7;--mute:#9db9e6;--line:#2d5ba3;--soft:#164486;--paper:#113a78;--red:#9fd0ff;--redt:#bfe0ff;--tint:#1b4f9c;--pink:#5f93dc;--pinkl:#2f66b8;--fill:#f1f6ff;--onfill:#0d2f63;--onred:#0d2f63;--headc:#f1f6ff;}}
-:root[data-skin=blueprint][data-theme=dark]{--bg:#0d2f63;--ink:#f1f6ff;--ink2:#c9dbf7;--mute:#9db9e6;--line:#2d5ba3;--soft:#164486;--paper:#113a78;--red:#9fd0ff;--redt:#bfe0ff;--tint:#1b4f9c;--pink:#5f93dc;--pinkl:#2f66b8;--fill:#f1f6ff;--onfill:#0d2f63;--onred:#0d2f63;--headc:#f1f6ff;}
-:root[data-skin=board]{--bg:#fafbfc;--ink:#1c2026;--ink2:#454d58;--mute:#606b78;--line:#d3dae3;--soft:#eff2f5;--paper:#ffffff;--red:#d93636;--redt:#bf2424;--tint:#fdecec;--pink:#f0a8a8;--pinkl:#f8d4d4;--fill:#1c2026;--onfill:#ffffff;--onred:#ffffff;--headc:#1f55c9;--frame:#c2cad3;--sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;--serif:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;--head:"Gaegu",var(--sans);--rk:1.15;--pill:999px;--hw:700;--hs:1.15;}
-@media (prefers-color-scheme:dark){:root[data-skin=board]:not([data-theme=light]){--bg:#1f3329;--ink:#f3f1e7;--ink2:#cfd6c8;--mute:#a3b09f;--line:#3c5547;--soft:#2a4336;--paper:#24392e;--red:#ffd76a;--redt:#ffe08a;--tint:#3a4a2a;--pink:#8f8a4a;--pinkl:#4b5a35;--fill:#f3f1e7;--onfill:#1f3329;--onred:#1f3329;--headc:#f3f1e7;--frame:#8a6a45;}}
-:root[data-skin=board][data-theme=dark]{--bg:#1f3329;--ink:#f3f1e7;--ink2:#cfd6c8;--mute:#a3b09f;--line:#3c5547;--soft:#2a4336;--paper:#24392e;--red:#ffd76a;--redt:#ffe08a;--tint:#3a4a2a;--pink:#8f8a4a;--pinkl:#4b5a35;--fill:#f3f1e7;--onfill:#1f3329;--onred:#1f3329;--headc:#f3f1e7;--frame:#8a6a45;}
+:root[data-c=marker]{--bg:#ffffff;--ink:#14213d;--ink2:#3a4868;--mute:#5c6984;--line:#d9e0ec;--soft:#f2f5fa;--paper:#ffffff;--red:#d93539;--redt:#b8242a;--tint:#fff4ad;--pink:#f2cf3d;--pinkl:#f9e58a;--fill:#14213d;--onfill:#ffffff;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=marker]:not([data-theme=light]){--bg:#0e1422;--ink:#e9edf6;--ink2:#bcc5d9;--mute:#8d98b0;--line:#2b3550;--soft:#1a2236;--paper:#141b2c;--red:#ff6f6f;--redt:#ff9d9d;--tint:#3b3511;--pink:#8f7d1e;--pinkl:#4f4616;--fill:#ffe169;--onfill:#14213d;--onred:#2a0c0c;}}
+:root[data-c=marker][data-theme=dark]{--bg:#0e1422;--ink:#e9edf6;--ink2:#bcc5d9;--mute:#8d98b0;--line:#2b3550;--soft:#1a2236;--paper:#141b2c;--red:#ff6f6f;--redt:#ff9d9d;--tint:#3b3511;--pink:#8f7d1e;--pinkl:#4f4616;--fill:#ffe169;--onfill:#14213d;--onred:#2a0c0c;}
+:root[data-c=wongoji]{--bg:#f6f5ec;--ink:#1c1f1a;--ink2:#454b41;--mute:#636b5f;--line:#c5d6c2;--soft:#ecefe2;--paper:#fdfcf6;--red:#1f7a4d;--redt:#17603c;--tint:#e1f0e3;--pink:#9fcbaa;--pinkl:#cfe5d2;--fill:#1c1f1a;--onfill:#fdfcf6;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=wongoji]:not([data-theme=light]){--bg:#141712;--ink:#ece9dc;--ink2:#c3c2b2;--mute:#969a8a;--line:#33402f;--soft:#20251d;--paper:#1a1e18;--red:#6fcf97;--redt:#93dfb1;--tint:#1b2e21;--pink:#3f7353;--pinkl:#274232;--fill:#ece9dc;--onfill:#141712;--onred:#0d1f15;}}
+:root[data-c=wongoji][data-theme=dark]{--bg:#141712;--ink:#ece9dc;--ink2:#c3c2b2;--mute:#969a8a;--line:#33402f;--soft:#20251d;--paper:#1a1e18;--red:#6fcf97;--redt:#93dfb1;--tint:#1b2e21;--pink:#3f7353;--pinkl:#274232;--fill:#ece9dc;--onfill:#141712;--onred:#0d1f15;}
+:root[data-c=blueprint]{--bg:#f2f6fc;--ink:#0e2a55;--ink2:#2f4d7e;--mute:#4d668f;--line:#bfd0ea;--soft:#e6edf8;--paper:#fbfdff;--red:#1463d6;--redt:#0f4fb0;--tint:#dbe8fb;--pink:#8fb4ee;--pinkl:#c3d7f5;--fill:#0e2a55;--onfill:#ffffff;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=blueprint]:not([data-theme=light]){--bg:#0d2f63;--ink:#f1f6ff;--ink2:#c9dbf7;--mute:#9db9e6;--line:#2d5ba3;--soft:#164486;--paper:#113a78;--red:#9fd0ff;--redt:#bfe0ff;--tint:#1b4f9c;--pink:#5f93dc;--pinkl:#2f66b8;--fill:#f1f6ff;--onfill:#0d2f63;--onred:#0d2f63;}}
+:root[data-c=blueprint][data-theme=dark]{--bg:#0d2f63;--ink:#f1f6ff;--ink2:#c9dbf7;--mute:#9db9e6;--line:#2d5ba3;--soft:#164486;--paper:#113a78;--red:#9fd0ff;--redt:#bfe0ff;--tint:#1b4f9c;--pink:#5f93dc;--pinkl:#2f66b8;--fill:#f1f6ff;--onfill:#0d2f63;--onred:#0d2f63;}
+:root[data-c=violet]{--bg:#ffffff;--ink:#1c1a2e;--ink2:#48455f;--mute:#6a6785;--line:#e3e0ee;--soft:#f4f2fa;--paper:#ffffff;--red:#6a3fd0;--redt:#5a31b8;--tint:#eee8fc;--pink:#bfaeef;--pinkl:#ddd3f7;--fill:#1c1a2e;--onfill:#ffffff;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=violet]:not([data-theme=light]){--bg:#13121c;--ink:#eceaf6;--ink2:#c3bfd8;--mute:#9793b0;--line:#2c2a3d;--soft:#1c1b29;--paper:#181723;--red:#a88bff;--redt:#c2adff;--tint:#261f44;--pink:#5a4a94;--pinkl:#352c5c;--fill:#eceaf6;--onfill:#13121c;--onred:#1a1038;}}
+:root[data-c=violet][data-theme=dark]{--bg:#13121c;--ink:#eceaf6;--ink2:#c3bfd8;--mute:#9793b0;--line:#2c2a3d;--soft:#1c1b29;--paper:#181723;--red:#a88bff;--redt:#c2adff;--tint:#261f44;--pink:#5a4a94;--pinkl:#352c5c;--fill:#eceaf6;--onfill:#13121c;--onred:#1a1038;}
+:root[data-c=orange]{--bg:#ffffff;--ink:#1f1a15;--ink2:#4e463e;--mute:#736a60;--line:#e9e3da;--soft:#f7f3ee;--paper:#ffffff;--red:#c24f0b;--redt:#a8430a;--tint:#fdeedd;--pink:#f2b584;--pinkl:#f9d8bb;--fill:#1f1a15;--onfill:#ffffff;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=orange]:not([data-theme=light]){--bg:#151210;--ink:#f0ebe4;--ink2:#c9c0b5;--mute:#9c9287;--line:#322b25;--soft:#1f1a16;--paper:#1a1613;--red:#ff9a4d;--redt:#ffb47a;--tint:#3a2413;--pink:#8a5425;--pinkl:#4d311a;--fill:#f0ebe4;--onfill:#151210;--onred:#2a1404;}}
+:root[data-c=orange][data-theme=dark]{--bg:#151210;--ink:#f0ebe4;--ink2:#c9c0b5;--mute:#9c9287;--line:#322b25;--soft:#1f1a16;--paper:#1a1613;--red:#ff9a4d;--redt:#ffb47a;--tint:#3a2413;--pink:#8a5425;--pinkl:#4d311a;--fill:#f0ebe4;--onfill:#151210;--onred:#2a1404;}
+:root[data-c=teal]{--bg:#ffffff;--ink:#10201f;--ink2:#3b4f4d;--mute:#5d716f;--line:#dbe7e5;--soft:#f0f6f5;--paper:#ffffff;--red:#0c7d73;--redt:#0a6a61;--tint:#dcf3ef;--pink:#8fd0c6;--pinkl:#c5e8e2;--fill:#10201f;--onfill:#ffffff;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=teal]:not([data-theme=light]){--bg:#0e1716;--ink:#e6f1ef;--ink2:#b8cac7;--mute:#88a09c;--line:#233330;--soft:#152120;--paper:#121c1b;--red:#4fd1c1;--redt:#7fe0d3;--tint:#12332f;--pink:#2f7a70;--pinkl:#1c4a44;--fill:#e6f1ef;--onfill:#0e1716;--onred:#06211e;}}
+:root[data-c=teal][data-theme=dark]{--bg:#0e1716;--ink:#e6f1ef;--ink2:#b8cac7;--mute:#88a09c;--line:#233330;--soft:#152120;--paper:#121c1b;--red:#4fd1c1;--redt:#7fe0d3;--tint:#12332f;--pink:#2f7a70;--pinkl:#1c4a44;--fill:#e6f1ef;--onfill:#0e1716;--onred:#06211e;}
+:root[data-c=pink]{--bg:#ffffff;--ink:#221c22;--ink2:#50464f;--mute:#746874;--line:#ebe3e9;--soft:#f8f3f6;--paper:#ffffff;--red:#d0237a;--redt:#b01964;--tint:#ffe1ef;--pink:#f59cc6;--pinkl:#fbcde2;--fill:#221c22;--onfill:#ffffff;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=pink]:not([data-theme=light]){--bg:#171216;--ink:#f3eaf0;--ink2:#cdbfc8;--mute:#a39099;--line:#33282f;--soft:#20191e;--paper:#1b151a;--red:#ff7ab8;--redt:#ff9fcc;--tint:#3d1a2c;--pink:#8f3d66;--pinkl:#52253b;--fill:#f3eaf0;--onfill:#171216;--onred:#2e0a1b;}}
+:root[data-c=pink][data-theme=dark]{--bg:#171216;--ink:#f3eaf0;--ink2:#cdbfc8;--mute:#a39099;--line:#33282f;--soft:#20191e;--paper:#1b151a;--red:#ff7ab8;--redt:#ff9fcc;--tint:#3d1a2c;--pink:#8f3d66;--pinkl:#52253b;--fill:#f3eaf0;--onfill:#171216;--onred:#2e0a1b;}
+:root[data-c=pencil]{--bg:#fafaf7;--ink:#1c1c1a;--ink2:#474744;--mute:#6b6b67;--line:#deded9;--soft:#f0f0ec;--paper:#ffffff;--red:#3a3a37;--redt:#2c2c2a;--tint:#ebebe6;--pink:#b5b5ae;--pinkl:#d9d9d3;--fill:#1c1c1a;--onfill:#ffffff;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=pencil]:not([data-theme=light]){--bg:#161615;--ink:#ecece8;--ink2:#c2c2bc;--mute:#96968f;--line:#2e2e2c;--soft:#1e1e1d;--paper:#1a1a19;--red:#d6d6cf;--redt:#e4e4de;--tint:#2a2a28;--pink:#6e6e68;--pinkl:#3d3d3a;--fill:#ecece8;--onfill:#161615;--onred:#161615;}}
+:root[data-c=pencil][data-theme=dark]{--bg:#161615;--ink:#ecece8;--ink2:#c2c2bc;--mute:#96968f;--line:#2e2e2c;--soft:#1e1e1d;--paper:#1a1a19;--red:#d6d6cf;--redt:#e4e4de;--tint:#2a2a28;--pink:#6e6e68;--pinkl:#3d3d3a;--fill:#ecece8;--onfill:#161615;--onred:#161615;}
+:root[data-c=sepia]{--bg:#f6f0e4;--ink:#2e241a;--ink2:#594b3c;--mute:#6f604d;--line:#dccfb8;--soft:#ece3d2;--paper:#fbf7ee;--red:#8f4a1b;--redt:#7c3f15;--tint:#f0e0c8;--pink:#d3b48c;--pinkl:#e6d4b8;--fill:#2e241a;--onfill:#fbf7ee;--onred:#ffffff;}
+@media (prefers-color-scheme:dark){:root[data-c=sepia]:not([data-theme=light]){--bg:#17130e;--ink:#efe6d8;--ink2:#c9bca8;--mute:#9d8f7b;--line:#332b20;--soft:#211b14;--paper:#1c1711;--red:#e0a26a;--redt:#ecb988;--tint:#332414;--pink:#7d5a36;--pinkl:#493622;--fill:#efe6d8;--onfill:#17130e;--onred:#2b1806;}}
+:root[data-c=sepia][data-theme=dark]{--bg:#17130e;--ink:#efe6d8;--ink2:#c9bca8;--mute:#9d8f7b;--line:#332b20;--soft:#211b14;--paper:#1c1711;--red:#e0a26a;--redt:#ecb988;--tint:#332414;--pink:#7d5a36;--pinkl:#493622;--fill:#efe6d8;--onfill:#17130e;--onred:#2b1806;}
+:root[data-f=gothic]{--sans:"Gothic A1","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;--hw:800;}
+:root[data-f=batang]{--sans:"Gowun Batang","Noto Serif KR","AppleMyungjo","Batang","Nanum Myeongjo",serif;--serif:"Gowun Batang","Noto Serif KR","AppleMyungjo","Batang","Nanum Myeongjo",serif;--hs:1.04;}
+:root[data-f=draft]{--head:"Orbit",var(--sans);--serif:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;--hw:400;--hs:.92;}
+:root[data-f=hand]{--head:"Gaegu",var(--sans);--hs:1.15;}
+:root[data-r=soft]{--rk:0.5;--pill:999px}
+:root[data-r=sharp]{--rk:0;--pill:0px}
 /*SKIN-TOKENS:END*/
 *{box-sizing:border-box;min-width:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
@@ -766,7 +787,8 @@ body[data-navtop] #toast{bottom:calc(118px + env(safe-area-inset-bottom))}
 body[data-navtop] #modal .modal{padding-bottom:116px}
 body[data-route=quiz] .mtabs{display:none!important}
 /*SKIN-CSS:START*/
-/* ── 디자인 프리셋: 공통 ── (색·글꼴 변수는 위쪽 SKIN-TOKENS, 여기는 프리셋마다 다른 생김새) */
+/* ── 화면 디자인(조합형): 색·글씨체·모서리 변수는 위쪽 SKIN-TOKENS, 여기는 생김새 ──
+   html[data-c]=색  [data-f]=글씨체  [data-g]=바탕 무늬  [data-h]=강조 표시  [data-r]=모서리  [data-theme]=밝기 */
 .title,.h2,.h3,.fb-h,.rd-h b,.big:not(.btn),.figs dd,.kpi dd,.cardbtn .n,.cell b{font-family:var(--head)}
 .fb-h .tag,.fb-h .wk,.fb-h small,.figs dd .linkbtn{font-family:var(--sans);letter-spacing:0}
 .title,.h2,.h3,.fb-h,.rd-h b{font-weight:var(--hw)}
@@ -777,41 +799,56 @@ body[data-route=quiz] .mtabs{display:none!important}
 .skinbtn .ic{width:18px;height:18px}
 @media (min-width:860px) and (max-width:1380px){.top-in{gap:10px 14px}.exams button{padding:0 12px}.tabs a{padding:0 9px}}
 @media (max-width:859px){.skinbtn{margin-left:auto}.skinbtn+.who,.skinbtn+.sync{margin-left:0}.skinbtn+.who{max-width:calc(100vw - 206px)}}
-.skins{display:grid;grid-template-columns:repeat(auto-fill,minmax(146px,1fr));gap:10px;margin-top:14px}
-.skin{display:flex;flex-direction:column;gap:5px;padding:10px;border:1.5px solid var(--line);border-radius:calc(12px*var(--rk));background:var(--paper);color:inherit;font:inherit;text-align:left;cursor:pointer}
-.skin[aria-checked=true]{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
-.skin-pv{position:relative;display:block;height:78px;margin-bottom:3px;border:1px solid var(--pl);border-radius:calc(8px*var(--pr));background:var(--pb);overflow:hidden}
-.skin-pv b{position:absolute;left:10px;top:9px;font:700 calc(18px*var(--ps))/1.1 var(--pf),var(--sans);color:var(--ph);white-space:nowrap}
+/* 고르기 화면 */
+.lk-sec{margin-top:18px}
+.lk-sec>.lab{display:flex;align-items:baseline;gap:8px;margin-bottom:8px}
+.lk-sec>.lab small{font-weight:400;color:var(--mute)}
+.lk-pre{display:flex;gap:10px;margin:0 -22px;padding:2px 22px 10px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin}
+.skin{display:flex;flex-direction:column;gap:4px;flex:0 0 136px;padding:9px;border:1.5px solid var(--line);border-radius:calc(12px*var(--rk));background:var(--paper);color:inherit;font:inherit;text-align:left;cursor:pointer;scroll-snap-align:start}
+.skin[aria-checked=true],.lk-o[aria-checked=true]{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
+.skin-pv{position:relative;display:block;height:74px;margin-bottom:3px;border:1px solid var(--pl);border-radius:calc(8px*var(--pr));background-color:var(--pb);overflow:hidden;--gl:var(--pl)}
+.skin-pv b{position:absolute;left:9px;top:8px;padding:0 3px;border-radius:2px;background:var(--pb);font:700 calc(17px*var(--ps))/1.15 var(--pf),var(--sans);color:var(--pi);white-space:nowrap}
 .skin-pv s{position:absolute;left:10px;right:10px;top:36px;height:8px;border-radius:calc(3px*var(--pr));background:var(--pt);box-shadow:inset 0 0 0 1px var(--pk)}
-.skin-pv i{position:absolute;bottom:10px;left:10px;width:11px;height:11px;border-radius:50%;background:var(--pi)}
+.skin-pv i{position:absolute;bottom:9px;left:10px;width:11px;height:11px;border-radius:50%;background:var(--pi)}
 .skin-pv i+i{left:26px}
 .skin-pv i.a{left:42px;background:var(--pt);box-shadow:inset 0 0 0 1.5px var(--pa)}
-.skin-pv u{position:absolute;right:10px;bottom:9px;width:44px;height:14px;border-radius:calc(5px*var(--pr));background:var(--pi)}
-.skin-n{font-weight:700;font-size:15px;line-height:1.3}
-.skin-d{font-size:12.5px;line-height:1.45;color:var(--mute)}
+.skin-pv u{position:absolute;right:10px;bottom:8px;width:42px;height:14px;border-radius:calc(5px*var(--pr));background:var(--pi)}
+.skin-n{font-weight:700;font-size:14.5px;line-height:1.3}
+.skin-d{font-size:12px;line-height:1.4;color:var(--mute)}
+.lk-colors{display:flex;flex-wrap:wrap;gap:10px 12px}
+.lk-c{width:38px;height:38px;padding:0;border:1.5px solid var(--cl);border-radius:50%;background:linear-gradient(135deg,var(--cb) 0 50%,var(--ca) 50% 100%);cursor:pointer}
+.lk-c[aria-checked=true]{box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--ink)}
+.lk-opts{display:flex;flex-wrap:wrap;gap:8px}
+.lk-o{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:0 13px;border:1.5px solid var(--line);border-radius:calc(10px*var(--rk));background:var(--paper);color:var(--ink);font:inherit;font-size:14.5px;cursor:pointer}
+.lk-o .gp,.lk-o .rp{flex:none;width:18px;height:18px;border:1px solid var(--mute);background-color:var(--bg);--gl:var(--mute)}
+.lk-o .rp{border-width:2px;border-color:var(--ink);border-right-color:transparent;border-bottom-color:transparent}
+.gp-grid{background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:6px 6px}
+.gp-kan{background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:9px 9px}
+.gp-rule{background-image:linear-gradient(var(--gl) 1px,transparent 1px);background-size:100% 6px}
+.gp-dot{background-image:radial-gradient(circle,var(--gl) 1px,transparent 1.3px);background-size:6px 6px}
+.skin-pv.gp-grid{background-size:9px 9px}.skin-pv.gp-kan{background-size:13px 13px}.skin-pv.gp-rule{background-size:100% 11px}.skin-pv.gp-dot{background-size:9px 9px}
 .seg{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:var(--pill);background:var(--soft)}
 .seg button{flex:1;min-height:38px;padding:0 8px;border:0;border-radius:var(--pill);background:none;color:var(--ink2);font:inherit;font-weight:600;font-size:14px;cursor:pointer}
 .seg button[aria-checked=true]{background:var(--ink);color:var(--onfill)}
-/* 형광펜: 제목과 강조에 노란 형광펜 */
-[data-skin=marker] .title{display:inline;padding:0 4px;margin:0 -4px;background-image:linear-gradient(transparent 56%,var(--pinkl) 56%,var(--pinkl) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
-[data-skin=marker] .pen{text-decoration:none;background-image:linear-gradient(transparent 46%,var(--pinkl) 46%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 2px;margin:0 -2px}
-/* 원고지: 초록 괘선 칸, 겹 테두리, 방점 */
-[data-skin=wongoji] body{background-image:linear-gradient(color-mix(in srgb,var(--line) 46%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 46%,transparent) 1px,transparent 1px);background-size:26px 26px;background-position:50% 0}
-[data-skin=wongoji] .card,[data-skin=wongoji] .paper{box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--line)}
-[data-skin=wongoji] .rhead{border-bottom:3px double var(--ink)}
-[data-skin=wongoji] .pen{font-weight:700;text-decoration:none;-webkit-text-emphasis:filled dot var(--red);text-emphasis:filled dot var(--red);-webkit-text-emphasis-position:over right;text-emphasis-position:over right}
-/* 청사진: 모눈, 청색 선, 모서리 표시 */
-[data-skin=blueprint] body{font-variant-numeric:tabular-nums;background-image:linear-gradient(color-mix(in srgb,var(--line) 58%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 58%,transparent) 1px,transparent 1px),linear-gradient(color-mix(in srgb,var(--line) 24%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 24%,transparent) 1px,transparent 1px);background-size:100px 100px,100px 100px,20px 20px,20px 20px;background-position:50% 0}
-[data-skin=blueprint] .title,[data-skin=blueprint] .h2,[data-skin=blueprint] .h3,[data-skin=blueprint] .fb-h,[data-skin=blueprint] .rd-h b{letter-spacing:0;word-spacing:-.2em}
-[data-skin=blueprint] .card,[data-skin=blueprint] .paper{--tk:color-mix(in srgb,var(--ink) 50%,transparent);border-color:var(--pink);background-image:linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk));background-repeat:no-repeat;background-size:9px 1px,1px 9px,9px 1px,1px 9px,9px 1px,1px 9px,9px 1px,1px 9px;background-position:left 5px top 5px,left 5px top 5px,right 5px top 5px,right 5px top 5px,left 5px bottom 5px,left 5px bottom 5px,right 5px bottom 5px,right 5px bottom 5px}
-[data-skin=blueprint] .pen{text-decoration-style:dashed;text-decoration-thickness:1.5px}
-/* 칠판: 손글씨 제목, 물결 밑줄, 틀과 분필 받침 */
-[data-skin=board] body{background-image:radial-gradient(120% 420px at 50% 0,rgba(255,255,255,.05),transparent 70%);background-repeat:no-repeat}
-[data-skin=board] .title,[data-skin=board] .h2,[data-skin=board] .h3,[data-skin=board] .fb-h,[data-skin=board] .rd-h b{color:var(--headc);letter-spacing:-.03em}
-[data-skin=board] .title{line-height:1.08}
-[data-skin=board] .top{border-bottom:4px solid var(--frame)}
-[data-skin=board] .tabbar{border-top:4px solid var(--frame)}
-[data-skin=board] .pen{text-decoration-style:wavy;text-decoration-thickness:1.5px;text-underline-offset:4px}
+/* 바탕 무늬 */
+[data-g=grid] body{background-image:linear-gradient(color-mix(in srgb,var(--line) 58%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 58%,transparent) 1px,transparent 1px),linear-gradient(color-mix(in srgb,var(--line) 24%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 24%,transparent) 1px,transparent 1px);background-size:100px 100px,100px 100px,20px 20px,20px 20px;background-position:50% 0}
+[data-g=kan] body{background-image:linear-gradient(color-mix(in srgb,var(--line) 46%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 46%,transparent) 1px,transparent 1px);background-size:26px 26px;background-position:50% 0}
+[data-g=rule] body{background-image:linear-gradient(color-mix(in srgb,var(--line) 62%,transparent) 1px,transparent 1px);background-size:100% 30px;background-position:0 -1px}
+[data-g=dot] body{background-image:radial-gradient(circle,color-mix(in srgb,var(--mute) 42%,transparent) 1.1px,transparent 1.7px);background-size:20px 20px;background-position:50% 0}
+[data-g=grid] .card,[data-g=grid] .paper{--tk:color-mix(in srgb,var(--ink) 50%,transparent);background-image:linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk)),linear-gradient(var(--tk),var(--tk));background-repeat:no-repeat;background-size:9px 1px,1px 9px,9px 1px,1px 9px,9px 1px,1px 9px,9px 1px,1px 9px;background-position:left 5px top 5px,left 5px top 5px,right 5px top 5px,right 5px top 5px,left 5px bottom 5px,left 5px bottom 5px,right 5px bottom 5px,right 5px bottom 5px}
+[data-g=kan] .card,[data-g=kan] .paper{box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--line)}
+[data-g=kan] .rhead{border-bottom:3px double var(--ink)}
+/* 강조 표시 (.pen = 본문 강조, 제목은 형광펜일 때만 띠) */
+[data-h=marker] .pen{text-decoration:none;background-image:linear-gradient(transparent 46%,var(--pinkl) 46%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 2px;margin:0 -2px}
+[data-h=marker] .title{display:inline;padding:0 4px;margin:0 -4px;background-image:linear-gradient(transparent 56%,var(--pinkl) 56%,var(--pinkl) 94%,transparent 94%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+[data-h=dots] .pen{font-weight:700;text-decoration:none;-webkit-text-emphasis:filled dot var(--red);text-emphasis:filled dot var(--red);-webkit-text-emphasis-position:over right;text-emphasis-position:over right}
+[data-h=dash] .pen{text-decoration-style:dashed;text-decoration-thickness:1.5px}
+[data-h=wave] .pen{text-decoration-style:wavy;text-decoration-thickness:1.5px;text-underline-offset:4px}
+/* 글씨체별 손질 */
+[data-f=draft] body{font-variant-numeric:tabular-nums}
+[data-f=draft] .title,[data-f=draft] .h2,[data-f=draft] .h3,[data-f=draft] .fb-h,[data-f=draft] .rd-h b{letter-spacing:0;word-spacing:-.2em}
+[data-f=hand] .title,[data-f=hand] .h2,[data-f=hand] .h3,[data-f=hand] .fb-h,[data-f=hand] .rd-h b{letter-spacing:-.03em}
+[data-f=hand] .title{line-height:1.08}
 /*SKIN-CSS:END*/
 </style>
 </head>
@@ -978,28 +1015,43 @@ let PROF={v:1,list:[],cur:null,keep:true,skip:false}, ME=null, NOSTORE=false;
 const MIRROR={};
 const lsGet=k=>{try{return localStorage.getItem(k)}catch(e){return null}};
 const lsSet=(k,v)=>{try{localStorage.setItem(k,v);return true}catch(e){return false}};
-/* ── 화면 디자인(프리셋): 색·글꼴은 CSS 변수(data-skin, data-theme), 고른 값은 이 기기에 저장 ── */
-/*SKINS:START*/const SKINS=[{"id":"omr","name":"답안지","desc":"흰 종이, 컴퓨터용 사인펜, 빨간 채점 펜","f":["답안지","밤의 답안지"],"font":"","head":"IBM Plex Sans KR","rk":1,"l":["#ffffff","#141417","#d9363e","#fdeeee","#efb1b5","#e7e4e0","#ffffff","#141417"],"d":["#121214","#eeeae5","#ff6b72","#2b1719","#7a3a3f","#2c2c31","#18181b","#eeeae5"]},{"id":"marker","name":"형광펜","desc":"참고서에 노란 형광펜과 빨간 펜으로 밑줄 긋기","f":["형광펜","밤의 형광펜"],"font":"Gothic+A1:wght@400;500;600;700;800","head":"Gothic A1","rk":0.5,"l":["#ffffff","#14213d","#d93539","#fff4ad","#f2cf3d","#d9e0ec","#ffffff","#14213d"],"d":["#0e1422","#e9edf6","#ff6f6f","#3b3511","#8f7d1e","#2b3550","#141b2c","#e9edf6"]},{"id":"wongoji","name":"원고지","desc":"초록 괘선 원고지에 명조로 또박또박","f":["원고지","밤의 원고지"],"font":"Gowun+Batang:wght@400;700","head":"Gowun Batang","rk":0,"l":["#f6f5ec","#1c1f1a","#1f7a4d","#e1f0e3","#9fcbaa","#c5d6c2","#fdfcf6","#1c1f1a"],"d":["#141712","#ece9dc","#6fcf97","#1b2e21","#3f7353","#33402f","#1a1e18","#ece9dc"]},{"id":"blueprint","name":"청사진","desc":"모눈 위에 청색 선으로 그린 도면","f":["백사진","청사진"],"font":"Orbit","head":"Orbit","rk":0.2,"l":["#f2f6fc","#0e2a55","#1463d6","#dbe8fb","#8fb4ee","#bfd0ea","#fbfdff","#0e2a55"],"d":["#0d2f63","#f1f6ff","#9fd0ff","#1b4f9c","#5f93dc","#2d5ba3","#113a78","#f1f6ff"]},{"id":"board","name":"칠판","desc":"교실 칠판에 분필 글씨, 낮에는 화이트보드","f":["화이트보드","칠판"],"font":"Gaegu:wght@400;700","head":"Gaegu","rk":1.15,"l":["#fafbfc","#1c2026","#d93636","#fdecec","#f0a8a8","#d3dae3","#ffffff","#1f55c9"],"d":["#1f3329","#f3f1e7","#ffd76a","#3a4a2a","#8f8a4a","#3c5547","#24392e","#f3f1e7"]}];/*SKINS:END*/
-const skinNow=()=>{const s=lsGet('hapnote.skin'); return SKINS.some(x=>x.id===s)?s:'omr'};
+/*LOOK-JS:START*/
+/* ── 화면 디자인(조합형): 색·글씨체·바탕 무늬·강조 표시·모서리를 따로 고르고, 추천 조합으로 한 번에 바꿀 수도 있어요. 고른 값은 이 기기에 저장 ── */
+const LOOK={"colors":[{"id":"omr","name":"빨간 펜","l":["#ffffff","#141417","#d9363e","#fdeeee","#efb1b5","#e7e4e0","#ffffff"],"d":["#121214","#eeeae5","#ff6b72","#2b1719","#7a3a3f","#2c2c31","#18181b"]},{"id":"marker","name":"형광펜","l":["#ffffff","#14213d","#d93539","#fff4ad","#f2cf3d","#d9e0ec","#ffffff"],"d":["#0e1422","#e9edf6","#ff6f6f","#3b3511","#8f7d1e","#2b3550","#141b2c"]},{"id":"wongoji","name":"초록 잉크","l":["#f6f5ec","#1c1f1a","#1f7a4d","#e1f0e3","#9fcbaa","#c5d6c2","#fdfcf6"],"d":["#141712","#ece9dc","#6fcf97","#1b2e21","#3f7353","#33402f","#1a1e18"]},{"id":"blueprint","name":"청사진","l":["#f2f6fc","#0e2a55","#1463d6","#dbe8fb","#8fb4ee","#bfd0ea","#fbfdff"],"d":["#0d2f63","#f1f6ff","#9fd0ff","#1b4f9c","#5f93dc","#2d5ba3","#113a78"]},{"id":"violet","name":"보라 펜","l":["#ffffff","#1c1a2e","#6a3fd0","#eee8fc","#bfaeef","#e3e0ee","#ffffff"],"d":["#13121c","#eceaf6","#a88bff","#261f44","#5a4a94","#2c2a3d","#181723"]},{"id":"orange","name":"주황 색연필","l":["#ffffff","#1f1a15","#c24f0b","#fdeedd","#f2b584","#e9e3da","#ffffff"],"d":["#151210","#f0ebe4","#ff9a4d","#3a2413","#8a5425","#322b25","#1a1613"]},{"id":"teal","name":"청록","l":["#ffffff","#10201f","#0c7d73","#dcf3ef","#8fd0c6","#dbe7e5","#ffffff"],"d":["#0e1716","#e6f1ef","#4fd1c1","#12332f","#2f7a70","#233330","#121c1b"]},{"id":"pink","name":"분홍 형광","l":["#ffffff","#221c22","#d0237a","#ffe1ef","#f59cc6","#ebe3e9","#ffffff"],"d":["#171216","#f3eaf0","#ff7ab8","#3d1a2c","#8f3d66","#33282f","#1b151a"]},{"id":"pencil","name":"연필","l":["#fafaf7","#1c1c1a","#3a3a37","#ebebe6","#b5b5ae","#deded9","#ffffff"],"d":["#161615","#ecece8","#d6d6cf","#2a2a28","#6e6e68","#2e2e2c","#1a1a19"]},{"id":"sepia","name":"헌책","l":["#f6f0e4","#2e241a","#8f4a1b","#f0e0c8","#d3b48c","#dccfb8","#fbf7ee"],"d":["#17130e","#efe6d8","#e0a26a","#332414","#7d5a36","#332b20","#1c1711"]}],"fonts":[{"id":"plex","name":"고딕","font":"","head":"IBM Plex Sans KR"},{"id":"gothic","name":"굵은 고딕","font":"Gothic+A1:wght@400;500;600;700;800","head":"Gothic A1"},{"id":"batang","name":"명조","font":"Gowun+Batang:wght@400;700","head":"Gowun Batang"},{"id":"draft","name":"도면체","font":"Orbit","head":"Orbit"},{"id":"hand","name":"손글씨","font":"Gaegu:wght@400;700","head":"Gaegu"}],"grids":[{"id":"none","name":"없음"},{"id":"grid","name":"모눈"},{"id":"kan","name":"원고지 칸"},{"id":"rule","name":"줄"},{"id":"dot","name":"점"}],"marks":[{"id":"line","name":"밑줄"},{"id":"marker","name":"형광펜"},{"id":"dots","name":"방점"},{"id":"dash","name":"점선"},{"id":"wave","name":"물결"}],"radii":[{"id":"round","name":"둥글게","rk":1},{"id":"soft","name":"조금","rk":0.5},{"id":"sharp","name":"각지게","rk":0}],"presets":[{"id":"omr","name":"답안지","desc":"흰 종이, 사인펜, 빨간 채점 펜","c":"omr","f":"plex","g":"none","h":"line","r":"round"},{"id":"marker","name":"형광펜","desc":"참고서에 형광펜으로 밑줄 긋기","c":"marker","f":"gothic","g":"none","h":"marker","r":"soft"},{"id":"wongoji","name":"원고지","desc":"초록 괘선 칸에 명조로 또박또박","c":"wongoji","f":"batang","g":"kan","h":"dots","r":"sharp"},{"id":"blueprint","name":"청사진","desc":"모눈 위에 청색 선으로 그린 도면","c":"blueprint","f":"draft","g":"grid","h":"dash","r":"sharp"},{"id":"sketch","name":"연필 노트","desc":"줄 공책에 연필로 쓴 필기","c":"pencil","f":"hand","g":"rule","h":"wave","r":"soft"},{"id":"diary","name":"보라 다이어리","desc":"점 노트에 보라 펜과 형광펜","c":"violet","f":"gothic","g":"dot","h":"marker","r":"round"},{"id":"oldbook","name":"헌책","desc":"바랜 종이에 명조와 갈색 잉크","c":"sepia","f":"batang","g":"none","h":"line","r":"soft"},{"id":"mint","name":"청록 모눈","desc":"모눈종이에 청록 수성펜","c":"teal","f":"plex","g":"grid","h":"marker","r":"round"}]};
+const LKEYS=['c','f','g','h','r'], LDEF={c:'omr',f:'plex',g:'none',h:'line',r:'round'}, LLIST={c:'colors',f:'fonts',g:'grids',h:'marks',r:'radii'};
+const OLDSKIN={marker:{c:'marker',f:'gothic',h:'marker',r:'soft'},wongoji:{c:'wongoji',f:'batang',g:'kan',h:'dots',r:'sharp'},blueprint:{c:'blueprint',f:'draft',g:'grid',h:'dash',r:'sharp'},board:{f:'hand',h:'wave'}};
+const lookOk=(k,v)=>LOOK[LLIST[k]].some(x=>x.id===v);
+function lookNow(){let L=null; try{L=JSON.parse(lsGet('hapnote.look')||'null')}catch(e){} if(!L||typeof L!=='object') L=OLDSKIN[lsGet('hapnote.skin')]||{}; const o={}; for(const k of LKEYS) o[k]=lookOk(k,L[k])?L[k]:LDEF[k]; return o}
 const themeNow=()=>{const t=lsGet('hapnote.theme'); return t==='light'||t==='dark'?t:'auto'};
 const darkNow=()=>{const t=themeNow(); return t==='dark'||(t==='auto'&&!!(window.matchMedia&&matchMedia('(prefers-color-scheme:dark)').matches))};
-function skinFont(id){const k=SKINS.find(x=>x.id===id); if(!k||!k.font||document.getElementById('skf-'+id)) return; const l=document.createElement('link'); l.id='skf-'+id; l.rel='stylesheet'; l.href='https://fonts.googleapis.com/css2?family='+k.font+'&display=swap'; document.head.appendChild(l)}
+const presetNow=()=>{const L=lookNow(); return LOOK.presets.find(p=>LKEYS.every(k=>p[k]===L[k]))||null};
+function lookFont(id){const k=LOOK.fonts.find(x=>x.id===id); if(!k||!k.font||document.getElementById('lkf-'+id)) return; const l=document.createElement('link'); l.id='lkf-'+id; l.rel='stylesheet'; l.href='https://fonts.googleapis.com/css2?family='+k.font+'&display=swap'; document.head.appendChild(l)}
 function themeMeta(){const go=()=>{const c=getComputedStyle(document.documentElement).getPropertyValue('--bg').trim(); if(!c) return; let ms=[...document.querySelectorAll('meta[name=theme-color]')]; if(!ms.length){const m=document.createElement('meta'); m.name='theme-color'; document.head.appendChild(m); ms=[m]} ms.forEach(m=>{m.removeAttribute('media'); m.content=c})}; window.requestAnimationFrame?requestAnimationFrame(go):setTimeout(go,0)}
-function applySkin(id,theme){const R=document.documentElement;
- if(id!==undefined){if(!SKINS.some(x=>x.id===id)) id='omr'; if(id==='omr') R.removeAttribute('data-skin'); else R.setAttribute('data-skin',id); lsSet('hapnote.skin',id); skinFont(id)}
+function applyLook(L,theme){const R=document.documentElement;
+ if(L){const cur=lookNow(), o={}; for(const k of LKEYS){const v=L[k]!==undefined?L[k]:cur[k]; o[k]=lookOk(k,v)?v:LDEF[k]; if(o[k]===LDEF[k]) R.removeAttribute('data-'+k); else R.setAttribute('data-'+k,o[k])} R.removeAttribute('data-skin'); lsSet('hapnote.look',JSON.stringify(o)); lookFont(o.f)}
  if(theme!==undefined){const t=theme==='light'||theme==='dark'?theme:'auto'; if(t==='auto') R.removeAttribute('data-theme'); else R.setAttribute('data-theme',t); lsSet('hapnote.theme',t)}
  themeMeta()}
-applySkin(skinNow(),themeNow());
-function openSkin(){SKINS.forEach(k=>skinFont(k.id)); const cur=skinNow(), th=themeNow(), dk=darkNow(), me=SKINS.find(x=>x.id===cur);
- const pv=k=>{const c=dk?k.d:k.l; return `<span class="skin-pv" aria-hidden="true" style="--pb:${c[0]};--pi:${c[1]};--pa:${c[2]};--pt:${c[3]};--pk:${c[4]};--pl:${c[5]};--ph:${c[7]};--pf:'${k.head}';--pr:${k.rk};--ps:${k.head==='Gaegu'?1.3:1}"><b>${k.f[dk?1:0]}</b><s></s><i></i><i></i><i class="a"></i><u></u></span>`};
- openModal(`<h2 class="h2">화면 디자인</h2><p class="sub">공부하는 화면의 분위기를 골라요. 고른 디자인은 이 기기에 저장돼요.</p>
- <div class="skins" role="radiogroup" aria-label="디자인">${SKINS.map(k=>`<button class="skin" role="radio" aria-checked="${k.id===cur}" data-act="skinset" data-v="${k.id}">${pv(k)}<span class="skin-n">${k.name}</span><span class="skin-d">${k.desc}</span></button>`).join('')}</div>
- <span class="lab" style="margin-top:18px">밝기</span>
- <div class="seg" role="radiogroup" aria-label="밝기">${[['auto','자동'],['light','밝게'],['dark','어둡게']].map(([v,l])=>`<button role="radio" aria-checked="${v===th}" data-act="themeset" data-v="${v}">${l}</button>`).join('')}</div>
- <p class="small" style="margin-top:10px">${me.name} 디자인은 밝을 때 '${me.f[0]}', 어두울 때 '${me.f[1]}'로 보여요.</p>
- <div class="modal-act"><button class="btn" data-act="close">닫기</button></div>`);
- setTimeout(()=>{const b=document.querySelector('.skin[aria-checked=true]'); if(b) b.focus()},40)}
-if(window.matchMedia) try{matchMedia('(prefers-color-scheme:dark)').addEventListener('change',()=>{themeMeta(); if(document.querySelector('#modal .skins')) openSkin()})}catch(e){}
+applyLook(lookNow(),themeNow());
+function openSkin(focus){LOOK.fonts.forEach(k=>lookFont(k.id));
+ const old=document.querySelector('#modal .lk'), keep=old?[old.closest('.modal-box').scrollTop,old.querySelector('.lk-pre').scrollLeft]:null;
+ const L=lookNow(), th=themeNow(), dk=darkNow(), P=presetNow(), nm=(k,v)=>LOOK[LLIST[k]].find(x=>x.id===v).name;
+ const pv=p=>{const c=LOOK.colors.find(x=>x.id===p.c)[dk?'d':'l'], f=LOOK.fonts.find(x=>x.id===p.f), r=LOOK.radii.find(x=>x.id===p.r); return `<span class="skin-pv${p.g!=='none'?' gp-'+p.g:''}" aria-hidden="true" style="--pb:${c[0]};--pi:${c[1]};--pa:${c[2]};--pt:${c[3]};--pk:${c[4]};--pl:${c[5]};--pf:'${f.head}';--pr:${r.rk};--ps:${f.id==='hand'?1.3:1}"><b>${p.name}</b><s></s><i></i><i></i><i class="a"></i><u></u></span>`};
+ const opt=(k,x,inner)=>`<button class="lk-o" role="radio" aria-checked="${L[k]===x.id}" data-act="lookset" data-k="${k}" data-v="${x.id}">${inner}</button>`;
+ const MK={line:'text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:2px;text-underline-offset:5px',marker:'background-image:linear-gradient(transparent 46%,var(--pinkl) 46%);padding:0 2px',dots:'-webkit-text-emphasis:filled dot var(--red);text-emphasis:filled dot var(--red)',dash:'text-decoration:underline dashed var(--red) 1.5px;text-underline-offset:5px',wave:'text-decoration:underline wavy var(--red) 1.5px;text-underline-offset:4px'};
+ const RR={round:'5px',soft:'2.5px',sharp:'0'};
+ openModal(`<div class="lk"><h2 class="h2">화면 디자인</h2><p class="sub">추천 조합을 고르거나, 색·글씨체·바탕 무늬를 따로 골라 내 조합을 만들어요. 이 기기에 저장돼요.</p>
+ <div class="lk-sec"><span class="lab">추천 조합 <small>${P?P.name:'직접 고른 조합'}</small></span><div class="lk-pre" role="radiogroup" aria-label="추천 조합">${LOOK.presets.map(p=>`<button class="skin" role="radio" aria-checked="${!!P&&P.id===p.id}" data-act="lookpre" data-v="${p.id}">${pv(p)}<span class="skin-n">${p.name}</span><span class="skin-d">${p.desc}</span></button>`).join('')}</div></div>
+ <div class="lk-sec"><span class="lab">색 <small>${nm('c',L.c)}</small></span><div class="lk-colors" role="radiogroup" aria-label="색">${LOOK.colors.map(c=>{const v=c[dk?'d':'l']; return `<button class="lk-c" role="radio" aria-checked="${L.c===c.id}" aria-label="${c.name}" title="${c.name}" data-act="lookset" data-k="c" data-v="${c.id}" style="--cb:${v[6]};--ca:${v[2]};--cl:${v[5]}"></button>`}).join('')}</div></div>
+ <div class="lk-sec"><span class="lab">글씨체</span><div class="lk-opts" role="radiogroup" aria-label="글씨체">${LOOK.fonts.map(f=>opt('f',f,`<span style="font-family:'${f.head}',var(--sans);font-weight:${f.id==='draft'?400:700};font-size:${f.id==='hand'?'18px':'inherit'}">${f.name}</span>`)).join('')}</div></div>
+ <div class="lk-sec"><span class="lab">바탕 무늬</span><div class="lk-opts" role="radiogroup" aria-label="바탕 무늬">${LOOK.grids.map(g=>opt('g',g,`<i class="gp${g.id!=='none'?' gp-'+g.id:''}"></i>${g.name}`)).join('')}</div></div>
+ <div class="lk-sec"><span class="lab">강조 표시</span><div class="lk-opts" role="radiogroup" aria-label="강조 표시">${LOOK.marks.map(m=>opt('h',m,`<span style="font-weight:600;${MK[m.id]}">${m.name}</span>`)).join('')}</div></div>
+ <div class="lk-sec"><span class="lab">모서리</span><div class="lk-opts" role="radiogroup" aria-label="모서리">${LOOK.radii.map(r=>opt('r',r,`<i class="rp" style="border-top-left-radius:${RR[r.id]}"></i>${r.name}`)).join('')}</div></div>
+ <div class="lk-sec"><span class="lab">밝기</span><div class="seg" role="radiogroup" aria-label="밝기">${[['auto','자동'],['light','밝게'],['dark','어둡게']].map(([v,l])=>`<button role="radio" aria-checked="${v===th}" data-act="themeset" data-v="${v}">${l}</button>`).join('')}</div></div>
+ <div class="modal-act"><button class="btn" data-act="close">닫기</button></div></div>`);
+ const box=document.querySelector('#modal .modal-box'); if(keep&&box){box.scrollTop=keep[0]; box.querySelector('.lk-pre').scrollLeft=keep[1]}
+ setTimeout(()=>{const b=document.querySelector('#modal '+(focus||'.skin[aria-checked=true]')); if(b) b.focus({preventScroll:true}); if(keep&&box){box.scrollTop=keep[0]; box.querySelector('.lk-pre').scrollLeft=keep[1]}},40)}
+if(window.matchMedia) try{matchMedia('(prefers-color-scheme:dark)').addEventListener('change',()=>{themeMeta(); if(document.querySelector('#modal .lk')) openSkin()})}catch(e){}
+/*LOOK-JS:END*/
 
 const lsDel=k=>{try{localStorage.removeItem(k)}catch(e){}};
 const profOf=id=>(id&&PROF.list.find(p=>p.id===id))||null;
@@ -2462,7 +2514,7 @@ function vBank(){
   <section class="card"><h2 class="h2">시험 설정</h2>
    <div class="stack" style="margin-top:14px">${EXIDS.map(ex=>`<div><span class="lab">${EXAMS[ex].full}</span><div class="row"><select data-set="track" data-ex="${ex}" aria-label="${EXAMS[ex].name} 기준">${EXAMS[ex].tracks.map(t=>`<option value="${t.id}" ${S.track[ex]===t.id?'selected':''}>${t.name} · ${t.desc}</option>`).join('')}</select><input type="date" data-set="date" data-ex="${ex}" value="${esc(S.examDate[ex]||'')}" aria-label="${EXAMS[ex].name} 시험일"></div></div>`).join('')}
    <div><label class="lab" for="goal">하루 목표 문제 수</label><input type="number" id="goal" data-set="goal" min="5" max="200" step="5" value="${S.goal}" style="width:8em"></div>
-   <div><span class="lab">화면 디자인</span><button class="btn line sm" data-act="skin">${ico('skin')}${SKINS.find(x=>x.id===skinNow()).name} · 바꾸기</button></div>
+   <div><span class="lab">화면 디자인</span><button class="btn line sm" data-act="skin">${ico('skin')}${presetNow()?presetNow().name:'직접 고른 조합'} · 바꾸기</button></div>
    <label class="check"><input type="checkbox" data-set="unsure" ${S.unsureNote?'checked':''}> 맞혀도 헷갈린 문제는 오답노트에 넣기</label>
    ${EXAMS[U.settings.exam].vocab?'':`<label class="check"><input type="checkbox" data-set="demo" ${S.demoOff[U.settings.exam]?'':'checked'}> 기록이 없을 때 예시 기록 보여 주기 (${EXAMS[U.settings.exam].name})</label>`}</div>
   </section>
@@ -2568,7 +2620,7 @@ let TT=0;
 function toast(msg){const t=$('#toast'); t.textContent=msg; t.classList.add('on'); clearTimeout(TT); TT=setTimeout(()=>t.classList.remove('on'),2800)}
 
 /* ---------- study: 공부 노트 (한국사 data/khist.json · 컴활 data/cstudy.json) ---------- */
-const COURSE_FILES={history:'data/khist.json'}; // 컴활 공부 노트(data/cstudy.json)가 준비되면 comp 를 더해요
+const COURSE_FILES={history:'data/khist.json',comp:'data/cstudy.json'};
 const COURSES={};
 const NOSTUDY={ready:false,err:'',d:null,units:new Map(),order:[],core:[],ex:''};
 let STUDY=NOSTUDY; // 지금 고른 시험의 공부 노트
@@ -2982,7 +3034,7 @@ const ACT={
  confirm:()=>{const f=PENDING; PENDING=null; if(f) f()},
  close:()=>closeModal(),
  mbg:(b,e)=>{if(e.target===b) closeModal()},
- skin:()=>openSkin(), skinset:b=>{applySkin(b.dataset.v); openSkin()}, themeset:b=>{applySkin(undefined,b.dataset.v); openSkin()},
+ skin:()=>openSkin(), lookpre:b=>{const p=LOOK.presets.find(x=>x.id===b.dataset.v); if(p){applyLook(p); openSkin(`.skin[data-v="${p.id}"]`)}}, lookset:b=>{applyLook({[b.dataset.k]:b.dataset.v}); openSkin(`[data-k="${b.dataset.k}"][data-v="${b.dataset.v}"]`)}, themeset:b=>{applyLook(null,b.dataset.v); openSkin(`.seg [data-v="${b.dataset.v}"]`)},
  mock:b=>{const ex=U.settings.exam, E=EXAMS[ex]; if(E.rc){const m=E.mocks.find(x=>x.id===b.dataset.m)||E.mocks[0]; start('mock',m.name,(UI.rcMock&&UI.rcMock[m.id])||rcMock(ex,m.id),'exam'); return} start('mock','실전 모의고사',buildMock(),'exam')},
  round:b=>{const r=rounds(U.settings.exam).find(x=>x.k===b.dataset.k); if(r) start('round',r.title,r.ids)},
  focus:b=>{const k=b.dataset.k, t={due:'오답노트 복습',mis:'잘못 알고 있던 문제',unsure:'헷갈린 문제',star:'북마크',notes:'오답노트 전체'}[k]; start(k,t,shuffle(focusSet(k)).slice(0,60))},
@@ -3184,14 +3236,14 @@ async function boot(data){
  SAMPLE=typeof s==='function'?s:null; DL=d&&typeof d.save==='function'?d:null;
  if(SAMPLE||DL) render(true);
 }
-if(/[?&]debug\b/.test(location.search)) window.__hn={get STUDY(){return STUDY},applySkin,SKINS,skinNow,themeNow,COURSES,UI,studyPace,Cloud,IDB,getProf:()=>({PROF,ME,key:curKey()}),RC,rcOrder,rcWords,rcMock,rcPlan,rounds,estSec,VOC,vmat,vprep,vClash,vtypeFor,wstate,vTypeStats,getU:()=>U,setU:x=>{U=fixU(x);DEMO={}},applyNote,predict,subjStats,topicStats,buildPlan,buildMock,summarize,BANK,TR,trOf,EXAMS,confMatrix,rolling,strategy,focusSet,render};
+if(/[?&]debug\b/.test(location.search)) window.__hn={get STUDY(){return STUDY},applyLook,LOOK,lookNow,presetNow,themeNow,COURSES,UI,studyPace,Cloud,IDB,getProf:()=>({PROF,ME,key:curKey()}),RC,rcOrder,rcWords,rcMock,rcPlan,rounds,estSec,VOC,vmat,vprep,vClash,vtypeFor,wstate,vTypeStats,getU:()=>U,setU:x=>{U=fixU(x);DEMO={}},applyNote,predict,subjStats,topicStats,buildPlan,buildMock,summarize,BANK,TR,trOf,EXAMS,confMatrix,rolling,strategy,focusSet,render};
 try{if(window.claude&&window.claude.hot&&window.claude.hot.snapshot) window.claude.hot.snapshot(()=>({route:UI.route+(UI.arg?'/'+UI.arg:'')}))}catch(e){}
 if(window.claude&&window.claude.hot&&window.claude.hot.ready) window.claude.hot.ready(boot); else boot(window.claude&&window.claude.hot&&window.claude.hot.data||{});
 }
 </script>
 <script>
 (()=>{'use strict';
- const BUILD='20261123-0405';
+ const BUILD='20261123-0430';
  if(window.top!==window.self||!('serviceWorker' in navigator)) return;
  window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
  let hiddenAt=0;
