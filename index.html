@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 24%27%3E%3Cellipse cx=%278%27 cy=%2712%27 rx=%276.8%27 ry=%2710.8%27 fill=%27none%27 stroke=%27%23d9363e%27 stroke-width=%271.6%27/%3E%3Cellipse cx=%278%27 cy=%2712%27 rx=%274.4%27 ry=%277.8%27 fill=%27%23141417%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%2710.4%27 fill=%27none%27 stroke=%27%23d9363e%27 stroke-width=%272%27/%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%276.2%27 fill=%27%23141417%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap">
@@ -43,7 +43,7 @@ img{max-width:100%}
 .top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
 .top-in{max-width:1240px;margin:0 auto;padding:10px max(16px,4vw);display:flex;align-items:center;gap:10px 20px;flex-wrap:wrap;min-height:64px}
 .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:18px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
-.brand svg{width:16px;height:24px}
+.brand svg{width:22px;height:22px}
 .exams{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;background:var(--soft)}
 .exams button{min-height:38px;padding:0 16px;border:0;border-radius:999px;background:none;color:var(--ink2);font-weight:600;font-size:15px;cursor:pointer;white-space:nowrap}
 .exams button[aria-selected=true]{background:var(--ink);color:var(--onfill)}
@@ -109,7 +109,7 @@ p{margin:0}
 .plan-sum b{color:var(--ink);font-size:17px}
 .plan-list{list-style:none;margin:16px 0;padding:0;display:grid;gap:12px}
 .plan-list li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:center}
-.pn{display:grid;place-items:center;width:30px;height:42px;border:1.5px solid var(--pink);border-radius:50%;color:var(--redt);font-weight:700;font-variant-numeric:tabular-nums}
+.pn{display:grid;place-items:center;width:34px;height:34px;border:1.5px solid var(--pink);border-radius:50%;color:var(--redt);font-weight:700;font-variant-numeric:tabular-nums}
 .pn.on{background:var(--fill);border-color:var(--fill);color:var(--onfill)}
 .plan-list b{display:block;font-size:15.5px}
 .plan-list div span{display:block;font-size:13.5px;color:var(--mute);line-height:1.45}
@@ -132,7 +132,7 @@ p{margin:0}
 .mrow:hover{background:var(--soft)}
 .mt{font-size:14.5px;line-height:1.35}
 .bubs{display:flex;gap:4px}
-.bb{display:inline-block;width:11px;height:17px;border:1.5px solid var(--pink);border-radius:50%}
+.bb{display:inline-block;width:13px;height:13px;border:1.5px solid var(--pink);border-radius:50%}
 .bb.on{background:var(--fill);border-color:var(--fill)}
 .mv{text-align:right;font-size:13.5px;color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}
 .strip{display:flex;align-items:center;justify-content:space-between;gap:10px 18px;flex-wrap:wrap;margin-top:24px;padding:16px 18px;border-radius:12px;background:var(--soft)}
@@ -192,12 +192,12 @@ p{margin:0}
 .ch{position:relative;display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start;width:100%;min-height:54px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font:400 17px/1.65 var(--serif);text-align:left;cursor:pointer;transition:border-color .15s ease}
 .ch:hover:not(:disabled){border-color:var(--ink2)}
 .ch:disabled{cursor:default;color:var(--ink)}
-.cn{position:relative;display:grid;place-items:center;width:24px;height:32px;border:1.5px solid var(--pink);border-radius:50%;color:var(--red);font:600 14px/1 var(--sans)}
+.cn{position:relative;display:grid;place-items:center;width:28px;height:28px;border:1.5px solid var(--pink);border-radius:50%;color:var(--red);font:600 14px/1 var(--sans)}
 .ch.sel{border-color:var(--ink)}
 .ch.sel .cn{background:var(--fill);border-color:var(--fill);color:var(--onfill)}
 .ch.right{border-color:var(--red);background:var(--tint)}
 .mk{position:absolute;left:0;top:0;width:52px;height:56px;overflow:visible;pointer-events:none}
-.mk ellipse,.mk path{fill:none;stroke:var(--red);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw .45s ease-out both}
+.mk circle,.mk path{fill:none;stroke:var(--red);stroke-width:2.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw .45s ease-out both}
 @keyframes draw{from{stroke-dashoffset:1}}
 .qact{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
 .qact .btn{flex:1 1 140px}
@@ -230,7 +230,7 @@ input[type=checkbox]{width:20px;height:20px;accent-color:var(--ink)}
 .onum.ok::after{content:"";position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border:2px solid var(--red);border-radius:50%}
 .onum.bad::after{content:"";position:absolute;left:12px;right:12px;top:50%;height:2px;background:var(--red);transform:rotate(-55deg)}
 .orow.flag .onum::before{content:"?";position:absolute;right:4px;top:1px;font-size:13px;color:var(--red)}
-.ob{justify-self:center;display:grid;place-items:center;width:20px;height:28px;border:1.3px solid var(--pink);border-radius:50%;color:var(--red);font-size:13px;line-height:1;user-select:none}
+.ob{justify-self:center;display:grid;place-items:center;width:24px;height:24px;border:1.3px solid var(--pink);border-radius:50%;color:var(--red);font-size:13px;line-height:1;user-select:none}
 .ob.on{background:var(--fill);border-color:var(--fill);color:var(--onfill)}
 .ob[data-act]{cursor:pointer}
 .sheet-f{padding:10px 12px;border-top:1.5px solid var(--pink);font-size:13.5px;color:var(--mute)}
@@ -311,9 +311,9 @@ details>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;f
 .qd-ch li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:start;padding:8px 10px;border-radius:8px;font:400 15.5px/1.6 var(--serif)}
 .qd-ch li.ans{background:var(--tint)}
 .qd-ch li.mine{outline:1px dashed var(--pink)}
-.qd-ch .cn{width:22px;height:30px;font-size:13px}
+.qd-ch .cn{width:26px;height:26px;font-size:13px}
 .boxes{display:inline-flex;gap:3px;vertical-align:middle}
-.boxes i{width:9px;height:14px;border:1.3px solid var(--pink);border-radius:50%}
+.boxes i{width:11px;height:11px;border:1.3px solid var(--pink);border-radius:50%}
 .boxes i.on{background:var(--fill);border-color:var(--fill)}
 .fdl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 28px;margin:14px 0 6px}
 .fdl div{padding-top:10px;border-top:1px solid var(--line)}
@@ -333,7 +333,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 #toast.on{opacity:1}
 @media (min-width:860px){#toast{bottom:28px}}
 @media (max-width:859px){.home-grid{grid-template-columns:minmax(0,1fr)}.plan{position:static}.ptop{grid-template-columns:minmax(0,1fr)}.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:12px}.figs div{min-width:0}.figs dd{font-size:24px}}
-@media (max-width:420px){.srow{grid-template-columns:minmax(4.8em,6.5em) minmax(0,1fr) 3.2em}.mrow{grid-template-columns:minmax(0,1fr) auto 2.8em;gap:8px}.bb{width:10px;height:15px}}
+@media (max-width:420px){.srow{grid-template-columns:minmax(4.8em,6.5em) minmax(0,1fr) 3.2em}.mrow{grid-template-columns:minmax(0,1fr) auto 2.8em;gap:8px}.bb{width:12px;height:12px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 /* ---------- TOEIC vocabulary ---------- */
 .vinst{margin:0 0 10px;font-size:14.5px;color:var(--mute)}
@@ -449,8 +449,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 button.kw-main{cursor:pointer}
 .kw-n{font-weight:700}
 .kw-d{display:block;margin-top:2px;font-size:14.5px;line-height:1.55;color:var(--ink2)}
-.fq{display:inline-flex;gap:3px;min-width:32px;padding-top:6px}
-.fq .bb{width:8px;height:13px;border-width:1.3px}
+.fq{display:inline-flex;gap:3px;min-width:33px;padding-top:8px}
+.fq .bb{width:9px;height:9px;border-width:1.3px}
 .legend .fq{min-width:0;padding-top:0}
 .kw-flag{display:inline-grid;place-items:center;width:40px;height:40px;margin:-6px -8px -6px 0;border:0;border-radius:8px;background:none;color:var(--pink);cursor:pointer}
 .kw-flag[aria-pressed=true]{color:var(--red)}
@@ -479,7 +479,7 @@ button.kw-main{cursor:pointer}
 }
 .notes{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
 .notes li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;font-size:15.5px;line-height:1.65}
-.notes li::before{content:'!';display:grid;place-items:center;width:18px;height:25px;margin-top:1px;border:1.5px solid var(--red);border-radius:50%;color:var(--red);font-weight:700;font-size:13px;line-height:1}
+.notes li::before{content:'!';display:grid;place-items:center;width:20px;height:20px;margin-top:3px;border:1.5px solid var(--red);border-radius:50%;color:var(--red);font-weight:700;font-size:13px;line-height:1}
 .notes.memo li::before{content:'';border-color:var(--fill);background:var(--fill)}
 .sq-top{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap}
 .sq-dots{display:flex;gap:4px;flex-wrap:wrap}
@@ -524,7 +524,7 @@ button.kw-main{cursor:pointer}
 .st-kv dd{margin:0;font-weight:600}
 .steps{list-style:none;counter-reset:s;margin:12px 0 0;padding:0;display:grid;gap:10px}
 .steps li{counter-increment:s;display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;align-items:start;font-size:15px;line-height:1.55}
-.steps li::before{content:counter(s);display:grid;place-items:center;width:24px;height:32px;border:1.5px solid var(--pink);border-radius:50%;color:var(--red);font-weight:600;font-size:14px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:26px;height:26px;border:1.5px solid var(--pink);border-radius:50%;color:var(--red);font-weight:600;font-size:14px}
 .steps b{display:block}
 .steps span{color:var(--ink2)}
 .h3{margin:20px 0 0;font-size:16px;font-weight:700}
@@ -599,6 +599,105 @@ button.kw-main{cursor:pointer}
 .tl b{font-weight:600;font-size:15.5px;line-height:1.55}
 .tl span{display:block;margin-top:1px;font-size:13.5px;line-height:1.5;color:var(--mute)}
 .st-toph{margin:18px 0 0;font-size:15px}
+.fig-cap{margin:8px 2px 0;font-size:13.5px;line-height:1.6;color:var(--mute);max-width:44em}
+.mapf{max-width:46em}
+.mp-w{display:flex;justify-content:center;padding:8px;border:1.5px solid var(--pink);border-radius:12px;background:var(--soft);overflow:hidden}
+.mp{display:block;max-width:100%;height:auto;font-family:var(--sans)}
+.mp-land{fill:var(--paper)}
+.mp-coast{fill:none;stroke:var(--mute);stroke-width:.9;stroke-linejoin:round}
+.mp-riv{fill:none;stroke:var(--mute);stroke-width:1;stroke-linecap:round;opacity:.38}
+.mp-isle{fill:var(--mute)}
+.mp-a{stroke:var(--paper);stroke-width:1.2;stroke-linejoin:round}
+.mp-a.k1{fill:var(--red);opacity:.2}
+.mp-a.k2{opacity:.6}
+.mp-a.k3{fill:var(--ink);opacity:.13}
+.mp-a.k4{opacity:.55}
+.mp-a.k5{fill:var(--red);opacity:.5}
+.mp-hl{stroke:var(--red);stroke-width:1.6}
+.mp-hd{fill:var(--ink)}
+.mp-p{fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mp-p.ink{stroke:var(--ink)}
+.mp-p.dash{stroke-dasharray:5 4}
+.mp-ah{fill:var(--red)}
+.mp-ah.ink{fill:var(--ink)}
+.mp-l{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.mp-l.dash{stroke-dasharray:5 4}
+.mp-l.dot{stroke-dasharray:1 4}
+.mp-l.wall{stroke:var(--red);stroke-width:3}
+.mp-l.thin{stroke:var(--mute);stroke-width:1}
+.mp-m{fill:var(--ink);stroke:var(--paper);stroke-width:1.2}
+.mp-m.hot{fill:var(--red)}
+.mp-cap{fill:var(--paper);stroke:var(--ink);stroke-width:1.5}
+.mp-x{fill:none;stroke:var(--red);stroke-width:2.2;stroke-linecap:round}
+.mp text{fill:var(--ink);paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+.mp-t{font-weight:500}
+.mp-t.hot{font-weight:700;fill:var(--redt)}
+.mp-an{font-weight:700;font-size:1.12em}
+.mp-ln{font-size:.92em;font-weight:600;fill:var(--redt)}
+.mp-n{font-size:.92em;fill:var(--mute)}
+.mp-n.big{font-size:1.05em;font-weight:700;fill:var(--ink2)}
+.mp .mp-n.sea{font-style:italic;stroke:var(--soft)}
+.mp-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.mp-g>div>b{display:block;margin-bottom:5px;font-size:14px}
+.mp-g .mp-w{padding:5px}
+.sp{max-width:46em;padding:12px 14px 6px;border:1.5px solid var(--pink);border-radius:12px;background:var(--paper)}
+.sp-ax{position:relative;height:18px;font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+.sp-ax i{position:absolute;top:0;font-style:normal;transform:translateX(-50%);white-space:nowrap}
+.sp-ax i.l{transform:none}
+.sp-ax i.r{transform:translateX(-100%)}
+.sp-b{position:relative;padding:4px 0 2px}
+.sp-g{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed var(--line)}
+.sp-r{position:relative;padding:5px 0 7px}
+.sp-t{position:relative;height:10px}
+.sp-t b{position:absolute;top:0;height:10px;border-radius:5px;background:var(--pink)}
+.sp-r.hot .sp-t b{background:var(--red)}
+.sp-r p{margin:4px 0 0;font-size:13.5px;line-height:1.45;color:var(--ink2)}
+.sp-r p strong{color:var(--ink);font-weight:700}
+.sp-r.hot p strong{color:var(--redt)}
+.tree-w{max-width:46em;padding:12px 14px;border:1.5px solid var(--pink);border-radius:12px;background:var(--paper);overflow-x:auto}
+.tree,.tree ul{list-style:none;margin:0;padding:0}
+.tree ul{margin-left:16px;padding-left:18px}
+.tree li{position:relative;padding:4px 0}
+.tree ul>li::before{content:'';position:absolute;left:-18px;top:0;bottom:0;border-left:1.5px solid var(--pink)}
+.tree ul>li:last-child::before{bottom:auto;height:22px}
+.tree ul>li::after{content:'';position:absolute;left:-18px;top:22px;width:14px;border-top:1.5px solid var(--pink)}
+.tn{display:inline-flex;flex-direction:column;gap:1px;padding:6px 11px;border:1.5px solid var(--pink);border-radius:10px;background:var(--paper)}
+.tn b{font-size:15px;font-weight:700;line-height:1.4}
+.tn span{font-size:13px;line-height:1.45;color:var(--mute)}
+.tree>li>.tn,.tn.hot{border-color:var(--red);background:var(--tint)}
+.pics{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(98px,1fr));gap:8px;max-width:46em}
+.pics.wide{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.pics li{display:flex;flex-direction:column;align-items:center;padding:10px 6px 9px;border:1.5px solid var(--pink);border-radius:12px;background:var(--paper);text-align:center}
+.pics svg{width:64px;height:64px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pics.wide svg{width:132px;height:84px}
+.pics svg .f{fill:var(--soft)}
+.pics svg .in{fill:var(--paper)}
+.pics svg .h{stroke:var(--mute);stroke-width:1.1}
+.pics svg .a{stroke:var(--red)}
+.pics svg .stone{fill:var(--paper);stroke:var(--mute);stroke-dasharray:1.5 3.5;stroke-width:2.2}
+.pics b{margin-top:6px;font-size:14px;line-height:1.35}
+.pics span{margin-top:2px;font-size:12.5px;line-height:1.45;color:var(--mute)}
+.road{list-style:none;margin:26px 0 0;padding:0;max-width:44em}
+.rd-e{position:relative;padding:0 0 26px 34px}
+.rd-e::before{content:'';position:absolute;left:10px;top:8px;bottom:-8px;width:4px;border-radius:2px;background:var(--pink)}
+.rd-e:last-child::before{bottom:30px}
+.rd-h{position:relative;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;color:inherit;text-decoration:none}
+.rd-h::before{content:'';position:absolute;left:-32px;top:3px;width:20px;height:20px;border:4px solid var(--red);border-radius:50%;background:var(--paper);box-sizing:border-box}
+.rd-h b{font-size:21px;line-height:1.3;letter-spacing:-.01em}
+.rd-h small{font-size:13.5px;color:var(--mute)}
+.rd-no{order:-1;flex-basis:100%;font-size:12.5px;font-weight:700;color:var(--redt)}
+.rd-w{display:flex;align-items:center;gap:8px;margin:6px 0 0;font-size:12.5px;color:var(--mute)}
+.rd-w span{flex:0 0 96px;height:6px;border-radius:3px;background:var(--soft);overflow:hidden}
+.rd-w i{display:block;height:100%;border-radius:3px;background:var(--ink)}
+.rd-g{margin:8px 0 0;font:400 16.5px/1.8 var(--serif)}
+.rd-s{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:2px}
+.rd-s li{position:relative}
+.rd-s li::before{content:'';position:absolute;left:-28px;top:13px;width:12px;height:12px;border:2.5px solid var(--pink);border-radius:50%;background:var(--paper);box-sizing:border-box}
+.rd-s a,.rd-s div{display:grid;grid-template-columns:6.6em minmax(0,1fr);gap:0 10px;padding:6px 0;color:inherit;text-decoration:none;font-size:15px;line-height:1.5}
+.rd-s a:hover span{text-decoration:underline}
+.rd-s time{font-size:13.5px;font-weight:700;color:var(--redt);font-variant-numeric:tabular-nums;line-height:1.65}
+.rd-n{margin:14px 0 0;padding:10px 14px;border-radius:10px;background:var(--tint);font-size:15px;line-height:1.65}
+.rd-n b{display:block;font-size:12.5px;color:var(--redt)}
 .st-toph a{color:inherit;text-decoration:none}
 .st-toph a:hover{text-decoration:underline}
 @media (max-width:520px){.tl li{grid-template-columns:62px 1fr;gap:0 26px;padding-left:10px}.tl li::before{left:84px}.tl li::after{left:80px}.tl time{font-size:13.5px}}
@@ -702,7 +801,7 @@ book:'<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><pat
 cards:'<rect x="3.5" y="6" width="13" height="15" rx="2"/><path d="M8 3h10.5A2 2 0 0 1 20.5 5v13"/>'
 };
 const ico=(n,c='')=>`<svg class="ic ${c}" viewBox="0 0 24 24" aria-hidden="true">${IC[n]}</svg>`;
-const LOGO='<svg viewBox="0 0 16 24" aria-hidden="true"><ellipse cx="8" cy="12" rx="6.8" ry="10.8" fill="none" stroke="var(--red)" stroke-width="1.6"/><ellipse cx="8" cy="12" rx="4.4" ry="7.8" fill="var(--ink)"/></svg>';
+const LOGO='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.4" fill="none" stroke="var(--red)" stroke-width="2"/><circle cx="12" cy="12" r="6.2" fill="var(--ink)"/></svg>';
 
 /* ---------- exams ---------- */
 const ERAS=['선사·고조선·여러 나라','삼국·가야','남북국','고려','조선 전기','조선 후기','근대(개항기)','일제 강점기','현대'];
@@ -1981,7 +2080,7 @@ function vQuiz(){
  const pic=isPic(q);
  const choices=q.choices.map((c,i)=>{
   const n=i+1; let cl='ch'; if(a.ch===n) cl+=' sel'; if(graded&&n===q.answer) cl+=' right';
-  const mark=graded&&n===q.answer?'<svg class="mk" viewBox="0 0 52 56" aria-hidden="true"><ellipse pathLength="1" cx="26" cy="27" rx="16" ry="20"/></svg>':graded&&a.ch===n&&n!==q.answer?'<svg class="mk" viewBox="0 0 52 56" aria-hidden="true"><path pathLength="1" d="M13 46 39 8"/></svg>':'';
+  const mark=graded&&n===q.answer?'<svg class="mk" viewBox="0 0 52 56" aria-hidden="true"><circle pathLength="1" cx="26" cy="28" r="19"/></svg>':graded&&a.ch===n&&n!==q.answer?'<svg class="mk" viewBox="0 0 52 56" aria-hidden="true"><path pathLength="1" d="M13 46 39 8"/></svg>':'';
   return `<button class="${cl}" id="ch-${n}" data-act="choose" data-n="${n}" role="radio" aria-checked="${a.ch===n}" ${graded?'disabled':''}><span class="cn">${CL(s.exam,n)}</span>${pic?`<span class="sr">${n}번</span>`:`<span${(q.v&&q.vt!=='m')||q.rc?' lang="en"':''}>${nl(c)}</span>`}${mark}${graded&&n===q.answer?'<span class="sr">정답</span>':graded&&a.ch===n?'<span class="sr">내가 고른 오답</span>':''}</button>`;
  }).join('');
  let acts='';
@@ -2435,6 +2534,75 @@ const figHtml=b=>b.t==='sheet'?figSheet(b):b.t==='grid'?figGrid(b):b.t==='code'?
 const figsHtml=q=>(q.fig||[]).map(figHtml).join('');
 const figText=q=>(q.fig||[]).map(b=>b.t==='code'?`[${b.title||b.lang||'코드'}]\n${b.x}`:b.t==='sheet'?`[${b.title||'워크시트'}] (첫 줄은 ${b.r0||1}행, 첫 칸은 ${b.c0||'A'}열)\n${(b.rows||[]).map(r=>r.join('\t')).join('\n')}`:`[${b.title||'표'}]\n${(b.head?[b.head]:[]).concat(b.rows||[]).map(r=>r.join('\t')).join('\n')}`).join('\n');
 const tableHtml=t=>`<figure class="st-fig"><figcaption>${esc(t.title)}</figcaption><div class="st-tw" tabindex="0" role="group" aria-label="${esc(t.title)} 표"><table class="st-t${t.head.length<2?' one':''}"><thead><tr><th></th>${t.head.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr><th scope="row">${rich(r[0])}</th>${r.slice(1).map((c,i)=>`<td data-h="${esc(t.head[i]||'')}"${c===''||c==='—'?' class="e"':''}>${rich(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></figure>`;
+/* ---------- 그림 자료: 지도 · 기간 막대 · 계보도 · 유물 그림 · 로드맵 ---------- */
+const MAPBOX={kr:[123.7,32.9,131.4,43.3],ea:[117.2,31.8,135.4,46.6],south:[125.4,33.0,130.2,38.9],north:[123.4,37.3,131.4,43.4],mid:[124.2,34.0,130.4,40.6],sw:[125.7,34.5,128.5,37.1],man:[120.5,37.0,133.6,46.6],front:[124.0,33.9,130.6,41.4]};
+let MAPSEQ=0;
+function mapSvg(b,small){
+ const G=STUDY.d.geo; if(!G) return '';
+ const [x1,y1,x2,y2]=b.box||MAPBOX[b.base||'kr']||MAPBOX.kr, k=Math.cos((y1+y2)/2*Math.PI/180), W=b.w||(small?168:340), s=W/((x2-x1)*k), H=Math.round((y2-y1)*s);
+ const P=p=>[+((p[0]-x1)*k*s).toFixed(1),+((y2-p[1])*s).toFixed(1)];
+ const poly=a=>a.map((p,i)=>(i?'L':'M')+P(p).join(' ')).join('');
+ const mid=(a,c)=>[(a[0]+c[0])/2,(a[1]+c[1])/2];
+ const round=(a,closed)=>{ // 꺾인 선을 부드럽게 이어요
+  const n=a.length; if(n<3) return poly(a);
+  if(closed){let d='M'+P(mid(a[n-1],a[0])).join(' '); for(let i=0;i<n;i++) d+='Q'+P(a[i]).join(' ')+' '+P(mid(a[i],a[(i+1)%n])).join(' '); return d+'Z'}
+  let d='M'+P(a[0]).join(' ')+'L'+P(mid(a[0],a[1])).join(' '); for(let i=1;i<n-1;i++) d+='Q'+P(a[i]).join(' ')+' '+P(mid(a[i],a[i+1])).join(' '); return d+'L'+P(a[n-1]).join(' ');
+ };
+ const id='mp'+(++MAPSEQ), fs=small?10:11.5;
+ const landD=round(G.land,true)+Object.values(G.isles).map(a=>round(a,true)).join('');
+ const txt=(p,t,c,an)=>`<text class="${c}" x="${p[0].toFixed(1)}" y="${p[1].toFixed(1)}"${an?` text-anchor="${an}"`:''}>${esc(t)}</text>`;
+ const cen=a=>{let x=0,y=0; a.forEach(p=>{x+=p[0];y+=p[1]}); return [x/a.length,y/a.length]};
+ const half=a=>a.length%2?a[(a.length-1)/2]:mid(a[a.length/2-1],a[a.length/2]);
+ let o=`<defs><clipPath id="${id}c"><path d="${landD}"/></clipPath><pattern id="${id}h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="1" y1="0" x2="1" y2="6" class="mp-hl"/></pattern><pattern id="${id}d" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.25" class="mp-hd"/></pattern><marker id="${id}a" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1.5 9 5 1 8.5z" class="mp-ah"/></marker><marker id="${id}b" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1.5 9 5 1 8.5z" class="mp-ah ink"/></marker></defs>`;
+ o+=`<path class="mp-land" d="${landD}"/><g clip-path="url(#${id}c)">${(b.areas||[]).map(a=>`<path class="mp-a k${a.k}" d="${poly(a.p)}Z"${a.k===2?` fill="url(#${id}h)"`:a.k===4?` fill="url(#${id}d)"`:''}/>`).join('')}</g>`;
+ o+=Object.values(G.rivers).map(a=>`<path class="mp-riv" d="${round(a)}"/>`).join('')+`<path class="mp-coast" d="${landD}"/>`+Object.values(G.dots).map(p=>{const q=P(p); return `<circle class="mp-isle" cx="${q[0]}" cy="${q[1]}" r="1.5"/>`}).join('');
+ o+=(b.lines||[]).map(l=>`<path class="mp-l ${l.k||''}" d="${poly(l.p)}"/>`).join('');
+ o+=(b.paths||[]).map(p=>`<path class="mp-p ${p.k||''}" d="${round(p.p)}" marker-end="url(#${id}${p.k==='ink'?'b':'a'})"/>`).join('');
+ o+=(b.areas||[]).map(a=>a.lab===0?'':txt(P(a.lab||cen(a.p)),a.n,'mp-an','middle')).join('');
+ o+=(b.lines||[]).concat(b.paths||[]).map(l=>l.n?txt(P(l.lab||half(l.p)),l.n,'mp-ln','middle'):'').join('');
+ o+=(b.marks||[]).map(m=>{const q=P(m.at), d=m.d||'r', hot=m.k==='hot', r=small?2.3:3, R=hot?r+0.8:m.k==='cap'?r+1.8:r;
+  const tp=d==='r'?[q[0]+R+3,q[1]+fs*0.36]:d==='l'?[q[0]-R-3,q[1]+fs*0.36]:d==='t'?[q[0],q[1]-R-3.5]:[q[0],q[1]+R+fs];
+  const sym=m.k==='x'?`<path class="mp-x" d="M${q[0]-3.5} ${q[1]-3.5}l7 7m0-7l-7 7"/>`:m.k==='cap'?`<circle class="mp-cap" cx="${q[0]}" cy="${q[1]}" r="${R}"/><circle class="mp-m" cx="${q[0]}" cy="${q[1]}" r="${r-0.9}"/>`:`<circle class="mp-m${hot?' hot':''}" cx="${q[0]}" cy="${q[1]}" r="${R}"/>`;
+  return sym+txt(tp,m.n,'mp-t'+(hot?' hot':''),d==='r'?'start':d==='l'?'end':'middle')}).join('');
+ o+=(b.notes||[]).map(n=>txt(P(n.at),n.x,'mp-n '+(n.k||''),'middle')).join('');
+ return `<svg class="mp" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" style="font-size:${fs}px" role="img" aria-label="${esc(b.title)} 지도">${o}</svg>`;
+}
+const figCap=b=>b.cap?`<p class="fig-cap">${rich(b.cap)}</p>`:'';
+const mapFig=b=>`<figure class="qfig mapf"><figcaption>${esc(b.title)}</figcaption><div class="mp-w">${mapSvg(b)}</div>${figCap(b)}</figure>`;
+const mapsFig=b=>`<figure class="qfig mapf"><figcaption>${esc(b.title)}</figcaption><div class="mp-g">${b.items.map(m=>`<div><b>${esc(m.title)}</b><div class="mp-w">${mapSvg(m,true)}</div>${figCap(m)}</div>`).join('')}</div></figure>`;
+function spansFig(b){
+ const a=b.from, w=b.to-a, pc=v=>+((v-a)/w*100).toFixed(2), ticks=[]; for(let t=Math.ceil(a/b.step)*b.step;t<=b.to;t+=b.step) ticks.push(t);
+ const every=ticks.length>6?2:1;
+ return `<figure class="qfig"><figcaption>${esc(b.title)}</figcaption><div class="sp"><div class="sp-ax" aria-hidden="true">${ticks.map((t,i)=>i%every?'':`<i class="${pc(t)<6?'l':pc(t)>94?'r':''}" style="left:${pc(t)}%">${t}${i===0?esc(b.unit||''):''}</i>`).join('')}</div><div class="sp-b">${ticks.map(t=>`<span class="sp-g" style="left:${pc(t)}%"></span>`).join('')}${b.rows.map(r=>{const l=pc(r[1]), wd=Math.max(1.2,pc(r[2])-l), right=l>52; return `<div class="sp-r${r[4]?' hot':''}"><div class="sp-t"><b style="left:${l}%;width:${wd.toFixed(2)}%"></b></div><p style="${right?`margin-right:${Math.max(0,100-l-wd).toFixed(2)}%;text-align:right`:`margin-left:${l}%`}"><strong>${rich(r[0])}</strong>${r[3]?' '+rich(r[3]):''}</p></div>`}).join('')}</div></div>${figCap(b)}</figure>`;
+}
+const treeNode=n=>`<li><div class="tn${n.k?' hot':''}"><b>${rich(n.n)}</b>${n.d?`<span>${rich(n.d)}</span>`:''}</div>${n.c?`<ul>${n.c.map(treeNode).join('')}</ul>`:''}</li>`;
+const treeFig=b=>`<figure class="qfig"><figcaption>${esc(b.title)}</figcaption><div class="tree-w"><ul class="tree">${b.roots.map(treeNode).join('')}</ul></div>${figCap(b)}</figure>`;
+const PICS={ // 직접 그린 선 그림. [viewBox, 내용]
+ handaxe:['0 0 64 64','<path class="f" d="M32 5C41 16 50 32 46 47c-2 8-9 12-14 12s-12-4-14-12C14 32 23 16 32 5z"/><path class="h" d="M30 14l4 7-6 9 8 7-5 10M24 31l4-1M40 27l-4 3M22 43l6-3M43 41l-7 3M36 21l5 3M28 30l-5-6"/>'],
+ tangpoint:['0 0 64 64','<path class="f" d="M32 4l9 28-5 10v16h-8V42l-5-10z"/><path class="h" d="M32 10v31M28 42h8"/>'],
+ combpot:['0 0 64 64','<path class="f" d="M12 9h40L35 57q-3 4-6 0z"/><path class="h" d="M15 17h34M19 28h26M23 39h18M17 11l3 5M23 11l3 5M29 11l3 5M35 11l3 5M41 11l3 5M21 19l3 7M27 19l3 7M33 19l3 7M39 19l3 7M25 30l3 7M31 30l3 7M37 30l3 7M29 41l2 7M34 41l1 7"/>'],
+ spindle:['0 0 64 64','<path d="M32 4v24"/><ellipse class="f" cx="32" cy="35" rx="20" ry="9"/><ellipse cx="32" cy="33.500" rx="3.600" ry="1.700"/><path d="M32 44v16"/><path class="h" d="M32 9c9 2 9 8 0 9s-9 6 0 8"/>'],
+ quern:['0 0 64 64','<path class="f" d="M6 42q26-10 52 0l-4 12H10z"/><path class="f" d="M18 29q14-9 28 0q-14 8-28 0z"/><path class="h" d="M22 45h1M30 43h1M38 44h1M45 46h1M34 48h1M26 49h1"/>'],
+ moonknife:['0 0 64 64','<path class="f" d="M8 22h48c-1 16-11 27-24 27S9 38 8 22z"/><circle cx="26" cy="30" r="2.300"/><circle cx="38" cy="30" r="2.300"/>'],
+ lutedagger:['0 0 64 64','<path class="f" d="M32 4C34 12 38 16 37 24L39.500 28L36.500 31C40 36 46 42 43 50C41 55 37 56 35 57L34 62H30L29 57C27 56 23 55 21 50C18 42 24 36 27.500 31L24.500 28L27 24C26 16 30 12 32 4Z"/><path class="h" d="M32 10v47"/>'],
+ slimdagger:['0 0 64 64','<path class="f" d="M32 4C34 14 36 22 35.500 30L37 33L35.500 36C36 44 36 50 35 56L34 62H30L29 56C28 50 28 44 28.500 36L27 33L28.500 30C28 22 30 14 32 4Z"/><path class="h" d="M32 10v46"/>'],
+ dolmen:['0 0 64 64','<path d="M4 55h56"/><path class="f" d="M15 29h9v26h-9zM40 29h9v26h-9z"/><path class="f" d="M5 19q27-12 54 0l-3 10H8z"/>'],
+ plainpot:['0 0 64 64','<path class="f" d="M20 10h24c8 12 8 34-2 44H22C12 44 12 22 20 10z"/><path d="M18 10h28"/>'],
+ knifecoin:['0 0 64 64','<path class="f" d="M24 6c9 2 14 10 13 30l-1 8a7 7 0 1 1-9 0l1-8c1-14-1-22-6-27z"/><circle cx="31.500" cy="50" r="2.600"/><path class="h" d="M31 22v9M34 26h-6"/>'],
+ mold:['0 0 64 64','<rect class="f" x="14" y="8" width="36" height="48" rx="4"/><path d="M32 14c2 8 4 14 3.500 22l-1 12h-5l-1-12c-.5-8 1.500-14 3.500-22z"/>'],
+ 'tomb-pile':['0 0 120 76','<path d="M6 68h108"/><path class="f" d="M14 68V56h92v12zM24 56V45h72v11zM34 45V35h52v10zM44 35V26h32v9z"/><path class="h" d="M30 56v12M48 56v12M66 56v12M84 56v12M40 45v11M58 45v11M76 45v11M50 35v10M66 35v10M58 26v9"/>'],
+ 'tomb-room':['0 0 120 76','<path class="f" d="M4 68Q60-6 116 68z"/><path class="in" d="M42 68V40h34v14h30v14z"/><path class="a" d="M50 49h7M50 56h11M64 47l5 7"/><path d="M4 68h112"/>'],
+ 'tomb-wood':['0 0 120 76','<path class="f" d="M4 68Q60-6 116 68z"/><path class="stone" d="M28 68Q60 22 92 68z"/><rect class="in" x="45" y="52" width="30" height="16"/><rect class="a" x="52" y="57" width="16" height="7"/><path d="M4 68h112"/>'],
+ 'tomb-brick':['0 0 120 76','<path class="f" d="M4 68Q60-6 116 68z"/><path class="in" d="M38 68V52a21 15 0 0 1 42 0v4h26v12z"/><path class="h" d="M38 57h42M38 62.500h68M48 44v8M59 41v11M70 44v8M44 57v5.500M54 57v5.500M64 57v5.500M74 57v5.500M90 56v6.500M100 56v6.500"/><path d="M4 68h112"/>']
+};
+const picsFig=b=>`<figure class="qfig"><figcaption>${esc(b.title)}</figcaption><ul class="pics${b.wide?' wide':''}">${b.items.map(([k,c,s])=>PICS[k]?`<li><svg viewBox="${PICS[k][0]}" aria-hidden="true">${PICS[k][1]}</svg><b>${esc(c)}</b>${s?`<span>${rich(s)}</span>`:''}</li>`:'').join('')}</ul>${figCap(b)}</figure>`;
+function vStudyRoad(){ // 한국사 로드맵: 시대가 왜 다음 시대로 넘어갔는지 한 장으로
+ const SD=STUDY.d, R=SD.road||[], eras=SD.eras||[], mx=Math.max(1,...eras.map(e=>e.p));
+ return `<nav class="crumb" aria-label="위치"><a href="#study">${esc(SD.crumb||SD.title)}</a><span aria-hidden="true">›</span><span>로드맵</span></nav>
+ <header class="st-head"><h1 class="title">한국사 로드맵</h1><p class="sub">시대 이름을 외우기 전에 "왜 다음 시대로 넘어갔는지"부터 이어 보세요. 줄기가 서면 세부 내용이 제자리에 붙어요. 시대나 사건을 누르면 그 단원으로 가요.</p></header>
+ <ol class="road">${R.map((e,i)=>{const w=eras.find(x=>x.name===e.n), u=STUDY.units.get(e.u); return `<li class="rd-e"><a class="rd-h" href="#study/${e.u}"><span class="rd-no">${u?esc(dayLab(u.day)):''}</span><b>${esc(e.n)}</b><small>${esc(e.span)}</small></a>${w?`<p class="rd-w"><span><i style="width:${(w.p/mx*100).toFixed(0)}%"></i></span>시험에서 약 ${w.p.toFixed(1)}점</p>`:''}<p class="rd-g">${rich(e.gist)}</p><ul class="rd-s">${e.st.map(s=>`<li>${s[2]?`<a href="#study/${s[2]}">`:'<div>'}<time>${esc(s[0])}</time><span>${rich(s[1])}</span>${s[2]?'</a>':'</div>'}</li>`).join('')}</ul>${e.next?`<p class="rd-n"><b>그래서 다음은</b>${rich(e.next)}</p>`:''}</li>`}).join('')}</ol>
+ <div class="st-foot"><a class="btn" href="#study">${ico('play','fill')}공부하러 가기</a></div>`;
+}
 const NOTEL={exam:'시험 포인트',warn:'주의',tip:'요령',y27:'2027년부터',y26:'2026년까지'};
 function blockHtml(b){
  const open=!!UI.st.ob[b._i];
@@ -2447,6 +2615,11 @@ function blockHtml(b){
   case 'steps': return `<figure class="qfig"><figcaption>${esc(b.title)}</figcaption><ol class="st-steps">${b.items.map(x=>`<li>${rich(x)}</li>`).join('')}</ol></figure>`;
   case 'src': return `<figure class="src"><figcaption>${esc(b.title||'사료 읽기')}</figcaption><blockquote>${rich(b.x)}</blockquote>${open?`<div class="src-a" role="status"><p><b>단서</b> ${rich(b.hint)}</p><p><b>정답</b> ${rich(b.a)}</p>${b.e?`<p>${rich(b.e)}</p>`:''}</div>`:`<button class="btn line sm" data-act="sob" data-id="${b._i}">단서와 정답 보기</button>`}</figure>`;
   case 'deep': return `<section class="deep${open?' open':''}"><button class="deep-h" data-act="sob" data-id="${b._i}" aria-expanded="${open}"><span><small>더 깊이</small>${esc(b.title)}</span>${ico(open?'cu':'cd')}</button>${open?`<div class="deep-b">${blocksHtml(b.items,true)}</div>`:''}</section>`;
+  case 'map': return mapFig(b);
+  case 'maps': return mapsFig(b);
+  case 'spans': return spansFig(b);
+  case 'tree': return treeFig(b);
+  case 'pics': return picsFig(b);
   case 'tl': return `<figure class="st-fig"><figcaption>${esc(b.title)}</figcaption><ol class="tl">${b.rows.map(r=>`<li><time>${esc(r[0])}</time><div><b>${rich(r[1])}</b>${r[2]?`<span>${rich(r[2])}</span>`:''}</div></li>`).join('')}</ol></figure>`;
   case 'note': return `<p class="st-note ${esc(b.kind)}"><b>${NOTEL[b.kind]||'알아 두기'}</b>${rich(b.x)}</p>`;
   default: return figHtml(b);
@@ -2506,6 +2679,7 @@ function vStudy(){
  if(a==='quiz'&&UI.sq.x) return vStudyQuiz();
  if(a==='marked') return vStudyMarked();
  if(a==='top') return vStudyTop();
+ if(a==='road'&&STUDY.d.road) return vStudyRoad();
  if(STUDY.units.has(a)) return vStudyUnit(STUDY.units.get(a));
  return vStudyHome();
 }
@@ -2546,6 +2720,7 @@ function vStudyHome(){
    </div><div class="plan-b">
    ${nextId?`<a class="btn big" href="#study/${nextId}">${ico('play','fill')}${dn?'이어서 공부하기':'첫 단원 시작하기'}</a>`:`<a class="btn big" href="#practice">${ico('pen')}문제 풀러 가기</a>`}
    <button class="btn line big" data-act="sqmix">섞어 퀴즈 20문제</button>
+   ${D.road?`<a class="btn line big" href="#study/road">한국사 로드맵 보기</a>`:''}
    ${topN?`<a class="btn line big" href="#study/top">${D.corpus?'기출 단골':'꼭 외울'} 키워드 ${topN}개</a>`:''}
    ${marked?`<a class="btn line big" href="#study/marked">${ico('flag')}표시한 키워드 ${marked}개</a>`:''}
    <label class="lab" for="st-date" style="margin-top:16px">시험 날짜</label><input type="date" id="st-date" data-set="date" data-ex="${ex}" value="${esc(U.settings.examDate[ex]||'')}">
@@ -2925,7 +3100,7 @@ if(window.claude&&window.claude.hot&&window.claude.hot.ready) window.claude.hot.
 </script>
 <script>
 (()=>{'use strict';
- const BUILD='20261123-0420';
+ const BUILD='20261123-0336';
  if(window.top!==window.self||!('serviceWorker' in navigator)) return;
  window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
  let hiddenAt=0;
