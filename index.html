@@ -226,6 +226,7 @@ p{margin:0}
 .stem.sm{font-size:16.5px}
 .stem u.neg{text-decoration-thickness:2px;text-underline-offset:5px;font-weight:600}
 .passage{margin:14px 0 4px;padding:14px 18px;border:1px solid var(--ink);font:400 16px/1.85 var(--serif)}
+.passage p{margin:0}.passage p+p{margin-top:.7em}.passage u{text-underline-offset:3px}
 .qimg{display:block;margin:14px auto;border:1px solid var(--line)}
 .choices{display:grid;gap:8px;margin-top:18px}
 .ch{position:relative;display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start;width:100%;min-height:54px;padding:11px 14px;border:1px solid var(--line);border-radius:calc(10px*var(--rk));background:var(--paper);font:400 17px/1.65 var(--serif);text-align:left;cursor:pointer;transition:border-color .15s ease}
@@ -434,7 +435,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 .fcact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
 .fcact .btn{width:100%}
 @media (max-width:859px){.wbody{padding-left:4px}}
-@media (max-width:400px){.exams{overflow-x:auto;scrollbar-width:none}.exams::-webkit-scrollbar{display:none}.exams button{flex:0 0 auto;padding:0 9px;font-size:14px}}
+@media (max-width:400px){.exams{overflow-x:auto;scrollbar-width:none}.exams::-webkit-scrollbar{display:none}.exams button{flex:0 0 auto;padding:0 7px;font-size:14px}}
+@media (max-width:379px){.exams button{padding:0 6px;font-size:13px}}
 /* ---------- TOEIC RC: passages, blanks, chat, tables ---------- */
 .rcsplit{display:grid;gap:18px}
 .rcp{border:1px solid var(--ink);border-radius:calc(4px*var(--rk));background:var(--paper)}
@@ -608,6 +610,7 @@ button.kw-main{cursor:pointer}
 .gridfig{border-collapse:collapse;background:var(--paper);font-size:14px;line-height:1.45}
 .gridfig th,.gridfig td{padding:6px 10px;border:1px solid var(--ink);text-align:left;vertical-align:top}
 .gridfig th{background:var(--soft);font-weight:700;white-space:nowrap}
+@media (max-width:420px){.gridfig th,.gridfig td{padding:5px 7px}.gridfig thead th{white-space:normal;word-break:keep-all}}
 .code{margin:0;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--ink);border-radius:0 calc(8px*var(--rk)) calc(8px*var(--rk)) 0;background:var(--soft);overflow-x:auto;font-size:13.5px;line-height:1.65;tab-size:4}
 .code code{display:block;font-size:inherit;white-space:pre-wrap;overflow-wrap:anywhere}
 .code .cl{display:block;padding-left:calc(var(--i,0)*1ch + 2ch);text-indent:-2ch;background:linear-gradient(var(--soft),var(--soft)) 0 0/100% 1.65em no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 22'%3E%3Cpath d='M4 5v7h7M8.5 9.5 11 12l-2.5 2.5' fill='none' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") calc(var(--i,0)*1ch) 0/1.5ch 1.65em repeat-y} /* 꺾인 줄 앞에 ↳ */
@@ -633,6 +636,7 @@ button.kw-main{cursor:pointer}
 .ch-t{font:400 10.5px var(--sans);fill:var(--ink2)}.ch-at{font:600 10.5px var(--sans);fill:var(--ink)}.ch-ti{font:700 13px var(--sans);fill:var(--ink)}.ch-v{font:600 9.5px var(--sans);fill:var(--ink)}
 .ch-b.k0{fill:var(--ink)}.ch-b.k1{fill:var(--pink)}.ch-b.k2{fill:var(--mute)}
 .ch-l{fill:none;stroke:var(--red);stroke-width:2}.ch-d{fill:var(--paper);stroke:var(--red);stroke-width:2}
+.ch-l.k1{stroke:var(--ink);stroke-dasharray:5 3}.ch-d.k1{stroke:var(--ink)}.ch-l.k2{stroke:var(--mute);stroke-dasharray:2 3}.ch-d.k2{stroke:var(--mute)}.ch-v.sm{font-size:9px;font-weight:600;paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
 .ch-m circle{fill:var(--red);stroke:var(--paper);stroke-width:1.5}.ch-m text{font:700 10.5px var(--sans);fill:var(--onred)}
 .ch-key{margin:12px 0 0;padding:0;list-style:none;counter-reset:chk;display:grid;gap:7px;font-size:14.5px;line-height:1.55;max-width:44em}
 .ch-key li{counter-increment:chk;position:relative;padding-left:28px}
@@ -896,8 +900,9 @@ const $=(s,r=document)=>r.querySelector(s);
 const DAY=864e5, CIRC=['①','②','③','④','⑤'];
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const nl=s=>esc(s).replace(/\n/g,'<br>');
-const NEG=/(옳지 않은|않은 것|아닌 것|거리가 먼|틀린 것|해당하지 않는|적절하지 않은|옳지 않게)/g;
+const NEG=/(옳지 않은|않은 것|않는 것|아닌 것|거리가 먼|틀린 것|해당하지 않는|적절하지 않은|옳지 않게)/g;
 const stemHTML=s=>nl(s).replace(NEG,'<u class="neg">$1</u>');
+const psgHTML=q=>String(q.passage||'').split(/\n{2,}/).map(p=>`<p>${q.exam==='ncs'?nl(p).replace(/__([^_\n]+?)__/g,'<u>$1</u>'):nl(p)}</p>`).join(''); // 지문: 빈 줄 = 문단
 const pct=x=>Math.round(x*100);
 const sum=a=>a.reduce((x,y)=>x+y,0);
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
@@ -942,6 +947,8 @@ const VCATS=[]; // 토익 단어 주제: data/toeic.json을 읽으면 채워져�
 const RCPARTS=['Part 5','Part 6','Part 7 단일 지문','Part 7 복수 지문'];
 const RCPACE={'Part 5':20,'Part 6':30,'Part 7 단일 지문':60,'Part 7 복수 지문':66}; // 문항당 권장 초: 합치면 약 75분
 const RCW={'Part 5':30,'Part 6':16,'Part 7 단일 지문':29,'Part 7 복수 지문':25}; // 실제 RC 문항 수
+const NCSA=['의사소통능력','수리능력','문제해결능력','안전'];
+const NCSPACE={'의사소통능력':90,'수리능력':90,'문제해결능력':90,'안전':90}; // 문항당 권장 초: 60분 ÷ 40문항 // LH 필기: 의사소통·수리·문제해결 중심 + 기술직 공통 '안전'
 const EXAMS={
  arch:{id:'arch',name:'건축기사',full:'건축기사 필기',org:'한국산업인력공단',choices:4,ls:'과목',lt:'단원',
   tracks:[
@@ -963,7 +970,11 @@ const EXAMS={
    {id:'hi',name:'고득점 집중',desc:'고득점 단어만',tiers:[3],minutes:10,total:40,subjects:VCATS,pass:{type:'vocab',goal:80}}]},
  rc:{id:'rc',name:'토익 RC',full:'토익 RC (Part 5·6·7)',org:'ETS 형식 · 합격노트 자체 제작',choices:4,ls:'파트',lt:'유형',rc:true,abc:true,
   mocks:[{id:'full',name:'실전 모의고사',desc:'실제 RC와 같은 100문항 구성',comp:{p5:30,p6:4,p7s:{2:4,3:3,4:3},p7d:2,p7t:3}},{id:'mini',name:'미니 모의고사',desc:'Part 5 30문항 · Part 6 지문 2개 · Part 7 지문 3개',comp:{p5:30,p6:2,p7s:{2:1,3:1,4:1}}}],
-  tracks:[70,80,90].map(g=>({id:'g'+g,name:`정답률 ${g}% 목표`,desc:`RC 100문항 중 ${g}개 · 75분`,minutes:75,total:100,subjects:RCPARTS,pace:RCPACE,pass:{type:'rc',goal:g,w:RCW}}))}
+  tracks:[70,80,90].map(g=>({id:'g'+g,name:`정답률 ${g}% 목표`,desc:`RC 100문항 중 ${g}개 · 75분`,minutes:75,total:100,subjects:RCPARTS,pace:RCPACE,pass:{type:'rc',goal:g,w:RCW}}))},
+ ncs:{id:'ncs',name:'NCS',full:'LH NCS 직업기초능력',org:'한국토지주택공사 필기 형식 · 합격노트 자체 제작',choices:5,ls:'영역',lt:'유형',
+  tracks:[
+   {id:'tech',name:'기술직',desc:'40문항 · 60분 · 안전 포함',minutes:60,total:40,quota:[13,12,12,3],subjects:NCSA,pace:NCSPACE,pass:{type:'rc',goal:70,cut:40,w:{'의사소통능력':13,'수리능력':12,'문제해결능력':12,'안전':3}}},
+   {id:'office',name:'사무직',desc:'40문항 · 60분',minutes:60,total:40,quota:[14,13,13],subjects:NCSA.slice(0,3),pace:NCSPACE,pass:{type:'rc',goal:70,cut:40,w:{'의사소통능력':14,'수리능력':13,'문제해결능력':13}}}]}
 };
 const EXIDS=Object.keys(EXAMS);
 const trOf=(ex,id)=>EXAMS[ex].tracks.find(t=>t.id===id)||EXAMS[ex].tracks[0];
@@ -983,7 +994,7 @@ const REASON_TIP_V={c:'처음 본 단어가 많아요. 하루 새 단어 수를 
 
 /* ---------- user state & storage ---------- */
 const LS='hapnote.v1', NCH=8, BYTES=180000;
-const BLANK=()=>({v:1,settings:{exam:'arch',track:{arch:'2027',history:'adv',comp:'1',toeic:'750',rc:'g80'},examDate:{},goal:30,unsureNote:true,demoOff:{},mode:'study',updatedAt:0},q:{arch:{},history:{},comp:{},toeic:{},rc:{}},sessions:{arch:[],history:[],comp:[],toeic:[],rc:[]},active:null,banks:[],bankQ:{},ai:{},study:{u:{},k:{},kt:0}});
+const BLANK=()=>({v:1,settings:{exam:'arch',track:{arch:'2027',history:'adv',comp:'1',toeic:'750',rc:'g80',ncs:'tech'},examDate:{},goal:30,unsureNote:true,demoOff:{},mode:'study',updatedAt:0},q:{arch:{},history:{},comp:{},toeic:{},rc:{},ncs:{}},sessions:{arch:[],history:[],comp:[],toeic:[],rc:[],ncs:[]},active:null,banks:[],bankQ:{},ai:{},study:{u:{},k:{},kt:0}});
 let U=BLANK();
 function fixU(x){
  const b=BLANK(); if(!x||x.v!==1) return b;
@@ -1304,7 +1315,7 @@ function syncUI(){
 }
 
 /* ---------- question bank ---------- */
-const BANK={all:new Map(),ex:{arch:[],history:[],comp:[],toeic:[],rc:[]},base:[],ready:false,err:''};
+const BANK={all:new Map(),ex:{arch:[],history:[],comp:[],toeic:[],rc:[],ncs:[]},base:[],ready:false,err:''};
 const isPic=q=>!!q.image&&q.choices.length===5&&q.choices.every((c,i)=>c===CIRC[i]); // 문제 전체가 그림 한 장인 문항(기출 팩)
 const SRC={official:'기출',restored:'복원',sample:'샘플',custom:'직접 추가',vocab:'토익 단어',made:'자체 제작'};
 function normFig(f){ // 문제에 붙는 그림: 워크시트·표·코드 (글자만 받아서 그려요)
@@ -1313,12 +1324,19 @@ function normFig(f){ // 문제에 붙는 그림: 워크시트·표·코드 (글�
  if(f.t==='sheet'){const o={t:'sheet',title,rows:rows(f.rows)}; if(/^[A-Z]$/.test(f.c0||'')) o.c0=f.c0; if(Number.isInteger(f.r0)&&f.r0>0&&f.r0<1000) o.r0=f.r0; if(Array.isArray(f.hi)) o.hi=f.hi.filter(x=>/^[A-Z]\d{1,3}$/.test(x)).slice(0,20); return o.rows.length?o:null}
  if(f.t==='grid'){const o={t:'grid',title,rows:rows(f.rows)}; if(Array.isArray(f.head)) o.head=f.head.slice(0,14).map(str); if(f.rh) o.rh=true; return o.rows.length?o:null}
  if(f.t==='code'&&typeof f.x==='string'&&f.x.trim()) return {t:'code',title,lang:typeof f.lang==='string'?f.lang.slice(0,12):'',x:f.x.slice(0,3000)};
+ if(f.t==='chart'){ // 막대·꺾은선 그래프(자료해석)
+  const cats=Array.isArray(f.cats)?f.cats.slice(0,12).map(str):[];
+  const series=(Array.isArray(f.series)?f.series:[]).slice(0,4).map(x=>({k:x&&x.k==='line'?'line':'bar',n:str(x&&x.n).slice(0,24),v:(Array.isArray(x&&x.v)?x.v:[]).map(Number)})).filter(x=>x.v.length===cats.length&&x.v.every(v=>Number.isFinite(v)&&v>=0));
+  if(!cats.length||!series.length) return null;
+  const o={t:'chart',title,cats,series,marks:[],lab:'all'}; ['ct','xt','yt','y2t'].forEach(k=>{if(typeof f[k]==='string'&&f[k]) o[k]=f[k].slice(0,40)}); if(Number.isFinite(+f.ymin)&&+f.ymin>0) o.ymin=+f.ymin;
+  return o;
+ }
  return null;
 }
 function normQ(r,defExam,bank){
  if(!r||typeof r!=='object'||Array.isArray(r)) return {err:'항목이 객체가 아니에요'};
  const exam=r.exam||defExam;
- if(!EXAMS[exam]) return {err:'exam 값은 arch, history, comp, toeic, rc 중 하나여야 해요'};
+ if(!EXAMS[exam]) return {err:'exam 값은 arch, history, comp, toeic, rc, ncs 중 하나여야 해요'};
  const id=r.id!=null?String(r.id).trim():'';
  if(!id) return {err:'id가 비어 있어요'};
  const stem=typeof r.stem==='string'?r.stem.trim():'';
@@ -1747,6 +1765,7 @@ function headline(pr,tr){
  if(pr.none) return '아직 분석할 기록이 없어요';
  if(pr.type==='vocab') return `${tr.name} 단어 ${pr.total}개 중 ${pr.known}개를 외웠어요`;
  if(pr.type==='rc'){
+  if(tr.pass.cut&&pr.score<tr.pass.cut) return `예상 정답률 ${pr.score}%, 과락선(${tr.pass.cut}%) 아래예요`;
   if(pr.score<pr.goal) return `예상 정답률 ${pr.score}%, 목표 ${pr.goal}%까지 ${pr.goal-pr.score}%p 남았어요`;
   if(pr.missing.length) return `예상 정답률 ${pr.score}% · ${pr.missing[0].s} 기록이 아직 없어요`;
   return `목표 달성권이에요 · 예상 정답률 ${pr.score}%`;
@@ -1929,7 +1948,7 @@ function qDetail(q,st,opts={}){
  const last=lastAt(st), mine=last&&last[1];
  return `<div class="qd">
   ${q.rc?rcPassage(q,null,true)+rcStem(q,null,true).replace('class="stem','class="stem sm'):`<p class="stem sm">${stemHTML(q.stem)}</p>`}
-  ${q.passage?`<div class="passage">${nl(q.passage)}</div>`:''}
+  ${q.passage?`<div class="passage">${psgHTML(q)}</div>`:''}
   ${figsHtml(q)}
   ${q.image?`<img class="qimg" src="${esc(q.image)}" alt="문제 자료">`:''}
   <ol class="qd-ch">${q.choices.map((c,i)=>`<li class="${i+1===q.answer?'ans':''}${mine===i+1&&i+1!==q.answer?' mine':''}"><span class="cn">${CL(q.exam,i+1)}</span><span${q.rc?' lang="en"':''}>${isPic(q)?'':chHtml(c)}</span>${i+1===q.answer?'<span class="tag red">정답</span>':mine===i+1?'<span class="tag">내 답</span>':''}</li>`).join('')}</ol>
@@ -2112,7 +2131,7 @@ function vHome(){
    <div><dt>${tr.pass.type==='avg'?'예상 평균':tr.pass.type==='rc'?'예상 정답률':'예상 점수'}</dt><dd class="${pr.ok===false&&!pr.none?'red':''}">${predShort(pr)}</dd></div>
   </dl>
  </section>
- ${STUDY.ready&&STUDY.ex===ex?`<div class="strip"><p>${ex==='history'?'개념부터 잡고 싶다면 7일 완성 공부 노트로 시작하세요.':'개념과 실기 순서는 공부 노트에 정리해 뒀어요.'} 끝낸 단원 ${STUDY.order.filter(suDone).length} / ${STUDY.order.length}</p><a class="btn line sm" href="#study">공부하러 가기</a></div>`:''}
+ ${STUDY.ready&&STUDY.ex===ex?`<div class="strip"><p>${ex==='history'?'개념부터 잡고 싶다면 7일 완성 공부 노트로 시작하세요.':ex==='ncs'?'영역별 문제 유형과 푸는 순서는 공부 노트에 정리해 뒀어요.':'개념과 실기 순서는 공부 노트에 정리해 뒀어요.'} 끝낸 단원 ${STUDY.order.filter(suDone).length} / ${STUDY.order.length}</p><a class="btn line sm" href="#study">공부하러 가기</a></div>`:''}
  <div class="home-grid">
   <section class="plan card" aria-labelledby="plan-h">
    <div class="plan-a"><h2 class="h2" id="plan-h">오늘의 학습</h2>
@@ -2150,10 +2169,11 @@ function strip(pr,tr){
   if(low&&low.score<60){bad=true; txt=`${esc(low.s)} 단어 정답률이 ${low.score}%로 가장 낮아요. 오늘의 학습에서 이 주제가 먼저 나와요.`}
   else txt=`외운 단어 ${pr.known}개, 복습 중 ${pr.learn}개예요. 복습부터 끝내야 간격 반복 효과가 가장 커요.`;
  } else if(pr.type==='rc'){
-  const low=pr.ss.filter(o=>o.n>=4).sort((a,b)=>a.score-b.score)[0];
-  if(low&&low.score<pr.goal){bad=true; txt=`${esc(low.s)} 정답률이 ${low.score}%로 가장 낮아요. 오늘의 학습에서 약한 유형이 먼저 나와요.`}
-  else if(pr.missing.length) txt=`${pr.missing.map(o=>esc(o.s)).join(', ')} 기록이 아직 없어요. 파트마다 한 번씩 풀어야 예상 정답률이 정확해져요.`;
-  else txt=`모든 파트가 목표 ${pr.goal}% 근처예요. 이제는 75분 안에 다 푸는 연습이 중요해요.`;
+  const low=pr.ss.filter(o=>o.n>=4).sort((a,b)=>a.score-b.score)[0], LS=EXAMS[U.settings.exam].ls;
+  if(tr.pass.cut&&pr.score<tr.pass.cut){bad=true; txt=`예상 정답률이 ${pr.score}%라 과락선 ${tr.pass.cut}%에 못 미쳐요.${low?' 가장 낮은 '+esc(low.s)+'('+low.score+'%)부터 끌어올리세요.':''}`}
+  else if(low&&low.score<pr.goal){bad=true; txt=`${esc(low.s)} 정답률이 ${low.score}%로 가장 낮아요. 오늘의 학습에서 약한 유형이 먼저 나와요.`}
+  else if(pr.missing.length) txt=`${pr.missing.map(o=>esc(o.s)).join(', ')} 기록이 아직 없어요. ${LS}마다 한 번씩 풀어야 예상 정답률이 정확해져요.`;
+  else txt=`모든 ${josa(LS,'이/가')} 목표 ${pr.goal}% 근처예요. 이제는 ${totalQ(tr)}문항을 ${tr.minutes}분 안에 다 푸는 연습이 중요해요.`;
  } else if(pr.type==='avg'){
   if(pr.fails.length){bad=true; txt=`${pr.fails.map(o=>esc(o.s)+' '+o.score+'점').join(', ')}. 40점 아래라 과락이에요. 이 ${EXAMS[U.settings.exam].ls}부터 끌어올리세요.`}
   else if(pr.missing.length) txt=`${pr.missing.map(o=>esc(o.s)).join(', ')}은(는) 아직 기록이 없어요. 한 번씩 풀어야 합격 예측이 정확해져요.`;
@@ -2187,7 +2207,7 @@ function vPractice(){
  </div>
  <section class="sec" aria-labelledby="r-h"><div class="sec-h"><h2 class="h2" id="r-h">${E.rc?'실전 세트':'기출 회차'}</h2><span class="small">${rs.length?rs.length+(E.rc?'세트':'개 회차'):''}</span></div>
  ${E.rc?`<p class="small" style="margin:-4px 0 12px">ETS가 공개한 시험 형식에 맞춰 합격노트가 직접 만든 문제예요. 실제 기출은 아니에요. 실전 RC는 101~200번 한 회분이에요.</p>`:''}
- ${rs.length?`<div class="rounds">${rs.map(r=>{const dn=E.rc?r.ids.filter(id=>lastAt(qs[id])).length:0; return `<button class="cardbtn" style="min-height:80px" data-act="round" data-k="${esc(r.k)}"><b>${esc(r.title)}</b><span>${r.ids.length}문항${E.rc?` · ${Math.round(estSec(ex,r.ids,tr)/60)}분${dn?` · ${dn}문항 풀었어요`:''}`:''}</span></button>`}).join('')}</div>`:emptyBox('아직 들어 있는 기출이 없어요','지금은 합격노트가 직접 만든 문제만 있어요. 가지고 있는 기출을 JSON으로 가져오면 회차별로 여기에 정리돼요.','<a class="btn line sm" href="#bank">문제 가져오기</a>')}
+ ${rs.length?`<div class="rounds">${rs.map(r=>{const dn=E.rc?r.ids.filter(id=>lastAt(qs[id])).length:0; return `<button class="cardbtn" style="min-height:80px" data-act="round" data-k="${esc(r.k)}"><b>${esc(r.title)}</b><span>${r.ids.length}문항${E.rc?` · ${Math.round(estSec(ex,r.ids,tr)/60)}분${dn?` · ${dn}문항 풀었어요`:''}`:''}</span></button>`}).join('')}</div>`:(ex==='ncs'?emptyBox('LH 필기 문제는 공개되지 않아요','지금은 합격노트가 LH 필기 형식에 맞춰 직접 만든 문제만 있어요. 직접 정리한 복원 문제가 있다면 JSON으로 가져와 회차별로 풀 수 있어요.','<a class="btn line sm" href="#bank">문제 가져오기</a>'):emptyBox('아직 들어 있는 기출이 없어요','지금은 합격노트가 직접 만든 문제만 있어요. 가지고 있는 기출을 JSON으로 가져오면 회차별로 여기에 정리돼요.','<a class="btn line sm" href="#bank">문제 가져오기</a>'))}
  </section>
  <section class="sec card" aria-labelledby="c-h"><h2 class="h2" id="c-h">${E.ls}·${E.lt} 골라 풀기</h2>
   <div class="fields" style="margin-top:16px">
@@ -2206,7 +2226,7 @@ function vPractice(){
    <li><b>읽기보다 풀기</b><span>개념서를 다시 읽는 것보다 문제로 떠올려 보는 쪽이 오래 남아요(인출 연습). 그래서 모든 학습이 문제 풀이에서 시작해요.</span></li>
    <li><b>틀린 문제는 1·3·7일 뒤에 다시</b><span>오답은 간격을 두고 돌아오고, 세 번 연속 확실하게 맞혀야 오답노트를 졸업해요(간격 반복).</span></li>
    <li><b>맞혀도 헷갈렸다면 다시</b><span>채점 전에 '확실해요/헷갈려요'를 고르게 해서 찍어서 맞힌 문제와, 확신했는데 틀린 오개념을 따로 잡아요.</span></li>
-   <li><b>과락 과목부터, 그다음 평균</b><span>40점 아래 ${josa(E.ls,'을/를')} 먼저 끌어올리고, 그다음 점수가 잘 오르는 ${josa(E.ls,'으로/로')} 평균을 맞춰요. 한국사는 배점 높은 문항과 약한 시대를 먼저 봐요.</span></li>
+   ${E.id==='ncs'?`<li><b>약한 유형부터, 과락선은 넉넉히</b><span>NCS는 전체 점수가 만점의 40% 미만이면 과락이에요. 정답률이 낮은 유형을 먼저 끌어올려 과락선을 넉넉히 넘긴 뒤, 목표 정답률까지 올려요.</span></li>`:`<li><b>과락 과목부터, 그다음 평균</b><span>40점 아래 ${josa(E.ls,'을/를')} 먼저 끌어올리고, 그다음 점수가 잘 오르는 ${josa(E.ls,'으로/로')} 평균을 맞춰요. 한국사는 배점 높은 문항과 약한 시대를 먼저 봐요.</span></li>`}
    <li><b>섞어서 풀기</b><span>하루 학습은 ${josa(E.ls,'을/를')} 섞어 내요. 실제 시험처럼 주제가 바뀌어도 바로 떠올리는 연습이 돼요(교차 학습).</span></li>
    <li><b>시험 2주 전부터는 실전</b><span>시험 모드로 시간을 재며 모의고사를 보고, 문항당 풀이 시간을 시험 페이스에 맞춰요.</span></li>
   </ul>`}
@@ -2269,7 +2289,7 @@ function vQuiz(){
    <div class="choices" role="radiogroup" aria-labelledby="qstem">${choices}</div>
    ${fb}
    <div class="qact">${acts}</div></div></div>`:`${q.v?vStem(q):`<p class="stem${pic?' sr':''}" id="qstem">${stemHTML(q.stem)}</p>`}
-   ${q.passage?`<div class="passage">${nl(q.passage)}</div>`:''}
+   ${q.passage?`<div class="passage">${psgHTML(q)}</div>`:''}
    ${figsHtml(q)}
    ${q.image?(pic?`<button class="qzoom" data-act="zoom" data-q="${esc(id)}" aria-label="문제 그림 크게 보기"><img class="qimg" src="${esc(q.image)}" alt="${esc(q.stem)} 문제지 그림"></button>`:`<img class="qimg" src="${esc(q.image)}" alt="문제 자료">`):''}
    <div class="choices${pic?' pic':''}" role="radiogroup" aria-labelledby="qstem">${choices}</div>
@@ -2309,20 +2329,20 @@ function vResult(){
  let big, verdict='';
  if(mockish&&tr.pass.type==='avg'){big=`${r.avg}<small>점 평균</small>`; verdict=`<span class="verdict ${r.ok?'ok':'bad'}">${r.ok?ico('check')+'합격권':ico('x')+'불합격권'}</span>`}
  else if(mockish&&tr.pass.type==='vocab'){big=`${r.score}<small>점</small>`; verdict=`<span class="verdict ${r.ok?'ok':'bad'}">${r.ok?ico('check')+'통과':ico('x')+'80% 미만'}</span>`}
- else if(mockish&&tr.pass.type==='rc'){big=`${r.c}<small> / ${r.n} 정답 · ${r.score}%</small>`; verdict=`<span class="verdict ${r.ok?'ok':'bad'}">${r.ok?ico('check')+'목표 '+tr.pass.goal+'% 달성':ico('x')+'목표 '+tr.pass.goal+'% 미만'}</span>`}
+ else if(mockish&&tr.pass.type==='rc'){big=`${r.c}<small> / ${r.n} 정답 · ${r.score}%</small>`; verdict=`<span class="verdict ${r.ok?'ok':'bad'}">${r.ok?ico('check')+'목표 '+tr.pass.goal+'% 달성':ico('x')+(tr.pass.cut&&r.score<tr.pass.cut?'과락선 '+tr.pass.cut+'% 미만':'목표 '+tr.pass.goal+'% 미만')}</span>`}
  else if(mockish){big=`${r.score}<small>점</small>`; verdict=`<span class="verdict ${r.ok?'ok':'bad'}">${r.grade?r.grade+' 수준':'미달'}</span>`}
  else big=`${r.c}<small> / ${r.n} 정답 · ${acc}%</small>`;
  const rows=Object.entries(r.subj).filter(([,o])=>o.n).map(([s,o])=>{const v=Math.round(o.c/o.n*100), low=tr.pass.type==='avg'&&mockish&&v<tr.pass.min; return `<div class="srow"><span class="nm">${esc(s)}</span><div class="trk" role="img" aria-label="${esc(s)} ${v}${tr.pass.type==='avg'?'점':'%'}"><i class="${low?'low':''}" style="width:${v}%"></i>${tr.pass.type==='avg'?`<b class="ref" style="left:${tr.pass.min}%"></b><b class="ref pass" style="left:${tr.pass.avg}%"></b>`:''}</div><span class="val">${o.c}/${o.n}</span>${low?`<span class="sflag">${ico('x')}과락 (${v}점)</span>`:''}</div>`}).join('');
  const wrongs=r.wrong.map(id=>BANK.all.get(id)).filter(Boolean);
  return `<header class="rhead"><div><p class="sub" style="margin:0 0 6px">${esc(r.title)} · ${r.mode==='exam'?'시험 모드':'학습 모드'} · ${mmss(r.el)}${r.limit?' / '+mmss(r.limit):''}</p><div class="big">${big}</div></div>${verdict}</header>
- <div class="grid2 sec"><section class="card"><h2 class="h2">${E.ls}별 결과</h2>${tr.pass.type==='avg'&&mockish?'<p class="small">세로선은 과락 40점, 합격 평균 60점이에요.</p>':''}<div class="srows">${rows&&tr.pass.type==='avg'&&mockish?`<div class="srow" aria-hidden="true"><span></span><div class="axis"><span style="left:${tr.pass.min}%">${tr.pass.min}</span><span style="left:${tr.pass.avg}%">${tr.pass.avg}</span></div><span></span></div>`:''}${rows||'<p class="small">채점한 문제가 없어요.</p>'}</div>${E.rc?rcPaceRows(r,tr):''}</section>
+ <div class="grid2 sec"><section class="card"><h2 class="h2">${E.ls}별 결과</h2>${tr.pass.type==='avg'&&mockish?'<p class="small">세로선은 과락 40점, 합격 평균 60점이에요.</p>':''}<div class="srows">${rows&&tr.pass.type==='avg'&&mockish?`<div class="srow" aria-hidden="true"><span></span><div class="axis"><span style="left:${tr.pass.min}%">${tr.pass.min}</span><span style="left:${tr.pass.avg}%">${tr.pass.avg}</span></div><span></span></div>`:''}${rows||'<p class="small">채점한 문제가 없어요.</p>'}</div>${tr.pace?rcPaceRows(r,tr):''}</section>
  <section class="card stack"><h2 class="h2">다음에 할 일</h2><p class="sub">${wrongs.length?`틀린 ${wrongs.length}${UN}${r.unsure.length?'와 헷갈린 '+r.unsure.length+UN:''}는 오답노트에 담겼어요. 내일 다시 나와요.`:`모두 맞혔어요. 헷갈린 ${UN}만 한 번 더 보세요.`}</p><div class="row">${wrongs.length?`<button class="btn" data-act="retry">틀린 ${UN} 바로 다시 풀기</button>`:''}<a class="btn line" href="#notes">오답노트</a><a class="btn line" href="#home">홈으로</a></div></section></div>
  ${wrongs.length?`<section class="sec"><div class="sec-h"><h2 class="h2">틀린 ${UN} 다시 보기</h2><span class="small">${wrongs.length}${UN}</span></div><div class="nlist">${wrongs.map(q=>noteCard(q,U.q[q.exam][q.id],'res')).join('')}</div></section>`:''}`;
 }
 
 function rcPaceRows(r,tr){
  const rows=Object.entries(r.subj).filter(([s,o])=>o.n&&o.ms&&tr.pace&&tr.pace[s]).map(([s,o])=>{const sec=o.ms/o.n/1000, p=tr.pace[s], w=Math.min(100,sec/(p*2)*100); return `<div class="srow"><span class="nm">${esc(s)}</span><div class="trk" role="img" aria-label="${esc(s)} 문항당 ${Math.round(sec)}초, 권장 ${p}초"><i class="${sec>p?'low':''}" style="width:${Math.max(1,w)}%"></i><b class="ref pass" style="left:50%"></b></div><span class="val">${Math.round(sec)}초</span></div>`}).join('');
- return rows?`<h3 class="h2" style="font-size:17px;margin-top:22px">문항당 풀이 시간</h3><p class="small">검은 선이 파트별 권장 시간(Part 5 20초 · Part 6 30초 · Part 7 약 1분)이에요. 빨간 막대는 그보다 느려요.</p><div class="srows">${rows}</div>`:'';
+ return rows?`<h3 class="h2" style="font-size:17px;margin-top:22px">문항당 풀이 시간</h3><p class="small">검은 선이 ${EXAMS[r.exam||U.settings.exam].rc?'파트별 권장 시간(Part 5 20초 · Part 6 30초 · Part 7 약 1분)':'문항당 90초(60분 ÷ 40문항)'}이에요. 빨간 막대는 그보다 느려요.</p><div class="srows">${rows}</div>`:'';
 }
 function rcPaceCard(ex,tr,pr){
  const have=pr.ss.filter(o=>o.sec&&o.mn>=3);
@@ -2330,6 +2350,14 @@ function rcPaceCard(ex,tr,pr){
  const rows=RCPARTS.map(s=>{const o=pr.ss.find(x=>x.s===s), sec=o&&o.mn>=3?o.sec:null, p=tr.pace[s], w=sec?Math.min(100,sec/(p*2)*100):0; return `<div class="srow"><span class="nm">${esc(s)}</span><div class="trk" role="img" aria-label="${esc(s)} 문항당 ${sec?Math.round(sec)+'초':'기록 없음'}, 권장 ${p}초">${sec?`<i class="${sec>p?'low':''}" style="width:${Math.max(1,w)}%"></i>`:''}<b class="ref pass" style="left:50%"></b></div><span class="val">${sec?Math.round(sec)+'초':'—'}</span></div>`}).join('');
  const tip=!have.length?'파트마다 3문항 이상 풀면 실전 시간을 예측해 줘요. 시험 모드로 풀면 실제 시험과 가장 비슷해요.':est>75.5?`지금 속도라면 RC 100문항에 약 ${Math.round(est)}분이 걸려요. 75분보다 ${Math.round(est-75)}분 더 필요해서 마지막 지문 몇 개를 못 풀 수 있어요. 가장 느린 파트부터 시간을 줄여 보세요.`:`지금 속도라면 RC 100문항을 약 ${Math.round(est)}분에 풀어요. 75분 안에 들어오니 남는 시간은 Part 7 검토에 쓰세요.`;
  return `<section class="card"><h2 class="h2">실전 시간 예측</h2><p class="small">파트별 평균 풀이 시간에 실제 문항 수(30·16·29·25)를 곱했어요. 기록이 없는 파트는 권장 시간으로 셈해요. 검은 선이 권장 시간이에요.</p><div class="srows" style="margin-top:12px">${rows}</div><p class="insight">${tip}</p></section>`;
+}
+
+function ncsPaceCard(ex,tr,pr){
+ const S=tr.subjects, have=pr.ss.filter(o=>S.includes(o.s)&&o.sec&&o.mn>=3), N=totalQ(tr), M=tr.minutes;
+ const est=sum(S.map((s,i)=>{const o=have.find(x=>x.s===s); return (o?o.sec:tr.pace[s])*(tr.quota[i]||0)}))/60;
+ const rows=S.map(s=>{const o=pr.ss.find(x=>x.s===s), sec=o&&o.mn>=3?o.sec:null, p=tr.pace[s], w=sec?Math.min(100,sec/(p*2)*100):0; return `<div class="srow"><span class="nm">${esc(s)}</span><div class="trk" role="img" aria-label="${esc(s)} 문항당 ${sec?Math.round(sec)+'초':'기록 없음'}, 권장 ${p}초">${sec?`<i class="${sec>p?'low':''}" style="width:${Math.max(1,w)}%"></i>`:''}<b class="ref pass" style="left:50%"></b></div><span class="val">${sec?Math.round(sec)+'초':'—'}</span></div>`}).join('');
+ const tip=!have.length?'영역마다 3문항 이상 풀면 실전 시간을 예측해 줘요. 시험 모드로 풀면 실제 시험과 가장 비슷해요.':est>M+0.5?`지금 속도라면 ${N}문항에 약 ${Math.round(est)}분이 걸려요. ${M}분보다 ${Math.round(est-M)}분 더 필요해서 끝의 몇 문제를 못 풀 수 있어요. 2분이 넘는 문제는 표시하고 넘기는 연습을 해 보세요.`:`지금 속도라면 ${N}문항을 약 ${Math.round(est)}분에 풀어요. ${M}분 안에 들어오니 남는 시간은 표시해 둔 문제를 다시 보는 데 쓰세요.`;
+ return `<section class="card"><h2 class="h2">실전 시간 예측</h2><p class="small">영역별 평균 풀이 시간에 모의고사 문항 수(${tr.quota.join('·')})를 곱했어요. 기록이 없는 영역은 문항당 90초로 셈해요. 검은 선이 90초예요.</p><div class="srows" style="margin-top:12px">${rows}</div><p class="insight">${tip}</p></section>`;
 }
 
 /* ---------- view: notes ---------- */
@@ -2386,11 +2414,11 @@ function vStats(){
  const trows=pr.ss.filter(o=>o.sec).map(o=>{const w=Math.min(100,o.sec/(spqv*2)*100), slow=o.sec>spqv; return `<div class="srow"><span class="nm">${esc(o.s)}</span><div class="trk" role="img" aria-label="${esc(o.s)} 평균 ${Math.round(o.sec)}초"><i class="${slow?'low':''}" style="width:${w}%"></i><b class="ref pass" style="left:50%"></b></div><span class="val">${Math.round(o.sec)}초</span></div>`}).join('');
  const mocks=SS(ex).filter(x=>x.kind==='mock'||x.kind==='round').slice(-8).reverse();
  const off=BANK.ex[ex].filter(q=>(q.source==='official'||q.source==='restored')&&inTr(q,tr));
- AFTER.push(()=>{const f=$('#trend'); if(f) drawTrend(f,rolling(dl))});
+ AFTER.push(()=>{const f=$('#trend'); if(f) drawTrend(f,rolling(dl),E.id==='ncs'?pass.goal/100:.6)});
  return `${isDemo(ex)?demoBar():''}<header class="rhead"><div><h1 class="title">${esc(headline(pr,tr))}</h1><p class="sub">${E.full} · ${tr.name} · ${P?'최근 '+P+'일':'전체 기간'}</p></div>${per}</header>
  <dl class="kpis"><div class="kpi${pr.ok===false&&!VV?' bad':''}"><dt>${VV?'외운 단어':avgT?'예상 평균':RCT?'예상 정답률':'예상 점수'}</dt><dd>${predShort(pr)}</dd></div><div class="kpi"><dt>푼 문제</dt><dd>${att}<small>회</small></dd></div><div class="kpi"><dt>정답률</dt><dd>${pct(cor/att)}<small>%</small></dd></div><div class="kpi${cm.sw?' bad':''}"><dt>잘못 알고 있던 답</dt><dd>${cm.sw}<small>회</small></dd></div></dl>
  <div class="grid2 sec">
-  <section class="card"><h2 class="h2">${avgT?E.ls+'별 예상 점수':E.ls+'별 정답률'}</h2><p class="small">${VV?'단어별 마지막 풀이 기준이에요. 아래 계획은 남은 단어와 시험일로 계산해요.':'문항별 마지막 풀이 기준이에요.'+(avgT?' 회색 선은 과락 40점, 검은 선은 합격 평균 60점이에요.':RCT?' 예상 정답률은 실제 RC의 파트별 문항 수(30·16·29·25)로 가중해 셈해요.':' 배점을 반영한 예상 점수로 급수를 판정해요.')}</p><div class="srows">${avgT?`<div class="srow" aria-hidden="true"><span></span><div class="axis"><span style="left:${pass.min}%">${pass.min}</span><span style="left:${pass.avg}%">${pass.avg}</span></div><span></span></div>`:''}${srows}</div>${strategy(pr,tr,ex)}</section>
+  <section class="card"><h2 class="h2">${avgT?E.ls+'별 예상 점수':E.ls+'별 정답률'}</h2><p class="small">${VV?'단어별 마지막 풀이 기준이에요. 아래 계획은 남은 단어와 시험일로 계산해요.':'문항별 마지막 풀이 기준이에요.'+(avgT?' 회색 선은 과락 40점, 검은 선은 합격 평균 60점이에요.':RCT?(E.rc?' 예상 정답률은 실제 RC의 파트별 문항 수(30·16·29·25)로 가중해 셈해요.':` 예상 정답률은 모의고사의 ${E.ls}별 문항 수(${tr.quota.join('·')})로 가중해 셈해요. NCS 전체 점수가 만점의 ${pass.cut||40}% 미만이면 과락이에요.`):' 배점을 반영한 예상 점수로 급수를 판정해요.')}</p><div class="srows">${avgT?`<div class="srow" aria-hidden="true"><span></span><div class="axis"><span style="left:${pass.min}%">${pass.min}</span><span style="left:${pass.avg}%">${pass.avg}</span></div><span></span></div>`:''}${srows}</div>${strategy(pr,tr,ex)}</section>
   <section class="card"><h2 class="h2">약점과 강점 ${E.lt}</h2><p class="small">2회 이상 푼 ${E.lt}만 비교해요. 누르면 그 ${E.lt}만 풀어요.</p><div style="margin-top:14px"><span class="lab">먼저 볼 약점</span>${weakT.length?`<ul class="tlist">${weakT.map(trow).join('')}</ul>`:'<p class="small">아직 뚜렷한 약점이 없어요.</p>'}</div><div style="margin-top:16px"><span class="lab">잘하는 ${E.lt}</span>${strongT.length?`<ul class="tlist">${strongT.map(trow).join('')}</ul>`:`<p class="small">3회 이상 풀어 70%를 넘긴 ${E.lt}이 아직 없어요.</p>`}</div></section>
  </div>
  <div class="grid2 sec">
@@ -2405,7 +2433,7 @@ function vStats(){
    ${trows?`<div class="srows">${trows}</div>`:'<p class="small">시간 기록이 아직 없어요.</p>'}`}
   </section>
  </div>
- <section class="sec card"><div class="sec-h" style="margin:0"><h2 class="h2">정답률 추이</h2><span class="small">그날까지 최근 7일 정답률 · 빨간 선은 60%</span></div>
+ <section class="sec card"><div class="sec-h" style="margin:0"><h2 class="h2">정답률 추이</h2><span class="small">그날까지 최근 7일 정답률 · 빨간 선은 ${E.id==='ncs'?'목표 '+pass.goal+'%':'60%'}</span></div>
   ${dl.length>1?'<div class="fig" id="trend" role="img" aria-label="날짜별 정답률 선 그래프"></div>':'<p class="small" style="margin-top:10px">이틀 이상 공부하면 추이가 그려져요.</p>'}
   <details style="margin-top:10px"><summary>표로 보기</summary><div class="scroll"><table><thead><tr><th>날짜</th><th class="num">푼 문제</th><th class="num">정답률</th></tr></thead><tbody>${dl.slice().reverse().map(o=>`<tr><td>${ymd(o.d)}</td><td class="num">${o.n}</td><td class="num">${pct(o.c/o.n)}%</td></tr>`).join('')}</tbody></table></div></details>
   <h3 class="h2" style="font-size:17px;margin-top:22px">학습 달력 · 최근 12주</h3><p class="small">${streak(ex)?'연속 '+streak(ex)+'일째 공부 중이에요':'오늘 문제를 풀면 연속 기록이 시작돼요'}</p>${calendar(ex)}
@@ -2413,7 +2441,7 @@ function vStats(){
  <div class="grid2 sec"><section class="card"><h2 class="h2">${VV?'단어 테스트 기록':'모의고사 기록'}</h2>
   ${mocks.length?`<div class="scroll"><table style="margin-top:10px"><thead><tr><th>날짜</th><th>세트</th><th class="num">점수</th><th>판정</th></tr></thead><tbody>${mocks.map(m=>`<tr><td>${ymd(m.t1)}</td><td>${esc(m.title)}</td><td class="num">${m.avg!=null?m.avg+'점':m.score+(RCT?'%':'점')}</td><td>${m.ok?(VV?'통과':RCT?'목표 달성':'합격권'):`<span style="color:var(--redt)">${VV?'80% 미만':RCT?'목표 미만':'불합격권'}</span>`}</td></tr>`).join('')}</tbody></table></div>`:`<p class="small" style="margin-top:8px">${VV?'단어 테스트를 보면 점수 변화가 여기에 쌓여요.':RCT?'모의고사나 실전 세트를 풀면 정답률 변화가 여기에 쌓여요.':'실전 모의고사나 기출 회차를 풀면 점수 변화가 여기에 쌓여요.'}</p>`}
  </section>
- ${VV?vTypeCard(ex,tr):RCT?rcPaceCard(ex,tr,pr):`<section class="card"><h2 class="h2">자주 나온 ${E.lt}</h2>
+ ${VV?vTypeCard(ex,tr):RCT?(E.rc?rcPaceCard(ex,tr,pr):ncsPaceCard(ex,tr,pr)):`<section class="card"><h2 class="h2">자주 나온 ${E.lt}</h2>
   ${off.length?freqTable(off,tr):'<p class="small" style="margin-top:8px">기출(공식·복원)을 연도와 함께 가져오면 연도별로 자주 나온 '+josa(E.lt,'을/를')+' 정리해 줘요. 지금 문제은행은 샘플 문제만 있어요.</p>'}
  </section>`}</div>
  ${SAMPLE?coachBlock():''}`;
@@ -2438,12 +2466,12 @@ function strategy(pr,tr,ex){
   const ty=vTypeStats(ex,tr), m=ty.find(x=>x.k==='m'), c=ty.find(x=>x.k==='c');
   if(m&&c&&m.n>=10&&c.n>=10&&m.acc-c.acc>=.15) out.push(li('문맥',`뜻 고르기는 ${pct(m.acc)}%인데 문맥 빈칸은 ${pct(c.acc)}%예요. 예문을 소리 내어 읽고 문맥 빈칸을 더 풀어 보세요.`));
  } else if(pr.type==='rc'){
-  if(pr.score<pr.goal) out.push(li('목표까지',`예상 정답률 ${pr.score}% → ${pr.goal}%. 실제 RC 100문항으로 치면 ${pr.goal-pr.score}문제를 더 맞혀야 해요.`));
+  if(pr.score<pr.goal) out.push(li('목표까지',`예상 정답률 ${pr.score}% → ${pr.goal}%. 실제 ${E.rc?'RC ':''}${totalQ(tr)}문항으로 치면 ${Math.ceil((pr.goal-pr.score)*totalQ(tr)/100)}문제를 더 맞혀야 해요.`));
   const ts=topicStats(ex,tr).filter(t=>t.att>=3).sort((a,b)=>a.m-b.m).slice(0,2);
   if(ts.length&&ts[0].acc<.7) out.push(li('약한 유형',ts.map(t=>esc(t.s.replace(' 단일 지문','').replace(' 복수 지문',' 복수'))+' '+esc(t.t)+' '+pct(t.acc)+'%').join(', ')+'. 오늘의 학습에서 먼저 나와요.'));
   const slow=pr.ss.filter(o=>o.sec&&o.mn>=3&&tr.pace&&o.sec>tr.pace[o.s]*1.15).sort((a,b)=>b.sec/tr.pace[b.s]-a.sec/tr.pace[a.s])[0];
   if(slow) out.push(li('시간',`${esc(slow.s)}에서 문항당 ${Math.round(slow.sec)}초가 걸려요(권장 ${tr.pace[slow.s]}초). 시험 모드로 시간을 재며 풀어 보세요.`));
-  if(pr.missing.length) out.push(li('진단',`${pr.missing.map(o=>esc(o.s)).join(', ')} 기록이 아직 없어요. 미니 모의고사로 한 번에 진단할 수 있어요.`));
+  if(pr.missing.length) out.push(li('진단',`${pr.missing.map(o=>esc(o.s)).join(', ')} 기록이 아직 없어요. ${E.rc?'미니':'실전'} 모의고사로 한 번에 진단할 수 있어요.`));
  } else if(pr.type==='avg'){
   const pts=Math.round(100/(tr.per||20)), have=pr.ss.filter(o=>o.n);
   pr.fails.forEach(o=>out.push(li('과락 탈출',`${esc(o.s)} ${o.score}점 → ${tr.pass.min}점까지 실제 시험 기준 ${Math.ceil((tr.pass.min-o.score)/pts)}문제 더 (한 문제 ${pts}점)`)));
@@ -2477,7 +2505,7 @@ function coachBlock(){
  ${c&&(c.text||c.busy)?`<div class="ai"><div class="ai-t" id="coach-t">${esc(c.text||'계획을 짜는 중이에요…')}</div></div>`:''}${c&&c.err?`<p class="insight" style="color:var(--redt)">${esc(c.err)}</p>`:''}
  <div class="row" style="margin-top:12px"><button class="btn line sm" data-act="coach" ${c&&c.busy?'disabled':''}>${ico('spark')}${c&&c.text?'다시 받기':'7일 계획 받기'}</button></div></section>`;
 }
-function drawTrend(fig,data){
+function drawTrend(fig,data,rv=.6){
  const draw=()=>{
   const W=fig.clientWidth,H=fig.clientHeight; if(!W||!H) return;
   const m={l:40,r:18,t:16,b:30}, iw=W-m.l-m.r, ih=H-m.t-m.b;
@@ -2485,7 +2513,7 @@ function drawTrend(fig,data){
   const x=d=>m.l+(d-t0)/span*iw, y=v=>m.t+(1-v)*ih;
   const pts=data.map(o=>[x(o.d),y(o.c/o.n)]);
   const ticks=[0,.5,1].map(v=>`<line x1="${m.l}" x2="${W-m.r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${m.l-8}" y="${y(v)+4}" text-anchor="end">${v*100}%</text>`).join('');
-  const ref=`<line x1="${m.l}" x2="${W-m.r}" y1="${y(.6)}" y2="${y(.6)}" stroke="var(--red)" stroke-width="1.2"/>`;
+  const ref=`<line x1="${m.l}" x2="${W-m.r}" y1="${y(rv)}" y2="${y(rv)}" stroke="var(--red)" stroke-width="1.2"/>`;
   const xl=[data[0],data[data.length-1]].concat(W>=520&&data.length>4?[data[Math.floor(data.length/2)]]:[]).map(o=>`<text x="${x(o.d)}" y="${H-8}" text-anchor="middle">${md(o.d)}</text>`).join('');
   const path='M'+pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join('L');
   const dots=pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="4.5" fill="var(--ink)" stroke="var(--paper)" stroke-width="2"/>`).join('');
@@ -2513,7 +2541,7 @@ function vBank(){
  ${acct}
  <div class="grid2 sec">
   <section class="card"><h2 class="h2">들어 있는 문제</h2><div class="scroll"><table style="margin-top:10px"><thead><tr><th>출처</th>${EXIDS.map(ex=>`<th class="num">${EXAMS[ex].name}</th>`).join('')}</tr></thead><tbody>${rows}<tr><td><b>합계</b></td>${EXIDS.map(ex=>`<td class="num"><b>${BANK.ex[ex].length}</b></td>`).join('')}</tr></tbody></table></div>
-   <p class="small" style="margin-top:10px">샘플은 기능을 써 보라고 직접 만든 연습 문제예요. 실제 기출이 아니에요. 토익 단어는 TSL(토익 교재 말뭉치 빈도 목록)을 참고해 고르고 뜻·예문은 직접 썼어요. 토익 RC는 ETS가 공개한 시험 형식에 맞춰 직접 만든 문제예요.</p>
+   <p class="small" style="margin-top:10px">샘플은 기능을 써 보라고 직접 만든 연습 문제예요. 실제 기출이 아니에요. 토익 단어는 TSL(토익 교재 말뭉치 빈도 목록)을 참고해 고르고 뜻·예문은 직접 썼어요. 토익 RC는 ETS가 공개한 시험 형식에 맞춰 직접 만든 문제예요. NCS는 LH 필기 공고의 구성에 맞춰 직접 만든 문제예요.</p>
    ${U.banks.length?`<span class="lab" style="margin-top:16px">가져온 묶음</span><ul class="tlist">${U.banks.map(b=>`<li class="row" style="justify-content:space-between;padding:6px 0;border-top:1px solid var(--line)"><span>${esc(b.name)} <span class="small">· ${b.count}문제 · ${ymd(b.addedAt)}</span>${b.local?(U.bankQ[b.id]?' <span class="tag">이 기기에 저장</span>':' <span class="tag red">이 기기에는 없어요 · 같은 파일을 다시 가져오세요</span>'):''}</span><button class="btn line sm" data-act="bdel" data-v="${esc(b.id)}">지우기</button></li>`).join('')}</ul>`:''}
   </section>
   <section class="card stack"><h2 class="h2">기출 가져오기</h2><p class="sub">아래 형식의 JSON 파일을 고르거나 내용을 붙여 넣으세요. 같은 id가 있으면 새 내용으로 바뀌어요.</p>
@@ -2526,7 +2554,7 @@ function vBank(){
  <section class="sec card"><h2 class="h2">JSON 형식</h2><p class="sub">문제 하나가 객체 하나예요. 배열로 넣거나 { "questions": [ ... ] }로 감싸도 돼요.</p>
   <dl class="fdl">
    <div><dt><code>id</code><span class="tag red">필수</span></dt><dd>겹치지 않는 문자열. 예: arch-2021-1-001</dd></div>
-   <div><dt><code>exam</code><span class="tag red">필수</span></dt><dd>arch(건축기사) · history(한국사) · comp(컴활) · toeic(토익 단어, 직접 만든 문제용) · rc(토익 RC)</dd></div>
+   <div><dt><code>exam</code><span class="tag red">필수</span></dt><dd>arch(건축기사) · history(한국사) · comp(컴활) · toeic(토익 단어, 직접 만든 문제용) · rc(토익 RC) · ncs(NCS)</dd></div>
    <div><dt><code>subject</code><span class="tag red">필수</span></dt><dd>과목 또는 시대. 아래 이름과 똑같이 써야 분석에 잡혀요.</dd></div>
    <div><dt><code>stem</code> · <code>choices</code> · <code>answer</code><span class="tag red">필수</span></dt><dd>문제 본문, 보기 2~5개, 정답 번호(1부터)</dd></div>
    <div><dt><code>topic</code><span class="tag">권장</span></dt><dd>단원(한국사는 분야). 강점·약점 분석의 단위예요.</dd></div>
@@ -2536,7 +2564,7 @@ function vBank(){
    <div><dt><code>fig</code><span class="tag">선택</span></dt><dd>그림 대신 쓰는 표·코드. <code>[{"t":"sheet","rows":[["부서","실적"],["영업","100"]]}]</code>처럼 워크시트(sheet), 표(grid), 코드(code)를 글자로 적어요.</dd></div>
    <div><dt><code>bank</code><span class="tag">선택</span></dt><dd>{ "questions": [ ... ] } 바깥에 { "id", "name" }을 적으면 같은 묶음을 다시 가져올 때 겹치지 않고 바뀌어요. 그림이 많은 묶음은 이 기기에만 저장돼요.</dd></div>
   </dl>
-  <details style="margin-top:10px"><summary>과목·시대 이름 보기</summary><ul class="small" style="margin:6px 0 0;padding-left:18px"><li>건축기사: 건축계획 · 건축시공 · 건축구조 · 건축설비 · 건축관계법규 (2027년 기준에서는 건축계획과 건축관계법규가 '건축계획 및 설계'로 합쳐져 분석돼요)</li><li>한국사: ${ERAS.join(' · ')}</li><li>컴활: 컴퓨터 일반 · 스프레드시트 일반 · 데이터베이스 일반</li><li>토익 단어: ${esc(VCATS.join(' · '))}</li><li>토익 RC: ${RCPARTS.join(' · ')}</li></ul></details>
+  <details style="margin-top:10px"><summary>과목·시대 이름 보기</summary><ul class="small" style="margin:6px 0 0;padding-left:18px"><li>건축기사: 건축계획 · 건축시공 · 건축구조 · 건축설비 · 건축관계법규 (2027년 기준에서는 건축계획과 건축관계법규가 '건축계획 및 설계'로 합쳐져 분석돼요)</li><li>한국사: ${ERAS.join(' · ')}</li><li>컴활: 컴퓨터 일반 · 스프레드시트 일반 · 데이터베이스 일반</li><li>토익 단어: ${esc(VCATS.join(' · '))}</li><li>토익 RC: ${RCPARTS.join(' · ')}</li><li>NCS: ${NCSA.join(' · ')}</li></ul></details>
   <details><summary>예시 JSON 보기</summary><pre><code>${esc(JSON.stringify(TEMPLATE,null,2))}</code></pre></details>
   <div class="row" style="margin-top:10px"><button class="btn line sm" data-act="tcopy">${ico('copy')}예시 복사</button>${canSave()?`<button class="btn line sm" data-act="tdl">${ico('down')}예시 파일 받기</button>`:''}</div>
  </section>
@@ -2559,6 +2587,7 @@ function vBank(){
    <li><b>한국사 · 국사편찬위원회</b><span>회차별 문제와 정답을 공개하지만 저작권은 위원회에 있어요. 혼자 공부하는 용도로 쓰고, 여러 사람에게 공개하려면 이용 조건을 먼저 확인하세요.</span></li>
    <li><b>컴활 · 대한상공회의소</b><span>2021년부터 상시검정이라 문제가 공개되지 않아요. 공개된 정기시험 기출은 2020년까지이고 Windows·Office 버전이 지금과 달라요. 2027년부터 1과목에 AI 기초가 들어가요.</span></li>
    <li><b>토익 · ETS</b><span>정기시험 문제는 공개되지 않아요. 단어는 공개 빈도 목록 TSL 1.2(Browne & Culligan, CC BY-SA 4.0)를 참고해 골랐고, 뜻·예문·해석은 직접 썼어요. RC 문제는 ETS가 공개한 형식(Part 5 30 · Part 6 16 · Part 7 54문항)에 맞춰 직접 만들었어요. 가지고 있는 문제집 문제는 혼자 공부하는 용도로만 exam을 rc로 해서 가져오세요.</span></li>
+   <li><b>NCS · LH 한국토지주택공사</b><span>필기 문제는 공개되지 않아요. 채용 공고에서는 문항 수, 시간, 출제 영역만 확인할 수 있어요. 여기 문제는 그 구성에 맞춰 직접 만들었고, 지문 속 규정·공고·자료는 모두 가상이에요. 가지고 있는 문제집 문제는 혼자 공부하는 용도로만 exam을 ncs로 해서 가져오세요.</span></li>
   </ul>
  </section>`;
 }
@@ -2635,8 +2664,8 @@ async function coach(){
   catch(e){UI.coach={err:e&&e.code==='rate_limited'?'요청이 많아요. 잠시 뒤 다시 눌러 주세요.':'AI 코치를 쓸 수 없어요.',busy:false}; if(e&&e.code==='not_granted') SAMPLE=null}
   render(true); return;
  }
- const lines=[`시험: ${E.full} (${tr.name}, ${tr.desc})`,`합격 기준: ${tr.pass.type==='avg'?'과목별 40점 이상, 평균 60점 이상':'점수에 따른 급수 '+tr.pass.grades.map(g=>g[1]+' '+g[0]+'점').join(', ')}`,`시험까지: ${dd==null?'날짜 미정':dd+'일'}`,`하루 목표: ${U.settings.goal}문제`,`${E.ls}별 예상 점수(마지막 풀이 기준): ${pr.ss.map(o=>o.s+' '+(o.n?o.score+(tr.pass.type==='avg'?'점':'%')+'('+o.n+'문항)':'기록 없음')).join(', ')}`,`약한 ${E.lt}: ${ts.slice(0,5).map(t=>t.s+'>'+t.t+' '+pct(t.acc)+'%').join(', ')||'없음'}`,`강한 ${E.lt}: ${ts.slice(-3).reverse().map(t=>t.s+'>'+t.t+' '+pct(t.acc)+'%').join(', ')||'없음'}`,`확신도: 알고 맞힘 ${cm.so}, 운 좋게 맞힘 ${cm.uo}, 몰라서 틀림 ${cm.uw}, 잘못 알고 있음 ${cm.sw}`,`틀린 이유: 개념 부족 ${rs.c.c}, 기억 안 남 ${rs.c.f}, 실수 ${rs.c.m}`,`오답노트 대기: ${focusSet('notes',ex).length}문제, 오늘 복습 ${focusSet('due',ex).length}문제`].join('\n');
- const prompt=`너는 한국 자격증 시험 공부 코치야. 아래는 한 수험생의 학습 기록 요약이야.\n${lines}\n\n앞으로 7일 동안의 공부 계획을 한국어로 5줄 이내로 제안해. 규칙: 과락(40점 미만) 과목이 있으면 그것부터, 그다음 평균을 올리기 쉬운 과목 순서. 각 줄은 무엇을, 얼마나, 왜를 짧게 담아. 이 앱의 기능 이름(오늘의 학습, 실전 모의고사, 오답노트 복습, 잘못 알고 있던 문제 다시 풀기)을 써도 돼. 마크다운 기호 없이 줄바꿈만 써.`;
+ const lines=[`시험: ${E.full} (${tr.name}, ${tr.desc})`,`합격 기준: ${tr.pass.type==='avg'?'과목별 40점 이상, 평균 60점 이상':tr.pass.type==='rc'?'정답률 '+tr.pass.goal+'% 목표'+(tr.pass.cut?', 만점의 '+tr.pass.cut+'% 미만이면 과락(오답 감점 없음)':''):'점수에 따른 급수 '+tr.pass.grades.map(g=>g[1]+' '+g[0]+'점').join(', ')}`,`시험까지: ${dd==null?'날짜 미정':dd+'일'}`,`하루 목표: ${U.settings.goal}문제`,`${E.ls}별 예상 점수(마지막 풀이 기준): ${pr.ss.map(o=>o.s+' '+(o.n?o.score+(tr.pass.type==='avg'?'점':'%')+'('+o.n+'문항)':'기록 없음')).join(', ')}`,`약한 ${E.lt}: ${ts.slice(0,5).map(t=>t.s+'>'+t.t+' '+pct(t.acc)+'%').join(', ')||'없음'}`,`강한 ${E.lt}: ${ts.slice(-3).reverse().map(t=>t.s+'>'+t.t+' '+pct(t.acc)+'%').join(', ')||'없음'}`,`확신도: 알고 맞힘 ${cm.so}, 운 좋게 맞힘 ${cm.uo}, 몰라서 틀림 ${cm.uw}, 잘못 알고 있음 ${cm.sw}`,`틀린 이유: 개념 부족 ${rs.c.c}, 기억 안 남 ${rs.c.f}, 실수 ${rs.c.m}`,`오답노트 대기: ${focusSet('notes',ex).length}문제, 오늘 복습 ${focusSet('due',ex).length}문제`].join('\n');
+ const prompt=`너는 한국 ${E.id==='ncs'?'공기업 NCS 필기':'자격증 시험'} 공부 코치야. 아래는 한 수험생의 학습 기록 요약이야.\n${lines}\n\n앞으로 7일 동안의 공부 계획을 한국어로 5줄 이내로 제안해. 규칙: ${E.id==='ncs'?'정답률이 가장 낮은 영역부터, 그다음 문항당 90초 안에 푸는 시간 연습 순서.':'과락(40점 미만) 과목이 있으면 그것부터, 그다음 평균을 올리기 쉬운 과목 순서.'} 각 줄은 무엇을, 얼마나, 왜를 짧게 담아. 이 앱의 기능 이름(오늘의 학습, 실전 모의고사, 오답노트 복습, 잘못 알고 있던 문제 다시 풀기)을 써도 돼. 마크다운 기호 없이 줄바꿈만 써.`;
  UI.coach={text:'',busy:true}; render(true);
  try{const r=await SAMPLE(prompt,{modelTier:'default',onText:({text})=>{UI.coach.text=text; const el=$('#coach-t'); if(el) el.textContent=text}}); UI.coach={text:r.text,busy:false}}
  catch(e){UI.coach={err:e&&e.code==='rate_limited'?'요청이 많아요. 잠시 뒤 다시 눌러 주세요.':'AI 코치를 쓸 수 없어요.',busy:false}; if(e&&e.code==='not_granted') SAMPLE=null}
@@ -2650,7 +2679,7 @@ let TT=0;
 function toast(msg){const t=$('#toast'); t.textContent=msg; t.classList.add('on'); clearTimeout(TT); TT=setTimeout(()=>t.classList.remove('on'),2800)}
 
 /* ---------- study: 공부 노트 (한국사 data/khist.json · 컴활 data/cstudy.json) ---------- */
-const COURSE_FILES={history:'data/khist.json',comp:'data/cstudy.json'};
+const COURSE_FILES={history:'data/khist.json',comp:'data/cstudy.json',ncs:'data/nstudy.json'};
 const COURSES={};
 const NOSTUDY={ready:false,err:'',d:null,units:new Map(),order:[],core:[],ex:''};
 let STUDY=NOSTUDY; // 지금 고른 시험의 공부 노트
@@ -2708,7 +2737,7 @@ const codeHtml=x=>String(x).split('\n').map(l=>{const sp=l.match(/^[ \t]*/)[0]; 
 const figCode=b=>`<figure class="qfig">${b.title||b.lang?`<figcaption>${esc(b.title||'')}${b.lang?`<span class="tag">${esc(b.lang)}</span>`:''}</figcaption>`:''}<pre class="code" tabindex="0"><code>${codeHtml(b.x)}</code></pre></figure>`;
 const fxBreak=h=>h.replace(/,(?=[^\s&])/g,',<wbr>'); // 수식 보기는 쉼표 뒤에서 꺾이게
 const chHtml=c=>/^[={]/.test(c)?fxBreak(nl(c)):nl(c);
-const figHtml=b=>b.t==='sheet'?figSheet(b):b.t==='grid'?figGrid(b):b.t==='code'?figCode(b):'';
+const figHtml=b=>b.t==='sheet'?figSheet(b):b.t==='grid'?figGrid(b):b.t==='code'?figCode(b):b.t==='chart'?chartFig(b):'';
 const figsHtml=q=>(q.fig||[]).map(figHtml).join('');
 const figText=q=>(q.fig||[]).map(b=>b.t==='code'?`[${b.title||b.lang||'코드'}]\n${b.x}`:b.t==='sheet'?`[${b.title||'워크시트'}] (첫 줄은 ${b.r0||1}행, 첫 칸은 ${b.c0||'A'}열)\n${(b.rows||[]).map(r=>r.join('\t')).join('\n')}`:`[${b.title||'표'}]\n${(b.head?[b.head]:[]).concat(b.rows||[]).map(r=>r.join('\t')).join('\n')}`).join('\n');
 const tableHtml=t=>`<figure class="st-fig"><figcaption>${esc(t.title)}</figcaption><div class="st-tw" tabindex="0" role="group" aria-label="${esc(t.title)} 표"><table class="st-t${t.head.length<2?' one':''}"><thead><tr><th></th>${t.head.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr><th scope="row">${rich(r[0])}</th>${r.slice(1).map((c,i)=>`<td data-h="${esc(t.head[i]||'')}"${c===''||c==='—'?' class="e"':''}>${rich(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></figure>`;
@@ -2783,29 +2812,34 @@ function vStudyRoad(){ // 한국사 로드맵: 시대가 왜 다음 시대로 �
 }
 const NOTEL={exam:'시험 포인트',warn:'주의',tip:'요령',y27:'2027년부터',y26:'2026년까지'};
 /* 차트 그림: 막대(+보조 축 꺾은선)에 번호 이름표를 붙여 부분의 이름을 익혀요 */
-function chartFig(b){
- const bars=b.series.filter(s=>s.k==='bar'), lines=b.series.filter(s=>s.k==='line'), n=b.cats.length, f1=x=>+x.toFixed(1);
- const W=340, H=250, L=b.yt?52:40, R=lines.length?(b.y2t?48:36):12, T=b.ct?40:16, B=64, pw=W-L-R, ph=H-T-B;
+function chartFig(b){ // 막대(+보조 축 꺾은선) · 꺾은선만 · 값 모두 표시(lab:'all', 문제 그림)
+ const bars=b.series.filter(s=>s.k==='bar'), lines=b.series.filter(s=>s.k==='line'), n=b.cats.length, f1=x=>+x.toFixed(1), marks=b.marks||[], all=b.lab==='all', dual=!!(bars.length&&lines.length);
+ const W=340, H=250, L=b.yt?52:40, R=dual?(b.y2t?48:36):14, T=b.ct?40:(all?24:16), B=64, pw=W-L-R, ph=H-T-B;
  const nice=m=>{const p=Math.pow(10,Math.floor(Math.log10(m))), f=m/p; return (f<=1?1:f<=2?2:f<=4?4:f<=5?5:f<=8?8:10)*p};
- const m1=nice(Math.max(1,...bars.flatMap(s=>s.v))), m2=lines.length?nice(Math.max(1,...lines.flatMap(s=>s.v))):0;
- const y1=v=>T+ph-ph*v/m1, y2=v=>T+ph-ph*v/m2, gw=pw/n, bw=Math.min(26,(gw-12)/Math.max(1,bars.length)), bx=(si,ci)=>L+gw*ci+(gw-bw*bars.length)/2+bw*si;
+ const fmt=v=>(Number.isInteger(v)?v:+v.toFixed(2)).toLocaleString('en-US');
+ const base=!bars.length&&b.ymin?b.ymin:0, m1=Math.max(base+1,nice(Math.max(1,...(bars.length?bars:lines).flatMap(s=>s.v)))), m2=dual?nice(Math.max(1,...lines.flatMap(s=>s.v))):0;
+ const y1=v=>T+ph-ph*(v-base)/(m1-base), y2=v=>T+ph-ph*v/m2, yl=dual?y2:y1, gw=pw/n, bw=Math.min(26,(gw-12)/Math.max(1,bars.length)), bx=(si,ci)=>L+gw*ci+(gw-bw*bars.length)/2+bw*si;
  let o='';
- for(let i=0;i<=4;i++){const y=f1(T+ph-ph*i/4); o+=`<line class="ch-g" x1="${L}" x2="${W-R}" y1="${y}" y2="${y}"/><text class="ch-t" x="${L-5}" y="${y+3.5}" text-anchor="end">${m1*i/4}</text>`; if(m2) o+=`<text class="ch-t" x="${W-R+5}" y="${y+3.5}">${m2*i/4}</text>`}
- bars.forEach((s,si)=>s.v.forEach((v,ci)=>{o+=`<rect class="ch-b k${si%3}" x="${f1(bx(si,ci))}" y="${f1(y1(v))}" width="${f1(bw-2)}" height="${f1(T+ph-y1(v))}"/>`; if(b.labels===si+1) o+=`<text class="ch-v" x="${f1(bx(si,ci)+(bw-2)/2)}" y="${f1(y1(v)-4)}" text-anchor="middle">${v}</text>`}));
- lines.forEach(s=>{const p=s.v.map((v,ci)=>[f1(L+gw*ci+gw/2),f1(y2(v))]); o+=`<polyline class="ch-l" points="${p.map(q=>q.join(',')).join(' ')}"/>`+p.map(q=>`<circle class="ch-d" cx="${q[0]}" cy="${q[1]}" r="3.2"/>`).join('')});
+ for(let i=0;i<=4;i++){const y=f1(T+ph-ph*i/4); o+=`<line class="ch-g" x1="${L}" x2="${W-R}" y1="${y}" y2="${y}"/><text class="ch-t" x="${L-5}" y="${y+3.5}" text-anchor="end">${fmt(base+(m1-base)*i/4)}</text>`; if(m2) o+=`<text class="ch-t" x="${W-R+5}" y="${y+3.5}">${fmt(m2*i/4)}</text>`}
+ bars.forEach((s,si)=>s.v.forEach((v,ci)=>{o+=`<rect class="ch-b k${si%3}" x="${f1(bx(si,ci))}" y="${f1(y1(v))}" width="${f1(bw-2)}" height="${f1(T+ph-y1(v))}"/>`; if(all||b.labels===si+1) o+=`<text class="ch-v${all?' sm':''}" x="${f1(bx(si,ci)+(bw-2)/2)}" y="${f1(y1(v)-4)}" text-anchor="middle">${fmt(v)}</text>`}));
+ const lpos=(li,ci,y)=>{ // 꺾은선 값 글자 자리: 같은 항목에서 위에 있는 선은 위, 아래 있는 선은 아래. 막대 값 글자와 겹치면 아래로
+  if(dual){const top=Math.min(...bars.map(s=>y1(s.v[ci])-4)); return Math.abs(y-7-top)<12?y+15:y-7}
+  const ys=lines.map(s=>yl(s.v[ci])), rk=ys.filter(v=>v<y).length; return lines.length>1&&rk>=Math.ceil(lines.length/2)?y+15:y-7};
+ lines.forEach((s,li)=>{const p=s.v.map((v,ci)=>[f1(L+gw*ci+gw/2),f1(yl(v))]); o+=`<polyline class="ch-l k${li%3}" points="${p.map(q=>q.join(',')).join(' ')}"/>`+p.map(q=>`<circle class="ch-d k${li%3}" cx="${q[0]}" cy="${q[1]}" r="3.2"/>`).join('')});
+ if(all) lines.forEach((s,li)=>s.v.forEach((v,ci)=>{const x=f1(L+gw*ci+gw/2), y=yl(v); o+=`<text class="ch-v sm lv" x="${x}" y="${f1(lpos(li,ci,y))}" text-anchor="middle">${fmt(v)}</text>`}));
  o+=`<line class="ch-ax" x1="${L}" x2="${W-R}" y1="${T+ph}" y2="${T+ph}"/><line class="ch-ax" x1="${L}" x2="${L}" y1="${T}" y2="${T+ph}"/>`+(m2?`<line class="ch-ax" x1="${W-R}" x2="${W-R}" y1="${T}" y2="${T+ph}"/>`:'');
  b.cats.forEach((c,ci)=>o+=`<text class="ch-t" x="${f1(L+gw*ci+gw/2)}" y="${T+ph+14}" text-anchor="middle">${esc(c)}</text>`);
  if(b.ct) o+=`<text class="ch-ti" x="${W/2}" y="22" text-anchor="middle">${esc(b.ct)}</text>`;
  if(b.xt) o+=`<text class="ch-at" x="${f1(L+pw/2)}" y="${T+ph+30}" text-anchor="middle">${esc(b.xt)}</text>`;
  if(b.yt) o+=`<text class="ch-at" transform="translate(12 ${f1(T+ph/2)}) rotate(-90)" text-anchor="middle">${esc(b.yt)}</text>`;
- if(b.y2t) o+=`<text class="ch-at" transform="translate(${W-14} ${f1(T+ph/2)}) rotate(90)" text-anchor="middle">${esc(b.y2t)}</text>`;
+ if(b.y2t&&dual) o+=`<text class="ch-at" transform="translate(${W-14} ${f1(T+ph/2)}) rotate(90)" text-anchor="middle">${esc(b.y2t)}</text>`;
  let lx=L; const ly=H-12;
- b.series.forEach(s=>{o+=s.k==='bar'?`<rect class="ch-b k${bars.indexOf(s)%3}" x="${f1(lx)}" y="${ly-9}" width="10" height="10"/>`:`<line class="ch-l" x1="${f1(lx-1)}" x2="${f1(lx+12)}" y1="${ly-4}" y2="${ly-4}"/><circle class="ch-d" cx="${f1(lx+5.5)}" cy="${ly-4}" r="2.6"/>`; o+=`<text class="ch-t" x="${f1(lx+15)}" y="${ly}">${esc(s.n)}</text>`; lx+=26+wsLen(s.n)*6.3});
- const lb=b.labels?b.labels-1:0, mid=Math.min(1,n-1), ll=lines.length?[L+gw*(n-1)+gw/2,y2(lines[0].v[n-1])]:[0,0];
+ b.series.forEach(s=>{const li=lines.indexOf(s)%3; o+=s.k==='bar'?`<rect class="ch-b k${bars.indexOf(s)%3}" x="${f1(lx)}" y="${ly-9}" width="10" height="10"/>`:`<line class="ch-l k${li}" x1="${f1(lx-1)}" x2="${f1(lx+12)}" y1="${ly-4}" y2="${ly-4}"/><circle class="ch-d k${li}" cx="${f1(lx+5.5)}" cy="${ly-4}" r="2.6"/>`; o+=`<text class="ch-t" x="${f1(lx+15)}" y="${ly}">${esc(s.n)}</text>`; lx+=26+wsLen(s.n)*6.3});
+ const lb=b.labels?b.labels-1:0, mid=Math.min(1,n-1), ll=lines.length?[L+gw*(n-1)+gw/2,yl(lines[0].v[n-1])]:[0,0];
  const SP={title:[W/2+wsLen(b.ct||'')*3.7+13,17],legend:[lx+2,ly-4],plot:[L+15,T+13],yaxis:[L-2,T-13],xaxis:[W-R-8,T+ph+13],ytitle:[12,T+ph/2-wsLen(b.yt||'')*3.3-13],xtitle:[L+pw/2+wsLen(b.xt||'')*3.3+13,T+ph+26],
   series:[bx(0,0)+(bw-2)/2,y1(bars[0]?bars[0].v[0]:0)+15],label:[bx(lb,mid)-13,y1(bars[lb]?bars[lb].v[mid]:0)-8],grid:[L+gw*(n-1),T+ph*.75],y2:[W-R+14,T-13],line:[ll[0]-14,ll[1]-10]};
- const marks=b.marks.map((m,i)=>{const p=SP[m[0]]||[0,0]; return `<g class="ch-m"><circle cx="${f1(p[0])}" cy="${f1(p[1])}" r="8.5"/><text x="${f1(p[0])}" y="${f1(p[1]+3.7)}" text-anchor="middle">${i+1}</text></g>`}).join('');
- return `<figure class="qfig chartfig"><figcaption>${esc(b.title)}</figcaption><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(b.title)}">${o}${marks}</svg>${b.marks.length?`<ol class="ch-key">${b.marks.map(m=>`<li><b>${esc(m[1])}</b>${m[2]?`<span>${rich(m[2])}</span>`:''}</li>`).join('')}</ol>`:''}</figure>`;
+ const mk=marks.map((m,i)=>{const p=SP[m[0]]||[0,0]; return `<g class="ch-m"><circle cx="${f1(p[0])}" cy="${f1(p[1])}" r="8.5"/><text x="${f1(p[0])}" y="${f1(p[1]+3.7)}" text-anchor="middle">${i+1}</text></g>`}).join('');
+ return `<figure class="qfig chartfig"><figcaption>${esc(b.title)}</figcaption><svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(b.title)}">${o}${mk}</svg>${marks.length?`<ol class="ch-key">${marks.map(m=>`<li><b>${esc(m[1])}</b>${m[2]?`<span>${rich(m[2])}</span>`:''}</li>`).join('')}</ol>`:''}</figure>`;
 }
 /* 관계 그림: 테이블 상자를 나란히 놓고 이어지는 필드끼리 선으로 이어요(열쇠 = 기본 키) */
 function relFig(b){
@@ -3068,6 +3102,7 @@ function go(r){if(location.hash!=='#'+r){location.hash=r}else{setRoute(r);render
 function renderTop(){
  const ex=U.settings.exam, cur=UI.route==='result'?'practice':UI.route==='cards'?'words':UI.route, TB=tabsNow();
  $('#top').innerHTML=`<div class="top-in"><a class="brand" href="#home">${LOGO}<span>합격노트</span></a><div class="exams" role="tablist" aria-label="시험 선택">${EXIDS.map(k=>`<button role="tab" aria-selected="${k===ex}" data-act="exam" data-v="${k}">${EXAMS[k].name}</button>`).join('')}</div><nav class="tabs" aria-label="주요 메뉴">${TB.map(([r,l])=>`<a href="#${r}" ${cur===r?'aria-current="page"':''}>${l}</a>`).join('')}</nav><button class="skinbtn" data-act="skin" aria-label="화면 디자인 바꾸기" title="화면 디자인">${ico('skin')}</button>${ME&&profOf(ME)?`<button class="who" data-act="pmenu" aria-label="${esc(profOf(ME).name)}님 아이디 관리">${esc(profOf(ME).name)}님</button>`:''}<span class="sync" id="sync" data-s="local"><i></i><span></span></span></div>`;
+ {const ex_=$('#top .exams'), sel_=ex_&&ex_.querySelector('[aria-selected=true]'); if(sel_&&ex_.scrollWidth>ex_.clientWidth+1){const want=sel_.offsetLeft-(ex_.clientWidth-sel_.offsetWidth)/2; ex_.scrollLeft=Math.max(0,want)}} // 좁은 화면: 고른 시험 단추가 가려지지 않게
  $('#mtabs').innerHTML=TB.map(([r,l])=>`<a href="#${r}" ${cur===r?'aria-current="page"':''}>${l}</a>`).join('');
  $('#tabbar').innerHTML=TB.map(([r,l,i])=>`<a href="#${r}" ${cur===r?'aria-current="page"':''}>${ico(i)}<span>${l}</span></a>`).join('');
  syncUI();
@@ -3319,7 +3354,7 @@ if(window.claude&&window.claude.hot&&window.claude.hot.ready) window.claude.hot.
 </script>
 <script>
 (()=>{'use strict';
- const BUILD='20261123-1625';
+ const BUILD='20261124-0022';
  if(window.top!==window.self||!('serviceWorker' in navigator)) return;
  window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
  let hiddenAt=0;
