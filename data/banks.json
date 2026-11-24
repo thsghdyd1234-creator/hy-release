@@ -1,1 +1,1 @@
-[{"file": "data/arch.json", "name": "건축기사 샘플 문제 (자체 제작)"}, {"file": "data/history.json", "name": "한국사 문제 (자체 제작)"}, {"file": "data/comp.json", "name": "컴활 필기 실전 문제 (자체 제작)"}, {"file": "data/ncs.json", "name": "LH NCS 실전 문제 (자체 제작)"}]
+[{"file": "data/arch.json", "name": "건축기사 샘플 문제 (자체 제작)"}, {"file": "data/archp.json", "name": "건축기사 실기 필답형 문제 (자체 제작)"}, {"file": "data/history.json", "name": "한국사 문제 (자체 제작)"}, {"file": "data/comp.json", "name": "컴활 필기 실전 문제 (자체 제작)"}, {"file": "data/ncs.json", "name": "LH NCS 실전 문제 (자체 제작)"}]

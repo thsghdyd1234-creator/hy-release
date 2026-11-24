@@ -80,7 +80,7 @@ img{max-width:100%}
 .ic.fill{fill:currentColor}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.top-in{max-width:1240px;margin:0 auto;padding:10px max(16px,4vw);display:flex;align-items:center;gap:10px 20px;flex-wrap:wrap;min-height:64px}
+.top-in{max-width:1240px;margin:0 auto;padding:10px max(16px,min(4vw,51px));display:flex;align-items:center;gap:10px 20px;flex-wrap:wrap;min-height:64px}
 .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:18px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
 .brand svg{width:22px;height:22px}
 .exams{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:var(--pill);background:var(--soft)}
@@ -98,7 +98,7 @@ img{max-width:100%}
 .tabbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:58px;text-decoration:none;font-size:13px;color:var(--mute)}
 .tabbar a[aria-current=page]{color:var(--ink);font-weight:700}
 .tabbar a[aria-current=page] .ic{color:var(--red)}
-main{display:block;max-width:1240px;margin:0 auto;padding:28px max(16px,4vw) 72px;outline:none}
+main{display:block;max-width:1240px;margin:0 auto;padding:28px max(16px,min(4vw,51px)) 72px;outline:none}
 main:focus,main:focus-visible{outline:none}
 @media (max-width:859px){.tabs{display:none}.tabbar{display:grid}.top-in{min-height:0;padding-top:8px;padding-bottom:8px}.exams{order:3;width:100%}.exams button{flex:1;padding:0 8px}.sync{margin-left:auto}main{padding-top:20px;padding-bottom:calc(100px + env(safe-area-inset-bottom))}}
 body[data-route=quiz] .top,body[data-route=quiz] .tabbar{display:none}
@@ -286,6 +286,8 @@ input[type=checkbox]{width:20px;height:20px;accent-color:var(--ink)}
 .srow{display:grid;grid-template-columns:minmax(5.5em,8.5em) minmax(0,1fr) 3.6em;align-items:center;gap:6px 12px}
 .srow .nm{font-size:14.5px;font-weight:600;line-height:1.3}
 .srow .val{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.srow.pts{grid-template-columns:minmax(5.5em,8.5em) minmax(0,1fr) 5.8em}
+.srow .val small{font-size:12.5px;font-weight:600;color:var(--mute)}
 .srow .sflag{grid-column:2/4;display:flex;align-items:center;gap:4px;margin-top:-4px;font-size:13.5px;color:var(--redt)}
 .srow .sflag .ic{width:16px;height:16px}
 .trk{position:relative;height:22px;border-radius:calc(4px*var(--rk));background:var(--soft)}
@@ -373,7 +375,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 #toast.on{opacity:1}
 @media (min-width:860px){#toast{bottom:28px}}
 @media (max-width:859px){.home-grid{grid-template-columns:minmax(0,1fr)}.plan{position:static}.ptop{grid-template-columns:minmax(0,1fr)}.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:12px}.figs div{min-width:0}.figs dd{font-size:24px}}
-@media (max-width:420px){.srow{grid-template-columns:minmax(4.8em,6.5em) minmax(0,1fr) 3.2em}.mrow{grid-template-columns:minmax(0,1fr) auto 2.8em;gap:8px}.bb{width:12px;height:12px}}
+@media (max-width:420px){.srow{grid-template-columns:minmax(4.8em,6.5em) minmax(0,1fr) 3.2em}.srow.pts{grid-template-columns:minmax(4.8em,6em) minmax(0,1fr) 5.8em}.mrow{grid-template-columns:minmax(0,1fr) auto 2.8em;gap:8px}.bb{width:12px;height:12px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 /* ---------- TOEIC vocabulary ---------- */
 .vinst{margin:0 0 10px;font-size:14.5px;color:var(--mute)}
@@ -435,8 +437,11 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:
 .fcact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
 .fcact .btn{width:100%}
 @media (max-width:859px){.wbody{padding-left:4px}}
-@media (max-width:400px){.exams{overflow-x:auto;scrollbar-width:none}.exams::-webkit-scrollbar{display:none}.exams button{flex:0 0 auto;padding:0 7px;font-size:14px}}
-@media (max-width:379px){.exams button{padding:0 6px;font-size:13px}}
+.exams button small{font:inherit}
+@media (max-width:559px){.exams{overflow-x:auto;scrollbar-width:none;border-radius:15px}.exams::-webkit-scrollbar{display:none}
+ .exams button{flex:1 0 auto;min-height:44px;padding:3px 4px;border-radius:12px;font-size:14px;line-height:1.16;display:flex;flex-direction:column;align-items:center;justify-content:center}
+ .exams button small{display:block;font-size:11px;font-weight:500;opacity:.74}}
+@media (max-width:379px){.exams button{padding:3px 2px;font-size:13px}}
 /* ---------- TOEIC RC: passages, blanks, chat, tables ---------- */
 .rcsplit{display:grid;gap:18px}
 .rcp{border:1px solid var(--ink);border-radius:calc(4px*var(--rk));background:var(--paper)}
@@ -607,6 +612,37 @@ button.kw-main{cursor:pointer}
 .ws td.fx{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px}
 .ws td.hi{background:var(--tint);box-shadow:inset 0 0 0 2px var(--red)}
 @media (max-width:560px){.ws.dn{font-size:13px}.ws.dn th,.ws.dn td{padding:4px 6px}.ws.dn td{min-width:34px}.ws.dn thead th,.ws.dn tbody th{min-width:24px;font-size:12px}.ws.dn td.fx{font-size:12px}}
+.net,.beam{display:block;height:auto;border:1px solid var(--line);border-radius:calc(10px*var(--rk));background:var(--paper)}
+.beam{width:100%}
+.nt-e{fill:none;stroke:var(--ink);stroke-width:1.4}.nt-e.cp{stroke:var(--red);stroke-width:2.6}.nt-e.dm{stroke-dasharray:5 4}
+.nt-h{fill:var(--ink)}.nt-h.cp{fill:var(--red)}.nt-n{fill:var(--paper);stroke:var(--ink);stroke-width:1.4}
+.nt-t,.nt-a{font-size:12px;font-weight:700;fill:var(--ink)}.nt-d{font-size:11.5px;fill:var(--mute)}
+.nt-a,.nt-d,.bm-t{paint-order:stroke;stroke:var(--paper);stroke-width:3px;stroke-linejoin:round}
+.nt-b{fill:var(--soft);stroke:var(--mute);stroke-width:.9}.nt-x{font-size:9.5px;font-weight:600;fill:var(--ink)}
+.bm-b{stroke:var(--ink);stroke-width:3;stroke-linecap:round;fill:none}.bm-s{fill:var(--paper);stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round}
+.bm-k,.bm-d{stroke:var(--ink);stroke-width:1.1;fill:none}.bm-d{stroke:var(--mute)}
+.bm-a,.bm-w{stroke:var(--red);stroke-width:1.2;fill:none}.bm-a.p{stroke-width:1.8}.bm-h{fill:var(--red)}
+.bm-t,.bm-l{font-size:12px;font-weight:700;fill:var(--ink)}.bm-t.sm{font-size:11px;font-weight:400;fill:var(--mute)}
+.oa{display:grid;gap:10px;margin:14px 0 4px}
+.oa-tl{font-size:13.5px;font-weight:700}.oa-tl small{display:block;font-weight:400;color:var(--mute)}
+.oa-tx{width:100%;min-height:84px;padding:10px 12px;border:1px solid var(--line);border-radius:calc(8px*var(--rk));background:var(--paper);color:var(--ink);font:inherit;font-size:16px;line-height:1.6;resize:vertical}
+.oa-tx:focus,.oa-i:focus{outline:2px solid var(--red);outline-offset:1px}
+.oa-model{padding:12px 14px;border:1px solid var(--pink);border-left:3px solid var(--red);border-radius:0 calc(8px*var(--rk)) calc(8px*var(--rk)) 0;background:var(--tint)}
+.oa-model h3{margin:0 0 4px;font-size:13.5px;color:var(--redt)}.oa-model p{margin:0;line-height:1.7}
+.oa-ckh{margin:4px 0 6px;font-size:14px;font-weight:700}.oa-ckh small{display:block;font-weight:400;color:var(--mute)}
+.oa-c{display:flex;gap:10px;align-items:flex-start;width:100%;min-height:44px;padding:9px 12px;border:1px solid var(--line);border-radius:calc(8px*var(--rk));background:var(--paper);color:var(--ink);font:inherit;text-align:left;line-height:1.5;cursor:pointer}
+.oa-c+.oa-c{margin-top:6px}.oa-c[aria-pressed=true]{border-color:var(--ink);background:var(--soft)}.oa-c:disabled{cursor:default;opacity:1}
+.oa-box{flex:none;display:grid;place-items:center;width:22px;height:22px;margin-top:1px;border:1.5px solid var(--mute);border-radius:5px}
+.oa-c[aria-pressed=true] .oa-box{border-color:var(--fill);background:var(--fill);color:var(--onfill)}.oa-box svg{width:15px;height:15px}
+.oa-row{display:grid;gap:6px;padding:10px 12px;border:1px solid var(--line);border-radius:calc(8px*var(--rk));background:var(--paper)}
+.oa-row.ok{border-color:var(--ink)}.oa-row.bad{border-color:var(--red)}
+.oa-l{font-size:14px;font-weight:700}.oa-in{display:flex;align-items:center;gap:8px}
+.oa-i{flex:1;min-width:0;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:calc(8px*var(--rk));background:var(--paper);color:var(--ink);font:inherit;font-size:17px;font-variant-numeric:tabular-nums}
+.oa-i:disabled{opacity:1;background:var(--soft);-webkit-text-fill-color:var(--ink)}
+.oa-u{flex:none;min-width:2.4em;color:var(--mute);font-size:15px}
+.oa-r{display:flex;align-items:center;gap:4px;font-size:14px;font-weight:700}.oa-row.bad .oa-r{color:var(--redt)}.oa-r svg{width:16px;height:16px}
+.oa-list{margin:8px 0 0;padding-left:20px;line-height:1.7}
+.ob.wide{justify-self:start;width:auto;margin-left:12px;padding:0 10px;border-radius:999px;font-size:12px;white-space:nowrap}
 .gridfig{border-collapse:collapse;background:var(--paper);font-size:14px;line-height:1.45}
 .gridfig th,.gridfig td{padding:6px 10px;border:1px solid var(--ink);text-align:left;vertical-align:top}
 .gridfig th{background:var(--soft);font-weight:700;white-space:nowrap}
@@ -830,7 +866,7 @@ body[data-route=quiz] .mtabs{display:none!important}
 .h3{font-size:calc(16px*var(--hs))}
 .skinbtn{display:inline-grid;place-items:center;flex:none;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--ink2);cursor:pointer}
 .skinbtn .ic{width:18px;height:18px}
-@media (min-width:860px) and (max-width:1380px){.top-in{gap:10px 14px}.exams button{padding:0 12px}.tabs a{padding:0 9px}}
+@media (min-width:860px){.top-in{gap:10px 12px}.exams button{padding:0 8px;font-size:14.5px}.tabs a{padding:0 8px}.who{max-width:9.5em}} /* 시험이 7개여도 머리줄이 한 줄에 들어오게 */
 @media (max-width:859px){.skinbtn{margin-left:auto}.skinbtn+.who,.skinbtn+.sync{margin-left:0}.skinbtn+.who{max-width:calc(100vw - 206px)}}
 /* 고르기 화면 */
 .lk-sec{margin-top:18px}
@@ -883,6 +919,140 @@ body[data-route=quiz] .mtabs{display:none!important}
 [data-f=hand] .title,[data-f=hand] .h2,[data-f=hand] .h3,[data-f=hand] .fb-h,[data-f=hand] .rd-h b{letter-spacing:-.03em}
 [data-f=hand] .title{line-height:1.08}
 /*SKIN-CSS:END*/
+/*XLCSS-BEGIN*/
+/* ---------- 엑셀 연습장 ---------- */
+body[data-xl="1"] .top,body[data-xl="1"] .tabbar,body[data-xl="1"] .mtabs{display:none!important}
+body[data-xl="1"] main{max-width:none;padding:0}
+.xl{--c0:#1d5fd0;--c1:#7a3fd0;--c2:#1f7a3d;--c3:#b45309;--c4:#0e7490;--t0:#e6efff;--t1:#f0e8ff;--t2:#e3f5e8;--t3:#fdefd9;--t4:#dcf3f7;--tg:#fff8e6;--tgl:#e8c66a;--okc:#1f7a3d;--fy:#fff1a8;--hr:#c62828;--hb:#1b56c4;
+ max-width:760px;margin:0 auto;height:100vh;height:100dvh;display:flex;flex-direction:column;background:var(--bg);overflow:hidden;touch-action:manipulation}
+:root[data-theme=dark] .xl{--c0:#8ab4ff;--c1:#c9a6ff;--c2:#74d391;--c3:#f2ab66;--c4:#66d3e3;--t0:#16233d;--t1:#261b3d;--t2:#14301d;--t3:#38260f;--t4:#0f2f36;--tg:#2c2714;--tgl:#8a7430;--okc:#74d391;--fy:#5c4f12;--hr:#ff8a80;--hb:#8ab4ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .xl{--c0:#8ab4ff;--c1:#c9a6ff;--c2:#74d391;--c3:#f2ab66;--c4:#66d3e3;--t0:#16233d;--t1:#261b3d;--t2:#14301d;--t3:#38260f;--t4:#0f2f36;--tg:#2c2714;--tgl:#8a7430;--okc:#74d391;--fy:#5c4f12;--hr:#ff8a80;--hb:#8ab4ff}}
+.xl-top{flex:none;display:flex;align-items:center;gap:6px;padding:6px 8px;padding-top:calc(6px + env(safe-area-inset-top));border-bottom:1px solid var(--line)}
+.xl-ib{flex:none;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:calc(10px*var(--rk));background:none;color:var(--ink);font-size:22px;cursor:pointer}
+.xl-ib:hover{background:var(--soft)}
+.xl-tt{flex:1;min-width:0}
+.xl-tt small{display:block;font-size:12.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xl-tt b{display:block;font-size:16px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xl-ask{flex:none;padding:10px 14px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font:inherit;font-size:15px;line-height:1.55;text-align:left;width:100%;cursor:default}
+.xl-ask p{margin:0}
+.xl-ask .xl-use{margin-top:4px;font-size:13.5px;color:var(--ink2)}
+.xl-ask .xl-use b{font-weight:600;color:var(--ink)}
+.xl.ed .xl-ask{cursor:pointer}
+.xl.ed .xl-ask:not(.open) .xl-askin{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.xl.ed .xl-ask:not(.open) .xl-use{display:none}
+.xl-bar{flex:none;display:flex;align-items:stretch;min-height:46px;border-bottom:1px solid var(--line);background:var(--paper)}
+.xl-nm{flex:none;display:grid;place-items:center;min-width:52px;padding:0 8px;border-right:1px solid var(--line);font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ink2)}
+.xl-ed,.xl-in{flex:1;min-width:0;margin:0;padding:11px 10px;border:0;border-radius:0;background:none;color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"D2Coding",monospace;font-size:15px;line-height:1.55;letter-spacing:0}
+.xl-ed{max-height:5.2em;overflow-y:auto;white-space:pre-wrap;word-break:break-all;cursor:text;outline:none}
+.xl .xl-bar .xl-in{width:100%;min-height:0;font-size:16px;border:0;border-radius:0;background:none;box-shadow:none;outline:none}
+.xl-ed.ro{color:var(--ink2)}
+.xl-ed .ph{font-family:var(--sans,inherit);color:var(--mute)}
+.xl-ed .x-r0{color:var(--c0)}.xl-ed .x-r1{color:var(--c1)}.xl-ed .x-r2{color:var(--c2)}.xl-ed .x-r3{color:var(--c3)}.xl-ed .x-r4{color:var(--c4)}
+.xl-ed .x-r{font-weight:700}
+.xl-caret{display:inline-block;width:2px;height:1.2em;margin:0 -1px;vertical-align:text-bottom;background:var(--red);animation:xlblink 1.06s steps(1) infinite}
+@keyframes xlblink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.xl-caret{animation:none}}
+.xl-bx{flex:none;display:grid;place-items:center;width:44px;border:0;border-left:1px solid var(--line);background:none;color:var(--ink2);cursor:pointer}
+.xl-msg{flex:none;min-height:28px;padding:5px 12px;border-bottom:1px solid var(--line);font-size:13px;line-height:1.4;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xl-msg.err{color:var(--redt);white-space:normal}
+.xl-msg b{color:var(--ink);font-weight:700}
+.xl-msg .pv{float:right;margin-left:10px;color:var(--ink2)}
+.xl-mid{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:var(--soft)}
+.xl-gridw{overflow-x:auto;background:var(--paper);border-bottom:1px solid var(--line)}
+.xl-grid{border-collapse:separate;border-spacing:0;min-width:100%;font-size:13.5px;line-height:1.3;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.xl-grid th{padding:0;vertical-align:middle;background:var(--soft);color:var(--mute);font-size:11.5px;font-weight:600;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);user-select:none}
+.xl-grid thead th{height:22px;min-width:46px}
+.xl-grid thead th:first-child,.xl-grid tbody th{position:sticky;left:0;z-index:1;width:26px;min-width:26px}
+.xl-grid td{height:33px;padding:0 7px;vertical-align:middle;text-align:left;font-weight:400;color:var(--ink);background:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);white-space:nowrap;max-width:210px;overflow:hidden;text-overflow:ellipsis;cursor:cell;-webkit-tap-highlight-color:transparent}
+.xl-grid td.x-n{text-align:right;font-variant-numeric:tabular-nums}
+.xl-grid td.x-tl{font-weight:700;overflow:visible}
+.xl-ov{display:inline-block;width:0;white-space:nowrap}
+.xl-grid td.x-hd{font-weight:700;background:var(--soft);text-align:center}
+.xl-grid td.x-e{color:var(--redt);font-weight:600}
+.xl-grid td.x-tg{background:var(--tg);box-shadow:inset 0 0 0 1px var(--tgl)}
+.xl-grid td.x-ct{border-top:2px solid var(--tgl)}.xl-grid td.x-cb{border-bottom:2px solid var(--tgl)}.xl-grid td.x-cl{border-left:2px solid var(--tgl)}.xl-grid td.x-cr{border-right:2px solid var(--tgl)}
+.xl-grid td.x-out{background:var(--soft)}
+.xl-grid td.x-hl-fy{background:var(--fy)}
+.xl-grid td.x-hl-br{font-weight:700;color:var(--hr)}
+.xl-grid td.x-hl-bb{font-weight:700;color:var(--hb)}
+.xl-grid td.x-r0{background:var(--t0);box-shadow:inset 0 0 0 2px var(--c0)}.xl-grid td.x-r1{background:var(--t1);box-shadow:inset 0 0 0 2px var(--c1)}.xl-grid td.x-r2{background:var(--t2);box-shadow:inset 0 0 0 2px var(--c2)}.xl-grid td.x-r3{background:var(--t3);box-shadow:inset 0 0 0 2px var(--c3)}.xl-grid td.x-r4{background:var(--t4);box-shadow:inset 0 0 0 2px var(--c4)}
+.xl-grid td.x-sel{box-shadow:inset 0 0 0 2px var(--ink)}
+.xl-grid td.x-ok{box-shadow:inset 0 -3px 0 var(--okc)}
+.xl-grid td.x-bad{box-shadow:inset 0 -3px 0 var(--red);background:var(--tint)}
+.xl-grid td.x-sel.x-ok{box-shadow:inset 0 0 0 2px var(--ink),inset 0 -5px 0 var(--okc)}
+.xl-grid td.x-sel.x-bad{box-shadow:inset 0 0 0 2px var(--ink),inset 0 -5px 0 var(--red)}
+.xl-panel{padding:14px 12px 18px;display:grid;gap:12px}
+.xl-card{padding:14px 16px;border:1px solid var(--line);border-radius:calc(12px*var(--rk));background:var(--paper)}
+.xl-card h3{margin:0 0 6px;font-size:15.5px;line-height:1.4}
+.xl-card p{margin:0;font-size:14.5px;line-height:1.65}
+.xl-card p+p{margin-top:6px}
+.xl-card.res.ok{border-color:var(--okc)}
+.xl-card.res.no{border-color:var(--red)}
+.xl-rh{display:flex;align-items:center;gap:8px;font-size:17px;font-weight:700}
+.xl-rh .ic{width:22px;height:22px}
+.xl-card.res.ok .xl-rh{color:var(--okc)}
+.xl-card.res.no .xl-rh{color:var(--redt)}
+.xl-ck{margin:8px 0 0;padding:0;list-style:none;display:grid;gap:4px;font-size:14px}
+.xl-ck li{display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+.xl-ck .ic{flex:none;width:17px;height:17px;margin-top:2px}
+.xl-ck li.y .ic{color:var(--okc)}.xl-ck li.x .ic{color:var(--red)}
+.xl-code{display:block;margin:6px 0 0;padding:9px 11px;border-radius:calc(8px*var(--rk));background:var(--soft);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.55;word-break:break-all;white-space:pre-wrap}
+.xl-code small{display:block;margin-bottom:2px;font-family:var(--sans,inherit);font-size:12px;color:var(--mute)}
+.xl-steps{margin:6px 0 0;padding:0 0 0 20px;display:grid;gap:8px;font-size:14.5px;line-height:1.6}
+.xl-steps small{display:block;font-size:13.5px;color:var(--ink2)}
+.xl-traps{margin:6px 0 0;padding:0 0 0 18px;font-size:14.5px;line-height:1.6}
+.xl-foot{flex:none;border-top:1px solid var(--line);background:var(--bg);padding-bottom:env(safe-area-inset-bottom)}
+.xl-act{display:flex;gap:8px;padding:10px 12px}
+.xl-act .btn{flex:1 1 0;min-width:0;padding:0 8px}
+.xl-kb{padding:6px 6px 8px;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.xk-chips{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:none}
+.xk-chips::-webkit-scrollbar{display:none}
+.xk-c{flex:none;min-height:36px;padding:0 11px;border:1px solid var(--line);border-radius:calc(9px*var(--rk));background:var(--paper);color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;font-weight:600;cursor:pointer;white-space:pre}
+.xk-c.fx{background:var(--ink);border-color:var(--ink);color:var(--onfill);font-family:inherit}
+.xk-c.tx{font-weight:500}
+.xk-g{display:grid;grid-template-columns:repeat(6,1fr);gap:5px}
+.xk{min-height:42px;border:1px solid var(--line);border-radius:calc(9px*var(--rk));background:var(--paper);color:var(--ink);font-size:18px;font-weight:500;font-variant-numeric:tabular-nums;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.xk:active,.xk-c:active{background:var(--soft)}
+.xk.op{background:var(--soft)}
+.xk.fn{background:var(--soft);font-size:15px;font-weight:600}
+.xk.go{background:var(--ink);border-color:var(--ink);color:var(--onfill);font-weight:700}
+.xk-x{display:flex;gap:5px;margin-top:5px}
+.xk-x .xk{flex:1 1 0;min-height:36px;font-size:13.5px;white-space:nowrap}
+.xl-nat{display:flex;gap:6px;flex-wrap:wrap;padding:8px 10px}
+.xl-nat .xk-chips{flex:1 1 100%;padding-bottom:2px}
+.xl-nat .btn{flex:1 1 0}
+@media (max-height:640px){.xk{min-height:38px}.xk-c{min-height:32px}.xk-x .xk{min-height:32px}.xl-grid td{height:30px}}
+@media (min-width:700px){.xl{border-left:1px solid var(--line);border-right:1px solid var(--line)}.xk{min-height:40px}}
+/* 함수 고르기 */
+.xf-q{width:100%;margin-top:10px}
+.xf-cats{display:flex;gap:6px;overflow-x:auto;margin:10px 0 4px;padding-bottom:4px;scrollbar-width:none}
+.xf-cats::-webkit-scrollbar{display:none}
+.xf-cats .chip{flex:none;min-height:36px;padding:0 12px;font-size:13.5px}
+.xl-txl{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:15px;line-height:1.4;cursor:pointer}
+.xl-txl input{flex:none;margin-top:1px}
+.xl-txl small{display:block;margin-top:2px;font-size:13px;color:var(--mute)}
+.xf-list{display:grid;max-height:52vh;overflow-y:auto;margin-top:6px;border-top:1px solid var(--line)}
+.xf-r{display:block;width:100%;padding:9px 4px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);text-align:left;cursor:pointer}
+.xf-r b{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14.5px}
+.xf-r span{margin-left:6px;font-size:12.5px;color:var(--mute)}
+.xf-r small{display:block;margin-top:2px;font-size:13.5px;line-height:1.45;color:var(--ink2)}
+.xf-r:hover{background:var(--soft)}
+/* 목록 */
+.xll-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:20px}
+.xll-n{display:block;font-size:30px;line-height:1.1;font-variant-numeric:tabular-nums}
+.xll-n small{font-size:16px;font-weight:600;color:var(--mute)}
+.xll-g .small{margin-top:4px}
+.xll-list{margin-top:12px;padding:4px 6px}
+.xll-row{grid-template-columns:minmax(0,1fr) auto 3.4em}
+.xll-t b{display:block;font-size:15px;line-height:1.4}
+.xll-t small{display:block;font-size:12.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xll-lv{font-size:9px;letter-spacing:2px;color:var(--ink2)}
+.xll-row .mv{display:grid;justify-items:end;font-size:12.5px;color:var(--mute)}
+.xll-row .mv .ic{width:20px;height:20px;color:var(--okc,#1f7a3d)}
+.xll-scope{margin:8px 0 0;padding:0 0 0 18px;font-size:14.5px;line-height:1.65;color:var(--ink2)}
+.xl-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.xl-entry p{margin:4px 0 0}
+/*XLCSS-END*/
 </style>
 </head>
 <body data-route="home">
@@ -949,11 +1119,15 @@ const RCPACE={'Part 5':20,'Part 6':30,'Part 7 단일 지문':60,'Part 7 복수 �
 const RCW={'Part 5':30,'Part 6':16,'Part 7 단일 지문':29,'Part 7 복수 지문':25}; // 실제 RC 문항 수
 const NCSA=['의사소통능력','수리능력','문제해결능력','안전'];
 const NCSPACE={'의사소통능력':90,'수리능력':90,'문제해결능력':90,'안전':90}; // 문항당 권장 초: 60분 ÷ 40문항 // LH 필기: 의사소통·수리·문제해결 중심 + 기술직 공통 '안전'
+const APS=['건축시공','공정관리','품질관리','건축적산','건축구조']; // 건축기사 실기(필답형): 분야 묶음
 const EXAMS={
- arch:{id:'arch',name:'건축기사',full:'건축기사 필기',org:'한국산업인력공단',choices:4,ls:'과목',lt:'단원',
+ arch:{id:'arch',name:'건축 필기',full:'건축기사 필기',org:'한국산업인력공단',choices:4,ls:'과목',lt:'단원',
   tracks:[
    {id:'2027',name:'2027년~ 기준',desc:'4과목 · 80문항 · 2시간',minutes:120,per:20,subjects:['건축계획 및 설계','건축시공','건축구조','건축설비'],map:{'건축계획':'건축계획 및 설계','건축관계법규':'건축계획 및 설계'},pass:{type:'avg',min:40,avg:60}},
    {id:'2025',name:'2026년까지 기준',desc:'5과목 · 100문항 · 2시간 30분',minutes:150,per:20,subjects:['건축계획','건축시공','건축구조','건축설비','건축관계법규'],pass:{type:'avg',min:40,avg:60}}]},
+ archp:{id:'archp',name:'건축 실기',full:'건축기사 실기',org:'한국산업인력공단 필답형 형식 · 합격노트 자체 제작',choices:0,ls:'분야',lt:'단원',open:true,
+  tracks:[
+   {id:'p',name:'실기',desc:'필답형 · 3시간 · 60점 이상 합격',minutes:180,total:26,quota:[14,3,2,3,4],subjects:APS,pass:{type:'grade',grades:[[60,'합격권']]}}]},
  history:{id:'history',name:'한국사',full:'한국사능력검정시험',org:'국사편찬위원회',choices:5,ls:'시대',lt:'분야',ordered:true,
   tracks:[
    {id:'adv',name:'심화',desc:'50문항 · 80분 · 1~3급',minutes:80,total:50,quota:ERAQ,subjects:ERAS,pass:{type:'grade',grades:[[80,'1급'],[70,'2급'],[60,'3급']]}},
@@ -984,7 +1158,8 @@ const inTr=(q,tr)=>tr.subjects.includes(subjOf(q,tr))&&(!tr.tiers||tr.tiers.incl
 const totalQ=tr=>tr.total||tr.per*tr.subjects.length;
 const spq=tr=>tr.minutes*60/totalQ(tr);
 const CL=(ex,n)=>EXAMS[ex]&&EXAMS[ex].abc?'ABCDE'[n-1]:String(n); // 보기 번호 표시 (토익 RC는 A~D)
-const ANS=q=>EXAMS[q.exam]&&EXAMS[q.exam].abc?'('+CL(q.exam,q.answer)+')':CIRC[q.answer-1];
+const ANS=q=>q.kind?'':EXAMS[q.exam]&&EXAMS[q.exam].abc?'('+CL(q.exam,q.answer)+')':CIRC[q.answer-1];
+const goalOf=(ex=U.settings.exam)=>EXAMS[ex].open?Math.max(5,Math.round(U.settings.goal/3)):U.settings.goal; // 필답형은 한 문제에 7분쯤 걸려서 하루 목표의 3분의 1만 내요
 const estSec=(ex,ids,tr=TR(ex))=>EXAMS[ex].rc?sum(ids.map(id=>{const q=BANK.all.get(id); return (q&&tr.pace&&tr.pace[subjOf(q,tr)])||spq(tr)})):spq(tr)*ids.length;
 const REASONS={c:'개념 부족',f:'기억 안 남',m:'실수'};
 const REASONS_V={c:'처음 본 단어',f:'기억 안 남',m:'비슷한 단어와 헷갈림'};
@@ -994,7 +1169,7 @@ const REASON_TIP_V={c:'처음 본 단어가 많아요. 하루 새 단어 수를 
 
 /* ---------- user state & storage ---------- */
 const LS='hapnote.v1', NCH=8, BYTES=180000;
-const BLANK=()=>({v:1,settings:{exam:'arch',track:{arch:'2027',history:'adv',comp:'1',toeic:'750',rc:'g80',ncs:'tech'},examDate:{},goal:30,unsureNote:true,demoOff:{},mode:'study',updatedAt:0},q:{arch:{},history:{},comp:{},toeic:{},rc:{},ncs:{}},sessions:{arch:[],history:[],comp:[],toeic:[],rc:[],ncs:[]},active:null,banks:[],bankQ:{},ai:{},study:{u:{},k:{},kt:0}});
+const BLANK=()=>({v:1,settings:{exam:'arch',track:{arch:'2027',archp:'p',history:'adv',comp:'1',toeic:'750',rc:'g80',ncs:'tech'},examDate:{},goal:30,unsureNote:true,demoOff:{},mode:'study',updatedAt:0},q:{arch:{},archp:{},history:{},comp:{},toeic:{},rc:{},ncs:{}},sessions:{arch:[],archp:[],history:[],comp:[],toeic:[],rc:[],ncs:[]},active:null,banks:[],bankQ:{},ai:{},study:{u:{},k:{},kt:0}});
 let U=BLANK();
 function fixU(x){
  const b=BLANK(); if(!x||x.v!==1) return b;
@@ -1315,7 +1490,7 @@ function syncUI(){
 }
 
 /* ---------- question bank ---------- */
-const BANK={all:new Map(),ex:{arch:[],history:[],comp:[],toeic:[],rc:[],ncs:[]},base:[],ready:false,err:''};
+const BANK={all:new Map(),ex:{arch:[],archp:[],history:[],comp:[],toeic:[],rc:[],ncs:[]},base:[],ready:false,err:''};
 const isPic=q=>!!q.image&&q.choices.length===5&&q.choices.every((c,i)=>c===CIRC[i]); // 문제 전체가 그림 한 장인 문항(기출 팩)
 const SRC={official:'기출',restored:'복원',sample:'샘플',custom:'직접 추가',vocab:'토익 단어',made:'자체 제작'};
 function normFig(f){ // 문제에 붙는 그림: 워크시트·표·코드 (글자만 받아서 그려요)
@@ -1324,6 +1499,16 @@ function normFig(f){ // 문제에 붙는 그림: 워크시트·표·코드 (글�
  if(f.t==='sheet'){const o={t:'sheet',title,rows:rows(f.rows)}; if(/^[A-Z]$/.test(f.c0||'')) o.c0=f.c0; if(Number.isInteger(f.r0)&&f.r0>0&&f.r0<1000) o.r0=f.r0; if(Array.isArray(f.hi)) o.hi=f.hi.filter(x=>/^[A-Z]\d{1,3}$/.test(x)).slice(0,20); return o.rows.length?o:null}
  if(f.t==='grid'){const o={t:'grid',title,rows:rows(f.rows)}; if(Array.isArray(f.head)) o.head=f.head.slice(0,14).map(str); if(f.rh) o.rh=true; return o.rows.length?o:null}
  if(f.t==='code'&&typeof f.x==='string'&&f.x.trim()) return {t:'code',title,lang:typeof f.lang==='string'?f.lang.slice(0,12):'',x:f.x.slice(0,3000)};
+ if(f.t==='net'){ // 네트워크 공정표: 결합점 [이름, 가로칸, 세로칸, '빠른|늦은'] · 작업 [앞, 뒤, 이름, 일수, cp|d|dcp]
+  const nodes=(Array.isArray(f.nodes)?f.nodes:[]).slice(0,16).map(n=>Array.isArray(n)&&Number.isFinite(+n[1])&&Number.isFinite(+n[2])?[str(n[0]).slice(0,3),+n[1],+n[2],str(n[3]).slice(0,9)]:null).filter(Boolean), ids=new Set(nodes.map(n=>n[0]));
+  const acts=(Array.isArray(f.acts)?f.acts:[]).slice(0,30).map(a=>Array.isArray(a)&&ids.has(str(a[0]))&&ids.has(str(a[1]))?[str(a[0]),str(a[1]),str(a[2]).slice(0,6),str(a[3]).slice(0,5),/^(cp|d|dcp)$/.test(a[4])?a[4]:'']:null).filter(Boolean);
+  return nodes.length>1&&acts.length?{t:'net',title,nodes,acts}:null;
+ }
+ if(f.t==='beam'){ // 보 그림: 지점 [pin|roller|fixed, 위치, 이름] · 집중하중 [위치, 글] · 등분포하중 [시작, 끝, 글] · 치수
+  const L=+f.L; if(!(L>0)) return null; const inL=x=>Number.isFinite(+x)&&+x>=0&&+x<=L, arr=a=>Array.isArray(a)?a:[];
+  const o={t:'beam',title,L,sup:arr(f.sup).slice(0,4).filter(x=>Array.isArray(x)&&/^(pin|roller|fixed)$/.test(x[0])&&inL(x[1])).map(x=>[x[0],+x[1],str(x[2]).slice(0,3)]),P:arr(f.P).slice(0,5).filter(x=>Array.isArray(x)&&inL(x[0])).map(x=>[+x[0],str(x[1]).slice(0,14)]),w:arr(f.w).slice(0,3).filter(x=>Array.isArray(x)&&inL(x[0])&&inL(x[1])&&+x[1]>+x[0]).map(x=>[+x[0],+x[1],str(x[2]).slice(0,14)]),dims:arr(f.dims).slice(0,6).map(Number).filter(x=>x>0)};
+  return o.sup.length?o:null;
+ }
  if(f.t==='chart'){ // 막대·꺾은선 그래프(자료해석)
   const cats=Array.isArray(f.cats)?f.cats.slice(0,12).map(str):[];
   const series=(Array.isArray(f.series)?f.series:[]).slice(0,4).map(x=>({k:x&&x.k==='line'?'line':'bar',n:str(x&&x.n).slice(0,24),v:(Array.isArray(x&&x.v)?x.v:[]).map(Number)})).filter(x=>x.v.length===cats.length&&x.v.every(v=>Number.isFinite(v)&&v>=0));
@@ -1336,16 +1521,28 @@ function normFig(f){ // 문제에 붙는 그림: 워크시트·표·코드 (글�
 function normQ(r,defExam,bank){
  if(!r||typeof r!=='object'||Array.isArray(r)) return {err:'항목이 객체가 아니에요'};
  const exam=r.exam||defExam;
- if(!EXAMS[exam]) return {err:'exam 값은 arch, history, comp, toeic, rc, ncs 중 하나여야 해요'};
+ if(!EXAMS[exam]) return {err:'exam 값은 arch, archp, history, comp, toeic, rc, ncs 중 하나여야 해요'};
  const id=r.id!=null?String(r.id).trim():'';
  if(!id) return {err:'id가 비어 있어요'};
  const stem=typeof r.stem==='string'?r.stem.trim():'';
  if(!stem) return {err:'stem(문제 본문)이 비어 있어요'};
  if(!r.subject||typeof r.subject!=='string') return {err:'subject(과목·시대)가 비어 있어요'};
- if(!Array.isArray(r.choices)||r.choices.length<2||r.choices.length>5||r.choices.some(c=>typeof c!=='string'||!c.trim())) return {err:'choices는 2~5개의 글자 보기여야 해요'};
- const ans=Number(r.answer);
- if(!Number.isInteger(ans)||ans<1||ans>r.choices.length) return {err:'answer는 1부터 보기 개수 사이의 번호여야 해요'};
- const q={id,exam,source:SRC[r.source]&&r.source!=='vocab'&&(r.source!=='made'||bank==='base')?r.source:'custom',subject:r.subject.trim(),topic:(typeof r.topic==='string'&&r.topic.trim())||'기타',stem,choices:r.choices.map(c=>c.trim()),answer:ans,bank};
+ const kind=EXAMS[exam].open&&(r.kind==='self'||r.kind==='fill')?r.kind:''; let ans=0, extra=null;
+ if(kind==='self'){ // 서술·나열형: 모범 답안을 보고 채점 항목을 스스로 표시
+  const ck=Array.isArray(r.checks)?r.checks.filter(c=>typeof c==='string'&&c.trim()).map(c=>c.trim().slice(0,240)).slice(0,12):[];
+  if(typeof r.model!=='string'||!r.model.trim()||!ck.length) return {err:'서술형(kind: self)은 model(모범 답안)과 checks(채점 항목)가 있어야 해요'};
+  extra={kind,model:r.model.trim().slice(0,2400),checks:ck,need:Number.isInteger(+r.need)&&+r.need>=1&&+r.need<=ck.length?+r.need:ck.length};
+ } else if(kind==='fill'){ // 계산형: 숫자를 넣으면 허용 오차 안에서 자동 채점
+  const bl=(Array.isArray(r.blanks)?r.blanks:[]).slice(0,8).map(b=>b&&typeof b==='object'&&Number.isFinite(+b.a)?{label:String(b.label||'답').slice(0,40),unit:String(b.unit||'').slice(0,16),a:+b.a,tol:Number.isFinite(+b.tol)&&+b.tol>=0?+b.tol:Math.abs(+b.a)*0.005}:null).filter(Boolean);
+  if(!bl.length) return {err:'계산형(kind: fill)은 blanks([{label, unit, a, tol}])가 있어야 해요'};
+  extra={kind,blanks:bl};
+ } else {
+  if(!Array.isArray(r.choices)||r.choices.length<2||r.choices.length>5||r.choices.some(c=>typeof c!=='string'||!c.trim())) return {err:'choices는 2~5개의 글자 보기여야 해요'};
+  ans=Number(r.answer);
+  if(!Number.isInteger(ans)||ans<1||ans>r.choices.length) return {err:'answer는 1부터 보기 개수 사이의 번호여야 해요'};
+ }
+ const q={id,exam,source:SRC[r.source]&&r.source!=='vocab'&&(r.source!=='made'||bank==='base')?r.source:'custom',subject:r.subject.trim(),topic:(typeof r.topic==='string'&&r.topic.trim())||'기타',stem,choices:kind?[]:r.choices.map(c=>c.trim()),answer:ans,bank};
+ if(extra) Object.assign(q,extra);
  if(Array.isArray(r.tags)) q.tags=r.tags.filter(t=>typeof t==='string').slice(0,8);
  ['year','round','no'].forEach(f=>{if(r[f]!=null&&Number.isFinite(+r[f])) q[f]=+r[f]});
  q.points=Number.isFinite(+r.points)&&+r.points>0?+r.points:1;
@@ -1367,19 +1564,23 @@ function rebuild(){
  rematActive();
 }
 async function loadBase(){
+ // 파일을 한꺼번에 받기 시작해요. 하나씩 차례로 기다리면 시험·노트가 늘 때마다 첫 화면이 그만큼 늦어져요
+ const J=async f=>{const r=await fetch(f,{cache:'no-cache'}); if(!r.ok){const e=new Error('http '+r.status); e.status=r.status; throw e} return r.json()};
+ const hold=p=>p.then(v=>({v}),e=>({e})); // 실패도 값으로 받아 두고, 아래에서 예전 순서 그대로 처리해요
+ const pV=hold(J('data/toeic.json')), pR=hold(J('data/rc.json')), pC=Object.keys(COURSE_FILES).map(ex=>[ex,hold(J(COURSE_FILES[ex]))]);
  try{
-  const list=await (await fetch('data/banks.json',{cache:'no-cache'})).json();
+  const list=await J('data/banks.json');
+  const js=await Promise.all(list.map(f=>J(f.file)));
   const out=[];
-  for(const f of list){const j=await (await fetch(f.file,{cache:'no-cache'})).json(); (Array.isArray(j)?j:(j.questions||[])).forEach(r=>{const {q}=normQ(r,null,'base'); if(q) out.push(q)})}
+  js.forEach(j=>(Array.isArray(j)?j:(j.questions||[])).forEach(r=>{const {q}=normQ(r,null,'base'); if(q) out.push(q)}));
   BANK.base=out; BANK.err='';
  }catch(e){BANK.err='샘플 문제은행 파일을 불러오지 못했어요.'}
- try{const j=await (await fetch('data/toeic.json',{cache:'no-cache'})).json(); vocabInit(j); BANK.base=BANK.base.concat(VOC.qs)}
- catch(e){VOC.err='토익 단어 파일을 불러오지 못했어요.'}
- try{const j=await (await fetch('data/rc.json',{cache:'no-cache'})).json(); rcInit(j); BANK.base=BANK.base.concat(RC.qs)}
- catch(e){RC.err='토익 RC 문제 파일을 불러오지 못했어요.'}
- for(const ex in COURSE_FILES){
-  try{const r=await fetch(COURSE_FILES[ex],{cache:'no-cache'}); if(r.status===404) continue; studyInit(ex,await r.json())} // 파일이 아직 없는 과정은 조용히 건너뛰어요
-  catch(e){STUDYERR[ex]=EXAMS[ex].name+' 공부 자료 파일을 불러오지 못했어요.'}
+ {const r=await pV; try{if(r.e) throw r.e; vocabInit(r.v); BANK.base=BANK.base.concat(VOC.qs)}catch(e){VOC.err='토익 단어 파일을 불러오지 못했어요.'}}
+ {const r=await pR; try{if(r.e) throw r.e; rcInit(r.v); BANK.base=BANK.base.concat(RC.qs)}catch(e){RC.err='토익 RC 문제 파일을 불러오지 못했어요.'}}
+ for(const [ex,p] of pC){
+  const r=await p;
+  if(r.e){if(r.e.status!==404) STUDYERR[ex]=EXAMS[ex].name+' 공부 자료 파일을 불러오지 못했어요.'; continue} // 파일이 아직 없는 과정은 조용히 건너뛰어요
+  try{studyInit(ex,r.v)}catch(e){STUDYERR[ex]=EXAMS[ex].name+' 공부 자료 파일을 불러오지 못했어요.'}
  }
  BANK.ready=true; rebuild();
 }
@@ -1669,9 +1870,10 @@ function applyNote(st,ok,un,t){
  if(un){if(active) st.due=t+DAY; else if(U.settings.unsureNote){st.box=0;st.done=0;st.due=t+DAY} return}
  if(active){st.box+=1; if(st.box>=3){st.done=1;st.dt=t} else st.due=t+IV[st.box]*DAY}
 }
-function record(q,ch,ok,un,ms){
+function record(q,ch,ok,un,ms,fr){
  const qs=U.q[q.exam]; const st=qs[q.id]||(qs[q.id]={a:[]}); st.a=st.a||[];
- const t=Date.now(); st.a.push([t,ch||0,ok?1:0,un?1:0,Math.round(ms||0)]);
+ const t=Date.now(), rec=[t,ch||0,ok?1:0,un?1:0,Math.round(ms||0)]; if(fr>0&&fr<1){rec[5]=0; rec[6]=Math.round(fr*100)} // 필답형 부분 점수
+ st.a.push(rec);
  if(st.a.length>12) st.a.splice(0,st.a.length-12);
  applyNote(st,ok,un,t); st.m=t;
  persist([qKey(q.exam,q.id)]);
@@ -1680,7 +1882,7 @@ function record(q,ch,ok,un,ms){
 
 /* ---------- example history (shown only before the first real answer) ---------- */
 let DEMO={};
-const DSK={arch:{'건축계획':.84,'건축시공':.6,'건축구조':.22,'건축설비':.5,'건축관계법규':.74},history:{'선사·고조선·여러 나라':.86,'삼국·가야':.72,'남북국':.5,'고려':.6,'조선 전기':.7,'조선 후기':.4,'근대(개항기)':.62,'일제 강점기':.55,'현대':.32},comp:{'컴퓨터 일반':.8,'스프레드시트 일반':.6,'데이터베이스 일반':.22}};
+const DSK={arch:{'건축계획':.84,'건축시공':.6,'건축구조':.22,'건축설비':.5,'건축관계법규':.74},history:{'선사·고조선·여러 나라':.86,'삼국·가야':.72,'남북국':.5,'고려':.6,'조선 전기':.7,'조선 후기':.4,'근대(개항기)':.62,'일제 강점기':.55,'현대':.32},comp:{'컴퓨터 일반':.8,'스프레드시트 일반':.6,'데이터베이스 일반':.22},archp:{'건축시공':.72,'공정관리':.55,'품질관리':.64,'건축적산':.42,'건축구조':.3}};
 function hasReal(ex){const qs=U.q[ex];for(const id in qs) if(qs[id].a&&qs[id].a.length) return true; return U.sessions[ex].length>0}
 function isDemo(ex=U.settings.exam){return !EXAMS[ex].vocab&&!U.settings.demoOff[ex]&&BANK.ready&&BANK.ex[ex].length>0&&!hasReal(ex)}
 function demo(ex){
@@ -1698,6 +1900,7 @@ function demo(ex){
    let ch=x.answer; if(!ok){ch=1+Math.floor(r()*x.choices.length); if(ch===x.answer) ch=ch%x.choices.length+1}
    const a=[t,ch,ok?1:0,un,Math.round(sp*(0.55+r()*0.9)*(ok?0.9:1.25))];
    if(!ok&&r()<.8) a[5]=['c','f','m'][Math.floor(r()*3)];
+   if(x.kind&&!ok&&r()<.6){a[5]=a[5]||0; a[6]=[25,33,50,67,75][Math.floor(r()*5)]}
    st.a.push(a); applyNote(st,ok,!!un,t); st.m=t;
   });
   q[x.id]=st;
@@ -1716,10 +1919,10 @@ function subjStats(ex,tr,since=0){
   const q=BANK.all.get(id); if(!q||q.exam!==ex) continue;
   const o=m[subjOf(q,tr)]; if(!o) continue;
   const at=(qs[id].a||[]).filter(a=>a[0]>=since); if(!at.length) continue;
-  const last=at[at.length-1]; o.n++; o.c+=last[2]; o.pt+=q.points||1; o.pe+=last[2]*(q.points||1);
+  const last=at[at.length-1]; o.n++; o.c+=last[2]; o.pt+=q.points||1; o.pe+=(last[6]!=null?last[6]/100:last[2])*(q.points||1);
   at.forEach(a=>{o.att++;o.ac+=a[2];if(a[4]){o.ms+=a[4];o.mn++}});
  }
- return tr.subjects.map(s=>{const o=m[s];o.score=o.n?Math.round(o.c/o.n*100):null;o.acc=o.att?o.ac/o.att:null;o.sec=o.mn?o.ms/o.mn/1000:null;return o});
+ return tr.subjects.map(s=>{const o=m[s];o.score=o.n?Math.round((EXAMS[ex].open&&o.pt?o.pe/o.pt:o.c/o.n)*100):null;o.acc=o.att?o.ac/o.att:null;o.sec=o.mn?o.ms/o.mn/1000:null;return o});
 }
 function topicStats(ex,tr,since=0){
  const qs=QS(ex), m=new Map();
@@ -1823,7 +2026,7 @@ function topicPriority(ex,tr){
 function lastAt(st){return st&&st.a&&st.a.length?st.a[st.a.length-1]:null}
 function buildPlan(ex=U.settings.exam){
  if(EXAMS[ex].rc) return rcPlan(ex);
- const tr=TR(ex), qs=QS(ex), pool=POOL(ex,tr), now=Date.now(), goal=U.settings.goal, V=!!EXAMS[ex].vocab;
+ const tr=TR(ex), qs=QS(ex), pool=POOL(ex,tr), now=Date.now(), goal=goalOf(ex), V=!!EXAMS[ex].vocab;
  const R=rng(hash(ex+ymd(now))), used=new Set();
  const seen=pool.some(q=>lastAt(qs[q.id]));
  const due=pool.filter(q=>{const s=qs[q.id];return s&&s.box!=null&&!s.done&&s.due<=now}).sort((a,b)=>qs[a.id].due-qs[b.id].due).map(q=>q.id);
@@ -1889,6 +2092,7 @@ function uiReset(){Object.assign(UI,JSON.parse(UI0),{route:UI.route,arg:UI.arg})
 let SAMPLE=null, DL=null, OBS=[], AFTER=[], MODAL=false;
 const doneCount=s=>s.qids.filter(id=>{const a=s.ans[id];return a&&(s.mode==='study'?a.g:a.ch)}).length;
 function start(kind,title,ids,mode=U.settings.mode,force=null){
+ if(EXAMS[U.settings.exam].open) mode='study'; // 필답형은 한 문제씩 답을 견줘요
  ids=ids.filter(id=>BANK.all.has(id));
  if(!ids.length){toast('조건에 맞는 문제가 없어요');return}
  if(EXAMS[U.settings.exam].rc) ids=rcOrder(ids);
@@ -1911,11 +2115,12 @@ function summarize(s){
  s.qids.forEach(id=>{
   const q=BANK.all.get(id); if(!q) return; const a=s.ans[id]||{};
   if(s.mode==='study'&&!a.g) return;
-  const sb=subj[subjOf(q,tr)]||(subj[subjOf(q,tr)]={n:0,c:0,pt:0,pe:0,ms:0}); const ok=a.ok?1:0, p=q.points||1;
-  n++; c+=ok; pt+=p; pe+=ok*p; sb.n++; sb.c+=ok; sb.pt+=p; sb.pe+=ok*p; sb.ms+=a.ms||0; ms+=a.ms||0;
+  const sb=subj[subjOf(q,tr)]||(subj[subjOf(q,tr)]={n:0,c:0,pt:0,pe:0,ms:0}); const ok=a.ok?1:0, p=q.points||1, f=a.fr!=null?a.fr:ok;
+  n++; c+=ok; pt+=p; pe+=f*p; sb.n++; sb.c+=ok; sb.pt+=p; sb.pe+=f*p; sb.ms+=a.ms||0; ms+=a.ms||0;
   if(!ok) wrong.push(id); if(a.un) unsure.push(id);
  });
  const r={id:s.id,kind:s.kind,title:s.title,mode:s.mode,track:s.track,t0:s.t0,t1:Date.now(),el:s.el,limit:s.limit,total:s.qids.length,n,c,wrong,unsure,subj,ms};
+ if(EXAMS[s.exam].open){r.pt=pt; r.pe=+pe.toFixed(1)}
  if(tr.pass.type==='avg'){const sc=Object.entries(subj).filter(([,o])=>o.n).map(([k,o])=>[k,Math.round(o.c/o.n*100)]); r.scores=Object.fromEntries(sc); r.avg=sc.length?Math.round(sum(sc.map(x=>x[1]))/sc.length):0; r.ok=sc.length===tr.subjects.length&&sc.every(x=>x[1]>=tr.pass.min)&&r.avg>=tr.pass.avg}
  else if(tr.pass.type==='vocab'||tr.pass.type==='rc'){r.score=n?Math.round(c/n*100):0; r.grade=null; r.ok=r.score>=tr.pass.goal}
  else{r.score=pt?Math.round(pe/pt*100):0; const g=tr.pass.grades.find(x=>r.score>=x[0]); r.grade=g?g[1]:null; r.ok=!!g}
@@ -1923,7 +2128,7 @@ function summarize(s){
 }
 function finish(){
  const s=U.active; if(!s) return;
- if(s.mode==='exam') s.qids.forEach(id=>{const q=BANK.all.get(id); if(!q) return; const a=s.ans[id]||(s.ans[id]={ms:0}); a.g=1; a.ok=a.ch===q.answer?1:0; record(q,a.ch,!!a.ok,!!a.un||!a.ch,a.ms); vtally(q,a.ok)});
+ if(s.mode==='exam') s.qids.forEach(id=>{const q=BANK.all.get(id); if(!q) return; const a=s.ans[id]||(s.ans[id]={ms:0}); a.g=1; a.ok=!q.kind&&a.ch===q.answer?1:0; record(q,a.ch,!!a.ok,!!a.un||!a.ch,a.ms); vtally(q,a.ok)});
  const r=summarize(s);
  if(r.n){U.sessions[s.exam].push(r); if(U.sessions[s.exam].length>40) U.sessions[s.exam].shift(); UI.result=r.id}
  U.settings.exam=s.exam; U.active=null;
@@ -1951,7 +2156,7 @@ function qDetail(q,st,opts={}){
   ${q.passage?`<div class="passage">${psgHTML(q)}</div>`:''}
   ${figsHtml(q)}
   ${q.image?`<img class="qimg" src="${esc(q.image)}" alt="문제 자료">`:''}
-  <ol class="qd-ch">${q.choices.map((c,i)=>`<li class="${i+1===q.answer?'ans':''}${mine===i+1&&i+1!==q.answer?' mine':''}"><span class="cn">${CL(q.exam,i+1)}</span><span${q.rc?' lang="en"':''}>${isPic(q)?'':chHtml(c)}</span>${i+1===q.answer?'<span class="tag red">정답</span>':mine===i+1?'<span class="tag">내 답</span>':''}</li>`).join('')}</ol>
+  ${q.kind?openDetail(q):`<ol class="qd-ch">${q.choices.map((c,i)=>`<li class="${i+1===q.answer?'ans':''}${mine===i+1&&i+1!==q.answer?' mine':''}"><span class="cn">${CL(q.exam,i+1)}</span><span${q.rc?' lang="en"':''}>${isPic(q)?'':chHtml(c)}</span>${i+1===q.answer?'<span class="tag red">정답</span>':mine===i+1?'<span class="tag">내 답</span>':''}</li>`).join('')}</ol>`}
   <div class="exp">${q.explanation?nl(q.explanation):'<span class="small">해설이 없는 문제예요.</span>'}${q.rc&&q.rc.tr?`<p class="rctr"><b>해석</b>${esc(q.rc.tr)}</p>`:''}</div>
   ${aiBlock(q)}
   ${opts.memo===false?'':memoBlock(q,st)}
@@ -2127,11 +2332,12 @@ function vHome(){
   <div><h1 class="title">${E.full}</h1><p class="sub">${tr.name} · ${tr.desc}</p></div>
   <dl class="figs">
    <div><dt>시험까지</dt><dd>${dd==null?'<button class="linkbtn" data-act="go" data-r="bank">날짜 정하기</button>':dd>0?'D-'+dd:dd===0?'D-day':'<small>지났어요</small>'}</dd></div>
-   <div><dt>오늘 푼 문제</dt><dd>${today}<small> / ${U.settings.goal}</small></dd></div>
+   <div><dt>오늘 푼 문제</dt><dd>${today}<small> / ${goalOf(ex)}</small></dd></div>
    <div><dt>${tr.pass.type==='avg'?'예상 평균':tr.pass.type==='rc'?'예상 정답률':'예상 점수'}</dt><dd class="${pr.ok===false&&!pr.none?'red':''}">${predShort(pr)}</dd></div>
   </dl>
  </section>
- ${STUDY.ready&&STUDY.ex===ex?`<div class="strip"><p>${ex==='history'?'개념부터 잡고 싶다면 7일 완성 공부 노트로 시작하세요.':ex==='ncs'?'영역별 문제 유형과 푸는 순서는 공부 노트에 정리해 뒀어요.':'개념과 실기 순서는 공부 노트에 정리해 뒀어요.'} 끝낸 단원 ${STUDY.order.filter(suDone).length} / ${STUDY.order.length}</p><a class="btn line sm" href="#study">공부하러 가기</a></div>`:''}
+ ${STUDY.ready&&STUDY.ex===ex?`<div class="strip"><p>${ex==='history'?'개념부터 잡고 싶다면 7일 완성 공부 노트로 시작하세요.':ex==='ncs'?'영역별 문제 유형과 푸는 순서는 공부 노트에 정리해 뒀어요.':ex==='archp'?'공종별 핵심과 답안 쓰는 법은 공부 노트에 정리해 뒀어요.':'개념과 실기 순서는 공부 노트에 정리해 뒀어요.'} 끝낸 단원 ${STUDY.order.filter(suDone).length} / ${STUDY.order.length}</p><a class="btn line sm" href="#study">공부하러 가기</a></div>`:''}
+ ${ex==='comp'?xlStrip():''}
  <div class="home-grid">
   <section class="plan card" aria-labelledby="plan-h">
    <div class="plan-a"><h2 class="h2" id="plan-h">오늘의 학습</h2>
@@ -2181,7 +2387,7 @@ function strip(pr,tr){
   else txt=`모든 ${EXAMS[U.settings.exam].ls}이 40점을 넘고 평균 ${pr.avg}점이에요. 지금처럼 유지하세요.`;
  } else {
   if(!pr.grade){bad=true; txt=`예상 ${pr.score}점이라 ${pr.low}(${pr.need}점)까지 ${pr.need-pr.score}점이 모자라요.`}
-  else txt=`예상 ${pr.score}점으로 ${pr.grade} 수준이에요. 3점짜리 문항과 약한 시대를 챙기면 더 올라가요.`;
+  else txt=EXAMS[U.settings.exam].open?`예상 ${pr.score}점으로 ${pr.grade}이에요. 배점이 큰 계산 문제와 약한 분야를 챙기면 더 안전해져요.`:`예상 ${pr.score}점으로 ${pr.grade} 수준이에요. 3점짜리 문항과 약한 시대를 챙기면 더 올라가요.`;
  }
  return `<div class="strip${bad?' bad':''}"><p>${txt}</p><a class="btn line sm" href="#stats">분석 자세히 보기</a></div>`;
 }
@@ -2200,14 +2406,15 @@ function vPractice(){
  const f=k=>focusSet(k,ex).length;
  const card=(k,n,b,s)=>`<button class="cardbtn" data-act="focus" data-k="${k}" ${n?'':'disabled'}><span class="n${k==='mis'&&n?' red':''}">${n}</span><b>${b}</b><span>${s}</span></button>`;
  return `<div class="ptop"><div><h1 class="title">문제 풀기</h1><p class="sub">${E.full} · ${tr.name} · 문제은행 ${pool.length}문항${ex==='history'?' · <a class="linkbtn" href="#bank">문제은행 관리</a>':''}</p></div>
- <div class="modes" role="group" aria-label="풀이 방식"><button class="mode" data-act="mode" data-v="study" aria-pressed="${mode==='study'}"><b>학습 모드</b><span>한 문제씩 바로 채점하고 해설 보기</span></button><button class="mode" data-act="mode" data-v="exam" aria-pressed="${mode==='exam'}"><b>시험 모드</b><span>시간을 재고 끝나고 한 번에 채점</span></button></div></div>
+ ${E.open?'<p class="small" style="max-width:34em">필답형은 한 문제씩 답을 쓰거나 떠올린 뒤 모범 답안과 견줘요. 계산 문제는 숫자를 넣으면 바로 채점돼요.</p>':`<div class="modes" role="group" aria-label="풀이 방식"><button class="mode" data-act="mode" data-v="study" aria-pressed="${mode==='study'}"><b>학습 모드</b><span>한 문제씩 바로 채점하고 해설 보기</span></button><button class="mode" data-act="mode" data-v="exam" aria-pressed="${mode==='exam'}"><b>시험 모드</b><span>시간을 재고 끝나고 한 번에 채점</span></button></div>`}</div>
  <div class="grid2 sec">
   <section class="card stack"><h2 class="h2">오늘의 학습</h2><p class="sub">${plan.diag?`처음이라 ${E.ls}마다 고르게 ${plan.ids.length}문제를 풀어 실력을 진단해요.`:`복습 ${plan.review.length} · 약점 ${plan.weak.length} · 새 문제 ${plan.fresh.length}를 섞어 ${plan.ids.length}문제를 냈어요.`}</p><button class="btn" data-act="plan" ${plan.ids.length?'':'disabled'}>${ico('play','fill')}${plan.ids.length}문제 시작</button></section>
-  ${E.rc?rcMockCard(ex):`<section class="card stack"><h2 class="h2">실전 모의고사</h2><p class="sub">${tr.desc} 구성으로 시간을 재며 풀어요.${mockN<full?` 지금 문제은행으로는 ${mockN}문항만 낼 수 있어 시간도 비율대로 ${mockMin}분이에요.`:''}</p><button class="btn" data-act="mock" ${mockN?'':'disabled'}>${ico('clock')}${mockN}문항 · ${mockMin}분 시작</button></section>`}
+  ${E.open?`<section class="card stack"><h2 class="h2">실전 구성 세트</h2><p class="sub">분야별 문항 수를 실제 시험에 가깝게 맞춘 ${mockN}문항이에요. 한 문제씩 답을 견주고, 끝나면 배점과 부분 점수를 반영해 100점으로 환산해 줘요. 실제 시험 시간은 3시간이에요.</p><button class="btn" data-act="mock" ${mockN?'':'disabled'}>${ico('clock')}${mockN}문항 시작</button></section>`:E.rc?rcMockCard(ex):`<section class="card stack"><h2 class="h2">실전 모의고사</h2><p class="sub">${tr.desc} 구성으로 시간을 재며 풀어요.${mockN<full?` 지금 문제은행으로는 ${mockN}문항만 낼 수 있어 시간도 비율대로 ${mockMin}분이에요.`:''}</p><button class="btn" data-act="mock" ${mockN?'':'disabled'}>${ico('clock')}${mockN}문항 · ${mockMin}분 시작</button></section>`}
  </div>
+ ${ex==='comp'?xlEntry():''}
  <section class="sec" aria-labelledby="r-h"><div class="sec-h"><h2 class="h2" id="r-h">${E.rc?'실전 세트':'기출 회차'}</h2><span class="small">${rs.length?rs.length+(E.rc?'세트':'개 회차'):''}</span></div>
  ${E.rc?`<p class="small" style="margin:-4px 0 12px">ETS가 공개한 시험 형식에 맞춰 합격노트가 직접 만든 문제예요. 실제 기출은 아니에요. 실전 RC는 101~200번 한 회분이에요.</p>`:''}
- ${rs.length?`<div class="rounds">${rs.map(r=>{const dn=E.rc?r.ids.filter(id=>lastAt(qs[id])).length:0; return `<button class="cardbtn" style="min-height:80px" data-act="round" data-k="${esc(r.k)}"><b>${esc(r.title)}</b><span>${r.ids.length}문항${E.rc?` · ${Math.round(estSec(ex,r.ids,tr)/60)}분${dn?` · ${dn}문항 풀었어요`:''}`:''}</span></button>`}).join('')}</div>`:(ex==='ncs'?emptyBox('LH 필기 문제는 공개되지 않아요','지금은 합격노트가 LH 필기 형식에 맞춰 직접 만든 문제만 있어요. 직접 정리한 복원 문제가 있다면 JSON으로 가져와 회차별로 풀 수 있어요.','<a class="btn line sm" href="#bank">문제 가져오기</a>'):emptyBox('아직 들어 있는 기출이 없어요','지금은 합격노트가 직접 만든 문제만 있어요. 가지고 있는 기출을 JSON으로 가져오면 회차별로 여기에 정리돼요.','<a class="btn line sm" href="#bank">문제 가져오기</a>'))}
+ ${rs.length?`<div class="rounds">${rs.map(r=>{const dn=E.rc?r.ids.filter(id=>lastAt(qs[id])).length:0; return `<button class="cardbtn" style="min-height:80px" data-act="round" data-k="${esc(r.k)}"><b>${esc(r.title)}</b><span>${r.ids.length}문항${E.rc?` · ${Math.round(estSec(ex,r.ids,tr)/60)}분${dn?` · ${dn}문항 풀었어요`:''}`:''}</span></button>`}).join('')}</div>`:(ex==='archp'?emptyBox('실기 문제는 공개되지 않아요','지금은 합격노트가 필답형 형식에 맞춰 직접 만든 문제만 있어요. 직접 정리한 복원 문제가 있다면 JSON으로 가져와 회차별로 풀 수 있어요.','<a class="btn line sm" href="#bank">문제 가져오기</a>'):ex==='ncs'?emptyBox('LH 필기 문제는 공개되지 않아요','지금은 합격노트가 LH 필기 형식에 맞춰 직접 만든 문제만 있어요. 직접 정리한 복원 문제가 있다면 JSON으로 가져와 회차별로 풀 수 있어요.','<a class="btn line sm" href="#bank">문제 가져오기</a>'):emptyBox('아직 들어 있는 기출이 없어요','지금은 합격노트가 직접 만든 문제만 있어요. 가지고 있는 기출을 JSON으로 가져오면 회차별로 여기에 정리돼요.','<a class="btn line sm" href="#bank">문제 가져오기</a>'))}
  </section>
  <section class="sec card" aria-labelledby="c-h"><h2 class="h2" id="c-h">${E.ls}·${E.lt} 골라 풀기</h2>
   <div class="fields" style="margin-top:16px">
@@ -2226,9 +2433,9 @@ function vPractice(){
    <li><b>읽기보다 풀기</b><span>개념서를 다시 읽는 것보다 문제로 떠올려 보는 쪽이 오래 남아요(인출 연습). 그래서 모든 학습이 문제 풀이에서 시작해요.</span></li>
    <li><b>틀린 문제는 1·3·7일 뒤에 다시</b><span>오답은 간격을 두고 돌아오고, 세 번 연속 확실하게 맞혀야 오답노트를 졸업해요(간격 반복).</span></li>
    <li><b>맞혀도 헷갈렸다면 다시</b><span>채점 전에 '확실해요/헷갈려요'를 고르게 해서 찍어서 맞힌 문제와, 확신했는데 틀린 오개념을 따로 잡아요.</span></li>
-   ${E.id==='ncs'?`<li><b>약한 유형부터, 과락선은 넉넉히</b><span>NCS는 전체 점수가 만점의 40% 미만이면 과락이에요. 정답률이 낮은 유형을 먼저 끌어올려 과락선을 넉넉히 넘긴 뒤, 목표 정답률까지 올려요.</span></li>`:`<li><b>과락 과목부터, 그다음 평균</b><span>40점 아래 ${josa(E.ls,'을/를')} 먼저 끌어올리고, 그다음 점수가 잘 오르는 ${josa(E.ls,'으로/로')} 평균을 맞춰요. 한국사는 배점 높은 문항과 약한 시대를 먼저 봐요.</span></li>`}
+   ${E.open?`<li><b>배점 큰 약점부터</b><span>실기는 과목별 과락 없이 전체 60점 이상이면 합격이에요. 득점률이 낮은 분야 가운데 배점이 큰 것부터 끌어올려요. 계산 문제는 풀이 과정과 단위까지 써야 점수가 나와요.</span></li>`:E.id==='ncs'?`<li><b>약한 유형부터, 과락선은 넉넉히</b><span>NCS는 전체 점수가 만점의 40% 미만이면 과락이에요. 정답률이 낮은 유형을 먼저 끌어올려 과락선을 넉넉히 넘긴 뒤, 목표 정답률까지 올려요.</span></li>`:`<li><b>과락 과목부터, 그다음 평균</b><span>40점 아래 ${josa(E.ls,'을/를')} 먼저 끌어올리고, 그다음 점수가 잘 오르는 ${josa(E.ls,'으로/로')} 평균을 맞춰요. 한국사는 배점 높은 문항과 약한 시대를 먼저 봐요.</span></li>`}
    <li><b>섞어서 풀기</b><span>하루 학습은 ${josa(E.ls,'을/를')} 섞어 내요. 실제 시험처럼 주제가 바뀌어도 바로 떠올리는 연습이 돼요(교차 학습).</span></li>
-   <li><b>시험 2주 전부터는 실전</b><span>시험 모드로 시간을 재며 모의고사를 보고, 문항당 풀이 시간을 시험 페이스에 맞춰요.</span></li>
+   ${E.open?'<li><b>시험 2주 전부터는 손으로</b><span>실전 구성 세트를 종이에 손으로 써서 풀어 보세요. 아는 것과 쓸 수 있는 것은 달라요. 3시간 안에 끝나는지도 함께 재요.</span></li>':'<li><b>시험 2주 전부터는 실전</b><span>시험 모드로 시간을 재며 모의고사를 보고, 문항당 풀이 시간을 시험 페이스에 맞춰요.</span></li>'}
   </ul>`}
  </section>`;
 }
@@ -2266,6 +2473,7 @@ function vQuiz(){
   <button class="iconbtn sheet-btn" data-act="sheet" aria-label="답안지 보기">${ico('sheet')}</button>
   ${study?'':'<button class="btn red sm" data-act="submit">제출</button>'}
  </div></div>`;
+ if(!q&&!BANK.ready) return '<div class="quiz"><p class="small" style="padding:32px 20px;text-align:center">문제은행을 불러오는 중이에요…</p></div>'; // 새로 고친 직후: 아직 읽는 중인데 '없는 문제'라고 하면 안 돼요
  if(!q) return bar+`<div class="quiz"><div class="paper">${emptyBox('이 문제를 찾을 수 없어요','문제은행에서 지워진 문제예요.','<button class="btn line sm" data-act="next">다음 문제</button>')}</div></div>`;
  const a=s.ans[id]||{}, graded=study&&a.g, st=U.q[q.exam][id];
  const pic=isPic(q);
@@ -2277,6 +2485,7 @@ function vQuiz(){
  let acts='';
  if(study){
   acts=graded?`<button class="btn big" data-act="next" id="nextbtn">${s.i<s.qids.length-1?'다음 문제':'결과 보기'}</button>`
+  :q.kind?openActs(q,a)
   :`<p class="qhint">고른 답에 얼마나 확신하나요? 누르면 바로 채점돼요. (키보드: ${E.abc?'A~D나 ':''}숫자로 고르고 Enter, 헷갈리면 H)</p><button class="btn" data-act="grade" data-u="0" ${a.ch?'':'disabled'}>${ico('check')}확실해요</button><button class="btn line" data-act="grade" data-u="1" ${a.ch?'':'disabled'}>헷갈려요</button><button class="btn line" data-act="next" aria-label="건너뛰기" style="flex:0 1 auto">건너뛰기</button>`;
  } else {
   acts=`<button class="btn line" data-act="prev" ${s.i?'':'disabled'}>이전</button><button class="btn ${a.un?'':'line'}" data-act="flag" aria-pressed="${!!a.un}">${ico('flag')}헷갈림</button>${s.i<s.qids.length-1?'<button class="btn" data-act="next">다음</button>':'<button class="btn red" data-act="submit">제출하기</button>'}`;
@@ -2284,7 +2493,7 @@ function vQuiz(){
  const fb=graded?feedback(q,a,st):'';
  return bar+`<div class="quiz">
   <article class="paper${q.rc?' rcq':''}" aria-labelledby="qstem">
-   <div class="qmeta"><span class="qno">${s.i+1}.</span><span class="tag">${esc(subjOf(q,tr))} › ${esc(q.topic)}</span>${q.v?`<span class="tag">${VT[q.vt]||''}</span><span class="tag${q.v.tier===3?' red':''}">${TIERL[q.v.tier]}</span>`:`${s.exam==='history'?`<span class="tag">${q.points}점</span>`:''}<span class="tag ${q.source==='sample'||q.source==='made'?'':'red'}">${esc(srcLabel(q))}</span>`}<button class="star" data-act="star" data-q="${esc(id)}" aria-pressed="${!!(st&&st.star)}" aria-label="북마크">${ico('star',st&&st.star?'fill':'')}</button></div>
+   <div class="qmeta"><span class="qno">${s.i+1}.</span><span class="tag">${esc(subjOf(q,tr))} › ${esc(q.topic)}</span>${q.v?`<span class="tag">${VT[q.vt]||''}</span><span class="tag${q.v.tier===3?' red':''}">${TIERL[q.v.tier]}</span>`:`${s.exam==='history'||q.kind?`<span class="tag">${q.points}점</span>`:''}${q.kind?`<span class="tag">${q.kind==='fill'?'계산':'서술'}</span>`:''}<span class="tag ${q.source==='sample'||q.source==='made'?'':'red'}">${esc(srcLabel(q))}</span>`}<button class="star" data-act="star" data-q="${esc(id)}" aria-pressed="${!!(st&&st.star)}" aria-label="북마크">${ico('star',st&&st.star?'fill':'')}</button></div>
    ${q.rc?`<div class="rcsplit${q.rc.pid?' two':''}">${q.rc.pid?`<div class="rcl">${rcPassage(q,s,rcKoOK(q,s))}</div>`:''}<div class="rcr">${rcStem(q,s)}
    <div class="choices" role="radiogroup" aria-labelledby="qstem">${choices}</div>
    ${fb}
@@ -2292,17 +2501,41 @@ function vQuiz(){
    ${q.passage?`<div class="passage">${psgHTML(q)}</div>`:''}
    ${figsHtml(q)}
    ${q.image?(pic?`<button class="qzoom" data-act="zoom" data-q="${esc(id)}" aria-label="문제 그림 크게 보기"><img class="qimg" src="${esc(q.image)}" alt="${esc(q.stem)} 문제지 그림"></button>`:`<img class="qimg" src="${esc(q.image)}" alt="문제 자료">`):''}
-   <div class="choices${pic?' pic':''}" role="radiogroup" aria-labelledby="qstem">${choices}</div>
+   ${q.kind?openHtml(q,a,graded):`<div class="choices${pic?' pic':''}" role="radiogroup" aria-labelledby="qstem">${choices}</div>`}
    ${fb}
    <div class="qact">${acts}</div>`}
   </article>
   <aside class="side" aria-label="답안지">${sheet(s)}</aside>
  </div>`;
 }
+const exLabel=n=>{const i=n.indexOf(' '); return i<0?esc(n):`<small>${esc(n.slice(0,i))}</small> ${esc(n.slice(i+1))}`}; // 좁은 화면에서는 '건축 / 필기'처럼 두 줄로
+const fmtNum=v=>(+v).toLocaleString('ko-KR',{maximumFractionDigits:4});
+const ptsOf=(f,p)=>+((f||0)*(p||1)).toFixed(1);
+const numOf=v=>{const t=String(v==null?'':v).replace(/[,\s]/g,''); return /^[-+]?(\d+\.?\d*|\.\d+)$/.test(t)?parseFloat(t):NaN};
+const fillCheck=(q,vals)=>q.blanks.map((b,i)=>{const v=numOf(vals[i]); return Number.isFinite(v)&&Math.abs(v-b.a)<=b.tol+1e-9});
+const fillOn=a=>(a.vals||[]).some(v=>v!=null&&String(v).trim()!=='');
+function openHtml(q,a,graded){ // 필답형 답 칸: 계산형은 숫자 입력, 서술형은 써 보고 모범 답안과 견주기
+ if(q.kind==='fill'){
+  const res=graded?fillCheck(q,a.vals||[]):null;
+  return `<div class="oa" role="group" aria-label="답 입력">${q.blanks.map((b,i)=>{const v=(a.vals||[])[i]||'', ok=res&&res[i];
+   return `<label class="oa-row${graded?(ok?' ok':' bad'):''}"><span class="oa-l">${esc(b.label)}</span><span class="oa-in"><input class="oa-i" type="text" inputmode="decimal" autocomplete="off" enterkeyhint="done" data-oa="${i}" value="${esc(v)}" ${graded?'disabled':''} aria-label="${esc(b.label)}${b.unit?' ('+esc(b.unit)+')':''}"><span class="oa-u">${esc(b.unit)}</span></span>${graded?`<span class="oa-r">${ok?ico('check')+'맞았어요':ico('x')+'정답 '+fmtNum(b.a)+(b.unit?' '+esc(b.unit):'')}</span>`:''}</label>`}).join('')}</div>`;
+ }
+ const rv=a.rv||graded, tk=a.tk||[], part=q.need<q.checks.length;
+ return `<div class="oa"><label class="oa-tl" for="oa-tx">내 답 <small>써 보면 견주기 쉬워요. 머릿속으로만 떠올려도 돼요.</small></label><textarea id="oa-tx" class="oa-tx" rows="3" data-oatx="1" ${graded?'readonly':''} placeholder="${part?q.need+'가지를 떠올려 보세요':'핵심 낱말부터 떠올려 보세요'}">${esc(a.tx||'')}</textarea>
+  ${rv?`<div class="oa-model"><h3>모범 답안</h3><p>${nl(q.model)}</p></div>
+  <div class="oa-ck" role="group" aria-label="채점 항목"><p class="oa-ckh">${graded?'채점 항목':'내 답에 들어간 항목을 눌러 표시하세요'}<small>${part?`${q.checks.length}개 가운데 ${q.need}개를 쓰면 만점이에요`:q.need>1?`${q.need}개를 모두 써야 만점이에요`:'이 내용이 들어가야 해요'}</small></p>${q.checks.map((c,i)=>`<button class="oa-c" data-act="otick" data-i="${i}" aria-pressed="${!!tk[i]}" ${graded?'disabled':''}><span class="oa-box" aria-hidden="true">${tk[i]?ico('check'):''}</span><span>${nl(c)}</span></button>`).join('')}</div>`:''}</div>`;
+}
+function openActs(q,a){
+ const skip='<button class="btn line" data-act="next" aria-label="건너뛰기" style="flex:0 1 auto">건너뛰기</button>';
+ if(q.kind==='fill'){const on=fillOn(a); return `<p class="qhint">답을 숫자로 넣고, 얼마나 확신하는지 누르면 바로 채점돼요. 단위는 칸 옆에 있어요.</p><button class="btn" data-act="grade" data-u="0" ${on?'':'disabled'}>${ico('check')}확실해요</button><button class="btn line" data-act="grade" data-u="1" ${on?'':'disabled'}>헷갈려요</button>${skip}`}
+ if(!a.rv) return `<p class="qhint">실제 시험은 손으로 쓰는 필답형이에요. 답을 떠올리거나 써 본 뒤에 모범 답안과 견줘요.</p><button class="btn" data-act="oreveal">모범 답안 보기</button>${skip}`;
+ return `<p class="qhint">내 답에 들어간 항목을 표시했나요? 얼마나 확신했는지 누르면 채점돼요.</p><button class="btn" data-act="grade" data-u="0">${ico('check')}확실했어요</button><button class="btn line" data-act="grade" data-u="1">헷갈렸어요</button>`;
+}
+const openDetail=q=>q.kind==='fill'?`<ul class="oa-list">${q.blanks.map(b=>`<li><b>${esc(b.label)}</b> ${fmtNum(b.a)}${b.unit?' '+esc(b.unit):''}</li>`).join('')}</ul>`:`<div class="oa-model"><h3>모범 답안</h3><p>${nl(q.model)}</p></div><ul class="oa-list">${q.checks.map(c=>`<li>${nl(c)}</li>`).join('')}</ul><p class="small">채점 항목 ${q.checks.length}개 가운데 ${q.need}개를 쓰면 만점이에요.</p>`;
 function feedback(q,a,st){
  const ok=!!a.ok, last=lastAt(st), r=last&&!last[2]?last[5]:null;
  return `<section class="fb" aria-live="polite">
-  <h2 class="fb-h ${ok?'':'bad'}" id="fbh" tabindex="-1"><span class="res">${ok?ico('check')+'정답이에요':ico('x')+'오답이에요'}</span><span class="tag ${ok?'':'red'}">정답 ${ANS(q)}</span>${a.un?`<span class="tag">${ok?'헷갈렸으니 오답노트에 담았어요':'헷갈림'}</span>`:ok?'':'<span class="tag">오답노트에 담았어요</span>'}</h2>
+  <h2 class="fb-h ${ok?'':'bad'}" id="fbh" tabindex="-1"><span class="res">${ok?ico('check')+(q.kind?'다 맞았어요':'정답이에요'):ico('x')+(q.kind&&a.fr>0?'부분 점수예요':'오답이에요')}</span>${q.kind?`<span class="tag ${ok?'':'red'}">${ptsOf(a.fr,q.points)} / ${q.points}점</span>`:`<span class="tag ${ok?'':'red'}">정답 ${ANS(q)}</span>`}${a.un?`<span class="tag">${ok?'헷갈렸으니 오답노트에 담았어요':'헷갈림'}</span>`:ok?'':'<span class="tag">오답노트에 담았어요</span>'}</h2>
   ${ok?'':`<div class="reasons" role="group" aria-label="틀린 이유"><span class="lab">틀린 이유</span>${Object.entries(RSN(q.exam)).map(([k,l])=>`<button class="chip" data-act="reason" data-v="${k}" data-q="${esc(q.id)}" aria-pressed="${r===k}">${l}</button>`).join('')}</div>`}
   ${q.v?`<div class="exp">${vCard(q.v,{q})}</div>`:`<div class="exp">${q.explanation?nl(q.explanation):'<span class="small">이 문제에는 해설이 없어요.</span>'}${q.rc&&q.rc.tr?`<p class="rctr"><b>해석</b>${esc(q.rc.tr)}</p>`:''}</div>`}
   ${aiBlock(q)}
@@ -2313,6 +2546,7 @@ function sheet(s,pre=''){
  const study=s.mode==='study';
  const rows=s.qids.map((id,i)=>{
   const q=BANK.all.get(id), a=s.ans[id]||{}, k=q?q.choices.length:4, gr=study&&a.g;
+  if(q&&q.kind) return `<div class="orow${i===s.i?' cur':''}" style="--k:1"><button class="onum${gr?(a.ok?' ok':' bad'):''}" data-act="jump" data-i="${i}" aria-label="${i+1}번 문제로 가기${gr?(a.ok?', 맞음':a.fr>0?', 부분 점수':', 틀림'):''}">${i+1}</button><span class="ob wide${gr||a.rv||fillOn(a)?' on':''}">${q.kind==='fill'?'계산':'서술'}${gr?' · '+ptsOf(a.fr,q.points)+'점':''}</span></div>`;
   const b=Array.from({length:k},(_,j)=>{const n=j+1,on=a.ch===n,L=CL(s.exam,n); return study?`<span class="ob${on?' on':''}">${L}</span>`:`<span class="ob${on?' on':''}" id="${pre}ob-${i}-${n}" data-act="mark" data-i="${i}" data-n="${n}" role="button" tabindex="0" aria-pressed="${on}" aria-label="${i+1}번 문제 ${L}${EXAMS[s.exam].abc?'':'번'}에 표기">${L}</span>`}).join('');
   return `<div class="orow${i===s.i?' cur':''}${a.un&&!gr?' flag':''}" style="--k:${k}"><button class="onum${gr?(a.ok?' ok':' bad'):''}" data-act="jump" data-i="${i}" aria-label="${i+1}번 문제로 가기${gr?(a.ok?', 맞음':', 틀림'):''}">${i+1}</button>${b}</div>`;
  }).join('');
@@ -2331,8 +2565,8 @@ function vResult(){
  else if(mockish&&tr.pass.type==='vocab'){big=`${r.score}<small>점</small>`; verdict=`<span class="verdict ${r.ok?'ok':'bad'}">${r.ok?ico('check')+'통과':ico('x')+'80% 미만'}</span>`}
  else if(mockish&&tr.pass.type==='rc'){big=`${r.c}<small> / ${r.n} 정답 · ${r.score}%</small>`; verdict=`<span class="verdict ${r.ok?'ok':'bad'}">${r.ok?ico('check')+'목표 '+tr.pass.goal+'% 달성':ico('x')+(tr.pass.cut&&r.score<tr.pass.cut?'과락선 '+tr.pass.cut+'% 미만':'목표 '+tr.pass.goal+'% 미만')}</span>`}
  else if(mockish){big=`${r.score}<small>점</small>`; verdict=`<span class="verdict ${r.ok?'ok':'bad'}">${r.grade?r.grade+' 수준':'미달'}</span>`}
- else big=`${r.c}<small> / ${r.n} 정답 · ${acc}%</small>`;
- const rows=Object.entries(r.subj).filter(([,o])=>o.n).map(([s,o])=>{const v=Math.round(o.c/o.n*100), low=tr.pass.type==='avg'&&mockish&&v<tr.pass.min; return `<div class="srow"><span class="nm">${esc(s)}</span><div class="trk" role="img" aria-label="${esc(s)} ${v}${tr.pass.type==='avg'?'점':'%'}"><i class="${low?'low':''}" style="width:${v}%"></i>${tr.pass.type==='avg'?`<b class="ref" style="left:${tr.pass.min}%"></b><b class="ref pass" style="left:${tr.pass.avg}%"></b>`:''}</div><span class="val">${o.c}/${o.n}</span>${low?`<span class="sflag">${ico('x')}과락 (${v}점)</span>`:''}</div>`}).join('');
+ else big=r.pt?`${r.pe}<small> / ${r.pt}점 · ${Math.round(r.pe/r.pt*100)}%</small>`:`${r.c}<small> / ${r.n} 정답 · ${acc}%</small>`;
+ const rows=Object.entries(r.subj).filter(([,o])=>o.n).map(([s,o])=>{const v=Math.round((E.open&&o.pt?o.pe/o.pt:o.c/o.n)*100), low=tr.pass.type==='avg'&&mockish&&v<tr.pass.min; return `<div class="srow${E.open?' pts':''}"><span class="nm">${esc(s)}</span><div class="trk" role="img" aria-label="${esc(s)} ${v}${tr.pass.type==='avg'?'점':'%'}"><i class="${low?'low':''}" style="width:${v}%"></i>${tr.pass.type==='avg'?`<b class="ref" style="left:${tr.pass.min}%"></b><b class="ref pass" style="left:${tr.pass.avg}%"></b>`:''}</div><span class="val">${E.open?`${+o.pe.toFixed(1)}<small>/${o.pt}점</small>`:o.c+'/'+o.n}</span>${low?`<span class="sflag">${ico('x')}과락 (${v}점)</span>`:''}</div>`}).join('');
  const wrongs=r.wrong.map(id=>BANK.all.get(id)).filter(Boolean);
  return `<header class="rhead"><div><p class="sub" style="margin:0 0 6px">${esc(r.title)} · ${r.mode==='exam'?'시험 모드':'학습 모드'} · ${mmss(r.el)}${r.limit?' / '+mmss(r.limit):''}</p><div class="big">${big}</div></div>${verdict}</header>
  <div class="grid2 sec"><section class="card"><h2 class="h2">${E.ls}별 결과</h2>${tr.pass.type==='avg'&&mockish?'<p class="small">세로선은 과락 40점, 합격 평균 60점이에요.</p>':''}<div class="srows">${rows&&tr.pass.type==='avg'&&mockish?`<div class="srow" aria-hidden="true"><span></span><div class="axis"><span style="left:${tr.pass.min}%">${tr.pass.min}</span><span style="left:${tr.pass.avg}%">${tr.pass.avg}</span></div><span></span></div>`:''}${rows||'<p class="small">채점한 문제가 없어요.</p>'}</div>${tr.pace?rcPaceRows(r,tr):''}</section>
@@ -2418,7 +2652,7 @@ function vStats(){
  return `${isDemo(ex)?demoBar():''}<header class="rhead"><div><h1 class="title">${esc(headline(pr,tr))}</h1><p class="sub">${E.full} · ${tr.name} · ${P?'최근 '+P+'일':'전체 기간'}</p></div>${per}</header>
  <dl class="kpis"><div class="kpi${pr.ok===false&&!VV?' bad':''}"><dt>${VV?'외운 단어':avgT?'예상 평균':RCT?'예상 정답률':'예상 점수'}</dt><dd>${predShort(pr)}</dd></div><div class="kpi"><dt>푼 문제</dt><dd>${att}<small>회</small></dd></div><div class="kpi"><dt>정답률</dt><dd>${pct(cor/att)}<small>%</small></dd></div><div class="kpi${cm.sw?' bad':''}"><dt>잘못 알고 있던 답</dt><dd>${cm.sw}<small>회</small></dd></div></dl>
  <div class="grid2 sec">
-  <section class="card"><h2 class="h2">${avgT?E.ls+'별 예상 점수':E.ls+'별 정답률'}</h2><p class="small">${VV?'단어별 마지막 풀이 기준이에요. 아래 계획은 남은 단어와 시험일로 계산해요.':'문항별 마지막 풀이 기준이에요.'+(avgT?' 회색 선은 과락 40점, 검은 선은 합격 평균 60점이에요.':RCT?(E.rc?' 예상 정답률은 실제 RC의 파트별 문항 수(30·16·29·25)로 가중해 셈해요.':` 예상 정답률은 모의고사의 ${E.ls}별 문항 수(${tr.quota.join('·')})로 가중해 셈해요. NCS 전체 점수가 만점의 ${pass.cut||40}% 미만이면 과락이에요.`):' 배점을 반영한 예상 점수로 급수를 판정해요.')}</p><div class="srows">${avgT?`<div class="srow" aria-hidden="true"><span></span><div class="axis"><span style="left:${pass.min}%">${pass.min}</span><span style="left:${pass.avg}%">${pass.avg}</span></div><span></span></div>`:''}${srows}</div>${strategy(pr,tr,ex)}</section>
+  <section class="card"><h2 class="h2">${avgT?E.ls+'별 예상 점수':E.open?E.ls+'별 득점률':E.ls+'별 정답률'}</h2><p class="small">${VV?'단어별 마지막 풀이 기준이에요. 아래 계획은 남은 단어와 시험일로 계산해요.':'문항별 마지막 풀이 기준이에요.'+(avgT?' 회색 선은 과락 40점, 검은 선은 합격 평균 60점이에요.':RCT?(E.rc?' 예상 정답률은 실제 RC의 파트별 문항 수(30·16·29·25)로 가중해 셈해요.':` 예상 정답률은 모의고사의 ${E.ls}별 문항 수(${tr.quota.join('·')})로 가중해 셈해요. NCS 전체 점수가 만점의 ${pass.cut||40}% 미만이면 과락이에요.`):(E.open?' 배점과 부분 점수를 반영해요. 전체 60점 이상이면 합격권이에요.':' 배점을 반영한 예상 점수로 급수를 판정해요.'))}</p><div class="srows">${avgT?`<div class="srow" aria-hidden="true"><span></span><div class="axis"><span style="left:${pass.min}%">${pass.min}</span><span style="left:${pass.avg}%">${pass.avg}</span></div><span></span></div>`:''}${srows}</div>${strategy(pr,tr,ex)}</section>
   <section class="card"><h2 class="h2">약점과 강점 ${E.lt}</h2><p class="small">2회 이상 푼 ${E.lt}만 비교해요. 누르면 그 ${E.lt}만 풀어요.</p><div style="margin-top:14px"><span class="lab">먼저 볼 약점</span>${weakT.length?`<ul class="tlist">${weakT.map(trow).join('')}</ul>`:'<p class="small">아직 뚜렷한 약점이 없어요.</p>'}</div><div style="margin-top:16px"><span class="lab">잘하는 ${E.lt}</span>${strongT.length?`<ul class="tlist">${strongT.map(trow).join('')}</ul>`:`<p class="small">3회 이상 풀어 70%를 넘긴 ${E.lt}이 아직 없어요.</p>`}</div></section>
  </div>
  <div class="grid2 sec">
@@ -2541,11 +2775,11 @@ function vBank(){
  ${acct}
  <div class="grid2 sec">
   <section class="card"><h2 class="h2">들어 있는 문제</h2><div class="scroll"><table style="margin-top:10px"><thead><tr><th>출처</th>${EXIDS.map(ex=>`<th class="num">${EXAMS[ex].name}</th>`).join('')}</tr></thead><tbody>${rows}<tr><td><b>합계</b></td>${EXIDS.map(ex=>`<td class="num"><b>${BANK.ex[ex].length}</b></td>`).join('')}</tr></tbody></table></div>
-   <p class="small" style="margin-top:10px">샘플은 기능을 써 보라고 직접 만든 연습 문제예요. 실제 기출이 아니에요. 토익 단어는 TSL(토익 교재 말뭉치 빈도 목록)을 참고해 고르고 뜻·예문은 직접 썼어요. 토익 RC는 ETS가 공개한 시험 형식에 맞춰 직접 만든 문제예요. NCS는 LH 필기 공고의 구성에 맞춰 직접 만든 문제예요.</p>
+   <p class="small" style="margin-top:10px">샘플은 기능을 써 보라고 직접 만든 연습 문제예요. 실제 기출이 아니에요. 토익 단어는 TSL(토익 교재 말뭉치 빈도 목록)을 참고해 고르고 뜻·예문은 직접 썼어요. 토익 RC는 ETS가 공개한 시험 형식에 맞춰 직접 만든 문제예요. NCS는 LH 필기 공고의 구성에 맞춰, 건축기사 실기는 필답형 형식에 맞춰 직접 만든 문제예요.</p>
    ${U.banks.length?`<span class="lab" style="margin-top:16px">가져온 묶음</span><ul class="tlist">${U.banks.map(b=>`<li class="row" style="justify-content:space-between;padding:6px 0;border-top:1px solid var(--line)"><span>${esc(b.name)} <span class="small">· ${b.count}문제 · ${ymd(b.addedAt)}</span>${b.local?(U.bankQ[b.id]?' <span class="tag">이 기기에 저장</span>':' <span class="tag red">이 기기에는 없어요 · 같은 파일을 다시 가져오세요</span>'):''}</span><button class="btn line sm" data-act="bdel" data-v="${esc(b.id)}">지우기</button></li>`).join('')}</ul>`:''}
   </section>
   <section class="card stack"><h2 class="h2">기출 가져오기</h2><p class="sub">아래 형식의 JSON 파일을 고르거나 내용을 붙여 넣으세요. 같은 id가 있으면 새 내용으로 바뀌어요.</p>
-   <div><label class="lab" for="imp-file">JSON 파일</label><input type="file" id="imp-file" accept=".json,application/json" multiple><p class="small" style="margin-top:6px">여러 파일을 한꺼번에 골라도 돼요. 그림이 든 큰 묶음(기출 팩)은 계정이 아니라 이 기기에만 저장돼요.</p></div>
+   <div><label class="lab" for="imp-file">JSON 파일</label><input type="file" id="imp-file" accept=".json,application/json" multiple style="max-width:100%"><p class="small" style="margin-top:6px">여러 파일을 한꺼번에 골라도 돼요. 그림이 든 큰 묶음(기출 팩)은 계정이 아니라 이 기기에만 저장돼요.</p></div>
    <div><label class="lab" for="imp-text">또는 붙여 넣기</label><textarea id="imp-text" placeholder='[{"id":"...","exam":"arch", ...}]'>${esc(I.text)}</textarea></div>
    <div class="row"><button class="btn line" data-act="icheck">검사하기</button>${rep&&rep.ok&&rep.ok.length?`<button class="btn" data-act="igo">${rep.ok.length}문제 가져오기</button>`:''}</div>
    ${rep?importReport(rep):''}
@@ -2554,7 +2788,7 @@ function vBank(){
  <section class="sec card"><h2 class="h2">JSON 형식</h2><p class="sub">문제 하나가 객체 하나예요. 배열로 넣거나 { "questions": [ ... ] }로 감싸도 돼요.</p>
   <dl class="fdl">
    <div><dt><code>id</code><span class="tag red">필수</span></dt><dd>겹치지 않는 문자열. 예: arch-2021-1-001</dd></div>
-   <div><dt><code>exam</code><span class="tag red">필수</span></dt><dd>arch(건축기사) · history(한국사) · comp(컴활) · toeic(토익 단어, 직접 만든 문제용) · rc(토익 RC) · ncs(NCS)</dd></div>
+   <div><dt><code>exam</code><span class="tag red">필수</span></dt><dd>arch(건축기사) · history(한국사) · comp(컴활) · archp(건축기사 실기) · toeic(토익 단어, 직접 만든 문제용) · rc(토익 RC) · ncs(NCS)</dd></div>
    <div><dt><code>subject</code><span class="tag red">필수</span></dt><dd>과목 또는 시대. 아래 이름과 똑같이 써야 분석에 잡혀요.</dd></div>
    <div><dt><code>stem</code> · <code>choices</code> · <code>answer</code><span class="tag red">필수</span></dt><dd>문제 본문, 보기 2~5개, 정답 번호(1부터)</dd></div>
    <div><dt><code>topic</code><span class="tag">권장</span></dt><dd>단원(한국사는 분야). 강점·약점 분석의 단위예요.</dd></div>
@@ -2564,14 +2798,14 @@ function vBank(){
    <div><dt><code>fig</code><span class="tag">선택</span></dt><dd>그림 대신 쓰는 표·코드. <code>[{"t":"sheet","rows":[["부서","실적"],["영업","100"]]}]</code>처럼 워크시트(sheet), 표(grid), 코드(code)를 글자로 적어요.</dd></div>
    <div><dt><code>bank</code><span class="tag">선택</span></dt><dd>{ "questions": [ ... ] } 바깥에 { "id", "name" }을 적으면 같은 묶음을 다시 가져올 때 겹치지 않고 바뀌어요. 그림이 많은 묶음은 이 기기에만 저장돼요.</dd></div>
   </dl>
-  <details style="margin-top:10px"><summary>과목·시대 이름 보기</summary><ul class="small" style="margin:6px 0 0;padding-left:18px"><li>건축기사: 건축계획 · 건축시공 · 건축구조 · 건축설비 · 건축관계법규 (2027년 기준에서는 건축계획과 건축관계법규가 '건축계획 및 설계'로 합쳐져 분석돼요)</li><li>한국사: ${ERAS.join(' · ')}</li><li>컴활: 컴퓨터 일반 · 스프레드시트 일반 · 데이터베이스 일반</li><li>토익 단어: ${esc(VCATS.join(' · '))}</li><li>토익 RC: ${RCPARTS.join(' · ')}</li><li>NCS: ${NCSA.join(' · ')}</li></ul></details>
+  <details style="margin-top:10px"><summary>과목·시대 이름 보기</summary><ul class="small" style="margin:6px 0 0;padding-left:18px"><li>건축기사: 건축계획 · 건축시공 · 건축구조 · 건축설비 · 건축관계법규 (2027년 기준에서는 건축계획과 건축관계법규가 '건축계획 및 설계'로 합쳐져 분석돼요)</li><li>한국사: ${ERAS.join(' · ')}</li><li>컴활: 컴퓨터 일반 · 스프레드시트 일반 · 데이터베이스 일반</li><li>토익 단어: ${esc(VCATS.join(' · '))}</li><li>토익 RC: ${RCPARTS.join(' · ')}</li><li>NCS: ${NCSA.join(' · ')}</li><li>건축기사 실기: ${APS.join(' · ')} (서술형은 kind를 self로 하고 model·checks·need를, 계산형은 kind를 fill로 하고 blanks를 적어요)</li></ul></details>
   <details><summary>예시 JSON 보기</summary><pre><code>${esc(JSON.stringify(TEMPLATE,null,2))}</code></pre></details>
   <div class="row" style="margin-top:10px"><button class="btn line sm" data-act="tcopy">${ico('copy')}예시 복사</button>${canSave()?`<button class="btn line sm" data-act="tdl">${ico('down')}예시 파일 받기</button>`:''}</div>
  </section>
  <div class="grid2 sec">
   <section class="card"><h2 class="h2">시험 설정</h2>
    <div class="stack" style="margin-top:14px">${EXIDS.map(ex=>`<div><span class="lab">${EXAMS[ex].full}</span><div class="row"><select data-set="track" data-ex="${ex}" aria-label="${EXAMS[ex].name} 기준">${EXAMS[ex].tracks.map(t=>`<option value="${t.id}" ${S.track[ex]===t.id?'selected':''}>${t.name} · ${t.desc}</option>`).join('')}</select><input type="date" data-set="date" data-ex="${ex}" value="${esc(S.examDate[ex]||'')}" aria-label="${EXAMS[ex].name} 시험일"></div></div>`).join('')}
-   <div><label class="lab" for="goal">하루 목표 문제 수</label><input type="number" id="goal" data-set="goal" min="5" max="200" step="5" value="${S.goal}" style="width:8em"></div>
+   <div><label class="lab" for="goal">하루 목표 문제 수</label><input type="number" id="goal" data-set="goal" min="5" max="200" step="5" value="${S.goal}" style="width:8em"><p class="small" style="margin-top:6px">답을 직접 쓰는 건축 실기는 한 문제가 길어서 이 수의 3분의 1(지금 ${goalOf('archp')}문제)만 내요.</p></div>
    <div><span class="lab">화면 디자인</span><button class="btn line sm" data-act="skin">${ico('skin')}${presetNow()?presetNow().name:'직접 고른 조합'} · 바꾸기</button></div>
    <label class="check"><input type="checkbox" data-set="unsure" ${S.unsureNote?'checked':''}> 맞혀도 헷갈린 문제는 오답노트에 넣기</label>
    ${EXAMS[U.settings.exam].vocab?'':`<label class="check"><input type="checkbox" data-set="demo" ${S.demoOff[U.settings.exam]?'':'checked'}> 기록이 없을 때 예시 기록 보여 주기 (${EXAMS[U.settings.exam].name})</label>`}</div>
@@ -2584,6 +2818,7 @@ function vBank(){
  <section class="sec card"><h2 class="h2">기출은 어디서 구하나요</h2>
   <ul class="principles">
    <li><b>건축기사 · Q-net</b><span>2022년 3회부터 CBT로 바뀌어 그 뒤 문제는 공개되지 않아요. 2027년부터 필기가 4과목 80문항으로 바뀌니, 예전 기출의 건축관계법규 문제는 범위가 줄어든 점을 감안하세요.</span></li>
+   <li><b>건축기사 실기 · Q-net</b><span>필답형 문제와 채점 기준은 공개되지 않아요. 여기 문제는 출제 범위에 맞춰 직접 만들었어요. 수험서의 복원 문제는 혼자 공부하는 용도로만 exam을 archp로 해서 가져오세요.</span></li>
    <li><b>한국사 · 국사편찬위원회</b><span>회차별 문제와 정답을 공개하지만 저작권은 위원회에 있어요. 혼자 공부하는 용도로 쓰고, 여러 사람에게 공개하려면 이용 조건을 먼저 확인하세요.</span></li>
    <li><b>컴활 · 대한상공회의소</b><span>2021년부터 상시검정이라 문제가 공개되지 않아요. 공개된 정기시험 기출은 2020년까지이고 Windows·Office 버전이 지금과 달라요. 2027년부터 1과목에 AI 기초가 들어가요.</span></li>
    <li><b>토익 · ETS</b><span>정기시험 문제는 공개되지 않아요. 단어는 공개 빈도 목록 TSL 1.2(Browne & Culligan, CC BY-SA 4.0)를 참고해 골랐고, 뜻·예문·해석은 직접 썼어요. RC 문제는 ETS가 공개한 형식(Part 5 30 · Part 6 16 · Part 7 54문항)에 맞춰 직접 만들었어요. 가지고 있는 문제집 문제는 혼자 공부하는 용도로만 exam을 rc로 해서 가져오세요.</span></li>
@@ -2633,7 +2868,8 @@ function restoreBackup(txt,pasted){
 async function aiExplain(id){
  const q=BANK.all.get(id); if(!q||!SAMPLE||UI.aiLive[id]) return;
  const E=EXAMS[q.exam], w=q.v;
- const prompt=w?['너는 토익 강사야. 아래 단어를 한국 수험생에게 한국어로 짧고 정확하게 설명해.','마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심 뜻: 한 줄','토익에서 자주 쓰는 표현: 2~3개 (영어 표현 - 뜻)','헷갈리는 단어: 1~2개와 차이 한 줄씩','예문: 영어 예문 2개와 각각의 해석','확실하지 않은 내용은 지어내지 마.','',`단어: ${w.w} (${POSL[w.pos]}) / 뜻: ${w.ko}`,`예문: ${vPlain(w.ex)} (${w.exko})`,w.fam?'파생어: '+w.fam.map(f=>f[0]+' '+POSL[f[1]]).join(', '):''].filter(Boolean).join('\n'):q.rc?[`너는 토익 RC 강사야. 아래 ${q.subject} 문제의 해설을 한국어로 짧고 정확하게 써.`,`정답은 ${ANS(q)}로 확정돼 있어. 정답을 바꾸지 마.`,'마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','정답 근거: 근거가 되는 문장이나 구조를 짚어 두세 문장','오답 체크: 오답 보기마다 "(A): 틀린 이유" 한 줄씩','비슷한 문제 푸는 요령: 한 줄','확실하지 않은 내용은 지어내지 마.','',`[${q.subject} / ${q.topic}]`,rcPlain(q)?'지문:\n'+rcPlain(q):'',q.stem?'문제: '+q.stem:'',...q.choices.map((c,i)=>'('+CL(q.exam,i+1)+') '+c),q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n'):[`너는 ${E.full} 수험생을 돕는 해설 강사야. 아래 객관식 문제의 해설을 한국어로 짧고 정확하게 써.`,`정답은 ${q.answer}번으로 확정돼 있어. 정답 번호를 바꾸지 마.`,'마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','정답 근거: 두세 문장','오답 체크: 오답 보기마다 "②: 틀린 이유" 한 줄씩','암기 포인트: 한 줄','확실하지 않은 사실은 지어내지 말고 "확인 필요"라고 적어.','',`[${q.subject} / ${q.topic}]`,...(q.text?['문제와 보기(문제지에서 옮겨 적은 글. 그림·지도 자료는 빠져 있음):',q.text]:['문제: '+q.stem,q.passage?'자료: '+q.passage:'',figText(q),...q.choices.map((c,i)=>CIRC[i]+' '+c)]),q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n');
+ const prompt=w?['너는 토익 강사야. 아래 단어를 한국 수험생에게 한국어로 짧고 정확하게 설명해.','마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심 뜻: 한 줄','토익에서 자주 쓰는 표현: 2~3개 (영어 표현 - 뜻)','헷갈리는 단어: 1~2개와 차이 한 줄씩','예문: 영어 예문 2개와 각각의 해석','확실하지 않은 내용은 지어내지 마.','',`단어: ${w.w} (${POSL[w.pos]}) / 뜻: ${w.ko}`,`예문: ${vPlain(w.ex)} (${w.exko})`,w.fam?'파생어: '+w.fam.map(f=>f[0]+' '+POSL[f[1]]).join(', '):''].filter(Boolean).join('\n'):q.rc?[`너는 토익 RC 강사야. 아래 ${q.subject} 문제의 해설을 한국어로 짧고 정확하게 써.`,`정답은 ${ANS(q)}로 확정돼 있어. 정답을 바꾸지 마.`,'마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','정답 근거: 근거가 되는 문장이나 구조를 짚어 두세 문장','오답 체크: 오답 보기마다 "(A): 틀린 이유" 한 줄씩','비슷한 문제 푸는 요령: 한 줄','확실하지 않은 내용은 지어내지 마.','',`[${q.subject} / ${q.topic}]`,rcPlain(q)?'지문:\n'+rcPlain(q):'',q.stem?'문제: '+q.stem:'',...q.choices.map((c,i)=>'('+CL(q.exam,i+1)+') '+c),q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n'):q.kind?[`너는 ${E.full}(필답형) 수험생을 돕는 강사야. 아래 문제와 모범 답안을 보고, 왜 그런지 한국어로 짧고 정확하게 설명해.`,'모범 답안은 확정돼 있어. 답을 바꾸지 마.','마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','왜 그런가: 두세 문장','답안에 꼭 들어갈 낱말: 한 줄','헷갈리기 쉬운 것: 한 줄','확실하지 않은 사실은 지어내지 말고 "확인 필요"라고 적어.','',`[${q.subject} / ${q.topic}]`,'문제: '+q.stem,q.passage?'자료: '+q.passage:'',figText(q),q.kind==='fill'?'정답: '+q.blanks.map(b=>b.label+' '+b.a+b.unit).join(', '):'모범 답안: '+q.model,q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n')
+ :[`너는 ${E.full} 수험생을 돕는 해설 강사야. 아래 객관식 문제의 해설을 한국어로 짧고 정확하게 써.`,`정답은 ${q.answer}번으로 확정돼 있어. 정답 번호를 바꾸지 마.`,'마크다운 기호 없이 아래 형식의 줄바꿈만 써:','핵심: 한 줄','정답 근거: 두세 문장','오답 체크: 오답 보기마다 "②: 틀린 이유" 한 줄씩','암기 포인트: 한 줄','확실하지 않은 사실은 지어내지 말고 "확인 필요"라고 적어.','',`[${q.subject} / ${q.topic}]`,...(q.text?['문제와 보기(문제지에서 옮겨 적은 글. 그림·지도 자료는 빠져 있음):',q.text]:['문제: '+q.stem,q.passage?'자료: '+q.passage:'',figText(q),...q.choices.map((c,i)=>CIRC[i]+' '+c)]),q.explanation?'참고 해설: '+q.explanation:''].filter(Boolean).join('\n');
  UI.aiLive[id]={text:''}; render(true);
  try{
   const r=await SAMPLE(prompt,{modelTier:'default',onText:({text})=>{UI.aiLive[id].text=text; const el=document.querySelector('[data-ai="'+CSS.escape(id)+'"]'); if(el) el.textContent=text}});
@@ -2679,7 +2915,7 @@ let TT=0;
 function toast(msg){const t=$('#toast'); t.textContent=msg; t.classList.add('on'); clearTimeout(TT); TT=setTimeout(()=>t.classList.remove('on'),2800)}
 
 /* ---------- study: 공부 노트 (한국사 data/khist.json · 컴활 data/cstudy.json) ---------- */
-const COURSE_FILES={history:'data/khist.json',comp:'data/cstudy.json',ncs:'data/nstudy.json'};
+const COURSE_FILES={history:'data/khist.json',comp:'data/cstudy.json',ncs:'data/nstudy.json',archp:'data/astudy.json'};
 const COURSES={};
 const NOSTUDY={ready:false,err:'',d:null,units:new Map(),order:[],core:[],ex:''};
 let STUDY=NOSTUDY; // 지금 고른 시험의 공부 노트
@@ -2737,9 +2973,9 @@ const codeHtml=x=>String(x).split('\n').map(l=>{const sp=l.match(/^[ \t]*/)[0]; 
 const figCode=b=>`<figure class="qfig">${b.title||b.lang?`<figcaption>${esc(b.title||'')}${b.lang?`<span class="tag">${esc(b.lang)}</span>`:''}</figcaption>`:''}<pre class="code" tabindex="0"><code>${codeHtml(b.x)}</code></pre></figure>`;
 const fxBreak=h=>h.replace(/,(?=[^\s&])/g,',<wbr>'); // 수식 보기는 쉼표 뒤에서 꺾이게
 const chHtml=c=>/^[={]/.test(c)?fxBreak(nl(c)):nl(c);
-const figHtml=b=>b.t==='sheet'?figSheet(b):b.t==='grid'?figGrid(b):b.t==='code'?figCode(b):b.t==='chart'?chartFig(b):'';
+const figHtml=b=>b.t==='sheet'?figSheet(b):b.t==='grid'?figGrid(b):b.t==='code'?figCode(b):b.t==='chart'?chartFig(b):b.t==='net'?netFig(b):b.t==='beam'?beamFig(b):'';
 const figsHtml=q=>(q.fig||[]).map(figHtml).join('');
-const figText=q=>(q.fig||[]).map(b=>b.t==='code'?`[${b.title||b.lang||'코드'}]\n${b.x}`:b.t==='sheet'?`[${b.title||'워크시트'}] (첫 줄은 ${b.r0||1}행, 첫 칸은 ${b.c0||'A'}열)\n${(b.rows||[]).map(r=>r.join('\t')).join('\n')}`:`[${b.title||'표'}]\n${(b.head?[b.head]:[]).concat(b.rows||[]).map(r=>r.join('\t')).join('\n')}`).join('\n');
+const figText=q=>(q.fig||[]).map(b=>b.t==='net'?`[${b.title||'공정표'}] ${netText(b)}`:b.t==='beam'?`[${b.title||'보'}] ${beamText(b)}`:b.t==='code'?`[${b.title||b.lang||'코드'}]\n${b.x}`:b.t==='sheet'?`[${b.title||'워크시트'}] (첫 줄은 ${b.r0||1}행, 첫 칸은 ${b.c0||'A'}열)\n${(b.rows||[]).map(r=>r.join('\t')).join('\n')}`:`[${b.title||'표'}]\n${(b.head?[b.head]:[]).concat(b.rows||[]).map(r=>r.join('\t')).join('\n')}`).join('\n');
 const tableHtml=t=>`<figure class="st-fig"><figcaption>${esc(t.title)}</figcaption><div class="st-tw" tabindex="0" role="group" aria-label="${esc(t.title)} 표"><table class="st-t${t.head.length<2?' one':''}"><thead><tr><th></th>${t.head.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr><th scope="row">${rich(r[0])}</th>${r.slice(1).map((c,i)=>`<td data-h="${esc(t.head[i]||'')}"${c===''||c==='—'?' class="e"':''}>${rich(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></figure>`;
 /* ---------- 그림 자료: 지도 · 기간 막대 · 계보도 · 유물 그림 · 로드맵 ---------- */
 const MAPBOX={kr:[123.7,32.9,131.4,43.3],ea:[117.2,31.8,135.4,46.6],south:[125.4,33.0,130.2,38.9],north:[123.4,37.3,131.4,43.4],mid:[124.2,34.0,130.4,40.6],sw:[125.7,34.5,128.5,37.1],man:[120.5,37.0,133.6,46.6],front:[124.0,33.9,130.6,41.4]};
@@ -2852,6 +3088,39 @@ function relFig(b){
   return `<path class="rl-l" d="M${f1(x1)} ${ya}C${f1(mx)} ${ya} ${f1(mx)} ${yc} ${f1(x2)} ${yc}"/><text class="rl-c" x="${f1(x1+6)}" y="${ya-5}">${esc(l1)}</text><text class="rl-c" x="${f1(x2-6)}" y="${yc-5}" text-anchor="end">${esc(l2)}</text>`}).join('');
  return `<figure class="qfig"><figcaption>${esc(b.title)}</figcaption><svg class="rel" viewBox="0 0 ${f1(W)} ${H}" style="max-width:${Math.round(W*1.3)}px" role="img" aria-label="${esc(b.title)}">${o}</svg><p class="rl-cap">열쇠 표시는 기본 키, 선 끝의 1과 ∞는 "한 줄에 여러 줄이 이어진다"는 뜻이에요.</p></figure>`;
 }
+const netText=b=>'공정표. '+b.acts.map(a=>`${a[0]}→${a[1]} ${a[4]==='d'||a[4]==='dcp'?'더미':a[2]+' '+a[3]+'일'}`).join(', ');
+function netFig(b){ // 화살표형(AOA) 네트워크 공정표
+ const DX=70, DY=62, M=24, R=12.5, f1=x=>+x.toFixed(1), hasT=b.nodes.some(n=>n[3]), TOP=hasT?24:4;
+ const mx=Math.max(...b.nodes.map(n=>n[1])), my=Math.max(...b.nodes.map(n=>n[2])), W=M*2+mx*DX, H=TOP+M*2+my*DY, P={};
+ b.nodes.forEach(n=>P[n[0]]=[M+n[1]*DX,TOP+M+n[2]*DY]);
+ let o='';
+ b.acts.forEach(([fr,to,nm,dy,fl])=>{const A=P[fr], B=P[to]; if(!A||!B) return; const dx=B[0]-A[0], dv=B[1]-A[1], len=Math.hypot(dx,dv)||1, ux=dx/len, uy=dv/len;
+  const x1=A[0]+ux*R, y1=A[1]+uy*R, x2=B[0]-ux*(R+1), y2=B[1]-uy*(R+1), cp=fl==='cp'||fl==='dcp', dm=fl==='d'||fl==='dcp', hx=x2-ux*8, hy=y2-uy*8;
+  let nx=-uy, ny=ux; if(ny>0||(ny===0&&nx>0)){nx=-nx; ny=-ny} // 이름은 선의 위(왼)쪽, 날수는 아래(오른)쪽
+  const cx=(x1+x2)/2, cy=(y1+y2)/2;
+  o+=`<path class="nt-e${cp?' cp':''}${dm?' dm':''}" d="M${f1(x1)} ${f1(y1)}L${f1(hx)} ${f1(hy)}"/><path class="nt-h${cp?' cp':''}" d="M${f1(x2)} ${f1(y2)}L${f1(hx-uy*3.6)} ${f1(hy+ux*3.6)}L${f1(hx+uy*3.6)} ${f1(hy-ux*3.6)}Z"/>`;
+  if(nm) o+=`<text class="nt-a" x="${f1(cx+nx*9)}" y="${f1(cy+ny*9+4)}" text-anchor="middle">${esc(nm)}</text>`;
+  if(dy) o+=`<text class="nt-d" x="${f1(cx-nx*11)}" y="${f1(cy-ny*11+4)}" text-anchor="middle">${esc(dy)}</text>`;
+ });
+ b.nodes.forEach(n=>{const [x,y]=P[n[0]]; o+=`<circle class="nt-n" cx="${x}" cy="${y}" r="${R}"/><text class="nt-t" x="${x}" y="${y+4.2}" text-anchor="middle">${esc(n[0])}</text>`;
+  if(n[3]){const t=n[3].split('|'); o+=`<rect class="nt-b" x="${x-19}" y="${y-R-19}" width="38" height="15" rx="2"/><path class="nt-b" d="M${x} ${y-R-19}v15"/><text class="nt-x" x="${x-9.5}" y="${y-R-8}" text-anchor="middle">${esc(t[0]||'')}</text><text class="nt-x" x="${x+9.5}" y="${y-R-8}" text-anchor="middle">${esc(t[1]||'')}</text>`}});
+ const cap=b.title||'네트워크 공정표', hasCp=b.acts.some(a=>a[4]==='cp'||a[4]==='dcp'), hasD=b.acts.some(a=>a[4]==='d'||a[4]==='dcp');
+ return `<figure class="qfig"><figcaption>${esc(cap)}</figcaption><div class="qfig-w" tabindex="0" role="group" aria-label="${esc(cap)}"><svg class="net" viewBox="0 0 ${W} ${H}" style="width:100%;max-width:${Math.round(W*1.2)}px;min-width:${Math.min(W,280)}px" role="img" aria-label="${esc(netText(b))}">${o}</svg></div><p class="rl-cap">선 위는 작업 이름, 아래는 걸리는 날수예요.${hasD?' 점선은 더미예요.':''}${hasCp?' 굵은 빨간 선은 주공정선(CP)이에요.':''}${hasT?' 결합점 위 칸은 가장 빠른 시각 | 가장 늦은 시각이에요.':''}</p></figure>`;
+}
+const beamText=b=>`길이 ${b.L}m 보. 지점: ${b.sup.map(x=>({pin:'회전',roller:'이동',fixed:'고정'}[x[0]])+'단 '+(x[2]||'')+' '+x[1]+'m').join(', ')}. 하중: ${(b.P||[]).map(p=>p[0]+'m에 '+p[1]).concat((b.w||[]).map(p=>p[0]+'~'+p[1]+'m에 '+p[2])).join(', ')||'없음'}`;
+function beamFig(b){ // 보와 하중: 회전단(삼각형) · 이동단(삼각형+밑줄) · 고정단(벽)
+ const W=320, X0=34, X1=286, S=(X1-X0)/b.L, Y=76, f1=x=>+x.toFixed(1), X=x=>f1(X0+x*S), dims=b.dims||[]; let o='';
+ (b.w||[]).forEach(([a,c,l])=>{const xa=X0+a*S, xc=X0+c*S, n=Math.max(2,Math.round((xc-xa)/24)); o+=`<path class="bm-w" d="M${f1(xa)} 48H${f1(xc)}"/>`+Array.from({length:n+1},(_,i)=>{const x=f1(xa+(xc-xa)*i/n); return `<path class="bm-a" d="M${x} 48V${Y-6}"/><path class="bm-h" d="M${x} ${Y-2}l-3-6h6Z"/>`}).join('')+`<text class="bm-t" x="${f1((xa+xc)/2)}" y="42" text-anchor="middle">${esc(l)}</text>`});
+ (b.P||[]).forEach(([x,l])=>{const px=X(x); o+=`<path class="bm-a p" d="M${px} 18V${Y-7}"/><path class="bm-h" d="M${px} ${Y-2}l-4-8h8Z"/><text class="bm-t" x="${px}" y="13" text-anchor="${x<=b.L*0.12?'start':x>=b.L*0.88?'end':'middle'}">${esc(l)}</text>`});
+ o+=`<path class="bm-b" d="M${X0} ${Y}H${X1}"/>`;
+ b.sup.forEach(([t,x,l])=>{const px=+X(x);
+  if(t==='fixed'){const d=x<=b.L/2?-1:1; o+=`<path class="bm-b" d="M${px} ${Y-20}V${Y+20}"/>`+[-16,-8,0,8,16].map(k=>`<path class="bm-k" d="M${px} ${Y+k}l${d*7} 6"/>`).join('')}
+  else o+=`<path class="bm-s" d="M${px} ${Y+2}l-9 15h18Z"/>`+(t==='roller'?`<path class="bm-k" d="M${px-11} ${Y+21}h22"/>`:`<path class="bm-k" d="M${px-11} ${Y+17}h22"/>`+[-7,-1,5].map(k=>`<path class="bm-k" d="M${px+k} ${Y+17}l-4 5"/>`).join(''));
+  if(l) o+=`<text class="bm-l" x="${t==='fixed'?px+(x<=b.L/2?-12:12):px}" y="${t==='fixed'?Y-24:Y+37}" text-anchor="middle">${esc(l)}</text>`});
+ if(dims.length){const yd=Y+52, xs=[0]; dims.forEach(d=>xs.push(xs[xs.length-1]+d)); o+=`<path class="bm-d" d="M${X0} ${yd}H${X(xs[xs.length-1])}"/>`+xs.map(v=>`<path class="bm-d" d="M${X(v)} ${yd-4}v8"/>`).join('')+dims.map((d,i)=>`<text class="bm-t sm" x="${f1(X0+(xs[i]+d/2)*S)}" y="${yd+15}" text-anchor="middle">${fmtNum(d)}m</text>`).join('')}
+ const cap=b.title||'보';
+ return `<figure class="qfig"><figcaption>${esc(cap)}</figcaption><svg class="beam" viewBox="0 0 ${W} ${dims.length?Y+74:Y+44}" style="max-width:400px" role="img" aria-label="${esc(beamText(b))}">${o}</svg></figure>`;
+}
 function blockHtml(b){
  const open=!!UI.st.ob[b._i];
  switch(b.t){
@@ -2925,7 +3194,7 @@ function sqHtml(S){
 }
 function vStudy(){
  const ex=U.settings.exam;
- if(!hasCourse(ex)){const have=Object.keys(COURSES); return `<section class="card stack"><h1 class="h2">공부 노트는 ${have.map(x=>esc(EXAMS[x].name)).join('와 ')||'아직 준비 중'}${have.length?'에 있어요':'이에요'}</h1><p class="sub">이야기·키워드·퀴즈로 개념을 잡는 묶음이에요.</p><div class="row">${have.map((x,i)=>`<button class="btn${i?' line':''}" data-act="exam" data-v="${x}">${esc(EXAMS[x].name)}로 바꾸기</button>`).join('')}</div></section>`}
+ if(!hasCourse(ex)){const have=Object.keys(COURSES); return `<section class="card stack"><h1 class="h2">공부 노트는 ${have.map(x=>esc(EXAMS[x].name)).join(', ')||'아직 준비 중'}${have.length?'에 있어요':'이에요'}</h1><p class="sub">이야기·키워드·퀴즈로 개념을 잡는 묶음이에요.</p><div class="row">${have.map((x,i)=>`<button class="btn${i?' line':''}" data-act="exam" data-v="${x}">${esc(EXAMS[x].name)}로 바꾸기</button>`).join('')}</div></section>`}
  if(!STUDY.ready) return STUDY.err?emptyBox('공부 자료를 열지 못했어요',STUDY.err):'<p class="small">공부 자료를 불러오는 중이에요…</p>';
  const a=UI.arg||'';
  if(a==='quiz'&&UI.sq.x) return vStudyQuiz();
@@ -3021,7 +3290,7 @@ function vStudyUnit(u){
   ${u.tips.length?`<section class="card"><h2 class="h2">외우는 요령</h2><ul class="notes memo">${u.tips.map(t=>`<li><span>${rich(t)}</span></li>`).join('')}</ul></section>`:''}
  </div>
  <section class="sec card sq" id="sq" aria-labelledby="sq-h"><div class="sec-h"><h2 class="h2" id="sq-h">단원 퀴즈</h2><span class="small">${st.n?`최고 ${st.b} / ${st.n}`:'다 풀면 이 단원이 끝나요'}</span></div>${sqHtml(S)}</section>
- <div class="st-foot"><button class="btn line" data-act="sdone" data-id="${u.id}">${st.d?'끝냄 취소':'읽기만 하고 끝냄'}</button>${eraN?`<button class="btn line" data-act="sera" data-era="${esc(u.era)}">${ico('pen')}${esc(eraShort(u.era))} 문제 풀기 · ${Math.min(10,eraN)}문제</button>`:''}</div>
+ <div class="st-foot"><button class="btn line" data-act="sdone" data-id="${u.id}">${st.d?'끝냄 취소':'읽기만 하고 끝냄'}</button>${eraN?`<button class="btn line" data-act="sera" data-era="${esc(u.era)}">${ico('pen')}${esc(eraShort(u.era))} 문제 풀기 · ${Math.min(10,eraN)}문제</button>`:''}${ex==='comp'&&XLMAP[u.id]!==undefined?`<a class="btn line" href="#xl${XLMAP[u.id]?'/'+XLMAP[u.id]:''}">${ico('sheet')}엑셀 연습장에서 해 보기</a>`:''}</div>
  <nav class="st-pn" aria-label="단원 이동">${pu?`<a href="#study/${pu.id}"><small>이전 단원</small><b>${esc(pu.title)}</b></a>`:'<span></span>'}${nu?`<a href="#study/${nu.id}" class="nx"><small>다음 단원${nu.day!==u.day?` · ${esc(dayLab(nu.day))}`:''}</small><b>${esc(nu.title)}</b></a>`:`<a href="#study" class="nx"><small>마지막 단원이에요</small><b>${esc(SD.crumb||SD.title)} 목록으로</b></a>`}</nav>`;
 }
 function vStudyTop(){ // 시험 직전: 가장 자주 나온 키워드만
@@ -3090,8 +3359,1186 @@ const SACT={
  sqmix:()=>{const done=STUDY.order.filter(suDone), use=done.length>=3?done:STUDY.order; sqNew('x',done.length>=3?'끝낸 단원 섞어 퀴즈':'전체 섞어 퀴즈',shuffle([].concat(...use.map(id=>STUDY.units.get(id).quiz))).slice(0,20)); if(UI.route==='study'&&UI.arg==='quiz'){render();window.scrollTo(0,0)} else go('study/quiz')}
 };
 
+/*XL-BEGIN*/
+/* 합격노트 엑셀 연습장 계산 엔진 (index.html 안에 그대로 끼워 넣어요: tools/xl_build.py)
+   값: 숫자 · 글자 · TRUE/FALSE · null(빈 칸) · 오류 {e:'#N/A'} · 배열 {a:[[..]]} · 영역 {sh,r1,c1,r2,c2} */
+const XL=(()=>{
+const mkE=c=>Object.freeze({e:c});
+const EDIV=mkE('#DIV/0!'), ENA=mkE('#N/A'), ENAME=mkE('#NAME?'), EVAL=mkE('#VALUE!'), EREF=mkE('#REF!'), ENUM=mkE('#NUM!'), ECIRC=mkE('#순환'), ENO=mkE('#미지원');
+const ERRS={'#DIV/0!':EDIV,'#N/A':ENA,'#NAME?':ENAME,'#VALUE!':EVAL,'#REF!':EREF,'#NUM!':ENUM,'#NULL!':mkE('#NULL!')};
+const MISS=Object.freeze({miss:1});                       // 비워 둔 인수
+const isE=v=>v!==null&&typeof v==='object'&&v.e!==undefined;
+const isA=v=>v!==null&&typeof v==='object'&&v.a!==undefined;
+const isR=v=>v!==null&&typeof v==='object'&&v.r1!==undefined;
+const colNum=s=>{let n=0; for(const ch of s.toUpperCase()) n=n*26+ch.charCodeAt(0)-64; return n};
+const colName=n=>{let s=''; while(n>0){const m=(n-1)%26; s=String.fromCharCode(65+m)+s; n=(n-m-1)/26} return s};
+const RE_A1=/^(\$?)([A-Za-z]{1,2})(\$?)([0-9]{1,5})$/;
+const addr=s=>{const m=RE_A1.exec(s); return m?{c:colNum(m[2]),r:+m[4],ac:!!m[1],ar:!!m[3]}:null};
+const key=(r,c)=>colName(c)+r;
+function rangeOf(s){const p=String(s).replace(/\$/g,'').split(':'), a=addr(p[0]), b=addr(p[1]||p[0]); if(!a||!b) return null; return {r1:Math.min(a.r,b.r),c1:Math.min(a.c,b.c),r2:Math.max(a.r,b.r),c2:Math.max(a.c,b.c)}}
+const rangeKeys=g=>{const o=[]; for(let r=g.r1;r<=g.r2;r++) for(let c=g.c1;c<=g.c2;c++) o.push(key(r,c)); return o};
+const rangeText=g=>key(g.r1,g.c1)+(g.r1===g.r2&&g.c1===g.c2?'':':'+key(g.r2,g.c2));
+
+/* ---------- 글자 → 토큰 → 식 나무 ---------- */
+class PErr extends Error{constructor(m,p){super(m); this.pos=p}}
+const HAN='\\u3131-\\u318E\\uAC00-\\uD7A3';
+const RE_NUM=/^(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?/, RE_REF=new RegExp('^\\$?[A-Za-z]{1,2}\\$?\\d{1,5}(?![A-Za-z0-9_.'+HAN+']|\\s*\\()'),
+      RE_ID=new RegExp('^[A-Za-z_'+HAN+'][A-Za-z0-9_.'+HAN+']*'), RE_ERR=/^#(?:N\/A|DIV\/0!|VALUE!|REF!|NAME\?|NUM!|NULL!)/i;
+const tidy=s=>String(s).replace(/[\u201C\u201D\u201E\u201F\u2033\uFF02]/g,'"').replace(/[\u2018\u2019\uFF07]/g,"'").replace(/\uFF0C/g,',').replace(/\uFF08/g,'(').replace(/\uFF09/g,')').replace(/\uFF1D/g,'=').replace(/[\u00D7]/g,'*').replace(/\u00F7/g,'/').replace(/\u00A0/g,' ');
+function lex(s){
+ const t=[]; let i=0;
+ while(i<s.length){
+  const ch=s[i], rest=s.slice(i); let m;
+  if(/\s/.test(ch)){i++; continue}
+  if(ch==='"'){let j=i+1, v=''; for(;;){if(j>=s.length) throw new PErr('큰따옴표(")가 닫히지 않았어요',i); if(s[j]==='"'){if(s[j+1]==='"'){v+='"'; j+=2; continue} break} v+=s[j++]} t.push({k:'str',v,p:i,q:j+1}); i=j+1; continue}
+  if((m=RE_REF.exec(rest))){t.push({k:'ref',v:m[0].toUpperCase(),p:i,q:i+m[0].length}); i+=m[0].length; continue}
+  if((m=RE_NUM.exec(rest))){t.push({k:'num',v:parseFloat(m[0]),p:i,q:i+m[0].length}); i+=m[0].length; continue}
+  if((m=RE_ERR.exec(rest))){t.push({k:'err',v:m[0].toUpperCase(),p:i,q:i+m[0].length}); i+=m[0].length; continue}
+  if((m=RE_ID.exec(rest))){const nm=m[0], up=nm.toUpperCase(), fn=/^\s*\(/.test(s.slice(i+nm.length));
+   t.push(fn?{k:'fn',v:up,p:i,q:i+nm.length}:up==='TRUE'||up==='FALSE'?{k:'bool',v:up==='TRUE',p:i,q:i+nm.length}:{k:'name',v:nm,p:i,q:i+nm.length}); i+=nm.length; continue}
+  const two=s.substr(i,2);
+  if(two==='<>'||two==='<='||two==='>='){t.push({k:'op',v:two,p:i,q:i+2}); i+=2; continue}
+  if('+-*/^&=<>%,():{};'.includes(ch)){t.push({k:'op',v:ch,p:i,q:i+1}); i++; continue}
+  throw new PErr(ch==='$'?'$ 는 셀 주소 앞에만 붙일 수 있어요':ch==="'"?"글자는 작은따옴표가 아니라 큰따옴표(\")로 감싸요":`'${ch}' 는 수식에 쓸 수 없는 글자예요`,i);
+ }
+ return t;
+}
+const body=src=>{let s=tidy(src).trim(), arr=false; if(s[0]==='{'&&s[s.length-1]==='}'){s=s.slice(1,-1).trim(); arr=true} if(s[0]==='=') s=s.slice(1); return {s,arr}};
+const CMP=['=','<>','<','>','<=','>='];
+/* 함수마다 받을 수 있는 인수의 수 (엑셀은 모자라거나 넘치면 수식을 받아 주지 않아요) */
+const AR={}; `IF:2-3 IFS:2- AND:1- OR:1- XOR:1- NOT:1 IFERROR:2 IFNA:2 SWITCH:3- TRUE:0 FALSE:0
+AVERAGE:1- AVERAGEA:1- AVERAGEIF:2-3 AVERAGEIFS:3- COUNT:1- COUNTA:1- COUNTBLANK:1 COUNTIF:2 COUNTIFS:2- MAX:1- MIN:1- MAXA:1- MINA:1- MAXIFS:3- MINIFS:3- LARGE:2 SMALL:2
+RANK.EQ:2-3 RANK:2-3 RANK.AVG:2-3 MEDIAN:1- MODE.SNGL:1- MODE:1- STDEV.S:1- STDEV:1- STDEV.P:1- STDEVP:1- VAR.S:1- VAR:1- VAR.P:1- VARP:1- PERCENTILE.INC:2 PERCENTILE:2 QUARTILE.INC:2 QUARTILE:2 FREQUENCY:2 GEOMEAN:1- HARMEAN:1-
+SUM:1- SUMIF:2-3 SUMIFS:3- SUMPRODUCT:1- SUMSQ:1- PRODUCT:1- ROUND:2 ROUNDUP:2 ROUNDDOWN:2 TRUNC:1-2 INT:1 MOD:2 QUOTIENT:2 ABS:1 SIGN:1 SQRT:1 POWER:2 EXP:1 LN:1 LOG:1-2 LOG10:1 PI:0 FACT:1 CEILING:2 FLOOR:2 MROUND:2 EVEN:1 ODD:1 RAND:0 RANDBETWEEN:2 GCD:1- LCM:1-
+LEFT:1-2 RIGHT:1-2 MID:3 LEN:1 LOWER:1 UPPER:1 PROPER:1 TRIM:1 REPT:2 EXACT:2 FIND:2-3 SEARCH:2-3 REPLACE:4 SUBSTITUTE:3-4 CONCAT:1- CONCATENATE:1- TEXTJOIN:3- VALUE:1 TEXT:2 FIXED:1-3 CHAR:1 CODE:1 T:1 N:1
+TODAY:0 NOW:0 YEAR:1 MONTH:1 DAY:1 HOUR:1 MINUTE:1 SECOND:1 DATE:3 TIME:3 DATEVALUE:1 TIMEVALUE:1 DAYS:2 WEEKDAY:1-2 WEEKNUM:1-2 EDATE:2 EOMONTH:2 WORKDAY:2-3 NETWORKDAYS:2-3 DATEDIF:3
+VLOOKUP:3-4 HLOOKUP:3-4 LOOKUP:2-3 MATCH:2-3 INDEX:2-3 CHOOSE:2- ROW:0-1 COLUMN:0-1 ROWS:1 COLUMNS:1 OFFSET:3-5 INDIRECT:1-2 ADDRESS:2-5 TRANSPOSE:1 XLOOKUP:3-6 XMATCH:2-4
+DSUM:3 DAVERAGE:3 DCOUNT:3 DCOUNTA:3 DMAX:3 DMIN:3 DGET:3 DPRODUCT:3 DSTDEV:3 DVAR:3
+ISBLANK:1 ISERROR:1 ISERR:1 ISNA:1 ISNUMBER:1 ISTEXT:1 ISNONTEXT:1 ISLOGICAL:1 ISODD:1 ISEVEN:1 TYPE:1 NA:0 ERROR.TYPE:1 PMT:3-5 FV:3-5 PV:3-5 NPV:2- SLN:3 SYD:4`.split(/\s+/).forEach(x=>{const [n,r]=x.split(':'), p=r.split('-'); AR[n]=[+p[0],p.length===1?+p[0]:p[1]===''?99:+p[1]]});
+function parse(src){
+ const s=body(src).s, t=lex(s); let i=0;
+ if(!t.length) throw new PErr('= 뒤에 식을 써요',0);
+ const isOp=v=>i<t.length&&t[i].k==='op'&&t[i].v===v, eat=v=>isOp(v)?(i++,true):false;
+ const need=v=>{if(!eat(v)) throw new PErr(isOp(';')?'인수는 쉼표(,)로 나눠요. ; 는 배열 상수 { } 안에서만 써요':v===')'?'닫는 괄호 ) 가 모자라요':`'${v}' 가 와야 할 자리예요`,i<t.length?t[i].p:s.length)};
+ const bin=(next,ops)=>()=>{let l=next(); while(i<t.length&&t[i].k==='op'&&ops.includes(t[i].v)){const op=t[i++].v; l={t:'bin',op,l,r:next()}} return l};
+ function unary(){if(isOp('-')||isOp('+')){const op=t[i++].v; return {t:'un',op,x:unary()}} let x=primary(); while(eat('%')) x={t:'pct',x}; return x}
+ const pow=bin(unary,['^']), mul=bin(pow,['*','/']), add=bin(mul,['+','-']), cat=bin(add,['&']), expr=bin(cat,CMP);
+ function konst(){const neg=eat('-'), o=t[i++]; if(!o||!['num','str','bool','err'].includes(o.k)||(neg&&o.k!=='num')) throw new PErr('배열 상수 { } 안에는 숫자, 글자, TRUE/FALSE만 써요',o?o.p:s.length); return o.k==='err'?{t:'err',v:o.v}:{t:o.k,v:neg?-o.v:o.v}}
+ function primary(){
+  const o=t[i]; if(!o) throw new PErr('수식이 중간에서 끝났어요. 뒤에 값이나 셀 주소가 와야 해요',s.length);
+  i++;
+  if(o.k==='num'||o.k==='str'||o.k==='bool') return {t:o.k,v:o.v};
+  if(o.k==='err') return {t:'err',v:o.v};
+  if(o.k==='name') return {t:'name',n:o.v};
+  if(o.k==='ref'){const a=addr(o.v); if(isOp(':')&&t[i+1]&&t[i+1].k==='ref'){const b=addr(t[i+1].v); i+=2; return {t:'rng',a,b}} return {t:'ref',a}}
+  if(o.k==='fn'){need('('); const args=[]; if(!eat(')')) for(;;){args.push(isOp(',')||isOp(')')?{t:'miss'}:expr()); if(eat(',')) continue; need(')'); break}
+   const ar=AR[o.v]; if(ar&&(args.length<ar[0]||args.length>ar[1])) throw new PErr(`${o.v} 함수의 인수는 ${ar[0]===ar[1]?ar[0]+'개여야':ar[1]===99?ar[0]+'개 이상이어야':ar[0]+'~'+ar[1]+'개여야'} 해요. 지금은 ${args.length}개예요. 쉼표와 괄호의 자리를 확인해요`,o.p);
+   return {t:'fn',n:o.v,args}}
+  if(o.v==='('){const x=expr(); need(')'); return x}
+  if(o.v==='{'){const rows=[[]]; for(;;){rows[rows.length-1].push(konst()); if(eat(',')) continue; if(eat(';')){rows.push([]); continue} need('}'); break} if(rows.some(r=>r.length!==rows[0].length)) throw new PErr('배열 상수의 줄마다 개수가 같아야 해요',o.p); return {t:'arr',rows}}
+  throw new PErr(o.v===')'?'괄호 안이 비었거나 닫는 괄호가 너무 일러요':o.v===','?'쉼표 앞에 값이 빠졌어요':`'${o.v}' 자리에는 값이나 셀 주소가 와야 해요`,o.p);
+ }
+ const ast=expr();
+ if(i<t.length){const o=t[i]; throw new PErr(o.k==='op'&&o.v===')'?'닫는 괄호 ) 가 너무 많아요':o.k==='op'&&o.v===','?'쉼표는 함수의 괄호 안에서만 써요':o.k==='op'&&o.v===':'?': 은 셀 주소 두 개 사이에만 써요 (예: A2:A9)':'연산자나 쉼표가 빠졌어요',o.p)}
+ return ast;
+}
+const PC=new Map();
+const parseC=src=>{let a=PC.get(src); if(!a){a=parse(src); if(PC.size>600) PC.clear(); PC.set(src,a)} return a};
+/* 괄호가 덜 닫혔으면 채워요(엑셀도 고쳐 주겠다고 물어봐요) */
+function fixParens(src){let s=tidy(src), d=0, q=false; for(const ch of s){if(ch==='"') q=!q; else if(!q){if(ch==='(') d++; else if(ch===')') d--}} if(q||d<=0) return {s,added:0}; const arr=/^\s*\{/.test(s)&&/\}\s*$/.test(s); return {s:arr?s.replace(/\}\s*$/,')'.repeat(d)+'}'):s+')'.repeat(d),added:d}}
+function check(src){   // {ok, s(고친 글), added, msg, pos}
+ let f=fixParens(src); try{parse(f.s); return {ok:true,s:f.s,added:f.added}}catch(e){if(!(e instanceof PErr)) throw e; const lead=tidy(src).length-tidy(src).trimStart().length+(/^\s*\{?\s*=/.exec(tidy(src))||[''])[0].length; return {ok:false,s:tidy(src),msg:e.message,pos:e.pos+lead}}
+}
+function refTokens(src){   // 수식 글자 안의 셀 주소 자리: [{p,q,v}] (원래 글자 기준)
+ const raw=tidy(src), m=/^\s*\{?\s*=?/.exec(raw)[0].length; let t; try{t=lex(raw.slice(m).replace(/\}\s*$/,''))}catch(e){return []}
+ return t.filter(x=>x.k==='ref').map(x=>({p:x.p+m,q:x.q+m,v:x.v}));
+}
+function fnNames(src){try{return [...new Set(lex(body(src).s).filter(x=>x.k==='fn').map(x=>x.v))]}catch(e){return []}}
+function shift(src,dr,dc){   // 채우기 핸들: $ 가 없는 행·열만 따라 움직여요
+ const raw=tidy(src), rt=refTokens(raw); let out='', at=0;
+ for(const x of rt){const a=addr(x.v), r=a.ar?a.r:a.r+dr, c=a.ac?a.c:a.c+dc; out+=raw.slice(at,x.p)+(r<1||c<1||c>702?'#REF!':(a.ac?'$':'')+colName(c)+(a.ar?'$':'')+r); at=x.q}
+ return out+raw.slice(at);
+}
+function cycleRef(src,pos){   // F4: 커서가 닿은 주소(범위면 양 끝 모두)의 $ 를 돌려요  A1 → $A$1 → A$1 → $A1 → A1
+ const raw=String(src), rt=refTokens(raw); let i=rt.findIndex(x=>pos>=x.p&&pos<=x.q); if(i<0){i=-1; for(let k=0;k<rt.length;k++) if(rt[k].q<=pos) i=k; if(i<0) return null}
+ let a=i, b=i; if(rt[i+1]&&raw.slice(rt[i].q,rt[i+1].p).trim()===':') b=i+1; else if(rt[i-1]&&raw.slice(rt[i-1].q,rt[i].p).trim()===':') a=i-1;
+ const first=addr(rt[a].v), st=first.ac&&first.ar?1:!first.ac&&first.ar?2:first.ac&&!first.ar?3:0, nx=(st+1)%4, ac=nx===1||nx===3, ar=nx===1||nx===2;
+ let out=raw, delta=0;
+ for(let k=a;k<=b;k++){const m=addr(rt[k].v), s=(ac?'$':'')+colName(m.c)+(ar?'$':'')+m.r; out=out.slice(0,rt[k].p+delta)+s+out.slice(rt[k].q+delta); delta+=s.length-(rt[k].q-rt[k].p)}
+ return {s:out,p:rt[a].p,q:rt[b].q+delta};
+}
+
+/* ---------- 값 바꾸기 ---------- */
+const D0=25569, DAY=86400000;                                   // 1970-01-01 의 일련번호
+const ymd=(y,m,d)=>Math.round(Date.UTC(y,m-1,d)/DAY)+D0;
+const dOf=s=>new Date((Math.floor(s+1e-9)-D0)*DAY);
+const parts=s=>{const d=dOf(s); return [d.getUTCFullYear(),d.getUTCMonth()+1,d.getUTCDate()]};
+const RE_DATE=/^(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})$/, RE_TIME=/^(\d{1,2}):(\d{2})(?::(\d{2}))?$/;
+function dateOf(s){const m=RE_DATE.exec(s); if(!m) return null; const y=+m[1], mo=+m[2], d=+m[3]; if(mo<1||mo>12||d<1||d>31) return null; const v=ymd(y,mo,d); return parts(v)[1]===mo?v:null}
+function timeOf(s){const m=RE_TIME.exec(s); if(!m||+m[1]>23||+m[2]>59||+(m[3]||0)>59) return null; return (+m[1]*3600+ +m[2]*60+ +(m[3]||0))/86400}
+function parseNum(s){   // 글자가 숫자·백분율·날짜·시각 모양이면 숫자로
+ s=String(s).trim(); if(s==='') return null;
+ if(/^[-+]?(?:\d+\.?\d*|\.\d+)(?:[eE][-+]?\d+)?$/.test(s)) return parseFloat(s);
+ if(/^[-+]?\d{1,3}(?:,\d{3})+(?:\.\d+)?$/.test(s)) return parseFloat(s.replace(/,/g,''));
+ if(/^[-+]?(?:\d+\.?\d*|\.\d+)%$/.test(s)) return parseFloat(s)/100;
+ const d=dateOf(s); if(d!==null) return d;
+ const dt=/^(\S+)\s+(\S+)$/.exec(s); if(dt){const a=dateOf(dt[1]), b=timeOf(dt[2]); if(a!==null&&b!==null) return a+b}
+ return timeOf(s);
+}
+const p15=x=>+x.toPrecision(15);
+const toNum=v=>v===null||v===MISS?0:typeof v==='number'?v:typeof v==='boolean'?+v:isE(v)?v:(x=>x===null?EVAL:x)(parseNum(v));
+function gen(v,sig){   // 일반 서식의 숫자 글자 (sig: 칸에 보여 줄 때 소수의 유효 자릿수)
+ if(!Number.isFinite(v)) return '#NUM!'; let x=p15(v); if(sig&&!Number.isInteger(x)) x=+x.toPrecision(sig); if(x===0) return '0'; const a=Math.abs(x);
+ if(a>=1e15||a<1e-9){const [m,e]=x.toExponential(5).split('e'); return (+m)+'E'+(e[0]==='-'?'-':'+')+String(Math.abs(+e)).padStart(2,'0')}
+ return a<1e-6?x.toFixed(15).replace(/0+$/,''):String(x);
+}
+const toStr=v=>v===null||v===MISS?'':typeof v==='string'?v:typeof v==='number'?gen(v):typeof v==='boolean'?(v?'TRUE':'FALSE'):v;
+const toBool=v=>v===null||v===MISS?false:typeof v==='boolean'?v:typeof v==='number'?v!==0:isE(v)?v:/^true$/i.test(v)?true:/^false$/i.test(v)?false:EVAL;
+const eqn=(a,b)=>a===b||p15(a)===p15(b);
+const rank=v=>typeof v==='number'?1:typeof v==='string'?2:3;
+function cmpv(a,b){   // 숫자 < 글자 < 논리값. 글자는 대소문자를 가리지 않아요
+ if(a===null||a===MISS) a=typeof b==='string'?'':typeof b==='boolean'?false:0;
+ if(b===null||b===MISS) b=typeof a==='string'?'':typeof a==='boolean'?false:0;
+ const ra=rank(a), rb=rank(b); if(ra!==rb) return ra<rb?-1:1;
+ if(ra===1) return eqn(a,b)?0:a<b?-1:1;
+ if(ra===2){const x=a.toLowerCase(), y=b.toLowerCase(); return x===y?0:x<y?-1:1}
+ return a===b?0:a?1:-1;
+}
+/* ---------- 영역·배열 ---------- */
+const cellV=(g,r,c)=>g.sh.val(r,c);
+const single=g=>g.r1===g.r2&&g.c1===g.c2;
+const toArr=g=>{const a=[]; for(let r=g.r1;r<=g.r2;r++){const row=[]; for(let c=g.c1;c<=g.c2;c++) row.push(g.sh.val(r,c)); a.push(row)} return {a}};
+const asArr=v=>isR(v)?toArr(v):isA(v)?v:{a:[[v===MISS?null:v]]};
+const sc=v=>isR(v)?g1(v):isA(v)?v.a[0][0]:v;                    // 값 하나만 쓰는 자리
+const g1=g=>g.sh.val(g.r1,g.c1);
+function bc(args,fn){   // 배열이 섞이면 칸마다 따로 계산(배열 수식)
+ let R=0,C=0,any=false;
+ const xs=args.map(v=>{if(isR(v)){if(single(v)) return g1(v); v=toArr(v)} if(isA(v)){if(v.a.length===1&&v.a[0].length===1) return v.a[0][0]; any=true; R=Math.max(R,v.a.length); C=Math.max(C,v.a[0].length)} return v});
+ if(!any) return fn(...xs);
+ const out=[]; for(let i=0;i<R;i++){const row=[]; for(let j=0;j<C;j++) row.push(fn(...xs.map(v=>{if(!isA(v)) return v; const rr=v.a.length, cc=v.a[0].length, ii=rr===1?0:i, jj=cc===1?0:j; return ii<rr&&jj<cc?v.a[ii][jj]:ENA}))); out.push(row)}
+ return {a:out};
+}
+function each(args,cb){   // 모든 값을 차례로: cb(값, 직접 쓴 값인가)
+ for(const v of args){
+  if(v===MISS) continue;
+  if(isR(v)){for(let r=v.r1;r<=v.r2;r++) for(let c=v.c1;c<=v.c2;c++){const x=cb(v.sh.val(r,c),false); if(x!==undefined) return x}}
+  else if(isA(v)){for(const row of v.a) for(const e of row){const x=cb(e,false); if(x!==undefined) return x}}
+  else{const x=cb(v,true); if(x!==undefined) return x}
+ }
+}
+function nums(args,loose){   // 범위 안에서는 숫자만, 직접 쓴 값은 숫자로 바꿔서. loose 면 범위의 글자 0·논리값 1/0 도 셈
+ const o=[]; const err=each(args,(v,dir)=>{
+  if(isE(v)) return v;
+  if(typeof v==='number') o.push(v);
+  else if(dir){if(v===null) o.push(0); else{const n=toNum(v); if(isE(n)) return n; o.push(n)}}
+  else if(loose&&v!==null) o.push(typeof v==='boolean'?+v:0);
+ });
+ return err||o;
+}
+const N=f=>(args,cx)=>{const n=nums(args); return isE(n)?n:f(n,args,cx)};
+const sum=a=>{let s=0; for(const x of a) s+=x; return s};
+
+/* ---------- 조건 글자 (">=80", "영업*") ---------- */
+const wild=p=>new RegExp('^'+p.replace(/[.+^${}()|[\]\\]/g,'\\$&').replace(/~\*/g,'\u0001').replace(/~\?/g,'\u0002').replace(/\*/g,'[\\s\\S]*').replace(/\?/g,'[\\s\\S]').replace(/\u0001/g,'\\*').replace(/\u0002/g,'\\?')+'$','i');
+function mkCrit(c,db){   // db: 고급 필터·D함수 조건(글자는 '그 글자로 시작'이면 맞음)
+ if(isE(c)) return v=>isE(v)&&v.e===c.e;
+ if(c===null||c===MISS) return db?()=>true:v=>v===0;
+ if(typeof c==='boolean') return v=>v===c;
+ if(typeof c==='number') return v=>typeof v==='number'?eqn(v,c):typeof v==='string'&&parseNum(v)===c;
+ const m=/^(<=|>=|<>|=|<|>)?([\s\S]*)$/.exec(c), op=m[1]||'', s=m[2], n=parseNum(s), b=/^true$/i.test(s)?true:/^false$/i.test(s)?false:null;
+ if(op===''||op==='='){
+  if(s==='') return op==='='?v=>v===null:v=>v===null||v==='';
+  if(n!==null) return v=>typeof v==='number'?eqn(v,n):typeof v==='string'&&(parseNum(v)===n||v.toLowerCase()===s.toLowerCase());
+  if(b!==null) return v=>v===b||(typeof v==='string'&&v.toLowerCase()===s.toLowerCase());
+  const re=wild(db&&op===''?s+'*':s); return v=>typeof v==='string'&&re.test(v);
+ }
+ if(op==='<>'){
+  if(s==='') return v=>v!==null&&v!=='';
+  if(n!==null) return v=>!(typeof v==='number'&&eqn(v,n));
+  const re=wild(s); return v=>!(typeof v==='string'&&re.test(v));
+ }
+ const t=x=>op==='<'?x<0:op==='>'?x>0:op==='<='?x<=0:x>=0;
+ if(n!==null) return v=>typeof v==='number'&&t(eqn(v,n)?0:v<n?-1:1);
+ const ls=s.toLowerCase(); return v=>typeof v==='string'&&t(v.toLowerCase()===ls?0:v.toLowerCase()<ls?-1:1);
+}
+const dims=g=>[g.r2-g.r1+1,g.c2-g.c1+1];
+function ifs(pairs,n){   // 조건 범위들이 모두 맞는 자리(i,j)를 돌려줘요
+ const g0=pairs[0][0]; if(!pairs.every(p=>isR(p[0]))) return EVAL; const [R,C]=dims(g0);
+ if(pairs.some(p=>{const d=dims(p[0]); return d[0]!==R||d[1]!==C})) return EVAL;
+ const pr=pairs.map(p=>mkCrit(sc(p[1]))), hit=[];
+ for(let i=0;i<R;i++) for(let j=0;j<C;j++) if(pairs.every((p,k)=>pr[k](p[0].sh.val(p[0].r1+i,p[0].c1+j)))) hit.push([i,j]);
+ return hit;
+}
+const pairsOf=a=>{const o=[]; for(let i=0;i+1<a.length;i+=2) o.push([a[i],a[i+1]]); return o};
+function pick(hit,g,R,C){   // 맞는 자리의 숫자들. 범위 크기가 다르면 왼쪽 위를 맞춰서 읽어요
+ const o=[]; for(const [i,j] of hit){const v=g.sh.val(g.r1+i,g.c1+j); if(isE(v)) return v; if(typeof v==='number') o.push(v)} return o;
+}
+
+/* ---------- 계산 ---------- */
+function arith(op,a,b){
+ if(isE(a)) return a; if(isE(b)) return b;
+ const x=toNum(a), y=toNum(b); if(isE(x)) return x; if(isE(y)) return y;
+ if(op==='+') return x+y; if(op==='-') return x-y; if(op==='*') return x*y;
+ if(op==='/') return y===0?EDIV:x/y;
+ if(x===0&&y===0) return ENUM; if(x===0&&y<0) return EDIV;
+ const r=Math.pow(x,y); return Number.isFinite(r)?r:ENUM;
+}
+function binop(op,l,r){
+ if(op==='&') return bc([l,r],(a,b)=>isE(a)?a:isE(b)?b:toStr(a)+toStr(b));
+ if(CMP.includes(op)) return bc([l,r],(a,b)=>{if(isE(a)) return a; if(isE(b)) return b; const c=cmpv(a,b); return op==='='?c===0:op==='<>'?c!==0:op==='<'?c<0:op==='>'?c>0:op==='<='?c<=0:c>=0});
+ return bc([l,r],(a,b)=>arith(op,a,b));
+}
+const FN={}, NOFN=new Set(['MMULT','MINVERSE','MDETERM','CELL','AREAS','RATE','NPER','IRR','DB','DDB','YEARFRAC','DAYS360','HYPERLINK','GETPIVOTDATA','FILTER','SORT','UNIQUE','SEQUENCE','LET','LAMBDA']);
+function ev(n,cx){
+ switch(n.t){
+  case 'num': case 'str': case 'bool': return n.v;
+  case 'err': return ERRS[n.v]||EVAL;
+  case 'miss': return MISS;
+  case 'name': return ENAME;
+  case 'ref': {const r=n.a.ar?n.a.r:n.a.r+cx.dr, c=n.a.ac?n.a.c:n.a.c+cx.dc; return r<1||c<1?EREF:{sh:cx.sh,r1:r,c1:c,r2:r,c2:c}}
+  case 'rng': {const r1=n.a.ar?n.a.r:n.a.r+cx.dr, c1=n.a.ac?n.a.c:n.a.c+cx.dc, r2=n.b.ar?n.b.r:n.b.r+cx.dr, c2=n.b.ac?n.b.c:n.b.c+cx.dc; if(Math.min(r1,r2,c1,c2)<1) return EREF; return {sh:cx.sh,r1:Math.min(r1,r2),c1:Math.min(c1,c2),r2:Math.max(r1,r2),c2:Math.max(c1,c2)}}
+  case 'arr': return {a:n.rows.map(r=>r.map(x=>ev(x,cx)))};
+  case 'un': return bc([ev(n.x,cx)],a=>{if(isE(a)) return a; const v=toNum(a); return isE(v)?v:n.op==='-'?-v:v});
+  case 'pct': return bc([ev(n.x,cx)],a=>{if(isE(a)) return a; const v=toNum(a); return isE(v)?v:v/100});
+  case 'bin': return binop(n.op,ev(n.l,cx),ev(n.r,cx));
+  case 'fn': {const f=FN[n.n]; if(!f) return NOFN.has(n.n)?ENO:ENAME; try{return f(n.args.map(a=>ev(a,cx)),cx)}catch(e){if(isE(e)) return e; throw e}}
+ }
+ return EVAL;
+}
+const top=v=>{v=sc(v); return v===null||v===MISS?0:v};
+const def=(names,f)=>names.split(' ').forEach(n=>FN[n]=f);
+const nn=v=>{if(isE(v)) throw v; const n=toNum(v); if(isE(n)) throw n; return n};          // 숫자가 아니면 #VALUE!
+const has=(a,i)=>a[i]!==undefined&&a[i]!==MISS;
+const S=f=>(args,cx)=>bc(args,(...a)=>{for(const x of a) if(isE(x)) return x; try{return f(a,cx)}catch(e){if(isE(e)) return e; throw e}});   // 값 하나씩 받는 함수
+const st=toStr;
+
+/* 수학 */
+const rnd=(x,d,m)=>{d=Math.trunc(d); const k=Math.pow(10,d), y=p15(Math.abs(x)*k), f=m===0?Math.floor(y+0.5):m>0?Math.ceil(y):Math.floor(y); return (x<0?-1:1)*p15(f/k)||0};
+def('ROUND',S(a=>rnd(nn(a[0]),has(a,1)?nn(a[1]):0,0)));
+def('ROUNDUP',S(a=>rnd(nn(a[0]),has(a,1)?nn(a[1]):0,1)));
+def('ROUNDDOWN TRUNC',S(a=>rnd(nn(a[0]),has(a,1)?nn(a[1]):0,-1)));
+def('INT',S(a=>Math.floor(p15(nn(a[0])))));
+def('MOD',S(a=>{const n=nn(a[0]), d=nn(a[1]); return d===0?EDIV:p15(n-d*Math.floor(n/d))||0}));
+def('QUOTIENT',S(a=>{const n=nn(a[0]), d=nn(a[1]); return d===0?EDIV:Math.trunc(n/d)}));
+def('ABS',S(a=>Math.abs(nn(a[0])))); def('SIGN',S(a=>Math.sign(nn(a[0]))));
+def('SQRT',S(a=>{const x=nn(a[0]); return x<0?ENUM:Math.sqrt(x)}));
+def('POWER',S(a=>arith('^',nn(a[0]),nn(a[1]))));
+def('EXP',S(a=>Math.exp(nn(a[0])))); def('PI',()=>Math.PI);
+def('LN',S(a=>{const x=nn(a[0]); return x<=0?ENUM:Math.log(x)}));
+def('LOG10',S(a=>{const x=nn(a[0]); return x<=0?ENUM:Math.log10(x)}));
+def('LOG',S(a=>{const x=nn(a[0]), b=has(a,1)?nn(a[1]):10; return x<=0||b<=0?ENUM:b===1?EDIV:Math.log(x)/Math.log(b)}));
+def('FACT',S(a=>{const x=Math.floor(nn(a[0])); if(x<0||x>170) return ENUM; let f=1; for(let i=2;i<=x;i++) f*=i; return f}));
+def('CEILING',S(a=>{const x=nn(a[0]), s=has(a,1)?nn(a[1]):1; return s===0?0:x>0&&s<0?ENUM:p15(Math.ceil(p15(x/s))*s)}));
+def('FLOOR',S(a=>{const x=nn(a[0]), s=has(a,1)?nn(a[1]):1; return s===0?(x===0?0:EDIV):x>0&&s<0?ENUM:p15(Math.floor(p15(x/s))*s)}));
+def('MROUND',S(a=>{const x=nn(a[0]), s=nn(a[1]); return s===0?0:x*s<0?ENUM:p15(Math.floor(p15(Math.abs(x/s))+0.5)*Math.abs(s)*Math.sign(x))}));
+def('EVEN',S(a=>{const x=nn(a[0]), y=Math.ceil(p15(Math.abs(x)/2))*2; return x<0?-y:y}));
+def('ODD',S(a=>{const x=nn(a[0]); let y=Math.ceil(p15(Math.abs(x))); if(y%2===0) y++; return x<0?-y:y}));
+def('RAND',()=>Math.random());
+def('RANDBETWEEN',S(a=>{const lo=Math.ceil(nn(a[0])), hi=Math.floor(nn(a[1])); return lo>hi?ENUM:lo+Math.floor(Math.random()*(hi-lo+1))}));
+def('SUM',N(n=>p15(sum(n))));
+def('SUMSQ',N(n=>sum(n.map(x=>x*x))));
+def('PRODUCT',N(n=>n.length?n.reduce((x,y)=>x*y,1):0));
+def('SUMPRODUCT',args=>{const A=args.filter(x=>x!==MISS).map(asArr), R=A[0].a.length, C=A[0].a[0].length; if(A.some(x=>x.a.length!==R||x.a[0].length!==C)) return EVAL; let s=0; for(let i=0;i<R;i++) for(let j=0;j<C;j++){let p=1; for(const x of A){const v=x.a[i][j]; if(isE(v)) return v; p*=typeof v==='number'?v:0} s+=p} return p15(s)});
+const gcd=(x,y)=>{while(y){[x,y]=[y,x%y]} return x};
+def('GCD',N(n=>n.some(x=>x<0)?ENUM:n.map(Math.floor).reduce(gcd,0)));
+def('LCM',N(n=>n.some(x=>x<0)?ENUM:n.map(Math.floor).reduce((x,y)=>x&&y?x/gcd(x,y)*y:0,1)));
+
+/* 통계 */
+def('AVERAGE',N(n=>n.length?sum(n)/n.length:EDIV));
+def('MAX',N(n=>n.length?Math.max(...n):0)); def('MIN',N(n=>n.length?Math.min(...n):0));
+const NA_=f=>args=>{const n=nums(args,true); return isE(n)?n:f(n)};
+def('AVERAGEA',NA_(n=>n.length?sum(n)/n.length:EDIV)); def('MAXA',NA_(n=>n.length?Math.max(...n):0)); def('MINA',NA_(n=>n.length?Math.min(...n):0));
+def('COUNT',args=>{let k=0; each(args,(v,dir)=>{if(typeof v==='number'||(dir&&(typeof v==='boolean'||(typeof v==='string'&&parseNum(v)!==null)))) k++}); return k});
+def('COUNTA',args=>{let k=0; each(args,v=>{if(v!==null) k++}); return k});
+def('COUNTBLANK',args=>{let k=0; each(args,v=>{if(v===null||v==='') k++}); return k});
+const sumOr=(h,g)=>{if(isE(h)) return h; if(!isR(g)) return EVAL; return pick(h,g)};
+def('COUNTIF',a=>{const h=ifs([[a[0],a[1]]]); return isE(h)?h:h.length});
+def('COUNTIFS',a=>{const h=ifs(pairsOf(a)); return isE(h)?h:h.length});
+def('SUMIF',a=>{const n=sumOr(ifs([[a[0],a[1]]]),has(a,2)?a[2]:a[0]); return isE(n)?n:p15(sum(n))});
+def('AVERAGEIF',a=>{const n=sumOr(ifs([[a[0],a[1]]]),has(a,2)?a[2]:a[0]); return isE(n)?n:n.length?sum(n)/n.length:EDIV});
+const sameDim=(g,h)=>isR(g)&&isR(h)&&dims(g)+''===dims(h)+'';
+const IFS_=f=>a=>{if(a.length<3||!sameDim(a[0],a[1])) return EVAL; const n=sumOr(ifs(pairsOf(a.slice(1))),a[0]); return isE(n)?n:f(n)};
+def('SUMIFS',IFS_(n=>p15(sum(n)))); def('AVERAGEIFS',IFS_(n=>n.length?sum(n)/n.length:EDIV));
+def('MAXIFS',IFS_(n=>n.length?Math.max(...n):0)); def('MINIFS',IFS_(n=>n.length?Math.min(...n):0));
+const kth=desc=>a=>{const n=nums([a[0]]); if(isE(n)) return n; n.sort((x,y)=>desc?y-x:x-y); return bc([a[1]],k0=>{if(isE(k0)) return k0; const k=toNum(k0); if(isE(k)) return k; return k<1||k>n.length?ENUM:n[Math.ceil(k)-1]})};   // k 자리에 {1,2,3} 같은 배열 상수도 받아요
+def('LARGE',kth(true)); def('SMALL',kth(false));
+def('RANK.EQ RANK',a=>bc([a[0]],x0=>{const x=nn(x0), n=nums([a[1]]); if(isE(n)) return n; const asc=has(a,2)&&nn(sc(a[2]))!==0; if(!n.some(v=>eqn(v,x))) return ENA; return 1+n.filter(v=>!eqn(v,x)&&(asc?v<x:v>x)).length}));
+def('RANK.AVG',a=>bc([a[0]],x0=>{const x=nn(x0), n=nums([a[1]]); if(isE(n)) return n; const asc=has(a,2)&&nn(sc(a[2]))!==0, same=n.filter(v=>eqn(v,x)).length; if(!same) return ENA; return 1+n.filter(v=>!eqn(v,x)&&(asc?v<x:v>x)).length+(same-1)/2}));
+def('MEDIAN',N(n=>{if(!n.length) return ENUM; n.sort((x,y)=>x-y); const m=n.length>>1; return n.length%2?n[m]:(n[m-1]+n[m])/2}));
+def('MODE.SNGL MODE',N(n=>{const c=new Map(); let best=null, bc_=1; for(const x of n){const k=(c.get(x)||0)+1; c.set(x,k)} for(const x of n){const k=c.get(x); if(k>bc_){bc_=k; best=x}} return best===null?ENA:best}));
+const varOf=(n,pop)=>{const m=sum(n)/n.length; return sum(n.map(x=>(x-m)*(x-m)))/(n.length-(pop?0:1))};
+def('VAR.S VAR',N(n=>n.length<2?EDIV:varOf(n,false))); def('VAR.P VARP',N(n=>n.length<1?EDIV:varOf(n,true)));
+def('STDEV.S STDEV',N(n=>n.length<2?EDIV:Math.sqrt(varOf(n,false)))); def('STDEV.P STDEVP',N(n=>n.length<1?EDIV:Math.sqrt(varOf(n,true))));
+const pct=(n,k)=>{if(!n.length||k<0||k>1) return ENUM; n.sort((x,y)=>x-y); const p=k*(n.length-1), i=Math.floor(p), f=p-i; return i+1<n.length?n[i]+f*(n[i+1]-n[i]):n[i]};
+def('PERCENTILE.INC PERCENTILE',a=>{const n=nums([a[0]]); return isE(n)?n:pct(n,nn(sc(a[1])))});
+def('QUARTILE.INC QUARTILE',a=>{const n=nums([a[0]]); if(isE(n)) return n; const q=Math.floor(nn(sc(a[1]))); return q<0||q>4?ENUM:pct(n,q/4)});
+def('GEOMEAN',N(n=>!n.length||n.some(x=>x<=0)?ENUM:Math.exp(sum(n.map(Math.log))/n.length)));
+def('HARMEAN',N(n=>!n.length||n.some(x=>x<=0)?ENUM:n.length/sum(n.map(x=>1/x))));
+def('FREQUENCY',a=>{const d=nums([a[0]]), b=nums([a[1]]); if(isE(d)) return d; if(isE(b)) return b; const bs=b.slice().sort((x,y)=>x-y), out=bs.map(()=>0).concat([0]); for(const x of d){let i=bs.findIndex(v=>x<=v); out[i<0?bs.length:i]++} const ord=b.map(v=>bs.indexOf(v)); return {a:b.map((v,i)=>[out[ord[i]]]).concat([[out[bs.length]]])}});
+
+/* 논리 */
+def('IF',a=>bc(a.slice(0,3),(c,x,y)=>{if(isE(c)) return c; const b=toBool(c); if(isE(b)) return b; return b?(x===undefined?true:x===MISS?0:x):(y===undefined?false:y===MISS?0:y)}));
+const logic=args=>{const o=[]; const e=each(args,(v,dir)=>{if(isE(v)) return v; if(typeof v==='boolean') o.push(v); else if(typeof v==='number') o.push(v!==0); else if(dir&&typeof v==='string'){const b=toBool(v); if(isE(b)) return b; o.push(b)}}); return e||(o.length?o:EVAL)};
+def('AND',a=>{const o=logic(a); return isE(o)?o:o.every(Boolean)});
+def('OR',a=>{const o=logic(a); return isE(o)?o:o.some(Boolean)});
+def('XOR',a=>{const o=logic(a); return isE(o)?o:o.filter(Boolean).length%2===1});
+def('NOT',S(a=>{const b=toBool(a[0]); return isE(b)?b:!b}));
+def('TRUE',()=>true); def('FALSE',()=>false);
+def('IFERROR',a=>bc([a[0],has(a,1)?a[1]:MISS],(v,alt)=>isE(v)?(alt===MISS?0:alt):v));
+def('IFNA',a=>bc([a[0],has(a,1)?a[1]:MISS],(v,alt)=>isE(v)&&v.e==='#N/A'?(alt===MISS?0:alt):v));
+def('IFS',a=>bc(a,(...x)=>{for(let i=0;i+1<x.length;i+=2){const c=x[i]; if(isE(c)) return c; const b=toBool(c); if(isE(b)) return b; if(b) return x[i+1]===MISS?0:x[i+1]} return ENA}));
+def('SWITCH',a=>bc(a,(...x)=>{const v=x[0]; if(isE(v)) return v; let i=1; for(;i+1<x.length;i+=2){const k=x[i]; if(!isE(k)&&k!==null&&v!==null&&rank(k)===rank(v)&&cmpv(v,k)===0) return x[i+1]} return i<x.length?x[i]:ENA}));
+
+/* 글자 */
+const cnt=(a,i,d)=>{const n=has(a,i)?nn(a[i]):d; if(n<0) throw EVAL; return Math.floor(n)};
+def('LEFT',S(a=>st(a[0]).slice(0,cnt(a,1,1))));
+def('RIGHT',S(a=>{const s=st(a[0]), n=cnt(a,1,1); return n>=s.length?s:s.slice(s.length-n)}));
+def('MID',S(a=>{const s=st(a[0]), p=Math.floor(nn(a[1])), n=cnt(a,2,0); if(p<1) return EVAL; return s.substr(p-1,n)}));
+def('LEN',S(a=>st(a[0]).length));
+def('LOWER',S(a=>st(a[0]).toLowerCase())); def('UPPER',S(a=>st(a[0]).toUpperCase()));
+def('PROPER',S(a=>st(a[0]).toLowerCase().replace(/(^|[^a-z])([a-z])/g,(m,p,c)=>p+c.toUpperCase())));
+def('TRIM',S(a=>st(a[0]).replace(/^ +| +$/g,'').replace(/ {2,}/g,' ')));
+def('REPT',S(a=>st(a[0]).repeat(cnt(a,1,0))));
+def('EXACT',S(a=>st(a[0])===st(a[1])));
+def('FIND',S(a=>{const f=st(a[0]), w=st(a[1]), p=has(a,2)?Math.floor(nn(a[2])):1; if(p<1||p>w.length+1) return EVAL; const i=w.indexOf(f,p-1); return i<0?EVAL:i+1}));
+def('SEARCH',S(a=>{const f=st(a[0]), w=st(a[1]), p=has(a,2)?Math.floor(nn(a[2])):1; if(p<1||p>w.length+1) return EVAL; const re=new RegExp(wild(f).source.slice(1,-1),'i'), m=re.exec(w.slice(p-1)); return m?m.index+p:EVAL}));
+def('REPLACE',S(a=>{const s=st(a[0]), p=Math.floor(nn(a[1])), n=cnt(a,2,0); if(p<1) return EVAL; return s.slice(0,p-1)+st(a[3])+s.slice(p-1+n)}));
+def('SUBSTITUTE',S(a=>{const s=st(a[0]), o=st(a[1]), w=st(a[2]); if(o==='') return s; if(!has(a,3)) return s.split(o).join(w); const k=Math.floor(nn(a[3])); if(k<1) return EVAL; let i=-o.length; for(let c=0;c<k;c++){i=s.indexOf(o,i+o.length); if(i<0) return s} return s.slice(0,i)+w+s.slice(i+o.length)}));
+const joinAll=args=>{let s=''; const e=each(args,v=>{if(isE(v)) return v; s+=toStr(v)}); return e||s};
+def('CONCAT CONCATENATE',joinAll);
+def('TEXTJOIN',a=>{const d=st(sc(a[0])), ig=toBool(sc(a[1])); if(isE(ig)) return ig; const o=[]; const e=each(a.slice(2),v=>{if(isE(v)) return v; const s=toStr(v); if(!(ig&&s==='')) o.push(s)}); return e||o.join(d)});
+def('VALUE',S(a=>typeof a[0]==='number'?a[0]:typeof a[0]==='string'?(x=>x===null?EVAL:x)(parseNum(a[0])):a[0]===null?0:EVAL));
+def('TEXT',S(a=>fmtText(a[0]===null?0:a[0],st(a[1]))));
+def('FIXED',S(a=>{const d=has(a,1)?Math.trunc(nn(a[1])):2, x=rnd(nn(a[0]),d,0), nc=has(a,2)&&toBool(a[2])===true; return (x<0?'-':'')+fmtNum(Math.abs(x),(nc?'0':'#,##0')+(d>0?'.'+'0'.repeat(d):''))}));
+def('CHAR',S(a=>{const n=Math.floor(nn(a[0])); return n<1||n>255?EVAL:String.fromCharCode(n)}));
+def('CODE',S(a=>{const s=st(a[0]); return s===''?EVAL:s.charCodeAt(0)}));
+def('T',a=>{const v=sc(a[0]); return isE(v)?v:typeof v==='string'?v:''});
+def('N',a=>{const v=sc(a[0]); return isE(v)?v:typeof v==='number'?v:v===true?1:0});
+
+/* 날짜와 시간 */
+const ser=v=>{const n=nn(v); if(n<0) throw ENUM; return n};
+const secOf=v=>Math.round((ser(v)%1)*86400);
+const nowLocal=()=>{const d=new Date(); return ymd(d.getFullYear(),d.getMonth()+1,d.getDate())+(d.getHours()*3600+d.getMinutes()*60+d.getSeconds())/86400};
+def('TODAY',(a,cx)=>cx.sh.today!=null?Math.floor(cx.sh.today):Math.floor(nowLocal()));
+def('NOW',(a,cx)=>cx.sh.today!=null?cx.sh.today:nowLocal());
+def('YEAR',S(a=>parts(ser(a[0]))[0])); def('MONTH',S(a=>parts(ser(a[0]))[1])); def('DAY',S(a=>parts(ser(a[0]))[2]));
+def('HOUR',S(a=>Math.floor(secOf(a[0])/3600)%24)); def('MINUTE',S(a=>Math.floor(secOf(a[0])/60)%60)); def('SECOND',S(a=>secOf(a[0])%60));
+def('DATE',S(a=>{let y=Math.floor(nn(a[0])); const m=Math.floor(nn(a[1])), d=Math.floor(nn(a[2])); if(y<0||y>9999) return ENUM; if(y<1900) y+=1900; const v=ymd(y,m,d); return v<0?ENUM:v}));
+def('TIME',S(a=>{const t=nn(a[0])*3600+nn(a[1])*60+nn(a[2]); return t<0?ENUM:(t%86400)/86400}));
+def('DATEVALUE',S(a=>{const d=dateOf(st(a[0]).trim()); return d===null?EVAL:d}));
+def('TIMEVALUE',S(a=>{const d=timeOf(st(a[0]).trim()); return d===null?EVAL:d}));
+def('DAYS',S(a=>Math.floor(ser(a[0]))-Math.floor(ser(a[1]))));
+def('WEEKDAY',S(a=>{const w=dOf(ser(a[0])).getUTCDay(), t=has(a,1)?Math.floor(nn(a[1])):1; if(t===1||t===17) return w+1; if(t===2||t===11) return (w+6)%7+1; if(t===3) return (w+6)%7; if(t>=12&&t<=16) return (w+7-(t-10))%7+1; return ENUM}));
+def('WEEKNUM',S(a=>{const s=Math.floor(ser(a[0])), t=has(a,1)?Math.floor(nn(a[1])):1, j1=ymd(parts(s)[0],1,1), w1=dOf(j1).getUTCDay(); if(t!==1&&t!==2&&t!==11&&t!==17) return ENUM; return Math.floor((s-j1+(t===1||t===17?w1:(w1+6)%7))/7)+1}));
+const edate=(s,k,eom)=>{const [y,m,d]=parts(s), t=y*12+(m-1)+Math.trunc(k), ny=Math.floor(t/12), nm=t%12+1, last=new Date(Date.UTC(ny,nm,0)).getUTCDate(); return ymd(ny,nm,eom?last:Math.min(d,last))};
+def('EDATE',S(a=>edate(ser(a[0]),nn(a[1]),false))); def('EOMONTH',S(a=>edate(ser(a[0]),nn(a[1]),true)));
+const holis=v=>{const H=new Set(); if(v!==undefined&&v!==MISS){const n=nums([v]); if(isE(n)) throw n; n.forEach(x=>H.add(Math.floor(x)))} return H};
+const isWork=(d,H)=>{const w=dOf(d).getUTCDay(); return w!==0&&w!==6&&!H.has(d)};
+def('WORKDAY',a=>{let d=Math.floor(ser(sc(a[0]))), n=Math.trunc(nn(sc(a[1]))); const H=holis(a[2]), stp=n<0?-1:1; while(n!==0){d+=stp; if(isWork(d,H)) n-=stp} return d});
+def('NETWORKDAYS',a=>{let s=Math.floor(ser(sc(a[0]))), e=Math.floor(ser(sc(a[1]))), sg=1; const H=holis(a[2]); if(s>e){[s,e]=[e,s]; sg=-1} let k=0; for(let d=s;d<=e;d++) if(isWork(d,H)) k++; return k*sg});
+def('DATEDIF',S(a=>{const s=Math.floor(ser(a[0])), e=Math.floor(ser(a[1])), u=st(a[2]).toUpperCase(); if(s>e) return ENUM; const [y1,m1,d1]=parts(s), [y2,m2,d2]=parts(e); const mon=(y2-y1)*12+(m2-m1)-(d2<d1?1:0);
+ if(u==='Y') return Math.floor(mon/12); if(u==='M') return mon; if(u==='D') return e-s; if(u==='YM') return mon%12;
+ if(u==='MD'){let pm=m2-(d2<d1?1:0), py=y2; if(pm<1){pm=12; py--} return e-ymd(py,pm,d1)} if(u==='YD'){let b=ymd(y2,m1,d1); if(b>e) b=ymd(y2-1,m1,d1); return e-b} return ENUM}));
+
+/* 찾기와 참조 */
+const lkEq=(v,x)=>{if(typeof x==='string'&&/[*?]/.test(x)) return typeof v==='string'&&wild(x).test(v); return v!==null&&!isE(v)&&x!==null&&rank(v)===rank(x)&&cmpv(v,x)===0};
+const approx=(vals,x,down)=>{let k=-1; for(let i=0;i<vals.length;i++){const v=vals[i]; if(v===null||isE(v)||x===null||rank(v)!==rank(x)) continue; const c=cmpv(v,x); if(down?c>=0:c<=0) k=i} return k};
+const vec=v=>{const A=asArr(v).a; return A.length===1?A[0]:A.map(r=>r[0])};
+const flag=(a,i,d)=>{if(!has(a,i)) return d; const b=toBool(sc(a[i])); if(isE(b)) throw b; return b};
+def('VLOOKUP',a=>{const x=sc(a[0]); if(isE(x)) return x; const T=asArr(a[1]).a, ci=Math.floor(nn(sc(a[2]))), ap=flag(a,3,true); if(ci<1) return EVAL; if(ci>T[0].length) return EREF; const col=T.map(r=>r[0]), k=ap?approx(col,x):col.findIndex(v=>lkEq(v,x)); return k<0?ENA:T[k][ci-1]});
+def('HLOOKUP',a=>{const x=sc(a[0]); if(isE(x)) return x; const T=asArr(a[1]).a, ri=Math.floor(nn(sc(a[2]))), ap=flag(a,3,true); if(ri<1) return EVAL; if(ri>T.length) return EREF; const k=ap?approx(T[0],x):T[0].findIndex(v=>lkEq(v,x)); return k<0?ENA:T[ri-1][k]});
+def('LOOKUP',a=>{const x=sc(a[0]); if(isE(x)) return x; const A=asArr(a[1]).a, wide=A[0].length>A.length, L=wide?A[0]:A.map(r=>r[0]), k=approx(L,x); if(k<0) return ENA; if(has(a,2)){const R=vec(a[2]); return k<R.length?R[k]:ENA} return wide?A[A.length-1][k]:A[k][A[0].length-1]});
+def('MATCH',a=>{const x=sc(a[0]); if(isE(x)) return x; const L=vec(a[1]), t=has(a,2)?nn(sc(a[2])):1, k=t===0?L.findIndex(v=>lkEq(v,x)):approx(L,x,t<0); return k<0?ENA:k+1});
+def('INDEX',a=>{const A=asArr(a[0]).a, R=A.length, C=A[0].length; let r=has(a,1)?Math.floor(nn(sc(a[1]))):0, c=has(a,2)?Math.floor(nn(sc(a[2]))):0;
+ if(a.length<3&&R===1&&C>1){c=r; r=1}
+ if(r<0||c<0||r>R||c>C) return EREF;
+ if(r===0&&c===0) return R===1&&C===1?A[0][0]:{a:A};
+ if(r===0) return R===1?A[0][c-1]:{a:A.map(row=>[row[c-1]])};
+ if(c===0) return C===1?A[r-1][0]:{a:[A[r-1]]};
+ return A[r-1][c-1]});
+def('CHOOSE',a=>{const k=Math.floor(nn(sc(a[0]))); return k<1||k>=a.length?EVAL:a[k]});
+def('ROW',(a,cx)=>{const g=a[0]; if(!has(a,0)) return cx.r; if(!isR(g)) return isE(g)?g:EVAL; if(g.r1===g.r2) return g.r1; const o=[]; for(let r=g.r1;r<=g.r2;r++) o.push([r]); return {a:o}});
+def('COLUMN',(a,cx)=>{const g=a[0]; if(!has(a,0)) return cx.c; if(!isR(g)) return isE(g)?g:EVAL; if(g.c1===g.c2) return g.c1; const o=[]; for(let c=g.c1;c<=g.c2;c++) o.push(c); return {a:[o]}});
+def('ROWS',a=>isE(a[0])?a[0]:asArr(a[0]).a.length); def('COLUMNS',a=>isE(a[0])?a[0]:asArr(a[0]).a[0].length);
+def('OFFSET',a=>{const g=a[0]; if(!isR(g)) return isE(g)?g:EVAL; const dr=Math.trunc(nn(sc(a[1]))), dc=Math.trunc(nn(sc(a[2]))), h=has(a,3)?Math.trunc(nn(sc(a[3]))):g.r2-g.r1+1, w=has(a,4)?Math.trunc(nn(sc(a[4]))):g.c2-g.c1+1, r1=g.r1+dr, c1=g.c1+dc; if(r1<1||c1<1||h<1||w<1) return EREF; return {sh:g.sh,r1,c1,r2:r1+h-1,c2:c1+w-1}});
+def('INDIRECT',(a,cx)=>{const g=rangeOf(st(sc(a[0])).trim()); return g?Object.assign({sh:cx.sh},g):EREF});
+def('ADDRESS',S(a=>{const r=Math.floor(nn(a[0])), c=Math.floor(nn(a[1])), t=has(a,2)?Math.floor(nn(a[2])):1; if(r<1||c<1||t<1||t>4) return EVAL; return (t===1||t===3?'$':'')+colName(c)+(t===1||t===2?'$':'')+r}));
+def('TRANSPOSE',a=>{const A=asArr(a[0]).a; return {a:A[0].map((_,j)=>A.map(r=>r[j]))}});
+const xfind=(L,x,mm,sm)=>{const idx=L.map((_,i)=>i); if(sm<0) idx.reverse(); let k=-1;
+ if(mm===2){const re=wild(toStr(x)); k=idx.find(i=>typeof L[i]==='string'&&re.test(L[i]))} else k=idx.find(i=>L[i]!==null&&!isE(L[i])&&x!==null&&rank(L[i])===rank(x)&&cmpv(L[i],x)===0);
+ if(k===undefined) k=-1;
+ if(k<0&&(mm===-1||mm===1)){let best=-1; L.forEach((v,i)=>{if(v===null||isE(v)||rank(v)!==rank(x)) return; const c=cmpv(v,x); if(mm<0?c<0:c>0){if(best<0||(mm<0?cmpv(v,L[best])>0:cmpv(v,L[best])<0)) best=i}}); k=best}
+ return k};
+def('XLOOKUP',a=>{const x=sc(a[0]); if(isE(x)) return x; const LA=asArr(a[1]).a, RA=asArr(a[2]).a, col=LA[0].length===1, L=col?LA.map(r=>r[0]):LA[0], mm=has(a,4)?nn(sc(a[4])):0, sm=has(a,5)?nn(sc(a[5])):1, k=xfind(L,x,mm,sm);
+ if(k<0) return has(a,3)?sc(a[3]):ENA; if(col){if(k>=RA.length) return ENA; return RA[0].length===1?RA[k][0]:{a:[RA[k]]}} if(k>=RA[0].length) return ENA; return RA.length===1?RA[0][k]:{a:RA.map(r=>[r[k]])}});
+def('XMATCH',a=>{const x=sc(a[0]); if(isE(x)) return x; const k=xfind(vec(a[1]),x,has(a,2)?nn(sc(a[2])):0,has(a,3)?nn(sc(a[3])):1); return k<0?ENA:k+1});
+
+/* 데이터베이스 함수와 고급 필터: 조건 범위의 같은 줄은 '그리고', 다른 줄은 '또는' */
+const low=v=>toStr(v).trim().toLowerCase();
+const truthy=v=>v===true||(typeof v==='number'&&v!==0);
+function dbHit(db,cr){
+ if(!isR(db)||!isR(cr)) throw EVAL;
+ const sh=db.sh, heads=[], cols=[], rows=[], r0=db.r1+1;
+ for(let c=db.c1;c<=db.c2;c++) heads.push(low(sh.val(db.r1,c)));
+ for(let c=cr.c1;c<=cr.c2;c++){const h=low(sh.val(cr.r1,c)); cols.push(h===''?-1:heads.indexOf(h))}
+ for(let r=r0;r<=db.r2;r++){
+  let any=cr.r2===cr.r1;
+  for(let q=cr.r1+1;q<=cr.r2&&!any;q++){
+   let ok=true;
+   for(let c=cr.c1;c<=cr.c2&&ok;c++){
+    const ce=sh.cell(q,c); if(!ce) continue;
+    const fi=cols[c-cr.c1];
+    if(fi>=0){const v=sh.val(q,c); if(v===null||v==='') continue; if(isE(v)) throw v; ok=mkCrit(v,true)(sh.val(r,db.c1+fi))}
+    else if(ce.ast) ok=truthy(top(ev(ce.ast,{sh,r,c,dr:r-r0,dc:0})));       // 수식 조건: 첫 자료 줄을 기준으로 쓴 수식을 줄마다 옮겨 계산
+    else{const v=sh.val(q,c); if(typeof v==='boolean') ok=v}
+   }
+   if(ok) any=true;
+  }
+  if(any) rows.push(r);
+ }
+ return rows;
+}
+function dbCol(db,f){f=sc(f); if(isE(f)) throw f; if(typeof f==='number'){const k=Math.floor(f); if(k<1||k>db.c2-db.c1+1) throw EVAL; return db.c1+k-1} const h=low(f); for(let c=db.c1;c<=db.c2;c++) if(low(db.sh.val(db.r1,c))===h) return c; throw EVAL}
+const DB=f=>a=>{const rows=dbHit(a[0],a[2]); if(!has(a,1)) return f(rows.map(()=>1),rows.map(()=>1)); const c=dbCol(a[0],a[1]), vals=rows.map(r=>a[0].sh.val(r,c)), e=vals.find(isE); return e||f(vals.filter(v=>typeof v==='number'),vals)};
+def('DSUM',DB(n=>p15(sum(n)))); def('DAVERAGE',DB(n=>n.length?sum(n)/n.length:EDIV));
+def('DCOUNT',DB(n=>n.length)); def('DCOUNTA',DB((n,v)=>v.filter(x=>x!==null).length));
+def('DMAX',DB(n=>n.length?Math.max(...n):0)); def('DMIN',DB(n=>n.length?Math.min(...n):0));
+def('DPRODUCT',DB(n=>n.length?n.reduce((x,y)=>x*y,1):0));
+def('DGET',DB((n,v)=>v.length===0?EVAL:v.length>1?ENUM:v[0]));
+def('DSTDEV',DB(n=>n.length<2?EDIV:Math.sqrt(varOf(n,false)))); def('DVAR',DB(n=>n.length<2?EDIV:varOf(n,false)));
+
+/* 정보 */
+const I=f=>a=>bc([a[0]],v=>f(v));
+def('ISBLANK',a=>{const v=a[0]; if(isR(v)&&!single(v)) return {a:toArr(v).a.map(r=>r.map(x=>x===null))}; return (isR(v)?g1(v):v)===null});
+def('ISERROR',I(isE)); def('ISERR',I(v=>isE(v)&&v.e!=='#N/A')); def('ISNA',I(v=>isE(v)&&v.e==='#N/A'));
+def('ISNUMBER',I(v=>typeof v==='number')); def('ISTEXT',I(v=>typeof v==='string')); def('ISNONTEXT',I(v=>typeof v!=='string')); def('ISLOGICAL',I(v=>typeof v==='boolean'));
+def('ISODD',S(a=>Math.abs(Math.trunc(nn(a[0])))%2===1)); def('ISEVEN',S(a=>Math.abs(Math.trunc(nn(a[0])))%2===0));
+def('TYPE',a=>{const v=a[0]; if(isA(v)||(isR(v)&&!single(v))) return 64; const x=sc(v); return isE(x)?16:typeof x==='string'?2:typeof x==='boolean'?4:1});
+def('NA',()=>ENA);
+def('ERROR.TYPE',I(v=>isE(v)?({'#NULL!':1,'#DIV/0!':2,'#VALUE!':3,'#REF!':4,'#NAME?':5,'#NUM!':6,'#N/A':7})[v.e]||ENA:ENA));
+
+/* 재무 */
+const fin=f=>S(a=>{const r=f(a); return isE(r)?r:Number.isFinite(r)?r:ENUM});
+def('PMT',fin(a=>{const r=nn(a[0]), n=nn(a[1]), pv=nn(a[2]), fv=has(a,3)?nn(a[3]):0, t=has(a,4)&&nn(a[4])!==0?1:0; if(r===0) return -(pv+fv)/n; const p=Math.pow(1+r,n); return -(r*(pv*p+fv))/((1+r*t)*(p-1))}));
+def('FV',fin(a=>{const r=nn(a[0]), n=nn(a[1]), pm=nn(a[2]), pv=has(a,3)?nn(a[3]):0, t=has(a,4)&&nn(a[4])!==0?1:0; if(r===0) return -(pv+pm*n); const p=Math.pow(1+r,n); return -(pv*p+pm*(1+r*t)*(p-1)/r)}));
+def('PV',fin(a=>{const r=nn(a[0]), n=nn(a[1]), pm=nn(a[2]), fv=has(a,3)?nn(a[3]):0, t=has(a,4)&&nn(a[4])!==0?1:0; if(r===0) return -(fv+pm*n); const p=Math.pow(1+r,n); return -(fv+pm*(1+r*t)*(p-1)/r)/p}));
+def('NPV',a=>{const r=nn(sc(a[0])), n=nums(a.slice(1)); if(isE(n)) return n; let s=0; n.forEach((v,i)=>s+=v/Math.pow(1+r,i+1)); return s});
+def('SLN',fin(a=>{const l=nn(a[2]); return l===0?EDIV:(nn(a[0])-nn(a[1]))/l}));
+def('SYD',fin(a=>{const c=nn(a[0]), s=nn(a[1]), l=nn(a[2]), p=nn(a[3]); return l<=0||p<1||p>l?NaN:(c-s)*(l-p+1)*2/(l*(l+1))}));
+
+/* ---------- 표시 형식 (TEXT 함수와 칸의 서식) ---------- */
+const WD_K=['일','월','화','수','목','금','토'], WD_E=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], MO_E=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function fmtDate(x,s){
+ if(x<0) return '#######';
+ const day=Math.floor(x+1e-9), [Y,Mo,Dd]=parts(day), wd=dOf(day).getUTCDay(); let sec=Math.round((x-day)*86400); if(sec>=86400) sec=86399;
+ const H=Math.floor(sec/3600), Mi=Math.floor(sec/60)%60, Se=sec%60, tk=[], re=/"([^"]*)"|\\([\s\S])|\[(h+|m+|s+)\]|(AM\/PM|A\/P|오전\/오후)|(y+|m+|d+|a{3,4}|h+|s+)|([\s\S])/gi; let m;
+ while((m=re.exec(s))){if(m[1]!==undefined) tk.push({l:m[1]}); else if(m[2]!==undefined) tk.push({l:m[2]}); else if(m[3]) tk.push({e:m[3].toLowerCase()}); else if(m[4]) tk.push({ap:m[4]}); else if(m[5]) tk.push({d:m[5].toLowerCase()}); else tk.push({l:m[6]})}
+ const h12=tk.some(t=>t.ap), p2=n=>String(n).padStart(2,'0'), isH=t=>t&&((t.d&&t.d[0]==='h')||(t.e&&t.e[0]==='h'));
+ tk.forEach((t,i)=>{if(t.d&&t.d[0]==='m'&&t.d.length<=2){let p=i-1; while(p>=0&&tk[p].l!==undefined) p--; let n=i+1; while(n<tk.length&&tk[n].l!==undefined) n++; if(isH(tk[p])||(tk[n]&&tk[n].d&&tk[n].d[0]==='s')) t.min=true}});
+ return tk.map(t=>{
+  if(t.l!==undefined) return t.l;
+  if(t.ap){const pm=H>=12, u=t.ap.toUpperCase(); return u==='AM/PM'?(pm?'PM':'AM'):u==='A/P'?(pm?'P':'A'):(pm?'오후':'오전')}
+  if(t.e){const tot=t.e[0]==='h'?Math.floor(x*24+1e-9):t.e[0]==='m'?Math.floor(x*1440+1e-9):Math.round(x*86400); return String(tot).padStart(t.e.length,'0')}
+  const c=t.d[0], L=t.d.length;
+  if(c==='y') return L<=2?p2(Y%100):String(Y);
+  if(c==='m') return t.min?(L===1?String(Mi):p2(Mi)):L===1?String(Mo):L===2?p2(Mo):L===3?MO_E[Mo-1].slice(0,3):L===4?MO_E[Mo-1]:MO_E[Mo-1][0];
+  if(c==='d') return L===1?String(Dd):L===2?p2(Dd):L===3?WD_E[wd].slice(0,3):WD_E[wd];
+  if(c==='a') return L===3?WD_K[wd]:WD_K[wd]+'요일';
+  if(c==='h'){const h=h12?(H%12||12):H; return L===1?String(h):p2(h)}
+  return L===1?String(Se):p2(Se);
+ }).join('');
+}
+const grp=d=>d.replace(/\B(?=(\d{3})+(?!\d))/g,',');
+function fmtNum(x,s){   // x 는 0 이상
+ const tk=[], re=/"([^"]*)"|\\([\s\S])|_([\s\S])|\*([\s\S])|([0#?])|(\.)|(,)|(%)|([\s\S])/g; let m;
+ while((m=re.exec(s))){if(m[1]!==undefined) tk.push({l:m[1]}); else if(m[2]!==undefined) tk.push({l:m[2]}); else if(m[3]!==undefined) tk.push({l:' '}); else if(m[4]!==undefined) continue; else if(m[5]) tk.push({p:m[5]}); else if(m[6]) tk.push({dot:1}); else if(m[7]) tk.push({com:1}); else if(m[8]) tk.push({l:'%',pc:1}); else tk.push({l:m[9]})}
+ const ph=[]; tk.forEach((t,i)=>{if(t.p) ph.push(i)});
+ if(!ph.length) return tk.map(t=>t.l!==undefined?t.l:t.dot?'.':',').join('');
+ const dot=tk.findIndex(t=>t.dot), ip=ph.filter(i=>dot<0||i<dot), dp=ph.filter(i=>dot>=0&&i>dot); let group=false, scale=0;
+ tk.forEach((t,i)=>{if(!t.com) return; if(ip.some(k=>k<i)&&ip.some(k=>k>i)){group=true; t.skip=1}});
+ for(const end of [ip.length?ip[ip.length-1]:-9,ph[ph.length-1]]) for(let i=end+1;i<tk.length&&tk[i].com&&!tk[i].skip;i++){scale++; tk[i].skip=1}
+ x=x*Math.pow(100,tk.filter(t=>t.pc).length)/Math.pow(1000,scale);
+ const nd=dp.length, r=rnd(x,nd,0), fx=r.toFixed(nd).split('.'), dec=fx[1]||''; let keep=nd; while(keep>0&&tk[dp[keep-1]].p!=='0'&&dec[keep-1]==='0') keep--;
+ const z=ip.findIndex(i=>tk[i].p==='0'), minInt=z<0?0:ip.length-z; let dig=(fx[0]==='0'?'':fx[0]).padStart(minInt,'0'); const slot={};
+ if(ip.length){if(group) slot[ip[0]]=grp(dig); else{let rest=dig; for(let k=ip.length-1;k>=1;k--){slot[ip[k]]=rest.slice(-1); rest=rest.slice(0,-1)} slot[ip[0]]=rest}}
+ let out='';
+ tk.forEach((t,i)=>{if(t.skip) return; if(t.l!==undefined) out+=t.l; else if(t.com) out+=','; else if(t.dot){if(i===dot&&!ip.length) out+=dig; out+='.'} else if(i in slot) out+=slot[i]; else{const k=dp.indexOf(i); if(k>=0&&k<keep) out+=dec[k]}});
+ return out;
+}
+function splitSec(f){const o=['']; let q=false; for(let i=0;i<f.length;i++){const ch=f[i]; if(ch==='"'){q=!q; o[o.length-1]+=ch} else if(ch==='\\'&&!q){o[o.length-1]+=ch+(f[i+1]||''); i++} else if(ch===';'&&!q) o.push(''); else o[o.length-1]+=ch} return o}
+function fmtText(v,f){
+ if(typeof v==='boolean') return v?'TRUE':'FALSE';
+ if(isE(v)) return v.e;
+ const secs=splitSec(String(f)).map(s=>{let cond=null; s=s.replace(/\[(<=|>=|<>|=|<|>)\s*(-?\d+\.?\d*)\]/,(m,o,n)=>{cond=[o,+n]; return ''}).replace(/\[(?!h+\]|m+\]|s+\])[^\]]*\]/gi,''); return {s,cond}});
+ if(typeof v==='string'){const n=parseNum(v); if(n===null){const t=secs.length>=4?secs[3].s:(secs.find(x=>/@/.test(x.s))||{}).s; return t===undefined?v:t.replace(/"([^"]*)"|\\([\s\S])|@/g,(m,q,e)=>q!==undefined?q:e!==undefined?e:v)} v=n}
+ let sec, minus=false;
+ if(secs.some(x=>x.cond)){const ok=(c,x)=>c[0]==='<'?x<c[1]:c[0]==='>'?x>c[1]:c[0]==='<='?x<=c[1]:c[0]==='>='?x>=c[1]:c[0]==='='?x===c[1]:x!==c[1]; sec=secs.find(x=>x.cond&&ok(x.cond,v))||secs.find(x=>!x.cond); if(!sec) return '#######'; minus=v<0}
+ else if(secs.length===1){sec=secs[0]; minus=v<0}
+ else if(secs.length===2) sec=v<0?secs[1]:secs[0];
+ else sec=v>0?secs[0]:v<0?secs[1]:secs[2];
+ const s=sec.s, bare=s.replace(/"[^"]*"|\\[\s\S]/g,'');
+ if(s==='') return '';
+ if(/^\s*general\s*$/i.test(bare)||(/@/.test(bare)&&!/[0#?]/.test(bare))) return s.replace(/"([^"]*)"|\\([\s\S])|general|@/gi,(m,q,e)=>q!==undefined?q:e!==undefined?e:(minus?'-':'')+gen(Math.abs(v)));
+ if(/[ymdhs]|aaa|오전\/오후/i.test(bare)) return fmtDate(v,s);
+ return (minus?'-':'')+fmtNum(Math.abs(v),s);
+}
+const show=(v,f)=>v===null?'':isE(v)?v.e:typeof v==='boolean'?(v?'TRUE':'FALSE'):typeof v==='string'?v:f?fmtText(v,f):gen(v,10);
+
+/* ---------- 시트 ---------- */
+function literal(s){   // 손으로 넣은 값: 숫자·백분율·날짜·시각·논리값은 엑셀처럼 알아서 바뀌어요
+ const t=s.trim();
+ if(t[0]==="'") return {v:s.replace(/^\s*'/,'')};
+ if(/^(true|false)$/i.test(t)) return {v:/^t/i.test(t)};
+ const n=parseNum(t); if(n===null) return {v:s};
+ const dl=t.includes('.')?t.split('.')[1].replace(/\D/g,'').length:0; let f;
+ if(/%$/.test(t)) f=dl?'0.'+'0'.repeat(dl)+'%':'0%'; else if(RE_DATE.test(t)) f='yyyy-mm-dd'; else if(RE_TIME.test(t)) f=/:\d\d:\d\d/.test(t)?'h:mm:ss':'h:mm'; else if(/\s/.test(t)) f='yyyy-mm-dd h:mm'; else if(/,/.test(t)) f=dl?'#,##0.'+'0'.repeat(dl):'#,##0';
+ return {v:n,f};
+}
+class Sheet{
+ constructor(o){
+  o=o||{}; this.cells=new Map(); this.fmts=[]; this.memo=new Map(); this.busy=new Set(); this.today=o.today?parseNum(o.today):null;
+  const r0=o.r0||1, c0=typeof o.c0==='string'?colNum(o.c0):(o.c0||1), rows=o.rows||[];
+  this.r1=r0; this.c1=c0; this.r2=r0+Math.max(rows.length,1)-1; this.c2=c0+Math.max(1,...rows.map(r=>r.length))-1;
+  rows.forEach((row,i)=>row.forEach((s,j)=>{if(s!==''&&s!=null) this.set(key(r0+i,c0+j),String(s))}));
+  for(const k in (o.fmt||{})){const g=rangeOf(k); if(g) this.fmts.push([g,o.fmt[k]])}
+ }
+ cell(r,c){return this.cells.get(key(r,c))}
+ set(a,s,arr){   // 값이나 수식을 넣어요. 수식이 틀리면 PErr 를 던져요
+  const m=addr(String(a).replace(/\$/g,'')), k=key(m.r,m.c); s=tidy(s==null?'':String(s));
+  if(s.trim()==='') this.cells.delete(k);
+  else if(/^\s*\{?\s*=/.test(s)&&s.trim().length>1){const b=body(s), ast=parse(s); this.cells.set(k,{raw:'='+b.s,ast,arr:!!(arr||b.arr)})}
+  else{const l=literal(s); this.cells.set(k,{raw:s,v:l.v,af:l.f})}
+  this.memo.clear(); this.r2=Math.max(this.r2,m.r); this.c2=Math.max(this.c2,m.c);
+ }
+ raw(a){const m=addr(a), ce=this.cell(m.r,m.c); return ce?(ce.arr?'{'+ce.raw+'}':ce.raw):''}
+ isF(a){const m=addr(a), ce=this.cell(m.r,m.c); return !!(ce&&ce.ast)}
+ isArr(a){const m=addr(a), ce=this.cell(m.r,m.c); return !!(ce&&ce.arr)}
+ val(r,c){
+  const k=key(r,c), ce=this.cells.get(k); if(!ce) return null; if(!ce.ast) return ce.v;
+  if(this.memo.has(k)) return this.memo.get(k); if(this.busy.has(k)) return ECIRC;
+  this.busy.add(k); let v; try{v=top(ev(ce.ast,{sh:this,r,c,dr:0,dc:0}))}catch(e){v=isE(e)?e:EVAL} this.busy.delete(k); this.memo.set(k,v); return v;
+ }
+ get(a){const m=addr(String(a).replace(/\$/g,'')); return this.val(m.r,m.c)}
+ fmtOf(r,c){for(let i=this.fmts.length-1;i>=0;i--){const g=this.fmts[i][0]; if(r>=g.r1&&r<=g.r2&&c>=g.c1&&c<=g.c2) return this.fmts[i][1]} const ce=this.cell(r,c); if(!ce) return ''; if(ce.af) return ce.af; return ce.ast&&ce.ast.t==='fn'&&(ce.ast.n==='DATE'||ce.ast.n==='TODAY')?'yyyy-mm-dd':''}
+ text(a){const m=addr(String(a).replace(/\$/g,'')); return show(this.val(m.r,m.c),this.fmtOf(m.r,m.c))}
+ calc(src,a){const m=a?addr(a):{r:1,c:1}; try{return top(ev(parse(src),{sh:this,r:m.r,c:m.c,dr:0,dc:0}))}catch(e){if(isE(e)) return e; throw e}}   // 칸에 넣지 않고 계산만
+ cf(range,src){   // 조건부 서식: 범위의 왼쪽 위 칸을 기준으로 쓴 수식을 칸마다 옮겨 계산해서 TRUE 인 칸들
+  const g=rangeOf(range), ast=parse(src), out=[];
+  for(let r=g.r1;r<=g.r2;r++) for(let c=g.c1;c<=g.c2;c++){let v; try{v=top(ev(ast,{sh:this,r,c,dr:r-g.r1,dc:c-g.c1}))}catch(e){v=false} if(truthy(v)) out.push(key(r,c))}
+  return out;
+ }
+ filter(list,crit){const g=rangeOf(list), q=rangeOf(crit); try{return dbHit(Object.assign({sh:this},g),Object.assign({sh:this},q))}catch(e){return []}}   // 고급 필터: 조건에 맞는 줄 번호들
+}
+
+/* ---------- 함수 목록(연습장의 함수 고르기·도움말) ---------- */
+const FNS=`논리|IF|조건, 참일 때, 거짓일 때|조건이 맞으면 앞의 값, 틀리면 뒤의 값
+논리|IFS|조건1, 값1, 조건2, 값2, …|처음으로 맞는 조건의 값. 마지막 조건에 TRUE 를 쓰면 '그 밖에'
+논리|AND|조건1, 조건2, …|모두 맞아야 TRUE
+논리|OR|조건1, 조건2, …|하나라도 맞으면 TRUE
+논리|NOT|조건|TRUE 와 FALSE 를 뒤집음
+논리|IFERROR|식, 오류일 때|식이 오류면 뒤의 값
+논리|SWITCH|식, 값1, 결과1, …, 그 밖에|식의 값에 맞는 결과
+통계|AVERAGE|범위|평균
+통계|AVERAGEIF|조건 범위, 조건, 평균 범위|조건에 맞는 칸의 평균
+통계|AVERAGEIFS|평균 범위, 조건 범위1, 조건1, …|여러 조건에 모두 맞는 칸의 평균
+통계|COUNT|범위|숫자가 든 칸의 수
+통계|COUNTA|범위|비어 있지 않은 칸의 수
+통계|COUNTBLANK|범위|빈 칸의 수
+통계|COUNTIF|범위, 조건|조건에 맞는 칸의 수
+통계|COUNTIFS|범위1, 조건1, 범위2, 조건2, …|여러 조건에 모두 맞는 줄의 수
+통계|MAX|범위|가장 큰 값
+통계|MIN|범위|가장 작은 값
+통계|MAXIFS|결과 범위, 조건 범위1, 조건1, …|조건에 맞는 칸 가운데 가장 큰 값
+통계|MINIFS|결과 범위, 조건 범위1, 조건1, …|조건에 맞는 칸 가운데 가장 작은 값
+통계|LARGE|범위, k|k번째로 큰 값
+통계|SMALL|범위, k|k번째로 작은 값
+통계|RANK.EQ|값, 범위, 순서|순위. 순서 0 은 큰 값이 1등, 1 은 작은 값이 1등
+통계|MEDIAN|범위|가운데 값
+통계|MODE.SNGL|범위|가장 자주 나온 값
+통계|STDEV.S|범위|표본 표준 편차
+통계|VAR.S|범위|표본 분산
+통계|PERCENTILE.INC|범위, k|k(0~1) 번째 백분위 값
+통계|FREQUENCY|자료 범위, 구간 범위|구간별 개수(배열 수식)
+통계|AVERAGEA|범위|글자는 0, TRUE 는 1 로 보고 평균
+통계|MAXA|범위|글자·논리값도 넣어 가장 큰 값
+통계|MINA|범위|글자·논리값도 넣어 가장 작은 값
+통계|GEOMEAN|범위|기하 평균
+통계|HARMEAN|범위|조화 평균
+수학|SUM|범위|합계
+수학|SUMIF|조건 범위, 조건, 합계 범위|조건에 맞는 칸의 합
+수학|SUMIFS|합계 범위, 조건 범위1, 조건1, …|여러 조건에 모두 맞는 칸의 합
+수학|SUMPRODUCT|배열1, 배열2, …|같은 자리끼리 곱해서 모두 더함
+수학|ROUND|수, 자릿수|반올림. 자릿수 0 은 정수, -1 은 십의 자리
+수학|ROUNDUP|수, 자릿수|올림
+수학|ROUNDDOWN|수, 자릿수|내림
+수학|INT|수|그 수보다 크지 않은 정수
+수학|TRUNC|수, 자릿수|자릿수 아래를 버림
+수학|MOD|수, 나누는 수|나머지
+수학|QUOTIENT|수, 나누는 수|몫
+수학|ABS|수|절댓값
+수학|POWER|밑, 지수|거듭제곱
+수학|SQRT|수|제곱근
+수학|PRODUCT|범위|모두 곱함
+수학|FACT|수|계승
+수학|SIGN|수|양수 1, 0, 음수 -1
+수학|EXP|수|e 의 거듭제곱
+수학|PI||원주율
+수학|RAND||0 과 1 사이의 난수
+수학|RANDBETWEEN|가장 작은 수, 가장 큰 수|두 수 사이의 정수 난수
+글자|LEFT|글자, 개수|왼쪽에서 몇 글자
+글자|RIGHT|글자, 개수|오른쪽에서 몇 글자
+글자|MID|글자, 시작, 개수|가운데에서 몇 글자
+글자|LEN|글자|글자 수
+글자|UPPER|글자|대문자로
+글자|LOWER|글자|소문자로
+글자|PROPER|글자|단어의 첫 글자만 대문자로
+글자|TRIM|글자|앞뒤 빈칸을 없애고 낱말 사이는 한 칸만
+글자|CONCAT|글자1, 글자2, …|이어 붙임
+글자|REPT|글자, 횟수|되풀이
+글자|FIND|찾을 글자, 글자, 시작|위치. 대소문자를 가림
+글자|SEARCH|찾을 글자, 글자, 시작|위치. 대소문자를 안 가리고 * ? 를 씀
+글자|REPLACE|글자, 시작, 개수, 새 글자|자리로 바꿈
+글자|SUBSTITUTE|글자, 옛 글자, 새 글자, 몇 번째|글자로 찾아 바꿈
+글자|TEXT|값, "표시 형식"|숫자·날짜를 정해진 모양의 글자로
+글자|VALUE|글자|숫자 모양의 글자를 숫자로
+글자|FIXED|수, 자릿수, 쉼표 없이|반올림해서 글자로
+글자|EXACT|글자1, 글자2|대소문자까지 같으면 TRUE
+날짜|TODAY||오늘 날짜
+날짜|NOW||지금 날짜와 시각
+날짜|DATE|연, 월, 일|날짜를 만듦
+날짜|YEAR|날짜|연도
+날짜|MONTH|날짜|월
+날짜|DAY|날짜|일
+날짜|WEEKDAY|날짜, 방식|요일 번호. 방식 1 은 일요일이 1, 2 는 월요일이 1
+날짜|DAYS|끝 날짜, 시작 날짜|두 날짜 사이의 날수
+날짜|EDATE|날짜, 개월 수|몇 달 뒤(앞)의 같은 날
+날짜|EOMONTH|날짜, 개월 수|몇 달 뒤(앞) 달의 마지막 날
+날짜|WORKDAY|날짜, 날수, 휴일|주말과 휴일을 빼고 며칠 뒤
+날짜|NETWORKDAYS|시작 날짜, 끝 날짜, 휴일|주말과 휴일을 뺀 날수
+날짜|WEEKNUM|날짜, 방식|그해의 몇째 주
+날짜|DATEVALUE|"날짜 글자"|글자를 날짜 번호로
+날짜|TIME|시, 분, 초|시각을 만듦
+날짜|HOUR|시각|시
+날짜|MINUTE|시각|분
+날짜|SECOND|시각|초
+찾기|VLOOKUP|찾을 값, 표 범위, 열 번호, 방식|표의 첫 열에서 찾아 같은 줄의 값을 가져옴. 방식 FALSE 는 똑같은 값, TRUE 는 구간
+찾기|HLOOKUP|찾을 값, 표 범위, 행 번호, 방식|표의 첫 행에서 찾아 같은 열의 값을 가져옴
+찾기|INDEX|범위, 행 번호, 열 번호|범위에서 그 자리의 값
+찾기|MATCH|찾을 값, 범위, 방식|범위에서 몇 번째인지. 방식 0 은 똑같은 값
+찾기|XLOOKUP|찾을 값, 찾을 범위, 가져올 범위, 없을 때|찾을 범위에서 찾아 가져올 범위의 같은 자리 값
+찾기|XMATCH|찾을 값, 범위|범위에서 몇 번째인지
+찾기|LOOKUP|찾을 값, 찾을 범위, 결과 범위|오름차순 범위에서 구간으로 찾음
+찾기|CHOOSE|번호, 값1, 값2, …|번호에 맞는 값
+찾기|ROW|셀|행 번호
+찾기|COLUMN|셀|열 번호
+찾기|ROWS|범위|행의 수
+찾기|COLUMNS|범위|열의 수
+찾기|OFFSET|기준 셀, 행 이동, 열 이동, 높이, 너비|기준에서 옮겨 간 범위
+찾기|INDIRECT|"주소 글자"|글자로 쓴 주소가 가리키는 셀
+찾기|TRANSPOSE|범위|행과 열을 바꿈
+DB|DSUM|자료 범위, 필드, 조건 범위|조건에 맞는 줄의 그 필드 합계
+DB|DAVERAGE|자료 범위, 필드, 조건 범위|조건에 맞는 줄의 평균
+DB|DCOUNT|자료 범위, 필드, 조건 범위|조건에 맞는 줄에서 숫자 칸의 수
+DB|DCOUNTA|자료 범위, 필드, 조건 범위|조건에 맞는 줄에서 비어 있지 않은 칸의 수
+DB|DMAX|자료 범위, 필드, 조건 범위|조건에 맞는 줄에서 가장 큰 값
+DB|DMIN|자료 범위, 필드, 조건 범위|조건에 맞는 줄에서 가장 작은 값
+DB|DGET|자료 범위, 필드, 조건 범위|조건에 맞는 단 하나의 값
+DB|DPRODUCT|자료 범위, 필드, 조건 범위|조건에 맞는 줄의 곱
+DB|DSTDEV|자료 범위, 필드, 조건 범위|조건에 맞는 줄의 표본 표준 편차
+DB|DVAR|자료 범위, 필드, 조건 범위|조건에 맞는 줄의 표본 분산
+정보|ISBLANK|셀|빈 칸이면 TRUE
+정보|ISERROR|값|오류면 TRUE
+정보|ISERR|값|#N/A 가 아닌 오류면 TRUE
+정보|ISNUMBER|값|숫자면 TRUE
+정보|ISTEXT|값|글자면 TRUE
+정보|ISNONTEXT|값|글자가 아니면 TRUE
+정보|ISLOGICAL|값|TRUE·FALSE 면 TRUE
+정보|ISODD|수|홀수면 TRUE
+정보|ISEVEN|수|짝수면 TRUE
+정보|TYPE|값|값의 종류 번호. 숫자 1, 글자 2, 논리값 4, 오류 16
+재무|PMT|이율, 기간 수, 현재 가치, 미래 가치, 납입 시점|정해진 기간마다 낼 돈
+재무|FV|이율, 기간 수, 납입액, 현재 가치, 납입 시점|미래 가치(만기 금액)
+재무|PV|이율, 기간 수, 납입액, 미래 가치, 납입 시점|현재 가치
+재무|NPV|할인율, 값1, 값2, …|순 현재 가치
+재무|SLN|취득가, 잔존 가치, 수명|정액법 감가상각액
+재무|SYD|취득가, 잔존 가치, 수명, 기간|연수 합계법 감가상각액`.split('\n').map(l=>{const [c,n,sig,d]=l.split('|'); return {c,n,sig,d}});
+const ERRTIP={'#NAME?':'함수 이름을 잘못 썼거나, 글자를 큰따옴표로 감싸지 않았어요.','#VALUE!':'숫자가 와야 할 자리에 글자가 들어갔어요.','#DIV/0!':'0 이나 빈 칸으로 나눴어요.','#N/A':'찾는 값이 범위에 없어요. 찾을 범위와 방식(FALSE·0)을 확인해요.','#REF!':'가리키는 칸이 표 밖으로 나갔어요. 열·행 번호나 채우기 방향을 확인해요.','#NUM!':'숫자가 쓸 수 있는 범위를 벗어났어요.','#순환':'수식이 자기 자신을 가리켜요.','#미지원':'이 연습장에서는 계산할 수 없는 함수예요. PC 엑셀에서 연습해요.'};
+return {Sheet,parse,check,shift,cycleRef,refTokens,fnNames,fmtText,show,addr,key,colName,colNum,rangeOf,rangeKeys,rangeText,isE,FN,FNS,NOFN,ERRTIP,tidy,literal,parseNum,PErr};
+})();
+/*XL-END*/
+/*XLUI-BEGIN*/
+/* ---------- 엑셀 연습장 화면 (자료: data/xlab.json · 계산: XL) ---------- */
+const XLAB={d:null,st:0,by:new Map(),file:null};
+const XS={id:''};
+const XLFN=new Map(XL.FNS.map(f=>[f.n,f]));
+const XLSTYLE={fy:"채우기 색 '노랑'",br:"굵게 · 글꼴 색 '빨강'",bb:"굵게 · 글꼴 색 '파랑'"};
+const XLMAP={c4u1:'',c4u2:'af1',c4u3:'c01',c4u5:'l01',c4u6:'a01'};   // 공부 노트의 실기 단원 → 연습장 과제
+function xlLoad(){
+ if(XLAB.st) return; XLAB.st=1;
+ fetch('data/xlab.json',{cache:'no-cache'}).then(r=>{if(!r.ok) throw 0; return r.json()}).then(j=>{XLAB.d=j; j.tasks.forEach(t=>XLAB.by.set(t.id,t)); XLAB.st=2}).catch(()=>{XLAB.st=3}).then(()=>{if(UI.route==='xl') render()});
+}
+const xlProg=id=>U.study.u['xl-'+id]||{};
+const xlTouch=()=>matchMedia('(pointer:coarse)').matches||(navigator.maxTouchPoints>0&&matchMedia('(max-width:860px)').matches);   // 휴대폰·태블릿이면 화면 자판부터
+const xlDoneN=()=>Object.keys(U.study.u).filter(k=>k.startsWith('xl-')&&U.study.u[k].d).length;
+const xlStrip=()=>`<div class="strip"><p>실기의 수식 문제는 엑셀 연습장에서 직접 넣어 보며 익혀요. 휴대폰에서도 돼요.${xlDoneN()?` 끝낸 과제 ${xlDoneN()}개`:''}</p><a class="btn line sm" href="#xl">엑셀 연습장</a></div>`;
+const xlEntry=()=>`<section class="sec card xl-entry" aria-labelledby="xle-h"><div><h2 class="h2" id="xle-h">엑셀 연습장</h2><p class="small">실기 계산작업의 함수 수식, 조건부 서식의 규칙 수식, 고급 필터의 조건 범위를 직접 넣고 바로 채점해요.${xlDoneN()?` · 끝낸 과제 ${xlDoneN()}개`:''}</p></div><a class="btn" href="#xl">${xlDoneN()?'이어서 하기':'열어 보기'}</a></section>`;
+
+function vXl(){
+ xlLoad();
+ if(U.settings.exam!=='comp'){setSetting(s=>s.exam='comp'); renderTop()}   // 연습장은 컴활의 것이라, 다른 시험을 고른 채 들어오면 컴활로 바꿔요
+ if(XLAB.st<2) return `<h1 class="title">엑셀 연습장</h1><p class="sub">${XLAB.st===3?'연습장 자료를 불러오지 못했어요. 인터넷에 이어진 뒤에 다시 열어 주세요.':'연습장을 여는 중이에요…'}</p>`;
+ const t=XLAB.by.get(UI.arg);
+ if(!t){XS.id=''; AFTER.push(xlFilePre); return vXlList()}
+ return vXlTask(t);
+}
+function vXlList(){
+ const D=XLAB.d, done=D.tasks.filter(t=>xlProg(t.id).d).length, next=D.tasks.find(t=>!xlProg(t.id).d);
+ return `<nav class="crumb" aria-label="위치"><a href="#practice">문제 풀기</a><span aria-hidden="true">›</span><span>엑셀 연습장</span></nav>
+ <h1 class="title">엑셀 연습장</h1>
+ <p class="sub">컴활 실기의 수식 문제를 직접 넣어 보는 곳이에요. 칸을 눌러 주소를 넣고, 채우기로 복사하고, 그 자리에서 채점해요. 휴대폰에서도 되게 화면 자판을 달았어요.</p>
+ <div class="card xll-top"><div><b class="xll-n">${done}<small> / ${D.tasks.length}</small></b><span class="small">끝낸 과제</span></div>${next?`<a class="btn" href="#xl/${next.id}">${done?'이어서 하기':'첫 과제 시작'}</a>`:'<span class="tag">모두 끝냈어요</span>'}</div>
+ ${D.groups.map(g=>{const ts=D.tasks.filter(t=>t.g===g.id); return `<section class="sec xll-g" aria-label="${esc(g.title)}"><h2 class="h2">${esc(g.title)}</h2><p class="small">${esc(g.desc)}</p><div class="card xll-list">${ts.map(t=>{const p=xlProg(t.id), sub=t.use.length?t.use.join(' · '):t.kind==='af'?'조건 범위':t.kind==='cf'?'규칙 수식':'기본 수식';
+  return `<button class="mrow xll-row" data-act="go" data-r="xl/${t.id}" aria-label="${esc(t.title)}, 난이도 ${t.lv}${p.d?', 끝냄':''}"><span class="xll-t"><b>${esc(t.title)}</b><small>${esc(sub)}</small></span><span class="xll-lv" aria-hidden="true">${'●'.repeat(t.lv)}${'○'.repeat(3-t.lv)}</span><span class="mv">${p.d?ico('check'):p.f&&Object.keys(p.f).length?'하는 중':''}</span></button>`}).join('')}</div></section>`}).join('')}
+ <section class="sec card"><h2 class="h2">여기서 되는 것과 안 되는 것</h2>
+  <ul class="xll-scope"><li><b>돼요</b> · 계산작업의 함수 수식(배열 수식 포함), 조건부 서식의 규칙 수식, 고급 필터의 조건 범위. 실기에서 '수식을 쓸 줄 아는가'를 묻는 부분이에요.</li><li><b>안 돼요</b> · 피벗 테이블, 차트, 매크로와 VBA, 페이지 설정, 액세스. 메뉴와 대화 상자를 다루는 작업이라 PC의 엑셀·액세스로 연습해야 해요.</li><li>휴대폰의 엑셀 앱은 수식 입력은 되지만 조건부 서식 규칙 만들기, 피벗 테이블 만들기, 매크로 실행이 빠져 있어 실기 전체를 연습할 수는 없어요.</li></ul>
+  <p class="small" style="margin-top:12px">같은 과제를 PC 엑셀에서 풀어 볼 수 있게 연습 파일을 만들어 뒀어요. 과제마다 시트 하나, 마지막 시트에 모범 수식이 있어요.</p>
+  <div class="row" style="margin-top:10px"><button class="btn line" data-act="xlfile">${ico('down')}연습 파일 받기 (.xlsx)</button></div></section>`;
+}
+
+/* ----- 과제 열기·저장 ----- */
+function xlOpen(t){
+ const p=xlProg(t.id), sh=new XL.Sheet({rows:t.sheet.rows,r0:t.sheet.r0,c0:t.sheet.c0,fmt:t.fmt}), edit=new Set(), hd=new Set();
+ if(t.kind==='calc') t.targets.forEach(g=>XL.rangeKeys(XL.rangeOf(g.range)).forEach(a=>edit.add(a)));
+ if(t.kind==='af'){
+  XL.rangeKeys(XL.rangeOf(t.af.crit)).forEach(a=>edit.add(a));
+  const L=XL.rangeOf(t.af.list), o=XL.addr(t.af.out);
+  for(const k in t.fmt){const g=XL.rangeOf(k); if(g&&g.c1>=L.c1&&g.c2<=L.c2) sh.fmts.push([{r1:o.r+1,c1:o.c+g.c1-L.c1,r2:o.r+L.r2-L.r1,c2:o.c+g.c2-L.c1},t.fmt[k]])}
+ }
+ t.sheet.rows.forEach((row,i)=>{if(row.some(c=>c[0]==='[')&&t.sheet.rows[i+1]) t.sheet.rows[i+1].forEach((c,j)=>{if(c!=='') hd.add(XL.key(t.sheet.r0+i+1,XL.colNum(t.sheet.c0)+j))})});
+ edit.forEach(a=>hd.delete(a));
+ Object.assign(XS,{id:t.id,t,sh,edit,hd,out:new Set(),sel:'',ed:false,tx:'',ca:0,pend:null,msg:null,res:null,hint:0,rule:'',hit:null,rows:null,askOpen:false,native:!xlTouch(),lab:'',used:''});
+ if(p.f) for(const a in p.f){try{if(a==='rule') XS.rule=String(p.f[a]); else if(edit.has(a)) sh.set(a,String(p.f[a]))}catch(e){}}
+ if(t.kind==='cf'&&XS.rule){try{XS.hit=sh.cf(t.cf.range,XS.rule)}catch(e){XS.rule=''}}
+ XS.sel=t.kind==='cf'?'':t.kind==='calc'?XL.rangeKeys(XL.rangeOf(t.targets[0].range))[0]:XL.rangeKeys(XL.rangeOf(t.af.crit))[0];
+}
+function xlSave(done){
+ const t=XS.t, f={}; XS.edit.forEach(a=>{const r=XS.sh.raw(a); if(r) f[a]=r}); if(t.kind==='cf'&&XS.rule) f.rule=XS.rule;
+ const o=U.study.u['xl-'+t.id]||(U.study.u['xl-'+t.id]={}); o.f=f; o.m=Date.now(); if(done&&!o.d) o.d=Date.now(); persist(['study']);
+}
+const xlTargetOf=a=>{const m=XL.addr(a||''); return m&&XS.t.kind==='calc'?XS.t.targets.find(g=>{const R=XL.rangeOf(g.range); return m.r>=R.r1&&m.r<=R.r2&&m.c>=R.c1&&m.c<=R.c2}):null};
+const xlIsFormula=()=>XS.t.kind==='cf'||XS.tx.trim()[0]==='=';
+
+/* ----- 그리기 ----- */
+function vXlTask(t){
+ if(XS.id!==t.id) xlOpen(t);
+ const D=XLAB.d, g=D.groups.find(x=>x.id===t.g), ts=D.tasks.filter(x=>x.g===t.g);
+ AFTER.push(()=>{window.scrollTo(0,0); xlPaint(); xlFocus()});
+ return `<div class="xl${XS.ed?' ed':''}" id="xl" data-kind="${t.kind}">
+  <header class="xl-top"><button class="xl-ib" data-act="go" data-r="xl" aria-label="연습장 목록으로">${ico('back')}</button><div class="xl-tt"><small>${esc(g.title)} · ${ts.indexOf(t)+1} / ${ts.length}</small><b>${esc(t.title)}</b></div><button class="xl-ib" data-act="xlmenu" aria-label="더 보기" aria-haspopup="dialog">⋯</button></header>
+  <div class="xl-ask" id="xl-ask" data-act="xlask" role="button" tabindex="0" aria-label="지시문. 수식을 쓰는 동안 누르면 접거나 펴요"><p class="xl-askin">${nl(t.ask)}</p>${t.use.length||t.note?`<p class="xl-use">${t.use.length?`▶ <b>${esc(t.use.join(', '))}</b> 함수 사용`:''}${t.use.length&&t.note?'<br>':''}${t.note?'▶ '+esc(t.note):''}</p>`:''}</div>
+  <div class="xl-bar" id="xl-bar"></div>
+  <div class="xl-msg" id="xl-msg" aria-live="polite"></div>
+  <div class="xl-mid" id="xl-mid"><div class="xl-gridw" id="xl-gridw"></div><div class="xl-panel" id="xl-panel"></div></div>
+  <div class="xl-foot" id="xl-foot"></div>
+ </div>`;
+}
+function xlRefs(tx){   // 수식 글자 속의 주소(범위)와 색 번호
+ const rt=XL.refTokens(tx), out=[], seen=new Map();
+ for(let i=0;i<rt.length;i++){const a=rt[i]; let b=a; if(rt[i+1]&&tx.slice(a.q,rt[i+1].p).trim()===':'){b=rt[i+1]; i++} const g=XL.rangeOf(a.v+':'+b.v), k=XL.rangeText(g); if(!seen.has(k)) seen.set(k,seen.size%5); out.push({p:a.p,q:b.q,g,ci:seen.get(k)})}
+ return out;
+}
+function xlEdHtml(tx,ca){
+ const refs=xlRefs(tx); let h='', k=0;
+ for(let i=0;i<tx.length;i++){
+  while(k<refs.length&&refs[k].q<=i) k++;
+  const r=refs[k]&&i>=refs[k].p?refs[k]:null;
+  if(i===ca) h+='<i class="xl-caret"></i>';
+  h+=`<span data-i="${i}"${r?` class="x-r x-r${r.ci}"`:''}>${tx[i]===' '?'&nbsp;':esc(tx[i])}</span>`;
+ }
+ return h+(ca>=tx.length?'<i class="xl-caret"></i>':'');
+}
+function xlBarHtml(){
+ const t=XS.t, cf=t.kind==='cf', nm=cf?'규칙':(XS.sel||'');
+ if(XS.ed){
+  const lab=cf?'규칙 수식':XS.sel+' 칸에 넣을 내용';
+  return `<span class="xl-nm">${esc(nm)}</span>${XS.native?`<input class="xl-in" id="xl-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="${lab}" value="${esc(XS.tx)}">`:`<div class="xl-ed" id="xl-ed" role="textbox" aria-label="${lab}" data-act="xled">${xlEdHtml(XS.tx,XS.ca)}</div>`}<button class="xl-bx" data-act="xk" data-k="esc" aria-label="입력 취소">${ico('x')}</button>`;
+ }
+ const raw=cf?XS.rule:(XS.sel?XS.sh.raw(XS.sel):''), can=cf||XS.edit.has(XS.sel);
+ return `<span class="xl-nm">${esc(nm)}</span><div class="xl-ed ro" id="xl-ed"${can?' data-act="xledit" role="button" tabindex="0"':''}>${raw?esc(raw):`<span class="ph">${cf?'여기를 눌러 규칙 수식을 써요':can?'여기를 눌러 내용을 넣어요':XS.sel?'문제에서 준 칸이에요':'칸을 눌러 보세요'}</span>`}</div>`;
+}
+function xlSig(tx,ca){   // 커서가 들어 있는 함수의 인수 안내
+ const st=[]; let q=false, name='';
+ for(let i=0;i<ca&&i<tx.length;i++){const ch=tx[i];
+  if(ch==='"'){q=!q; name=''; continue} if(q) continue;
+  if(/[A-Za-z0-9_.]/.test(ch)){name+=ch; continue}
+  if(ch==='(') st.push({n:name.toUpperCase(),i:0}); else if(ch===')') st.pop(); else if(ch===','&&st.length) st[st.length-1].i++;
+  name='';
+ }
+ for(let k=st.length-1;k>=0;k--){const f=XLFN.get(st[k].n); if(!f) continue; const ps=f.sig?f.sig.split(', '):[], i=Math.min(st[k].i,ps.length-1); return `<b>${f.n}</b>(${ps.map((p,j)=>j===i?`<b>${esc(p)}</b>`:esc(p)).join(', ')})`}
+ return '';
+}
+function xlMsg(){
+ if(XS.msg) return {c:XS.msg.err?'err':'',h:esc(XS.msg.err||XS.msg.ok||'')};
+ const t=XS.t;
+ if(XS.ed){
+  let pv=''; const s=XS.tx.trim();
+  if(t.kind!=='cf'&&s.length>1&&s[0]==='='){try{const ck=XL.check(s); if(ck.ok&&!ck.added){const m=XL.addr(XS.sel); pv=`<span class="pv">= ${esc(XL.show(XS.sh.calc(ck.s,XS.sel),XS.sh.fmtOf(m.r,m.c)))}</span>`}}catch(e){}}
+  return {c:'',h:pv+(xlSig(XS.tx,XS.ca)||(xlIsFormula()?'칸을 누르면 그 주소가 들어가요':'값이나 조건을 그대로 써요. 수식은 = 로 시작해요'))};
+ }
+ if(t.kind==='cf') return {c:'',h:XS.rule?`규칙이 맞는 칸 ${XS.hit?XS.hit.length:0}개에 서식(${esc(XLSTYLE[t.cf.style])})을 입혔어요`:`테두리 친 범위 [${esc(t.cf.range)}] 에 입힐 규칙을 써요`};
+ if(XS.sel&&XS.edit.has(XS.sel)){const v=XS.sh.get(XS.sel); if(XL.isE(v)) return {c:'err',h:esc(v.e+' · '+(XL.ERRTIP[v.e]||''))}}
+ return {c:'',h:t.kind==='calc'?'색칠된 칸을 눌러 수식을 넣어요':'색칠된 조건 범위의 칸을 눌러 조건을 넣어요'};
+}
+function xlGridHtml(){
+ const t=XS.t, sh=XS.sh, V=XL.rangeOf(t.view), rf=new Map(), hl=new Set(XS.hit||[]), cfR=t.kind==='cf'?XL.rangeOf(t.cf.range):null, res=XS.res&&XS.res.cells||{};
+ if(XS.ed) xlRefs(XS.tx).forEach(r=>{for(let rr=r.g.r1;rr<=r.g.r2;rr++) for(let c=r.g.c1;c<=r.g.c2;c++){const k=XL.key(rr,c); if(!rf.has(k)) rf.set(k,r.ci)}});
+ let h='<table class="xl-grid"><thead><tr><th></th>';
+ for(let c=V.c1;c<=V.c2;c++) h+=`<th scope="col">${XL.colName(c)}</th>`;
+ h+='</tr></thead><tbody>';
+ for(let r=V.r1;r<=V.r2;r++){
+  h+=`<tr><th scope="row">${r}</th>`;
+  for(let c=V.c1;c<=V.c2;c++){
+   const a=XL.key(r,c), v=sh.val(r,c), tx=sh.text(a), cl=[];
+   if(typeof v==='number') cl.push('x-n'); else if(XL.isE(v)) cl.push('x-e');
+   if(XS.edit.has(a)) cl.push('x-tg'); if(XS.hd.has(a)) cl.push('x-hd'); if(XS.out.has(a)) cl.push('x-out');
+   if(cfR&&r>=cfR.r1&&r<=cfR.r2&&c>=cfR.c1&&c<=cfR.c2){if(r===cfR.r1) cl.push('x-ct'); if(r===cfR.r2) cl.push('x-cb'); if(c===cfR.c1) cl.push('x-cl'); if(c===cfR.c2) cl.push('x-cr')}
+   if(hl.has(a)) cl.push('x-hl-'+t.cf.style);
+   if(rf.has(a)) cl.push('x-r'+rf.get(a));
+   if(a===XS.sel&&t.kind!=='cf') cl.push('x-sel');
+   if(res[a]!==undefined) cl.push(res[a]?'x-ok':'x-bad');
+   const tl=typeof v==='string'&&(v[0]==='['||XS.lab===a||v==='조건 범위');
+   h+=`<td data-act="xlcell" data-a="${a}"${cl.length||tl?` class="${cl.join(' ')}${tl?' x-tl':''}"`:''}>${tl?`<span class="xl-ov">${esc(tx)}</span>`:esc(tx)}</td>`;
+  }
+  h+='</tr>';
+ }
+ return h+'</tbody></table>';
+}
+function xlChips(){
+ const t=XS.t, f=xlIsFormula(), h=[`<button class="xk-c fx" data-act="xlfx" aria-haspopup="dialog">fx 함수</button>`], q=s=>'"'+s+'"';
+ if(t.kind==='af'&&!f){t.af.words.forEach(w=>h.push(`<button class="xk-c tx" data-act="xlins" data-s="${esc(w)}">${esc(w)}</button>`)); return h.join('')}
+ t.use.forEach(n=>h.push(`<button class="xk-c" data-act="xlfn" data-n="${n}">${n}</button>`));
+ const ms=(t.targets||[]).map(g=>g.model).concat(t.cf?[t.cf.model]:[]).join(' ');
+ if(/\b(TRUE|FALSE)\b/.test(ms)) ['TRUE','FALSE'].forEach(n=>h.push(`<button class="xk-c" data-act="xlins" data-s="${n}">${n}</button>`));
+ t.lits.forEach(s=>h.push(`<button class="xk-c tx" data-act="xlins" data-s="${esc(q(s))}"${s===''?' aria-label="빈 글자"':s===' '?' aria-label="빈칸 한 칸"':''}>${esc(q(s))}</button>`));
+ return h.join('');
+}
+function xlFootHtml(){
+ const t=XS.t, K=(k,l,c,a)=>`<button class="xk${c?' '+c:''}" data-act="xk" data-k="${esc(k)}"${a?` aria-label="${a}"`:''}>${l||esc(k)}</button>`;
+ if(XS.ed&&XS.native) return `<div class="xl-nat"><div class="xk-chips" id="xk-chips">${xlChips()}</div><button class="btn line sm" data-act="xk" data-k="f4">$ 붙이기 (F4)</button>${t.kind!=='cf'&&xlArr()?'<button class="btn line sm" data-act="xk" data-k="cse">배열 ↵</button>':''}<button class="btn sm" data-act="xk" data-k="enter">${ico('check')}입력</button></div>`;
+ if(XS.ed) return `<div class="xl-kb" id="xl-kb"><div class="xk-chips" id="xk-chips">${xlChips()}</div><div class="xk-g">
+  ${K('(','','op')}${K(')','','op')}${K(',','','op','쉼표')}${K(':','','op','콜론')}${K('"','','op','큰따옴표')}${K('&','','op')}
+  ${K('7')}${K('8')}${K('9')}${K('+','','op','더하기')}${K('-','−','op','빼기')}${K('bs','⌫','fn','지우기')}
+  ${K('4')}${K('5')}${K('6')}${K('*','','op','곱하기')}${K('/','','op','나누기')}${K('left','←','fn','커서 왼쪽으로')}
+  ${K('1')}${K('2')}${K('3')}${K('=','','op','같음')}${K('<','','op','작다')}${K('right','→','fn','커서 오른쪽으로')}
+  ${K('0')}${K('.','','','소수점')}${K('f4','$','fn','주소 고정 바꾸기')}${K('%','','op')}${K('>','','op','크다')}${K('enter','↵','go','입력')}
+ </div><div class="xk-x">${K('txt','가 글자','fn','글자 넣기')}${K('end','⇣끝','fn','표의 끝까지 범위로')}${K('^','','fn','거듭제곱')}${t.kind!=='cf'&&xlArr()?K('cse','배열 ↵','fn','배열 수식으로 입력'):''}${K('esc','취소','fn')}</div></div>`;
+ if(XS.res&&XS.res.ok){const nx=xlNext(); return `<div class="xl-act"><a class="btn line" href="#xl">목록</a>${nx?`<a class="btn" href="#xl/${nx.id}">다음 과제</a>`:''}</div>`}
+ const g=xlTargetOf(XS.sel), canFill=!!g&&XL.rangeKeys(XL.rangeOf(g.range)).length>1&&XS.sh.isF(XS.sel);
+ return `<div class="xl-act">${t.kind==='calc'?`<button class="btn line" data-act="xlfill"${canFill?'':' disabled'}>채우기</button>`:t.kind==='cf'?`<button class="btn line" data-act="xledit">${XS.rule?'규칙 고치기':'규칙 쓰기'}</button>`:'<button class="btn line" data-act="xlrun">필터 실행</button>'}<button class="btn" data-act="xlgrade">${ico('check')}채점</button><button class="btn line" data-act="xlhint">${XS.hint>=2?'모범 답':'실마리'}</button></div>`;
+}
+const xlArr=()=>{const g=xlTargetOf(XS.sel); return !!(g&&g.arr)};
+const xlNext=()=>{const ts=XLAB.d.tasks, i=ts.indexOf(XS.t); return ts.slice(i+1).find(t=>!xlProg(t.id).d)||ts[i+1]||null};
+const xlSkel=f=>f.replace(/"(?:[^"]|"")*"/g,'"…"').replace(/\$?[A-Z]{1,2}\$?\d+(?::\$?[A-Z]{1,2}\$?\d+)?/g,m=>m.includes(':')?'□:□':'□').replace(/(?<![A-Za-z□.\d])\d+(?:\.\d+)?/g,'○');
+function xlModelHtml(){
+ const t=XS.t;
+ if(t.kind==='calc') return t.targets.map(g=>`<code class="xl-code"><small>${esc(XL.rangeKeys(XL.rangeOf(g.range))[0])} 칸${g.arr?' · 배열 수식(Ctrl+Shift+Enter)':''}</small>${esc(g.arr?'{'+g.model+'}':g.model)}</code>`).join('');
+ if(t.kind==='cf') return `<code class="xl-code"><small>규칙 수식 · 범위 ${esc(t.cf.range)}</small>${esc(t.cf.model)}</code>`;
+ return `<code class="xl-code"><small>조건 범위에 넣을 내용</small>${t.af.set.map(([a,v])=>esc(a+'  '+v)).join('\n')}</code>`;
+}
+function xlPanelHtml(){
+ if(XS.ed) return '';
+ const t=XS.t, R=XS.res, h=[];
+ if(R){
+  h.push(`<section class="xl-card res ${R.ok?'ok':'no'}" id="xl-res" tabindex="-1"><div class="xl-rh">${ico(R.ok?'check':'x')}${R.ok?'맞았어요':'아직이에요'}</div><ul class="xl-ck">${R.lines.map(l=>`<li class="${l[0]?'y':'x'}">${ico(l[0]?'check':'x')}<span>${esc(l[1])}</span></li>`).join('')}</ul>${R.tips.map(m=>`<p style="margin-top:8px">${esc(m)}</p>`).join('')}</section>`);
+ }
+ if(XS.hint>=1||(R&&R.ok)) h.push(`<section class="xl-card"><h3>왜 이렇게 푸나</h3><p>${esc(t.idea)}</p></section>`);
+ if(XS.hint===2&&!(R&&R.ok)) h.push(`<section class="xl-card"><h3>수식의 뼈대</h3><p>□ 는 칸 주소, ○ 는 숫자, "…" 는 글자 자리예요.</p>${t.kind==='af'?`<code class="xl-code"><small>채울 칸</small>${esc(t.af.set.map(x=>x[0]).join(' · '))}</code>`:(t.kind==='cf'?[t.cf.model]:t.targets.map(g=>g.model)).map(m=>`<code class="xl-code">${esc(xlSkel(m))}</code>`).join('')}</section>`);
+ if(XS.hint>=3||(R&&R.ok)) h.push(`<section class="xl-card"><h3>모범 답</h3>${xlModelHtml()}${R&&R.ok?'':'<div class="row" style="margin-top:10px"><button class="btn line sm" data-act="xlmodel">모범 답 넣어 보기</button></div>'}<h3 style="margin-top:14px">이렇게 풀어요</h3><ol class="xl-steps">${t.steps.map(s=>`<li>${esc(s[0])}${s[1]?`<small>${esc(s[1])}</small>`:''}</li>`).join('')}</ol>${t.traps.length?`<h3 style="margin-top:14px">자주 틀리는 곳</h3><ul class="xl-traps">${t.traps.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`:''}</section>`);
+ return h.join('');
+}
+function xlPaint(mode){
+ const root=$('#xl'); if(!root||!XS.t) return;
+ root.classList.toggle('ed',XS.ed);
+ const inp=$('#xl-in'), ed=$('#xl-ed');
+ if(mode==='edit'&&XS.ed&&XS.native&&inp){if(inp.value!==XS.tx) inp.value=XS.tx}
+ else if(mode==='edit'&&XS.ed&&!XS.native&&ed&&!ed.classList.contains('ro')){ed.innerHTML=xlEdHtml(XS.tx,XS.ca); const c=ed.querySelector('.xl-caret'); if(c&&c.scrollIntoView) c.scrollIntoView({block:'nearest'})}
+ else $('#xl-bar').innerHTML=xlBarHtml();
+ const m=xlMsg(), me=$('#xl-msg'); me.className='xl-msg'+(m.c?' '+m.c:''); me.innerHTML=m.h;
+ const gw=$('#xl-gridw'), sx=gw.scrollLeft; gw.innerHTML=xlGridHtml(); gw.scrollLeft=sx;
+ if(mode==='edit'){const ch=$('#xk-chips'); if(ch){const want=xlChips(); if(ch.dataset.sig!==want.length+'|'+xlIsFormula()){ch.innerHTML=want; ch.dataset.sig=want.length+'|'+xlIsFormula()}} return}
+ $('#xl-ask').classList.toggle('open',!!XS.askOpen);
+ $('#xl-panel').innerHTML=xlPanelHtml();
+ $('#xl-foot').innerHTML=xlFootHtml();
+}
+function xlFocus(){
+ if(!XS.ed) return;
+ const i=$('#xl-in'); if(i){try{i.focus({preventScroll:true}); i.setSelectionRange(XS.ca,XS.ca)}catch(e){}}
+ const td=$('#xl-gridw td.x-sel'); if(td&&td.scrollIntoView) td.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+
+/* ----- 입력 ----- */
+function xlEdit(){
+ const t=XS.t; if(XS.ed) return true;
+ if(t.kind!=='cf'&&!XS.edit.has(XS.sel)){toast('답은 색칠된 칸에 넣어요'); return false}
+ XS.ed=true; XS.res=null; XS.msg=null; XS.pend=null;
+ XS.tx=t.kind==='cf'?(XS.rule||'='):(XS.sh.raw(XS.sel).replace(/^\{|\}$/g,'')||(t.kind==='calc'?'=':''));
+ XS.ca=XS.tx.length; xlPaint(); xlFocus(); return true;
+}
+function xlIns(s){XS.tx=XS.tx.slice(0,XS.ca)+s+XS.tx.slice(XS.ca); XS.ca+=s.length; XS.pend=null; XS.msg=null}
+function xlSyncIn(){const i=$('#xl-in'); if(i&&XS.ed&&XS.native){XS.tx=i.value; XS.ca=i.selectionStart==null?XS.tx.length:i.selectionStart}}
+function xlAfterKey(){xlPaint('edit'); const i=$('#xl-in'); if(i&&XS.native){try{i.focus({preventScroll:true}); i.setSelectionRange(XS.ca,XS.ca)}catch(e){}}}
+function xlKey(k){
+ if(!XS.ed){if(k==='enter'||k==='esc'||k==='cse') return; if(!xlEdit()) return}
+ xlSyncIn();
+ if(k==='enter') return xlCommit(false);
+ if(k==='cse') return xlCommit(true);
+ if(k==='esc'){XS.ed=false; XS.msg=null; XS.pend=null; xlPaint(); return}
+ if(k==='txt') return xlText();
+ const keep=XS.pend;
+ if(k==='bs'){if(XS.ca>0){XS.tx=XS.tx.slice(0,XS.ca-1)+XS.tx.slice(XS.ca); XS.ca--} XS.pend=null; XS.msg=null}
+ else if(k==='left'){XS.ca=Math.max(0,XS.ca-1); XS.pend=null}
+ else if(k==='right'){XS.ca=Math.min(XS.tx.length,XS.ca+1); XS.pend=null}
+ else if(k==='f4'){const r=XL.cycleRef(XS.tx,XS.ca); if(r){XS.tx=r.s; XS.ca=r.q; XS.pend=null; XS.msg=null} else XS.msg={err:'$ 를 붙일 주소가 커서 앞에 없어요. 칸을 먼저 눌러 주소를 넣어요.'}}
+ else if(k==='end') xlExtend();
+ else{xlIns(k); if(k==='"'&&keep) XS.pend=null}
+ xlAfterKey();
+}
+function xlExtend(){   // 방금 넣은 주소를 표의 아래(없으면 오른쪽) 끝까지 범위로
+ const rt=XL.refTokens(XS.tx); let i=-1; rt.forEach((x,k)=>{if(x.q<=XS.ca) i=k}); const x=rt[i];
+ if(!x||XS.tx.slice(x.q,XS.ca).trim()!==''||(rt[i-1]&&XS.tx.slice(rt[i-1].q,x.p).trim()===':')){XS.msg={err:'주소 바로 뒤에서 눌러요. 그 칸부터 표의 끝까지 범위로 만들어 줘요.'}; return}
+ const m=XL.addr(x.v), sh=XS.sh; let r=m.r, c=m.c;
+ while(sh.cell(r+1,m.c)&&sh.raw(XL.key(r+1,m.c))!=='') r++;
+ if(r===m.r) while(sh.cell(m.r,c+1)&&sh.raw(XL.key(m.r,c+1))!=='') c++;
+ if(r===m.r&&c===m.c){XS.msg={err:'이 칸 아래와 오른쪽이 비어 있어 범위로 늘릴 수 없어요.'}; return}
+ const s=x.v+':'+(m.ac?'$':'')+XL.colName(c)+(m.ar?'$':'')+r; XS.tx=XS.tx.slice(0,x.p)+s+XS.tx.slice(x.q); XS.ca=x.p+s.length; XS.pend=null; XS.msg=null;
+}
+function xlFn(n){
+ if(!XS.ed&&!xlEdit()) return; xlSyncIn();
+ if(XS.tx.trim()==='') {XS.tx='='; XS.ca=1}
+ xlIns(n+'('); xlAfterKey();
+}
+function xlCell(a){
+ const t=XS.t;
+ if(XS.ed){
+  xlSyncIn();
+  if(!xlIsFormula()){const from=XS.sel; if(xlCommit(false)===false) return; if(a!==from) xlPick(a); return}   // 값을 쓰던 중이면 끝내고 그 칸으로
+  if(a===XS.sel&&t.kind!=='cf'){toast('수식을 넣는 칸 자신은 가리킬 수 없어요'); return}
+  if(XS.pend&&XS.pend.q===XS.ca){XS.tx=XS.tx.slice(0,XS.pend.p)+a+XS.tx.slice(XS.pend.q); XS.ca=XS.pend.p+a.length; XS.pend={p:XS.pend.p,q:XS.ca}}
+  else{const p=XS.ca; xlIns(a); XS.pend={p,q:XS.ca}}
+  XS.msg=null; xlAfterKey(); return;
+ }
+ xlPick(a);
+}
+function xlPick(a){
+ XS.sel=a; XS.msg=null;
+ if(XS.t.kind!=='cf'&&XS.edit.has(a)) xlEdit(); else xlPaint();
+}
+function xlCommit(arr){
+ const t=XS.t; let s=XL.tidy(XS.tx).trim();
+ if(t.kind==='cf'&&s&&s[0]!=='=') s='='+s;
+ if(s==='=') s='';
+ if(s[0]==='='){const ck=XL.check(s); if(!ck.ok){XS.msg={err:ck.msg}; XS.ca=Math.min(ck.pos,XS.tx.length); xlAfterKey(); return false} if(ck.added) toast(`닫는 괄호 ${ck.added}개를 채웠어요`); s=ck.s}
+ try{
+  if(t.kind==='cf'){XS.rule=s; XS.hit=s?XS.sh.cf(t.cf.range,s):null}
+  else{XS.sh.set(XS.sel,s,arr&&s[0]==='='); if(t.kind==='af') xlClearOut()}
+ }catch(e){XS.msg={err:e&&e.message||'수식을 읽지 못했어요'}; xlAfterKey(); return false}
+ XS.ed=false; XS.pend=null; XS.msg=null; XS.res=null; xlSave(); xlPaint(); return true;
+}
+function xlFill(){
+ const g=xlTargetOf(XS.sel), sh=XS.sh; if(!g||!sh.isF(XS.sel)){toast('수식이 든 칸을 고른 뒤에 눌러요'); return}
+ const R=XL.rangeOf(g.range), a0=XL.addr(XS.sel), arr=sh.isArr(XS.sel), src=sh.raw(XS.sel).replace(/^\{|\}$/g,''); let n=0;
+ for(let r=R.r1;r<=R.r2;r++) for(let c=R.c1;c<=R.c2;c++){const a=XL.key(r,c); if(a===XS.sel) continue; try{sh.set(a,XL.shift(src,r-a0.r,c-a0.c),arr); n++}catch(e){}}
+ XS.res=null; xlSave(); toast(`${n}칸에 채웠어요`); xlPaint();
+}
+function xlClearOut(){XS.out.forEach(a=>{XS.sh.set(a,''); XS.hd.delete(a)}); XS.out=new Set(); XS.rows=null; XS.lab=''}
+function xlUsed(){   // 조건 범위: 조건 구역에서 내용이 든 칸들을 감싸는 범위
+ const C=XL.rangeOf(XS.t.af.crit); let g=null;
+ XL.rangeKeys(C).forEach(a=>{if(XS.sh.raw(a)!==''){const m=XL.addr(a); g=g?{r1:Math.min(g.r1,m.r),c1:Math.min(g.c1,m.c),r2:Math.max(g.r2,m.r),c2:Math.max(g.c2,m.c)}:{r1:m.r,c1:m.c,r2:m.r,c2:m.c}}});
+ return g;
+}
+function xlRun(quiet){
+ const t=XS.t, af=t.af, sh=XS.sh, L=XL.rangeOf(af.list), o=XL.addr(af.out), g=xlUsed();
+ if(!g){toast('조건 범위에 조건을 먼저 넣어요'); return false}
+ const rows=sh.filter(af.list,XL.rangeText(g)); xlClearOut(); XS.rows=rows; XS.used=XL.rangeText(g);
+ const put=(r,c,s)=>{const a=XL.key(r,c); sh.set(a,s); XS.out.add(a)};
+ XS.lab=XL.key(o.r-1,o.c); put(o.r-1,o.c,`결과 ${rows.length}줄 · 조건 범위 ${XS.used}`);
+ for(let c=L.c1;c<=L.c2;c++){put(o.r,o.c+c-L.c1,sh.raw(XL.key(L.r1,c))); XS.hd.add(XL.key(o.r,o.c+c-L.c1))}
+ rows.forEach((r,i)=>{for(let c=L.c1;c<=L.c2;c++) put(o.r+1+i,o.c+c-L.c1,sh.isF(XL.key(r,c))?sh.text(XL.key(r,c)):sh.raw(XL.key(r,c)))});
+ XS.res=null; if(!quiet){xlPaint(); const td=$(`#xl-gridw td[data-a="${XS.lab}"]`); if(td&&td.scrollIntoView) td.scrollIntoView({block:'start'})}
+ return true;
+}
+
+/* ----- 채점 ----- */
+const xlSame=(v,e)=>typeof e==='number'?typeof v==='number'&&Math.abs(v-e)<=1e-6*Math.max(1,Math.abs(e)):v===e;
+const xlShowV=(v,a)=>{const m=XL.addr(a), s=XL.show(v,XS.sh.fmtOf(m.r,m.c)); return typeof v==='string'?'"'+s+'"':s};
+function xlGrade(){
+ const t=XS.t, sh=XS.sh, R={ok:false,cells:{},lines:[],tips:[]};
+ if(t.kind==='calc'){
+  let all=0, ok=0, empty=0, typed=0, arrMiss=0, firstBad=null, firstOk=true; const miss=new Set();
+  t.targets.forEach(g=>{const need=XL.fnNames(g.model).filter(f=>t.use.includes(f));
+   XL.rangeKeys(XL.rangeOf(g.range)).forEach((a,i)=>{all++; const raw=sh.raw(a), v=sh.get(a), good=raw!==''&&xlSame(v,g.exp[i]); R.cells[a]=good; if(good) ok++; else{if(!firstBad) firstBad={a,e:g.exp[i],v,i}; if(i===0) firstOk=false}
+    if(raw==='') empty++; else if(!sh.isF(a)) typed++; else{const fs=XL.fnNames(raw); need.forEach(f=>{if(!fs.includes(f)) miss.add(f)}); if(g.arr&&!sh.isArr(a)) arrMiss++}})});
+  R.lines.push([ok===all,`값이 맞는 칸 ${ok} / ${all}`]);
+  if(typed) R.lines.push([false,`값을 직접 넣은 칸 ${typed}개 (수식으로 계산해야 해요)`]); else if(ok===all) R.lines.push([true,'모든 칸을 수식으로 계산했어요']);
+  if(t.use.length) R.lines.push([!miss.size&&!empty,miss.size?`지시한 함수 가운데 ${[...miss].join(', ')} 을(를) 쓰지 않았어요`:`지시한 함수(${t.use.join(', ')})를 썼어요`]);
+  if(t.targets.some(g=>g.arr)) R.lines.push([!arrMiss&&!empty,arrMiss?'배열 수식으로 넣지 않은 칸이 있어요':'배열 수식으로 넣었어요']);
+  R.ok=ok===all&&!typed&&!miss.size;
+  if(R.ok&&!xlVarOk()){R.ok=false; R.lines.push([false,'자료를 바꿔 검산하면 답이 달라져요']); R.tips.push(XLVARTIP)}
+  if(empty===all) R.tips.push('아직 넣은 수식이 없어요. 색칠된 첫 칸을 눌러 시작해요.');
+  else if(empty) R.tips.push(`비어 있는 칸이 ${empty}개 있어요. 수식을 넣은 칸을 고르고 '채우기'를 누르면 나머지가 채워져요.`);
+  else if(firstBad){
+   if(XL.isE(firstBad.v)) R.tips.push(`${firstBad.a} 칸에 ${firstBad.v.e} 가 나왔어요. ${XL.ERRTIP[firstBad.v.e]||''}`);
+   else if(firstOk&&firstBad.i>0) R.tips.push(`첫 칸은 맞았는데 ${firstBad.a} 칸부터 달라요. 채웠을 때 움직이면 안 되는 범위에 $ 를 붙였는지 확인해요. ${firstBad.a} 칸을 눌러 보면 주소가 어디를 가리키는지 색으로 보여요.`);
+   else R.tips.push(`${firstBad.a} 칸은 ${xlShowV(firstBad.e,firstBad.a)} 이(가) 나와야 하는데 지금은 ${xlShowV(firstBad.v,firstBad.a)} 이에요.`);
+  }
+  if(R.ok&&arrMiss) R.tips.push("값은 맞아요. 시험 지시문이 배열 수식을 요구하면 '배열 ↵'(PC에서는 Ctrl+Shift+Enter)로 넣어야 해요.");
+ }else if(t.kind==='cf'){
+  const exp=new Set(t.cf.exp), hit=new Set(XS.hit||[]), fs=XL.fnNames(XS.rule||''), miss=t.use.filter(f=>!fs.includes(f)); let same=exp.size===hit.size; exp.forEach(a=>{if(!hit.has(a)) same=false});
+  const G=XL.rangeOf(t.cf.range); XL.rangeKeys(G).forEach(a=>{if(exp.has(a)!==hit.has(a)) R.cells[a]=false});
+  R.lines.push([same,`서식이 입혀져야 할 칸 ${exp.size}개 가운데 ${[...exp].filter(a=>hit.has(a)).length}개${hit.size>exp.size||[...hit].some(a=>!exp.has(a))?` · 잘못 입혀진 칸 ${[...hit].filter(a=>!exp.has(a)).length}개`:''}`]);
+  if(t.use.length) R.lines.push([!miss.length&&!!XS.rule,miss.length?`지시한 함수 가운데 ${miss.join(', ')} 을(를) 쓰지 않았어요`:`지시한 함수(${t.use.join(', ')})를 썼어요`]);
+  R.ok=same&&!miss.length;
+  if(R.ok&&!xlVarOk()){R.ok=false; R.lines.push([false,'자료를 바꿔 검산하면 서식이 입혀지는 칸이 달라져요']); R.tips.push(XLVARTIP)}
+  if(!XS.rule) R.tips.push("규칙 수식이 아직 없어요. '규칙 쓰기'를 눌러 시작해요.");
+  else if(!same){
+   const wide=G.c2>G.c1, expRows=new Set(t.cf.exp.map(a=>XL.addr(a).r)), fullRow=wide&&t.cf.exp.length===expRows.size*(G.c2-G.c1+1), firstCol=[...hit].every(a=>XL.addr(a).c===G.c1);
+   if(fullRow&&hit.size&&firstCol&&[...hit].every(a=>expRows.has(XL.addr(a).r))) R.tips.push('첫 열만 칠해졌어요. 오른쪽 칸으로 옮겨 갈 때 열이 따라 움직였기 때문이에요. 규칙 수식의 열 글자 앞에 $ 를 붙여요(예: $B3).');
+   else if(fullRow&&hit.size&&[...hit].some(a=>!expRows.has(XL.addr(a).r))&&hit.size%(G.c2-G.c1+1)!==0) R.tips.push('칠해진 모양이 줄 단위가 아니에요. 그 줄의 값을 보는 주소는 열만 고정($B3), 전체 범위는 모두 고정($D$3:$D$10)했는지 확인해요.');
+   else if(!hit.size) R.tips.push('규칙에 맞는 칸이 하나도 없어요. 견주는 글자와 부등호, 그리고 수식의 기준 칸이 범위의 첫 칸인지 확인해요.');
+   else R.tips.push('서식이 입혀진 칸이 달라요. 빨간 밑줄이 그어진 칸이 틀린 곳이에요. 조건의 값과 부등호, $ 의 자리를 확인해요.');
+  }
+ }else{
+  const exp=t.af.exp, L=XL.rangeOf(t.af.list), heads=[]; for(let c=L.c1;c<=L.c2;c++) heads.push(String(sh.get(XL.key(L.r1,c))).trim());
+  if(XS.rows===null&&xlUsed()) xlRun(true);
+  const rows=XS.rows||[], same=XS.rows!==null&&rows.length===exp.length&&rows.every((r,i)=>r===exp[i]), g=xlUsed();
+  R.lines.push([same,XS.rows===null?'필터를 아직 실행하지 않았어요':`걸러진 줄 ${rows.length}개 (나와야 할 줄 ${exp.length}개)`]);
+  if(t.use.length){const fs=new Set(); XS.edit.forEach(a=>XL.fnNames(sh.raw(a)).forEach(f=>fs.add(f))); const miss=t.use.filter(f=>!fs.has(f)); R.lines.push([!miss.length,miss.length?`지시한 함수 가운데 ${miss.join(', ')} 을(를) 쓰지 않았어요`:`지시한 함수(${t.use.join(', ')})를 썼어요`]); R.ok=same&&!miss.length}
+  else R.ok=same;
+  if(R.ok&&!xlVarOk()){R.ok=false; R.lines.push([false,'자료를 바꿔 검산하면 걸러지는 줄이 달라져요']); R.tips.push('지금 자료에서는 맞지만, 표의 줄 순서를 바꾼 자료로 검산하면 결과가 달라져요. 수식 조건의 주소(첫 자료 줄 기준, 범위는 $ 로 고정)를 확인해요.')}
+  if(!g) R.tips.push('조건 범위가 비어 있어요. 첫 줄에 필드 이름, 그 아래에 조건을 넣어요.');
+  else if(!same){
+   let badHead=''; for(let c=g.c1;c<=g.c2;c++){const a=XL.key(g.r1,c), h=String(sh.get(a)==null?'':sh.get(a)).trim(); let fml=false; for(let r=g.r1+1;r<=g.r2;r++) if(sh.isF(XL.key(r,c))) fml=true; if(h&&!fml&&!heads.some(x=>x.toLowerCase()===h.toLowerCase())) badHead=`${a} 칸의 '${h}' 은(는) 표의 필드 이름이 아니에요. 필드 이름은 ${heads.join(', ')} 가운데 하나여야 해요.`; if(fml&&heads.some(x=>x.toLowerCase()===h.toLowerCase())) badHead=`${a} 칸: 수식으로 쓴 조건의 머리글은 표의 필드 이름과 달라야 해요. '조건' 같은 다른 낱말로 바꿔요.`}
+   if(badHead) R.tips.push(badHead);
+   else if(rows.length===L.r2-L.r1) R.tips.push('모든 줄이 나왔어요. 조건 범위 안에 빈 줄이 끼었거나, 조건이 비어 있어요.');
+   else if(!rows.length) R.tips.push("한 줄도 나오지 않았어요. '또는'이어야 할 조건을 같은 줄에 쓰지 않았는지, 글자와 부등호가 맞는지 확인해요.");
+   else if(exp.every(r=>rows.includes(r))) R.tips.push("나와야 할 줄은 모두 있지만 다른 줄이 더 나왔어요. '그리고'여야 할 조건을 다른 줄에 쓰지 않았는지 확인해요.");
+   else if(rows.every(r=>exp.includes(r))) R.tips.push("빠진 줄이 있어요. '또는'이어야 할 조건을 같은 줄에 쓰지 않았는지 확인해요.");
+   else R.tips.push('걸러진 줄이 달라요. 조건의 값과 부등호를 지시문과 견줘 봐요.');
+  }
+ }
+ XS.res=R; if(R.ok) xlSave(true); xlPaint();
+ const el=$('#xl-res'); if(el){el.scrollIntoView({block:'nearest'}); try{el.focus({preventScroll:true})}catch(e){}}
+}
+function xlVar(k,fill){   // 검산용 시트: 표의 줄 순서를 바꾼 자료(k=1 한 줄씩 밀기, k=2 거꾸로)에 fill 이 수식을 넣어요
+ const t=XS.t, o={rows:t.sheet.rows,r0:t.sheet.r0,c0:t.sheet.c0}, sh=new XL.Sheet(o), base=new XL.Sheet(o);
+ (t.vary||[]).forEach(v=>{const g=XL.rangeOf(v), n=g.r2-g.r1+1;
+  for(let c=g.c1;c<=g.c2;c++){const col=[]; let skip=false; for(let r=g.r1;r<=g.r2;r++){const a=XL.key(r,c); if(XS.edit.has(a)||base.isF(a)) skip=true; col.push(base.raw(a))} if(skip) continue;
+   for(let i=0;i<n;i++) sh.set(XL.key(g.r1+i,c),col[k===1?(i+1)%n:n-1-i])}});
+ fill(sh); return sh;
+}
+const xlSameV=(a,b)=>XL.isE(a)||XL.isE(b)?XL.isE(a)&&XL.isE(b)&&a.e===b.e:typeof b==='number'?xlSame(a,b):a===b;
+function xlVarOk(){   // 줄 순서를 바꾼 자료에서도 모범 답과 같은 결과가 나오는지(우연히 맞은 답을 가려내요)
+ const t=XS.t; if(!(t.vary||[]).length) return true;
+ try{
+  for(const k of [1,2]){
+   if(t.kind==='calc'){
+    const u=xlVar(k,sh=>XS.edit.forEach(a=>{const r=XS.sh.raw(a); if(r) sh.set(a,r)})), m=xlVar(k,sh=>t.targets.forEach(g=>{const R=XL.rangeOf(g.range); for(let r=R.r1;r<=R.r2;r++) for(let c=R.c1;c<=R.c2;c++) sh.set(XL.key(r,c),XL.shift(g.model,r-R.r1,c-R.c1),g.arr)}));
+    for(const a of XS.edit) if(!xlSameV(u.get(a),m.get(a))) return false;
+   }else if(t.kind==='cf'){
+    const sh=xlVar(k,()=>{}), a=sh.cf(t.cf.range,XS.rule), b=sh.cf(t.cf.range,t.cf.model); if(a.join()!==b.join()) return false;
+   }else{
+    const g=xlUsed(), u=xlVar(k,sh=>XS.edit.forEach(a=>{const r=XS.sh.raw(a); if(r) sh.set(a,r)})), m=xlVar(k,sh=>t.af.set.forEach(([a,v])=>sh.set(a,v)));
+    let mg=null; t.af.set.forEach(([a])=>{const x=XL.addr(a); mg=mg?{r1:Math.min(mg.r1,x.r),c1:Math.min(mg.c1,x.c),r2:Math.max(mg.r2,x.r),c2:Math.max(mg.c2,x.c)}:{r1:x.r,c1:x.c,r2:x.r,c2:x.c}});
+    if(u.filter(t.af.list,XL.rangeText(g)).join()!==m.filter(t.af.list,XL.rangeText(mg)).join()) return false;
+   }
+  }
+ }catch(e){return false}
+ return true;
+}
+const XLVARTIP='지금 자료에서는 맞지만, 표의 줄 순서를 바꾼 자료로 검산하면 답이 달라져요. 움직이면 안 되는 범위에 $ 를 붙였는지, 칸 주소 대신 값을 직접 쓰지 않았는지 확인해요.';
+function xlModel(){   // 모범 답을 시트에 넣어 봐요
+ const t=XS.t, sh=XS.sh;
+ if(t.kind==='calc') t.targets.forEach(g=>{const R=XL.rangeOf(g.range); for(let r=R.r1;r<=R.r2;r++) for(let c=R.c1;c<=R.c2;c++) sh.set(XL.key(r,c),XL.shift(g.model,r-R.r1,c-R.c1),g.arr)});
+ else if(t.kind==='cf'){XS.rule=t.cf.model; XS.hit=sh.cf(t.cf.range,XS.rule)}
+ else{xlClearOut(); XL.rangeKeys(XL.rangeOf(t.af.crit)).forEach(a=>sh.set(a,'')); t.af.set.forEach(([a,v])=>sh.set(a,v)); xlRun(true)}
+ XS.res=null; xlSave(); toast('모범 답을 넣었어요. 칸을 눌러 수식을 읽어 보세요'); xlPaint();
+}
+
+/* ----- 창: 함수 고르기, 글자 넣기, 더 보기, 연습 파일 ----- */
+function xlFx(){
+ const cats=['전체',...new Set(XL.FNS.map(f=>f.c))];
+ openModal(`<h2 class="h2">함수 고르기</h2><input class="xf-q" id="xf-q" type="search" placeholder="이름이나 하는 일로 찾기 (예: 평균)" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="함수 찾기">
+  <div class="xf-cats" role="group" aria-label="함수 종류">${cats.map((c,i)=>`<button class="chip" data-act="xlfcat" data-c="${c}" aria-pressed="${i===0}">${c==='DB'?'데이터베이스':c}</button>`).join('')}</div>
+  <div class="xf-list" id="xf-list">${XL.FNS.map(f=>`<button class="xf-r" data-act="xlfn" data-n="${f.n}" data-c="${f.c}" data-s="${esc((f.n+' '+f.d+' '+f.sig).toLowerCase())}"><b>${f.n}</b><span>(${esc(f.sig)})</span><small>${esc(f.d)}</small></button>`).join('')}</div>
+  <div class="modal-act"><button class="btn line" data-act="close">닫기</button></div>`);
+}
+function xlFxFilter(){const q=(($('#xf-q')||{}).value||'').trim().toLowerCase(), c=($('.xf-cats [aria-pressed=true]')||{dataset:{}}).dataset.c||'전체'; document.querySelectorAll('#xf-list .xf-r').forEach(b=>{b.hidden=!((c==='전체'||b.dataset.c===c)&&(!q||b.dataset.s.includes(q)))})}
+function xlText(){
+ const f=xlIsFormula();
+ openModal(`<h2 class="h2">글자 넣기</h2><p class="sub">한글이나 영문 낱말을 써서 커서 자리에 넣어요.</p><input id="xl-txt" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" aria-label="넣을 글자" style="width:100%;margin-top:12px" data-autofocus>
+  <label class="xl-txl"><input type="checkbox" id="xl-txq"${f?' checked':''}><span>큰따옴표로 감싸기<small>수식 안에 쓰는 글자는 감싸야 해요. 조건 범위의 칸에 쓰는 글자는 감싸지 않아요.</small></span></label>
+  <div class="modal-act"><button class="btn line" data-act="close">취소</button><button class="btn" data-act="xltxtok">넣기</button></div>`);
+}
+function xlMenu(){
+ const t=XS.t, p=xlProg(t.id);
+ openModal(`<h2 class="h2">${esc(t.title)}</h2><p class="sub">${p.d?'끝낸 과제예요.':'아직 끝내지 않은 과제예요.'}</p>
+  <div style="display:grid;gap:8px;margin-top:14px"><button class="btn line" data-act="xlreset">처음부터 다시 풀기</button><button class="btn line" data-act="xlkbd">${XS.native?'화면 자판으로 바꾸기':'기기 자판으로 바꾸기'}</button><button class="btn line" data-act="xlfile">${ico('down')}연습 파일 받기 (.xlsx)</button></div>
+  <p class="small" style="margin-top:12px">화면 자판은 휴대폰에서 수식 기호를 빨리 넣게 만든 자판이에요. 기기 자판은 PC의 키보드나 휴대폰의 기본 자판을 써요.</p>
+  <div class="modal-act"><button class="btn line" data-act="close">닫기</button></div>`);
+}
+function xlFilePre(){if(window.claude||XLAB.file||XLAB.fst) return; // claude.ai 안에서는 파일을 받을 수 없어서 미리 받지도 않아요
+ XLAB.fst=1; fetch('data/xlab.xlsx',{cache:'no-cache'}).then(r=>{if(!r.ok) throw 0; return r.blob()}).then(b=>{XLAB.file=b}).catch(()=>{XLAB.fst=0})}
+async function xlFile(){
+ const name='합격노트-엑셀연습.xlsx', type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+ const fail=()=>openModal(`<h2 class="h2">이 화면에서는 파일을 받을 수 없어요</h2><p class="sub">홈 화면에 설치한 합격노트 앱이나 브라우저로 연 합격노트에서 '연습 파일 받기'를 눌러 주세요. 받은 파일은 PC의 엑셀이나 휴대폰의 엑셀 앱에서 열 수 있어요.</p><div class="modal-act"><button class="btn" data-act="close" data-autofocus>확인</button></div>`);
+ try{
+  if(window.claude) return fail();
+  const blob=XLAB.file||await (await fetch('data/xlab.xlsx',{cache:'no-cache'})).blob(); XLAB.file=blob;
+  if(IOS){const f=new File([blob],name,{type}); if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f]}); return}}
+  const u=URL.createObjectURL(new Blob([blob],{type})), a=document.createElement('a'); a.href=u; a.download=name; document.body.append(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u),2000); toast('연습 파일을 받았어요');
+ }catch(e){if(e&&e.name==='AbortError') return; fail()}
+}
+const XACT={
+ xlcell:b=>xlCell(b.dataset.a),
+ xk:b=>xlKey(b.dataset.k),
+ xlfn:b=>{const n=b.dataset.n; if(MODAL) closeModal(); xlFn(n)},
+ xlins:b=>{if(!XS.ed&&!xlEdit()) return; xlSyncIn(); if(b.dataset.s[0]!=='"'&&XS.tx.trim()===''&&XS.t.kind!=='af'){XS.tx='='; XS.ca=1} xlIns(b.dataset.s); xlAfterKey()},
+ xled:(b,e)=>{const s=e.target.closest('[data-i]'); if(s){const r=s.getBoundingClientRect(); XS.ca=+s.dataset.i+(e.clientX>r.left+r.width/2?1:0)} else XS.ca=XS.tx.length; XS.pend=null; xlPaint('edit')},
+ xledit:()=>{xlEdit()},
+ xlask:()=>{XS.askOpen=!XS.askOpen; const a=$('#xl-ask'); if(a) a.classList.toggle('open',XS.askOpen)},
+ xlfill:()=>xlFill(), xlgrade:()=>xlGrade(), xlrun:()=>{xlRun()}, xlmodel:()=>xlModel(),
+ xlhint:()=>{XS.hint=Math.min(3,XS.hint+1); xlPaint(); const p=$('#xl-panel .xl-card:last-child'); if(p) p.scrollIntoView({block:'nearest'})},
+ xlfx:()=>{xlSyncIn(); xlFx()},
+ xlfcat:b=>{document.querySelectorAll('.xf-cats .chip').forEach(c=>c.setAttribute('aria-pressed',c===b)); xlFxFilter()},
+ xltxtok:()=>{const v=($('#xl-txt')||{}).value||'', q=!!($('#xl-txq')||{}).checked; closeModal(); if(v===''&&!q){xlAfterKey(); return} xlIns(q?'"'+v.replace(/"/g,'""')+'"':v); xlAfterKey()},
+ xlmenu:()=>{xlFilePre(); xlMenu()},
+ xlreset:()=>{const t=XS.t; closeModal(); const o=U.study.u['xl-'+t.id]; if(o){o.f={}; o.m=Date.now(); persist(['study'])} XS.id=''; render()},
+ xlkbd:()=>{closeModal(); xlSyncIn(); XS.native=!XS.native; xlPaint(); xlFocus()},
+ xlfile:()=>{if(MODAL) closeModal(); xlFile()}
+};
+function xlKeydown(e){   // PC 키보드: 수식 줄에서 Enter·Esc·F4, 시트에서 화살표·Enter
+ const tg=e.target;
+ if(tg.id==='xl-txt'){if(e.key==='Enter'){e.preventDefault(); XACT.xltxtok(); return true} return false}
+ if(MODAL||!XLAB.by.has(UI.arg)) return false;
+ if(XS.ed){
+  if(e.key==='Enter'){e.preventDefault(); xlKey(e.ctrlKey&&e.shiftKey?'cse':'enter'); return true}
+  if(e.key==='Escape'){e.preventDefault(); xlKey('esc'); return true}
+  if(e.key==='F4'){e.preventDefault(); xlKey('f4'); return true}
+  if(XS.native||e.metaKey||e.ctrlKey||e.altKey) return false;
+  const k=e.key==='Backspace'?'bs':e.key==='ArrowLeft'?'left':e.key==='ArrowRight'?'right':e.key.length===1?e.key:'';
+  if(k){e.preventDefault(); xlKey(k); return true}
+  return false;
+ }
+ if(tg.tagName==='INPUT'||tg.tagName==='TEXTAREA'||e.metaKey||e.ctrlKey||e.altKey||XS.t.kind==='cf') return false;
+ const d={ArrowUp:[-1,0],ArrowDown:[1,0],ArrowLeft:[0,-1],ArrowRight:[0,1]}[e.key];
+ if(d&&XS.sel){const m=XL.addr(XS.sel), V=XL.rangeOf(XS.t.view), r=Math.max(V.r1,Math.min(V.r2,m.r+d[0])), c=Math.max(V.c1,Math.min(V.c2,m.c+d[1])); e.preventDefault(); XS.sel=XL.key(r,c); XS.msg=null; xlPaint(); const td=$('#xl-gridw td.x-sel'); if(td) td.scrollIntoView({block:'nearest',inline:'nearest'}); return true}
+ if((e.key==='Enter'||e.key==='F2')&&XS.edit.has(XS.sel)&&tg.tagName!=='BUTTON'&&tg.tagName!=='A'){e.preventDefault(); xlEdit(); return true}
+ return false;
+}
+/*XLUI-END*/
+
 /* ---------- routing & render ---------- */
-const VIEWS={home:vHome,practice:vPractice,quiz:vQuiz,result:vResult,notes:vNotes,stats:vStats,bank:vBank,words:vWords,cards:vCards,study:vStudy};
+const VIEWS={home:vHome,practice:vPractice,quiz:vQuiz,result:vResult,notes:vNotes,stats:vStats,bank:vBank,words:vWords,cards:vCards,study:vStudy,xl:vXl};
 const TABS=[['home','홈','home'],['practice','문제 풀기','pen'],['notes','오답노트','note'],['stats','분석','chart'],['bank','문제은행','bank']];
 const TABSV=[['home','홈','home'],['practice','단어 학습','pen'],['words','단어장','book'],['notes','오답노트','note'],['stats','분석','chart']];
 const TABSH=[['home','홈','home'],['study','공부','book'],['practice','문제 풀기','pen'],['notes','오답노트','note'],['stats','분석','chart']]; // 한국사: 문제은행은 문제 풀기 화면의 링크로
@@ -3100,8 +4547,8 @@ const tabsNow=()=>EXAMS[U.settings.exam]&&EXAMS[U.settings.exam].vocab?TABSV:has
 function setRoute(h){h=h||'home'; const i=h.indexOf('/'); UI.route=i<0?h:h.slice(0,i); try{UI.arg=i<0?'':decodeURIComponent(h.slice(i+1))}catch(e){UI.arg=''}}
 function go(r){if(location.hash!=='#'+r){location.hash=r}else{setRoute(r);render();window.scrollTo(0,0)}}
 function renderTop(){
- const ex=U.settings.exam, cur=UI.route==='result'?'practice':UI.route==='cards'?'words':UI.route, TB=tabsNow();
- $('#top').innerHTML=`<div class="top-in"><a class="brand" href="#home">${LOGO}<span>합격노트</span></a><div class="exams" role="tablist" aria-label="시험 선택">${EXIDS.map(k=>`<button role="tab" aria-selected="${k===ex}" data-act="exam" data-v="${k}">${EXAMS[k].name}</button>`).join('')}</div><nav class="tabs" aria-label="주요 메뉴">${TB.map(([r,l])=>`<a href="#${r}" ${cur===r?'aria-current="page"':''}>${l}</a>`).join('')}</nav><button class="skinbtn" data-act="skin" aria-label="화면 디자인 바꾸기" title="화면 디자인">${ico('skin')}</button>${ME&&profOf(ME)?`<button class="who" data-act="pmenu" aria-label="${esc(profOf(ME).name)}님 아이디 관리">${esc(profOf(ME).name)}님</button>`:''}<span class="sync" id="sync" data-s="local"><i></i><span></span></span></div>`;
+ const ex=U.settings.exam, cur=UI.route==='result'||UI.route==='xl'?'practice':UI.route==='cards'?'words':UI.route, TB=tabsNow();
+ $('#top').innerHTML=`<div class="top-in"><a class="brand" href="#home">${LOGO}<span>합격노트</span></a><div class="exams" role="tablist" aria-label="시험 선택">${EXIDS.map(k=>`<button role="tab" aria-selected="${k===ex}" data-act="exam" data-v="${k}">${exLabel(EXAMS[k].name)}</button>`).join('')}</div><nav class="tabs" aria-label="주요 메뉴">${TB.map(([r,l])=>`<a href="#${r}" ${cur===r?'aria-current="page"':''}>${l}</a>`).join('')}</nav><button class="skinbtn" data-act="skin" aria-label="화면 디자인 바꾸기" title="화면 디자인">${ico('skin')}</button>${ME&&profOf(ME)?`<button class="who" data-act="pmenu" aria-label="${esc(profOf(ME).name)}님 아이디 관리">${esc(profOf(ME).name)}님</button>`:''}<span class="sync" id="sync" data-s="local"><i></i><span></span></span></div>`;
  {const ex_=$('#top .exams'), sel_=ex_&&ex_.querySelector('[aria-selected=true]'); if(sel_&&ex_.scrollWidth>ex_.clientWidth+1){const want=sel_.offsetLeft-(ex_.clientWidth-sel_.offsetWidth)/2; ex_.scrollLeft=Math.max(0,want)}} // 좁은 화면: 고른 시험 단추가 가려지지 않게
  $('#mtabs').innerHTML=TB.map(([r,l])=>`<a href="#${r}" ${cur===r?'aria-current="page"':''}>${l}</a>`).join('');
  $('#tabbar').innerHTML=TB.map(([r,l,i])=>`<a href="#${r}" ${cur===r?'aria-current="page"':''}>${ico(i)}<span>${l}</span></a>`).join('');
@@ -3125,6 +4572,7 @@ function render(keep){
  if(r==='quiz'&&!U.active) r=UI.route='home';
  if(r==='cards'&&!UI.cards) r=UI.route='words';
  document.body.dataset.route=r;
+ document.body.dataset.xl=r==='xl'&&XLAB.by.has(UI.arg)?'1':'0';   // 연습장 과제 화면은 머리줄과 아래 탭을 접어요
  renderTop();
  $('#view').innerHTML=VIEWS[r]();
  AFTER.forEach(f=>f());
@@ -3138,7 +4586,7 @@ setInterval(tick,1000);
 /* ---------- actions ---------- */
 const ACT={
  go:b=>go(b.dataset.r),
- exam:b=>{setSetting(s=>s.exam=b.dataset.v); UI.custom={subs:[],tops:[],scope:'all',count:20}; UI.notes.subj=''; UI.notes.open={}; if(!EXAMS[b.dataset.v].vocab&&(UI.route==='words'||UI.route==='cards')){go('home');return} if(UI.route==='study'){if(!hasCourse(b.dataset.v)){go('home');return} if(UI.arg){go('study');return}} render()},
+ exam:b=>{setSetting(s=>s.exam=b.dataset.v); UI.custom={subs:[],tops:[],scope:'all',count:20}; UI.notes.subj=''; UI.notes.open={}; if(!EXAMS[b.dataset.v].vocab&&(UI.route==='words'||UI.route==='cards')){go('home');return} if(UI.route==='study'){if(!hasCourse(b.dataset.v)){go('home');return} if(UI.arg){go('study');return}} if(UI.route==='xl'&&b.dataset.v!=='comp'){go('home');return} render()},
  mode:b=>{setSetting(s=>s.mode=b.dataset.v); render(true)},
  plan:()=>{const p=buildPlan(); start('plan',EXAMS[U.settings.exam].vocab?'오늘의 단어':'오늘의 학습',p.ids)},
  resume:()=>{if(U.active){U.settings.exam=U.active.exam; closeModal(); go('quiz')}},
@@ -3146,7 +4594,7 @@ const ACT={
  close:()=>closeModal(),
  mbg:(b,e)=>{if(e.target===b) closeModal()},
  skin:()=>openSkin(), lookpre:b=>{const p=LOOK.presets.find(x=>x.id===b.dataset.v); if(p){applyLook(p); openSkin(`.skin[data-v="${p.id}"]`)}}, lookset:b=>{applyLook({[b.dataset.k]:b.dataset.v}); openSkin(`[data-k="${b.dataset.k}"][data-v="${b.dataset.v}"]`)}, themeset:b=>{applyLook(null,b.dataset.v); openSkin(`.seg [data-v="${b.dataset.v}"]`)},
- mock:b=>{const ex=U.settings.exam, E=EXAMS[ex]; if(E.rc){const m=E.mocks.find(x=>x.id===b.dataset.m)||E.mocks[0]; start('mock',m.name,(UI.rcMock&&UI.rcMock[m.id])||rcMock(ex,m.id),'exam'); return} start('mock','실전 모의고사',buildMock(),'exam')},
+ mock:b=>{const ex=U.settings.exam, E=EXAMS[ex]; if(E.rc){const m=E.mocks.find(x=>x.id===b.dataset.m)||E.mocks[0]; start('mock',m.name,(UI.rcMock&&UI.rcMock[m.id])||rcMock(ex,m.id),'exam'); return} start('mock',E.open?'실전 구성 세트':'실전 모의고사',buildMock(),'exam')},
  round:b=>{const r=rounds(U.settings.exam).find(x=>x.k===b.dataset.k); if(r) start('round',r.title,r.ids)},
  focus:b=>{const k=b.dataset.k, t={due:'오답노트 복습',mis:'잘못 알고 있던 문제',unsure:'헷갈린 문제',star:'북마크',notes:'오답노트 전체'}[k]; start(k,t,shuffle(focusSet(k)).slice(0,60))},
  topic:b=>{const ex=U.settings.exam,tr=TR(ex),s=b.dataset.s,t=b.dataset.t,qs=QS(ex); const rk=id=>{const l=lastAt(qs[id]);return !l?1:l[2]?2:0}; const ids=shuffle(POOL(ex,tr).filter(q=>subjOf(q,tr)===s&&q.topic===t)).sort((a,b2)=>rk(a.id)-rk(b2.id)).map(q=>q.id).slice(0,20); start('topic',t,ids)},
@@ -3158,6 +4606,8 @@ const ACT={
  choose:b=>{const s=U.active; if(!s) return; const id=s.qids[s.i], a=s.ans[id]||(s.ans[id]={ms:0}); if(s.mode==='study'&&a.g) return; const n=+b.dataset.n; a.ch=s.mode==='exam'&&a.ch===n?null:n; s.tu=Date.now(); persist(['settings']); render(true)},
  mark:b=>{const s=U.active; if(!s||s.mode!=='exam') return; const i=+b.dataset.i, id=s.qids[i], a=s.ans[id]||(s.ans[id]={ms:0}), n=+b.dataset.n; a.ch=a.ch===n?null:n; s.tu=Date.now(); persist(['settings']); render(true); refreshSheet(b.id)},
  grade:b=>grade(b.dataset.u==='1'),
+ oreveal:()=>{const s=U.active; if(!s) return; const id=s.qids[s.i], a=s.ans[id]||(s.ans[id]={ms:0}); if(a.g) return; a.rv=1; a.tk=a.tk||[]; persist(['settings']); render(true); const m=$('.oa-model'); if(m) m.scrollIntoView({block:'nearest',behavior:'smooth'})},
+ otick:b=>{const s=U.active; if(!s) return; const id=s.qids[s.i], a=s.ans[id]; if(!a||a.g||!a.rv) return; const i=+b.dataset.i; (a.tk=a.tk||[])[i]=a.tk[i]?0:1; persist(['settings']); render(true)},
  next:()=>{const s=U.active; if(!s) return; if(s.i<s.qids.length-1){s.i++; s.tu=Date.now(); persist(['settings']); render(); window.scrollTo(0,0)} else if(s.mode==='study') finish(); else ACT.submit()},
  prev:()=>{const s=U.active; if(s&&s.i>0){s.i--; render(); window.scrollTo(0,0)}},
  jump:b=>{const s=U.active; if(!s) return; s.i=+b.dataset.i; closeModal(); render(); window.scrollTo(0,0)},
@@ -3215,10 +4665,13 @@ const ACT={
 };
 function grade(un){
  const s=U.active; if(!s||s.mode!=='study') return;
- const id=s.qids[s.i], q=BANK.all.get(id), a=s.ans[id]; if(!q||!a||!a.ch||a.g) return;
+ const id=s.qids[s.i], q=BANK.all.get(id), a=s.ans[id]; if(!q||!a||a.g) return;
+ if(q.kind==='self'){if(!a.rv) return; a.fr=Math.min(1,(a.tk||[]).filter(Boolean).length/q.need)}
+ else if(q.kind==='fill'){if(!fillOn(a)) return; const r=fillCheck(q,a.vals||[]); a.fr=r.filter(Boolean).length/r.length}
+ else if(!a.ch) return;
  const wasDemo=isDemo(q.exam);
- a.g=1; a.ok=a.ch===q.answer?1:0; a.un=un?1:0;
- record(q,a.ch,!!a.ok,un,a.ms); vtally(q,a.ok);
+ a.g=1; a.ok=q.kind?(a.fr>=1?1:0):(a.ch===q.answer?1:0); a.un=un?1:0;
+ record(q,a.ch,!!a.ok,un,a.ms,a.fr); vtally(q,a.ok);
  s.tu=Date.now(); persist(['settings']);
  if(wasDemo) toast('이제부터 내 기록으로 분석해요');
  render(true);
@@ -3263,7 +4716,7 @@ async function importFiles(files){
 }
 document.addEventListener('click',e=>{
  const b=e.target.closest('[data-act]'); if(!b) return;
- const f=ACT[b.dataset.act]||SACT[b.dataset.act]; if(!f) return;
+ const f=ACT[b.dataset.act]||SACT[b.dataset.act]||XACT[b.dataset.act]; if(!f) return;
  if(b.disabled) return;
  f(b,e);
 });
@@ -3289,6 +4742,12 @@ document.addEventListener('input',e=>{
  const t=e.target;
  if(t.dataset.memo){const id=t.dataset.memo, q=BANK.all.get(id); if(!q) return; const st=U.q[q.exam][id]||(U.q[q.exam][id]={a:[]}); st.memo=t.value; st.m=Date.now(); clearTimeout(MT); MT=setTimeout(()=>persist([qKey(q.exam,id)]),600); return}
  if(t.id==='imp-text'){UI.imp.text=t.value; return}
+ if(t.id==='xl-in'){xlSyncIn(); XS.pend=null; XS.msg=null; xlPaint('edit'); return}
+ if(t.id==='xf-q'){xlFxFilter(); return}
+ if(t.dataset.oa!=null||t.dataset.oatx){ // 필답형 답 칸: 다시 그리지 않고 값만 담아 둬요
+  const s=U.active; if(!s) return; const id=s.qids[s.i], a=s.ans[id]||(s.ans[id]={ms:0}); if(a.g) return;
+  if(t.dataset.oatx) a.tx=t.value.slice(0,1200); else{(a.vals=a.vals||[])[+t.dataset.oa]=t.value.slice(0,24); const on=fillOn(a); document.querySelectorAll('.qact [data-act=grade]').forEach(b=>b.disabled=!on)}
+  clearTimeout(MT); MT=setTimeout(()=>persist(['settings']),600); return}
  if(t.id==='n-search'){UI.notes.q=t.value; UI.notes.limit=30; clearTimeout(MT); MT=setTimeout(()=>render(true),250)}
  if(t.id==='w-search'){UI.words.q=t.value; UI.words.limit=50; clearTimeout(MT); MT=setTimeout(()=>render(true),250)}
  if(t.id==='g-name'){UI.gf.name=t.value; return}
@@ -3299,6 +4758,8 @@ document.addEventListener('keydown',e=>{
  const tg=e.target, tag=(tg.tagName||'').toLowerCase();
  if(UI.gate){if(e.key==='Enter'&&tag==='input'&&!MODAL){e.preventDefault(); const b=$('.gate .btn.big'); if(b) b.click()} return}
  if(e.key==='Enter'&&tg.id==='p-pw'){e.preventDefault(); SACT.ppwsave(); return}
+ if(UI.route==='xl'&&XS.t&&xlKeydown(e)) return;
+ if(e.key==='Enter'&&tg.dataset&&tg.dataset.oa!=null){e.preventDefault(); const nx=document.querySelector('[data-oa="'+(+tg.dataset.oa+1)+'"]'); if(nx) nx.focus(); else tg.blur(); return}
  if(tag==='textarea'||tag==='input'||tag==='select') return;
  if(tg.getAttribute&&tg.getAttribute('role')==='button'&&(e.key==='Enter'||e.key===' ')){e.preventDefault(); tg.click(); return}
  if(UI.route==='cards'&&UI.cards&&!MODAL&&!e.metaKey&&!e.ctrlKey&&!e.altKey){
@@ -3317,7 +4778,7 @@ document.addEventListener('keydown',e=>{
   if(b&&!b.disabled){e.preventDefault(); b.click()}
   return;
  }
- if(UI.route!=='quiz'||!U.active||MODAL||e.metaKey||e.ctrlKey||e.altKey) return;
+ if(UI.route!=='quiz'||!U.active||!BANK.ready||MODAL||e.metaKey||e.ctrlKey||e.altKey) return;
  const s=U.active, a=s.ans[s.qids[s.i]]||{}, onBtn=tag==='button'||tag==='a';
  const nk=EXAMS[s.exam].abc&&/^[a-dA-D]$/.test(e.key)?String('abcd'.indexOf(e.key.toLowerCase())+1):e.key;
  if(/^[1-5]$/.test(nk)){const b=$(`.ch[data-n="${nk}"]`); if(b&&!b.disabled){e.preventDefault(); b.click()}}
@@ -3347,14 +4808,14 @@ async function boot(data){
  SAMPLE=typeof s==='function'?s:null; DL=d&&typeof d.save==='function'?d:null;
  if(SAMPLE||DL) render(true);
 }
-if(/[?&]debug\b/.test(location.search)) window.__hn={get STUDY(){return STUDY},applyLook,LOOK,lookNow,presetNow,themeNow,COURSES,UI,studyPace,Cloud,IDB,getProf:()=>({PROF,ME,key:curKey()}),RC,rcOrder,rcWords,rcMock,rcPlan,rounds,estSec,VOC,vmat,vprep,vClash,vtypeFor,wstate,vTypeStats,getU:()=>U,setU:x=>{U=fixU(x);DEMO={}},applyNote,predict,subjStats,topicStats,buildPlan,buildMock,summarize,BANK,TR,trOf,EXAMS,confMatrix,rolling,strategy,focusSet,render};
+if(/[?&]debug\b/.test(location.search)) window.__hn={get STUDY(){return STUDY},XL,XS,XLAB,applyLook,LOOK,lookNow,presetNow,themeNow,COURSES,UI,studyPace,Cloud,IDB,getProf:()=>({PROF,ME,key:curKey()}),RC,rcOrder,rcWords,rcMock,rcPlan,rounds,estSec,VOC,vmat,vprep,vClash,vtypeFor,wstate,vTypeStats,getU:()=>U,setU:x=>{U=fixU(x);DEMO={}},applyNote,predict,subjStats,topicStats,buildPlan,buildMock,summarize,BANK,TR,trOf,EXAMS,confMatrix,rolling,strategy,focusSet,render};
 try{if(window.claude&&window.claude.hot&&window.claude.hot.snapshot) window.claude.hot.snapshot(()=>({route:UI.route+(UI.arg?'/'+UI.arg:'')}))}catch(e){}
 if(window.claude&&window.claude.hot&&window.claude.hot.ready) window.claude.hot.ready(boot); else boot(window.claude&&window.claude.hot&&window.claude.hot.data||{});
 }
 </script>
 <script>
 (()=>{'use strict';
- const BUILD='20261124-0022';
+ const BUILD='20261124-1755';
  if(window.top!==window.self||!('serviceWorker' in navigator)) return;
  window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
  let hiddenAt=0;
