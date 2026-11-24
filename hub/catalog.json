@@ -3052,22 +3052,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.102.0",
+        "version": "1.103.0",
         "date": "2026-11-25",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.102.0.exe",
-        "sha256": "a03db670057508a82e538544649d8957dbb303ccc730c3b5bbb2cf2262ea5b13",
-        "size": 66116347,
-        "notes": "층 바닥 · 무주 공간 · 코어를 더 누르면 앞의 지정이 지워지던 것 (호용 2026-11-25 '바닥이나 무주공간 면적 추가하려고 누르면 기존에 있던 정보가 리셋되고 다시 지정해야 하는 버그')\n- [층 바닥] · [무주 공간] · [코어]를 다시 눌러 같은 층에 하나 더 찍으면, 1.101 까지는 그 층에 먼저 지정한 것이 모두 지워졌어요 (한 번 누른 동안 이어 찍은 것만 남음).\n  이제 같은 층이어도 **다른 자리는 더하고, 같은 자리를 다시 찍었을 때만 그것을 바꿔요** — 분동 바닥 · 로비 둘 · 코어 둘을 따로 눌러 넣어도 그대로.\n  - 같은 자리 = 예전 글자가 새 둘레 안이거나, 새 글자 자리가 예전 둘레 안. 변을 같이 쓰는 이웃 동은 다른 자리로 봐요.\n  - 선을 지우고 같은 바닥을 다시 그려 찍으면 예전처럼 바꿔요 (1.37.1 '지운 선의 정보가 남아 합산'은 그대로 막음). 대지 · 건축면적은 예전처럼 다시 정하면 바뀜.\n  - 지운 지정 글자 [되살리기]도 같은 규칙 — 같은 층 다른 자리에 새 지정이 있어도 되살려요.\n- 명령줄 질문 · [층]의 단추 말풍선 글도 '같은 자리면 바뀌고 다른 자리면 더해요'로.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.103.0.exe",
+        "sha256": "c333d17fc67e429accb4757c03ab1ea3bfda66b9d8988dfd36f35d5b54d59630",
+        "size": 66118759,
+        "notes": "면적 라벨 글자 크기를 한 번에 맞추기 (호용 2026-11-25 '라벨크기도 지금 화면 비율 기준이지? 탭에서 라벨 텍스트 일괄조정 가능하게')\n- 면적 라벨 크기는 화면 비율이 아니라 **종이 위 글자 크기(mm) × 축척**이에요 (빠른 면적 AA 의 화면 그림만 화면 크기를 따름). 그런데 넣은 뒤 글자 크기 · 도면 축척을 바꾸면 이미 넣은 라벨은 그대로였어요.\n- 층 · 면적 탭 [면적] › '값 · 글자 · 표' 에 [라벨 글자 크기 맞추기] — 위 '글자 (종이 위)' 크기로 이미 넣은 면적 라벨을 한 번에 바꿔요.\n  - 미리 고른 면적 글자가 있으면 그것만, 없으면 지금 공간의 모든 면적 라벨(실 · 대지 · 층 바닥 · 보이드 · 무주 공간 · 코어).\n  - 축척: '놓인 도곽 축척'(처음 값 — 라벨마다 놓인 도곽의 축척, 도곽 밖이면 도면 축척) · '도면 축척'. 배치 공간은 종이 크기 그대로.\n  - 잠긴 레이어의 라벨은 그대로 두고 몇 개인지 알려 줘요. U 한 번에 되돌림. 면적표 글자는 [면적표 고치기]로.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.102.0.exe.part1",
-            "sha256": "5f2219f32807f20f1e1e47381acedf1fa95b9d78c897270f39723d7a7414097f",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.103.0.exe.part1",
+            "sha256": "9e0d09fb38adb1bd6ac600f241586a33c579136d773d28f9c0794c22821dc4aa",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.102.0.exe.part2",
-            "sha256": "f3414fd1fcee91bc882d0e3b3d600b15a33fa943845b868a0163ceb9872fbf79",
-            "size": 18930427
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.103.0.exe.part2",
+            "sha256": "698de33a5f6d6ef67152c6e6cf3ccaaa54f83d560f4761ae86cfee5cf1f29af2",
+            "size": 18932839
           }
         ],
         "min_hub": "0.11.0"
