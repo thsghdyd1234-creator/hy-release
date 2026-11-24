@@ -1023,6 +1023,59 @@ body[data-xl="1"] main{max-width:none;padding:0}
 .xl-nat .btn{flex:1 1 0}
 @media (max-height:640px){.xk{min-height:38px}.xk-c{min-height:32px}.xk-x .xk{min-height:32px}.xl-grid td{height:30px}}
 @media (min-width:700px){.xl{border-left:1px solid var(--line);border-right:1px solid var(--line)}.xk{min-height:40px}}
+/* 따라 하기: 지시문과 입력 줄 사이에서 한 쪽씩(왜 → 순서 → 마무리) */
+.xl-cw{flex:none}
+.xl-co{--xh:40px;display:block;position:relative;border-bottom:1px solid var(--line);background:var(--soft)}
+.xl-co.off{display:flex;align-items:center;gap:10px;width:100%;min-height:42px;padding:5px 12px 5px 14px;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:inherit;font-size:13.5px;line-height:1.3;text-align:left;cursor:pointer}
+.xl-co.off b{flex:none;font-weight:700}
+.xl-co.off span{flex:1;min-width:0;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xl-co.off i{flex:none;padding:5px 12px;border:1px solid var(--line);border-radius:var(--pill);background:var(--paper);font-style:normal;font-weight:600}
+.xl-coh{display:flex;align-items:center;gap:8px;height:var(--xh);padding:2px 2px 0 14px;font-size:13px;line-height:1.2}
+.xl-coh>b{flex:none;font-weight:700;white-space:nowrap}
+.xl-con{flex:0 1 auto;min-width:0;color:var(--ink2);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xl-cop{flex:none;display:flex;gap:6px;margin-left:auto}
+.xl-cop button{min-width:40px;height:calc(var(--xh) - 6px);padding:0 8px;border:1px solid var(--line);border-radius:calc(9px*var(--rk));background:var(--paper);color:var(--ink);font:inherit;font-size:19px;line-height:1;cursor:pointer}
+.xl-cop button.go{padding:0 13px;white-space:nowrap;border-color:var(--ink);background:var(--ink);color:var(--onfill);font-size:13.5px;font-weight:700}
+.xl-cox{flex:none;display:grid;place-items:center;width:40px;height:calc(var(--xh) - 2px);border:0;background:none;color:var(--ink2);cursor:pointer}
+.xl-cox .ic{width:17px;height:17px}
+.xl-cob{position:relative;padding:2px 14px 11px}
+.xl-cob p{margin:0}
+.xl-cow{font-size:15px;line-height:1.6}
+.xl-coy{font-size:13.5px;line-height:1.55;color:var(--ink2)}
+.xl-cow+.xl-coy,.xl-cot+.xl-cow{margin-top:5px}
+.xl-coy b{display:inline-block;margin-right:6px;padding:0 6px;border:1px solid var(--line);border-radius:calc(6px*var(--rk));background:var(--paper);font-size:12px;font-weight:700;line-height:1.5;color:var(--ink)}
+.xl-cot{margin:3px 0 0;padding:0 0 0 18px;font-size:14px;line-height:1.55;color:var(--ink2)}
+.xl-cob.more::after{content:'더 보기';position:absolute;right:12px;bottom:10px;padding-left:34px;background:linear-gradient(90deg,transparent,var(--soft) 30px);font-size:12.5px;font-weight:700;line-height:1.6;color:var(--ink)}
+.xl-co.fl{animation:xlcofl .6s ease-out}
+@keyframes xlcofl{from{background:var(--tg)}}
+@media (prefers-reduced-motion:reduce){.xl-co.fl{animation:none}}
+.xl-grid td.x-co{outline:2px dashed var(--ink2);outline-offset:-3px}
+/* 화면 자판을 편 동안에는 자리가 좁아서 줄여 보여 줘요. 글을 누르면 표 위로 펼쳐져요 */
+.xl.ed.kb .xl-cob{cursor:pointer}
+.xl.ed.kb .xl-co:not(.open) .xl-cow,.xl.ed.kb .xl-co:not(.open) .xl-coy{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.xl.ed.kb .xl-co:not(.open) .xl-cow{-webkit-line-clamp:3}
+.xl.ed.kb .xl-co:not(.open) .xl-coy{-webkit-line-clamp:2}
+.xl.ed.kb .xl-co:not(.open) .xl-cot,.xl.ed.kb .xl-co:not(.open) .xl-cotl{display:none}
+.xl.ed.kb .xl-co.open .xl-cob{position:absolute;left:0;right:0;top:var(--xh);z-index:6;max-height:min(62vh,440px);overflow-y:auto;padding-bottom:12px;background:var(--soft);border-bottom:1px solid var(--line);box-shadow:0 12px 22px rgba(0,0,0,.16)}
+.xl.ed.kb .xl-co.open .xl-cob::after{content:'눌러서 접기';display:block;margin-top:6px;font-size:12.5px;font-weight:700;color:var(--ink2)}
+.xl.ed.kb.co .xl-ask:not(.open) .xl-askin{-webkit-line-clamp:1}
+@media (max-height:739px){
+ .xl.ed.kb .xl-co{--xh:36px}
+ .xl.ed.kb.co .xl-ask:not(.open){display:none}
+ .xl.ed.kb .xl-cob{padding-bottom:8px}
+ .xl.ed.kb .xl-cow{font-size:14.5px;line-height:1.5}
+ .xl.ed.kb .xl-co:not(.open) .xl-cow{-webkit-line-clamp:2}
+ .xl.ed.kb .xl-co:not(.open) .xl-coy{display:none}
+ .xl.ed.kb .xl-co[data-p="0"]:not(.open) .xl-cow{-webkit-line-clamp:1}
+ .xl.ed.kb .xl-cob.more::after{bottom:7px}
+ .xl:not(.ed) .xl-co:not(.open) .xl-cow{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden}
+ .xl:not(.ed) .xl-cob{cursor:pointer}
+}
+@media (max-height:600px){   /* 아주 낮은 화면: 표가 보일 자리를 남기려고 더 줄여요 */
+ .xl:not(.ed) .xl-co:not(.open) .xl-cow{-webkit-line-clamp:3}
+ .xl:not(.ed) .xl-co:not(.open) .xl-coy{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+ .xl.ed.kb .xl-co:not(.open) .xl-cow{-webkit-line-clamp:1}
+}
 /* 함수 고르기 */
 .xf-q{width:100%;margin-top:10px}
 .xf-cats{display:flex;gap:6px;overflow-x:auto;margin:10px 0 4px;padding-bottom:4px;scrollbar-width:none}
@@ -4078,6 +4131,68 @@ function xlLoad(){
  fetch('data/xlab.json',{cache:'no-cache'}).then(r=>{if(!r.ok) throw 0; return r.json()}).then(j=>{XLAB.d=j; j.tasks.forEach(t=>XLAB.by.set(t.id,t)); XLAB.st=2}).catch(()=>{XLAB.st=3}).then(()=>{if(UI.route==='xl') render()});
 }
 const xlProg=id=>U.study.u['xl-'+id]||{};
+/* ----- 따라 하기: 왜 이렇게 푸나 → 순서(이유) → 마무리를 한 쪽씩, 표 위에 ----- */
+const XLCOK='hapnote.xl.co';
+const xlCoPref=()=>lsGet(XLCOK)!=='0';                    // 따로 접어 두지 않았으면 펴 둬요
+const xlCoLast=t=>t.steps.length+1;                       // 쪽: 0 왜 · 1..n 순서 · n+1 마무리
+const xlCoOn=()=>XS.co>=0&&!(XS.res&&XS.res.ok);          // 맞힌 뒤에는 아래의 풀이 카드가 대신해요
+function xlCoCells(){   // 지금 단계의 글에 나온 칸들: 표에서 점선으로 짚어 줘요
+ const t=XS.t, out=new Set(); if(!xlCoOn()||XS.co<1||XS.co>t.steps.length) return out;
+ const V=XL.rangeOf(t.view), rx=/(^|[^A-Za-z0-9$])(\$?[A-Z]{1,2}\$?\d+(?::\$?[A-Z]{1,2}\$?\d+)?)(?![A-Za-z0-9(])/g; let m;
+ while((m=rx.exec(t.steps[XS.co-1][0]))){const g=XL.rangeOf(m[2].replace(/\$/g,'')); if(!g) continue; for(let r=Math.max(g.r1,V.r1);r<=Math.min(g.r2,V.r2);r++) for(let c=Math.max(g.c1,V.c1);c<=Math.min(g.c2,V.c2);c++) out.add(XL.key(r,c))}
+ return out;
+}
+function xlCoEnd(t){    // 마무리 쪽의 맺음말: 남은 일만 말해요
+ if(t.kind==='af') return XS.rows?"결과가 나왔어요. 지시문과 견줘 보고 '채점'을 눌러요.":"조건을 다 넣었으면 '필터 실행'으로 결과를 보고 '채점'을 눌러요.";
+ if(t.kind==='cf') return XS.rule?"규칙이 들어갔어요. 서식이 입혀진 칸을 지시문과 견줘 보고 '채점'을 눌러요.":"↵ 로 규칙을 끝내고, 서식이 입혀진 칸을 지시문과 견줘 본 뒤 '채점'을 눌러요.";
+ const cells=[]; t.targets.forEach(g=>XL.rangeKeys(XL.rangeOf(g.range)).forEach(a=>cells.push(a)));
+ if(cells.every(a=>XS.sh.raw(a)!=='')) return "칸을 다 채웠어요. '채점'을 눌러 확인해요.";
+ const multi=t.targets.some(g=>XL.rangeKeys(XL.rangeOf(g.range)).length>1), arr=t.targets.some(g=>g.arr);
+ return `${arr?"'배열 ↵'":'↵'} 로 수식을 끝내고${multi?" '채우기'로 나머지 칸을 채운 뒤":''} '채점'을 눌러요.`;
+}
+function xlCoHtml(){
+ const t=XS.t;
+ if(XS.res&&XS.res.ok) return '';
+ if(XS.co<0) return XS.ed?'':`<button class="xl-co off" data-act="xlco" aria-expanded="false"><b>따라 하기</b><span>왜 이렇게 푸는지부터 순서대로 같이 해요</span><i>펴기</i></button>`;
+ const n=t.steps.length, last=xlCoLast(t), p=Math.min(XS.co,last), st=p>=1&&p<=n?t.steps[p-1]:null;
+ const lab=p===0?'왜 이렇게 푸나':st?`순서 ${p} / ${n}`:'마무리';
+ const body=p===0?`<p class="xl-cow">${esc(t.idea)}</p>${XS.native?`<p class="xl-coy">키보드로 할 때: ↵ 는 Enter, '$' 단추는 F4, '배열 ↵' 는 Ctrl+Shift+Enter 예요.</p>`:''}`
+  :st?`<p class="xl-cow">${esc(st[0])}</p>${st[1]?`<p class="xl-coy"><b>왜</b>${esc(st[1])}</p>`:''}`
+  :`${t.traps.length?`<p class="xl-coy xl-cotl"><b>자주 틀리는 곳</b></p><ul class="xl-cot">${t.traps.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}<p class="xl-cow">${esc(xlCoEnd(t))}</p>`;
+ return `<section class="xl-co${XS.cox?' open':''}${XS.cofl?' fl':''}" data-p="${p}" aria-label="따라 하기" aria-live="polite">
+  <div class="xl-coh"><b>따라 하기</b><span class="xl-con">${lab}</span><span class="xl-cop">${p>0?`<button data-act="xlcop" data-d="-1" aria-label="앞 쪽으로">‹</button>`:''}${p<last?(p===0?`<button class="go" data-act="xlcop" data-d="1">순서대로 해 보기</button>`:`<button data-act="xlcop" data-d="1" aria-label="다음 쪽으로">›</button>`):''}</span><button class="xl-cox" data-act="xlco" aria-label="따라 하기 접기" aria-expanded="true">${ico('x')}</button></div>
+  <div class="xl-cob" data-act="xlcox">${body}</div></section>`;
+}
+function xlCoDraw(){
+ const w=$('#xl-co'); if(!w) return; w.innerHTML=xlCoHtml(); XS.cofl=0;
+ const sec=w.querySelector('section.xl-co'), b=sec&&sec.querySelector('.xl-cob'); if(!sec) return;
+ if(XS.cox&&XS.ed&&!XS.native){if(XS.coh) sec.style.minHeight=XS.coh+'px'}   // 펼친 글은 표 위에 겹쳐 띄우고, 아래 화면은 밀리지 않게 자리를 지켜요
+ else{XS.coh=sec.offsetHeight; b.classList.toggle('more',!XS.cox&&[...b.children].some(e=>e.scrollHeight>e.clientHeight+2||getComputedStyle(e).display==='none'))}   // 줄여 보여 준 글이 있으면 '더 보기'
+}
+function xlCoSee(){   // 단계가 말하는 칸들이 표에서 보이게: 한 화면에 들어오면 모두, 아니면 첫 칸부터
+ const tds=[...document.querySelectorAll('#xl-gridw td.x-co')], m=$('#xl-mid'); if(!tds.length||!m) return;
+ const mr=m.getBoundingClientRect(), a=tds[0].getBoundingClientRect(), b=tds[tds.length-1].getBoundingClientRect();
+ const top=a.top-mr.top+m.scrollTop-28, bot=b.bottom-mr.top+m.scrollTop-mr.height+6; let st=m.scrollTop;
+ if(bot>top) st=top; else{if(st>top) st=top; if(st<bot) st=bot}
+ m.scrollTop=Math.max(0,st);
+ if(tds[0].scrollIntoView) tds[0].scrollIntoView({block:'nearest',inline:'nearest'});
+}
+function xlCoSet(p,keep){   // 쪽을 바꿔요. 수식을 쓰던 중이면 입력 줄은 건드리지 않아요
+ XS.co=p; if(!keep) XS.cox=false;
+ if(!XS.ed){xlPaint(); if(!keep) xlCoSee(); return}
+ xlSyncIn(); $('#xl').classList.toggle('co',xlCoOn()); xlCoDraw();
+ const gw=$('#xl-gridw'), sx=gw.scrollLeft; gw.innerHTML=xlGridHtml(); gw.scrollLeft=sx; xlFocus(); if(!keep) xlCoSee();
+}
+function xlCoAuto(ev){   // 방금 한 일(↵ · 채우기 · 필터 실행)을 따라가요: 지금 순서의 일이면 다음 쪽으로, 바로 다음 순서의 일을 먼저 했으면 그 순서로
+ const t=XS.t, n=t.steps.length; if(XS.co<1||XS.co>n) return;
+ const rx=ev==='fill'?/채우기|채워/:ev==='run'?/필터 실행/:/↵|끝내/, more=/채우기|채워|필터 실행/;
+ for(let k=XS.co;k<=Math.min(n,XS.co+1);k++){
+  const s=t.steps[k-1][0]; if(!rx.test(s)) continue;
+  const to=k>XS.co?k:(ev==='fill'||ev==='run'||!more.test(s))?k+1:k;   // '↵ 로 끝내고 채우기'처럼 일이 더 남은 순서에는 머물러요
+  if(to!==XS.co){XS.co=to; XS.cox=false; XS.cofl=1; XS.cosee=1}
+  return;
+ }
+}
 const xlTouch=()=>matchMedia('(pointer:coarse)').matches||(navigator.maxTouchPoints>0&&matchMedia('(max-width:860px)').matches);   // 휴대폰·태블릿이면 화면 자판부터
 const xlDoneN=()=>Object.keys(U.study.u).filter(k=>k.startsWith('xl-')&&U.study.u[k].d).length;
 const xlStrip=()=>`<div class="strip"><p>실기의 수식 문제는 엑셀 연습장에서 직접 넣어 보며 익혀요. 휴대폰에서도 돼요.${xlDoneN()?` 끝낸 과제 ${xlDoneN()}개`:''}</p><a class="btn line sm" href="#xl">엑셀 연습장</a></div>`;
@@ -4095,7 +4210,7 @@ function vXlList(){
  const D=XLAB.d, done=D.tasks.filter(t=>xlProg(t.id).d).length, next=D.tasks.find(t=>!xlProg(t.id).d);
  return `<nav class="crumb" aria-label="위치"><a href="#practice">문제 풀기</a><span aria-hidden="true">›</span><span>엑셀 연습장</span></nav>
  <h1 class="title">엑셀 연습장</h1>
- <p class="sub">컴활 실기의 수식 문제를 직접 넣어 보는 곳이에요. 칸을 눌러 주소를 넣고, 채우기로 복사하고, 그 자리에서 채점해요. 휴대폰에서도 되게 화면 자판을 달았어요.</p>
+ <p class="sub">컴활 실기의 수식 문제를 직접 넣어 보는 곳이에요. 칸을 눌러 주소를 넣고, 채우기로 복사하고, 그 자리에서 채점해요. 과제마다 표 위의 '따라 하기'가 왜 이렇게 푸는지부터 순서대로 알려 줘요. 휴대폰에서도 되게 화면 자판을 달았어요.</p>
  <div class="card xll-top"><div><b class="xll-n">${done}<small> / ${D.tasks.length}</small></b><span class="small">끝낸 과제</span></div>${next?`<a class="btn" href="#xl/${next.id}">${done?'이어서 하기':'첫 과제 시작'}</a>`:'<span class="tag">모두 끝냈어요</span>'}</div>
  ${D.groups.map(g=>{const ts=D.tasks.filter(t=>t.g===g.id); return `<section class="sec xll-g" aria-label="${esc(g.title)}"><h2 class="h2">${esc(g.title)}</h2><p class="small">${esc(g.desc)}</p><div class="card xll-list">${ts.map(t=>{const p=xlProg(t.id), sub=t.use.length?t.use.join(' · '):t.kind==='af'?'조건 범위':t.kind==='cf'?'규칙 수식':'기본 수식';
   return `<button class="mrow xll-row" data-act="go" data-r="xl/${t.id}" aria-label="${esc(t.title)}, 난이도 ${t.lv}${p.d?', 끝냄':''}"><span class="xll-t"><b>${esc(t.title)}</b><small>${esc(sub)}</small></span><span class="xll-lv" aria-hidden="true">${'●'.repeat(t.lv)}${'○'.repeat(3-t.lv)}</span><span class="mv">${p.d?ico('check'):p.f&&Object.keys(p.f).length?'하는 중':''}</span></button>`}).join('')}</div></section>`}).join('')}
@@ -4116,7 +4231,7 @@ function xlOpen(t){
  }
  t.sheet.rows.forEach((row,i)=>{if(row.some(c=>c[0]==='[')&&t.sheet.rows[i+1]) t.sheet.rows[i+1].forEach((c,j)=>{if(c!=='') hd.add(XL.key(t.sheet.r0+i+1,XL.colNum(t.sheet.c0)+j))})});
  edit.forEach(a=>hd.delete(a));
- Object.assign(XS,{id:t.id,t,sh,edit,hd,out:new Set(),sel:'',ed:false,tx:'',ca:0,pend:null,msg:null,res:null,hint:0,rule:'',hit:null,rows:null,askOpen:false,native:!xlTouch(),lab:'',used:''});
+ Object.assign(XS,{id:t.id,t,sh,edit,hd,out:new Set(),sel:'',ed:false,tx:'',ca:0,pend:null,msg:null,res:null,hint:0,rule:'',hit:null,rows:null,askOpen:false,native:!xlTouch(),lab:'',used:'',co:xlCoPref()?0:-1,cox:false,cofl:0});
  if(p.f) for(const a in p.f){try{if(a==='rule') XS.rule=String(p.f[a]); else if(edit.has(a)) sh.set(a,String(p.f[a]))}catch(e){}}
  if(t.kind==='cf'&&XS.rule){try{XS.hit=sh.cf(t.cf.range,XS.rule)}catch(e){XS.rule=''}}
  XS.sel=t.kind==='cf'?'':t.kind==='calc'?XL.rangeKeys(XL.rangeOf(t.targets[0].range))[0]:XL.rangeKeys(XL.rangeOf(t.af.crit))[0];
@@ -4136,6 +4251,7 @@ function vXlTask(t){
  return `<div class="xl${XS.ed?' ed':''}" id="xl" data-kind="${t.kind}">
   <header class="xl-top"><button class="xl-ib" data-act="go" data-r="xl" aria-label="연습장 목록으로">${ico('back')}</button><div class="xl-tt"><small>${esc(g.title)} · ${ts.indexOf(t)+1} / ${ts.length}</small><b>${esc(t.title)}</b></div><button class="xl-ib" data-act="xlmenu" aria-label="더 보기" aria-haspopup="dialog">⋯</button></header>
   <div class="xl-ask" id="xl-ask" data-act="xlask" role="button" tabindex="0" aria-label="지시문. 수식을 쓰는 동안 누르면 접거나 펴요"><p class="xl-askin">${nl(t.ask)}</p>${t.use.length||t.note?`<p class="xl-use">${t.use.length?`▶ <b>${esc(t.use.join(', '))}</b> 함수 사용`:''}${t.use.length&&t.note?'<br>':''}${t.note?'▶ '+esc(t.note):''}</p>`:''}</div>
+  <div class="xl-cw" id="xl-co"></div>
   <div class="xl-bar" id="xl-bar"></div>
   <div class="xl-msg" id="xl-msg" aria-live="polite"></div>
   <div class="xl-mid" id="xl-mid"><div class="xl-gridw" id="xl-gridw"></div><div class="xl-panel" id="xl-panel"></div></div>
@@ -4190,7 +4306,7 @@ function xlMsg(){
  return {c:'',h:t.kind==='calc'?'색칠된 칸을 눌러 수식을 넣어요':'색칠된 조건 범위의 칸을 눌러 조건을 넣어요'};
 }
 function xlGridHtml(){
- const t=XS.t, sh=XS.sh, V=XL.rangeOf(t.view), rf=new Map(), hl=new Set(XS.hit||[]), cfR=t.kind==='cf'?XL.rangeOf(t.cf.range):null, res=XS.res&&XS.res.cells||{};
+ const t=XS.t, sh=XS.sh, V=XL.rangeOf(t.view), rf=new Map(), hl=new Set(XS.hit||[]), cfR=t.kind==='cf'?XL.rangeOf(t.cf.range):null, res=XS.res&&XS.res.cells||{}, co=xlCoCells();
  if(XS.ed) xlRefs(XS.tx).forEach(r=>{for(let rr=r.g.r1;rr<=r.g.r2;rr++) for(let c=r.g.c1;c<=r.g.c2;c++){const k=XL.key(rr,c); if(!rf.has(k)) rf.set(k,r.ci)}});
  let h='<table class="xl-grid"><thead><tr><th></th>';
  for(let c=V.c1;c<=V.c2;c++) h+=`<th scope="col">${XL.colName(c)}</th>`;
@@ -4203,7 +4319,7 @@ function xlGridHtml(){
    if(XS.edit.has(a)) cl.push('x-tg'); if(XS.hd.has(a)) cl.push('x-hd'); if(XS.out.has(a)) cl.push('x-out');
    if(cfR&&r>=cfR.r1&&r<=cfR.r2&&c>=cfR.c1&&c<=cfR.c2){if(r===cfR.r1) cl.push('x-ct'); if(r===cfR.r2) cl.push('x-cb'); if(c===cfR.c1) cl.push('x-cl'); if(c===cfR.c2) cl.push('x-cr')}
    if(hl.has(a)) cl.push('x-hl-'+t.cf.style);
-   if(rf.has(a)) cl.push('x-r'+rf.get(a));
+   if(rf.has(a)) cl.push('x-r'+rf.get(a)); else if(co.has(a)) cl.push('x-co');
    if(a===XS.sel&&t.kind!=='cf') cl.push('x-sel');
    if(res[a]!==undefined) cl.push(res[a]?'x-ok':'x-bad');
    const tl=typeof v==='string'&&(v[0]==='['||XS.lab===a||v==='조건 범위');
@@ -4224,7 +4340,7 @@ function xlChips(){
 }
 function xlFootHtml(){
  const t=XS.t, K=(k,l,c,a)=>`<button class="xk${c?' '+c:''}" data-act="xk" data-k="${esc(k)}"${a?` aria-label="${a}"`:''}>${l||esc(k)}</button>`;
- if(XS.ed&&XS.native) return `<div class="xl-nat"><div class="xk-chips" id="xk-chips">${xlChips()}</div><button class="btn line sm" data-act="xk" data-k="f4">$ 붙이기 (F4)</button>${t.kind!=='cf'&&xlArr()?'<button class="btn line sm" data-act="xk" data-k="cse">배열 ↵</button>':''}<button class="btn sm" data-act="xk" data-k="enter">${ico('check')}입력</button></div>`;
+ if(XS.ed&&XS.native) return `<div class="xl-nat"><div class="xk-chips" id="xk-chips">${xlChips()}</div><button class="btn line sm" data-act="xk" data-k="f4">$ 붙이기 (F4)</button>${t.kind!=='cf'&&xlArr()?'<button class="btn line sm" data-act="xk" data-k="cse">배열 ↵</button>':''}<button class="btn sm" data-act="xk" data-k="enter">${ico('check')}입력 (Enter)</button></div>`;
  if(XS.ed) return `<div class="xl-kb" id="xl-kb"><div class="xk-chips" id="xk-chips">${xlChips()}</div><div class="xk-g">
   ${K('(','','op')}${K(')','','op')}${K(',','','op','쉼표')}${K(':','','op','콜론')}${K('"','','op','큰따옴표')}${K('&','','op')}
   ${K('7')}${K('8')}${K('9')}${K('+','','op','더하기')}${K('-','−','op','빼기')}${K('bs','⌫','fn','지우기')}
@@ -4238,7 +4354,7 @@ function xlFootHtml(){
 }
 const xlArr=()=>{const g=xlTargetOf(XS.sel); return !!(g&&g.arr)};
 const xlNext=()=>{const ts=XLAB.d.tasks, i=ts.indexOf(XS.t); return ts.slice(i+1).find(t=>!xlProg(t.id).d)||ts[i+1]||null};
-const xlSkel=f=>f.replace(/"(?:[^"]|"")*"/g,'"…"').replace(/\$?[A-Z]{1,2}\$?\d+(?::\$?[A-Z]{1,2}\$?\d+)?/g,m=>m.includes(':')?'□:□':'□').replace(/(?<![A-Za-z□.\d])\d+(?:\.\d+)?/g,'○');
+const xlSkel=f=>f.replace(/"(?:[^"]|"")*"/g,'"…"').replace(/\$?[A-Z]{1,2}\$?\d+(?::\$?[A-Z]{1,2}\$?\d+)?/g,m=>m.includes(':')?'□:□':'□').replace(/(^|[^A-Za-z□.\d])\d+(?:\.\d+)?/g,(m,p)=>p+'○');   // 정규식의 뒤보기(lookbehind)는 옛 아이폰(iOS 16.3 이하)에서 스크립트 전체를 멈춰서 쓰지 않아요
 function xlModelHtml(){
  const t=XS.t;
  if(t.kind==='calc') return t.targets.map(g=>`<code class="xl-code"><small>${esc(XL.rangeKeys(XL.rangeOf(g.range))[0])} 칸${g.arr?' · 배열 수식(Ctrl+Shift+Enter)':''}</small>${esc(g.arr?'{'+g.model+'}':g.model)}</code>`).join('');
@@ -4251,14 +4367,14 @@ function xlPanelHtml(){
  if(R){
   h.push(`<section class="xl-card res ${R.ok?'ok':'no'}" id="xl-res" tabindex="-1"><div class="xl-rh">${ico(R.ok?'check':'x')}${R.ok?'맞았어요':'아직이에요'}</div><ul class="xl-ck">${R.lines.map(l=>`<li class="${l[0]?'y':'x'}">${ico(l[0]?'check':'x')}<span>${esc(l[1])}</span></li>`).join('')}</ul>${R.tips.map(m=>`<p style="margin-top:8px">${esc(m)}</p>`).join('')}</section>`);
  }
- if(XS.hint>=1||(R&&R.ok)) h.push(`<section class="xl-card"><h3>왜 이렇게 푸나</h3><p>${esc(t.idea)}</p></section>`);
+ if((XS.hint>=1&&XS.co<0)||(R&&R.ok)) h.push(`<section class="xl-card"><h3>왜 이렇게 푸나</h3><p>${esc(t.idea)}</p></section>`);
  if(XS.hint===2&&!(R&&R.ok)) h.push(`<section class="xl-card"><h3>수식의 뼈대</h3><p>□ 는 칸 주소, ○ 는 숫자, "…" 는 글자 자리예요.</p>${t.kind==='af'?`<code class="xl-code"><small>채울 칸</small>${esc(t.af.set.map(x=>x[0]).join(' · '))}</code>`:(t.kind==='cf'?[t.cf.model]:t.targets.map(g=>g.model)).map(m=>`<code class="xl-code">${esc(xlSkel(m))}</code>`).join('')}</section>`);
  if(XS.hint>=3||(R&&R.ok)) h.push(`<section class="xl-card"><h3>모범 답</h3>${xlModelHtml()}${R&&R.ok?'':'<div class="row" style="margin-top:10px"><button class="btn line sm" data-act="xlmodel">모범 답 넣어 보기</button></div>'}<h3 style="margin-top:14px">이렇게 풀어요</h3><ol class="xl-steps">${t.steps.map(s=>`<li>${esc(s[0])}${s[1]?`<small>${esc(s[1])}</small>`:''}</li>`).join('')}</ol>${t.traps.length?`<h3 style="margin-top:14px">자주 틀리는 곳</h3><ul class="xl-traps">${t.traps.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`:''}</section>`);
  return h.join('');
 }
 function xlPaint(mode){
  const root=$('#xl'); if(!root||!XS.t) return;
- root.classList.toggle('ed',XS.ed);
+ root.classList.toggle('ed',XS.ed); root.classList.toggle('kb',!XS.native); root.classList.toggle('co',xlCoOn());
  const inp=$('#xl-in'), ed=$('#xl-ed');
  if(mode==='edit'&&XS.ed&&XS.native&&inp){if(inp.value!==XS.tx) inp.value=XS.tx}
  else if(mode==='edit'&&XS.ed&&!XS.native&&ed&&!ed.classList.contains('ro')){ed.innerHTML=xlEdHtml(XS.tx,XS.ca); const c=ed.querySelector('.xl-caret'); if(c&&c.scrollIntoView) c.scrollIntoView({block:'nearest'})}
@@ -4267,8 +4383,10 @@ function xlPaint(mode){
  const gw=$('#xl-gridw'), sx=gw.scrollLeft; gw.innerHTML=xlGridHtml(); gw.scrollLeft=sx;
  if(mode==='edit'){const ch=$('#xk-chips'); if(ch){const want=xlChips(); if(ch.dataset.sig!==want.length+'|'+xlIsFormula()){ch.innerHTML=want; ch.dataset.sig=want.length+'|'+xlIsFormula()}} return}
  $('#xl-ask').classList.toggle('open',!!XS.askOpen);
+ xlCoDraw();
  $('#xl-panel').innerHTML=xlPanelHtml();
  $('#xl-foot').innerHTML=xlFootHtml();
+ if(XS.cosee){XS.cosee=0; xlCoSee()}
 }
 function xlFocus(){
  if(!XS.ed) return;
@@ -4280,13 +4398,13 @@ function xlFocus(){
 function xlEdit(){
  const t=XS.t; if(XS.ed) return true;
  if(t.kind!=='cf'&&!XS.edit.has(XS.sel)){toast('답은 색칠된 칸에 넣어요'); return false}
- XS.ed=true; XS.res=null; XS.msg=null; XS.pend=null;
+ XS.ed=true; XS.res=null; XS.msg=null; XS.pend=null; XS.cox=false;
  XS.tx=t.kind==='cf'?(XS.rule||'='):(XS.sh.raw(XS.sel).replace(/^\{|\}$/g,'')||(t.kind==='calc'?'=':''));
  XS.ca=XS.tx.length; xlPaint(); xlFocus(); return true;
 }
 function xlIns(s){XS.tx=XS.tx.slice(0,XS.ca)+s+XS.tx.slice(XS.ca); XS.ca+=s.length; XS.pend=null; XS.msg=null}
 function xlSyncIn(){const i=$('#xl-in'); if(i&&XS.ed&&XS.native){XS.tx=i.value; XS.ca=i.selectionStart==null?XS.tx.length:i.selectionStart}}
-function xlAfterKey(){xlPaint('edit'); const i=$('#xl-in'); if(i&&XS.native){try{i.focus({preventScroll:true}); i.setSelectionRange(XS.ca,XS.ca)}catch(e){}}}
+function xlAfterKey(){if(XS.cox){XS.cox=false; xlCoDraw()} xlPaint('edit'); const i=$('#xl-in'); if(i&&XS.native){try{i.focus({preventScroll:true}); i.setSelectionRange(XS.ca,XS.ca)}catch(e){}}}
 function xlKey(k){
  if(!XS.ed){if(k==='enter'||k==='esc'||k==='cse') return; if(!xlEdit()) return}
  xlSyncIn();
@@ -4342,13 +4460,13 @@ function xlCommit(arr){
   if(t.kind==='cf'){XS.rule=s; XS.hit=s?XS.sh.cf(t.cf.range,s):null}
   else{XS.sh.set(XS.sel,s,arr&&s[0]==='='); if(t.kind==='af') xlClearOut()}
  }catch(e){XS.msg={err:e&&e.message||'수식을 읽지 못했어요'}; xlAfterKey(); return false}
- XS.ed=false; XS.pend=null; XS.msg=null; XS.res=null; xlSave(); xlPaint(); return true;
+ XS.ed=false; XS.pend=null; XS.msg=null; XS.res=null; xlSave(); xlCoAuto(arr?'cse':'enter'); xlPaint(); return true;
 }
 function xlFill(){
  const g=xlTargetOf(XS.sel), sh=XS.sh; if(!g||!sh.isF(XS.sel)){toast('수식이 든 칸을 고른 뒤에 눌러요'); return}
  const R=XL.rangeOf(g.range), a0=XL.addr(XS.sel), arr=sh.isArr(XS.sel), src=sh.raw(XS.sel).replace(/^\{|\}$/g,''); let n=0;
  for(let r=R.r1;r<=R.r2;r++) for(let c=R.c1;c<=R.c2;c++){const a=XL.key(r,c); if(a===XS.sel) continue; try{sh.set(a,XL.shift(src,r-a0.r,c-a0.c),arr); n++}catch(e){}}
- XS.res=null; xlSave(); toast(`${n}칸에 채웠어요`); xlPaint();
+ XS.res=null; xlSave(); toast(`${n}칸에 채웠어요`); xlCoAuto('fill'); xlPaint();
 }
 function xlClearOut(){XS.out.forEach(a=>{XS.sh.set(a,''); XS.hd.delete(a)}); XS.out=new Set(); XS.rows=null; XS.lab=''}
 function xlUsed(){   // 조건 범위: 조건 구역에서 내용이 든 칸들을 감싸는 범위
@@ -4364,7 +4482,7 @@ function xlRun(quiet){
  XS.lab=XL.key(o.r-1,o.c); put(o.r-1,o.c,`결과 ${rows.length}줄 · 조건 범위 ${XS.used}`);
  for(let c=L.c1;c<=L.c2;c++){put(o.r,o.c+c-L.c1,sh.raw(XL.key(L.r1,c))); XS.hd.add(XL.key(o.r,o.c+c-L.c1))}
  rows.forEach((r,i)=>{for(let c=L.c1;c<=L.c2;c++) put(o.r+1+i,o.c+c-L.c1,sh.isF(XL.key(r,c))?sh.text(XL.key(r,c)):sh.raw(XL.key(r,c)))});
- XS.res=null; if(!quiet){xlPaint(); const td=$(`#xl-gridw td[data-a="${XS.lab}"]`); if(td&&td.scrollIntoView) td.scrollIntoView({block:'start'})}
+ XS.res=null; if(!quiet){xlCoAuto('run'); xlPaint(); const td=$(`#xl-gridw td[data-a="${XS.lab}"]`); if(td&&td.scrollIntoView) td.scrollIntoView({block:'start'})}
  return true;
 }
 
@@ -4482,7 +4600,7 @@ function xlText(){
 function xlMenu(){
  const t=XS.t, p=xlProg(t.id);
  openModal(`<h2 class="h2">${esc(t.title)}</h2><p class="sub">${p.d?'끝낸 과제예요.':'아직 끝내지 않은 과제예요.'}</p>
-  <div style="display:grid;gap:8px;margin-top:14px"><button class="btn line" data-act="xlreset">처음부터 다시 풀기</button><button class="btn line" data-act="xlkbd">${XS.native?'화면 자판으로 바꾸기':'기기 자판으로 바꾸기'}</button><button class="btn line" data-act="xlfile">${ico('down')}연습 파일 받기 (.xlsx)</button></div>
+  <div style="display:grid;gap:8px;margin-top:14px"><button class="btn line" data-act="xlco">따라 하기 ${XS.co<0?'펴기':'접기'}</button><button class="btn line" data-act="xlreset">처음부터 다시 풀기</button><button class="btn line" data-act="xlkbd">${XS.native?'화면 자판으로 바꾸기':'기기 자판으로 바꾸기'}</button><button class="btn line" data-act="xlfile">${ico('down')}연습 파일 받기 (.xlsx)</button></div>
   <p class="small" style="margin-top:12px">화면 자판은 휴대폰에서 수식 기호를 빨리 넣게 만든 자판이에요. 기기 자판은 PC의 키보드나 휴대폰의 기본 자판을 써요.</p>
   <div class="modal-act"><button class="btn line" data-act="close">닫기</button></div>`);
 }
@@ -4507,7 +4625,10 @@ const XACT={
  xledit:()=>{xlEdit()},
  xlask:()=>{XS.askOpen=!XS.askOpen; const a=$('#xl-ask'); if(a) a.classList.toggle('open',XS.askOpen)},
  xlfill:()=>xlFill(), xlgrade:()=>xlGrade(), xlrun:()=>{xlRun()}, xlmodel:()=>xlModel(),
- xlhint:()=>{XS.hint=Math.min(3,XS.hint+1); xlPaint(); const p=$('#xl-panel .xl-card:last-child'); if(p) p.scrollIntoView({block:'nearest'})},
+ xlco:()=>{if(MODAL) closeModal(); const on=XS.co<0; lsSet(XLCOK,on?'1':'0'); xlCoSet(on?0:-1)},
+ xlcop:b=>{const d=+b.dataset.d; xlCoSet(Math.max(0,Math.min(xlCoLast(XS.t),XS.co+d)))},
+ xlcox:()=>{const b=$('#xl-co .xl-cob'); if(!XS.cox&&!(b&&b.classList.contains('more'))) return; XS.cox=!XS.cox; xlCoSet(XS.co,true)},   // 줄여 둔 글이 있을 때만 펼쳐요
+ xlhint:()=>{XS.hint=Math.min(3,Math.max(XS.hint,XS.co>=0?1:0)+1); xlPaint(); const p=$('#xl-panel .xl-card:last-child'); if(p) p.scrollIntoView({block:'nearest'})},
  xlfx:()=>{xlSyncIn(); xlFx()},
  xlfcat:b=>{document.querySelectorAll('.xf-cats .chip').forEach(c=>c.setAttribute('aria-pressed',c===b)); xlFxFilter()},
  xltxtok:()=>{const v=($('#xl-txt')||{}).value||'', q=!!($('#xl-txq')||{}).checked; closeModal(); if(v===''&&!q){xlAfterKey(); return} xlIns(q?'"'+v.replace(/"/g,'""')+'"':v); xlAfterKey()},
@@ -4815,7 +4936,7 @@ if(window.claude&&window.claude.hot&&window.claude.hot.ready) window.claude.hot.
 </script>
 <script>
 (()=>{'use strict';
- const BUILD='20261124-1755';
+ const BUILD='20261124-1928';
  if(window.top!==window.self||!('serviceWorker' in navigator)) return;
  window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
  let hiddenAt=0;

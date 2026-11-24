@@ -1,5 +1,5 @@
 /* 합격노트 설치형: 앱 파일을 기기에 담아 두어 인터넷이 없어도 열리게 해요. 온라인이면 항상 새 판을 먼저 받아요. */
-const V='hapnote-20261124-1755', FONT='hapnote-fonts';
+const V='hapnote-20261124-1928', FONT='hapnote-fonts';
 const CORE=["./", "index.html", "manifest.webmanifest", "version.json", "data/arch.json", "data/archp.json", "data/astudy.json", "data/banks.json", "data/comp.json", "data/cstudy.json", "data/history.json", "data/khist.json", "data/ncs.json", "data/nstudy.json", "data/rc.json", "data/toeic.json", "data/xlab.json", "data/xlab.xlsx", "icons/apple-touch-icon.png", "icons/icon-192.png", "icons/icon-512.png", "icons/icon-maskable-512.png"];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(CORE.map(u=>new Request(u,{cache:'reload'})))).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith('hapnote-')&&k!==V&&k!==FONT).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
