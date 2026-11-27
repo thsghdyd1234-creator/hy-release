@@ -3080,22 +3080,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.109.0",
-        "date": "2026-11-27",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.109.0.exe",
-        "sha256": "4b7beb52e0e8e62c0ec5f508ec481447737398a2936828d0de1dc29ae8714e4c",
-        "size": 66194479,
-        "notes": "선 따라 그린 계단도 스케치업 3D 로 (호용 2026-11-27 '진행해 — 루비코드도 수정이 필요할 수 있겠네 저런 곡면에서 자연스럽게 뽑히도록')\n- HYSTAIR 선 따라(기준선 · 벽선 따라 둘 다)로 놓은 계단에 값(HY_STAIR)이 붙어요 — 스케치업으로 보내면 유가네 툴박스 SR·01 1.4 가 같은 평면으로 휘어 만들어요 (곧게 펴지 않음). 예전에는 이 계단만 2D 로 갔어요.\n- 놓을 때 고른 선을 기록에 들어갈 만큼만 줄여(0.5 안 · 360점까지) 그 길로 다시 그려요 — 캐드 그림과 스케치업 3D 가 같은 점 · 같은 셈이라 단선 · 옆선 · 참 자리가 맞아요. 촘촘한 스플라인도 기록이 넘치지 않게.\n- 스케치업에 SR·01 이 옛 판(1.3 이하 — 곧은 계단으로 만들어 버림)이면 그 계단만 빼고 보내고 알려요.\n- 단면도에는 선 따라 계단을 아직 안 그려요 (예전처럼). 예전에 선 따라 놓은 계단(값 없음)은 다시 놓아야 3D 로 가요.",
+        "version": "1.110.0",
+        "date": "2026-11-28",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.110.0.exe",
+        "sha256": "e1897487cbdbe371c406850cb22c1085728872d9c94988d01a78ec2950f502b6",
+        "size": 66203251,
+        "notes": "캐드에서 복사한 계단을 스케치업에 붙이면 SR·01 계단 창이 열려요 (호용 2026-11-28 '계단 그리기로 그린 계단을 캐드에서 ctrl c ctrl v 하면 스케치업에서 그걸 읽고 계단 생성 패널을 열게 — 계단 모델링과 종류 바로 고를 수 있게')\n- HYSTAIR 계단이 든 도면을 Ctrl+C(COPYCLIP · CUTCLIP · COPYBASE) 하면, 캐드가 방금 쓴 클립보드 임시 DWG 를 다시 읽어 계단 값 · 자리를 스케치업용 옆 파일로 남겨요 (다리 폴더 clip). 스케치업 DWG 가져오기는 계단 값을 버리기 때문이에요.\n- 스케치업에서 hy CADPaste 0.26 로 Ctrl+V 해 놓으면 유가네 툴박스 SR·01 1.5 창이 '붙여넣기'로 열려요 — 맨 위 '모양 바로 고르기'로 구조 · 난간 · 마감을 고르고 [3D 로 바꾸기]하면 2D 계단 선이 3D 계단으로 바뀌어요 (계단이 여럿이어도 창 하나 · 모양은 같게 · 평면은 계단마다 캐드 그대로). 닫으면 2D 그대로.\n- 계단 기록 앱이 없는 도면 · 스케치업 쪽이 받지 않을 때(상태 'clip' 없음) · 임시 DWG 가 40MB 넘으면 아무것도 안 해요 (Ctrl+C 가 느려지지 않게). 원래 도면은 읽기만.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.109.0.exe.part1",
-            "sha256": "fa69c6389d46e629d7138bd782b3f9725999c3a33f7bb66c3fe1775f1acc4969",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.110.0.exe.part1",
+            "sha256": "59559eb6068cc3534becd0a7a17acc8fe21b5a2ad9bd85d41c662fc6f0cc4b84",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.109.0.exe.part2",
-            "sha256": "93a978be7e7018d3e84f4b3b9c0dcb5e137f969ebf6aafdbbc64ee987b7cd9c0",
-            "size": 19008559
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.110.0.exe.part2",
+            "sha256": "7fd7b31c683208c91fca85f5cd4878f8b3c3a575dad2e6f2d60b0fb4f3e9f51b",
+            "size": 19017331
           }
         ],
         "min_hub": "0.11.0"
