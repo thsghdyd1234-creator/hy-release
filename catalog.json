@@ -3080,22 +3080,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.107.1",
+        "version": "1.108.0",
         "date": "2026-11-27",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.107.1.exe",
-        "sha256": "ef139aee1aad47438f11c123b82ac683a0373e9289bd47f67bdde6b30eef3f10",
-        "size": 66186733,
-        "notes": "원(CIRCLE)으로 그린 곡면 벽도 벽 옮기기(HYWM)로 (호용 2026-11-27 '원 외곽선 끌면 전체 지름 반경이 커지고')\n- 원 둘로 그린 고리 벽(원형 벽 한 바퀴)의 한 원을 끌면 두 원의 반지름이 같이 바뀌어요 — 같은 중심 · 같은 두께. 1.107.0 은 원(CIRCLE) 벽선을 곡면 벽면으로 못 읽어 '클릭한 곡면 벽면 선을 못 찾았어요'였어요 (호 · 폴리선 호로 그린 고리는 됐음).\n- 고리에 닿은 칸막이는 새 벽면까지 늘거나 줄어요. 안쪽으로는 안쪽 원이 1mm 남을 때까지.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.108.0.exe",
+        "sha256": "c29f45c9eb8ddf2f4d4f1fcdc975e8dc4040663c17689a9893bd6ab691f057c7",
+        "size": 66190266,
+        "notes": "선 따라 계단 — 고른 선이 벽선일 때 (호용 2026-11-27 '그 선이 중심선이 될 수도 있고 벽선이 될 수도 있어서 벽선따라 그리는 기능도 있어야 해')\n- [계단] 1자 연속 '선 따라 그릴 때' 칩 [고른 선 = 계단 기준선 | 고른 선 = 벽선] · 칸 '벽선에서 띄우기'. 캐드 HYSTAIR 선 따라 중에도 W 로 바꿔요.\n- 벽선이면 계단 옆선이 그 선에서 띄운 만큼 떨어져 커서가 있는 쪽에 붙어요 (선 위에 스냅된 커서면 지난 쪽 그대로 · S 반대쪽 · G 띄우기).\n- 벽선 따라 단 너비 · 단 수는 계단 가운데(걷는 선)에서 재요 — 벽이 바깥일 때 안쪽 단이 입력한 단 너비보다 한참 좁아지지 않게.\n- 고른 쪽 · 띄우기는 기억해요 (설정 stair run_wall · run_wall_gap · run_wall_side).",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.107.1.exe.part1",
-            "sha256": "4e4c9fd73105902594c5d0bbaf06bf922e86550774ab582b250caa632fdc529e",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.108.0.exe.part1",
+            "sha256": "99a0a4d3465380a9dcad999f4b33931a2c705cf5a7f4201331919c7f36b843d5",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.107.1.exe.part2",
-            "sha256": "6dd4e7a06e10a80608c8e9e56f7a81e5740c919efdcd15784795a21a0807c12f",
-            "size": 19000813
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.108.0.exe.part2",
+            "sha256": "8befca58301acf202dca812039125b8e0a7ae66ab60ce23df9f59945e7f0a8d1",
+            "size": 19004346
           }
         ],
         "min_hub": "0.11.0"
