@@ -3080,22 +3080,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.105.0",
-        "date": "2026-11-26",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.105.0.exe",
-        "sha256": "f169cdac57e2b758d356caf625c1d1cd9ba9668ea377fc817a63de55de0c8a9b",
-        "size": 66133355,
-        "notes": "벽을 옮겨도 피난계단 벽선 정리 (호용 2026-11-25 '벽끌기로 벽을 피난계단 까지 가져간 경우도 벽선이 정리되야 하지 않겠어?' · '한번 이동시키면 갱신되서 정신 차리긴 하네')\n- 벽 옮기기(HYWM) · [벽] 카드 끌기 · 벽 정보 중심선을 옮겨 벽이 따라올 때 · 벽 휨 뒤에, 옛 자리 · 새 자리에 맞닿은 피난계단을 바로 다시 맞춰요 (계단을 한 번 옮겨야 정리되던 것) — 같은 명령이라 U 한 번에 같이 되돌아가요.\n  - 벽을 계단실까지 끌고 가면: 계단실 벽과 한 벽으로 합침 (겹친 잔선 없음).\n  - 합쳐 둔 벽을 떼어 내면: 계단실 벽을 다시 네모로 그리고, 합칠 때 잘라 낸 그 벽 조각은 옮긴 벽 자리에서 되살려요 (옛 자리에 조각이 남지 않게).\n  - 다시 그린 계단실 벽의 문 · 창 자리는 다시 잘라요 (옮긴 벽의 문 · 창은 벽과 같이 옮겨져 그대로).\n- 벽 옮기기에서 벽 속 **중심선도 따라와요** (호용 '벽면 끌기에서 저렇게 끌면 저기 중심선이 따라오는 것도') — 중심선 · 보조선 레이어 선 · 폴리선.\n  - '이 벽만'(교차점에서 끊기)이면 교차 벽 가운데(교차 벽 중심선 자리)에서 끊어 그 사이만 옮기고, 너머 토막은 그대로 — 교차 벽 중심선에서 만나요. 1.104 까지는 교차 벽 너머로 길게 이어진 중심선이 통째로 옛 자리에 남아 방 안을 지나갔어요.\n  - 십자처럼 끊는 곳 없이 벽 구간이 끝나는 쪽도 그 자리를 가로지르는 중심선에서 끊어요. 벽 끝을 조금 넘친 중심선은 통째로.\n  - 폴리선 중심선(벽 그리기 · 뼈대 벽)은 끊는 곳에 꼭짓점을 넣어 교차 벽 중심선 위에서 짧게 꺾고, ㄱ자 모서리 꼭짓점은 같이 옮겨 옆 마디가 늘거나 줄어요.\n- 돌린 보이드의 **X 가 돌린 채로** (호용 'XX 보이드는 회전되어 있는 데서는 X 자가 회전된 채로 그려지지 않아') — X 를 도면 축 상자 대신 둘레를 가장 작게 감싸는 상자(변 방향)의 네 귀퉁이 쪽으로. 도면 축으로 놓인 보이드는 예전과 같아요.\n  - 보이드 모양이 바뀌어 X 를 다시 맞출 때 예전(도면 축) X 도 찾아 지워요. 이미 그린 돌린 보이드의 예전 X 는 보이드를 다시 지정할 때는 안 지워져요 — 예전 X 를 지우고 다시 지정하세요.\n  - 리습 XX(YGN CAD 없는 캐드용)는 아직 도면 축 그대로예요.",
+        "version": "1.107.1",
+        "date": "2026-11-27",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.107.1.exe",
+        "sha256": "ef139aee1aad47438f11c123b82ac683a0373e9289bd47f67bdde6b30eef3f10",
+        "size": 66186733,
+        "notes": "원(CIRCLE)으로 그린 곡면 벽도 벽 옮기기(HYWM)로 (호용 2026-11-27 '원 외곽선 끌면 전체 지름 반경이 커지고')\n- 원 둘로 그린 고리 벽(원형 벽 한 바퀴)의 한 원을 끌면 두 원의 반지름이 같이 바뀌어요 — 같은 중심 · 같은 두께. 1.107.0 은 원(CIRCLE) 벽선을 곡면 벽면으로 못 읽어 '클릭한 곡면 벽면 선을 못 찾았어요'였어요 (호 · 폴리선 호로 그린 고리는 됐음).\n- 고리에 닿은 칸막이는 새 벽면까지 늘거나 줄어요. 안쪽으로는 안쪽 원이 1mm 남을 때까지.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.105.0.exe.part1",
-            "sha256": "44eaf434dfb0250d3fd9af9b33c5e128972a0808895a9fe0b660893985793989",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.107.1.exe.part1",
+            "sha256": "4e4c9fd73105902594c5d0bbaf06bf922e86550774ab582b250caa632fdc529e",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.105.0.exe.part2",
-            "sha256": "04dacf17269dfdf1f83e67bcf140fae46df7fe476bf100759faccfae51b9268d",
-            "size": 18947435
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.107.1.exe.part2",
+            "sha256": "6dd4e7a06e10a80608c8e9e56f7a81e5740c919efdcd15784795a21a0807c12f",
+            "size": 19000813
           }
         ],
         "min_hub": "0.11.0"
