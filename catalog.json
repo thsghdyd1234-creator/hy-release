@@ -4050,12 +4050,12 @@
         "min_hub": "0.13.0"
       },
       "test": {
-        "version": "5.2.0",
-        "date": "2026-11-22",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-slope/yl-sr-slope-5.2.0.rbz",
-        "sha256": "72c1615c12bb02ff23fa6e38013e0253fc385ce6c124515fe6889bccd7e24ae7",
-        "size": 37101,
-        "notes": "- 모양 프리셋 5가지 (호용 2026-11-22 '스케치업 모양은 내보내기 창에서 고를 수 있어야'): 기본 (파라펫 1200 · 손스침 850) · 낮은 파라펫 900 · 높은 파라펫 1500 · 두꺼운 슬라브 250 · 얇은 슬라브 100. YGN CAD 1.94 내보내기 창 '3D 로 만들 것'에서 고르면 hy CADPaste 0.23 이 그 경사로에 입힌다 (슬라브 두께 · 파라펫 높이 · 손스침 높이 · 받침 간격만 — 길 · 폭 · 높이 · 참 · 파라펫 자리는 캐드 것).\n- API 에 presets. 판 1 그대로.",
+        "version": "5.2.1",
+        "date": "2026-11-28",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-sr-slope/yl-sr-slope-5.2.1.rbz",
+        "sha256": "dbe08d7baa80ea3c87c7393de517e5562d251df83381982e79c2f97cbcfaff9e",
+        "size": 37336,
+        "notes": "Array#sum 을 쓰지 않음 (호용 2026-11-28 캐드 3D 미리보기 '미리보기 오류: TypeError — nil can't be coerced into Float')\n- 다른 스케치업 확장이 Array#sum 을 블록 없는 합(inject(:+))으로 덮어쓴 PC 에서는 빈 배열의 합이 nil 이 되고 블록도 무시돼 계산이 멈췄습니다 — 합은 모두 inject 로 셈 (결과는 같음).",
         "min_hub": "0.13.0"
       },
       "history": [],
