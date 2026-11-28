@@ -4358,12 +4358,12 @@
         "min_hub": "0.13.0"
       },
       "test": {
-        "version": "1.5.0",
-        "date": "2026-11-22",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-wn-doublewindow/yl-wn-doublewindow-1.5.0.rbz",
-        "sha256": "f30210518f20e47a61f5a845389089ef19fcc8a96c96fc50d6f218610c45b627",
-        "size": 42472,
-        "notes": "- 모양 프리셋 7가지 (호용 2026-11-22 '스케치업 모양은 내보내기 창에서 고를 수 있어야'): 이중창 · 알루미늄 / PVC 화이트 (235) / 알루미늄 다크 / 창대 · 문선 · 후레싱 (250), 픽스창 · 알루미늄 다크 / 무광 블랙 (얇은 틀 190) / 브론즈. YGN CAD 1.94 내보내기 창 '3D 로 만들 것'에서 고르면 hy CADPaste 0.23 이 그 창에 입힌다 — 종류 · 시스템 깊이 · 마감 · 방충망 · 창대 · 문선 · 후레싱만 바뀌고 칸 수 · 벽 두께는 캐드 것, 유리 · 열림 · 가로 분할은 그 창 그대로.\n- 창 API 에 presets (id · 이름 · 모양 값 · 맞는 창 · 한 줄 — 맞는 창 for: 이중창 프리셋은 2칸 이하, 픽스창 프리셋은 3칸 이상 · 곡면 · 곡선 벽 창 — YGN CAD 1.94 가 맞는 창에만 보냄). 판 2 그대로.",
+        "version": "1.5.1",
+        "date": "2026-11-28",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-wn-doublewindow/yl-wn-doublewindow-1.5.1.rbz",
+        "sha256": "5b51c8592a707650695c666a9c28aaaf076bc45b23ca1db4d919bb70349e988a",
+        "size": 42657,
+        "notes": "Array#sum 을 쓰지 않음 (호용 2026-11-28 캐드 3D 미리보기 '미리보기 오류: TypeError — nil can't be coerced into Float')\n- 다른 스케치업 확장이 Array#sum 을 블록 없는 합(inject(:+))으로 덮어쓴 PC 에서는 빈 배열의 합이 nil 이 되고 블록도 무시돼 계산이 멈췄습니다 — 합은 모두 inject 로 셈 (결과는 같음).",
         "min_hub": "0.13.0"
       },
       "history": [],
