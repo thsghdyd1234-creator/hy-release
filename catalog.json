@@ -428,12 +428,12 @@
         "notes": "- 고침: 붙였는데 안 보이던 문제 (호용, 2026-10-29 '붙여넣기가 안 되는 게 아니라 가시성 문제') — 미리보기는 태그·스타일과 상관없이 그려서 늘 보이는데, 놓인 선은 그렇지 않았다\n  - 붙인 선은 모두 태그 없음(Untagged)으로. 캐드 레이어는 같은 이름의 태그로 들어오는데, 모델에 그 이름의 꺼진 태그가 있거나 꺼진 채 만들어지면 놓아도 안 보였다. 가져오며 새로 생긴 태그는 지움 (모델에 원래 있던 태그는 그대로)\n  - 지금 스타일이 모서리(선)를 끈 스타일이면 놓은 뒤 '모서리를 켤까요?' — 캐드 선은 면 없는 선이라 하나도 안 보인다. 아니요를 고르면 이번 실행에서는 상태줄로만 알림\n  - 지금 그리는 태그가 꺼져 있으면 놓은 사본은 태그 없음으로\n  - 그래도 선이 모두 꺼진 태그에 있으면 그 태그(꺼진 태그 폴더 포함)를 켤지 물어봄. 일부만 꺼졌으면 상태줄에\n- 메뉴 '캐드 레이어를 태그로 남기기' (기본 끔) — 켜면 0.2.1 처럼 캐드 레이어가 태그로 들어온다\n- 진단·루비 콘솔에 스타일 모서리 · 지금 태그 · 태그 없음 · 그룹 편집 중 · 단면, 가져올 때 옮긴 것·지운 태그"
       },
       "test": {
-        "version": "0.26.3",
+        "version": "0.27.0",
         "date": "2026-11-28",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cadpaste/hy-cadpaste-0.26.3.rbz",
-        "sha256": "9781d2f3d7a4d8170b680bee91880a7a1ab645b72c39f5f5cb560a93b05de565",
-        "size": 147513,
-        "notes": "Array#sum 을 쓰지 않음 (호용 2026-11-28 캐드 3D 미리보기 '미리보기 오류: TypeError — nil can't be coerced into Float')\n- 다른 스케치업 확장이 Array#sum 을 블록 없는 합(inject(:+))으로 덮어쓴 PC 에서는 빈 배열의 합이 nil 이 되고 블록도 무시돼 계산이 멈췄습니다 — 합은 모두 inject 로 셈 (결과는 같음)."
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/hy-cadpaste/hy-cadpaste-0.27.0.rbz",
+        "sha256": "3e4b33b1bb55cf5f219ecaaffa8365d6fec743e654e6cb9f086485eb92d9f4f3",
+        "size": 147726,
+        "notes": "YGN CAD 1.115 경사로 난간벽 높이 · 유리 — 요청 칸 ph · pst 를 SR·02 5.3 으로 넘김 (호용 2026-11-28)\n- SR·02 가 그 칸을 모르는 옛 판이면 '허브에서 SR·02 를 업데이트해 주세요' 알림 한 줄 (그 경사로는 스케치업 모양 · 벽으로)."
       },
       "history": [],
       "name": "hy CADPaste",
