@@ -3080,22 +3080,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.116.0",
-        "date": "2026-11-28",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.116.0.exe",
-        "sha256": "3cbe0366d9f9366dc139cbecb00b227f794b6522339ca8e5205b3eba0d285344",
-        "size": 66242616,
-        "notes": "3D 미리보기 창(크게 보기 · HY3D)에서 내보낼 3D 고치기 (호용 2026-11-28 '크게보기에서 내보낼 문이나 계단 슬로프 등의 설정을 만질 수 있어야 할 것 같아 UI는 최대로' · '양 여닫이 만들어 놨는데 그런걸 설정할 순 없거든')\n- 오른쪽에 **'3D 로 만들 것 — 유가네 툴박스'** (패널 3D 탭과 같은 칸 · 같은 기록): 종류마다 · 묶음마다 스케치업 그대로 · 만들지 않음(문 · 창은 구멍만) · 프리셋 · 다시 입히기. 맨 위에 칸 건너뛰기(고른 것 · 3D 로 만들 것 · 층 높이 · 기본 높이 · 레이어). 오른쪽 칸을 조금 넓힘.\n- 3D 를 눌러 고른 것 카드에서 바로:\n  - **문 종류** 칩 (외여닫이 · 양여닫이 · 미닫이 · 미서기 · 접이문 · 방화문 · 회전문) — 캐드 YGN 문 블록이 같은 자리 · 폭 · 경첩 그대로 그 종류로 바뀌고 스케치업 DR·01 이 그 종류로 만들어요. 도면 · 라이브러리 문은 종류를 몰라 안내만.\n  - **창 칸 수** (3칸 이상이면 스케치업 픽스창) · 문 · 창 **폭 · 높이** (일람표 · HYOPN 과 같은 일).\n  - **경사로**: 폭(가운데 선 · 벽 기준) · 높이차 · 바닥 높이 · 난간벽 자리 · 모양(벽 · 유리) · 높이 · 손스침 자리 (HYRAMP E 와 같은 값).\n  - **이 요소의 3D**: 종류 칸대로 · 스케치업 그대로 · 구멍만/안 만듦 · 그 종류에 맞는 프리셋(설명 같이) · 다시 입히기 · 지금 어떻게 만들어지는지 한 줄.\n  - **같은 묶음 n개 모두** 체크 — 켜면 위 고침이 같은 종류 · 크기 묶음 모두에.\n  - 숫자 칸은 0.7초 멈추면 캐드에 적고(HYDO 하나) 다시 맡김.",
+        "version": "1.117.0",
+        "date": "2026-11-29",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.117.0.exe",
+        "sha256": "d4ea9377a22d54a17ba131a0678bfefb667d0ac2c5fb15373a7a0ae5f0aa5444",
+        "size": 66246879,
+        "notes": "벽 옮기기(HYWM · [벽] 카드 끌기 · 중심선 따라오기)가 벽 속 다른 레이어 선까지 끌고 가던 것 (호용 2026-11-29 '벽 안에 다른 레이어의 선이 있다면 걔까지 영향을 받아서 끌어지는 문제')\n- 벽 띠 안에 통째로 든 선 · 호 · 폴리선 · 원은 이제 **벽 레이어만** 같이 가요 — 벽면 선과 같은 레이어 · 레이어 이름표의 벽 · 벽 중심선 · 벽 정보 중심선 · 문 · 창 · 이름에 벽 · WALL · CEN · 중심 · 창 · WIN · 문 · DOOR · 개구 · 단열 · 마감 · 조적 · 칸막이 · 기둥 · COL 이 든 레이어, 중심선(선종류).\n- 그 밖의 레이어 선(전기 · 설비 · 0 레이어 …)은 제자리 — 다만 같이 가는 선의 끝에 이어 붙은 것(0 레이어로 그린 마구리 · 분해한 문틀선)은 벽과 같이 가요.\n- 그대로 둔 선은 옮기는 선 끝을 붙잡지 않아요. 명령줄 끝에 '벽 속 다른 레이어 선 n개는 그대로'.\n- 예전처럼 다 같이 옮기려면 [그리기] › 벽 › 벽 옮기기 '벽 속 다른 레이어 선도 같이' (설정 walldraw.move_other).\n- 벽에 걸친(한 끝만 벽 안) 선이 늘고 주는 것 · 문 · 창 블록 · 해치 · 글자는 예전 그대로.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.116.0.exe.part1",
-            "sha256": "6168adab950e81c031d705ed7dbf18e569625fb44aa63f2fb83b08ef053cda63",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.117.0.exe.part1",
+            "sha256": "becfca548e6cddcdd1548d90ceac7fd827e0626c11f231b2fd224a33fda4c1af",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.116.0.exe.part2",
-            "sha256": "ea80c0c5858dfb9b844a59ab85d90eaadc67ee2923f93e7cf0fcb0360beac124",
-            "size": 19056696
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.117.0.exe.part2",
+            "sha256": "1d2d230be51d2c25a8b59db326176ace0d5b9c2d242270285bed12716643df05",
+            "size": 19060959
           }
         ],
         "min_hub": "0.11.0"
