@@ -3080,22 +3080,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.115.0",
+        "version": "1.115.1",
         "date": "2026-11-28",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.0.exe",
-        "sha256": "e9c64715436867db382f9ca628c1dd0273b79dd8c10e38c7f8c97e17811c4a38",
-        "size": 66221831,
-        "notes": "경사로 난간벽 높이 · 유리 난간 · 타원 벽 문 (호용 2026-11-28 '난간벽은 높이 설정 여기서 못 하나? 난간벽도 스타일을 유리를 추가' · '타원에도 문 삽입이 가능하게')\n- 경사로 패널 '난간벽 · 손스침'에 **난간벽 모양 [벽 · 유리]** 칩과 **난간벽 높이** 칸. 높이를 비우면 예전처럼 스케치업 것(3D 탭 경사로 모양 · 기본 1200), 적으면 그 높이로 스케치업에 보내요(모양 프리셋보다 먼저).\n  - 유리 = 바닥 받침 120 위에 유리 24 (유리는 난간벽 안쪽 면 — 손스침 브라켓이 유리에 붙음). 평면에는 받침 테두리 + 유리 선.\n  - 놓인 경사로 고치기(HYRAMP E): V 난간벽 높이(0 = 스케치업 것) · K 유리벽 켬/끔.\n  - 스케치업은 유가네 툴박스 SR·02 5.3 · hy CADPaste 0.27 이 있어야 해요 (옛 판이면 스케치업 모양 · 벽으로 만들고 알림).\n- **닫힌 타원 · 닫힌 스플라인 벽에 문**: 예전엔 두 끝이 한 점이라 늘 '벽이 문 900보다 짧아요'였어요 — 이음매를 클릭한 곳 반대쪽으로 옮겨 클릭한 자리에 넣어요(코너 · 가운데 붙음 없이 커서 자리). 같은 중심 타원 둘 · OFFSET 으로 띄운 곡선 모두.\n  닫힌 곡선 벽 창(두 점)도 이음매를 시작점 반대쪽으로 — 이음매를 넘어가는 창이 짧은 쪽으로 잘려요.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.1.exe",
+        "sha256": "7df5c9b930cb0dda491c2de1c3d34c6c6b6692e1df994dc23a60862ea1aa2ab5",
+        "size": 66223488,
+        "notes": "- 경사로 패널: 난간벽 모양 안내 글이 패널 폭에서 잘려 짧게 · 난간벽 높이 빈 칸에 '스케치업 것' · 아래 막대 요약에 유리 · 높이.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.0.exe.part1",
-            "sha256": "9b3cb141efd50564975b08f2b2c6404ad0f2bd5d0dddfa7e5b1425e35ee4ddea",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.1.exe.part1",
+            "sha256": "872c7317771853e47c88494d61c6f28acf1013e288b34f53721b1aac860a0e1e",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.0.exe.part2",
-            "sha256": "fb1da45d100812036e4e0ad0a7c62a994124a3a155220a8caa3a072c71986555",
-            "size": 19035911
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.1.exe.part2",
+            "sha256": "db2a63c0912db39a15524dedf69362e94a921b94bf069f28bb8958ae564bd2e7",
+            "size": 19037568
           }
         ],
         "min_hub": "0.11.0"
