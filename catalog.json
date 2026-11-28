@@ -3080,22 +3080,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.115.1",
+        "version": "1.116.0",
         "date": "2026-11-28",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.1.exe",
-        "sha256": "7df5c9b930cb0dda491c2de1c3d34c6c6b6692e1df994dc23a60862ea1aa2ab5",
-        "size": 66223488,
-        "notes": "- 경사로 패널: 난간벽 모양 안내 글이 패널 폭에서 잘려 짧게 · 난간벽 높이 빈 칸에 '스케치업 것' · 아래 막대 요약에 유리 · 높이.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.116.0.exe",
+        "sha256": "3cbe0366d9f9366dc139cbecb00b227f794b6522339ca8e5205b3eba0d285344",
+        "size": 66242616,
+        "notes": "3D 미리보기 창(크게 보기 · HY3D)에서 내보낼 3D 고치기 (호용 2026-11-28 '크게보기에서 내보낼 문이나 계단 슬로프 등의 설정을 만질 수 있어야 할 것 같아 UI는 최대로' · '양 여닫이 만들어 놨는데 그런걸 설정할 순 없거든')\n- 오른쪽에 **'3D 로 만들 것 — 유가네 툴박스'** (패널 3D 탭과 같은 칸 · 같은 기록): 종류마다 · 묶음마다 스케치업 그대로 · 만들지 않음(문 · 창은 구멍만) · 프리셋 · 다시 입히기. 맨 위에 칸 건너뛰기(고른 것 · 3D 로 만들 것 · 층 높이 · 기본 높이 · 레이어). 오른쪽 칸을 조금 넓힘.\n- 3D 를 눌러 고른 것 카드에서 바로:\n  - **문 종류** 칩 (외여닫이 · 양여닫이 · 미닫이 · 미서기 · 접이문 · 방화문 · 회전문) — 캐드 YGN 문 블록이 같은 자리 · 폭 · 경첩 그대로 그 종류로 바뀌고 스케치업 DR·01 이 그 종류로 만들어요. 도면 · 라이브러리 문은 종류를 몰라 안내만.\n  - **창 칸 수** (3칸 이상이면 스케치업 픽스창) · 문 · 창 **폭 · 높이** (일람표 · HYOPN 과 같은 일).\n  - **경사로**: 폭(가운데 선 · 벽 기준) · 높이차 · 바닥 높이 · 난간벽 자리 · 모양(벽 · 유리) · 높이 · 손스침 자리 (HYRAMP E 와 같은 값).\n  - **이 요소의 3D**: 종류 칸대로 · 스케치업 그대로 · 구멍만/안 만듦 · 그 종류에 맞는 프리셋(설명 같이) · 다시 입히기 · 지금 어떻게 만들어지는지 한 줄.\n  - **같은 묶음 n개 모두** 체크 — 켜면 위 고침이 같은 종류 · 크기 묶음 모두에.\n  - 숫자 칸은 0.7초 멈추면 캐드에 적고(HYDO 하나) 다시 맡김.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.1.exe.part1",
-            "sha256": "872c7317771853e47c88494d61c6f28acf1013e288b34f53721b1aac860a0e1e",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.116.0.exe.part1",
+            "sha256": "6168adab950e81c031d705ed7dbf18e569625fb44aa63f2fb83b08ef053cda63",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.115.1.exe.part2",
-            "sha256": "db2a63c0912db39a15524dedf69362e94a921b94bf069f28bb8958ae564bd2e7",
-            "size": 19037568
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.116.0.exe.part2",
+            "sha256": "ea80c0c5858dfb9b844a59ab85d90eaadc67ee2923f93e7cf0fcb0360beac124",
+            "size": 19056696
           }
         ],
         "min_hub": "0.11.0"
