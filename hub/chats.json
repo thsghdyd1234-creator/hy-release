@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-11-28",
+  "updated": "2026-11-29",
   "tools": {
     "hy-autoselect": [
       {
@@ -1548,6 +1548,18 @@
         "n": 1,
         "vers": [
           "4.0.0"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe8v9VbBrd95hVtn1gk",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · 곡면에서도 — 휜 띠 · 원통 고리 트러스",
+        "first": "2026-11-29",
+        "last": "2026-11-29",
+        "n": 1,
+        "vers": [
+          "4.1.0"
         ]
       }
     ],
@@ -3396,6 +3408,18 @@
         "vers": [
           "1.3.0",
           "1.3.1"
+        ]
+      },
+      {
+        "url": "https://claude.ai/code/session_01XFvXe8v9VbBrd95hVtn1gk",
+        "kind": "code",
+        "by": "git",
+        "title": "처음 등록 · 곡면 트러스 — 꺾은선 현재 · 띠 읽기 · 연귀 쓸기 (API 4)",
+        "first": "2026-11-29",
+        "last": "2026-11-29",
+        "n": 1,
+        "vers": [
+          "1.4.0"
         ]
       }
     ],
