@@ -3080,22 +3080,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.110.0",
+        "version": "1.111.0",
         "date": "2026-11-28",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.110.0.exe",
-        "sha256": "e1897487cbdbe371c406850cb22c1085728872d9c94988d01a78ec2950f502b6",
-        "size": 66203251,
-        "notes": "캐드에서 복사한 계단을 스케치업에 붙이면 SR·01 계단 창이 열려요 (호용 2026-11-28 '계단 그리기로 그린 계단을 캐드에서 ctrl c ctrl v 하면 스케치업에서 그걸 읽고 계단 생성 패널을 열게 — 계단 모델링과 종류 바로 고를 수 있게')\n- HYSTAIR 계단이 든 도면을 Ctrl+C(COPYCLIP · CUTCLIP · COPYBASE) 하면, 캐드가 방금 쓴 클립보드 임시 DWG 를 다시 읽어 계단 값 · 자리를 스케치업용 옆 파일로 남겨요 (다리 폴더 clip). 스케치업 DWG 가져오기는 계단 값을 버리기 때문이에요.\n- 스케치업에서 hy CADPaste 0.26 로 Ctrl+V 해 놓으면 유가네 툴박스 SR·01 1.5 창이 '붙여넣기'로 열려요 — 맨 위 '모양 바로 고르기'로 구조 · 난간 · 마감을 고르고 [3D 로 바꾸기]하면 2D 계단 선이 3D 계단으로 바뀌어요 (계단이 여럿이어도 창 하나 · 모양은 같게 · 평면은 계단마다 캐드 그대로). 닫으면 2D 그대로.\n- 계단 기록 앱이 없는 도면 · 스케치업 쪽이 받지 않을 때(상태 'clip' 없음) · 임시 DWG 가 40MB 넘으면 아무것도 안 해요 (Ctrl+C 가 느려지지 않게). 원래 도면은 읽기만.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.111.0.exe",
+        "sha256": "289cb739c61631c1064e52e3a0b57a5a85070ee877f2e8dfa4c54a84bafd7805",
+        "size": 66212434,
+        "notes": "벽 끌기(HYWM)에 한쪽 고정 (호용 2026-11-28 '벽 끌기에 … 한쪽 점 고정시키고 다른한쪽 이동시키는 거' → '한쪽고정부터 하고 보자')\n- 끄는 동안 P = 한쪽 고정: 한 끝은 그대로 두고 다른 끝만 옮겨 벽을 기울여요 (처음엔 클릭한 곳에서 먼 끝을 둠 · × 표시 · F = 고정 끝 바꾸기 · 다시 P = 평행으로).\n  벽면은 곧은 선 그대로 기울고, 옆에 이어진 벽선은 제 방향으로 늘거나 줄어 기운 벽면에 닿아요(빈틈 없음). 고정 끝 쪽 벽은 그대로. 이 벽만 · 이어진 벽 전체 둘 다.\n- 거리 글에 기운 각이 같이 나와요. 벽 두께는 처음 벽에 수직으로 잰 값 그대로 옮겨서, 10° 넘게 기울이면 실제 두께(× cos θ)를 알려 줘요.\n- 문 · 창이 있는 벽 · 곡면 벽은 아직 한쪽 고정을 못 해요 (평행으로만 — 알림).",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.110.0.exe.part1",
-            "sha256": "59559eb6068cc3534becd0a7a17acc8fe21b5a2ad9bd85d41c662fc6f0cc4b84",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.111.0.exe.part1",
+            "sha256": "b7c07a1768dcc85ee6321a314388b955b40050eeb6f6b65fbbd8f8f2a6653c8c",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.110.0.exe.part2",
-            "sha256": "7fd7b31c683208c91fca85f5cd4878f8b3c3a575dad2e6f2d60b0fb4f3e9f51b",
-            "size": 19017331
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.111.0.exe.part2",
+            "sha256": "9de6190e38997cf238416537d57293af9ff01a31b66306cbbf48599df0c7d1ee",
+            "size": 19026514
           }
         ],
         "min_hub": "0.11.0"
