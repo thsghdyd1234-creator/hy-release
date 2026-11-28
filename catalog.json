@@ -3394,12 +3394,12 @@
         "min_hub": "0.13.0"
       },
       "test": {
-        "version": "1.5.0",
-        "date": "2026-11-22",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-dr-door/yl-dr-door-1.5.0.rbz",
-        "sha256": "9fe2874117954b87412278ebbdee0c76e81ee55c1d2aac12462276abe6b71886",
-        "size": 43125,
-        "notes": "- 모양 프리셋 11가지 (호용 2026-11-22 '스케치업 모양은 내보내기 창에서 고를 수 있어야'): 목재문 · 민판 / 가로 홈 / 유리 슬릿 / 4 패널 · 유리문 · 철제 방화문 · 자동 미닫이 (유리) · 병원 미닫이 (행거) · 엘리베이터 문 · 회전문 자동 4날개 / 3날개. 프리셋마다 맞는 캐드 문 종류(열림 방식)가 있어 YGN CAD 1.94 내보내기 창이 맞는 문에만 보낸다 (목재문은 한 문만 · 엘리베이터는 양문만).\n- 문 API 에 presets (id · 이름 · 모양 값 · 맞는 문 종류 · 한 줄). 판 1 그대로.",
+        "version": "1.5.1",
+        "date": "2026-11-28",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/yl-dr-door/yl-dr-door-1.5.1.rbz",
+        "sha256": "a7842d3fc07a3b01dc77062363b96ce455c256831ce74dc1be58f268fe007257",
+        "size": 43355,
+        "notes": "Array#sum 을 쓰지 않음 (호용 2026-11-28 캐드 3D 미리보기 '미리보기 오류: TypeError — nil can't be coerced into Float')\n- 다른 스케치업 확장이 Array#sum 을 블록 없는 합(inject(:+))으로 덮어쓴 PC 에서는 빈 배열의 합이 nil 이 되고 블록도 무시돼 계산이 멈췄습니다 — 합은 모두 inject 로 셈 (결과는 같음).",
         "min_hub": "0.13.0"
       },
       "history": [],
