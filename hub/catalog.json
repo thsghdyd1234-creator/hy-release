@@ -3080,22 +3080,22 @@
         "min_hub": "0.11.0"
       },
       "test": {
-        "version": "1.114.0",
+        "version": "1.114.1",
         "date": "2026-11-28",
-        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.114.0.exe",
-        "sha256": "3a12599957237d203061255ead02975d3e55a3c6ef8bbfa4dd300650c576adb7",
-        "size": 66221201,
-        "notes": "경사로 선 따라 그리기 — 선의 가운데로도, 옆에 붙여서도 (호용 2026-11-28 '이렇게 나오는 이유는? 말이 안 되잖아 · 계단처럼 선 따라 그리기 · 벽 기준밖에 붙어서 나오는 거밖에 없어 — 선의 가운데로 못 그린다')\n- 패널 [벽 기준] → [선 따라 그리기] (HYRAMP F · 예전 W 도 같은 길): 선(선 · 폴리선 · 호 · 원 · 스플라인)을 고르고\n  ① 낮은 쪽 시작점 — **선 위를 클릭하면 그 선이 경사로 가운데**, 선 옆을 클릭하면 그쪽에 붙어요(그 선 = 벽 · 띄움 G). 커서 옆에 '선이 가운데 · 선이 벽 — 바깥에' 처럼 보여요.\n  ② 높은 쪽 끝점 — 커서를 선을 따라 옮기는 만큼. 원 · 닫힌 선은 감겨 시작점을 지나면 한 바퀴를 넘고(T = 바퀴 수), 열린 선은 끝에서 멈춰요.\n  예전 벽 기준은 늘 벽에 붙였고 두 점 사이 짧은 쪽만 따라가서, 원에서 두 점을 가깝게 찍으면 짧은 호에 높이차가 다 걸렸어요.\n- 너무 가파른 경사로 알림: 끝점을 옮기는 동안 커서 옆 기울기에 '너무 가파름', 놓은 뒤 명령줄에 [주의] — 1/8 보다 가파르면 (보통 1/12). 고치는 길(더 돌리기 · 높이차 · 기울기 고정 S · 고치기 E)을 같이 알려요.\n- 닫힌 선 돌아 오르기(1.112.0)도 같은 길 — M 키 대신 선 위 · 옆 클릭으로 가운데 · 벽을 골라요.",
+        "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.114.1.exe",
+        "sha256": "c6cc082630deed7875c54fa4e19b62c3480addc3ffc1ec07e28ee9706028693e",
+        "size": 66221367,
+        "notes": "- 1.114.0 테스트 판에 앞 빌드(1.113.0) 파일이 잘못 올라가 경사로 선 따라 그리기가 안 들어 있었어요 — 같은 내용으로 다시 빌드해 올림.",
         "parts": [
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.114.0.exe.part1",
-            "sha256": "77c071408f71f102931524da2d3857c08efe6393d6d3f1627b92e9f962f781ae",
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.114.1.exe.part1",
+            "sha256": "9ccf58532cc48f6a2258904702d095a74678f4738f517c52f0242e344fab6119",
             "size": 47185920
           },
           {
-            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.114.0.exe.part2",
-            "sha256": "4750bce094abadedc309e3647978b2845ce93d94dbc22d4c48ce1795df6f469d",
-            "size": 19035281
+            "asset": "https://raw.githubusercontent.com/thsghdyd1234-creator/hy-release/main/packages/lispmanager/lispmanager-1.114.1.exe.part2",
+            "sha256": "78cd0f1e63bc98133e18aa1a2bda38b6116b48c9edc8289e291f7b9b07c61b90",
+            "size": 19035447
           }
         ],
         "min_hub": "0.11.0"
